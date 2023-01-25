@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { styles } from './scripts/styles';
+  import { styles } from '../scripts/styles';
   import AlgVis from './AlgVis.svelte';
 
   export let imgparams = {
@@ -29,7 +29,7 @@
     box-shadow: 2px 2px rgb(41 37 36);;
   }
   div {
-    width: var(--width);
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;

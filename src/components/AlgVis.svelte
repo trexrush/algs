@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { image, timeout } from "./scripts/stores";
+  import { image, timeout } from "../scripts/stores";
   import TwistyPlayer from "./TwistyPlayer.svelte";
   
   export let imgparams = {
