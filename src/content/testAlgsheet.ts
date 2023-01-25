@@ -8,7 +8,7 @@
 // atm this is just proof of concept
 
 const testAlgSet= [
-    "'R U R' U' R' F R F'",
+    "R U R' U' R' F R F'",
     "r U R' U R' F R F' R U2' r'",
     "L U2' R' F R U2 R' F' R U2 L'",
     "S' R U R' S U' M' U R U' r'",
