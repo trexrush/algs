@@ -1,0 +1,11 @@
+---
+import SvelteAlgCard from "../components/SvelteAlgCard.svelte";
+import { testAlgSet, testAlgSetData } from "../content/testAlgsheet";
+import AlgsetLayout from "../layouts/AlgsetLayout.svelte";
+---
+
+<main>
+  <AlgsetLayout client:visible data={testAlgSetData} algset={testAlgSet} />
+</main>
+
+<style></style>
