@@ -9,7 +9,7 @@
 
 const testAlgSet = [
     `U R U' R'`,
-    `R' F R2 U' R' F'S r' F r S'`,
+    `R' F R2 U' R' F' S r' F r S'`,
     `R' F R F'`,
     `U R B U' B' R'`,
     `U F' L' U' L F`,
