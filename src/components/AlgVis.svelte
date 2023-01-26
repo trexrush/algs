@@ -29,7 +29,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div class="cont flex flex-row items-center justify-center cursor-pointer relative border-4 aspect-square" use:styles={{ size: cssSize }}>
+<div class="cont flex flex-row items-center justify-center cursor-pointer relative aspect-square" use:styles={{ size: cssSize }}>
   {#if !twizzle}
     <img
     class="cursor-pointer transition-transform"
