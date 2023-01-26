@@ -1,70 +1,60 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { image, timeout } from "../scripts/stores";
+  import { getContext } from "svelte";
+  import { styles } from "../scripts/styles";
+  import { DefaultData } from "../scripts/types";
+  import type { IData } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
-  
-  export let imgparams = {
-    stage: "fl",
-    view: "plan",
-    rot: "",
-    size: 128,
-  }
-  export let twistyplayerparams = {
-    stage: 'full',
-  }
-  export let alg: string = "";
 
-  let visualCubeImage: HTMLImageElement
-  let twizzle: Boolean = false;
+  export let alg: string;
+  export let activeAlg: string;
+
+  let size: number = getContext('size')
+  let cssSize = size + "px"
+
+  let data: IData = getContext('data')
+  // https://experiments.cubing.net/cubing.js/twisty/misc-2d-stickerings.html
+  // local images get those yep
+  let imgSource: string = data.imgSource || DefaultData.imgSource;
+  let stage: string = data.vcparams?.stage || DefaultData.vcparams.stage;
+  let view: string = data.vcparams?.view || DefaultData.vcparams.view;
+  let rot: string = data.vcparams?.rot || DefaultData.vcparams.rot;
+  let puzzle: number = data.vcparams?.puzzle || DefaultData.vcparams.puzzle;
+
+  let visualCubeImage: HTMLImageElement;
+  let twizzle: boolean = false;
   const setTwizzle = () => {
     twizzle = !twizzle;
-    console.log("twizze");
   };
-
-  //   TODO: cache image so you dont fetch every time you generate the twizzle
-  //   idk if this part of the code is even doing anything tbh
-  onMount(async () => {
-    if ($image.length < 1 || $timeout == true) {
-        let url = `https://cubing.net/api/visualcube/?fmt=svg&bg=t&view=${imgparams.view}&size=${imgparams.size}&stage=${imgparams.stage.toLowerCase()}&case=${alg}${imgparams.rot}`
-        const vcImage = await fetch(url, {headers: { 'mode':'no-cors'}})
-        const blob = await vcImage.blob()
-        $image = URL.createObjectURL(blob)
-    }
-    console.log($image)
-    visualCubeImage.src = $image
-})
 </script>
+
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
- <div class="relative">
-    {#if !twizzle}
-      <img bind:this={visualCubeImage} class="h-[{imgparams.size}px] w-[{imgparams.size}px]"
-        on:click={setTwizzle}
-        src='https://cubing.net/api/visualcube/?fmt=svg&bg=t&view={imgparams.view}&size={imgparams.size}&stage={imgparams.stage.toLowerCase()}&case={alg}{imgparams.rot}'
-        alt="Alg Vis"
-      />
-    {:else}
-      <TwistyPlayer {alg} stage={twistyplayerparams.stage}/>
-      <div class=" absolute right-1 top-1 w-7 h-7 bg-red-300 rounded text-center" on:click={setTwizzle} >X</div>
-    {/if}
-  </div>
+<div class="cont flex flex-row items-center justify-center cursor-pointer relative border-4 aspect-square" use:styles={{ size: cssSize }}>
+  {#if !twizzle}
+    <img
+    class="cursor-pointer transition-transform"
+      bind:this={visualCubeImage}
+      on:click={setTwizzle}
+      src="https://cubing.net/api/visualcube/?fmt=svg&bg=t&co=50&cc=black&r=y30x-30&pzl={puzzle}&view={view}&size={size}&stage={stage}&case={alg}{rot}"
+      alt="Alg Vis"
+    />
+  {:else}
+    <TwistyPlayer {activeAlg} />
+    <div
+      class=" absolute left-0 bottom-0 h-7 w-7 bg-red-300 rounded text-center"
+      on:click={setTwizzle}
+    >
+      X
+    </div>
+  {/if}
+</div>
 
 <style>
-
-  div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-  }
-  img {
-    cursor: pointer;
-    transition: transform .3s;
+  .cont {
+    height: var(--size);
+    width: var(--size);
   }
   img:hover {
     transform: translate(0px, -8px) scale(1.1);
   }
-
 </style>
-

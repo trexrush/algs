@@ -2,40 +2,68 @@
 <script lang="ts">
   import type { Alg } from "cubing/dist/types/alg";
   import { TwistyPlayer } from "cubing/twisty";
-  import { onMount } from "svelte";
+  import { getContext, onMount } from "svelte";
+  import type { IData } from "../scripts/types";
+  import { DefaultData } from "../scripts/types";
+
+  let data: IData = getContext('data')
+  let stage: string = data.twistyplayerparams?.stage || DefaultData.twistyplayerparams.stage;
+  let rot: string = data.twistyplayerparams?.rot || DefaultData.twistyplayerparams.rot;
+  let cameraX: number = data.twistyplayerparams?.cameraX || DefaultData.twistyplayerparams.cameraX;
+  let cameraY: number = data.twistyplayerparams?.cameraY || DefaultData.twistyplayerparams.cameraY;
+  let size: number = getContext('size');
+
+  let setAlg = (alg: string) => {
+    twistyPlayer.alg = alg
+  }
+  export let activeAlg: string
+  $: {
+    // console.log("LOWER", activeAlg)
+    setAlg(activeAlg)
+  }
+
+  // export let toggle: boolean
 
   const twistyPlayer: TwistyPlayer = new TwistyPlayer();
   export let controlPanel = "none";
   export let scramble = "";
-  export let alg: Alg | string = "";
-  export let backView: Boolean = false;
-  export let hintFacelets: Boolean = false;
-  export let size = 128;
-  export let drag = true;
-  export let stage = "full";
+  export let backView = false;
+  export let hintFacelets = false;
+  export let drag = false;
+
   let twistyDiv: HTMLDivElement
+
+  const removePrePostAUF = (a: string): string => {
+    // remove brackets and replace with a pause after
+    return a.replace(/\[(.*)\]/, '$1 . ')
+  }
 
   onMount(async () => {
     if (twistyDiv) {
       twistyPlayer.background = "none";
-      twistyPlayer.visualization = "PG3D";
-      controlPanel === "none" && (twistyPlayer.controlPanel = "none");
-      const model = twistyPlayer.experimentalModel;
-      twistyPlayer.experimentalSetupAlg = scramble;
       twistyPlayer.experimentalSetupAnchor = "end";
-      twistyPlayer.experimentalDragInput = drag ? "auto" : "none";
-      twistyPlayer.experimentalFaceletScale = 0.95; // works here but not in vanillaJS??????
-      twistyPlayer.alg = alg;
+      twistyPlayer.experimentalFaceletScale = 0.88; // works here but not in vanillaJS??????
       twistyPlayer.tempoScale = 4;
-      twistyPlayer.backView = backView ? "top-right" : "none";
-      twistyPlayer.hintFacelets = hintFacelets ? "auto" : "none";
+
       twistyPlayer.style.height = `${size}px`;
       twistyPlayer.style.width = `${size}px`;
-      twistyPlayer.experimentalStickering = stage.toUpperCase();
-      twistyPlayer.onclick = () => twistyPlayer.play();
+      twistyPlayer.alg = ". . " + removePrePostAUF(activeAlg) + " . .";
+      twistyPlayer.experimentalStickering = stage;
+      twistyPlayer.cameraLongitude = cameraX
+      twistyPlayer.cameraLatitude = cameraY
+      
+      twistyPlayer.experimentalDragInput = drag ? "auto" : "none";
+      controlPanel === "none" && (twistyPlayer.controlPanel = "none");      
+      twistyPlayer.experimentalSetupAlg = scramble + " " + rot;
+      twistyPlayer.backView = backView ? "top-right" : "none";
+      twistyPlayer.hintFacelets = hintFacelets ? "auto" : "none";
+      
       twistyDiv.appendChild(twistyPlayer);
+      twistyPlayer.play()
+      twistyPlayer.onclick = () => { twistyPlayer.togglePlay(); }
     }
   });
+
 </script>
 
 <div class="h-32 w-32" bind:this={twistyDiv} />

@@ -1,31 +1,17 @@
-<script type="ts">
-//   type IAlgset = string[];
-//   interface IAlgsetData {
-//     name: string;
-//     image?: "vc" | "cubingjs" | "custom" | "local" | "none";
-//     imgparams?: {
-//       stage?: string;
-//       view?: "plan" | "trans";
-//       rot?: string;
-//       puzzle?: string; // useless atm TODO: standardize this for the page + twistyplayer + visualcube
-//       size?: number;
-//       // rest is default
-//     };
-//     twistyplayerparams?: {
-//       stage?: string;
-//     };
-//   }
+<script lang="ts">
+  import SetCard from "../components/SetCard.svelte";
+  import type { IAlgSet } from "../scripts/types";
+  import { setContext } from "svelte";
+  export let algset: IAlgSet;
+  export let size: number = 128;
 
-  import SvelteAlgCard from "../components/SvelteAlgCard.svelte";
-  export let data //: IAlgsetData;
-  export let algset //: IAlgset;
+  setContext("data", algset.data);
+  setContext("size", size);
 </script>
 
-<div class=" text-8xl w-full text-center">{data.name}</div>
-{#each algset as alg}
-  <SvelteAlgCard
-    {alg}
-    imgparams={data.imgparams}
-    twistyplayerparams={data.twistyplayerparams}
-  />
+<div class=" relative text-8xl w-full text-center">{algset.data.name}</div>
+{#each algset.sets as set}
+  {#if set.cases && set.cases.length > 0}
+    <SetCard {set} />
+  {/if}
 {/each}
