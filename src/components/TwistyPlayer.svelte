@@ -14,12 +14,13 @@
   let size: number = getContext('size');
 
   let setAlg = (alg: string) => {
-    twistyPlayer.alg = alg
+    twistyPlayer.alg = ". . " + removePrePostAUF(alg) + " . ."
+    twistyPlayer.jumpToStart()
   }
   export let activeAlg: string
   $: {
-    // console.log("LOWER", activeAlg)
     setAlg(activeAlg)
+    twistyPlayer.controller.animationController.playPause()
   }
 
   // export let toggle: boolean
@@ -47,7 +48,6 @@
 
       twistyPlayer.style.height = `${size}px`;
       twistyPlayer.style.width = `${size}px`;
-      twistyPlayer.alg = ". . " + removePrePostAUF(activeAlg) + " . .";
       twistyPlayer.experimentalStickering = stage;
       twistyPlayer.cameraLongitude = cameraX
       twistyPlayer.cameraLatitude = cameraY
@@ -60,7 +60,7 @@
       
       twistyDiv.appendChild(twistyPlayer);
       twistyPlayer.play()
-      twistyPlayer.onclick = () => { twistyPlayer.togglePlay(); }
+      twistyPlayer.onclick = () => { twistyPlayer.controller.animationController.playPause(); }
     }
   });
 

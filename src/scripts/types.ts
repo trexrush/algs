@@ -1,3 +1,6 @@
+// TODO: make some flag to bypass algvis or us a different alg than display? 
+// ex where I say fruruf [ZBLL] or the pll parity cases
+
 export interface ISet {
     name: string,
     sets?: ISet[],

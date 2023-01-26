@@ -1,12 +1,14 @@
 ---
-import { testAlgSet } from "../content/testAlgsheet";
-import AlgsetLayout from "../layouts/AlgsetLayout.svelte";
 ---
 
 <main>
   <div class=" sm:w-3/4 md:w-3/5 m-auto flex flex-col items-center">
-    <AlgsetLayout client:visible data={testAlgSet.data} algset={testAlgSet} />
+    <h1 class="text-4xl">Algsheets:</h1>
+    <br>
+    <a href="/algs/zbls" class=" text-3xl bg-stone-200 rounded-md px-3 py-1">ZBLS</a>
   </div>
 </main>
 
-<style></style>
+<style>
+
+</style>

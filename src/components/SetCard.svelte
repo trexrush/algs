@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { ISet } from "../scripts/types";
   import AlgCard from "./AlgCard.svelte";
-  import AlgVis from "./AlgVis.svelte";
 
   export let set: ISet;
 </script>
@@ -22,6 +21,6 @@
 
 <style>
   .bg {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(28, 25, 23, .07);
   }
 </style>

@@ -1,0 +1,12 @@
+---
+import { algSet } from "../content/zbls";
+import VerticalLayout from "../layouts/VerticalLayout.svelte";
+---
+
+<main>
+  <div class=" sm:w-3/4 md:w-3/5 m-auto flex flex-col items-center">
+    <VerticalLayout client:visible data={algSet.data} algset={algSet} />
+  </div>
+</main>
+
+<style></style>

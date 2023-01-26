@@ -9,9 +9,7 @@
   setContext("size", size);
 </script>
 
-<div class=" relative text-8xl w-full text-center">{algset.data.name}</div>
+<div class=" relative text-7xl w-full text-center my-5">{algset.data.name}</div>
 {#each algset.sets as set}
-  {#if set.cases && set.cases.length > 0}
     <SetCard {set} />
-  {/if}
 {/each}
