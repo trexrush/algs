@@ -5,7 +5,7 @@ import VerticalLayout from "../layouts/VerticalLayout.svelte";
 
 <main>
   <div class=" sm:w-3/4 md:w-3/5 m-auto flex flex-col items-center">
-    <!-- TODO: allow megaminx images to render without client:only -->
+    <!-- TODO: allow megaminx images to render without client:only, and improve partial hydration in general -->
     <!-- https://docs.astro.build/en/guides/troubleshooting/#document-or-window-is-not-defined -->
     <VerticalLayout client:only algset={algSet} />
   </div>

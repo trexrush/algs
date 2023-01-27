@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { onDestroy, setContext } from "svelte";
-  import { readable, writable } from "svelte/store";
+  import { writable } from "svelte/store";
   import { onMount } from "svelte";
   import type { ICase } from "../scripts/types";
   import AlgVis from "./AlgVis.svelte";
@@ -44,6 +43,7 @@
 
 <style>
   p {
+    font-size: 24px;
     transition: all .2s;
   }
   .algs {

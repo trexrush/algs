@@ -5,6 +5,7 @@
   export let set: ISet;
 </script>
 
+<!-- TODO: make sets collapsible -->
 <div class="bg flex flex-col w-11/12 mb-5 items-center rounded-xl">
   <div class="text-4xl text-center"><b>{set.name}</b></div>
   {#if set.cases}

@@ -11,19 +11,76 @@ const algSet: IAlgSet = {
             cameraX: -10,
             cameraY: 45,
             tempo: 3,
-            
+
         },
     },
     sets: [
         {
-            name: 'A (3 Corner CP)',
-            cases: [
-                { name: 'A1+', algs: ["[U2] L F L' U' L' U L2 F' L' U' L F L' F'"] },
-                { name: 'A1-', algs: ["[U2] F L F' L' U L F L2' U' L U L F' L'"] },
-                { name: 'A2+', algs: ["L U2' L F L' U' L' U L F' L' U' L U2' L'"] },
-                { name: 'A2-', algs: ["L U2 L' U L F L' U' L U L F' L' U2 L'"] },
-            ],
+            name: 'CP (4LLL)',
+            sets: [
+                {
+                    name: 'A (3 Corner CP)',
+                    cases: [
+                        { name: 'A1+', algs: ["[U2] L F L' U' L' U L2 F' L' U' L F L' F'"] },
+                        { name: 'A1-', algs: ["[U2] F L F' L' U L F L2' U' L U L F' L'"] },
+                        { name: 'A2+', algs: ["L U2' L F L' U' L' U L F' L' U' L U2' L'"] },
+                        { name: 'A2-', algs: ["L U2 L' U L F L' U' L U L F' L' U2 L'"] },
+                    ],
+                },
+                {
+                    name: 'E (4 Corner CP)',
+                    cases: [
+                        { name: 'E1', algs: ["[U'] L' U' L U' L U L' F L' U' L U L F' L2' U L2 U' L'"] },
+                        { name: 'E2', algs: ["[U2'] dr' U L FL' L' U' L FL L' U' L FL' L' U dr F"] },
+                        { name: 'E3', algs: ["[U2] R L' U2' L U L' U' L U L' U' L U L' U L R'"] },
+                    ],
+                },
+                {
+                    name: 'K (5 corner CP)',
+                    cases: [
+                        { name: 'K1+', algs: ["[U2] L2' U2 L2 U L2' U' L2 U L2' U' L2 U L2' U2 L2"] },
+                        { name: 'K1-', algs: ["[U2] L2 U2' L2' U' L2 U L2' U' L2 U L2' U' L2 U2' L2' "] },
+                        { name: 'K2+', algs: ["[U2'] L2' U2 L2 U L2' U2 L U' L U L F' L2' U L U L' U' L F"] },
+                        { name: 'K2-', algs: ["[U2'] L' U' L U2 L' U' L U2 L' U L U2 L' U2' L U L' U2' L"] },
+                    ],
+                },
+                {
+                    name: 'H (5 piece EP/CP)',
+                    cases: [
+                        { name: 'H1+', algs: ["L' U' L U' L U L2' U L U' L U' L' U' L' U' L U' L U L2' U L U' L U' L'"] },
+                        { name: 'H1-', algs: ["L U L' U L' U' L2 U' L' U L' U L U L U L' U L' U' L2 U' L' U L' U L", "L' U2' L U2' L' U L U L' U2' L U' L F L' U' L' U L F'"] },
+                        { name: 'H2+', algs: ["L2 U2 L2' U' L2 U' L2' y' L2' U' L2 U' L2' U2 L2"] },
+                        { name: 'H2-', algs: ["L2' U2' L2 U L2' U L2 y L2 U L2' U L2 U2' L2'"] },
+                    ],
+                },
+            ]
         },
+        // {
+        //     name: 'U (3 edge EP)',
+        //     cases: [
+        //         { name: 'U1+', algs: [""] },
+        //         { name: 'U1-', algs: [""] },
+        //         { name: 'U2+', algs: [""] },
+        //         { name: 'U2-', algs: [""] },
+        //     ],
+        // },
+        // {
+        //     name: 'Z (4 edge EP)',
+        //     cases: [
+        //         { name: 'Z1+', algs: [""] },
+        //         { name: 'Z1-', algs: [""] },
+        //         { name: 'Z2+', algs: [""] },
+        //     ],
+        // },
+        // {
+        //     name: 'Q (5 edge EP)',
+        //     cases: [
+        //         { name: 'Q1+', algs: [""] },
+        //         { name: 'Q1-', algs: [""] },
+        //         { name: 'Q2+', algs: [""] },
+        //         { name: 'Q2-', algs: [""] },
+        //     ],
+        // },
         // {
         //     name: 'B (Double R block)',
         //     cases: [
@@ -51,60 +108,42 @@ const algSet: IAlgSet = {
         //     ],
         // },
         // {
-        //     name: 'D (3x1 and 2x2)',
-        //     cases: [
-        //         { name: 'D+', algs: [""] },
-        //         { name: 'D-', algs: [""] },
+        //         name: 'D (3x1 and 2x2)',
+        //         cases: [
+        //                 { name: 'D+', algs: [""] },
+        //                 { name: 'D-', algs: [""] },
         //     ],
         // },
         {
-            name: 'E (4 Corner CP)',
+            name: 'F (3x1 and 2x1(s))',
             cases: [
-                { name: 'E1', algs: ["[U'] L' U' L U' L U L' F L' U' L U L F' L2' U L2 U' L'"] },
-                { name: 'E2', algs: ["[U2'] dr' U L FL' L' U' L FL L' U' L FL' L' U dr F"] },
-                { name: 'E3', algs: ["[U2] L' R U2' L U L' U' L U L' U' L U L' U L R'"] },
+                { name: 'F1+', algs: ["[U2] L2 U2 L2' U L2 U2 L2'"] },
+                { name: 'F1-', algs: ["[U2] L2 U2' L2' U' L2 U2' L2'"] },
+                //         { name: 'F2+', algs: [""] },
+                //         { name: 'F2-', algs: [""] },
+                //         { name: 'F3+', algs: [""] },
+                //         { name: 'F3-', algs: [""] },
+                //         { name: 'F4+', algs: [""] },
+                //         { name: 'F4-', algs: [""] },
+                //         { name: 'F5+', algs: [""] },
+                //         { name: 'F5-', algs: [""] },
             ],
         },
-        
         // {
-        //     name: 'F (3x1 and 2x1(s))',
-        //     cases: [
-        //         { name: 'F1+', algs: [""] },
-        //         { name: 'F1-', algs: [""] },
-        //         { name: 'F2+', algs: [""] },
-        //         { name: 'F2-', algs: [""] },
-        //         { name: 'F3+', algs: [""] },
-        //         { name: 'F3-', algs: [""] },
-        //         { name: 'F4+', algs: [""] },
-        //         { name: 'F4-', algs: [""] },
-        //         { name: 'F5+', algs: [""] },
-        //         { name: 'F5-', algs: [""] },
-        //     ],
-        // },
-        
-        // {
-        //     name: 'G (2x1 and HeadLights)',
-        //     cases: [
-        //         { name: 'G1+', algs: [""] },
-        //         { name: 'G1-', algs: [""] },
-        //         { name: 'G2+', algs: [""] },
-        //         { name: 'G2-', algs: [""] },
-                
-        //     ],
-        // },
-        {
-            name: 'H (5 piece EP/CP)',
-            cases: [
-                { name: 'H1+', algs: ["L' U' L U' L U L2' U L U' L U' L' U' L' U' L U' L U L2' U L U' L U' L'"] },
-                { name: 'H1-', algs: ["L U L' U L' U' L2 U' L' U L' U L U L U L' U L' U' L2 U' L' U L' U L", "L' U2' L U2' L' U L U L' U2' L U' L F L' U' L' U L F'"] },
-                { name: 'H2+', algs: ["L2 U2 L2' U' L2 U' L2' y' L2' U' L2 U' L2' U2 L2"] },
-                { name: 'H2-', algs: ["L2' U2' L2 U L2' U L2 y L2 U L2' U L2 U2' L2'"] },
-            ],
-        }, 
-        // {
-        //     name: 'I (2x1)',
-        //     cases: [
-        //         { name: 'I1+', algs: [""] },
+        //         name: 'G (2x1 and HeadLights)',
+        //         cases: [
+        //                 { name: 'G1+', algs: [""] },
+        //                 { name: 'G1-', algs: [""] },
+        //                 { name: 'G2+', algs: [""] },
+        //                 { name: 'G2-', algs: [""] },
+
+        //             ],
+        //         },
+
+        //         {
+        //                 name: 'I (2x1)',
+        //                 cases: [
+        //                         { name: 'I1+', algs: [""] },
         //         { name: 'I1-', algs: [""] },
         //         { name: 'I2+', algs: [""] },
         //         { name: 'I2-', algs: [""] },
@@ -118,26 +157,18 @@ const algSet: IAlgSet = {
         //         { name: 'I6-', algs: [""] },
         //     ],
         // },
-        // {
-        //     name: 'J (J block)',
-        //     cases: [
-        //         { name: 'J1+', algs: [""] },
-        //         { name: 'J1-', algs: [""] },
-        //         { name: 'J2+', algs: [""] },
-        //         { name: 'J2-', algs: [""] },
-        //         { name: 'J3+', algs: [""] },
-        //         { name: 'J3-', algs: [""] },
-        //     ],
-        // },
-        // {
-        //     name: 'K (5 corner CP)',
-        //     cases: [
-        //         { name: 'K1+', algs: [""] },
-        //         { name: 'K1-', algs: [""] },
-        //         { name: 'K2+', algs: [""] },
-        //         { name: 'K2-', algs: [""] },
-        //     ],
-        // },
+        {
+            name: 'J (J block)',
+            cases: [
+                { name: 'J1+', algs: ["[U'] F' U L F' L2' U L U L' U' L F L' U' L F"] },
+                { name: 'J1-', algs: ["[U'] L' U' L F L' U' L U L F' L2' U L"] },
+                // { name: 'J2+', algs: [""] },
+                // { name: 'J2-', algs: [""] },
+                // { name: 'J3+', algs: [""] },
+                // { name: 'J3-', algs: [""] },
+            ],
+        },
+
         // {
         //     name: 'L (Double headlights, no blocks)',
         //     cases: [
@@ -156,18 +187,18 @@ const algSet: IAlgSet = {
         // {
         //     name: 'M (2 3x1s)',
         //     cases: [
-        //         { name: 'M1+', algs: [""] },
+        //         { name: 'M', algs: [""] },
         //     ],
         // },
-        // {
-        //     name: 'N (5 2x1s)',
-        //     cases: [
-        //         { name: 'N1+', algs: [""] },
-        //         { name: 'N1-', algs: [""] },
+        {
+            name: 'N (5 2x1s)',
+            cases: [
+                { name: 'N1+', algs: ["[U2'] L U2' L U2 L' U L U2 L' U2' L'"] },
+                { name: 'N1-', algs: ["L' U2' L F L' U' L U L F' L2' U2 L"] },
         //         { name: 'N2+', algs: [""] },
         //         { name: 'N2-', algs: [""] },
-        //     ],
-        // },
+            ],
+        },
         // {
         //     name: 'P (R block)',
         //     cases: [
@@ -179,15 +210,6 @@ const algSet: IAlgSet = {
         //         { name: 'P3-', algs: [""] },
         //         { name: 'P4+', algs: [""] },
         //         { name: 'P4-', algs: [""] },
-        //     ],
-        // },
-        // {
-        //     name: 'Q (5 edge EP)',
-        //     cases: [
-        //         { name: 'Q1+', algs: [""] },
-        //         { name: 'Q1-', algs: [""] },
-        //         { name: 'Q2+', algs: [""] },
-        //         { name: 'Q2-', algs: [""] },
         //     ],
         // },
         // {
@@ -220,27 +242,18 @@ const algSet: IAlgSet = {
         //         { name: 'S6-', algs: [""] },
         //     ],
         // },
-        // {
-        //     name: 'T (2,3 or 4 2x1s in these patterns:)',
-        //     cases: [
-        //         { name: 'T1', algs: [""] },
-        //         { name: 'T2+', algs: [""] },
-        //         { name: 'T2-', algs: [""] },
+        {
+            name: 'T (2,3 or 4 2x1s in these patterns:)',
+            cases: [
+                { name: 'T1', algs: ["[U] L' U' L U L F' L2' U L U L' U' L F"] },
+                { name: 'T2+', algs: ["[U2'] L2 F' L' U' L' U L F L' U2 L U2' L'"] },
+                { name: 'T2-', algs: ["[U2'] L U2 L' U2' L F' L' U' L U L F L2'"] },
         //         { name: 'T3+', algs: [""] },
         //         { name: 'T3-', algs: [""] },
         //         { name: 'T4+', algs: [""] },
-        //         { name: 'T4-', algs: [""] },
-        //     ],
-        // },
-        // {
-        //     name: 'U (3 edge EP)',
-        //     cases: [
-        //         { name: 'U1+', algs: [""] },
-        //         { name: 'U1-', algs: [""] },
-        //         { name: 'U2+', algs: [""] },
-        //         { name: 'U2-', algs: [""] },
-        //     ],
-        // },
+                { name: 'T4-', algs: ["[U2'] L' U' L F L' U' L U L F' L' U L F' L2' U L U L' U' L F"] },
+            ],
+        },
         // {
         //     name: 'V (2x2 and 2x1)',
         //     cases: [
@@ -275,25 +288,18 @@ const algSet: IAlgSet = {
         //         { name: 'X7-', algs: [""] },
         //     ],
         // },
-        // {
-        //     name: 'Y (2 2x1s in Y pattern and other stuff)',
-        //     cases: [
-        //         { name: 'Y1+', algs: [""] },
-        //         { name: 'Y1-', algs: [""] },
+        {
+            name: 'Y (2 2x1s in Y pattern and other stuff)',
+            cases: [
+                { name: 'Y1+', algs: ["[U] F' L F L' U' L' U L F' L' U L U' L' U' L F"] },
+                { name: 'Y1-', algs: ["[U] F' L' U L U L' U' L F L' U' L U L F' L' F"] },
         //         { name: 'Y2+', algs: [""] },
         //         { name: 'Y2-', algs: [""] },
         //         { name: 'Y3+', algs: [""] },
         //         { name: 'Y3-', algs: [""] },
-        //     ],
-        // },
-        // {
-        //     name: 'Z (4 edge EP)',
-        //     cases: [
-        //         { name: 'Z1+', algs: [""] },
-        //         { name: 'Z1-', algs: [""] },
-        //         { name: 'Z2+', algs: [""] },
-        //     ],
-        // },
+            ],
+        },
+
     ],
 }
 
