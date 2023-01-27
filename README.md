@@ -10,11 +10,23 @@ Be able to have an algsheet with inline visualizations, have it be data driven s
 
 ## Stack
 
-### Astro
+Astro, Tailwind, Svelte
 
-### Tailwind
+## Todo
 
-### Svelte
+- make some flag to bypass algvis or us a different alg than display? maybe a shorthand?
+(ex. where I say fruruf [ZBLL] or the pll parity cases like [J PERM] [PARITY])
+- add comments to format
+- allow algs/set to show up in a set order and mix up algs/sets?
+- come up with / implement a good system for local images
+- option to invert an alg to show the right handed version (change name too?)
+- maintain collapsed / selected algs in localstorage
+- TRY to make PWA
+- back button
+- link to twizzle? link to trainer once thats set up?
+- add OLL, EG/CLL, ZBLL, Parity OLL/PLL
+
+
 
 ## Get Started
 

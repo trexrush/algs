@@ -14,7 +14,6 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<!-- TODO: make sets collapsible -->
 <div class="bg flex flex-col w-11/12 mb-5 items-center rounded-xl">
   <div class="text-4xl my-2 text-center cursor-pointer" on:click={toggleSection}>
     <b>{set.name}</b>

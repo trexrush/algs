@@ -15,7 +15,16 @@ const algSet: IAlgSet = {
             rot: '',
         },
     },
-    sets: []
+    sets: [
+        {
+            name: '',
+            sets: [
+            ],
+            cases: [
+                { name: '', algs: [""] },
+            ],
+        },
+    ],
 }
 
 export { algSet }

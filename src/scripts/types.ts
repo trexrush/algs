@@ -1,5 +1,3 @@
-// TODO: make some flag to bypass algvis or us a different alg than display? 
-// ex where I say fruruf [ZBLL] or the pll parity cases
 
 export interface ISet {
     name: string,
@@ -34,6 +32,9 @@ interface ITwistyParams {
 
 export interface IData {
     name: string;
+    // local - preferred, but you need to manually add images
+    // vc - puts strain on external visualcube api
+    // cubingjs - needs to hydrate to display image
     imgSource?: "vc" | "cubingjs" | "local" | "none";
     vcparams?: IVCParams,
     twistyplayerparams?: ITwistyParams,
