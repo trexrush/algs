@@ -5,13 +5,11 @@ const algSet: IAlgSet = {
         name: "Megaminx PLL",
         imgSource: "cubingjs",
         twistyplayerparams: {
-            stage: '',
             rot: 'x2 y3',
             puzzle: "megaminx",
             cameraX: -10,
             cameraY: 45,
             tempo: 3,
-
         },
     },
     sets: [

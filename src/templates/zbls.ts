@@ -2,17 +2,15 @@ import type { IAlgSet } from "../scripts/types"
 
 const algSet: IAlgSet = {
     data: {
-        name: "ZBLS (wip)",
+        name: "ZBLS",
         imgSource: "vc",
         vcparams: {
             stage: 'vh',
             view: 'trans',
             rot: "y'",
-            puzzle: 3,
         },
         twistyplayerparams: {
             stage: 'ZBLS',
-            rot: '',
         },
     },
     sets: [

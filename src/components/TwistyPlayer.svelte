@@ -18,30 +18,35 @@
   export let backView = false;
   export let hintFacelets = false;
   export let drag = false;
-  const twistyPlayer: TwistyPlayer = new TwistyPlayer();
   let twistyDiv: HTMLDivElement
+  
+  // canvas elements are undefined until load so this logic must be defined in there
+  let setAlg = (alg: string) => { return }
   
   export let imageAlg: string | null = null
   export let activeAlg: string | null = null
   $: {
     if (!imageAlg && activeAlg) {
       setAlg(activeAlg)
-      twistyPlayer.controller.animationController.playPause()
     }
   }
-
-  const setAlg = (alg: string) => {
-    twistyPlayer.alg = ". . " + removePrePostAUF(alg) + " . ."
-    twistyPlayer.jumpToStart()
-  }
-
+  
+  
   const removePrePostAUF = (a: string): string => {
     // remove brackets and replace with a pause after
     return a.replace(/\[(.*)\]/, '$1 . ')
   }
-
+  
   onMount(async () => {
+    const twistyPlayer: TwistyPlayer = new TwistyPlayer();
     if (twistyDiv) {
+
+      setAlg = (alg: string) => {
+        twistyPlayer.alg = ". . " + removePrePostAUF(alg) + " . ."
+        twistyPlayer.jumpToStart()
+        twistyPlayer.controller.animationController.playPause()
+      }
+      
       twistyPlayer.background = "none";
       twistyPlayer.experimentalSetupAnchor = "end";
       twistyPlayer.experimentalFaceletScale = 0.88; // works here but not in vanillaJS??????
