@@ -1,38 +1,39 @@
 <!-- credit to anicolao https://github.com/cubing/cubing.js/issues/223#issuecomment-1249980565 -->
 <script lang="ts">
-  import type { Alg } from "cubing/dist/types/alg";
   import { TwistyPlayer } from "cubing/twisty";
   import { getContext, onMount } from "svelte";
-  import type { IData } from "../scripts/types";
+  import type { IData, twistyPuzzleType } from "../scripts/types";
   import { DefaultData } from "../scripts/types";
 
   let data: IData = getContext('data')
+  let size: number = getContext('size');
   let stage: string = data.twistyplayerparams?.stage || DefaultData.twistyplayerparams.stage;
   let rot: string = data.twistyplayerparams?.rot || DefaultData.twistyplayerparams.rot;
   let cameraX: number = data.twistyplayerparams?.cameraX || DefaultData.twistyplayerparams.cameraX;
   let cameraY: number = data.twistyplayerparams?.cameraY || DefaultData.twistyplayerparams.cameraY;
-  let size: number = getContext('size');
-
-  let setAlg = (alg: string) => {
-    twistyPlayer.alg = ". . " + removePrePostAUF(alg) + " . ."
-    twistyPlayer.jumpToStart()
-  }
-  export let activeAlg: string
-  $: {
-    setAlg(activeAlg)
-    twistyPlayer.controller.animationController.playPause()
-  }
-
-  // export let toggle: boolean
-
-  const twistyPlayer: TwistyPlayer = new TwistyPlayer();
-  export let controlPanel = "none";
-  export let scramble = "";
+  let puzzle: twistyPuzzleType = data.twistyplayerparams?.puzzle || DefaultData.twistyplayerparams.puzzle;
+  let tempo: number = data.twistyplayerparams?.tempo || DefaultData.twistyplayerparams.tempo;
+  
+  export let setup = "";
   export let backView = false;
   export let hintFacelets = false;
   export let drag = false;
-
+  const twistyPlayer: TwistyPlayer = new TwistyPlayer();
   let twistyDiv: HTMLDivElement
+  
+  export let imageAlg: string | null = null
+  export let activeAlg: string | null = null
+  $: {
+    if (!imageAlg && activeAlg) {
+      setAlg(activeAlg)
+      twistyPlayer.controller.animationController.playPause()
+    }
+  }
+
+  const setAlg = (alg: string) => {
+    twistyPlayer.alg = ". . " + removePrePostAUF(alg) + " . ."
+    twistyPlayer.jumpToStart()
+  }
 
   const removePrePostAUF = (a: string): string => {
     // remove brackets and replace with a pause after
@@ -44,8 +45,11 @@
       twistyPlayer.background = "none";
       twistyPlayer.experimentalSetupAnchor = "end";
       twistyPlayer.experimentalFaceletScale = 0.88; // works here but not in vanillaJS??????
-      twistyPlayer.tempoScale = 4;
-
+      twistyPlayer.tempoScale = tempo;
+      twistyPlayer.cameraLatitudeLimit = 50;
+      
+      twistyPlayer.visualization = imageAlg ? "experimental-2D-LL" : "3D"
+      if (imageAlg) { twistyPlayer.alg = removePrePostAUF(imageAlg) }
       twistyPlayer.style.height = `${size}px`;
       twistyPlayer.style.width = `${size}px`;
       twistyPlayer.experimentalStickering = stage;
@@ -53,14 +57,18 @@
       twistyPlayer.cameraLatitude = cameraY
       
       twistyPlayer.experimentalDragInput = drag ? "auto" : "none";
-      controlPanel === "none" && (twistyPlayer.controlPanel = "none");      
-      twistyPlayer.experimentalSetupAlg = scramble + " " + rot;
+      twistyPlayer.controlPanel = "none"
+      twistyPlayer.experimentalSetupAlg = setup + " " + rot;
       twistyPlayer.backView = backView ? "top-right" : "none";
       twistyPlayer.hintFacelets = hintFacelets ? "auto" : "none";
+      twistyPlayer.puzzle = puzzle
       
       twistyDiv.appendChild(twistyPlayer);
-      twistyPlayer.play()
-      twistyPlayer.onclick = () => { twistyPlayer.controller.animationController.playPause(); }
+
+      if (!imageAlg) {
+        twistyPlayer.play()
+        twistyPlayer.onclick = () => { twistyPlayer.controller.animationController.playPause(); }
+      }
     }
   });
 

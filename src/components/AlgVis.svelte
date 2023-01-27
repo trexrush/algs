@@ -8,10 +8,10 @@
   export let alg: string;
   export let activeAlg: string;
 
-  let size: number = getContext('size')
-  let cssSize = size + "px"
+  let size: number = getContext("size");
+  let cssSize = size + "px";
 
-  let data: IData = getContext('data')
+  let data: IData = getContext("data");
   // https://experiments.cubing.net/cubing.js/twisty/misc-2d-stickerings.html
   // local images get those yep
   let imgSource: string = data.imgSource || DefaultData.imgSource;
@@ -29,15 +29,23 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div class="cont flex flex-row items-center justify-center cursor-pointer relative aspect-square" use:styles={{ size: cssSize }}>
+<div
+  class="cont flex flex-row items-center justify-center cursor-pointer relative aspect-square"
+  use:styles={{ size: cssSize }}
+>
   {#if !twizzle}
-    <img
-    class="cursor-pointer transition-transform"
-      bind:this={visualCubeImage}
-      on:click={setTwizzle}
-      src="https://cubing.net/api/visualcube/?fmt=svg&bg=t&co=50&cc=black&r=y30x-30&pzl={puzzle}&view={view}&size={size}&stage={stage}&case={alg}{rot}"
-      alt="Alg Vis"
-    />
+    <div on:click={setTwizzle}>
+      {#if imgSource == "vc"}
+        <img
+          class="cursor-pointer transition-transform"
+          bind:this={visualCubeImage}
+          src="https://cubing.net/api/visualcube/?fmt=svg&bg=t&co=50&cc=black&r=y30x-30&pzl={puzzle}&view={view}&size={size}&stage={stage}&case={alg}{rot}"
+          alt="Alg Vis"
+        />
+      {:else if imgSource == "cubingjs"}
+        <TwistyPlayer imageAlg={alg} />
+      {/if}
+    </div>
   {:else}
     <TwistyPlayer {activeAlg} />
     <div
