@@ -1,0 +1,15 @@
+---
+  import SetCard from "../components/SetCard.svelte";
+  import type { IAlgSet, ISet } from "../scripts/types";
+
+  interface Props {
+    algset: IAlgSet
+    size?: number
+  }
+  const { algset, size = 128 } = Astro.props
+---
+
+<div class=" relative text-7xl w-full text-center my-5">{algset.data.name}</div>
+{algset.sets.map((set: ISet) => {
+  <SetCard client:only set={set} data={algset.data} size={size}/>
+})}

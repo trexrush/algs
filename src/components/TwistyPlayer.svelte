@@ -5,8 +5,8 @@
   import type { IData, twistyPuzzleType } from "../scripts/types";
   import { DefaultData } from "../scripts/types";
 
-  let data: IData = getContext('data')
-  let size: number = getContext('size');
+  export let data: IData
+  export let size: number
   let stage: string = data.twistyplayerparams?.stage || DefaultData.twistyplayerparams.stage;
   let rot: string = data.twistyplayerparams?.rot || DefaultData.twistyplayerparams.rot;
   let cameraX: number = data.twistyplayerparams?.cameraX || DefaultData.twistyplayerparams.cameraX;

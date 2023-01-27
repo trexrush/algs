@@ -1,9 +1,12 @@
 <script lang="ts">
   import { writable } from "svelte/store";
   import { onMount } from "svelte";
-  import type { ICase } from "../scripts/types";
+  import type { ICase, IData } from "../scripts/types";
   import AlgVis from "./AlgVis.svelte";
+
   export let caso: ICase;
+  export let data: IData
+  export let size: number
 
   const activeAlg = writable(caso.algs[0])
   let setActive = (alg: string) => {
@@ -30,15 +33,16 @@
 </script>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div class="card m-5 ml-0 w-11/12 flex flex-row items-center justify-center">
-  <div class="algs flex flex-col m-1 p-1 w-full text-right pr-5 mr-7 rounded-md justify-center">
+<div class="card m-4 ml-0 w-11/12 flex flex-row relative items-center justify-center">
+  <div class="casename absolute top-0 left-0 px-2 pb-1 rounded-sm"><b>{caso.name}</b></div>
+  <div class="algs flex flex-col m-1 p-1 w-full items-end pr-5 mr-7 rounded-md justify-center">
     {#each caso.algs as alg, i}
-      <p class="{activeElement == i ? 'text-3xl text-stone-600' : 'text-2xl text-stone-400'} hover:text-4xl hover:text-stone-900 cursor-pointer overflow-x-visible" on:click={() => (changeActiveElement(i, alg))} bind:this={elementList[i]}>
+      <p class="{activeElement == i ? 'selected text-stone-600' : 'unselected text-stone-400'} hover:text-stone-900 cursor-pointer overflow-x-visible w-fit" on:click={() => (changeActiveElement(i, alg))} bind:this={elementList[i]}>
         {alg}
       </p>
     {/each}
   </div>
-  <AlgVis activeAlg={$activeAlg} alg={caso.algs[0]}/>
+  <AlgVis activeAlg={$activeAlg} imageAlg={caso.algs[0]} {data} {size}/>
 </div>
 
 <style>
@@ -49,5 +53,19 @@
   .algs {
     /* box-shadow: 2px 2px rgb(41 37 36); */
     height: 100px;
+    background-color: rgba(28, 25, 23, 0.07);
+  }
+  .selected {
+    font-size: 23px;
+  }  
+  .unselected {
+    font-size: 20px;
+  }
+  p:hover {
+    font-size: 25px;
+  }
+  .casename {
+    /* background-color: rgba(28, 25, 23, 0.05); */
+    font-size: 22px;
   }
 </style>
