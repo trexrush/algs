@@ -1,7 +1,8 @@
 <!-- credit to anicolao https://github.com/cubing/cubing.js/issues/223#issuecomment-1249980565 -->
 <script lang="ts">
   import { TwistyPlayer } from "cubing/twisty";
-  import { getContext, onMount } from "svelte";
+  import { onMount } from "svelte";
+  import { removePrePostAUF } from "../scripts/alg";
   import type { IData, twistyPuzzleType } from "../scripts/types";
   import { DefaultData } from "../scripts/types";
 
@@ -29,12 +30,6 @@
     if (!imageAlg && activeAlg) {
       setAlg(activeAlg)
     }
-  }
-  
-  
-  const removePrePostAUF = (a: string): string => {
-    // remove brackets and replace with a pause after
-    return a.replace(/\[(.*)\]/, '$1 . ')
   }
   
   onMount(async () => {
@@ -69,6 +64,7 @@
       twistyPlayer.puzzle = puzzle
       
       twistyDiv.appendChild(twistyPlayer);
+      console.log(twistyPlayer.experimentalModel.twistySceneModel.stickeringMask)
 
       if (!imageAlg) {
         twistyPlayer.play()
