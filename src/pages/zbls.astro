@@ -1,11 +1,15 @@
 ---
 import { algSet } from "../templates/zbls";
 import VerticalLayout from "../layouts/VerticalLayout.svelte";
+import { zblsURL } from "../templates/url";
+
+const response = await fetch(zblsURL)
+const data = await response.json()
 ---
 
 <main>
   <div class=" sm:w-3/4 md:w-3/5 m-auto flex flex-col items-center">
-    <VerticalLayout client:idle algset={algSet} />
+    <VerticalLayout client:idle algset={algSet} sets={data} />
   </div>
 </main>
 
