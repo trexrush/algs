@@ -1,0 +1,17 @@
+---
+import { EG1algSet } from "../templates/222";
+import VerticalLayout from "../layouts/VerticalLayout.svelte";
+import { sheetURL } from "../templates/url";
+import Navbar from "../layouts/Navbar.astro";
+
+const response = await fetch(sheetURL + "?name=EG1");
+const sets = await response.json();
+---
+
+<main>
+  <Navbar title={'EG1'}>
+    <VerticalLayout client:idle data={EG1algSet.data} {sets} />
+  </Navbar>
+</main>
+
+<style></style>

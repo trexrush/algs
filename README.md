@@ -14,7 +14,6 @@ Astro, Tailwind, Svelte
 
 ## Todo (roughly in order)
 
-- get algsets from your sheet when applicable (OLL, EG/CLL)
 - learn tailwind better + migrate loose CSS to tailwind + setup theming
 - make verticalLayout an astro component (and fetch data from there instead of from the page)
 - restructure layouts to be astro (vertlayout, setcard) for better load times (if not working, try flow integration)
@@ -24,13 +23,14 @@ Astro, Tailwind, Svelte
 - cache VC results
 - image, serviceworker and prefetch astro integrations (PWA / Load Optimization)
 - maintain collapsed / selected algs in localstorage
-- allow algs/set to show up in a set order and mix up algs/sets?
 - option to invert an alg to show the right handed version (change name? EDIT - or just style the component to show that its inverted)
 - link to twizzle? link to trainer once thats set up?
 - TRY to make PWA
 - make some flag to bypass algvis or us a different alg than display? maybe a shorthand?
 (ex. where I say fruruf [ZBLL] or the pll parity cases like [J PERM] [PARITY])
-- add Parity OLL/PLL
+(needed to pull parityPLL, parityOLL and OLL from the API)
+- allow algs/set to show up in a set order and mix up algs/sets? (wanted for PLL, needed to pull OLL/PLL from sheet)
+- add Parity OLL/PLL, PLL, OLL
 
 
 

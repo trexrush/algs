@@ -1,0 +1,17 @@
+---
+import { CLLalgSet } from "../templates/222";
+import VerticalLayout from "../layouts/VerticalLayout.svelte";
+import { sheetURL } from "../templates/url";
+import Navbar from "../layouts/Navbar.astro";
+
+const response = await fetch(sheetURL + "?name=CLL");
+const sets = await response.json();
+---
+
+<main>
+  <Navbar title={'EG1'}>
+    <VerticalLayout client:idle data={CLLalgSet.data} {sets} />
+  </Navbar>
+</main>
+
+<style></style>
