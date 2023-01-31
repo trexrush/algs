@@ -14,8 +14,8 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div class="bg flex flex-col mb-5 items-center rounded-xl">
-  <div class="text-4xl my-2 text-center cursor-pointer" on:click={toggleSection}>
+<div class="bg flex flex-col mb-5 items-center rounded-xl shadow-xl">
+  <div class="text-4xl my-2 w-full text-center cursor-pointer" on:click={toggleSection}>
     <b>{set.name}</b>
   </div>
   {#if !collapsed}

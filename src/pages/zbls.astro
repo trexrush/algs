@@ -1,16 +1,17 @@
 ---
 import { algSet } from "../templates/zbls";
 import VerticalLayout from "../layouts/VerticalLayout.svelte";
-import { zblsURL } from "../templates/url";
+import { sheetURL } from "../templates/url";
+import Navbar from "../layouts/Navbar.astro";
 
-const response = await fetch(zblsURL)
-const data = await response.json()
+const response = await fetch(sheetURL + "?name=ZBLS_FR");
+const sets = await response.json();
 ---
 
 <main>
-  <div class=" sm:w-3/4 md:w-3/5 m-auto flex flex-col items-center">
-    <VerticalLayout client:idle algset={algSet} sets={data} />
-  </div>
+  <Navbar title={'ZBLS'}>
+    <VerticalLayout client:idle data={algSet.data} {sets} />
+  </Navbar>
 </main>
 
 <style></style>

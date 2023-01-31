@@ -49,7 +49,7 @@ export const DefaultData: { vcparams: Required<IVCParams>, twistyplayerparams: R
     name: "My Algset",
     imgSource: "vc",
     vcparams: {
-        stage: "fl",
+        stage: "",
         view: "plan",
         rot: "",
         puzzle: 3,

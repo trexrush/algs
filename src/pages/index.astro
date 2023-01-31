@@ -1,16 +1,23 @@
 ---
+import Navbar from "../layouts/Navbar.astro";
 ---
 
-<main>
-  <div class=" sm:w-3/4 md:w-3/5 m-auto flex flex-col items-center">
-    <h1 class="text-4xl">Algsheets:</h1>
-    <br>
-    <a href="/algs/pll" class=" text-3xl bg-stone-200 rounded-md px-3 py-1 m-2">PLL</a>
-    <a href="/algs/zbls" class=" text-3xl bg-stone-200 rounded-md px-3 py-1 m-2">ZBLS</a>
-    <a href="/algs/megaPLL" class=" text-3xl bg-stone-200 rounded-md px-3 py-1 m-2">Megaminx PLL</a>
-  </div>
-</main>
+<Navbar>
+  <main>
+    <div class="flex flex-col items-center">
+      <h1 class="text-4xl mt-10">Eduardo Mazuera's Algorithms:</h1>
+      <br>
+      <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 bg-stone-200 items-center text-center text-3xl text-stone-700 [&>*]:w-full [&>*]:px-3 [&>*]:py-1">
+        <a href="/algs/pll" class="hover:font-semibold">PLL</a>
+        <a href="/algs/zbls" class="hover:font-semibold">ZBLS</a>
+        <a href="/algs/zbll/T" class="hover:font-semibold">ZBLL T Set</a>
+        <a href="/algs/zbll/U" class="hover:font-semibold">ZBLL U Set</a>
+        <a href="/algs/zbll/L" class="hover:font-semibold">ZBLL L Set</a>
+        <a href="/algs/megaPLL" class="hover:font-semibold">Megaminx PLL</a>
+      </div>
+    </div>
+  </main>
+</Navbar>
 
 <style>
-
 </style>

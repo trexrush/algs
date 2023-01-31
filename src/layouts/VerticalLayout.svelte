@@ -1,9 +1,8 @@
 <script lang="ts">
     import SetCard from "../components/SetCard.svelte";
-    import type { IAlgSet, IData, ISet } from "../scripts/types";
-    export let algset: IAlgSet;
-    export let sets: ISet[] = algset.sets
-    export let data: IData = algset.data
+    import type { IData, ISet } from "../scripts/types";
+    export let sets: ISet[]
+    export let data: IData
     export let size: number = 128;
   </script>
   
