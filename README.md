@@ -14,10 +14,8 @@ Astro, Tailwind, Svelte
 
 ## Todo (roughly in order)
 
-- link to algsheet and github
-- add hover for collabsible set name
 - make the ratio of image to alg like 25/75 on mobile (and increase font)
-- learn tailwind better + migrate loose CSS to tailwind + setup theming
+- learn tailwind better + setup theming
 - add an info component to tell ppl that they can click the image to get an algvis
 - create gridlayout
 - come up with / implement a good system for local images
@@ -26,7 +24,6 @@ Astro, Tailwind, Svelte
 - maintain collapsed / selected algs in localstorage
 - option to invert an alg to show the right handed version (change name? EDIT - or just style the component to show that its inverted)
 - link to twizzle? link to trainer once thats set up?
-- TRY to make PWA
 - collapse all
 - make some flag to bypass algvis or us a different alg than display? maybe a shorthand?
 (ex. where I say fruruf [ZBLL] or the pll parity cases like [J PERM] [PARITY])
