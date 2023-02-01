@@ -1,6 +1,6 @@
 ---
 import { algSet } from "../templates/zbls";
-import VerticalLayout from "../layouts/VerticalLayout.svelte";
+import VerticalLayout from "../layouts/VerticalLayout.astro";
 import { sheetURL } from "../templates/url";
 import Navbar from "../layouts/Navbar.astro";
 
@@ -10,7 +10,7 @@ const sets = await response.json();
 
 <main>
   <Navbar title={'ZBLS'}>
-    <VerticalLayout client:idle data={algSet.data} {sets} />
+    <VerticalLayout data={algSet.data} {sets} />
   </Navbar>
 </main>
 

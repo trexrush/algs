@@ -1,8 +1,8 @@
 ---
-import { algSet } from "../../templates/zbll";
-import VerticalLayout from "../../layouts/VerticalLayout.svelte";
-import { sheetURL } from "../../templates/url";
+import VerticalLayout from "../../layouts/VerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
+import { algSet } from "../../templates/zbll";
+import { sheetURL } from "../../templates/url";
 
 const response = await fetch(sheetURL + "?name=L_ZBLL");
 const sets = await response.json();
@@ -10,7 +10,7 @@ const sets = await response.json();
 
 <main>
   <Navbar title={"L ZBLL"}>
-    <VerticalLayout client:idle data={algSet.data} {sets} />
+    <VerticalLayout data={algSet.data} {sets} />
   </Navbar>
 </main>
 

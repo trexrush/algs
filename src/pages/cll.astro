@@ -1,6 +1,6 @@
 ---
 import { CLLalgSet } from "../templates/222";
-import VerticalLayout from "../layouts/VerticalLayout.svelte";
+import VerticalLayout from "../layouts/VerticalLayout.astro";
 import { sheetURL } from "../templates/url";
 import Navbar from "../layouts/Navbar.astro";
 
@@ -10,7 +10,7 @@ const sets = await response.json();
 
 <main>
   <Navbar title={'EG1'}>
-    <VerticalLayout client:idle data={CLLalgSet.data} {sets} />
+    <VerticalLayout data={CLLalgSet.data} {sets} />
   </Navbar>
 </main>
 

@@ -1,0 +1,61 @@
+---
+import type { IData, ISet } from "../scripts/types";
+import AlgCard from "./AlgCard.svelte";
+
+interface Props {
+  set: ISet;
+  data: IData;
+  size: number;
+}
+const { set, data, size } = Astro.props;
+---
+
+<div
+  is="collapsible-set"
+  class=" bg-stone-900/[.07] w-[95%] flex flex-col mb-5 items-center rounded-xl shadow-xl"
+>
+  <div class="toggle text-4xl my-2 w-full text-center cursor-pointer">
+    <b>{set.name}</b>
+  </div>
+  <div class="collapsible w-full">
+    {
+      set.cases
+        ? set.cases?.map((caso) => (
+            <AlgCard client:visible {caso} {data} size={size} />
+          ))
+        : ""
+    }
+    {
+      set.sets
+        ? set.sets.map((subSet) => (
+            <Astro.self set={subSet} {data} size={size} />
+          ))
+        : ""
+    }
+  </div>
+</div>
+
+<script>
+  customElements.define(
+    "collapsible-set",
+    class extends HTMLDivElement {
+      constructor() {
+        super();
+        let isCollapsed = false;
+
+        const toggler: HTMLElement | null = this.querySelector(".toggle");
+        const section: HTMLElement | null = this.querySelector(".collapsible");
+
+        toggler?.addEventListener("click", () => {
+          console.log(section?.style.display);
+          section &&
+            (isCollapsed
+              ? (section.style.display = "")
+              : (section.style.display = "none"));
+              isCollapsed = !isCollapsed
+        });
+      }
+    },
+    { extends: "div" }
+  );
+</script>

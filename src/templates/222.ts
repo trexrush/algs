@@ -11,7 +11,7 @@ const CLLalgSet: IAlgSet = {
             puzzle: 2,
         },
         twistyplayerparams: {
-            rot: '',
+            rot: "x2 y'",
             puzzle: '2x2x2'
         },
     },

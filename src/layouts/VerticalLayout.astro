@@ -1,15 +1,20 @@
 ---
-  import SetCard from "../components/SetCard.svelte";
-  import type { IAlgSet, ISet } from "../scripts/types";
+  // import SetCard from "../components/SetCard.svelte";
+  import SetCard from "../components/SetCard.astro";
+  import type { IData, ISet } from "../scripts/types";
 
   interface Props {
-    algset: IAlgSet
+    data: IData
+    sets: ISet[]
     size?: number
   }
-  const { algset, size = 128 } = Astro.props
+  const { sets, data, size = 128 } = Astro.props
 ---
 
-<div class=" relative text-7xl w-full text-center my-5">{algset.data.name}</div>
-{algset.sets.map((set: ISet) => {
-  <SetCard client:only set={set} data={algset.data} size={size}/>
-})}
+<div class=" relative text-7xl w-full text-center my-5">{data.name}</div>
+
+{sets.map((set) => (
+  <>
+    <SetCard set={set} data={data} size={size}/>
+  </>
+))}

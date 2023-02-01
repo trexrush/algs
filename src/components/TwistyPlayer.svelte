@@ -21,7 +21,7 @@
   export let drag = false;
   let twistyDiv: HTMLDivElement
   
-  // canvas elements are undefined until load so this logic must be defined in there
+  // canvas elements are undefined until load so this logic must be defined in onMount
   let setAlg = (alg: string) => { return }
   
   export let imageAlg: string | null = null
@@ -64,7 +64,7 @@
       twistyPlayer.puzzle = puzzle
       
       twistyDiv.appendChild(twistyPlayer);
-      console.log(twistyPlayer.experimentalModel.twistySceneModel.stickeringMask)
+      // console.log(twistyPlayer.experimentalModel.twistySceneModel.stickeringMask)
 
       if (!imageAlg) {
         twistyPlayer.play()
