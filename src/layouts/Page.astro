@@ -1,0 +1,24 @@
+---
+const { title } = Astro.props;
+---
+<html lang="en" class=" font-juju">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title >{"Eduardo's " + title + " algs"}</title>
+    <link rel="manifest" href="/algs/manifest.json">
+    <link rel="icon" href="/algs/icon-192x192.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body class="shadow-stone-800 bg-stone-100">
+    <slot name="navbar"/>
+    <article>
+        <div class="lg:w-[1000px] m-auto flex flex-col items-center">
+            <slot /> 
+        </div>
+    </article>
+  </body>
+</html>

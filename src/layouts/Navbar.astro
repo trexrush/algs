@@ -1,33 +1,15 @@
----
-const { title } = Astro.props
----
-<html lang="en" class=" font-juju">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title >{"Eduardo's " + title + " algs"}</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  </head>
-  <body class="shadow-stone-800 bg-stone-100">
-    <nav class="flex w-fit items-baseline m-3 rounded-md shadow-lg divide-x-2 divide-stone-400/10 bg-stone-200
-       [&>*]:py-2 [&>*]:px-4 ">
-        <a href="/algs/" class="text-xl font-bold hover:font-black">Home</a>
-        <a href="/algs/pll" class="hover:font-semibold">PLL</a>
-        <a href="/algs/zbls" class="hover:font-semibold">ZBLS</a>
-        <a href="/algs/zbll/T" class="hover:font-semibold">ZBLL T Set</a>
-        <a href="/algs/zbll/U" class="hover:font-semibold">ZBLL U Set</a>
-        <a href="/algs/zbll/L" class="hover:font-semibold">ZBLL L Set</a>
-        <a href="/algs/cll" class="hover:font-semibold">CLL</a>
-        <a href="/algs/eg1" class="hover:font-semibold">EG1</a>
-        <a href="/algs/megaPLL" class="hover:font-semibold">Megaminx PLL</a>
-    </nav>
-    <article>
-        <div class="lg:w-[1000px] m-auto flex flex-col items-center">
-            <slot /> 
-        </div>
-    </article>
-  </body>
-</html>
+<nav
+  class="flex w-fit items-baseline m-3 rounded-md shadow-lg divide-x-2 divide-stone-400/10 bg-stone-200 [&>*]:py-2 [&>*]:px-4"
+>
+  <a href="/algs/" class="text-xl font-bold hover:font-black">Home</a>
+  <a href="/algs/pll" class="hover:font-semibold">PLL</a>
+  <a href="/algs/zbls" class="hover:font-semibold">ZBLS</a>
+  <a href="/algs/zbll/T" class="hover:font-semibold">ZBLL T Set</a>
+  <a href="/algs/zbll/U" class="hover:font-semibold">ZBLL U Set</a>
+  <a href="/algs/zbll/L" class="hover:font-semibold">ZBLL L Set</a>
+  <a href="/algs/cll" class="hover:font-semibold">CLL</a>
+  <a href="/algs/eg1" class="hover:font-semibold">EG1</a>
+  <a href="/algs/megaPLL" class="hover:font-semibold">Megaminx PLL</a>
+  <a href="https://docs.google.com/spreadsheets/d/1L0iR5AyRh2sTWymHSD2MiTJXzl8IoxGzyuRgqEhttSs/edit#gid=1313953242" class="hover:font-semibold">Full Algsheet (GSheets)</a>
+  <a href="https://github.com/trexrush/algs" class="hover:font-semibold">Github</a>
+</nav>

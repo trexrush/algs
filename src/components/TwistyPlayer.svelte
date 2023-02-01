@@ -75,13 +75,7 @@
 
 </script>
 
-<div class="h-32 w-32" bind:this={twistyDiv} />
+<div class="h-32 w-32 transition-transform duration-300 ease-in-out hover:translate-y-[-8px] hover:scale-[1.05]" bind:this={twistyDiv} />
 
 <style>
-  div {
-      transition: transform 0.3s ease;
-  }
-  div:hover {
-    transform: translate(0px, -8px) scale(1.05);
-  }
 </style>

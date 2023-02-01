@@ -3,15 +3,13 @@ import VerticalLayout from "../../layouts/VerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
 import { algSet } from "../../templates/zbll";
 import { sheetURL } from "../../templates/url";
+import Page from "../../layouts/Page.astro";
 
 const response = await fetch(sheetURL + "?name=L_ZBLL");
 const sets = await response.json();
 ---
 
-<main>
-  <Navbar title={"L ZBLL"}>
-    <VerticalLayout data={algSet.data} {sets} />
-  </Navbar>
-</main>
-
-<style></style>
+<Page title={'L_ZBLL'}>
+  <Navbar slot="navbar" />
+  <VerticalLayout data={algSet.data} {sets} />
+</Page>

@@ -22,7 +22,7 @@ Astro, Tailwind, Svelte
 - create gridlayout
 - come up with / implement a good system for local images
 - cache VC results
-- image, serviceworker and prefetch astro integrations (PWA / Load Optimization)
+- image, serviceworker, astro-compress and prefetch astro integrations (PWA / Load Optimization)
 - maintain collapsed / selected algs in localstorage
 - option to invert an alg to show the right handed version (change name? EDIT - or just style the component to show that its inverted)
 - link to twizzle? link to trainer once thats set up?

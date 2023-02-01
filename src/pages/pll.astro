@@ -2,12 +2,10 @@
 import { algSet } from "../templates/pll";
 import VerticalLayout from "../layouts/VerticalLayout.astro";
 import Navbar from "../layouts/Navbar.astro";
+import Page from "../layouts/Page.astro";
 ---
 
-<main>
-  <Navbar title={"PLL"}>
-    <VerticalLayout data={algSet.data} sets={algSet.sets} />
-  </Navbar>
-</main>
-
-<style></style>
+<Page title={'PLL'}>
+  <Navbar slot="navbar" />
+  <VerticalLayout data={algSet.data} sets={algSet.sets} />
+</Page>

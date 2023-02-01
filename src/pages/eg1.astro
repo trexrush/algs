@@ -3,15 +3,13 @@ import { EG1algSet } from "../templates/222";
 import VerticalLayout from "../layouts/VerticalLayout.astro";
 import { sheetURL } from "../templates/url";
 import Navbar from "../layouts/Navbar.astro";
+import Page from "../layouts/Page.astro";
 
 const response = await fetch(sheetURL + "?name=EG1");
 const sets = await response.json();
 ---
 
-<main>
-  <Navbar title={'EG1'}>
-    <VerticalLayout data={EG1algSet.data} {sets} />
-  </Navbar>
-</main>
-
-<style></style>
+<Page title={'EG-1'}>
+  <Navbar slot="navbar" />
+  <VerticalLayout data={EG1algSet.data} {sets} />
+</Page>

@@ -37,12 +37,12 @@
     <div on:click={setTwizzle}>
       {#if imgSource == "vc"}
         <img
-          class="cursor-pointer transition-transform"
+          class="cursor-pointer transition-transform hover:translate-y-[-8px]"
           src="https://cubing.net/api/visualcube/?fmt=svg&bg=t&co=50&cc=black&r=y30x-30&pzl={puzzle}&view={view}&size={size}&stage={stage}&case={imageAlg}{rot}"
           alt="Alg Vis"
           />
       {:else if imgSource == "cubicleVC"}
-        <svg class="cursor-pointer transition-transform" width="{size}px" height="{size}px">
+        <svg class="cursor-pointer transition-transform hover:translate-y-[-8px]" width="{size}px" height="{size}px">
           <image xlink:href="https://cubiclealgdbimagegen.azurewebsites.net/generator?puzzle={puzzle}&scheme={colorScheme}&alg={imageAlg}{rot}" width="{size}px" height="{size}px">
         </svg>
       {:else if imgSource == "cubingjs"}
@@ -64,8 +64,5 @@
   .cont {
     height: var(--size);
     width: var(--size);
-  }
-  img:hover, svg:hover {
-    transform: translate(0px, -8px) scale(1.1);
   }
 </style>
