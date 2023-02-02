@@ -5,6 +5,7 @@ specifiers:
   '@astrojs/tailwind': ^3.0.0
   astro: ^2.0.0
   cubing: ^0.35.6
+  sr-visualizer: ^1.0.13
   svelte: ^3.54.0
   tailwindcss: ^3.0.24
 
@@ -13,6 +14,7 @@ dependencies:
   '@astrojs/tailwind': 3.0.0_ybg5bdd5h3rg6corkitjxxqs2q
   astro: 2.0.0
   cubing: 0.35.6
+  sr-visualizer: 1.0.13
   svelte: 3.55.1
   tailwindcss: 3.2.4
 
@@ -2849,6 +2851,12 @@ packages:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: false
 
+  /sr-visualizer/1.0.13:
+    resolution: {integrity: sha512-6/tivRwEttzIegF7jxtGBLpaQrYaBGNOmIpSGgp/9zYIH91rEGcpUG/TkmBqlqtxbWt6WF4y8cieUXE4V9F/Sw==}
+    dependencies:
+      svg.js: 2.7.1
+    dev: false
+
   /streamsearch/1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
     engines: {node: '>=10.0.0'}
@@ -2973,6 +2981,10 @@ packages:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
       svelte: 3.55.1
+    dev: false
+
+  /svg.js/2.7.1:
+    resolution: {integrity: sha512-ycbxpizEQktk3FYvn/8BH+6/EuWXg7ZpQREJvgacqn46gIddG24tNNe4Son6omdXCnSOaApnpZw6MPCBA1dODA==}
     dev: false
 
   /synckit/0.8.4:

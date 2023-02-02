@@ -5,7 +5,6 @@ const algSet: IAlgSet = {
         name: "PLL",
         imgSource: "vc",
         vcparams: {
-            stage: 'pll',
             puzzle: 3,
         },
         twistyplayerparams: {

@@ -1,6 +1,5 @@
-const version = 'beta'
-const IMG_CACHE = 'imgcache'
-const DATA_CACHE = `algsetcache`
+const version = '1'
+const CACHE = `cache-${version}`
 
 
 self.addEventListener('install', event => {
@@ -24,17 +23,18 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
     
     event.respondWith((async () => {
-        // TODO: implement caches bc theyre not functional atm
-        // const cache = await caches.open(DATA_CACHE);
-        // const cachedResponse = await cache.match(event.request);
+        const cache = await caches.open(CACHE);
+        const cachedResponse = await cache.match(event.request);
         
-        // if (cachedResponse) {
-        //     console.log("SW: returning cached result")
-        //     return cachedResponse;
-        // } 
+        if (cachedResponse) {
+            console.log("SW: returning cached result ", cachedResponse.url)
+            return cachedResponse;
+        }
         
-        console.log('SW: Cache not hit, fetching', event.request);
+        console.log('SW: Cache not hit, fetching', event.request.url);
         const response = await fetch(event.request)
+        // https://stackoverflow.com/questions/49157622/service-worker-typeerror-when-opening-chrome-extension
+        if (!event.request.url.includes('extension')) { cache.put(event.request, response.clone()) }
         return response
     })());
 });

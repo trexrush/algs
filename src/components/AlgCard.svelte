@@ -1,6 +1,5 @@
 <script lang="ts">
   import { writable } from "svelte/store";
-  import { onMount } from "svelte";
   import type { ICase, IData } from "../scripts/types";
   import AlgVis from "./AlgVis.svelte";
 
@@ -26,10 +25,6 @@
 
     setActive(alg)
   }
-
-  // onMount(async () => {
-  //   activeElement = 0
-  // })
 </script>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
