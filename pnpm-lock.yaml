@@ -3,20 +3,24 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/svelte': ^2.0.0
   '@astrojs/tailwind': ^3.0.0
+  '@vite-pwa/astro': ^0.0.1
   astro: ^2.0.0
-  astrojs-service-worker: ^0.0.9
   cubing: ^0.35.6
   svelte: ^3.54.0
   tailwindcss: ^3.0.24
+  vite-plugin-pwa: ^0.14.1
+  workbox-window: ^6.5.4
 
 dependencies:
   '@astrojs/svelte': 2.0.0_astro@2.0.0+svelte@3.55.1
   '@astrojs/tailwind': 3.0.0_ybg5bdd5h3rg6corkitjxxqs2q
+  '@vite-pwa/astro': 0.0.1
   astro: 2.0.0
-  astrojs-service-worker: 0.0.9_astro@2.0.0
   cubing: 0.35.6
   svelte: 3.55.1
   tailwindcss: 3.2.4
+  vite-plugin-pwa: 0.14.1_workbox-window@6.5.4
+  workbox-window: 6.5.4
 
 packages:
 
@@ -1661,6 +1665,20 @@ packages:
       rollup: 2.79.1
     dev: false
 
+  /@rollup/plugin-replace/5.0.2_rollup@3.10.1:
+    resolution: {integrity: sha512-M9YXNekv/C/iHHK+cvORzfRYfPbq0RDD8r0G+bMiTXjNGKulPnCT9O3Ss46WfhI6ZOCgApOP7xAdmCQJ+U2LAA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.2_rollup@3.10.1
+      magic-string: 0.27.0
+      rollup: 3.10.1
+    dev: false
+
   /@rollup/pluginutils/3.1.0_rollup@2.79.1:
     resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
     engines: {node: '>= 8.0.0'}
@@ -1671,6 +1689,21 @@ packages:
       estree-walker: 1.0.1
       picomatch: 2.3.1
       rollup: 2.79.1
+    dev: false
+
+  /@rollup/pluginutils/5.0.2_rollup@3.10.1:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': 1.0.0
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+      rollup: 3.10.1
     dev: false
 
   /@surma/rollup-plugin-off-main-thread/2.2.3:
@@ -1811,6 +1844,10 @@ packages:
 
   /@types/yargs-parser/21.0.0:
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
+    dev: false
+
+  /@vite-pwa/astro/0.0.1:
+    resolution: {integrity: sha512-FkX3F+JbVVjSjXrHkE681ZmOSIS2h43ldj7+YnBf52/qoSM9Ns05kNcjC7RNSIlRpD0a0TN1efutulDWWra6UQ==}
     dev: false
 
   /@vscode/emmet-helper/2.8.6:
@@ -1983,18 +2020,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-    dev: false
-
-  /astrojs-service-worker/0.0.9_astro@2.0.0:
-    resolution: {integrity: sha512-bj9v+jvhWdC+C/NSkVgCSJ2pJQf/8xh9B5v4MwgrkBkux+KivSaEZ/i3f/XYHhJRd6YLS9S7SfoJw0j5wUmYzA==}
-    peerDependencies:
-      astro: '>=1.0.0'
-    dependencies:
-      astro: 2.0.0
-      workbox-build: 6.5.4
-    transitivePeerDependencies:
-      - '@types/babel__core'
-      - supports-color
     dev: false
 
   /async/3.2.4:
@@ -2586,6 +2611,10 @@ packages:
 
   /estree-walker/1.0.1:
     resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
+    dev: false
+
+  /estree-walker/2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: false
 
   /estree-walker/3.0.3:
@@ -4168,6 +4197,11 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
+  /pretty-bytes/6.0.0:
+    resolution: {integrity: sha512-6UqkYefdogmzqAZWzJ7laYeJnaXDy2/J+ZqiiMtS7t7OfpXWTlaeGMwX8U6EFvPV/YWWEKRkS8hKS4k60WHTOg==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+    dev: false
+
   /prismjs/1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -5093,6 +5127,24 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.3
+    dev: false
+
+  /vite-plugin-pwa/0.14.1_workbox-window@6.5.4:
+    resolution: {integrity: sha512-5zx7yhQ8RTLwV71+GA9YsQQ63ALKG8XXIMqRJDdZkR8ZYftFcRgnzM7wOWmQZ/DATspyhPih5wCdcZnAIsM+mA==}
+    peerDependencies:
+      vite: ^3.1.0 || ^4.0.0
+      workbox-window: ^6.5.4
+    dependencies:
+      '@rollup/plugin-replace': 5.0.2_rollup@3.10.1
+      debug: 4.3.4
+      fast-glob: 3.2.12
+      pretty-bytes: 6.0.0
+      rollup: 3.10.1
+      workbox-build: 6.5.4
+      workbox-window: 6.5.4
+    transitivePeerDependencies:
+      - '@types/babel__core'
+      - supports-color
     dev: false
 
   /vite/4.0.4:

@@ -3,7 +3,9 @@
   "short_name": "Algs",
   "description": "A collection of algorithms used by Eduardo Mazuera",
   "start_url": "/algs/",
+  "id": "/algs/",
   "background_color": "#F5F5F4",
+  "theme_color": "#00F135",
   "orientation": "any",
   "display": "standalone",
   "prefer_related_applications": false,
@@ -12,7 +14,7 @@
       "src": "icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "maskable"
     },
     {
       "src": "icon-384x384.png",
