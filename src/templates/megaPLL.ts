@@ -66,14 +66,14 @@ const algSet: IAlgSet = {
         //         { name: 'U2-', algs: [""] },
         //     ],
         // },
-        // {
-        //     name: 'Z (4 edge EP)',
-        //     cases: [
-        //         { name: 'Z1+', algs: [""] },
-        //         { name: 'Z1-', algs: [""] },
-        //         { name: 'Z2+', algs: [""] },
-        //     ],
-        // },
+        {
+            name: 'Z (4 edge EP)',
+            cases: [
+                { name: 'Z1', algs: ["L U F' L' U L U L' U2' L F L' F' U F L U2' L'"] },
+                { name: 'Z2', algs: ["L U2 L U L' F' L F U' L' F U F' U2 L'"] },
+                { name: 'Z3', algs: ["L R U2' R' U' L' BL' F' U2 BL U F"] },
+            ],
+        },
         // {
         //     name: 'Q (5 edge EP)',
         //     cases: [
