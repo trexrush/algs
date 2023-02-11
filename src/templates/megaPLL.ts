@@ -57,21 +57,21 @@ const algSet: IAlgSet = {
                 },
             ]
         },
-        // {
-        //     name: 'U (3 edge EP)',
-        //     cases: [
-        //         { name: 'U1+', algs: [""] },
-        //         { name: 'U1-', algs: [""] },
-        //         { name: 'U2+', algs: [""] },
-        //         { name: 'U2-', algs: [""] },
-        //     ],
-        // },
+        {
+            name: 'U (3 edge EP)',
+            cases: [
+                { name: 'U1+', algs: ["[U2] L' U' L U' L U L2' U L U' L U' L'"] },
+                { name: 'U1-', algs: ["[U2] L U L' U L' U' L2 U' L' U L' U L"] },
+                { name: 'U2+', algs: ["[U2] L' U2' L U' L U L2' U L U' L U' L' U2 L' U L"] },
+                { name: 'U2-', algs: ["[U2] L U2 L' U L' U' L2 U' L' U L' U L U2' L U' L'"] },
+            ],
+        },
         {
             name: 'Z (4 edge EP)',
             cases: [
                 { name: 'Z1', algs: ["L U F' L' U L U L' U2' L F L' F' U F L U2' L'"] },
                 { name: 'Z2', algs: ["L U2 L U L' F' L F U' L' F U F' U2 L'"] },
-                { name: 'Z3', algs: ["L R U2' R' U' L' BL' F' U2 BL U F"] },
+                { name: 'Z3', algs: ["L R U2' R' U' L' BL' F' U2' F U' BL"] },
             ],
         },
         // {
@@ -83,15 +83,15 @@ const algSet: IAlgSet = {
         //         { name: 'Q2-', algs: [""] },
         //     ],
         // },
-        // {
-        //     name: 'B (Double R block)',
-        //     cases: [
-        //         { name: 'B1+', algs: [""] },
-        //         { name: 'B1-', algs: [""] },
-        //         { name: 'B2+', algs: [""] },
-        //         { name: 'B2-', algs: [""] },
-        //     ],
-        // },
+        {
+            name: 'B (Double R block)',
+            cases: [
+                { name: 'B1+', algs: ["[U2] L U L' U' L' U2' L U L U' L2' U2 L"] },
+                { name: 'B1-', algs: ["[U2] L' U' L U L U2 L' U' L' U L2 U2' L'"] },
+                // { name: 'B2+', algs: [""] },
+                // { name: 'B2-', algs: [""] },
+            ],
+        },
         // {
         //     name: 'C (2 2x1s touching)',
         //     cases: [
@@ -109,13 +109,13 @@ const algSet: IAlgSet = {
         //         { name: 'C6-', algs: [""] },
         //     ],
         // },
-        // {
-        //         name: 'D (3x1 and 2x2)',
-        //         cases: [
-        //                 { name: 'D+', algs: [""] },
-        //                 { name: 'D-', algs: [""] },
-        //     ],
-        // },
+        {
+                name: 'D (3x1 and 2x2)',
+                cases: [
+                        { name: 'D+', algs: ["[U2] L U2 L' U' L U L' U L U2' L' U2 L U2 L'"] },
+                        { name: 'D-', algs: ["[U2'] L' U2' L U L' U' L U' L' U2 L U2' L' U2' L"] },
+            ],
+        },
         {
             name: 'F (3x1 and 2x1(s))',
             cases: [
@@ -162,7 +162,7 @@ const algSet: IAlgSet = {
         {
             name: 'J (J block)',
             cases: [
-                { name: 'J1+', algs: ["[U'] F' U L F' L2' U L U L' U' L F L' U' L F"] },
+                { name: 'J1+', algs: ["[U2'] L U L' BL' L U L' U' L' BL L2 U' L'", "[U'] F' U L F' L2' U L U L' U' L F L' U' L F"], comment: "3x3 transfer (J perm)" },
                 { name: 'J1-', algs: ["[U'] L' U' L F L' U' L U L F' L2' U L"], comment: "3x3 transfer (J perm)" },
                 // { name: 'J2+', algs: [""] },
                 // { name: 'J2-', algs: [""] },
@@ -269,12 +269,12 @@ const algSet: IAlgSet = {
                 // { name: 'V4-', algs: [""] },
             ],
         },
-        // {
-        //     name: 'W (2 2x2s)',
-        //     cases: [
-        //         { name: 'W1+', algs: [""] },
-        //     ],
-        // },
+        {
+            name: 'W (2 2x2s)',
+            cases: [
+                { name: 'W1+', algs: ["L U2 L U2' L' U2' L' U L2 U2' L2' U2' L U' L'"] },
+            ],
+        },
         // {
         //     name: 'X (No blocks or headlights)',
         //     cases: [
