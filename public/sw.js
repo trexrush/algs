@@ -1,4 +1,4 @@
-const version = '2'
+const version = '3'
 const CACHE = `cache-${version}`
 
 self.addEventListener('install', event => {
@@ -28,8 +28,8 @@ self.addEventListener('fetch', event => {
         
         if (cachedResponse) {
             console.log("SW: returning cached result ", cachedResponse.url)
-            fetchThenCache(event, cache)
-            return cachedResponse;
+            let networkRes = fetchThenCache(event, cache)
+            return navigator.onLine ? networkRes : cachedResponse;
         }
         
         console.log('SW: Cache not hit, fetching', event.request.url);
