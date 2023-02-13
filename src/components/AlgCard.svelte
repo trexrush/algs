@@ -30,7 +30,7 @@
 
 <div class="w-[95%] m-4 ml-0 mt-0 pt-4 flex flex-row items-center justify-center">
   <AlgVis activeAlg={$activeAlg} imageAlg={caso.algs[0]} {data} {size}/>
-  <div class="h-[6em] bg-stone-900/[.07] flex flex-col relative m-1 p-1 w-full items-start pl-5 ml-5 rounded-md justify-center shadow-lg">
+  <div class="h-[6em] bg-stone-900/[.07] flex flex-col relative m-1 p-2 w-full items-start ml-5 rounded-md justify-center shadow-lg">
     <div class="text-[3.2vw] sm:text-[20px] translate-y-[-1.5em] absolute top-0 left-0 px-2 pb-1 rounded-sm"><b>{caso.name}</b></div>
     {#if caso.comment}
     <div class="text-[2.3vw] md:text-[16px] leading-none text-stone-900/[.35] translate-y-[100px] absolute text-right w-5/6 top-0 right-2"><b>{caso.comment}</b></div>
