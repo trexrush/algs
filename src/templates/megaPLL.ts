@@ -65,8 +65,8 @@ const algSet: IAlgSet = {
                     cases: [
                         { name: 'U1+', algs: ["L' U' L U' L U L2' U L U' L U' L'"] }, // U2
                         { name: 'U1-', algs: ["L U L' U L' U' L2 U' L' U L' U L"] }, // U2
-                        { name: 'U2+', algs: ["L' U2' L U' L U L2' U L U' L U' L' U2 L' U L"] }, // U2
-                        { name: 'U2-', algs: ["L U2 L' U L' U' L2 U' L' U L' U L U2' L U' L'"] }, // U2
+                        { name: 'U2+', algs: ["L' U2' L U' L U L2' U L U' L U' L' U2 L' U L"], comment: "first move goes to the side of the edge where the L edge goes to" }, // U2
+                        { name: 'U2-', algs: ["L U2 L' U L' U' L2 U' L' U L' U L U2' L U' L'"], comment: "first move goes to the side of the edge where the L edge goes to" }, // U2
                     ],
                 },
                 {
@@ -80,10 +80,10 @@ const algSet: IAlgSet = {
                 {
                     name: 'Q (5 edge EP)',
                     cases: [
-                        { name: 'Q1+', algs: [""], comment: "7 move EP x2 with an AUF in between" },
-                        { name: 'Q1-', algs: [""], comment: "7 move EP x2 with an AUF in between" },
-                        { name: 'Q2+', algs: [""] },
-                        { name: 'Q2-', algs: [""] },
+                        { name: 'Q1+', algs: ["(L2' U2 L2 U L2' U2 L2) U' (L2' U2 L2 U L2' U2 L2)"], comment: "cw cycles,  7 move EP x2 with an AUF in between" },
+                        { name: 'Q1-', algs: ["(L2 U2' L2' U' L2 U2' L2') U (L2 U2' L2' U' L2 U2' L2')"], comment: "ccw cycles, 7 move EP x2 with an AUF in between" },
+                        { name: 'Q2+', algs: ["L' U2' L U' L' U2' L2 U2' L' U' L U2' L'"], comment: "no auf: cw cycles, non adg-swapping edge goes in F | auf: 7 mover EP close edge, do U2' then alg" },
+                        { name: 'Q2-', algs: ["L U2 L' U L U2 L2' U2 L U L' U2 L"], comment: "no auf: ccw cycles, non adg-swapping edge goes in BL | auf: 7 mover EP far edge, do U2' then alg" },
                     ],
                 },
             ]
@@ -264,14 +264,14 @@ const algSet: IAlgSet = {
         {
             name: 'V (2x2 and 2x1)',
             cases: [
-                { name: 'V1+', algs: ["L' U L2 FL L' U' L FL' L' U L' U L U' L' U' L", "L' U2' L2 F' L' F L' U L F U' F' L' U L"], comment: "3x3 transfer (LUD R perm)" }, // U2
-                // { name: 'V1-', algs: [""] },
+                { name: 'V1+', algs: ["L' U L2 FL L' U' L FL' L' U L' U L U' L' U' L", "L' U2' L2 F' L' F L' U L F U' F' L' U L"], comment: "3x3 transfer (LUD R perm) for alg 1" }, // U2
+                { name: 'V1-', algs: ["L U2' L FL L' U L FL' L' U' L' U L U L'"], comment: "3x3 transfer (LUD R perm)" },
                 { name: 'V2+', algs: ["L' U L U L' U' L U' L FL L' U L FL' L2' U' L"], comment: "3x3 transfer (LUD R perm)" }, // U2
-                // { name: 'V2-', algs: [""] },
-                // { name: 'V3+', algs: [""] },
-                // { name: 'V3-', algs: [""] },
-                // { name: 'V4+', algs: [""] },
-                // { name: 'V4-', algs: [""] },
+                { name: 'V2-', algs: ["L U' L' U' L U L FL L' U' L FL' L' U2 L'"], comment: "3x3 transfer (LUD R perm)" },
+                { name: 'V3+', algs: ["L U2 L' U' L' U L F' L U2' L' U2 F L' U' L", "L U L2 U' L' U' L U L' U' L' U L2' U L U' L"] },
+                { name: 'V3-', algs: ["L' U' L2' U L U L' U' L U L U' L2 U' L' U L'"] },
+                { name: 'V4+', algs: ["L' U L F' U2' L U2 L' F L' U' L U L U2' L'", "L' U L' U' L2 U' L U L U' L' U L U L2' U' L'"] },
+                { name: 'V4-', algs: ["L' U' L U L U' F' L' U' L' U L F U' L U2 L'", "L U' L U L2' U L' U' L' U L U' L' U' L2 U L"] },
             ],
         },
         {
