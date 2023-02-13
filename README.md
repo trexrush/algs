@@ -14,8 +14,9 @@ Astro, Tailwind, Svelte
 
 ## Todo (roughly in order)
 
-- learn tailwind better + setup theming
+- dark mode
 - add an info component to tell ppl that they can click the image to get an algvis
+- github logo
 - create gridlayout
 - refactor algcard to insert twistyPlayer / algImage and remove algVis
 - maintain collapsed / selected algs in localstorage/cache

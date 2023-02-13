@@ -11,7 +11,7 @@
   const { sets, data, size = 128 } = Astro.props
 ---
 
-<div class=" relative text-7xl w-full text-center my-5">{data.name}</div>
+<div class=" relative text-5xl sm:text-7xl w-full text-center my-5">{data.name}</div>
 
 {sets.map((set) => (
     <SetCard set={set} data={data} size={size}/>

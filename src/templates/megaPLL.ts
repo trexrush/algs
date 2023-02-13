@@ -2,7 +2,7 @@ import type { IAlgSet } from "../scripts/types"
 
 const algSet: IAlgSet = {
     data: {
-        name: "Megaminx PLL (WIP)",
+        name: "Megaminx PLL",
         imgSource: "cubingjs",
         vcparams: {
             colorScheme: '222222-5dc9ea-ffffa5-ff66d8-ffae0c-93ff0f',
