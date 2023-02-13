@@ -14,12 +14,10 @@ Astro, Tailwind, Svelte
 
 ## Todo (roughly in order)
 
-- make the ratio of image to alg like 25/75 on mobile (and increase font)
 - learn tailwind better + setup theming
 - add an info component to tell ppl that they can click the image to get an algvis
 - create gridlayout
 - refactor algcard to insert twistyPlayer / algImage and remove algVis
-- image, astro-compress and prefetch astro integrations (Load Time Optimization) (are theese even needed?)
 - maintain collapsed / selected algs in localstorage/cache
 - option to invert an alg to show the right handed version (change name? EDIT - or just style the component to show that its inverted)
 - link to twizzle? link to trainer once thats set up?
