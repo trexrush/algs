@@ -38,8 +38,8 @@ const algSet: IAlgSet = {
                         {
                             name: 'A',
                             cases: [
-                                { name: 'Aa', algs: [`r' U L' D2 L U' L' D2 L2 x`, `[U] L r D2 L' U' L D2 L' U L' x'`,] },
-                                { name: 'Ab', algs: [`r U' L D2 L' U L D2 L2 x' `, `[U'] L' r' D2 L U L' D2 L U' L x`,] },
+                                { name: 'Aa', algs: [`r' U L' D2 L U' L' D2 L2 x`, `[U] (L r) D2 L' U' L D2 L' U (L' x')`,] },
+                                { name: 'Ab', algs: [`r U' L D2 L' U L D2 L2 x' `, `[U'] (L' r') D2 L U L' D2 L U' (L x)`,] },
                             ],
                         },
                         {
@@ -48,7 +48,7 @@ const algSet: IAlgSet = {
                                 { name: 'Ga', algs: [`L2 U L' U L' U' L U' L2' (U' D) L' U L D'`, `[U2] L2 F2' L' U2' L' U2 L F' (L' U' L U) L F' L2'`,] },
                                 { name: 'Gb', algs: [`L' U' L U D' L2' U L' U L U' L U' L2' D`,] },
                                 { name: 'Gc', algs: [`L2' U' L U' L U L' U L2 U D' L U' L' D`,] },
-                                { name: 'Gd', algs: [`L U L' U' D L2' U' L U' L' U L' U L2 D'`, `[U2] R U R' U' D R2 U' R U' R' U R' U R2 D'`,] },
+                                { name: 'Gd', algs: [`L U L' (U' D) L2' U' L U' L' U L' U L2 D'`, `[U2] R U R' (U' D) R2 U' R U' R' U R' U R2 D'`,] },
                             ],
                         },
                         {
