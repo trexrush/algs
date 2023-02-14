@@ -21,9 +21,9 @@ const algSet: IAlgSet = {
                     name: '2 (2 corner CO)',
                     cases: [
                         { name: '2A', algs: ["L' U' L U' L' U' L U2 L' U L"], },
-                        { name: '2B', algs: ["L' BL' L F' L' BL L F"], comment: "3x3 transfer (t)" },
+                        { name: '2B', algs: ["L' BL' L F' L' BL L F", "F' L' U2' L U L' U L F"], comment: "3x3 transfer (t)" },
                         { name: '2C', algs: ["L' U2 L U L' U2 L", "L U2' L' U' L U2' L'"], },
-                        { name: '2D', algs: ["L' BL L F' L' BL' L F"], comment: "3x3 transfer (l)" },
+                        { name: '2D', algs: ["L' BL L F' L' BL' L F", "F' L' U' L U' L' U2 L F"], comment: "3x3 transfer (l)" },
                     ],
                 },
                 {
