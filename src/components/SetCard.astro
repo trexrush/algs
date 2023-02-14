@@ -21,7 +21,7 @@ const { set, data, size } = Astro.props;
     {
       set.cases
         ? set.cases?.map((caso) => (
-            <AlgCard client:visible {caso} {data} size={size} />
+            <AlgCard client:visible {caso} {data} size={size} setName={set.name} />
           ))
         : ""
     }

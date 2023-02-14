@@ -15,7 +15,6 @@ Astro, Tailwind, Svelte
 ## Todo (roughly in order)
 
 - github logo
-- link to specific case
 - create gridlayout
 - maintain collapsed / selected algs in localstorage/cache
 - make dark mode toggleable
