@@ -46,15 +46,15 @@ const algSet: IAlgSet = {
                             name: 'G',
                             cases: [
                                 { name: 'Ga', algs: [`L2 U L' U L' U' L U' L2' (U' D) L' U L D'`, `[U2] L2 F2' L' U2' L' U2 L F' (L' U' L U) L F' L2'`,] },
-                                { name: 'Gb', algs: [`L' U' L U D' L2' U L' U L U' L U' L2' D`,] },
-                                { name: 'Gc', algs: [`L2' U' L U' L U L' U L2 U D' L U' L' D`,] },
+                                { name: 'Gb', algs: [`L' U' L (U D') L2' U L' U L U' L U' L2' D`,] },
+                                { name: 'Gc', algs: [`L2' U' L U' L U L' U L2 (U D') L U' L' D`,] },
                                 { name: 'Gd', algs: [`L U L' (U' D) L2' U' L U' L' U L' U L2 D'`, `[U2] R U R' (U' D) R2 U' R U' R' U R' U R2 D'`,] },
                             ],
                         },
                         {
                             name: 'J',
                             cases: [
-                                { name: 'Ja', algs: [`L' U' L F L' U' L U L F' L2' U L`, `[U'] L' U' L2 F L' U' L' U L F' L' U L`, `[U2] x R2' F R F' R U2' r' U r U2' x'`,] },
+                                { name: 'Ja', algs: [`L' U' L F L' U' L U L F' L2' U L`, `[U'] L' U' L2 F L' U' L' U L F' L' U L`, `[U2] (x R2') F R F' R U2' r' U r U2' x'`,] },
                                 { name: 'Jb', algs: [`R U R' F' R U R' U' R' F R2 U' R'`, `[U] R U R2' F' R U R U' R' F R U' R'`, `[U'] z' D L' U L2 D' L D L2' (U' D') z`,] },
                             ],
                         },
