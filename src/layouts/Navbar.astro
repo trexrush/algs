@@ -1,14 +1,13 @@
 ---
 let pages = [
-  { name: "PLL", href: "/algs/pll" },
-  { name: "ZBLS", href: "/algs/zbls" },
-  { name: "ZBLL", href: "/algs/zbll" },
-  { name: "CLL", href: "/algs/cll" },
-  { name: "EG1", href: "/algs/eg1" },
-  { name: "Megaminx PLL", href: "/algs/megaPLL" },
+  { name: "PLL", href: "/algs/pll", folder: false, },
+  { name: "ZBLS", href: "/algs/zbls", folder: false, },
+  { name: "ZBLL", href: "/algs/zbll" , folder: true, },
+  { name: "2x2", href: "/algs/2x2", folder: true, },
+  { name: "Megaminx", href: "/algs/mega", folder: true, },
 
-  { name: "GSheets", href: "https://docs.google.com/spreadsheets/d/1L0iR5AyRh2sTWymHSD2MiTJXzl8IoxGzyuRgqEhttSs/edit#gid=1313953242" },
-  { name: "GitHub", href: "https://github.com/trexrush/algs" },
+  { name: "GSheets", href: "https://docs.google.com/spreadsheets/d/1L0iR5AyRh2sTWymHSD2MiTJXzl8IoxGzyuRgqEhttSs/edit#gid=1313953242", external: true, },
+  { name: "GitHub", href: "https://github.com/trexrush/algs", external: true, },
 ]
 ---
 
@@ -18,7 +17,7 @@ let pages = [
 >
   <a href="/algs/" class="text-xl font-bold hover:font-black">Home</a>
   {pages.map((page) => (
-    <a href={page.href} class="hover:font-semibold select-none overflow-hidden">{page.name}</a>
+    <a href={page.href} class="hover:font-semibold select-none overflow-hidden">{page.name} {(page.folder && "📂") || (page.external && "↗")}</a>
   ))}
 </nav>
 
@@ -31,7 +30,7 @@ let pages = [
   <div class="hidden peer-checked:flex flex-col absolute top-16 left-3 z-20 w-fit rounded-md shadow-lg divide-x-2 divide-stone-400/10 bg-stone-200">
     <a href="/algs/" class="text-xl font-bold hover:font-black p-1">Home</a>
     {pages.map((page) => (
-      <a href={page.href} class="hover:font-semibold p-1 select-none">{page.name}</a>
+      <a href={page.href} class="hover:font-semibold p-1 select-none">{page.name} {(page.folder && "📂") || (page.external && "↗")}</a>
     ))}
   </div>
 </nav>

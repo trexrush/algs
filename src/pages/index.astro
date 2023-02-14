@@ -1,6 +1,15 @@
 ---
 import Navbar from "../layouts/Navbar.astro";
 import Page from "../layouts/Page.astro";
+import Info from "../components/Info.astro"
+
+let pages = [
+  { name: "PLL", href: "/algs/pll" },
+  { name: "ZBLS", href: "/algs/zbls" },
+  { name: "ZBLL", href: "/algs/zbll" },
+  { name: "2x2", href: "/algs/2x2" },
+  { name: "Megaminx", href: "/algs/mega" },
+]
 ---
 
 <Page>
@@ -9,14 +18,12 @@ import Page from "../layouts/Page.astro";
     <div class="flex flex-col items-center">
       <h1 class="text-4xl mt-10 text-center">Eduardo Mazuera's Algorithms:</h1>
       <br>
-      <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 bg-stone-200 items-center text-center text-3xl text-stone-700 [&>*]:w-full [&>*]:px-3 [&>*]:py-1">
-        <a href="/algs/pll" class="hover:font-semibold">PLL</a>
-        <a href="/algs/zbls" class="hover:font-semibold">ZBLS</a>
-        <a href="/algs/zbll" class="hover:font-semibold">ZBLL</a>
-        <a href="/algs/eg1" class="hover:font-semibold">EG1</a>
-        <a href="/algs/cll" class="hover:font-semibold">CLL</a>
-        <a href="/algs/megaPLL" class="hover:font-semibold">Megaminx PLL</a>
+      <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 bg-stone-200 mb-10 items-center text-center text-3xl text-stone-700 [&>*]:w-full [&>*]:px-3 [&>*]:py-1">
+        {pages.map(page => (
+          <a href={page.href} class="hover:font-semibold">{page.name}</a>
+        ))}
       </div>
+      <Info />
     </div>
   </main>
 </Page>

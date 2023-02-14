@@ -1,0 +1,15 @@
+---
+import { CLLalgSet } from "../../templates/222";
+import VerticalLayout from "../../layouts/VerticalLayout.astro";
+import { sheetURL } from "../../templates/url";
+import Navbar from "../../layouts/Navbar.astro";
+import Page from "../../layouts/Page.astro";
+
+const response = await fetch(sheetURL + "?name=CLL");
+const sets = await response.json();
+---
+
+<Page title={'CLL'}>
+  <Navbar slot="navbar" />
+  <VerticalLayout data={CLLalgSet.data} {sets} />
+</Page>
