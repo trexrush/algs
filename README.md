@@ -17,6 +17,8 @@ Astro, Tailwind, Svelte
 - github logo
 - create gridlayout
 - maintain collapsed / selected algs in localstorage/cache
+- make dark mode toggleable
+- add info card to navbar or page layouts
 - move these to github issues :sob: :skull:
 - collapse all
 - expand triggers on demand / styling
