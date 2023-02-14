@@ -4,7 +4,7 @@
   "description": "A collection of algorithms used by Eduardo Mazuera",
   "start_url": "/algs/",
   "id": "/algs/",
-  "background_color": "#F5F5F4",
+  "background_color": "#181c17",
   "theme_color": "#00F135",
   "orientation": "portrait-primary",
   "display": "standalone",
