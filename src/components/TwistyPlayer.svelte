@@ -2,7 +2,7 @@
 <script lang="ts">
   import { TwistyPlayer } from "cubing/twisty";
   import { onMount } from "svelte";
-  import { removePrePostAUF } from "../scripts/alg";
+  import { expandAlgWithTriggers } from "../scripts/alg";
   import type { IData, twistyPuzzleType } from "../scripts/types";
   import { DefaultData } from "../scripts/types";
 
@@ -37,7 +37,7 @@
     if (twistyDiv) {
 
       setAlg = (alg: string) => {
-        twistyPlayer.alg = ". . " + removePrePostAUF(alg) + " . ."
+        twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg) + " . ."
         twistyPlayer.jumpToStart()
         twistyPlayer.controller.animationController.playPause()
       }
@@ -49,7 +49,7 @@
       twistyPlayer.cameraLatitudeLimit = 50;
       
       twistyPlayer.visualization = imageAlg ? "experimental-2D-LL" : "3D"
-      if (imageAlg) { twistyPlayer.alg = removePrePostAUF(imageAlg) }
+      if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg) }
       twistyPlayer.style.height = `${size}px`;
       twistyPlayer.style.width = `${size}px`;
       twistyPlayer.experimentalStickering = stage;

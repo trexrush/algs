@@ -14,17 +14,18 @@ Astro, Tailwind, Svelte
 
 ## Todo (roughly in order)
 
+Core Features:
 - dark mode
+
+Future:
 - github logo
 - create gridlayout
-- refactor algcard to insert twistyPlayer / algImage and remove algVis
 - maintain collapsed / selected algs in localstorage/cache
-- option to invert an alg to show the right handed version (change name? EDIT - or just style the component to show that its inverted)
-- link to twizzle? link to trainer once thats set up?
+- move these to github issues :sob: :skull:
 - collapse all
-- make some flag to bypass algvis or us a different alg than display? maybe a shorthand?
-(ex. where I say fruruf [ZBLL] or the pll parity cases like [J PERM] [PARITY])
-(needed to pull parityPLL, parityOLL and OLL from the API)
+- expand triggers on demand / styling
+- implement mirror toggle in frontend
+- link to twizzle? link to trainer once thats set up?
 - allow algs/set to show up in a set order and mix up algs/sets? (wanted for PLL, needed to pull OLL/PLL from sheet)
 - add Parity OLL/PLL, PLL, OLL
 
