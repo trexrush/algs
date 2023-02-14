@@ -3,8 +3,8 @@ import Navbar from "../../layouts/Navbar.astro";
 import Page from "../../layouts/Page.astro";
 
 let pages = [
-  { name: "Full PLL (wip)", href: "/algs/mega/megaPLL" },
-  { name: "Full OLL (wip)", href: "/algs/mega/megaOLL" },
+  { name: "Full PLL", href: "/algs/mega/megaPLL" },
+  { name: "Full OLL", href: "/algs/mega/megaOLL" },
 ]
 ---
 
@@ -14,7 +14,7 @@ let pages = [
     <div class="flex flex-col items-center">
       <h1 class="text-4xl mt-10">Megaminx Algs</h1>
       <br>
-      <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 bg-stone-200 items-center text-center text-3xl text-stone-700 [&>*]:w-full [&>*]:px-3 [&>*]:py-1">
+      <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 dark:divide-stone-600/20 bg-stone-200 dark:bg-stone-800 mb-10 items-center text-center text-3xl text-stone-700 dark:text-stone-300 [&>*]:w-full [&>*]:px-3 [&>*]:py-1">
         {pages.map(page => (
           <a href={page.href} class="hover:font-semibold">{page.name}</a>
         ))}

@@ -48,7 +48,7 @@
     {:else}
     <TwistyPlayer {activeAlg} {data} size={imgSize} />
     <div
-      class=" absolute left-0 bottom-0 text-xs h-5 w-5 sm:h-7 sm:w-7 bg-red-300 rounded grid place-items-center select-none"
+      class=" absolute left-0 bottom-0 text-xs h-5 w-5 sm:h-7 sm:w-7 bg-red-300 dark:bg-red-600 rounded grid place-items-center select-none"
       on:click={setTwizzle}
       >
       X

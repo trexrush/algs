@@ -14,10 +14,6 @@ Astro, Tailwind, Svelte
 
 ## Todo (roughly in order)
 
-Core Features:
-- dark mode
-
-Future:
 - github logo
 - create gridlayout
 - maintain collapsed / selected algs in localstorage/cache
