@@ -1,3 +1,9 @@
+---
+import AlgCard from "../components/AlgCard.svelte";
+import { algSet } from "../templates/pll";
+
+let exampleCase = { name: 'example-case', algs: ["R U R' U' M' U2 R U2' r'", "[SEXY] U2 R U2' R'"] }
+---
 <div
   class="text-center bg-stone-200 dark:bg-stone-800 shadow-xl rounded-xl w-[300px] md:w-[500px] [&>*]:mb-3 mb-3"
 >
@@ -16,7 +22,7 @@
       handed people.
     </div>
     <br />
-    <div class="text-xs md:text-base divide-y-2 divide-stone-400/30 dark:divide-stone-700/40">
+    <div class="text-xs md:text-base divide-y-2 mb-10 divide-stone-400/30 dark:divide-stone-700/40">
         <div class="text-lg md:text-2xl">Features</div>
         <div>Click on a case image to see an animated alg vis.</div>
         <div>Tap on the alg vis to pause and play the animation.</div>
@@ -31,5 +37,6 @@
           Generate a link to a specific case by clicking the case name.
         </div>
     </div>
+    <AlgCard client:idle caso={exampleCase} data={algSet.data} size={128} setName={"an"} />
   </div>
 </div>
