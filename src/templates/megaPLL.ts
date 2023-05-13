@@ -49,8 +49,8 @@ const algSet: IAlgSet = {
                 {
                     name: 'H (5 piece EP/CP)',
                     cases: [
-                        { name: 'H1+', algs: ["L' U' L U' L U L2' U L U' L U' L' U' L' U' L U' L U L2' U L U' L U' L'", "F L' U' L U L F' L' U L' U2 L U' L' U' L U2 L' U2 L"] },
-                        { name: 'H1-', algs: ["L U L' U L' U' L2 U' L' U L' U L U L U L' U L' U' L2 U' L' U L' U L", "L' U2' L U2' L' U L U L' U2' L U' L F L' U' L' U L F'"] },
+                        { name: 'H1+', algs: ["F L' U' L U L F' L' U L' U2 L U' L' U' L U2 L' U2 L"] },
+                        { name: 'H1-', algs: ["L' U2' L U2' L' U L U L' U2' L U' L F L' U' L' U L F'"] },
                         { name: 'H2+', algs: ["L2 U2 L2' U' L2 U' L2' y' L2' U' L2 U' L2' U2 L2", "L2' U L2 U L2' U L2 U L2' U L2 U2 L2' U L2 U L2' U L2 U L2' U L2"] },
                         { name: 'H2-', algs: ["L2' U2' L2 U L2' U L2 y L2 U L2' U L2 U2' L2'", "L2 U' L2' U' L2 U' L2' U' L2 U' L2' U2' L2 U' L2' U' L2 U' L2' U' L2 U' L2'"] },
                     ],
