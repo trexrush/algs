@@ -269,10 +269,10 @@ const algSet: IAlgSet = {
                 {
                     name: 'G (2x1 and HeadLights)',
                     cases: [
-                //         { name: 'G1+', algs: [""] },
-                //         { name: 'G1-', algs: [""] },
-                //         { name: 'G2+', algs: [""] },
-                //         { name: 'G2-', algs: [""] },
+                        // { name: 'G1+', algs: [""] },
+                        // { name: 'G1-', algs: [""] },
+                        // { name: 'G2+', algs: [""] },
+                        // { name: 'G2-', algs: [""] },
                     ],
                 },
                 {
@@ -310,7 +310,7 @@ const algSet: IAlgSet = {
                 {
                     name: 'X (No blocks or headlights)',
                     cases: [
-                        // { name: 'X1', algs: [""] },
+                        { name: 'X1', algs: ["F U2 R U2' R' U R U R' U2' F' R' U' R U2' R' U2' R"], comment: "all Z corners" },
                         // { name: 'X2', algs: [""] },
                         // { name: 'X3', algs: [""] },
                         // { name: 'X4', algs: [""] },
