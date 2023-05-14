@@ -2,6 +2,7 @@
   import { writable } from "svelte/store";
   import type { ICase, IData } from "../scripts/types";
   import AlgVis from "./AlgVis.svelte";
+  import { mirrorAlg } from "../scripts/alg";
 
   export let caso: ICase;
   export let data: IData
@@ -38,9 +39,10 @@
     <div class="text-[2.3vw] md:text-[16px] leading-none text-stone-900/[.35] dark:text-stone-50/[.2] translate-y-[100px] absolute text-right w-5/6 top-0 right-2"><b>{caso.comment}</b></div>
     {/if}
     {#each caso.algs as alg, i}
-      <p class="{activeElement == i ? 'text-[3.2vw] sm:text-[20px] font-bold text-stone-600 dark:text-stone-400' : 'text-[2.8vw] sm:text-[17.5px] text-stone-400 dark:text-stone-500'} hover:text-[3.6vw] sm:hover:text-[22px] leading-none hover:text-stone-900 dark:hover:text-stone-100 transition-all cursor-pointer overflow-x-visible w-fit" on:click={() => (changeActiveElement(i, alg))} bind:this={elementList[i]}>
-        {alg}
-      </p>
+      <div class="leading-none w-full cursor-pointer overflow-x-visible flex justify-between">
+        <span class="{activeElement == i ? 'w-fit text-[3.2vw] sm:text-[20px] font-bold text-stone-600 dark:text-stone-400' : 'text-[2.8vw] sm:text-[17.5px] text-stone-400 dark:text-stone-500'} hover:text-[3.6vw] sm:hover:text-[22px] hover:text-stone-900 dark:hover:text-stone-100 transition-all" on:click={() => (changeActiveElement(i, alg))} bind:this={elementList[i]}>{alg}</span>
+        <span class="bg-stone-50/[.2] rounded-sm text-sm m-1 px-1" on:click={() => (setActive(mirrorAlg(alg)))}>Mirror</span>
+      </div>
     {/each}
   </div>
 </div>
