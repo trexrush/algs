@@ -1,6 +1,6 @@
 ---
 import type { IData, ISet } from "../scripts/types";
-import AlgCard from "./AlgCard.svelte";
+import VerticalAlgCard from "./VerticalAlgCard.svelte";
 
 interface Props {
   set: ISet;
@@ -21,7 +21,7 @@ const { set, data, size } = Astro.props;
     {
       set.cases
         ? set.cases?.map((caso) => (
-            <AlgCard client:visible {caso} {data} size={size} setName={set.name} />
+            <VerticalAlgCard client:visible {caso} {data} size={size} setName={set.name} />
           ))
         : ""
     }
