@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (cron)
 
 on:
   # Triggers this workflow daily at 5am
