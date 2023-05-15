@@ -81,8 +81,9 @@ export interface ISetV2 {
 export interface ICaseV2 {
     sort?: number
     name: string
+    altNames?: string[]
     algs: IAlgV2[]
-    scrambles: string[]
+    scrambles?: string[] // optional for now
     note?: string
 }
 

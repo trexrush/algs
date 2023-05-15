@@ -1,0 +1,61 @@
+---
+import type { IData, ISet, ISetV2 } from "../scripts/types";
+import NewVerticalAlgCard from "./NewVerticalAlgCard.svelte";
+
+interface Props {
+  set: ISetV2;
+  data: IData;
+  size: number;
+}
+const { set, data, size } = Astro.props;
+---
+
+<div
+  is="collapsible-set"
+  class=" bg-stone-900/[.07] dark:bg-stone-50/[.07] w-[95%] rounded-xl shadow-xl mb-5"
+>
+  <div class="toggle text-xl sm:text-3xl my-2 w-full text-center cursor-pointer font-bold hover:font-extrabold">
+    {set.name}
+  </div>
+  <div class="collapsible w-full flex flex-col [&>*]:mb-5 items-center">
+    {
+      set.cases
+        ? set.cases?.map((caso) => (
+            <NewVerticalAlgCard client:visible {caso} {data} size={size} setName={set.name} />
+          ))
+        : ""
+    }
+    {
+      set.sets
+        ? set.sets.map((subSet) => (
+            <Astro.self set={subSet} {data} size={size} />
+          ))
+        : ""
+    }
+  </div>
+</div>
+
+<script>
+  customElements.define(
+    "collapsible-set",
+    class extends HTMLDivElement {
+      constructor() {
+        super();
+        let isCollapsed = false;
+
+        const toggler: HTMLElement | null = this.querySelector(".toggle");
+        const section: HTMLElement | null = this.querySelector(".collapsible");
+
+        toggler?.addEventListener("click", () => {
+          console.log(section?.style.display);
+          section &&
+            (isCollapsed
+              ? (section.style.display = "")
+              : (section.style.display = "none"));
+              isCollapsed = !isCollapsed
+        });
+      }
+    },
+    { extends: "div" }
+  );
+</script>
