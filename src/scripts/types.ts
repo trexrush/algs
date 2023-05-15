@@ -1,4 +1,3 @@
-
 export interface ISet {
     name: string
     sets?: ISet[]
@@ -34,12 +33,12 @@ interface ITwistyParams {
 
 export interface IData {
     name: string;
-    // local - preferred, but you need to manually add images
-    // vc / cubicleVC - puts strain on external visualcube api (cubicle was for mega but it doesnt work with BL/FL/DL/wide mega moves)
+    // vc - puts strain on external visualcube api (cubicle was for mega but it doesnt work with BL/FL/DL/wide mega moves)
     // cubingjs - needs to hydrate to display image
-    imgSource?: "vc" | "cubingjs" | "local" | "cubicleVC" | "none"
+    imgSource?: "vc" | "cubingjs" | "none"
     vcparams?: IVCParams
     twistyplayerparams?: ITwistyParams
+    note?: string
 }
 
 
@@ -63,4 +62,36 @@ export const DefaultData: { vcparams: Required<IVCParams>, twistyplayerparams: R
         puzzle: "3x3x3",
         tempo: 4
     },
+    note: ""
 }
+
+
+//______V2______//
+
+export interface ISetV2 {
+    sort?: number
+    name: string
+    altNames?: string[]
+    sets?: ISetV2[]
+    cases?: ICaseV2[]
+    image?: string
+    note?: string
+}
+
+export interface ICaseV2 {
+    sort?: number
+    name: string
+    algs: IAlgV2[]
+    scrambles: string[]
+    note?: string
+}
+
+export interface IAlgV2 {
+    setup?: string
+    alg: string
+    tags?: IAlgTagsV2[]
+    note?: string
+}
+export type IAlgTagsV2 = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "Lefty" | "New"
+
+export interface IAlgSetV2 { data: IData, sets: ISetV2[] }

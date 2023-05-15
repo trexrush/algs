@@ -47,12 +47,6 @@
 
 {#if imgSource == "vc"}
   <div class="vc cursor-pointer transition-transform hover:translate-y-[-8px]" bind:this={visualCubeImage} />
-{:else if imgSource == "cubicleVC"}
-  <svg class="cursor-pointer transition-transform hover:translate-y-[-8px]" width="{size}px" height="{size}px">
-    <image
-      xlink:href="https://cubiclealgdbimagegen.azurewebsites.net/generator?puzzle={puzzle}&scheme={colorScheme}&alg={imageAlg}{rot}"
-      width="{size}px" height="{size}px"/>
-  </svg>
 {:else if imgSource == "cubingjs"}
   <TwistyPlayer {imageAlg} {data} {size} />
 {/if}
