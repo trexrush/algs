@@ -1,13 +1,13 @@
-const version = '3'
+const version = '4'
 const CACHE = `cache-${version}`
 
 self.addEventListener('install', event => {
-    console.log('SW: Installing');
+    // console.log('SW: Installing');
     event.waitUntil((async () => { /* static */ })());
 });
 
 self.addEventListener('activate', event => {
-    console.log('SW: Activating');
+    // console.log('SW: Activating');
     self.clients.claim()
 });
 
@@ -17,7 +17,7 @@ const fetchThenCache = async (event, cache) => {
     // https://stackoverflow.com/questions/49157622/service-worker-typeerror-when-opening-chrome-extension
     if (!event.request.url.includes('extension')) { cache.put(event.request, response.clone()) }
 
-    console.log("SW: caching fetch ", response.url)
+    // console.log("SW: caching fetch ", response.url)
     return response
 }
 
@@ -27,12 +27,12 @@ self.addEventListener('fetch', event => {
         const cachedResponse = await cache.match(event.request);
         
         if (cachedResponse) {
-            console.log("SW: returning cached result ", cachedResponse.url)
+            // console.log("SW: returning cached result ", cachedResponse.url)
             let networkRes = fetchThenCache(event, cache)
             return navigator.onLine ? networkRes : cachedResponse;
         }
         
-        console.log('SW: Cache not hit, fetching', event.request.url);
+        // console.log('SW: Cache not hit, fetching', event.request.url);
         return fetchThenCache(event, cache)
     })());
 });
