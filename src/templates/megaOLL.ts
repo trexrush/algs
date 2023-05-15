@@ -21,7 +21,7 @@ const algSet: IAlgSet = {
                     name: '2 (2 corner CO)',
                     cases: [
                         { name: '2A', algs: ["L' U' L U' L' U' L U2 L' U L"], },
-                        { name: '2B', algs: ["L' BL' L F' L' BL L F", "F' L' U2' L U L' U L F"], comment: "3x3 transfer (t)" },
+                        { name: '2B', algs: ["F' L' U2' L U L' U L F", "L' BL' L F' L' BL L F"], comment: "3x3 transfer (t)" },
                         { name: '2C', algs: ["L' U2 L U L' U2 L", "L U2' L' U' L U2' L'"], },
                         { name: '2D', algs: ["L' BL L F' L' BL' L F", "F' L' U' L U' L' U2 L F"], comment: "3x3 transfer (l)" },
                     ],
@@ -40,8 +40,8 @@ const algSet: IAlgSet = {
                     cases: [
                         { name: '4A', algs: ["L' U' L U' L' U L U' L' U2 L"], comment: "3x3 transfer (h)" },
                         { name: '4B', algs: ["L' U2' L U L' U' L U L' U L "], comment: "3x3 transfer (h)" },
-                        { name: '4C', algs: ["L' U' L U' L' U' L U L' U2 L", "(L' U' L U' L' U2 L) U' (L' U' L U' L' U2 L)"], comment: "tbh for this I just sune x2 cuz I cant learn this alg lol" },
-                        { name: '4D', algs: ["L' U2 L U2 L' U2' L U2 L' U L", "L' U2' L U L' U L2 U L' U L U2' L'"], comment: "never learned this case, I just do sune into I think T"  },
+                        { name: '4C', algs: ["L' U' L U' L' U' L U L' U2 L", "L U L' U L U2' L2' U' L U' L' U2 L", "(L' U' L U' L' U2 L) U' (L' U' L U' L' U2 L)"], comment: "tbh for this I just the last alg (sune x2) cuz I cant learn this alg lol" },
+                        { name: '4D', algs: ["L U2' L' U2' L U2 L' U2' L U' L'", "L' U2' L U L' U L2 U L' U L U2' L'"], comment: "never learned this case, I just do sune into I think T"  },
                         { name: '4E+', algs: ["L U2 L2' U' L2 U' L2' U2 L"], comment: "3x3 transfer (pi) theres a better alt alg tho maybe learn it" },
                         { name: '4E-', algs: ["L' U2' L2 U L2' U L2 U2' L'"], comment: "3x3 transfer (pi) theres a better alt alg tho maybe learn it" },
 
@@ -69,7 +69,7 @@ const algSet: IAlgSet = {
                         {
                             name: '6 (Anchor Shapes)',
                             cases: [
-                                { name: '6A', algs: ["L' U2 L F' L F L' U L' U2 L"] },
+                                { name: '6A', algs: ["BL U L2 F' L' F L' U' BL'", "L' U2 L F' L F L' U L' U2 L"] },
                                 { name: '6B', algs: ["F' L' U L U2' L' U' L F"] },
                             ],
                         },
