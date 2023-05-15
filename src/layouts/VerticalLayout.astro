@@ -1,6 +1,6 @@
 ---
   // import SetCard from "../components/SetCard.svelte";
-  import SetCard from "../components/SetCard.astro";
+  import VerticalSetCard from "../components/VerticalSetCard.astro";
   import type { IData, ISet } from "../scripts/types";
 
   interface Props {
@@ -14,5 +14,5 @@
 <div class=" relative text-5xl sm:text-7xl w-full text-center my-5">{data.name}</div>
 
 {sets.map((set) => (
-    <SetCard set={set} data={data} size={size}/>
+    <VerticalSetCard set={set} data={data} size={size}/>
 ))}
