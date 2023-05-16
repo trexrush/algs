@@ -1,5 +1,5 @@
 ---
-import type { IData, ISet, ISetV2 } from "../scripts/types";
+import type { IData, IGroupElementV2, ISetV2 } from "../scripts/types";
 import NewVerticalAlgCard from "./NewVerticalAlgCard.svelte";
 
 interface Props {
@@ -8,6 +8,9 @@ interface Props {
   size: number;
 }
 const { set, data, size } = Astro.props;
+
+let sortedCases: Array<IGroupElementV2> | [] = set.children || []
+sortedCases.sort((a, b) => (a.sort && b.sort && a.sort < b.sort) ? -1 : 1)
 ---
 
 <div
@@ -19,18 +22,13 @@ const { set, data, size } = Astro.props;
   </div>
   <div class="collapsible w-full flex flex-col [&>*]:mb-5 items-center">
     {
-      set.cases
-        ? set.cases?.map((caso) => (
-            <NewVerticalAlgCard client:visible {caso} {data} size={size} setName={set.name} />
-          ))
-        : ""
-    }
-    {
-      set.sets
-        ? set.sets.map((subSet) => (
-            <Astro.self set={subSet} {data} size={size} />
-          ))
-        : ""
+      sortedCases.map((setOrCase) => (
+        setOrCase.type === 'case' &&
+          <NewVerticalAlgCard client:visible caso={setOrCase} {data} size={size} setName={set.name} />
+        ||
+        setOrCase.type === 'set' &&
+          <Astro.self set={setOrCase} {data} size={size} />
+      ))
     }
   </div>
 </div>

@@ -68,23 +68,24 @@ export const DefaultData: { vcparams: Required<IVCParams>, twistyplayerparams: R
 
 //______V2______//
 
-export interface ISetV2 {
+export interface IGroupElementV2 {
+    type: "set" | "case"
     sort?: number
     name: string
     altNames?: string[]
-    sets?: ISetV2[]
-    cases?: ICaseV2[]
-    image?: string
     note?: string
 }
 
-export interface ICaseV2 {
-    sort?: number
-    name: string
-    altNames?: string[]
+export interface ISetV2 extends IGroupElementV2 {
+    type: "set"
+    children?: Array<ISetV2 | ICaseV2>
+    image?: string
+}
+
+export interface ICaseV2 extends IGroupElementV2 {
+    type: "case"
     algs: IAlgV2[]
     scrambles?: string[] // optional for now
-    note?: string
 }
 
 export interface IAlgV2 {
