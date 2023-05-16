@@ -27,7 +27,7 @@ const algSet: IAlgSetV2 = {
                             name: 'Ua',
                             algs: [
                                 { setup: "U2", alg: `R U R' U R' U' R2 U' R' U R' U R`, },
-                                { setup: "U'", alg: `R2 U' S' U2' S U' R2'` },
+                                { setup: "U'", alg: `R2 U' S' U2' S U' R2'`, tags: ["Swag"] },
                                 { alg: `R U' R U R U R U' R' U' R2`, },
                             ]
                         },
@@ -36,7 +36,7 @@ const algSet: IAlgSetV2 = {
                             name: 'Ub',
                             algs: [
                                 { setup: "U2", alg: `R' U R' U' R3 U' R' U R U R2'`, },
-                                { setup: "U'", alg: `R2 U' S R2' S' R2 U R2'`, },
+                                { setup: "U'", alg: `R2 U' S R2' S' R2 U R2'`, tags: ["Swag"] },
                                 { alg: `R2 U R U R' U' R' U' R' U R'`, },
                             ]
                         },
@@ -49,6 +49,9 @@ const algSet: IAlgSetV2 = {
                     algs: [
                         { alg: `M2' U' M2' U2' M2' U' M2'`, },
                         { alg: `R2 S2' R2 U R2 S2' R2`, tags: ["Swag"], },
+                        { alg: `R2 U2' R' U2' R2 U2' R2 U2' R' U2' R2`, tags: ["Swag", "New"], },
+                        { alg: `x' R r U2' R' r' u' U' R2 U D`, tags: ["Swag", "New"], },
+                        // (R2 L2) U' (R2 L2) u2' (R2 L2) U' (R2 L2)
                     ]
                 },
                 {
@@ -199,6 +202,7 @@ const algSet: IAlgSetV2 = {
                     name: 'T',
                     algs: [
                         { alg: `L' U' L U L F' L2' U L U L' U' L F`, tags: ["Lefty"], },
+                        { alg: `R2 U R2 U' R2 U' D R2 U' R2 U R2 D'`, tags: ["Swag"], },
                     ]
                 },
             ],
