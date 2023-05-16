@@ -37,7 +37,7 @@
     if (twistyDiv) {
 
       setAlg = (alg: string) => {
-        twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg) + " . ."
+        twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg, puzzle) + " . ."
         twistyPlayer.jumpToStart()
         twistyPlayer.controller.animationController.playPause()
       }
@@ -49,7 +49,7 @@
       twistyPlayer.cameraLatitudeLimit = 50;
       
       twistyPlayer.visualization = imageAlg ? "experimental-2D-LL" : "3D"
-      if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg) }
+      if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg, puzzle) }
       twistyPlayer.style.height = `${size}px`;
       twistyPlayer.style.width = `${size}px`;
       twistyPlayer.experimentalStickering = stage;

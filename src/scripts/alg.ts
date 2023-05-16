@@ -32,12 +32,12 @@ export const simplifyAlg = (a: string): string => {
 }
 
 export const getTriggerAlg = (t: string, pzl: keyof typeof substitutionGroups): string => {
-  console.log(t)
   let currTrigger = substitutionGroups[pzl]?.find(item => item.name === t)
   return currTrigger ? currTrigger.alg : ''
 }
 
 // TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers)
-export const expandAlgWithTriggers = (a: string): string => {
-  return simplifyAlg(a.replaceAll(/\[(.*?)\]/g, Function.prototype.call.bind(getTriggerAlg)))
+export const expandAlgWithTriggers = (a: string, pzl: keyof typeof substitutionGroups): string => {
+  const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
+  return simplifyAlg(a.replaceAll(/\[(.*?)\]/g, Function.prototype.call.bind(getTriggerAlgWrapper)))
 }
