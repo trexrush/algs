@@ -77,16 +77,16 @@ const algSet: IAlgSetV2 = {
                             type: 'case',
                             name: 'Aa',
                             algs: [
-                                { alg: `r' U L' D2 L U' L' D2 L2 x`, },
-                                { setup: "U", alg: `(L r) D2 L' U' L D2 L' U (L' x')`, },
+                                { alg: `r' U L' D2 L U' L' D2 L2 x`, tags: ["Lefty"], },
+                                { setup: "U", alg: `(L r) D2 L' U' L D2 L' U (L' x')`, tags: ["Lefty"], },
                             ]
                         },
                         {
                             type: 'case',
                             name: 'Ab',
                             algs: [
-                                { alg: `r U' L D2 L' U L D2 L2 x' `, },
-                                { setup: "U'", alg: `(L' r') D2 L U L' D2 L U' (L x)`, },
+                                { alg: `r U' L D2 L' U L D2 L2 x' `, tags: ["Lefty"], },
+                                { setup: "U'", alg: `(L' r') D2 L U L' D2 L U' (L x)`, tags: ["Lefty"], },
                             ]
                         },
                     ],
@@ -100,29 +100,29 @@ const algSet: IAlgSetV2 = {
                             type: 'case',
                             name: 'Ga',
                             algs: [
-                                { alg: `L2 U L' U L' U' L U' L2' (U' D) L' U L D'`, },
-                                { setup: "U2", alg: `L2 F2' L' U2' L' U2 L F' (L' U' L U) L F' L2'`, },
+                                { alg: `L2 U L' U L' U' L U' L2' (U' D) L' U L D'`, tags: ["Lefty"], },
+                                { setup: "U2", alg: `L2 F2' L' U2' L' U2 L F' (L' U' L U) L F' L2'`, tags: ["Lefty"], },
                             ]
                         },
                         {
                             type: 'case',
                             name: 'Gb',
                             algs: [
-                                { alg: `L' U' L (U D') L2' U L' U L U' L U' L2' D`, },
+                                { alg: `L' U' L (U D') L2' U L' U L U' L U' L2' D`, tags: ["Lefty"], },
                             ]
                         },
                         {
                             type: 'case',
                             name: 'Gc',
                             algs: [
-                                { alg: `L2' U' L U' L U L' U L2 (U D') L U' L' D`, },
+                                { alg: `L2' U' L U' L U L' U L2 (U D') L U' L' D`, tags: ["Lefty"], },
                             ]
                         },
                         {
                             type: 'case',
                             name: 'Gd',
                             algs: [
-                                { alg: `L U L' (U' D) L2' U' L U' L' U L' U L2 D'`, },
+                                { alg: `L U L' (U' D) L2' U' L U' L' U L' U L2 D'`, tags: ["Lefty"], },
                                 { setup: "U2", alg: `R U R' (U' D) R2 U' R U' R' U R' U R2 D'`, },
                             ]
                         },
@@ -137,8 +137,8 @@ const algSet: IAlgSetV2 = {
                             type: 'case',
                             name: 'Ja',
                             algs: [
-                                { alg: `L' U' L F L' U' L U L F' L2' U L`, },
-                                { setup: "U'", alg: `L' U' L2 F L' U' L' U L F' L' U L`, },
+                                { alg: `L' U' L F L' U' L U L F' L2' U L`, tags: ["Lefty"], },
+                                { setup: "U'", alg: `L' U' L2 F L' U' L' U L F' L' U L`, tags: ["Lefty"], },
                                 { setup: "U2", alg: `(x R2') F R F' R U2' r' U r U2' x'`, },
                                 { setup: "U2", alg: `R2 U' R2 D R2 U' R2 U R2 (U D') R2`, tags: ["Swag"], },
                             ]
@@ -150,8 +150,8 @@ const algSet: IAlgSetV2 = {
                             algs: [
                                 { alg: `R U R' F' R U R' U' R' F R2 U' R'`, },
                                 { setup: "U", alg: `R U R2' F' R U R U' R' F R U' R'`, },
-                                { setup: "U'", alg: `z' D L' U L2 D' L D L2' (U' D') z`, },
-                                { setup: "U2", alg: `L U2 L' U' L U2 R' U L' U' R`, tags: ["OH"], },
+                                { setup: "U'", alg: `z' D L' U L2 D' L D L2' (U' D') z`, tags: ["Lefty"], },
+                                { setup: "U2", alg: `L U2 L' U' L U2 R' U L' U' R`, tags: ["OH", "Lefty"], },
                             ]
                         },
                     ],
@@ -165,18 +165,18 @@ const algSet: IAlgSetV2 = {
                             type: 'case',
                             name: 'Ra',
                             algs: [
-                                { alg: `L U2' L D L' U L D' L' U' L' U L U L'`, },
-                                { alg: `L U2 L' U2 L F' L' U' L U L F L2'`, tags: ["OH"] },
-                                { setup: "U'", alg: `L2 F' L' U' L' U L F L' U2 L U2' L'`, },
-                                { setup: "U'", alg: `L U' L' U' L U L D L' U' L D' L' U2 L'`, },
+                                { alg: `L U2' L D L' U L D' L' U' L' U L U L'`, tags: ["Lefty"], },
+                                { alg: `L U2 L' U2 L F' L' U' L U L F L2'`, tags: ["OH", "Lefty"] },
+                                { setup: "U'", alg: `L2 F' L' U' L' U L F L' U2 L U2' L'`, tags: ["Lefty"], },
+                                { setup: "U'", alg: `L U' L' U' L U L D L' U' L D' L' U2 L'`, tags: ["Lefty"], },
                             ]
                         },
                         {
                             type: 'case',
                             name: 'Rb',
                             algs: [
-                                { alg: `L' U L U L' U' L U' L D L' U L D' L2' U' L`, },
-                                { alg: `L' U L U L' U' L' D' L U L' D L U2' L`, tags: ["OH"], },
+                                { alg: `L' U L U L' U' L U' L D L' U L D' L2' U' L`, tags: ["Lefty"], },
+                                { alg: `L' U L U L' U' L' D' L U L' D L U2' L`, tags: ["OH", "Lefty"], },
                             ]
                         },
                     ],
@@ -186,9 +186,9 @@ const algSet: IAlgSetV2 = {
                     sort: 2,
                     name: 'F',
                     algs: [
-                        { setup: "U2", alg: `L U F (L' U' L U L F' L2' U L U L' U') L U' L'`, },
+                        { setup: "U2", alg: `L U F (L' U' L U L F' L2' U L U L' U') L U' L'`, tags: ["Lefty"], },
                         { alg: `R' F R f' R' F R2 U R' U' R' F' R2 U R' S` },
-                        { setup: "U'", alg: `(L' U' L U) L U' L' U2 (R L U' L' U R') U L' U L`, tags: ["OH"], },
+                        { setup: "U'", alg: `(L' U' L U) L U' L' U2 (R L U' L' U R') U L' U L`, tags: ["OH", "Lefty"], },
                         { setup: "U'", alg: `R' U R  U' R2' F' U' F U R F R' F' R2`, tags: ["Swag"] },
 
                     ]
@@ -198,7 +198,7 @@ const algSet: IAlgSetV2 = {
                     sort: 6,
                     name: 'T',
                     algs: [
-                        { alg: `L' U' L U L F' L2' U L U L' U' L F`, },
+                        { alg: `L' U' L U L F' L2' U L U L' U' L F`, tags: ["Lefty"], },
                     ]
                 },
             ],
@@ -217,7 +217,7 @@ const algSet: IAlgSetV2 = {
                             name: 'Na',
                             algs: [
                                 { alg: `F' R U R' U' R' F R2 F U' R' U' R U F' R'`, },
-                                { alg: "L U' L' U L F U F' L' U' L  F' L F L' U L'", tags: ["OH"] },
+                                { alg: "L U' L' U L F U F' L' U' L  F' L F L' U L'", tags: ["OH", "Lefty"] },
                                 { alg: `(L U' R U2 L' U R') (L U' R U2 L' U R')`, tags: ["OH"], },
                             ]
                         },
@@ -225,11 +225,11 @@ const algSet: IAlgSetV2 = {
                             type: 'case',
                             name: 'Nb',
                             algs: [
-                                { alg: `l D l' U2 l D' l' U l D l' U' l D' l' U' l D l' U' l D' l'`, },
+                                { alg: `l D l' U2 l D' l' U l D l' U' l D' l' U' l D l' U' l D' l'`, tags: ["Lefty"], },
                                 { alg: `R' U R U' R' F' U' F R U R'  F R' F' R U' R`, },
-                                { alg: `L' F' U L U' L' U' F L2 F L' U' L' U L F'`, },
-                                { alg: `F L' U' L U L F' L2 F' U L U L' U' F L`, tags: ["OH"], },
-                                { alg: `(L' U R' U2' L U' R) (L' U R' U2' L U' R)`, tags: ["OH"], },
+                                { alg: `L' F' U L U' L' U' F L2 F L' U' L' U L F'`, tags: ["Lefty"], },
+                                { alg: `F L' U' L U L F' L2 F' U L U L' U' F L`, tags: ["OH", "Lefty"], },
+                                { alg: `(L' U R' U2' L U' R) (L' U R' U2' L U' R)`, tags: ["OH", "Lefty"], },
                             ]
                         },
                     ],
@@ -239,10 +239,10 @@ const algSet: IAlgSetV2 = {
                     sort: 1,
                     name: 'E',
                     algs: [
-                        { alg: `(r' U L D') (L' U' L D) (L' U' L D') (L' U L D) x`, },
-                        { alg: `L' U' L U' L U L' F L' U' L U L F' L2' U L2 U' L'`, tags: ["OH"], note: "megaminx CP transfer" },
+                        { alg: `(r' U L D') (L' U' L D) (L' U' L D') (L' U L D) x`, tags: ["Lefty"], },
+                        { alg: `L' U' L U' L U L' F L' U' L U L F' L2' U L2 U' L'`, tags: ["OH", "Lefty"], note: "megaminx CP transfer" },
 
-                        { alg: `L2 D (L U L' D') (L U L' D) (L U' L' D') (L' U' L')`, },
+                        { alg: `L2 D (L U L' D') (L U L' D) (L U' L' D') (L' U' L')`, tags: ["Lefty"], },
                     ]
                 },
                 {
@@ -250,8 +250,8 @@ const algSet: IAlgSetV2 = {
                     sort: 3,
                     name: 'V',
                     algs: [
-                        { alg: `L U' L U L' D L D' L (U' D) L2' U L2 D' L2'`, },
-                        { setup: "U2", alg: `z' D' L U L' D L D' L U' L' D L2' U L2' U' z`, tags: ["OH"], },
+                        { alg: `L U' L U L' D L D' L (U' D) L2' U L2 D' L2'`, tags: ["Lefty"], },
+                        { setup: "U2", alg: `z' D' L U L' D L D' L U' L' D L2' U L2' U' z`, tags: ["OH", "Lefty"], },
                         { alg: `L U' L' U L f U L' U2 L U L' U L f' L'`, tags: ["Lefty"], },
                         { alg: `L U' L U y' L F L2' U L U' L F' L' F'`, tags: ["Lefty"], },
                         { alg: `R' U R U' x' U R U2 R' U' R U' R' U2 R U R' U' x`, }, // use triggers
