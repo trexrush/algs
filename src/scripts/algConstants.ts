@@ -74,9 +74,12 @@ const triggers = [
     { name: "NE", alg: "R U2' R'" },
     { name: "YPERMSTART", alg: "F R U' R'" }, // name help?
     { name: "JPERMSTART", alg: "R U R' F'" }, // name help?
+    { name: "NPERMSTART", alg: "R' U R U'" }, // name help?
+    { name: "VPERMSTART", alg: "R' U R' U'" }, // name help?
     { name: "MEGASLEDGE", alg: "R' F' R F" },
+    { name: "OHSWAG", alg: "L U' R U L'" },
     { name: "SUNE", alg: "R U R' U R U2' R'" },
-    { name: "ANTISUNE", alg: "R U2 R' U' R U' R'" },
+    { name: "ANTISUNE", alg: "R U2' R' U' R U' R'" },
     { name: "FATSUNE", alg: "r U R' U R U2 r'" },
     { name: "NIKLAS", alg: "R U' L' U R' U' L" },
     { name: "ADJFLIP", alg: "r U R' U' M U R U' R'" },

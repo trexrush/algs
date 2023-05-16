@@ -258,7 +258,7 @@ const algSet: IAlgSetV2 = {
                         { setup: "U2", alg: `z' D' L U L' D L D' L U' L' D L2' U L2' U' z`, tags: ["OH", "Lefty"], },
                         { alg: `L U' L' U L f U L' U2 L U L' U L f' L'`, tags: ["Lefty"], },
                         { alg: `L U' L U y' L F L2' U L U' L F' L' F'`, tags: ["Lefty"], },
-                        { alg: `R' U R U' x' U R U2 R' U' R U' R' U2 R U R' U' x`, }, // use triggers
+                        { alg: `R' U R U' x' U [ANTISUNE] U2' [SEXY] x`, }, // use triggers
 
                     ]
                 },
