@@ -1,5 +1,5 @@
 import { Alg } from "cubing/alg"
-import { baseMoveGroups, mirrorMoveGroups, substitutionGroups } from "./algConstants"
+import { IModifiersList, backMoveGroups, baseMoveGroups, mirrorMoveGroups, substitutionGroups } from "./algConstants"
 
 export const removePrePostAUF = (a: string): string => {
   // remove brackets and replace with a pause after
@@ -23,17 +23,53 @@ export const mirrorAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string 
   return aArr.join(" ")
 }
 
+export const backAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string => {
+  const baseMovesArray = baseMoveGroups[pzl]
+  const backMovesArray = backMoveGroups[pzl]
+  if (!baseMovesArray || !backMovesArray) { return '' }
+  let aArr: string[] = a.split(' ')
+  aArr.forEach((move, i) => {
+    aArr[i] = backMovesArray[baseMovesArray.indexOf(move)]
+  })
+  return aArr.join(" ")
+}
+
 export const invertAlg = (a: string): string => {
-  return new Alg(a).invert.toString()
+  return new Alg(a).invert().toString(); 
+}
+
+export const repeatAlg = (a: string, q: number): string => {
+  let res = new Alg(a)
+  for (let i = 1; i < q; i++) { res = res.concat(a) }
+  return res.toString()
 }
 
 export const simplifyAlg = (a: string): string => {
   return new Alg(a).experimentalSimplify({cancel: true}).toString()
 }
 
+let modifiersList: Record<IModifiersList, (a: string, pzl: keyof typeof baseMoveGroups) => string> = {
+  "INVERSE": (a, pzl) => { return invertAlg(a) },
+  "LEFTY": (a, pzl) => { return mirrorAlg(a, pzl) },
+  "BACK": (a, pzl) => { return backAlg(a, pzl) },
+  "DOUBLE": (a, pzl) => { return repeatAlg(a, 2) },
+  "TRIPLE": (a, pzl) => { return repeatAlg(a, 3) },
+}
+
+// TODO: figure out wtf you wrote
 export const getTriggerAlg = (t: string, pzl: keyof typeof substitutionGroups): string => {
-  let currTrigger = substitutionGroups[pzl]?.find(item => item.name === t)
-  return currTrigger ? currTrigger.alg : ''
+  let triggerList: [...IModifiersList[], string] = t.split(' ') as [...IModifiersList[], string]
+  let currTrigger = substitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1))
+  if (!currTrigger) { return '' }
+  triggerList.pop() // remove base trigger and leave only modifiers
+  while (triggerList.length) {
+    let modifier = triggerList.pop()
+    if (!modifier) { break }
+    if (Object.keys(modifiersList).includes(modifier)) {
+      currTrigger.alg = modifiersList[modifier as IModifiersList](currTrigger.alg, pzl) 
+    }
+  }
+  return currTrigger.alg
 }
 
 // TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers)

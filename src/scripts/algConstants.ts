@@ -216,3 +216,5 @@ export const backMoveGroups: modularPuzzleGroup<string[]> = {
     "megaminx": [...backRightMegaF, ...backMega, ...backMoves],
     "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backMoves]
 }
+
+export type IModifiersList = "INVERSE" | "BACK" | "LEFTY" | "DOUBLE" | "TRIPLE"
