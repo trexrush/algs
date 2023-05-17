@@ -56,6 +56,13 @@ const bigCubeSubstitutes = [
 ]
 
 const megaSubstitutes = [
+    { name: "UP_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
+    { name: "DOWN_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
+    { name: "ANTISUNE", alg: "R U2 R' U' R U' R'" },
+
+]
+
+const megaRightySubstitutes = [
     { name: "x", alg: "dL' R" },
     { name: "x'", alg: "dL R'" },
 ]
@@ -76,6 +83,11 @@ const triggers = [
     { name: "JPERMSTART", alg: "R U R' F'" }, // name help?
     { name: "NPERMSTART", alg: "R' U R U'" }, // name help?
     { name: "VPERMSTART", alg: "R' U R' U'" }, // name help?
+    { name: "OHSLEDGE", alg: "r' F R F' M'" },
+    { name: "FATSLEDGE", alg: "r' F R F'" },
+    { name: "FATSEXY", alg: "r U R' U'" },
+    { name: "FATSU", alg: "r U R' U" },
+    { name: "FATNE", alg: "R U2' r'" },
     { name: "MEGASLEDGE", alg: "R' F' R F" },
     { name: "OHSWAG", alg: "L U' R U L'" },
     { name: "SUNE", alg: "R U R' U R U2' R'" },
@@ -84,17 +96,17 @@ const triggers = [
     { name: "NIKLAS", alg: "R U' L' U R' U' L" },
     { name: "ADJFLIP", alg: "r U R' U' M U R U' R'" },
     { name: "OPPFLIP", alg: "R U R' U' M' U R U' R'" },
-    { name: "U COMM", alg: "R' D' R U R' D R" },
-    { name: "U' COMM", alg: "R' D' R U' R' D R" },
-    { name: "U2 COMM", alg: "R' D' R U2 R' D R" },
+    { name: "U_ZERO", alg: "R' D' R U R' D R" },
+    { name: "U'_ZERO", alg: "R' D' R U' R' D R" },
+    { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },
 ]
 
 export const substitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
-    "3x3x3": [...triggers, ...cubeRotations, ...zbllSubstitutes, ...pllSubstitutes],
-    "2x2x2": [...triggers, ...cubeRotations],
-    "4x4x4": [...triggers, ...cubeRotations, ...pllSubstitutes],
-    "megaminx": [...triggers, ...megaSubstitutes],
-    "megaminx-lefty": [...triggers, ...megaLeftySubstitutes]
+    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...triggers],
+    "2x2x2": [...cubeRotations, ...triggers],
+    "4x4x4": [...pllSubstitutes, ...cubeRotations, ...triggers],
+    "megaminx": [...megaRightySubstitutes, ...triggers],
+    "megaminx-lefty": [...megaLeftySubstitutes, ...triggers]
 }
 
 // im sorry to the gods of hardcoding but cubingJS doesnt have a mirror function somehow? discrimination against left handed ppl smh
@@ -200,21 +212,21 @@ const backRightMegaF = [
 
 
 export const baseMoveGroups: modularPuzzleGroup<string[]> = {
-    "3x3x3": [...baseMoves, ...baseRotations, ...baseSlices],
-    "2x2x2": [...baseMoves, ...baseRotations],
+    "3x3x3": [...baseSlices, ...baseRotations, ...baseMoves],
+    "2x2x2": [...baseRotations, ...baseMoves],
     "megaminx": [...baseMegaF, ...baseMega, ...baseMoves],
     "megaminx-lefty": [...baseMegaF, ...baseMega, ...baseMoves]
 }
 export const mirrorMoveGroups: modularPuzzleGroup<string[]> = {
-    "3x3x3": [...mirrorMoves, ...mirrorRotations, ...mirrorSlices],
-    "2x2x2": [...mirrorMoves, ...mirrorRotations],
+    "3x3x3": [...mirrorSlices, ...mirrorRotations, ...mirrorMoves],
+    "2x2x2": [...mirrorRotations, ...mirrorMoves],
     "megaminx": [...mirrorMegaF, ...mirrorMega, ...mirrorMoves],
     "megaminx-lefty": [...mirrorMegaF, ...mirrorMega, ...mirrorMoves]
 }
 // megaminx F would be mapped to B', (which is not intentional, should be BL' or BR'), 
 // so earlier moves are set to take precedence and megaminx modules need to go first
 export const backMoveGroups: modularPuzzleGroup<string[]> = {
-    "3x3x3": [...backMoves, ...backRotations, ...backSlices],
+    "3x3x3": [...baseSlices, ...baseRotations, ...baseMoves],
     "2x2x2": [...backMoves, ...backRotations],
     "megaminx": [...backRightMegaF, ...backMega, ...backMoves],
     "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backMoves]

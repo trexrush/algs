@@ -38,6 +38,10 @@ export const invertAlg = (a: string): string => {
   return new Alg(a).invert().toString(); 
 }
 
+//TODO: implement
+export const invertTriggerAlg = (a: string) => {
+}
+
 export const repeatAlg = (a: string, q: number): string => {
   let res = new Alg(a)
   for (let i = 1; i < q; i++) { res = res.concat(a) }
@@ -56,7 +60,6 @@ let modifiersList: Record<IModifiersList, (a: string, pzl: keyof typeof baseMove
   "TRIPLE": (a, pzl) => { return repeatAlg(a, 3) },
 }
 
-// TODO: figure out wtf you wrote
 export const getTriggerAlg = (t: string, pzl: keyof typeof substitutionGroups): string => {
   let triggerList: [...IModifiersList[], string] = t.split(' ') as [...IModifiersList[], string]
   let currTrigger = substitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1))
