@@ -68,22 +68,21 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
 
 //______V2______//
 
+export type ICaseListV2 = Record<string, ICaseV2>
+export type ISetListV2 = Record<string, ISetV2>
+export type IGroupElementListV2 = Record<string, ISetV2 | ICaseV2>
 export interface IGroupElementV2 {
-    type: "set" | "case"
-    sort?: number
     name: string
     altNames?: string[]
     note?: string
 }
 
 export interface ISetV2 extends IGroupElementV2 {
-    type: "set"
-    children?: Array<ISetV2 | ICaseV2>
+    children?: IGroupElementListV2
     image?: string
 }
 
 export interface ICaseV2 extends IGroupElementV2 {
-    type: "case"
     algs: IAlgV2[]
     scrambles?: string[] // optional for now
 }
