@@ -1,24 +1,24 @@
 <script lang="ts">
-  import { DefaultData } from "../scripts/types";
-  import type { IData } from "../scripts/types";
+  import { DefaultOptions } from "../scripts/types";
+  import type { IOptions } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
   import { cubePNG, cubeSVG, Axis, Masking } from "sr-visualizer";
   import { onMount } from "svelte";
 
   export let imageAlg: string;
-  export let data: IData;
+  export let options: IOptions;
   export let size: number;
 
   // https://experiments.cubing.net/cubing.js/twisty/misc-2d-stickerings.html
   // local images get those yep
-  let imgSource: string = data.imgSource || DefaultData.imgSource;
-  let stage: string = data.vcparams?.stage || DefaultData.vcparams.stage;
-  let view: "plan" | "trans" = data.vcparams?.view || DefaultData.vcparams.view;
-  let rot: string = data.vcparams?.rot || DefaultData.vcparams.rot;
+  let imgSource: string = options.imgSource || DefaultOptions.imgSource;
+  let stage: string = options.vcparams?.stage || DefaultOptions.vcparams.stage;
+  let view: "plan" | "trans" = options.vcparams?.view || DefaultOptions.vcparams.view;
+  let rot: string = options.vcparams?.rot || DefaultOptions.vcparams.rot;
   let puzzle: number | "mega" =
-    data.vcparams?.puzzle || DefaultData.vcparams.puzzle;
+    options.vcparams?.puzzle || DefaultOptions.vcparams.puzzle;
   let colorScheme: string =
-    data.vcparams?.colorScheme || DefaultData.vcparams.colorScheme;
+    options.vcparams?.colorScheme || DefaultOptions.vcparams.colorScheme;
 
   let visualCubeImage: HTMLElement;
   const configVisualCubeImage = () => {
@@ -48,7 +48,7 @@
 {#if imgSource == "vc"}
   <div class="vc cursor-pointer transition-transform hover:translate-y-[-8px]" bind:this={visualCubeImage} />
 {:else if imgSource == "cubingjs"}
-  <TwistyPlayer {imageAlg} {data} {size} />
+  <TwistyPlayer {imageAlg} options={options} {size} />
 {/if}
 
 <style>

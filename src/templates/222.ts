@@ -1,7 +1,7 @@
 import type { IAlgSet } from "../scripts/types"
 
 const CLLalgSet: IAlgSet = {
-    data: {
+    options: {
         name: "CLL",
         imgSource: "vc",
         vcparams: {
@@ -19,7 +19,7 @@ const CLLalgSet: IAlgSet = {
 }
 
 const EG1algSet: IAlgSet = {
-    data: {
+    options: {
         name: "EG-1",
         imgSource: "vc",
         vcparams: {

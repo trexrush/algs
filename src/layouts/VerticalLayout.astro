@@ -1,18 +1,18 @@
 ---
   // import SetCard from "../components/SetCard.svelte";
   import VerticalSetCard from "../components/VerticalSetCard.astro";
-  import type { IData, ISet } from "../scripts/types";
+  import type { IOptions, ISet } from "../scripts/types";
 
   interface Props {
-    data: IData
+    options: IOptions
     sets: ISet[]
     size?: number
   }
-  const { sets, data, size = 128 } = Astro.props
+  const { sets, options, size = 128 } = Astro.props
 ---
 
-<div class=" relative text-5xl sm:text-7xl w-full text-center my-5">{data.name}</div>
+<div class=" relative text-5xl sm:text-7xl w-full text-center my-5">{options.name}</div>
 
 {sets.map((set) => (
-    <VerticalSetCard set={set} data={data} size={size}/>
+    <VerticalSetCard set={set} options={options} size={size}/>
 ))}

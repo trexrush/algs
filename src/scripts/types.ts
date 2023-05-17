@@ -31,7 +31,7 @@ interface ITwistyParams {
     tempo?: number
 }
 
-export interface IData {
+export interface IOptions {
     name: string;
     // vc - puts strain on external visualcube api (cubicle was for mega but it doesnt work with BL/FL/DL/wide mega moves)
     // cubingjs - needs to hydrate to display image
@@ -42,9 +42,9 @@ export interface IData {
 }
 
 
-export interface IAlgSet { data: IData, sets: ISet[] }
+export interface IAlgSet { options: IOptions, sets: ISet[] }
 
-export const DefaultData: { vcparams: Required<IVCParams>, twistyplayerparams: Required<ITwistyParams> } & Required<IData> = {
+export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams: Required<ITwistyParams> } & Required<IOptions> = {
     name: "My Algset",
     imgSource: "vc",
     vcparams: {
@@ -96,4 +96,4 @@ export interface IAlgV2 {
 }
 export type IAlgTagsV2 = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "Lefty" | "New"
 
-export interface IAlgSetV2 { data: IData, sets: ISetV2[] }
+export interface IAlgSetV2 { options: IOptions, sets: ISetV2[] }

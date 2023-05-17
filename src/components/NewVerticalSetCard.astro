@@ -1,13 +1,13 @@
 ---
-import type { IData, IGroupElementV2, ISetV2 } from "../scripts/types";
+import type { IOptions, IGroupElementV2, ISetV2 } from "../scripts/types";
 import NewVerticalAlgCard from "./NewVerticalAlgCard.svelte";
 
 interface Props {
   set: ISetV2;
-  data: IData;
+  options: IOptions;
   size: number;
 }
-const { set, data, size } = Astro.props;
+const { set, options, size } = Astro.props;
 
 let sortedCases: Array<IGroupElementV2> | [] = set.children || []
 sortedCases.sort((a, b) => (a.sort && b.sort && a.sort < b.sort) ? -1 : 1)
@@ -24,10 +24,10 @@ sortedCases.sort((a, b) => (a.sort && b.sort && a.sort < b.sort) ? -1 : 1)
     {
       sortedCases.map((setOrCase) => (
         setOrCase.type === 'case' &&
-          <NewVerticalAlgCard client:visible caso={setOrCase} {data} size={size} setName={set.name} />
+          <NewVerticalAlgCard client:visible caso={setOrCase} {options} size={size} setName={set.name} />
         ||
         setOrCase.type === 'set' &&
-          <Astro.self set={setOrCase} {data} size={size} />
+          <Astro.self set={setOrCase} {options} size={size} />
       ))
     }
   </div>

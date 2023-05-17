@@ -3,17 +3,17 @@
   import { TwistyPlayer } from "cubing/twisty";
   import { onMount } from "svelte";
   import { expandAlgWithTriggers } from "../scripts/alg";
-  import type { IData, twistyPuzzleType } from "../scripts/types";
-  import { DefaultData } from "../scripts/types";
+  import type { IOptions, twistyPuzzleType } from "../scripts/types";
+  import { DefaultOptions } from "../scripts/types";
 
-  export let data: IData
+  export let options: IOptions
   export let size: number
-  let stage: string = data.twistyplayerparams?.stage || DefaultData.twistyplayerparams.stage;
-  let rot: string = data.twistyplayerparams?.rot || DefaultData.twistyplayerparams.rot;
-  let cameraX: number = data.twistyplayerparams?.cameraX || DefaultData.twistyplayerparams.cameraX;
-  let cameraY: number = data.twistyplayerparams?.cameraY || DefaultData.twistyplayerparams.cameraY;
-  let puzzle: twistyPuzzleType = data.twistyplayerparams?.puzzle || DefaultData.twistyplayerparams.puzzle;
-  let tempo: number = data.twistyplayerparams?.tempo || DefaultData.twistyplayerparams.tempo;
+  let stage: string = options.twistyplayerparams?.stage || DefaultOptions.twistyplayerparams.stage;
+  let rot: string = options.twistyplayerparams?.rot || DefaultOptions.twistyplayerparams.rot;
+  let cameraX: number = options.twistyplayerparams?.cameraX || DefaultOptions.twistyplayerparams.cameraX;
+  let cameraY: number = options.twistyplayerparams?.cameraY || DefaultOptions.twistyplayerparams.cameraY;
+  let puzzle: twistyPuzzleType = options.twistyplayerparams?.puzzle || DefaultOptions.twistyplayerparams.puzzle;
+  let tempo: number = options.twistyplayerparams?.tempo || DefaultOptions.twistyplayerparams.tempo;
   
   export let setup = "";
   export let backView = false;

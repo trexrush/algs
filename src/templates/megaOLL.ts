@@ -1,7 +1,7 @@
 import type { IAlgSet } from "../scripts/types"
 
 const algSet: IAlgSet = {
-    data: {
+    options: {
         name: "Megaminx OLL",
         imgSource: "cubingjs",
         twistyplayerparams: {
