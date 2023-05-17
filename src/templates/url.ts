@@ -1,1 +1,2 @@
 export const sheetURL = 'https://script.google.com/macros/s/AKfycbz_B2joP3Xsj1H2cqkWkt-aEWEDm5M1icdfVyzqABHaPQtKR1R9ydZxQWNZsHxVMz-N4A/exec'
+export const sheetURLV2 = 'https://script.google.com/macros/s/AKfycbztl2A4aHc3VE_UOCSWzW2a2TzkYEWmMz0qmWnjqcn3hrpAM5UWL01BIXsr26U3Hwduww/exec'

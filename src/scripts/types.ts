@@ -65,7 +65,6 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
     note: ""
 }
 
-
 //______V2______//
 
 export type ICaseListV2 = Record<string, ICaseV2>
@@ -93,6 +92,12 @@ export interface IAlgV2 {
     tags?: IAlgTagsV2[]
     note?: string
 }
+
 export type IAlgTagsV2 = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "Lefty" | "New"
 
 export interface IAlgSetV2 { options: IOptions, sets: ISetV2[] }
+
+export interface ISheetsResponse {
+    nameList: string[],
+    caseList: ICaseListV2
+}
