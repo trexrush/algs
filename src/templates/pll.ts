@@ -217,6 +217,4 @@ const PLLGroupedBySet: IAlgSetV2 = {
     ]
 }
 
-console.log(Object.entries(PLLGroupedBySet.sets[0]))
-
 export { PLLGroupedByLetter, PLLGroupedBySet }

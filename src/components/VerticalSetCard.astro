@@ -47,7 +47,6 @@ const { set, options, size } = Astro.props;
         const section: HTMLElement | null = this.querySelector(".collapsible");
 
         toggler?.addEventListener("click", () => {
-          console.log(section?.style.display);
           section &&
             (isCollapsed
               ? (section.style.display = "")
