@@ -25,4 +25,4 @@ const TemplateView: IAlgSetV2 = {
     ]
 }
 
-export { TemplateView as algSet }
+export { TemplateView }
