@@ -1,0 +1,11 @@
+---
+import { algSet } from "../templates/oll";
+import NewVerticalLayout from "../layouts/NewVerticalLayout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Page from "../layouts/Page.astro";
+---
+
+<Page title={'OLL'}>
+  <Navbar slot="navbar" />
+  <NewVerticalLayout options={algSet.options} sets={algSet.sets} />
+</Page>

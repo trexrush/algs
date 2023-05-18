@@ -43,16 +43,16 @@ const pllSubstitutes = [
 ]
 
 const zbllSubstitutes = [
-    { name: "T ZBLL", alg: ". . L' U' L' D' L U L' D L2" },
-    { name: "U ZBLL", alg: ". . L2 D l' U2' l D' L' U2' L'" },
-    { name: "L ZBLL", alg: ". . U L' U2' L' D' L U2 L' D L2" },
+    { name: "T_ZBLL", alg: ". . L' U' L' D' L U L' D L2" },
+    { name: "U_ZBLL", alg: ". . L2 D l' U2' l D' L' U2' L'" },
+    { name: "L_ZBLL", alg: ". . U L' U2' L' D' L U2 L' D L2" },
 ]
 
 const bigCubeSubstitutes = [
     { name: "OPP", alg: ". . Uw2 r2 Uw2 r2 U2 r2" },
-    { name: "DREW", alg: "" },
-    { name: "LUCAS", alg: "" },
-    { name: "FRONT", alg: "" }, // same as above for the purpose of triggers
+    // { name: "DREW", alg: "" },
+    // { name: "LUCAS", alg: "" },
+    // { name: "FRONT", alg: "" }, // same as above for the purpose of triggers
 ]
 
 const megaSubstitutes = [
