@@ -203,7 +203,7 @@ const PLLGroupedBySet: IAlgSetV2 = {
     options: Options,
     sets: [
         {
-            name: "CPLL",
+            name: "EPLL",
             children: Object.assign([_.H, _.Ua, _.Ub, _.Z])
         },
         {
