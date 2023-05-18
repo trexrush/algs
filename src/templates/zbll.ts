@@ -5,12 +5,7 @@ const Options: IOptions = {
     name: "ZBLL",
     imgSource: "vc",
     vcparams: {
-        stage: '',
         view: 'plan',
-        rot: "",
-    },
-    twistyplayerparams: {
-        stage: '',
     },
 }
 

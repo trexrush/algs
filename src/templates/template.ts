@@ -1,7 +1,6 @@
-import type { IAlgSet } from "../scripts/types"
+import type { IOptions, IAlgSetV2 } from "../scripts/types"
 
-const algSet: IAlgSet = {
-    options: {
+const Options: IOptions = {
         name: "",
         imgSource: "vc",
         vcparams: {
@@ -14,17 +13,16 @@ const algSet: IAlgSet = {
             stage: '',
             rot: '',
         },
-    },
-    sets: [
-        {
-            name: '',
-            sets: [
-            ],
-            cases: [
-                { name: '', algs: [""] },
-            ],
-        },
-    ],
 }
 
-export { algSet }
+const TemplateView: IAlgSetV2 = {
+    options: Options,
+    sets: [
+        {
+            name: "Some Set",
+            children: Object.assign([/* algs are manually placed here */])
+        },
+    ]
+}
+
+export { TemplateView as algSet }

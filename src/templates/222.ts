@@ -5,7 +5,6 @@ const CLLalgSet: IAlgSet = {
         name: "CLL",
         imgSource: "vc",
         vcparams: {
-            stage: '',
             view: 'plan',
             rot: "y",
             puzzle: 2,
