@@ -34,11 +34,11 @@ const pllSubstitutes = [
     // { name: "Jb Perm", alg: "" },
     // { name: "Ra Perm", alg: "" },
     // { name: "Rb Perm", alg: "" },
-    { name: "T Perm", alg: ". . R U R' U' R' F R2 U' R' U' R U R' F'" },
+    { name: "T_PERM", alg: "R U R' U' R' F R2 U' R' U' R U R' F'" },
     // { name: "Ua Perm", alg: "" },
     // { name: "Ub Perm", alg: "" },
     // { name: "V Perm", alg: "" },
-    // { name: "Y Perm", alg: "" },
+    { name: "Y_PERM", alg: "F R U' R' U' R U R' F' R U R' U' R' F R F'" },
     // { name: "Z Perm", alg: "" },
 ]
 
@@ -56,8 +56,10 @@ const bigCubeSubstitutes = [
 ]
 
 const megaSubstitutes = [
-    { name: "UP_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
-    { name: "DOWN_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
+    { name: "UP_CW_7MOVER", alg: "R2 U2 R2' U R2 U2 R2'" },
+    { name: "UP_CCW_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
+    { name: "DOWN_CW_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
+    { name: "DOWN_CCW_7MOVER", alg: "R2' U2' R2 U' R2' U2' R2" },
     { name: "ANTISUNE", alg: "R U2 R' U' R U' R'" },
 
 ]
@@ -79,6 +81,9 @@ const triggers = [
     { name: "HEDGE", alg: "F R' F' R" },
     { name: "SU", alg: "R U R' U" },
     { name: "NE", alg: "R U2' R'" },
+    { name: "PAIR_U2", alg: "R U2' R'" }, // TODO - find what patrick / rami use
+    { name: "PAIR_U'", alg: "R U' R'" }, // ^
+    { name: "PAIR_U", alg: "R U R'" }, // ^
     { name: "YPERMSTART", alg: "F R U' R'" }, // name help?
     { name: "JPERMSTART", alg: "R U R' F'" }, // name help?
     { name: "NPERMSTART", alg: "R' U R U'" }, // name help?
@@ -90,23 +95,25 @@ const triggers = [
     { name: "FATNE", alg: "R U2' r'" },
     { name: "MEGASLEDGE", alg: "R' F' R F" },
     { name: "OHSWAG", alg: "L U' R U L'" },
+
+    { name: "U_ZERO", alg: "R' D' R U R' D R" },
+    { name: "U'_ZERO", alg: "R' D' R U' R' D R" },
+    { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },
+
     { name: "SUNE", alg: "R U R' U R U2' R'" },
     { name: "ANTISUNE", alg: "R U2' R' U' R U' R'" },
     { name: "FATSUNE", alg: "r U R' U R U2 r'" },
     { name: "NIKLAS", alg: "R U' L' U R' U' L" },
     { name: "ADJFLIP", alg: "r U R' U' M U R U' R'" },
     { name: "OPPFLIP", alg: "R U R' U' M' U R U' R'" },
-    { name: "U_ZERO", alg: "R' D' R U R' D R" },
-    { name: "U'_ZERO", alg: "R' D' R U' R' D R" },
-    { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },
 ]
 
 export const substitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
     "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...triggers],
     "2x2x2": [...cubeRotations, ...triggers],
     "4x4x4": [...pllSubstitutes, ...cubeRotations, ...triggers],
-    "megaminx": [...megaRightySubstitutes, ...triggers],
-    "megaminx-lefty": [...megaLeftySubstitutes, ...triggers]
+    "megaminx": [...megaSubstitutes, ...megaRightySubstitutes, ...pllSubstitutes, ...triggers],
+    "megaminx-lefty": [...megaSubstitutes, ...megaLeftySubstitutes, ...pllSubstitutes, ...triggers]
 }
 
 // im sorry to the gods of hardcoding but cubingJS doesnt have a mirror function somehow? discrimination against left handed ppl smh
