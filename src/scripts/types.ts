@@ -109,7 +109,8 @@ export interface ILocalSetOptionsV2 {
 }
 
 export interface ILocalCaseOptionsV2 {
-    personalNote: string
+    personalNote?: string
     preferredAlg?: string // TODO: figure out how to to mark down preferredAlgs
     learnStatus?: "training" | "learned"
+    trainerLists?: any[]
 }
