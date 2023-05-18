@@ -67,20 +67,22 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
 
 //______V2______//
 
-export type ICaseListV2 = Record<string, ICaseV2>
-export type ISetListV2 = Record<string, ISetV2>
-export type IGroupElementListV2 = Record<string, ISetV2 | ICaseV2>
+// https://stackoverflow.com/questions/51352229/optional-generic-type-with-typescript
+export type ICaseListV2<T extends string = any> = Record<T, ICaseV2> 
+export type ISetListV2<T extends string = any> = Record<T, ISetV2>
+export type IGroupElementListV2<T extends string = any> = Record<T, ISetV2 | ICaseV2>
+
+//WIP
+export type LocalOptionsList<T extends string = any> = Record<T, ILocalSetOptionsV2 | ILocalCaseOptionsV2> 
 export interface IGroupElementV2 {
     name: string
     altNames?: string[]
     note?: string
 }
-
 export interface ISetV2 extends IGroupElementV2 {
     children?: IGroupElementListV2
     image?: string
 }
-
 export interface ICaseV2 extends IGroupElementV2 {
     algs: IAlgV2[]
     scrambles?: string[] // optional for now
@@ -100,4 +102,14 @@ export interface IAlgSetV2 { options: IOptions, sets: ISetV2[] }
 export interface ISheetsResponse {
     nameList: string[],
     caseList: ICaseListV2
+}
+export interface ILocalSetOptionsV2 {
+    loadCollapsed?: boolean
+    personalNote?: string
+}
+
+export interface ILocalCaseOptionsV2 {
+    personalNote: string
+    preferredAlg?: string // TODO: figure out how to to mark down preferredAlgs
+    learnStatus?: "training" | "learned"
 }
