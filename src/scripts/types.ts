@@ -85,6 +85,7 @@ export interface ISetV2 extends IGroupElementV2 {
 }
 export interface ICaseV2 extends IGroupElementV2 {
     algs: IAlgV2[]
+    recognition?: string[],
     scrambles?: string[] // optional for now
 }
 

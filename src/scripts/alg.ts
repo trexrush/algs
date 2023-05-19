@@ -23,6 +23,7 @@ export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): strin
   })
   return aArr.join(" ")
 }
+//TODO: finish logic
 // export const mirrorSet = (s: IAlgSetV2): IAlgSetV2 => {
 //     s.options.puzzle = puzzleDefinitionMapping[s.options.puzzle]?.mirror
 // }
