@@ -5,15 +5,15 @@
   import { expandAlgWithTriggers } from "../scripts/alg";
   import type { IOptions, twistyPuzzleType } from "../scripts/types";
   import { DefaultOptions } from "../scripts/types";
+  import merge from 'ts-deepmerge'
+  import { puzzleDefinitionMapping } from "../scripts/algConstants";
 
   export let options: IOptions
   export let size: number
-  let stage: string = options.twistyplayerparams?.stage || DefaultOptions.twistyplayerparams.stage;
-  let rot: string = options.twistyplayerparams?.rot || DefaultOptions.twistyplayerparams.rot;
-  let cameraX: number = options.twistyplayerparams?.cameraX || DefaultOptions.twistyplayerparams.cameraX;
-  let cameraY: number = options.twistyplayerparams?.cameraY || DefaultOptions.twistyplayerparams.cameraY;
-  let puzzle: twistyPuzzleType = options.twistyplayerparams?.puzzle || DefaultOptions.twistyplayerparams.puzzle;
-  let tempo: number = options.twistyplayerparams?.tempo || DefaultOptions.twistyplayerparams.tempo;
+  let puzzle: twistyPuzzleType = puzzleDefinitionMapping[options.puzzle]?.type || DefaultOptions.puzzle
+  // bit of a hack
+  let puzzleChirality: twistyPuzzleType = options.puzzle == puzzle ? puzzle : options.puzzle
+
   
   export let setup = "";
   export let backView = false;
@@ -37,7 +37,7 @@
     if (twistyDiv) {
 
       setAlg = (alg: string) => {
-        twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg, puzzle) + " . ."
+        twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg, puzzleChirality) + " . ."
         twistyPlayer.jumpToStart()
         twistyPlayer.controller.animationController.playPause()
       }
@@ -45,23 +45,23 @@
       twistyPlayer.background = "none";
       twistyPlayer.experimentalSetupAnchor = "end";
       twistyPlayer.experimentalFaceletScale = 0.88; // works here but not in vanillaJS??????
-      twistyPlayer.tempoScale = tempo;
+      twistyPlayer.tempoScale = options.twistyplayerparams!.tempo!
       twistyPlayer.cameraLatitudeLimit = 50;
       
       twistyPlayer.visualization = imageAlg ? "experimental-2D-LL" : "3D"
-      if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg, puzzle) }
+      if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg, puzzleChirality) }
       twistyPlayer.style.height = `${size}px`;
       twistyPlayer.style.width = `${size}px`;
-      twistyPlayer.experimentalStickering = stage;
-      twistyPlayer.cameraLongitude = cameraX
-      twistyPlayer.cameraLatitude = cameraY
+      twistyPlayer.experimentalStickering = options.twistyplayerparams!.stage!
+      twistyPlayer.cameraLongitude = options.twistyplayerparams!.cameraX!
+      twistyPlayer.cameraLatitude = options.twistyplayerparams!.cameraY!
       
       twistyPlayer.experimentalDragInput = drag ? "auto" : "none";
       twistyPlayer.controlPanel = "none"
-      twistyPlayer.experimentalSetupAlg = setup + " " + rot;
+      twistyPlayer.experimentalSetupAlg = setup + " " + options.twistyplayerparams!.rot!;
       twistyPlayer.backView = backView ? "top-right" : "none";
       twistyPlayer.hintFacelets = hintFacelets ? "auto" : "none";
-      twistyPlayer.puzzle = puzzle
+      twistyPlayer.puzzle = options.puzzle
       
       twistyDiv.appendChild(twistyPlayer);
       // console.log(twistyPlayer.experimentalModel.twistySceneModel.stickeringMask)

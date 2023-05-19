@@ -3,6 +3,7 @@ import { sheetURLV2 } from "./url";
 
 const Options: IOptions = {
     name: "ZBLL",
+    puzzle: '3x3x3',
     imgSource: "vc",
     vcparams: {
         view: 'plan',

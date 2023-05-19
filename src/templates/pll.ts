@@ -176,10 +176,8 @@ const _: ICaseListV2 = {
 
 const Options: IOptions = {
     name: "PLL",
+    puzzle: '3x3x3',
     imgSource: "vc",
-    vcparams: {
-        puzzle: 3,
-    },
     twistyplayerparams: {
         stage: 'PLL',
         cameraX: -30

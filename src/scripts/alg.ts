@@ -1,5 +1,6 @@
 import { Alg } from "cubing/alg"
-import { IModifiersList, backMoveGroups, baseMoveGroups, mirrorMoveGroups, substitutionGroups } from "./algConstants"
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, substitutionGroups } from "./algConstants"
+import type { IAlgSetV2, IModifiersList, twistyPuzzleTypeWithChirality } from "./types"
 
 export const removePrePostAUF = (a: string): string => {
   // remove brackets and replace with a pause after
@@ -12,7 +13,7 @@ export const convert4x4NotationToTwizzle = (a: string): string => {
   return a.replace("r", "2R")
 }
 
-export const mirrorAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string => {
+export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): string => {
   const baseMovesArray = baseMoveGroups[pzl]
   const mirrorMovesArray = mirrorMoveGroups[pzl]
   if (!baseMovesArray || !mirrorMovesArray) { return '' }
@@ -22,6 +23,9 @@ export const mirrorAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string 
   })
   return aArr.join(" ")
 }
+// export const mirrorSet = (s: IAlgSetV2): IAlgSetV2 => {
+//     s.options.puzzle = puzzleDefinitionMapping[s.options.puzzle]?.mirror
+// }
 
 export const backAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string => {
   const baseMovesArray = baseMoveGroups[pzl]
@@ -52,7 +56,7 @@ export const simplifyAlg = (a: string): string => {
   return new Alg(a).experimentalSimplify({cancel: true}).toString()
 }
 
-let modifiersList: Record<IModifiersList, (a: string, pzl: keyof typeof baseMoveGroups) => string> = {
+let modifiersList: Record<IModifiersList, (a: string, pzl: twistyPuzzleTypeWithChirality) => string> = {
   "INVERSE": (a, pzl) => { return invertAlg(a) },
   "LEFTY": (a, pzl) => { return mirrorAlg(a, pzl) },
   "BACK": (a, pzl) => { return backAlg(a, pzl) },

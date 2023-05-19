@@ -17,23 +17,24 @@ interface IVCParams {
     stage?: string
     view?: "plan" | "trans"
     rot?: string
-    puzzle?: number | "mega"
     colorScheme?: string
 }
 
 export type twistyPuzzleType = "3x3x3" | "custom" | "2x2x2" | "4x4x4" | "5x5x5" | "6x6x6" | "7x7x7" | "40x40x40" | "megaminx" | "pyraminx" | "square1" | "clock" | "skewb" | "fto" | "gigaminx" | "master_tetraminx" | "kilominx" | "redi_cube" | "melindas2x2x2x2"
+export type twistyPuzzleTypeWithChirality = twistyPuzzleType | 'megaminx-lefty'
+
 interface ITwistyParams {
     stage?: string
     rot?: string
     cameraX?: number
     cameraY?: number
-    puzzle?: twistyPuzzleType
     tempo?: number
 }
 
 export interface IOptions {
     name: string;
-    // vc - puts strain on external visualcube api (cubicle was for mega but it doesnt work with BL/FL/DL/wide mega moves)
+    puzzle: twistyPuzzleType
+    // vc - doesnt work with non-cubics
     // cubingjs - needs to hydrate to display image
     imgSource?: "vc" | "cubingjs" | "none"
     vcparams?: IVCParams
@@ -47,11 +48,11 @@ export interface IAlgSet { options: IOptions, sets: ISet[] }
 export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams: Required<ITwistyParams> } & Required<IOptions> = {
     name: "My Algset",
     imgSource: "vc",
+    puzzle: "3x3x3",
     vcparams: {
         stage: "",
         view: "plan",
         rot: "",
-        puzzle: 3,
         colorScheme: '',
     },
     twistyplayerparams: {
@@ -59,7 +60,6 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
         rot: "",
         cameraX: 30,
         cameraY: 30,
-        puzzle: "3x3x3",
         tempo: 4
     },
     note: ""
@@ -114,3 +114,9 @@ export interface ILocalCaseOptionsV2 {
     learnStatus?: "training" | "learned"
     trainerLists?: any[]
 }
+
+
+export type IModifiersList = "INVERSE" | "BACK" | "LEFTY" | "DOUBLE" | "TRIPLE"
+
+
+export type modularPuzzleGroup<T> = Partial<Record<twistyPuzzleTypeWithChirality, T>>

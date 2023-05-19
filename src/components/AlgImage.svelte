@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import { DefaultOptions } from "../scripts/types";
   import type { IOptions } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
@@ -11,14 +12,13 @@
 
   // https://experiments.cubing.net/cubing.js/twisty/misc-2d-stickerings.html
   // local images get those yep
-  let imgSource: string = options.imgSource || DefaultOptions.imgSource;
-  let stage: string = options.vcparams?.stage || DefaultOptions.vcparams.stage;
-  let view: "plan" | "trans" = options.vcparams?.view || DefaultOptions.vcparams.view;
-  let rot: string = options.vcparams?.rot || DefaultOptions.vcparams.rot;
-  let puzzle: number | "mega" =
-    options.vcparams?.puzzle || DefaultOptions.vcparams.puzzle;
+  let imgSource: string = options.imgSource!
+  let stage: string = options.vcparams?.stage!
+  let view: "plan" | "trans" = options.vcparams?.view!
+  let rot: string = options.vcparams?.rot!
+  let puzzle: number | string = puzzleDefinitionMapping[options.puzzle]?.vc!!
   let colorScheme: string =
-    options.vcparams?.colorScheme || DefaultOptions.vcparams.colorScheme;
+    options.vcparams?.colorScheme!
 
   let visualCubeImage: HTMLElement;
   const configVisualCubeImage = () => {
@@ -29,7 +29,7 @@
         [Axis.Y, 30],
         [Axis.X, -30],
       ],
-      cubeSize: puzzle != "mega" ? puzzle : 3,
+      cubeSize: typeof puzzle === 'number' ? puzzle : 3,
       view: view,
       width: size,
       height: size,

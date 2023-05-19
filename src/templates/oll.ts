@@ -3,6 +3,7 @@ import { sheetURLV2 } from "./url";
 
 const Options: IOptions = {
     name: "OLL",
+    puzzle: '3x3x3',
     imgSource: "vc",
     vcparams: {
         stage: 'oll',

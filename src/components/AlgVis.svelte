@@ -5,6 +5,7 @@
   import TwistyPlayer from "./TwistyPlayer.svelte";
   import AlgImage from "./AlgImage.svelte";
   import { onMount } from "svelte";
+  import merge from "ts-deepmerge";
 
   export let imageAlg: string;
   export let activeAlg: string;
@@ -15,9 +16,11 @@
   let imgSize: number
   let mounted: boolean = false
 
+  let twistyOptions: IOptions = merge(DefaultOptions, options)
+
   // https://experiments.cubing.net/cubing.js/twisty/misc-2d-stickerings.html
   // local images get those yep
-  let imgSource: string = options.imgSource || DefaultOptions.imgSource;
+  let imgSource: string = twistyOptions.imgSource!;
 
   let twizzle: boolean = false;
   const setTwizzle = () => {
@@ -43,10 +46,10 @@
     {#if !twizzle}
     <div on:click={setTwizzle}>
       <!-- TODO: clean up code, move all this logic to algCard tbh and use slots for images and twistyplayer  -->
-      <AlgImage {imageAlg} options={options} size={imgSize} />
+      <AlgImage {imageAlg} options={twistyOptions} size={imgSize} />
     </div>
     {:else}
-    <TwistyPlayer {activeAlg} options={options} size={imgSize} />
+    <TwistyPlayer {activeAlg} options={twistyOptions} size={imgSize} />
     <div
       class=" absolute left-0 bottom-0 text-xs h-5 w-5 sm:h-7 sm:w-7 bg-red-300 dark:bg-red-600 rounded grid place-items-center select-none"
       on:click={setTwizzle}

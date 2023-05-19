@@ -3,14 +3,13 @@ import type { IAlgSet } from "../scripts/types"
 const algSet: IAlgSet = {
     options: {
         name: "Megaminx PLL",
+        puzzle: 'megaminx',
         imgSource: "cubingjs",
         vcparams: {
             colorScheme: '222222-5dc9ea-ffffa5-ff66d8-ffae0c-93ff0f',
-            puzzle: "mega",
         },
         twistyplayerparams: {
             rot: 'x2 y3',
-            puzzle: "megaminx",
             cameraX: -10,
             cameraY: 45,
             tempo: 3,

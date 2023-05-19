@@ -3,10 +3,10 @@ import type { IAlgSet } from "../scripts/types"
 const algSet: IAlgSet = {
     options: {
         name: "Megaminx OLL",
+        puzzle: "megaminx",
         imgSource: "cubingjs",
         twistyplayerparams: {
             rot: 'y',
-            puzzle: "megaminx",
             cameraX: -10,
             cameraY: 55,
             tempo: 3,

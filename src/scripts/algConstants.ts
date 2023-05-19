@@ -1,8 +1,14 @@
 // TODO: algorithmically handle INVERSE and DOUBLE and LEFTY and BACK
 
-import type { twistyPuzzleType } from "./types"
+import type { modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types"
 
-type modularPuzzleGroup<T> = Partial<Record<twistyPuzzleType | 'megaminx-lefty', T>>
+
+export const puzzleDefinitionMapping: modularPuzzleGroup<{ type: twistyPuzzleType, mirror: twistyPuzzleTypeWithChirality, vc: string | number }> = {
+    '3x3x3': { type: '3x3x3', mirror: '3x3x3', vc: 3 },
+    '2x2x2': { type: '2x2x2', mirror: '2x2x2', vc: 2 },
+    'megaminx': { type: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega' },
+    'megaminx-lefty': { type: 'megaminx', mirror: 'megaminx', vc: 'mega' },
+}
 
 const cubeRotations = [
     { name: "y", alg: "y . " },
@@ -238,5 +244,3 @@ export const backMoveGroups: modularPuzzleGroup<string[]> = {
     "megaminx": [...backRightMegaF, ...backMega, ...backMoves],
     "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backMoves]
 }
-
-export type IModifiersList = "INVERSE" | "BACK" | "LEFTY" | "DOUBLE" | "TRIPLE"
