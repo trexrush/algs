@@ -1,5 +1,3 @@
-// import YAML from "yaml"
-
 import merge from "ts-deepmerge";
 import { DefaultOptions, IOptions } from "./types";
 
@@ -7,10 +5,6 @@ export namespace importUtility {
     export const importJSON = (s: string): Object => {
         return JSON.parse(s)
     }
-
-    // export const asString = (s: string): Object => {
-    //     return YAML.parse(s)
-    // }
 }
 
 // https://svelte.school/tutorials/how-to-use-variables-in-style-tags-in-svelte

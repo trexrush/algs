@@ -1,11 +1,11 @@
 ---
-import { algSet } from "../../templates/megaPLL";
-import VerticalLayout from "../../layouts/VerticalLayout.astro";
+import { MegaGroupByLetter } from "../../templates/megaPLL";
+import NewVerticalLayout from "../../layouts/NewVerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
 import Page from "../../layouts/Page.astro";
 ---
 
 <Page title={'Megaminx PLL'}>
   <Navbar slot="navbar" />
-  <VerticalLayout options={algSet.options} sets={algSet.sets} />
+  <NewVerticalLayout options={MegaGroupByLetter.options} sets={MegaGroupByLetter.sets} />
 </Page>

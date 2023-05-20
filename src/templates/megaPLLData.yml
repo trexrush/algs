@@ -1,0 +1,699 @@
+
+A1+:
+  name: A1+
+  algs:
+    - alg: L F L' U' L' U L2 F' L' U' L F L' F'
+    - alg: L U2 L F L' U' L' U L F' L' U' L U' L'
+A1-:
+  name: A1-
+  algs:
+    - alg: F L F' L' U L F L2' U' L U L F' L'
+    - alg: L U L' U L F L' U' L U L F' L' U2' L'
+A2+:
+  name: A2+
+  algs:
+    - alg: L U2' L F L' U' L' U L F' L' U' L U2' L'
+A2-:
+  name: A2-
+  algs:
+    - alg: L U2 L' U L F L' U' L U L F' L' U2 L'
+E1:
+  name: E1
+  algs:
+    - alg: L' U' L U' L U L' F L' U' L U L F' L2' U L2 U' L'
+  note: also a good OH E perm
+E2:
+  name: E2
+  algs:
+    - alg: dr' U L FL' L' U' L FL L' U' L FL' L' U dr F
+  note: 3x3 transfer (E perm)
+E3:
+  name: E3
+  algs:
+    - alg: R L' U2' L U L' U' L U L' U' L U L' U L R'
+K1+:
+  name: K1+
+  algs:
+    - alg: L2' U2 L2 U L2' U' L2 U L2' U' L2 U L2' U2 L2
+  note: 7 move EP x3
+K1-:
+  name: K1-
+  algs:
+    - alg: L2 U2' L2' U' L2 U L2' U' L2 U L2' U' L2 U2' L2'
+  note: 7 move EP x3
+K2+:
+  name: K2+
+  algs:
+    - alg: L2' U2 L2 U L2' U2 L U' L U L F' L2' U L U L' U' L F
+K2-:
+  name: K2-
+  algs:
+    - alg: L' U' L U2 L' U' L U2 L' U L U2 L' U2' L U L' U2' L
+H1+:
+  name: H1+
+  algs:
+    - alg: F L' U' L U L F' L' U L' U2 L U' L' U' L U2 L' U2 L
+H1-:
+  name: H1-
+  algs:
+    - alg: L' U2' L U2' L' U L U L' U2' L U' L F L' U' L' U L F'
+H2+:
+  name: H2+
+  algs:
+    - alg: L2 U2 L2' U' L2 U' L2' y' L2' U' L2 U' L2' U2 L2
+    - alg: L2' U L2 U L2' U L2 U L2' U L2 U2 L2' U L2 U L2' U L2 U L2' U L2
+H2-:
+  name: H2-
+  algs:
+    - alg: L2' U2' L2 U L2' U L2 y L2 U L2' U L2 U2' L2'
+    - alg: L2 U' L2' U' L2 U' L2' U' L2 U' L2' U2' L2 U' L2' U' L2 U' L2' U' L2 U' L2'
+U1+:
+  name: U1+
+  algs:
+    - alg: L' U' L U' L U L2' U L U' L U' L'
+U1-:
+  name: U1-
+  algs:
+    - alg: L U L' U L' U' L2 U' L' U L' U L
+U2+:
+  name: U2+
+  algs:
+    - alg: L' U2' L U' L U L2' U L U' L U' L' U2 L' U L
+  note: first move goes to the side of the edge where the L edge goes to
+U2-:
+  name: U2-
+  algs:
+    - alg: L U2 L' U L' U' L2 U' L' U L' U L U2' L U' L'
+  note: first move goes to the side of the edge where the L edge goes to
+Z1:
+  name: Z1
+  algs:
+    - alg: L U F' L' U L U L' U2' L F L' F' U F L U2' L'
+Z2:
+  name: Z2
+  algs:
+    - alg: L U2 L U L' F' L F U' L' F U F' U2 L'
+Z3:
+  name: Z3
+  algs:
+    - alg: L R U2' R' U' L' BL' F' U2' F U' BL
+Q1+:
+  name: Q1+
+  algs:
+    - alg: (L2' U2 L2 U L2' U2 L2) U' (L2' U2 L2 U L2' U2 L2)
+  note: 'cw cycles,  7 move EP x2 with an AUF in between'
+Q1-:
+  name: Q1-
+  algs:
+    - alg: (L2 U2' L2' U' L2 U2' L2') U (L2 U2' L2' U' L2 U2' L2')
+  note: 'ccw cycles, 7 move EP x2 with an AUF in between'
+Q2+:
+  name: Q2+
+  algs:
+    - alg: L' U2' L U' L' U2' L2 U2' L' U' L U2' L'
+  note: >-
+    no auf: cw cycles, non adg-swapping edge goes in F | auf: 7 mover EP
+    close edge, do U2' then alg
+Q2-:
+  name: Q2-
+  algs:
+    - alg: L U2 L' U L U2 L2' U2 L U L' U2 L
+  note: >-
+    no auf: ccw cycles, non adg-swapping edge goes in BL | auf: 7 mover
+    EP far edge, do U2' then alg
+D+:
+  name: D+
+  algs:
+    - alg: L U2 L' U' L U L' U L U2' L' U2 L U2 L'
+D-:
+  name: D-
+  algs:
+    - alg: L' U2' L U L' U' L U' L' U2 L U2' L' U2' L
+F1+:
+  name: F1+
+  algs:
+    - alg: L2' U2 L2 U L2' U2 L2
+  note: 7 move EP
+F1-:
+  name: F1-
+  algs:
+    - alg: L2 U2' L2' U' L2 U2' L2'
+  note: 7 move EP
+F2+:
+  name: F2+
+  algs:
+    - alg: L U L' U2 L' U2' L2 U' L' U L' U2 L
+F2-:
+  name: F2-
+  algs:
+    - alg: L' U' L U2' L U2 L2' U L U' L U2' L'
+F3+:
+  name: F3+
+  algs:
+    - alg: L' U2' L U' L U L2' U2 L U2' L U' L'
+F3-:
+  name: F3-
+  algs:
+    - alg: L U2 L' U L' U' L2 U2' L' U2 L' U L
+F4+:
+  name: F4+
+  algs:
+    - alg: L U L' U L2 U2' L2' U2' L U2 L U2 L' U2' L'
+F4-:
+  name: F4-
+  algs:
+    - alg: L' U' L U' L2' U2 L2 U2 L' U2' L' U2' L U2 L
+F5+:
+  name: F5+
+  algs:
+    - alg: L U2 L U2' L' U2' L' U2 L2 U2 L2' U' L U' L'
+F5-:
+  name: F5-
+  algs:
+    - alg: L' U2' L' U2 L U2 L U2' L2' U2' L2 U L' U L
+J1+:
+  name: J1+
+  algs:
+    - alg: L U L' BL' L U L' U' L' BL L2 U' L'
+    - alg: F' U L F' L2' U L U L' U' L F L' U' L F
+  note: 3x3 transfer (J perm)
+J1-:
+  name: J1-
+  algs:
+    - alg: L' U' L F L' U' L U L F' L2' U L
+  note: 3x3 transfer (J perm)
+J2+:
+  name: J2+
+  algs:
+    - alg: L' U2' L U2 L' U L U L U2 L' U' L U' L2' U' L
+J2-:
+  name: J2-
+  algs:
+    - alg: L U2 L' U2' L U' L' U' L' U2' L U L' U L2 U L'
+J3+:
+  name: J3+
+  algs:
+    - alg: L' U L2 U L' U L U2' L' U' L' U' L U2' L' U2 L
+J3-:
+  name: J3-
+  algs:
+    - alg: L' U' L U L U2 L' U' L' U' L2 U' L2' U2' L2 U2 L'
+    - alg: L U' L2' U' L U' L' U2 L U L U L' U2 L U2' L'
+M:
+  name: M
+  algs:
+    - alg: L U2' L' U2' L U F' L2' U' L2 U' L2' U2 L2 F L'
+    - alg: L' U' L U2 L U2 L' U' L U' L2' U L U2' L' U L U' L' U L
+    - alg: L' U' L U L' U' L U2 L' U' L2 U L' U L U2' L' U2' L' U L
+V1+:
+  name: V1+
+  algs:
+    - alg: L' U L2 FL L' U' L FL' L' U L' U L U' L' U' L
+    - alg: L' U2' L2 F' L' F L' U L F U' F' L' U L
+  note: 3x3 transfer (LUD R perm) for alg 1
+V1-:
+  name: V1-
+  algs:
+    - alg: L U2' L FL L' U L FL' L' U' L' U L U L'
+  note: 3x3 transfer (LUD R perm)
+V2+:
+  name: V2+
+  algs:
+    - alg: L' U L U L' U' L U' L FL L' U L FL' L2' U' L
+  note: 3x3 transfer (LUD R perm)
+V2-:
+  name: V2-
+  algs:
+    - alg: L U' L' U' L U L FL L' U' L FL' L' U2 L'
+  note: 3x3 transfer (LUD R perm)
+V3+:
+  name: V3+
+  algs:
+    - alg: L U2 L' U' L' U L F' L U2' L' U2 F L' U' L
+    - alg: L U L2 U' L' U' L U L' U' L' U L2' U L U' L
+V3-:
+  name: V3-
+  algs:
+    - alg: L' U' L2' U L U L' U' L U L U' L2 U' L' U L'
+V4+:
+  name: V4+
+  algs:
+    - alg: L' U L F' U2' L U2 L' F L' U' L U L U2' L'
+    - alg: L' U L' U' L2 U' L U L U' L' U L U L2' U' L'
+V4-:
+  name: V4-
+  algs:
+    - alg: L' U' L U L U' F' L' U' L' U L F U' L U2 L'
+    - alg: L U' L U L2' U L' U' L' U L U' L' U' L2 U L
+W:
+  name: W1+
+  algs:
+    - alg: L U2 L U2' L' U2' L' U L2 U2' L2' U2' L U' L'
+B1+:
+  name: B1+
+  algs:
+    - alg: L U L' U' L' U2' L U L U' L2' U2 L
+B1-:
+  name: B1-
+  algs:
+    - alg: L' U' L U L U2 L' U' L' U L2 U2' L'
+B2+:
+  name: B2+
+  algs:
+    - alg: L2 U L2' U2 L U2' L U L' U' L U' L2' U2 L U L'
+    - alg: L U' L' U2' L2 U L' U L U' L' U2 L' U2' L2 U' L2'
+B2-:
+  name: B2-
+  algs:
+    - alg: L2' U' L2 U2' L' U2 L' U' L U L' U L2 U2' L' U' L
+    - alg: L' U L U2 L2' U' L U' L' U L U2' L U2 L2' U L2
+P1+:
+  name: P1+
+  algs:
+    - alg: L U L F' L' U' L' U L y L2 U L' U L U2' L' BL'
+P1-:
+  name: P1-
+  algs:
+    - alg: L F' L2' U' L U' L' U2 L U' L F L' F' U F
+P2+:
+  name: P2+
+  algs:
+    - alg: L' U2 L2 F' L' F L' U2' L2 F U2 F' U2' L'
+P2-:
+  name: P2-
+  algs:
+    - alg: F' U' F L F' L' U L' U2' L U L' U L2 F L'
+P3+:
+  name: P3+
+  algs:
+    - alg: BL L U' L' U' L U L U2 L' U' L U' L2' BL'
+P3-:
+  name: P3-
+  algs:
+    - alg: F' L' U L U L' U' L' U2' L U L' U L2 F
+P4+:
+  name: P4+
+  algs:
+    - alg: F' L2' U' L U' L' U2 L U L U' L' U' L F
+P4-:
+  name: P4-
+  algs:
+    - alg: BL L2 U L' U L U2' L' U' L' U L U L' BL'
+R1+:
+  name: R1+
+  algs:
+    - alg: L' U2 L U' L2' U2 L2 U L' U' L' U2' L U' L
+R1-:
+  name: R1-
+  algs:
+    - alg: L U2' L' U L2 U2' L2' U' L U L U2 L' U L'
+R2+:
+  name: R2+
+  algs:
+    - alg: L' U L' U2 L U L U' L2' U2' L2 U L' U2' L
+R2-:
+  name: R2-
+  algs:
+    - alg: L U' L U2' L' U' L' U L2 U2 L2' U' L U2 L'
+R3+:
+  name: R3+
+  algs:
+    - alg: L U L2' U L U L U' L' U' L U' L2' U' L U' L' U L
+R3-:
+  name: R3-
+  algs:
+    - alg: L' U' L2 U' L' U' L' U L U L' U L2 U L' U L U' L'
+R4+:
+  name: R4+
+  algs:
+    - alg: L' U' L U L' U L2 U L' U L U L' U' L' U' L2 U' L'
+R4-:
+  name: R4-
+  algs:
+    - alg: L U L' U' L U' L2' U' L U' L' U' L U L U L2' U L
+C1+:
+  name: C1+
+  algs:
+    - alg: L U2 L' U' L U2' L' U L U L2' U' L U' L U L2' U L
+    - alg: L U L' U2' L' U2' L U' L U L2' U2 L U2' L U2' L'
+C1-:
+  name: C1-
+  algs:
+    - alg: L U L' U L' U2' L2 U L2' U L2 U2 L' U' L U2' L'
+    - alg: L U2 L' U L U2' L2' U' L2 U' L2' U2 L U' L U' L'
+C2+:
+  name: C2+
+  algs:
+    - alg: L' U' L U' L U2 L2' U' L2 U' L2' U2' L U L' U2 L
+    - alg: L' U2' L U' L' U2 L2 U L2' U L2 U2' L' U L' U L
+C2-:
+  name: C2-
+  algs:
+    - alg: L2 U2' L2' U' L2 U L2' U2 L2 U L2' U2' L2 U2 L2'
+    - alg: L2 U2' L2' U2 L2 U' L2' U2' L2 U' L2' U L2 U2 L2'
+C3+:
+  name: C3+
+  algs:
+    - alg: L2' U2 L2 U L2' U' L2 U2' L2' U' L2 U2 L2' U2' L2
+    - alg: L2 U2 L2' U2' L2 U L2' U2 L2 U L2' U' L2 U2' L2'
+C3-:
+  name: C3-
+  algs:
+    - alg: L2 U2 L2' U L2 U2 L2' U L2 U2' L2' U' L2 U2' L2'
+    - alg: L2 U2' L2' BL2 U' L2 U L2' U BL2' U' L2 U2 L2'
+C4+:
+  name: C4+
+  algs:
+    - alg: L2 U2' L2' U' L2 U2' L2' U' L2 U2 L2' U L2 U2 L2'
+    - alg: L2' U2 L2 F2' U L2' U' L2 U' F2 U L2' U2' L2
+C4-:
+  name: C4-
+  algs:
+    - alg: L U2 L' F' U L U L' U' F U' L U2' L'
+    - alg: L U2 L' U' R' U2 L U L' U2' R L U2' L'
+C5+:
+  name: C5+
+  algs:
+    - alg: L' U2' L BL U' L' U' L U BL' U L' U2 L
+C5-:
+  name: C5-
+  algs:
+    - alg: L U2 L' F' U L U L' U' F U' L U2' L'
+    - alg: L U2 L' U' R' U2 L U L' U2' R L U2' L'
+C6+:
+  name: C6+
+  algs:
+    - alg: L U' L' U2 L2 U L' U2 L U' L' U' L U' L' U' L'
+C6-:
+  name: C6-
+  algs:
+    - alg: L' U L U2' L2' U' L U2' L' U L U L' U L U L
+N1+:
+  name: N1+
+  algs:
+    - alg: L U2' L U2 L' U L U2 L' U2' L'
+    - alg: L U2 L' BL' L U L' U' L' BL L2 U2' L'
+N1-:
+  name: N1-
+  algs:
+    - alg: L' U2' L F L' U' L U L F' L2' U2 L
+    - alg: L' U2' L2 F L' U' L' U L F' L' U2 L
+  note: 3x3 transfer (J perm with U2 instead of U) (inverse for alt angle)
+N2+:
+  name: N2+
+  algs:
+    - alg: (R L) U2 L' U (R' L) U' R U2 L' U2 R'
+    - alg: L U2' L' U2 L2 U L2' U L2 U' L2' U L2 U2' L' U2 L'
+  note: I use alg 1 for EP
+N2-:
+  name: N2-
+  algs:
+    - alg: (L' R') U2' R U' (L R') U L' U2' R U2' L
+  note: switch to this for EP
+S1+:
+  name: S1+
+  algs:
+    - alg: L U L' U2 L U2 L' U' L' U' L U' L' U2 L
+S1-:
+  name: S1-
+  algs:
+    - alg: L U2 L' U' L U' L' U' L' U2 L U2 L' U L
+S2+:
+  name: S2+
+  algs:
+    - alg: L2 U2' L2' U2' L2 U' L' U2 L' U' L' U2' L2 U L2' U L
+S2-:
+  name: S2-
+  algs:
+    - alg: L2' U2 L2 U2 L2' U L U2' L U L U2 L2' U' L2 U' L'
+S3+:
+  name: S3+
+  algs:
+    - alg: L' U' L2 U' L2' U2 L U L U2' L U L2' U2 L2 U2 L2'
+S3-:
+  name: S3-
+  algs:
+    - alg: L2' U2 L2 U L' F L' U' L2 U L F' L3' U2 L2
+S4+:
+  name: S4+
+  algs:
+    - alg: L2 U2' L2' U' L2 U2' L2' U L2 U2 L2' U L2 U2 L2'
+    - alg: L2' U2 L2 U' F2' U L2' U L2 U' F2 L2' U2' L2
+S4-:
+  name: S4-
+  algs:
+    - alg: L2 U2 L2' U L2 U2 L2' U' L2 U2' L2' U' L2 U2' L2'
+    - alg: L2 U2' L2' U BL2 U' L2 U' L2' U BL2' L2 U2 L2'
+S5+:
+  name: S5+
+  algs:
+    - alg: L' U2' L U' BL U' L' U L U BL' L' U2 L
+S5-:
+  name: S5-
+  algs:
+    - alg: L U2 L' U F' U L U' L' U' F L U2' L'
+    - alg: L U2 L' R' U2 L U' L' U2' R U L U2' L'
+S6+:
+  name: S6+
+  algs:
+    - alg: L U L U L' U L U L' U2' L U' L2' U2' L U L'
+    - alg: L' U' L2 F L' U2 L' U2' L F' L' U L2 U L' U L U2' L'
+S6-:
+  name: S6-
+  algs:
+    - alg: L' U' L' U' L U' L' U' L U2 L' U L2 U2 L' U' L
+T1:
+  name: T1
+  algs:
+    - alg: L' U' L U L F' L2' U L U L' U' L F
+  note: 3x3 transfer (T perm)
+T2+:
+  name: T2+
+  algs:
+    - alg: L2 F' L' U' L' U L F L' U2 L U2' L'
+  note: 3x3 transfer (LUF R perm)
+T2-:
+  name: T2-
+  algs:
+    - alg: L U2 L' U2' L F' L' U' L U L F L2'
+  note: 3x3 transfer (LUF R perm)
+T3+:
+  name: T3+
+  algs:
+    - alg: L2' U2 L2 U L2' U' L2 U L2' U2 L2
+  note: 7 move EP x2
+T3-:
+  name: T3-
+  algs:
+    - alg: L2 U2' L2' U' L2 U L2' U' L2 U2' L2'
+  note: 7 move EP x2
+T4+:
+  name: T4+
+  algs:
+    - alg: L U L' U2 L2 U2 L2' U L2 U2 L2' U' L U' L'
+  note: setup to 7 move EP
+T4-:
+  name: T4-
+  algs:
+    - alg: L' U' L F L' U' L U L F' L' U L F' L2' U L U L' U' L F
+    - alg: L' U' L U' L2' U2 L2 U L2' U2 L2 U2 L' U L
+  note: '3x3 transfer (J + T perm) for alg 1, or setup to 7 move EP for alg 2'
+Y1+:
+  name: Y1+
+  algs:
+    - alg: F' L F L' U' L' U L F' L' U L U' L' U' L F
+  note: 3x3 transfer (Inverse of Y perm)
+Y1-:
+  name: Y1-
+  algs:
+    - alg: F' L' U L U L' U' L F L' U' L U L F' L' F
+  note: 3x3 transfer (Y perm)
+Y2+:
+  name: Y2+
+  algs:
+    - alg: L2 U2' L2' U2 L2 U' L2' U2 L2 U2' L2'
+    - alg: L U2 L2' U2' L2 U L2' U L U L U2' L'
+Y2-:
+  name: Y2-
+  algs:
+    - alg: L2' U2 L2 U2' L2' U L2 U2' L2' U2 L2
+    - alg: L U2 L' U' L' U' L2 U' L2' U2 L2 U2' L'
+    - alg: L2 U2' L2' U2 L2 U2 L2' U2 L2 U2' L2'
+Y3+:
+  name: Y3+
+  algs:
+    - alg: L2 U F2' U L2' U L2 U' F2 U2' L2'
+    - alg: L2 U L2' U L2 U2' L2' U2 L2 U L2' U L2 U2' L2'
+    - alg: L2 F2 L' U2 L' U2' L F' L' U' L U L F' L2'
+Y3-:
+  name: Y3-
+  algs:
+    - alg: L2' U' L2 U' L2' U2 L2 U2' L2' U' L2 U' L2' U2 L2
+    - alg: L2' U' BL2 U' L2 U' L2' U BL2' U2 L2
+G1+:
+  name: G1+
+  algs:
+    - alg: L' U2 L2 U2' L' U2 L' U L U2 L' U L2 U2 L2' U2' L
+G1-:
+  name: G1-
+  algs:
+    - alg: L U2' L2' U2 L U2' L U' L' U2' L U' L2' U2' L2 U2 L'
+G2+:
+  name: G2+
+  algs:
+    - alg: F' U2 L U L' F L U L' F' U L U2 L' U2' F
+G2-:
+  name: G2-
+  algs:
+    - alg: L' U L2 U F' U' F L2' U2 L U' L' U2' L F' U F
+    - alg: L' U2 L U L' U2 L2 U2' R' U L' U' R L U2 L'
+    - alg: L U2' L' R' U L U' R U2 L2' U2' L U' L' U2' L
+I1+:
+  name: I1+
+  algs:
+    - alg: L2' U2 L2 U L2' BL2 U' L2 U L2' U BL2' U L2
+I1-:
+  name: I1-
+  algs:
+    - alg: L' U2' L U' L U L' U' F L' U' L U L F' U' L2' U' L
+    - alg: L2 U2' L2' U' L2 F2' U L2' U' L2 U' F2 U' L2'
+I2+:
+  name: I2+
+  algs:
+    - alg: L2' U' BL2 U' L2 U' L2' U BL2' L2 U' L2' U2' L2
+I2-:
+  name: I2-
+  algs:
+    - alg: L' U L2 U F L' U' L' U L F' U L U' L' U L' U2 L
+    - alg: L2 U F2' U L2' U L2 U' F2 L2' U L2 U2 L2'
+I3+:
+  name: I3+
+  algs:
+    - alg: L' U2 L2 U2 L' U2' L' U2' L U2 L U L' U2' L U' L'
+    - alg: L2 U L2' U L2 U2' L2' U2 y' L2' U' L2 U2' L2' U2' L2
+I3-:
+  name: I3-
+  algs:
+    - alg: L U2' L2' U2' L U2 L U2 L' U2' L' U' L U2 L' U L
+    - alg: L2' U' L2 U' L2' U2 L2 U2' y L2 U L2' U2 L2 U2 L2'
+I4+:
+  name: I4+
+  algs:
+    - alg: L U2' L' U' L U' L U2 L' U' L U' L2' U L U2' L'
+I4-:
+  name: I4-
+  algs:
+    - alg: L U L U2 F L' U' L' U L F' L U2' L' U' L'
+    - alg: L' U2 L U L' U L' U2' L U L' U L2 U' L' U2 L
+I5+:
+  name: I5+
+  algs:
+    - alg: L U2 L' U' L2 U L' U L U2' L' U L' U L U2 L'
+I5-:
+  name: I5-
+  algs:
+    - alg: L U L U2 L' F L' U' L U L F' U2' L' U' L'
+    - alg: L' U2' L U L2' U' L U' L' U2 L U' L U' L' U2' L
+I6+:
+  name: I6+
+  algs:
+    - alg: L2 F2' L2' U L2 F2 L2' U2' L2 F2' L2' U L2 F2 L2'
+    - alg: L2 F2' L2' U' L2 F2 L2' U2 L2 F2' L2' U' L2 F2 L2'
+    - alg: BL L U2 L' U' L U' L' BL' U L' U' L U2' L' U L U L' U L
+I6-:
+  name: I6-
+  algs:
+    - alg: F' L' U2' L U L' U L F U' L U L' U2 L U' L' U' L U' L'
+L1:
+  name: L1
+  algs:
+    - alg: L U2' L' U' L U' L' U L U2' L' U L' U' L U' L' U2 L
+L2:
+  name: L2
+  algs:
+    - alg: L U2 L' U L U' L' U' L U' L2' U' L U' L' U' L U L' U2 L
+    - alg: L' U2' L U' L' U L U L' U L2 U L' U L U L' U' L U2' L'
+L3+:
+  name: L3+
+  algs:
+    - alg: L' U' L U L U2' L' U' L' U' L2 U' L' U L' U' L U L' U2 L
+    - alg: L U2' L' U2' F L y L' U' L b' L' U2' L' U' L U2' L'
+L3-:
+  name: L3-
+  algs:
+    - alg: F' U2 F U2 L' F' L U L' F U2 L U L' U2 L
+L4+:
+  name: L4+
+  algs:
+    - alg: L' U2 L U' L' U2' L' U2' L U' L U L' U L' U L U L
+L4-:
+  name: L4-
+  algs:
+    - alg: L' U' L' U' L U' L U' L' U L' U2 L U2 L U L' U2' L
+    - alg: L U2' L' U L U2 L U2 L' U L' U' L U' L U' L' U' L'
+L5+:
+  name: L5+
+  algs:
+    - alg: L' U2' L U L' U L2 U2' L' U' L U L' U2' L U' L'
+L5-:
+  name: L5-
+  algs:
+    - alg: L U2 L' U' L U' L2' U2 L U L' U' L U2 L' U L
+L6+:
+  name: L6+
+  algs:
+    - alg: L U L' U2 L U' L' U L U2 L2' U' L U' L' U2 L
+L6-:
+  name: L6-
+  algs:
+    - alg: L' U' L U2' L' U L U' L' U2' L2 U L' U L U2' L'
+X1:
+  name: X1
+  algs:
+    - alg: F' U2' L' U2 L U' L' U' L U2 F L U L' U2 L U2 L'
+  note: all Z
+X2:
+  name: X2
+  algs:
+    - alg: F' L' U' L F' U' L U F U' L2' U2 L F
+X3:
+  name: X3
+  algs:
+    - alg: L U L' U L U2' L2' U' L U2' L U2 L2' U L U2' L U' L'
+    - alg: L2' U' L2 U' L' U2 L U' L U2 L' U' L U' L2' U' L' U L2
+    - alg: L' U' L2 U2' L2' U2' L2 y L U L' U2' L U L' U' BL'
+X4:
+  name: X4
+  algs:
+    - alg: L U L2' U L U' L' U L2 U L2' U' L U L' U' L2 U2' L'
+X5+:
+  name: X5+
+  algs:
+    - alg: L' U L U2 L' U2 L U L2' U' L U' L' U' L U2 L' U L2
+    - alg: L2 U L' U2 L U' L' U' L U' L2' U L U2 L' U2 L U L'
+  note: 'M but with Z instead of block, left arrow'
+X5-:
+  name: X5-
+  algs:
+    - alg: L U' L' U2' L U2' L' U' L2 U L' U L U L' U2' L U' L2'
+    - alg: L2' U' L U2' L' U L U L' U L2 U' L' U2' L U2' L' U' L
+  note: 'M but with Z instead of block, right arrow'
+X6+:
+  name: X6+
+  algs:
+    - alg: L' U2 L' U' L2 U' L' U' L U L' U L' U L2 U' L' U2' L
+    - alg: BL L U L' U' L U' L2' U' BL' U' BL U2 L U' L U L' BL'
+X6-:
+  name: X6-
+  algs:
+    - alg: L U2' L U L2' U L U L' U' L U' L U' L2' U L U2 L'
+    - alg: F' L' U' L U L' U L2 U F U F' U2' L' U L' U' L F
+X7+:
+  name: X7+
+  algs:
+    - alg: L' U' L2 F L' U2 L' U L U2 L F' L' U' L' U' L U2 L' U L
+X7-:
+  name: X7-
+  algs:
+    - alg: L2' U L2 U F' U' F L2' U2 L2 U' L2' U2' L2 F' U F
+    - alg: L' U' L U F U F' U' L' U' L U' L' U2 F' L F L' U' L' U L2
