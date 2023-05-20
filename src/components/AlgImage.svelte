@@ -1,24 +1,15 @@
 <script lang="ts">
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
-  import { DefaultOptions } from "../scripts/types";
   import type { IOptions } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
-  import { cubePNG, cubeSVG, Axis, Masking } from "sr-visualizer";
+  import { cubePNG, Axis, Masking } from "sr-visualizer";
   import { onMount } from "svelte";
 
-  export let imageAlg: string;
-  export let options: IOptions;
-  export let size: number;
+  export let imageAlg: string
+  export let options: IOptions
+  export let size: number
 
-  // https://experiments.cubing.net/cubing.js/twisty/misc-2d-stickerings.html
-  // local images get those yep
-  let imgSource: string = options.imgSource!
-  let stage: string = options.vcparams?.stage!
-  let view: "plan" | "trans" = options.vcparams?.view!
-  let rot: string = options.vcparams?.rot!
   let puzzle: number | string = puzzleDefinitionMapping[options.puzzle]?.vc!!
-  let colorScheme: string =
-    options.vcparams?.colorScheme!
 
   let visualCubeImage: HTMLElement;
   const configVisualCubeImage = () => {
@@ -30,16 +21,16 @@
         [Axis.X, -30],
       ],
       cubeSize: typeof puzzle === 'number' ? puzzle : 3,
-      view: view,
+      view: options.vcparams!.view,
       width: size,
       height: size,
-      mask: stage as Masking,
-      case: imageAlg + "" + rot,
+      mask: options.vcparams?.stage! as Masking,
+      case: imageAlg + "" + options.vcparams?.rot!,
     });
   };
 
   onMount(() => {
-    if (imgSource == "vc") {
+    if (options.imgSource == "vc") {
       configVisualCubeImage();
     }
   });
@@ -50,9 +41,9 @@
         <span>View Alg</span>
     </span>
     <div class="transition-all ease-in-out duration-300 group-hover:translate-y-[-2px] group-hover:mix-blend-soft-light">
-        {#if imgSource == "vc"}
+        {#if options.imgSource == "vc"}
         <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
-        {:else if imgSource == "cubingjs"}
+        {:else if options.imgSource == "cubingjs"}
         <TwistyPlayer {imageAlg} options={options} {size} />
         {/if}
     </div>

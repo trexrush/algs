@@ -179,8 +179,8 @@ const Options: IOptions = {
     puzzle: '3x3x3',
     imgSource: "vc",
     twistyplayerparams: {
-        stage: 'PLL',
-        cameraX: -30
+        cameraX: -30,
+        rot: 'x2'
     },
 }
 

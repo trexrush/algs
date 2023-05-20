@@ -3,11 +3,11 @@ import type { IOptions, IAlgSetV2 } from "../scripts/types"
 const Options: IOptions = {
         name: "",
         imgSource: "vc",
+        puzzle: '3x3x3',
         vcparams: {
             stage: '',
             view: 'plan',
             rot: "y",
-            puzzle: 3,
         },
         twistyplayerparams: {
             stage: '',
