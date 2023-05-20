@@ -40,7 +40,7 @@
     {/if}
     {#each caso.algs as alg, i}
       <div class="leading-none w-full cursor-pointer overflow-x-visible flex justify-between">
-        <span class="{activeElement == i ? 'w-fit text-[3.2vw] sm:text-[20px] font-bold text-stone-600 dark:text-stone-400' : 'text-[2.8vw] sm:text-[17.5px] text-stone-400 dark:text-stone-500'} hover:text-[3.6vw] sm:hover:text-[22px] hover:text-stone-900 dark:hover:text-stone-100 transition-all" on:click={() => (changeActiveElement(i, alg))} bind:this={elementList[i]}>{alg}</span>
+        <span class="{activeElement == i ? 'w-fit text-[3.2vw] sm:text-[20px] font-bold text-stone-600 dark:text-stone-400' : 'text-[2.8vw] sm:text-[17.5px] text-stone-400 dark:text-stone-500'} hover:text-[3.6vw] sm:hover:text-[22px] hover:text-stone-900 dark:hover:text-stone-100 transition-all select-all" on:click={() => (changeActiveElement(i, alg))} bind:this={elementList[i]}>{alg}</span>
         <!-- <span class="bg-stone-50/[.2] rounded-sm text-sm m-1 px-1" on:click={() => (setActive(mirrorAlg(alg)))}>Mirror</span> -->
       </div>
     {/each}
