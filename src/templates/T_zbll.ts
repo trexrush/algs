@@ -1,4 +1,4 @@
-import type { IAlgSet, IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2, ICaseV2 } from "../scripts/types"
+import type { IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2 } from "../scripts/types"
 import { sheetURLV2 } from "./url";
 
 const Options: IOptions = {
@@ -8,11 +8,6 @@ const Options: IOptions = {
     vcparams: {
         view: 'plan',
     },
-}
-
-const algSet: IAlgSet = {
-    options: Options,
-    sets: []
 }
 
 const response = await fetch(sheetURLV2 + "?name=T_ZBLL")
@@ -27,7 +22,7 @@ const TNoGrouping: IAlgSetV2 = {
     sets: [
         {
             name: "WIP Format",
-            children: res && Object.assign(res.caseList)
+            children: res && Object.assign(_)
         },
     ]
 }
@@ -141,4 +136,4 @@ const TGroupByBH: IAlgSetV2 = {
 }
 
 
-export { algSet, TNoGrouping, TGroupByCP, TGroupByBH }
+export { TNoGrouping, TGroupByCP, TGroupByBH }

@@ -1,5 +1,5 @@
 ---
-import { IOptions, IGroupElementV2, ISetV2, DefaultOptions } from "../scripts/types";
+import type { IOptions, ISetV2  } from "../scripts/types";
 import NewVerticalAlgCard from "./NewVerticalAlgCard.svelte";
 import merge from "ts-deepmerge";
 
@@ -9,8 +9,6 @@ interface Props {
   size: number
 }
 const { set, options, size } = Astro.props
-
-let defaultMergedOptions: IOptions = merge(DefaultOptions, options)
 ---
 
 <div
@@ -24,9 +22,9 @@ let defaultMergedOptions: IOptions = merge(DefaultOptions, options)
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?
-          <NewVerticalAlgCard client:visible caso={setOrCase} options={defaultMergedOptions} size={size} setName={set.name}/>
+          <NewVerticalAlgCard client:visible caso={setOrCase} options={options} size={size} setName={set.name}/>
         :
-          <Astro.self set={setOrCase} options={defaultMergedOptions} size={size} />
+          <Astro.self set={setOrCase} options={options} size={size} />
       ))
     }
   </div>

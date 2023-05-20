@@ -1,5 +1,8 @@
 // import YAML from "yaml"
 
+import merge from "ts-deepmerge";
+import { DefaultOptions, IOptions } from "./types";
+
 export namespace importUtility {
     export const importJSON = (s: string): Object => {
         return JSON.parse(s)
@@ -26,3 +29,5 @@ function setCustomProperties(node: { style: { setProperty: (arg0: string, arg1: 
 		node.style.setProperty(`--${key}`, value)
 	})
 }
+
+export const createOptions = (o: IOptions): IOptions => { return merge(DefaultOptions, o) }

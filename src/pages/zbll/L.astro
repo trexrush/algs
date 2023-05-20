@@ -1,15 +1,11 @@
 ---
-import VerticalLayout from "../../layouts/VerticalLayout.astro";
+import NewVerticalLayout from "../../layouts/NewVerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
-import { algSet } from "../../templates/zbll";
-import { sheetURL } from "../../templates/url";
+import { LNoGrouping } from "../../templates/L_zbll";
 import Page from "../../layouts/Page.astro";
-
-const response = await fetch(sheetURL + "?name=L_ZBLL");
-const sets = await response.json();
 ---
 
 <Page title={'L_ZBLL'}>
   <Navbar slot="navbar" />
-  <VerticalLayout options={algSet.options} {sets} />
+  <NewVerticalLayout options={LNoGrouping.options} sets={LNoGrouping.sets} />
 </Page>
