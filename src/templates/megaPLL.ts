@@ -1,6 +1,6 @@
 import type { IAlgSetV2, IOptions, ISet, ICaseListV2 } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
-//@ts-ignore
+//@ts-expect-error
 import yml from './megaPLLData.yml'
 
 const Options: IOptions = createOptions({
