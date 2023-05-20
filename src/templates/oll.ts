@@ -1,7 +1,8 @@
 import type { IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2 } from "../scripts/types"
+import { createOptions } from "../scripts/utilities";
 import { sheetURLV2 } from "./url";
 
-const Options: IOptions = {
+const Options: IOptions = createOptions({
     name: "OLL",
     puzzle: '3x3x3',
     imgSource: "vc",
@@ -12,7 +13,7 @@ const Options: IOptions = {
     twistyplayerparams: {
         stage: 'OLL'
     },
-}
+})
 
 const response = await fetch(sheetURLV2 + "?name=OLL")
 const res: Awaited<ISheetsResponse> = await response.json()
@@ -34,7 +35,7 @@ const OLLGroupByEO: IAlgSetV2 = {
     sets: [
         {
             name: "Dot",
-            children: res && Object.assign([_['1'], _['2'], _['3'], _['4'], _['17'], _['18'], _['19'], _['20'], ])
+            children: res && Object.assign([_[1], _[2], _[3], _[4], _[17], _[18], _[19], _[20], ])
         },
         {
             name: "Line",
@@ -50,9 +51,9 @@ const OLLGroupByEO: IAlgSetV2 = {
                 _[41], _[42], _[43], _[44], _[47], _[48], _[49], _[50], _[53], _[54], ])
         },
         {
-            name: "CO",
+            name: "CPLL",
             altNames: ["4LLL", "Cross", "EO Skip", "ZBLL", "COLL",],
-            children: res && Object.assign([_['21'], _['22'], _['23'], _['24'], _['25'], _['26'], _['27']])
+            children: res && Object.assign([_[21], _[22], _[23], _[24], _[25], _[26], _[27]])
         },
     ]
 }

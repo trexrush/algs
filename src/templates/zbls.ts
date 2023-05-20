@@ -1,7 +1,8 @@
 import type { IAlgSet } from "../scripts/types"
+import { createOptions } from "../scripts/utilities"
 
 const algSet: IAlgSet = {
-    options: {
+    options: createOptions({
         name: "ZBLS",
         puzzle: '3x3x3',
         imgSource: "vc",
@@ -13,7 +14,7 @@ const algSet: IAlgSet = {
         twistyplayerparams: {
             stage: 'ZBLS',
         },
-    },
+    }),
     sets: [
     ]
 }

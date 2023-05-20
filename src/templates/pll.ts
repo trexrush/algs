@@ -1,4 +1,5 @@
 import type { ICaseListV2, IAlgSetV2, IOptions } from "../scripts/types"
+import { createOptions } from "../scripts/utilities"
 
 const _: ICaseListV2 = {
     Ua: {
@@ -174,7 +175,7 @@ const _: ICaseListV2 = {
     }
 }
 
-const Options: IOptions = {
+const Options: IOptions = createOptions({
     name: "PLL",
     puzzle: '3x3x3',
     imgSource: "vc",
@@ -182,7 +183,7 @@ const Options: IOptions = {
         cameraX: -30,
         rot: 'x2'
     },
-}
+})
 
 const PLLGroupedByLetter: IAlgSetV2 = {
     options: Options,

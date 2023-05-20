@@ -1,14 +1,15 @@
 import type { IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2 } from "../scripts/types"
+import { createOptions } from "../scripts/utilities";
 import { sheetURLV2 } from "./url";
 
-const Options: IOptions = {
+const Options: IOptions = createOptions({
     name: "ZBLL",
     puzzle: '3x3x3',
     imgSource: "vc",
     vcparams: {
         view: 'plan',
     },
-}
+})
 
 const response = await fetch(sheetURLV2 + "?name=T_ZBLL")
 const res: Awaited<ISheetsResponse> = await response.json()
