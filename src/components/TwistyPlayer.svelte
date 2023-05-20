@@ -5,7 +5,6 @@
   import { expandAlgWithTriggers } from "../scripts/alg";
   import type { IOptions, twistyPuzzleType } from "../scripts/types";
   import { DefaultOptions } from "../scripts/types";
-  import merge from 'ts-deepmerge'
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
 
   export let options: IOptions
@@ -14,6 +13,7 @@
   // bit of a hack
   let puzzleChirality: twistyPuzzleType = options.puzzle == puzzle ? puzzle : options.puzzle
 
+  //TODO: export a twisty player (so make this a wrapper you import into AlgCard and AlgImage (with alg logic in there) rather than an element
   
   export let setup = "";
   export let backView = false;
@@ -31,37 +31,36 @@
       setAlg(activeAlg)
     }
   }
-  
-  onMount(async () => {
-    const twistyPlayer: TwistyPlayer = new TwistyPlayer();
-    if (twistyDiv) {
 
-      setAlg = (alg: string) => {
+  onMount(async () => {
+      const twistyPlayer: TwistyPlayer = new TwistyPlayer({
+          experimentalSetupAlg: setup + " " + options.twistyplayerparams!.rot!,
+          experimentalSetupAnchor: "end",
+          puzzle: options.puzzle,
+          visualization: imageAlg ? "experimental-2D-LL" : "3D",
+          hintFacelets: hintFacelets ? "auto" : "none",
+          experimentalStickering: options.twistyplayerparams!.stage!,
+          background: "none",
+          controlPanel: "none",
+          backView: backView ? "top-right" : "none",
+          experimentalDragInput: drag ? "auto" : "none",
+          cameraLatitude: options.twistyplayerparams!.cameraY!,
+          cameraLongitude: options.twistyplayerparams!.cameraX!,
+          cameraDistance: puzzle == 'megaminx' ? 5.5 : 5,
+          cameraLatitudeLimit: 50,
+          tempoScale: options.twistyplayerparams!.tempo!,
+        });
+
+        if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg, puzzleChirality) }
+        twistyPlayer.experimentalFaceletScale = 0.88, // works here but not in vanillaJS??????
+        twistyPlayer.style.height = `${size}px`
+        twistyPlayer.style.width = `${size}px`
+
+    setAlg = (alg: string) => {
         twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg, puzzleChirality) + " . ."
         twistyPlayer.jumpToStart()
         twistyPlayer.controller.animationController.playPause()
-      }
-      
-      twistyPlayer.background = "none";
-      twistyPlayer.experimentalSetupAnchor = "end";
-      twistyPlayer.experimentalFaceletScale = 0.88; // works here but not in vanillaJS??????
-      twistyPlayer.tempoScale = options.twistyplayerparams!.tempo!
-      twistyPlayer.cameraLatitudeLimit = 50;
-      
-      twistyPlayer.visualization = imageAlg ? "experimental-2D-LL" : "3D"
-      if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg, puzzleChirality) }
-      twistyPlayer.style.height = `${size}px`;
-      twistyPlayer.style.width = `${size}px`;
-      twistyPlayer.experimentalStickering = options.twistyplayerparams!.stage!
-      twistyPlayer.cameraLongitude = options.twistyplayerparams!.cameraX!
-      twistyPlayer.cameraLatitude = options.twistyplayerparams!.cameraY!
-      
-      twistyPlayer.experimentalDragInput = drag ? "auto" : "none";
-      twistyPlayer.controlPanel = "none"
-      twistyPlayer.experimentalSetupAlg = setup + " " + options.twistyplayerparams!.rot!;
-      twistyPlayer.backView = backView ? "top-right" : "none";
-      twistyPlayer.hintFacelets = hintFacelets ? "auto" : "none";
-      twistyPlayer.puzzle = options.puzzle
+    }
       
       twistyDiv.appendChild(twistyPlayer);
       // console.log(twistyPlayer.experimentalModel.twistySceneModel.stickeringMask)
@@ -69,13 +68,12 @@
       if (!imageAlg) {
         twistyPlayer.play()
         twistyPlayer.onclick = () => { twistyPlayer.controller.animationController.playPause(); }
-      }
     }
   });
 
 </script>
 
-<div class="h-full w-full transition-transform duration-300 ease-in-out hover:translate-y-[-8px] hover:scale-[1.05]" bind:this={twistyDiv} />
+<div class="h-full w-full" bind:this={twistyDiv} />
 
 <style>
 </style>

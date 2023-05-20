@@ -45,11 +45,18 @@
   });
 </script>
 
-{#if imgSource == "vc"}
-  <div class="vc cursor-pointer transition-transform hover:translate-y-[-8px]" bind:this={visualCubeImage} />
-{:else if imgSource == "cubingjs"}
-  <TwistyPlayer {imageAlg} options={options} {size} />
-{/if}
+<div class="relative group">
+    <span class="absolute grid items-center text-center w-full h-full text-2xl drop-shadow-md font-extrabold z-10 transition-all duration-400 ease-in-out group-hover:backdrop-blur-[1px] group-hover:bg-opacity-30 group-hover:opacity-100 opacity-0" >
+        <span>View Alg</span>
+    </span>
+    <div class="transition-all ease-in-out duration-300 group-hover:translate-y-[-2px] group-hover:mix-blend-soft-light">
+        {#if imgSource == "vc"}
+        <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
+        {:else if imgSource == "cubingjs"}
+        <TwistyPlayer {imageAlg} options={options} {size} />
+        {/if}
+    </div>
+</div>
 
 <style>
 </style>

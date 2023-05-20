@@ -38,7 +38,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
 <div
-  class="cont flex flex-row items-center justify-center cursor-pointer relative aspect-square"
+  class="flex flex-row items-center justify-center cursor-pointer relative aspect-square max-h-[--size] max-w-[--size] h-[35%] w-[35%]"
   use:styles={{ size: cssSize }}
   bind:clientHeight={imgSize}
 >
@@ -61,10 +61,4 @@
 </div>
 
 <style>
-  .cont {
-    max-height: var(--size);
-    max-width: var(--size);
-    height: 35%;
-    width: 35%;
-  }
 </style>
