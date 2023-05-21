@@ -3,11 +3,11 @@
 import type { modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types"
 
 
-export const puzzleDefinitionMapping: modularPuzzleGroup<{ type: twistyPuzzleType, mirror: twistyPuzzleTypeWithChirality, vc: string | number }> = {
-    '3x3x3': { type: '3x3x3', mirror: '3x3x3', vc: 3 },
-    '2x2x2': { type: '2x2x2', mirror: '2x2x2', vc: 2 },
-    'megaminx': { type: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega' },
-    'megaminx-lefty': { type: 'megaminx', mirror: 'megaminx', vc: 'mega' },
+export const puzzleDefinitionMapping: modularPuzzleGroup<{ type: twistyPuzzleType, standard: twistyPuzzleTypeWithChirality, mirror: twistyPuzzleTypeWithChirality, vc: string | number }> = {
+    '3x3x3': { type: '3x3x3', standard: '3x3x3', mirror: '3x3x3', vc: 3 },
+    '2x2x2': { type: '2x2x2', standard: '2x2x2', mirror: '2x2x2', vc: 2 },
+    'megaminx': { type: 'megaminx', standard: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega' },
+    'megaminx-lefty': { type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega' },
 }
 
 const cubeRotations = [
@@ -114,7 +114,7 @@ const triggers = [
     { name: "OPPFLIP", alg: "R U R' U' M' U R U' R'" },
 ]
 
-export const substitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
+export const triggerSubstitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
     "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...triggers],
     "2x2x2": [...cubeRotations, ...triggers],
     "4x4x4": [...pllSubstitutes, ...cubeRotations, ...triggers],
@@ -222,7 +222,6 @@ const backRightMegaF = [
     "BR2'", "br2'",
     "BR2", "br2",
 ]
-
 
 export const baseMoveGroups: modularPuzzleGroup<string[]> = {
     "3x3x3": [...baseSlices, ...baseRotations, ...baseMoves],

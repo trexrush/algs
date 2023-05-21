@@ -1,90 +1,65 @@
-Ua: 
- name: Ua
- algs: 
-  - 
-   setup: U2
-   alg: R U R' U R' U' R2 U' R' U R' U R
-  - 
-   setup: U'
-   alg: R2 U' S' U2' S U' R2'
-   tags: 
-    - Swag
-  - 
-   alg: R U' R U R U R U' R' U' R2
-Ub: 
- name: Ub
- algs: 
-  - 
-   setup: U2
-   alg: R' U R' U' R3 U' R' U R U R2'
-  - 
-   setup: U'
-   alg: R2 U' S R2' S' R2 U R2'
-   tags: 
-    - Swag
-  - 
-   alg: R2 U R U R' U' R' U' R' U R'
-H: 
- name: H
- algs: 
-  - 
-   alg: M2' U' M2' U2' M2' U' M2'
-  - 
-   alg: R2 S2' R2 U R2 S2' R2
-   tags: 
-    - Swag
-  - 
-   alg: R2 U2' R' U2' R2 U2' R2 U2' R' U2' R2
-   tags: 
-    - Swag
-    - New
-  - 
-   alg: x' R r U2' R' r' u' U' R2 U D
-   tags: 
-    - Swag
-    - New
-Z: 
- name: Z
- algs: 
-  - 
-   setup: U
-   alg: M' U' (M2' U') (M2' U') M' U2' M2'
-  - 
-   alg: (M2' U') (M2' U') M' U2' M2' U2' M'
-  - 
-   setup: U
-   alg: L U L' U L' U' L' U L U' L' U' L2' U L
-   tags: 
-    - OH
-  - 
-   setup: U
-   alg: S M2' S' u' M2' u M2'
-   tags: 
-    - Swag
 Aa: 
  name: Aa
  algs: 
   - 
-   alg: r' U L' D2 L U' L' D2 L2 x
+   alg: (x' L') U L' D2 L U' L' D2 (L2 x)
    tags: 
     - Lefty
   - 
    setup: U
-   alg: (L r) D2 L' U' L D2 L' U (L' x')
+   alg: (x L2) D2 L' U' L D2 L' U (L' x')
    tags: 
     - Lefty
 Ab: 
  name: Ab
  algs: 
   - 
-   alg: r U' L D2 L' U L D2 L2 x' 
+   alg: (x L) U' L D2 L' U L D2 (L2 x') 
    tags: 
     - Lefty
   - 
    setup: U'
-   alg: (L' r') D2 L U L' D2 L U' (L x)
+   alg: (x' L2') D2 L U L' D2 L U' (L x)
    tags: 
     - Lefty
+E: 
+ name: E
+ algs: 
+  - 
+   alg: (x' L') (U L D') (L' U' L D) (L' U' L D') (L' U L D) x
+   tags: 
+    - Lefty
+  - 
+   alg: "L' U' L U' L U L' F [LEFTY SEXY] L F' L2' U L2 U' L'"
+   tags: 
+    - OH
+    - Lefty
+   note: megaminx CP transfer
+  - 
+   alg: L2 D (L U L' D') (L U L' D) (L U' L' D') (L' U' L')
+   tags: 
+    - Lefty
+F: 
+ name: F
+ algs: 
+  - 
+   setup: U2
+   alg: L U F (L' U' L U L F' L2' U L U L' U') L U' L'
+   tags: 
+    - Lefty
+  - 
+   alg: R' F R f' R' F R2 U R' U' R' F' R2 U R' S
+  - 
+   setup: U'
+   alg: (L' U' L U) L U' L' U2 (R L U' L' U R') U L' U L
+   tags: 
+    - OH
+    - Lefty
+  - 
+   setup: U'
+   alg: R' U R U' R2' F' U' F U R F R' F' R2
+   tags: 
+    - Swag
 Ga: 
  name: Ga
  algs: 
@@ -121,6 +96,25 @@ Gd:
   - 
    setup: U2
    alg: R U R' (U' D) R2 U' R U' R' U R' U R2 D'
+H: 
+ name: H
+ algs: 
+  - 
+   alg: M2' U' M2' U2' M2' U' M2'
+  - 
+   alg: R2 S2' R2 U R2 S2' R2
+   tags: 
+    - Swag
+  - 
+   alg: R2 U2' R' U2' R2 U2' R2 U2' R' U2' R2
+   tags: 
+    - Swag
+    - New
+  - 
+   alg: x' R r U2' R' r' u' U' R2 U D
+   tags: 
+    - Swag
+    - New
 Ja: 
  name: Ja
  algs: 
@@ -163,72 +157,6 @@ Jb:
    tags: 
     - OH
     - Lefty
-Ra: 
- name: Ra
- algs: 
-  - 
-   alg: L U2' L D L' U L D' L' U' L' U L U L'
-   tags: 
-    - Lefty
-  - 
-   alg: L U2 L' U2 L F' L' U' L U L F L2'
-   tags: 
-    - OH
-    - Lefty
-  - 
-   setup: U'
-   alg: L2 F' L' U' L' U L F L' U2 L U2' L'
-   tags: 
-    - Lefty
-  - 
-   setup: U'
-   alg: L U' L' U' L U L D L' U' L D' L' U2 L'
-   tags: 
-    - Lefty
-Rb: 
- name: Rb
- algs: 
-  - 
-   alg: L' U L U L' U' L U' L D L' U L D' L2' U' L
-   tags: 
-    - Lefty
-  - 
-   alg: L' U L U L' U' L' D' L U L' D L U2' L
-   tags: 
-    - OH
-    - Lefty
-F: 
- name: F
- algs: 
-  - 
-   setup: U2
-   alg: L U F (L' U' L U L F' L2' U L U L' U') L U' L'
-   tags: 
-    - Lefty
-  - 
-   alg: R' F R f' R' F R2 U R' U' R' F' R2 U R' S
-  - 
-   setup: U'
-   alg: (L' U' L U) L U' L' U2 (R L U' L' U R') U L' U L
-   tags: 
-    - OH
-    - Lefty
-  - 
-   setup: U'
-   alg: R' U R U' R2' F' U' F U R F R' F' R2
-   tags: 
-    - Swag
-T: 
- name: T
- algs: 
-  - 
-   alg: L' U' L U L F' L2' U L U L' U' L F
-   tags: 
-    - Lefty
-  - 
-   alg: R2 U R2 U' R2 U' D R2 U' R2 U R2 D'
-   tags: 
-    - Swag
 Na: 
  name: Na
  algs: 
@@ -266,23 +194,77 @@ Nb:
    tags: 
     - OH
     - Lefty
-E: 
- name: E
+Ra: 
+ name: Ra
  algs: 
   - 
-   alg: (r' U L D') (L' U' L D) (L' U' L D') (L' U L D) x
+   alg: L U2' L D L' U L D' L' U' L' U L U L'
    tags: 
     - Lefty
   - 
-   alg: L' U' L U' L U L' F L' U' L U L F' L2' U L2 U' L'
+   alg: L U2 L' U2 L F' L' U' L U L F L2'
    tags: 
     - OH
     - Lefty
-   note: megaminx CP transfer
   - 
-   alg: L2 D (L U L' D') (L U L' D) (L U' L' D') (L' U' L')
+   setup: U'
+   alg: L2 F' L' U' L' U L F L' U2 L U2' L'
    tags: 
     - Lefty
+  - 
+   setup: U'
+   alg: L U' L' U' L U L D L' U' L D' L' U2 L'
+   tags: 
+    - Lefty
+Rb: 
+ name: Rb
+ algs: 
+  - 
+   alg: L' U L U L' U' L U' L D L' U L D' L2' U' L
+   tags: 
+    - Lefty
+  - 
+   alg: L' U L U L' U' L' D' L U L' D L U2' L
+   tags: 
+    - OH
+    - Lefty
+T: 
+ name: T
+ algs: 
+  - 
+   alg: L' U' L U L F' L2' U L U L' U' L F
+   tags: 
+    - Lefty
+  - 
+   alg: R2 U R2 U' R2 U' D R2 U' R2 U R2 D'
+   tags: 
+    - Swag
+Ua: 
+ name: Ua
+ algs: 
+  - 
+   setup: U2
+   alg: R U R' U R' U' R2 U' R' U R' U R
+  - 
+   setup: U'
+   alg: R2 U' S' U2' S U' R2'
+   tags: 
+    - Swag
+  - 
+   alg: R U' R U R U R U' R' U' R2
+Ub: 
+ name: Ub
+ algs: 
+  - 
+   setup: U2
+   alg: R' U R' U' R3 U' R' U R U R2'
+  - 
+   setup: U'
+   alg: R2 U' S R2' S' R2 U R2'
+   tags: 
+    - Swag
+  - 
+   alg: R2 U R U R' U' R' U' R' U R'
 V: 
  name: V
  algs: 
@@ -316,3 +298,21 @@ Y:
   - 
    setup: U'
    alg: F R U' R' U' R U R' F' R U R' U' R' F R F'
+Z: 
+ name: Z
+ algs: 
+  - 
+   setup: U
+   alg: M' U' (M2' U') (M2' U') M' U2' M2'
+  - 
+   alg: (M2' U') (M2' U') M' U2' M2' U2' M'
+  - 
+   setup: U
+   alg: L U L' U L' U' L' U L U' L' U' L2' U L
+   tags: 
+    - OH
+  - 
+   setup: U
+   alg: S M2' S' u' M2' u M2'
+   tags: 
+    - Swag

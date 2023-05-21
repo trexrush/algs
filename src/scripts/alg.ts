@@ -1,5 +1,5 @@
 import { Alg } from "cubing/alg"
-import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, substitutionGroups } from "./algConstants"
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, triggerSubstitutionGroups } from "./algConstants"
 import type { IModifiersList, twistyPuzzleTypeWithChirality } from "./types"
 
 export const removePrePostAUF = (a: string): string => {
@@ -44,7 +44,8 @@ export const invertAlg = (a: string): string => {
 }
 
 //TODO: implement
-export const invertTriggerAlg = (a: string) => {
+export const invertAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality) => {
+  return invertAlg(expandAlgWithTriggers(a, pzl))
 }
 
 export const repeatAlg = (a: string, q: number): string => {
@@ -69,9 +70,9 @@ let modifiersList: Record<IModifiersList, (a: string, pzl: twistyPuzzleTypeWithC
   "X3": (a, pzl) => { return repeatAlg(a, 3) },
 }
 
-export const getTriggerAlg = (t: string, pzl: keyof typeof substitutionGroups): string => {
+export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): string => {
   let triggerList: [...IModifiersList[], string] = t.split(' ') as [...IModifiersList[], string]
-  let currTrigger = substitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1))
+  let currTrigger = triggerSubstitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1))
   if (!currTrigger) { return '' }
   triggerList.pop() // remove base trigger and leave only modifiers
   while (triggerList.length) {
@@ -85,9 +86,11 @@ export const getTriggerAlg = (t: string, pzl: keyof typeof substitutionGroups): 
 }
 
 export const isTriggerRegex: RegExp = /\[(.*?)\]/g
+// https://stackoverflow.com/questions/19414193/regex-extract-string-not-between-two-brackets
+export const algDelimiterWithTriggers: RegExp = /\s(?![^\[]*\])/g
 
 // TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers)
-export const expandAlgWithTriggers = (a: string, pzl: keyof typeof substitutionGroups): string => {
+export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
   const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
   return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)))
 }
