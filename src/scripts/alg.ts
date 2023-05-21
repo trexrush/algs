@@ -1,6 +1,6 @@
 import { Alg } from "cubing/alg"
 import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, substitutionGroups } from "./algConstants"
-import type { IAlgSetV2, IModifiersList, twistyPuzzleTypeWithChirality } from "./types"
+import type { IModifiersList, twistyPuzzleTypeWithChirality } from "./types"
 
 export const removePrePostAUF = (a: string): string => {
   // remove brackets and replace with a pause after
@@ -60,9 +60,13 @@ export const simplifyAlg = (a: string): string => {
 let modifiersList: Record<IModifiersList, (a: string, pzl: twistyPuzzleTypeWithChirality) => string> = {
   "INVERSE": (a, pzl) => { return invertAlg(a) },
   "LEFTY": (a, pzl) => { return mirrorAlg(a, pzl) },
+  "L": (a, pzl) => { return mirrorAlg(a, pzl) },
   "BACK": (a, pzl) => { return backAlg(a, pzl) },
+  "B": (a, pzl) => { return backAlg(a, pzl) },
   "DOUBLE": (a, pzl) => { return repeatAlg(a, 2) },
+  "X2": (a, pzl) => { return repeatAlg(a, 2) },
   "TRIPLE": (a, pzl) => { return repeatAlg(a, 3) },
+  "X3": (a, pzl) => { return repeatAlg(a, 3) },
 }
 
 export const getTriggerAlg = (t: string, pzl: keyof typeof substitutionGroups): string => {

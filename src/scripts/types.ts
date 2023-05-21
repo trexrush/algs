@@ -117,7 +117,7 @@ export interface ILocalCaseOptionsV2 {
 }
 
 
-export type IModifiersList = "INVERSE" | "BACK" | "LEFTY" | "DOUBLE" | "TRIPLE"
+export type IModifiersList = "INVERSE" | "BACK" | "B" | "LEFTY" | "L" | "DOUBLE" | "X2" | "TRIPLE" | "X3" 
 
 
 export type modularPuzzleGroup<T> = Partial<Record<twistyPuzzleTypeWithChirality, T>>
