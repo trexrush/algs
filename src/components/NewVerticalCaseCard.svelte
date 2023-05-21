@@ -7,10 +7,10 @@
 
   export let caso: ICaseV2;
   export let options: IOptions
+  let puzzle = puzzleDefinitionMapping[options.puzzle]!.type
   export let size: number
   export let setName: string
 
-  let puzzle = puzzleDefinitionMapping[options.puzzle]!.type
   const isMirrored: Writable<boolean> = writable(false)
   const activeAlg: Writable<IAlgV2> = writable(caso.algs[0])
 
@@ -49,10 +49,10 @@
         <span class="">{altName}</span>
         {/each}{/if}
       </div>
-      <!-- <span class="my-[2px] px-2 py-[1px] text-sm font-light bg-stone-50/[.15] rounded-lg shadow-md cursor-pointer select-none
+      <span class="my-[2px] px-2 py-[1px] sm:text-sm text-[2.2vw] font-light bg-stone-50/[.15] rounded-lg shadow-md cursor-pointer select-none
       bg-gradient-to-r from-red-600/40 to-lime-600/40
       transition-all hover:saturate-150 hover:brightness-125"
-      on:click={() => { isMirrored.set(!isMirrored) }} title="Display the mirror cases of algs"><b>{"Mirror algs for case"}</b></span> -->
+      on:click={() => { isMirrored.set(!$isMirrored) }} title="Display the mirror cases of algs"><b>{"Mirror algs for case"}</b></span>
     </div> 
     {#if caso.note}
     <div class="absolute text-[2.3vw] top-0 right-2 w-5/6
@@ -62,15 +62,18 @@
     {/if}
     {#each caso.algs as alg, i}
     <div class="flex items-center gap-1 relative w-full leading-none overflow-x-visible">
-      <span class="my-[2px] p-[1px] px-2 text-sm bg-stone-50/[.15] hover:bg-stone-50/[.3] transition-colors duration-75 text-red-300 rounded-md shadow-md cursor-pointer"
-      on:click={() => { changeActiveElement(i, alg); if (!toggled) (toggleDisplay()) }} title="View Alg">▶</span>
+      <span class="my-[2px] sm:p-[1px] sm:px-2 p-1 px-1 sm:text-sm text-[1.5vw]
+      bg-stone-50/[.15] hover:bg-stone-50/[.3] transition-colors duration-75 text-red-300 rounded-md shadow-md cursor-pointer"
+      on:click={() => { changeActiveElement(i, alg); if (!toggled) (toggleDisplay()) }} title="View Alg">
+        ▶
+      </span>
       <div on:click={() => changeActiveElement(i, alg)}>
         <NewAlgListing alg={alg} isActive={activeElement == i} isLefty={alg.tags?.includes("Lefty")} isMirrored={$isMirrored} bind:this={elementList[i]}/>
       </div>
       <hr class="flex-grow border-s-4 border-stone-800/70"/>
-      <span class="flex m-1 justify-end items-center gap-1 cursor-default text-stone-500">
-        {#if alg.tags?.filter((t) => t != "Lefty").length }<span>Tags</span>{#each alg.tags as tag}
-        {#if tag != 'Lefty'}<span class="px-1 bg-yellow-500/[.2] rounded-md md:text-sm text-xs text-white">{tag}</span>{/if}
+      <span class="flex m-1 justify-end items-center gap-1 cursor-default text-xs text-stone-500">
+        {#if alg.tags?.filter((t) => t != "Lefty").length }<span class="max-sm:invisible">Tags</span>{#each alg.tags as tag}
+        {#if tag != 'Lefty'}<span class="px-[.15rem] py-0 sm:px-1 bg-yellow-500/[.2] rounded-md md:text-sm text-[1.5vw] text-white">{tag}</span>{/if}
         {/each}{/if}
       </span>
     </div>

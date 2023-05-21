@@ -17,7 +17,7 @@ export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): strin
   const baseMovesArray = baseMoveGroups[pzl]
   const mirrorMovesArray = mirrorMoveGroups[pzl]
   if (!baseMovesArray || !mirrorMovesArray) { return '' }
-  let aArr: string[] = a.split(' ')
+  let aArr: string[] = a.replace(matchAllParenthesis, '').split(' ')
   aArr.forEach((move, i) => {
     aArr[i] = mirrorMovesArray[baseMovesArray.indexOf(move)]
   })
@@ -32,7 +32,7 @@ export const backAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string =>
   const baseMovesArray = baseMoveGroups[pzl]
   const backMovesArray = backMoveGroups[pzl]
   if (!baseMovesArray || !backMovesArray) { return '' }
-  let aArr: string[] = a.split(' ')
+  let aArr: string[] = a.replace(matchAllParenthesis, '').split(' ')
   aArr.forEach((move, i) => {
     aArr[i] = backMovesArray[baseMovesArray.indexOf(move)]
   })
@@ -87,7 +87,8 @@ export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): st
 
 export const isTriggerRegex: RegExp = /\[(.*?)\]/g
 // https://stackoverflow.com/questions/19414193/regex-extract-string-not-between-two-brackets
-export const algDelimiterWithTriggers: RegExp = /\s(?![^\[]*\])/g
+export const algDelimiterWithTriggers: RegExp = /[\s\(\)]+(?![^\[]*\])/g
+export const matchAllParenthesis: RegExp =  /([\(\)])/g
 
 // TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers)
 export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
