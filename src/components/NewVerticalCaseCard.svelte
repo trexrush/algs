@@ -1,28 +1,45 @@
 <script lang="ts">
   import { type Writable, writable } from "svelte/store";
-  import type { IAlgV2, ICaseV2, IOptions } from "../scripts/types";
+  import type { IAlgV2, ICaseV2, IOptions, twistyPuzzleTypeWithChirality } from "../scripts/types";
   import AlgVisuals from "./AlgVisuals.svelte";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import NewAlgListing from "./NewAlgListing.svelte";
+  import { expandAlgWithTriggers, mirrorAlg } from "../scripts/alg";
 
-  export let caso: ICaseV2;
-  export let options: IOptions
-  let puzzle = puzzleDefinitionMapping[options.puzzle]!.type
   export let size: number
   export let setName: string
-
+  
+  // always "non-mirrored"
+  export let caso: ICaseV2;
+  export let options: IOptions
+  
+  
+  // changes based on if mirrored or not
   const isMirrored: Writable<boolean> = writable(false)
-  const activeAlg: Writable<IAlgV2> = writable(caso.algs[0])
+  const chiralCase: Writable<ICaseV2> = writable(structuredClone(caso))
+  let pzl = puzzleDefinitionMapping[options.puzzle]!.standard
+
+
+  //TODO: update lefty, do this after template update
+  // $: ((state: boolean) => {
+    // console.log($chiralCase.algs[activeElement], caso.algs[activeElement])
+    // $chiralCase.algs.forEach((alg, i) => {
+    //   alg = caso.algs[i]
+    //   alg.alg = state ? mirrorAlg(expandAlgWithTriggers(caso.algs[i].alg, pzl), pzl) : caso.algs[i].alg
+    //   //@ts-ignore
+    //   if (alg.setup) { alg.setup = state ? mirrorAlg(caso.algs[i].setup, pzl) : caso.algs[i].setup }
+    //   pzl = state ? puzzleDefinitionMapping[options.puzzle]!.mirror : puzzleDefinitionMapping[options.puzzle]!.standard
+    // }
+  // ,)})($isMirrored)
 
   let elementList: NewAlgListing[] = []
   let activeElement: number = 0
-  let changeActiveElement = (algElementIndex: number, alg: IAlgV2) => {
-    // prevent unnecessary dom updates
+  let changeActiveElement = (algElementIndex: number) => {
+    // prevent unnecessary dom updatesr
     if (elementList.length == 1) {
       return
     }
     activeElement = algElementIndex
-    activeAlg.set(alg)
   }
 
   let toggleDisplay: () => void
@@ -37,7 +54,7 @@
 <!-- svelte-ignore a11y-missing-content -->
 
 <div id={setName + "-" + caso.name} class="w-[95%] m-4 ml-0 mt-0 pt-4 flex flex-row items-center justify-center">
-  <AlgVisuals activeAlg={algWithSetup($activeAlg)} imageAlg={caso.algs[0]["alg"]} options={options} size={size} bind:toggleDisplay={toggleDisplay} bind:isAlgVisDisplayed={toggled}/>
+  <AlgVisuals activeAlg={algWithSetup($chiralCase.algs[activeElement])} imageAlg={caso.algs[0]["alg"]} options={options} size={size} bind:toggleDisplay={toggleDisplay} bind:isAlgVisDisplayed={toggled}/>
   <div class="flex flex-col justify-start items-start relative m-1 p-2 w-full min-h-[6em] h-fit ml-5 rounded-md 
   bg-stone-900/[.07] dark:bg-stone-50/[.07] shadow-lg hover:shadow-2xl hover:-translate-y-[1px]">
     <div class="absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.7em]">
@@ -60,19 +77,19 @@
       <b>{caso.note}</b>
     </div>
     {/if}
-    {#each caso.algs as alg, i}
+    {#each $chiralCase.algs as eachAlg, i}
     <div class="flex items-center gap-1 relative w-full leading-none overflow-x-visible">
       <span class="my-[2px] sm:p-[1px] sm:px-2 p-1 px-1 sm:text-sm text-[1.5vw]
       bg-stone-50/[.15] hover:bg-stone-50/[.3] transition-colors duration-75 text-red-300 rounded-md shadow-md cursor-pointer"
-      on:click={() => { changeActiveElement(i, alg); if (!toggled) (toggleDisplay()) }} title="View Alg">
+      on:click={() => { changeActiveElement(i); if (!toggled) (toggleDisplay()) }} title="View Alg">
         ▶
       </span>
-      <div on:click={() => changeActiveElement(i, alg)}>
-        <NewAlgListing alg={alg} isActive={activeElement == i} isLefty={alg.tags?.includes("Lefty")} isMirrored={$isMirrored} bind:this={elementList[i]}/>
+      <div on:click={() => changeActiveElement(i)}>
+        <NewAlgListing alg={eachAlg} isActive={activeElement == i} isLefty={eachAlg.tags?.includes("Lefty")} isMirrored={$isMirrored} bind:this={elementList[i]}/>
       </div>
       <hr class="flex-grow border-s-4 border-stone-800/70"/>
       <span class="flex m-1 justify-end items-center gap-1 cursor-default text-xs text-stone-500">
-        {#if alg.tags?.filter((t) => t != "Lefty").length }<span class="max-sm:invisible">Tags</span>{#each alg.tags as tag}
+        {#if eachAlg.tags?.filter((t) => t != "Lefty").length }<span class="max-sm:invisible">Tags</span>{#each eachAlg.tags as tag}
         {#if tag != 'Lefty'}<span class="px-[.15rem] py-0 sm:px-1 bg-yellow-500/[.2] rounded-md md:text-sm text-[1.5vw] text-white">{tag}</span>{/if}
         {/each}{/if}
       </span>

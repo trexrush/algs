@@ -20,7 +20,6 @@
   $: {
     ((state: boolean) => {
       displayAlg = state ? mirrorAlg(expandAlgWithTriggers(alg.alg, pzl), pzl) : alg.alg
-      console.log(expandAlgWithTriggers(alg.alg, pzl))
       displayPzl = state ? puzzleDefinitionMapping[pzl]!.mirror : pzl
       displayLefty = state ? !isLefty : isLefty
       // temp

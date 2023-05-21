@@ -9,6 +9,7 @@
 
   export let options: IOptions
   export let size: number
+  export let isLefty: boolean
   let puzzle: twistyPuzzleType = puzzleDefinitionMapping[options.puzzle]?.type || DefaultOptions.puzzle
   // bit of a hack
   let puzzleChirality: twistyPuzzleType = options.puzzle == puzzle ? puzzle : options.puzzle

@@ -36,7 +36,7 @@ E:
     - Lefty
    note: megaminx CP transfer
   - 
-   alg: L2 D (L U L' D') (L U L' D) (L U' L' D') (L' U' L')
+   alg: L2 D (L' U L D') (L' U L D) (L' U' L D') (L' U' L')
    tags: 
     - Lefty
 F: 
