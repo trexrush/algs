@@ -80,8 +80,10 @@ export const getTriggerAlg = (t: string, pzl: keyof typeof substitutionGroups): 
   return currTrigger.alg
 }
 
+export const isTriggerRegex: RegExp = /\[(.*?)\]/g
+
 // TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers)
 export const expandAlgWithTriggers = (a: string, pzl: keyof typeof substitutionGroups): string => {
   const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
-  return simplifyAlg(a.replaceAll(/\[(.*?)\]/g, Function.prototype.call.bind(getTriggerAlgWrapper)))
+  return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)))
 }

@@ -1,7 +1,6 @@
 ---
 import type { IOptions, ISetV2  } from "../scripts/types";
-import NewVerticalAlgCard from "./NewVerticalAlgCard.svelte";
-import merge from "ts-deepmerge";
+import NewVerticalCaseCard from "./NewVerticalCaseCard.svelte";
 
 interface Props {
   set: ISetV2
@@ -22,7 +21,7 @@ const { set, options, size } = Astro.props
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?
-          <NewVerticalAlgCard client:visible caso={setOrCase} options={options} size={size} setName={set.name}/>
+          <NewVerticalCaseCard client:visible caso={setOrCase} options={options} size={size} setName={set.name}/>
         :
           <Astro.self set={setOrCase} options={options} size={size} />
       ))
