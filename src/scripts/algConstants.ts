@@ -109,6 +109,7 @@ const triggers = [
     { name: "SUNE", alg: "R U R' U R U2' R'" },
     { name: "ANTISUNE", alg: "R U2' R' U' R U' R'" },
     { name: "FATSUNE", alg: "r U R' U R U2 r'" },
+    { name: "FATANTISUNE", alg: "r U2' R' U' R U' r'" },
     { name: "NIKLAS", alg: "R U' L' U R' U' L" },
     { name: "ADJFLIP", alg: "r U R' U' M U R U' R'" },
     { name: "OPPFLIP", alg: "R U R' U' M' U R U' R'" },
@@ -238,7 +239,7 @@ export const mirrorMoveGroups: modularPuzzleGroup<string[]> = {
 // megaminx F would be mapped to B', (which is not intentional, should be BL' or BR'), 
 // so earlier moves are set to take precedence and megaminx modules need to go first
 export const backMoveGroups: modularPuzzleGroup<string[]> = {
-    "3x3x3": [...baseSlices, ...baseRotations, ...baseMoves],
+    "3x3x3": [...backSlices, ...backRotations, ...backMoves],
     "2x2x2": [...backMoves, ...backRotations],
     "megaminx": [...backRightMegaF, ...backMega, ...backMoves],
     "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backMoves]
