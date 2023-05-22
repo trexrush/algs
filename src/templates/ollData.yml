@@ -220,7 +220,7 @@
   '46':
     name: '46'
     algs:
-    - alg: "L U L F' L' F U' L'\r"
+    - alg: "L U L F' L' F U' L'"
     - alg: "[U2] R' U' R' F R F' U R"
   '47':
     name: '47'

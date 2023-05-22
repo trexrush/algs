@@ -59,4 +59,4 @@ const OLLGroupByEO: IAlgSetV2 = {
 }
 
 
-export { OLLGroupByEO as algSet }
+export { OLLGroupByEO, OLLNoGrouping }
