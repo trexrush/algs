@@ -1,11 +1,11 @@
 ---
-import { algSet } from "../../templates/megaOLL";
-import VerticalLayout from "../../layouts/VerticalLayout.astro";
+import { MegaOLLNoGrouping } from "../../templates/megaOLL";
+import NewVerticalLayout from "../../layouts/NewVerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
 import Page from "../../layouts/Page.astro";
 ---
 
 <Page title={'Megaminx OLL'}>
   <Navbar slot="navbar" />
-  <VerticalLayout options={algSet.options} sets={algSet.sets} />
+  <NewVerticalLayout options={MegaOLLNoGrouping.options} sets={MegaOLLNoGrouping.sets} />
 </Page>
