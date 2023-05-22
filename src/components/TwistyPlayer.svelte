@@ -9,7 +9,7 @@
 
   export let options: IOptions
   export let size: number
-  export let isLefty: boolean
+  export let isLefty: boolean = false
   let puzzle: twistyPuzzleType = puzzleDefinitionMapping[options.puzzle]?.type || DefaultOptions.puzzle
   // bit of a hack
   let puzzleChirality: twistyPuzzleType = options.puzzle == puzzle ? puzzle : options.puzzle
@@ -46,7 +46,7 @@
           backView: backView ? "top-right" : "none",
           experimentalDragInput: drag ? "auto" : "none",
           cameraLatitude: options.twistyplayerparams!.cameraY!,
-          cameraLongitude: options.twistyplayerparams!.cameraX!,
+          cameraLongitude: isLefty ? -options.twistyplayerparams!.cameraX! : options.twistyplayerparams!.cameraX!,
           cameraDistance: puzzle == 'megaminx' ? 5.5 : 5,
           cameraLatitudeLimit: 50,
           tempoScale: options.twistyplayerparams!.tempo!,

@@ -180,10 +180,10 @@ const mirrorMega = [
     "BR2", "BL2", "FR2", "FL2", "DR2", "DL2", "br2", "bl2", "fr2", "fl2", "dr2", "dl2",
 ]
 const mirrorMegaF = [
-    "F", "f",
     "F'", "f'",
-    "F2", "f2",
+    "F", "f",
     "F2'", "f2'",
+    "F2", "f2",
 ]
 
 const backMoves = [
