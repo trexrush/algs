@@ -1,273 +1,438 @@
-  '1':
+'1':
     name: '1'
     algs:
-    - alg: R U2' (R2' F R F') U2' (R' F R F')
-  '2':
+    - 
+        alg: "[NE] [SLEDGE] U2' [SLEDGE]"
+'2':
     name: '2'
     algs:
-    - alg: L U2' R' F R U2' R' F' R U2' L'
-  '3':
+    - 
+        alg: L U2' R' F R U2' R' F' R U2' L'
+        isLefty: true
+'3':
     name: '3'
     algs:
-    - alg: r' R2 U R' U r U2' r' U M'
-  '4':
+    - 
+        alg: r' R2 U R' U r U2' r' U M'
+'4':
     name: '4'
     algs:
-    - alg: l L2 U' L U' l' U2 l U' M'
-  '5':
+    - 
+        alg: l L2 U' L U' l' U2 l U' M'
+        isLefty: true
+'5':
     name: '5'
     algs:
-    - alg: l' U2' L U L' U l
-    - alg: L' U L U2' l' U l U l' U' l
-  '6':
+    - 
+        alg: l' U2' L U L' U l
+        isLefty: true
+    - 
+        alg: L' U L U2' l' U l U l' U' l
+        isLefty: true
+'6':
     name: '6'
     algs:
-    - alg: r U2' R' U' R U' r'
-  '7':
+    - 
+        alg: r U2' R' U' R U' r'
+'7':
     name: '7'
     algs:
-    - alg: r U R' U R U2 r'
-    - alg: "[U2] l U L' U L U2 l'"
-  '8':
+    - 
+        alg: r U R' U R U2 r'
+    - 
+        setup: U2
+        alg: "l U L' U L U2 l'"
+        isLefty: true
+'8':
     name: '8'
     algs:
-    - alg: l' U' L U' L' U2' l
-    - alg: "[U2] r' U' R U' R' U2 r"
-  '9':
+    - 
+        alg: l' U' L U' L' U2' l
+        isLefty: true
+    - 
+        setup: U2
+        alg: "r' U' R U' R' U2 r"
+'9':
     name: '9'
     algs:
-    - alg: R U R' U' R' F R2 U R' U' F'
-    - alg: "[U2] L' U' L U' L F' L' F L' U2 L"
-  '10':
+    - 
+        alg: R U R' U' R' F R2 U R' U' F'
+    - 
+        setup: U2
+        alg: "L' U' L U' L F' L' F L' U2 L"
+        isLefty: true
+'10':
     name: '10'
     algs:
-    - alg: L' U' L U L F' L2' U' L U F
-    - alg: "[U2] R U R' U R' F R F' R U2' R'"
-  '11':
+    - 
+        alg: L' U' L U L F' L2' U' L U F
+        isLefty: true
+    - 
+        setup: U2
+        alg: "R U R' U R' F R F' R U2' R'"
+'11':
     name: '11'
     algs:
-    - alg: r U R' U R' F R F' R U2' r'
-    - alg: "[U2] r' R2 U R' U R U2' R' U M'"
-    - alg: F' U' L' U2 L U' L' U' L U' L' U L F
-    - alg: F' U' L' U L F [U_ZBLL]
-  '12':
+    - 
+        alg: r U R' U R' F R F' R U2' r'
+    - 
+        setup: U2
+        alg: "r' R2 U R' U R U2' R' U M'"
+    - 
+        alg: F' U' L' U2 L U' L' U' L U' L' U L F
+        isLefty: true
+    - 
+        alg: F' U' L' U L F [U_ZBLL]
+        isLefty: true
+'12':
     name: '12'
     algs:
-    - alg: l' U' L U' L F' L' F L' U2 l
-    - alg: "[U2] l L2' U' L U' L' U2 L U' M'"
-    - alg: F U R U' R' F' [U_ZBLL]
-  '13':
+    - 
+        alg: l' U' L U' L F' L' F L' U2 l
+        isLefty: true
+    - 
+        setup: U2
+        alg: "l L2' U' L U' L' U2 L U' M'"
+        isLefty: true
+    - 
+        alg: F U R U' R' F' [U_ZBLL]
+'13':
     name: '13'
     algs:
-    - alg: F U R U' R2' F' R U R U' R'
-    note: possible diag avoidance alg if UBR and RFU are the same color - r U' r'
-      U' r U r' F' U F I dont use this but its not hard to implement so maybe soon
-  '14':
+    - 
+        alg: F U R U' R2' F' R U R U' R'
+    note: possible diag avoidance alg if UBR and RFU are the same color - r U' r' U' r U r' F' U F I dont use this but its not hard to implement so maybe soon
+'14':
     name: '14'
     algs:
-    - alg: F' U' L' U L2 F L' U' L' U L
+    - 
+        alg: F' U' L' U L2 F L' U' L' U L
+        isLefty: true
     note: 'same as above note but mirror the alg to avoid diag '
-  '15':
+'15':
     name: '15'
     algs:
-    - alg: l' U' l (L' U' L U) l' U l
-    - alg: "[U2] F R U R' U' F' [U_ZBLL]"
-  '16':
+    - 
+        alg: l' U' l (L' U' L U) l' U l
+        isLefty: true
+    - 
+        setup: U2
+        alg: "F R U R' U' F' [U_ZBLL]"
+'16':
     name: '16'
     algs:
-    - alg: r U r' (R U R' U') r U' r'
-    - alg: F R U R' U' F' U2 [U_ZBLL]
-  '17':
+    - 
+        alg: r U r' (R U R' U') r U' r'
+    - 
+        alg: F R U R' U' F' U2 [U_ZBLL]
+'17':
     name: '17'
     algs:
-    - alg: "[U2] F R' F' R U S' R U' R' S"
-    - alg: "(R U R' U) (R' F R F') U2' (R' F R F')"
-  '18':
+    - 
+        setup: U2
+        alg: "F R' F' R U S' R U' R' S"
+    - 
+        alg: "(R U R' U) (R' F R F') U2' (R' F R F')"
+'18':
     name: '18'
     algs:
-    - alg: "(R U2') (R2' F R F') U2' M' U R U' r'"
-  '19':
+    - 
+        alg: "(R U2') (R2' F R F') U2' M' U R U' r'"
+'19':
     name: '19'
     algs:
-    - alg: S' R U R' S U' (R' F R F')
-  '20':
+    - 
+        alg: S' R U R' S U' (R' F R F')
+'20':
     name: '20'
     algs:
-    - alg: S' R U R' S U' M' U R U' r'
-  '21':
+    - 
+        alg: S' R U R' S U' M' U R U' r'
+'21':
     name: '21'
     algs:
-    - alg: R U R' U R U' R' U R U2' R'
-  '22':
+    - 
+        alg: R U R' U R U' R' U R U2' R'
+'22':
     name: '22'
     algs:
-    - alg: R U2' R2' U' R2 U' R2' U2' R
-    - alg: R' U2' R2 U R2' U R2 U2' R'
-  '23':
+    - 
+        alg: R U2' R2' U' R2 U' R2' U2' R
+    - 
+        alg: R' U2' R2 U R2' U R2 U2' R'
+'23':
     name: '23'
     algs:
-    - alg: L2 D L' U2' L D' L' U2' L'
-    - alg: "[U_ZBLL]"
-  '24':
+    - 
+        alg: L2 D L' U2' L D' L' U2' L'
+        isLefty: true
+    - 
+        alg: "[U_ZBLL]"
+'24':
     name: '24'
     algs:
-    - alg: "[U2]  (x' L') U' L D' L' U L D x "
-    - alg: L' U' L' D' L U L' D L2
-    - alg: "[T_ZBLL]"
-  '25':
+    - 
+        setup: U2
+        alg: "(x' L') U' L D' L' U L D x "
+        isLefty: true
+    - 
+        alg: L' U' L' D' L U L' D L2
+        isLefty: true
+    - 
+        alg: "[T_ZBLL]"
+'25':
     name: '25'
     algs:
-    - alg: "(x' L') U L D' L' U' L D x"
-  '26':
+    - 
+        alg: "(x' L') U L D' L' U' L D x"
+        isLefty: true
+'26':
     name: '26'
     algs:
-    - alg: R U2' R' U' R U' R'
-    - alg: "[U] L' U' L U' L' U2 L'"
-  '27':
+    - 
+        alg: R U2' R' U' R U' R'
+    - 
+        setup: U
+        alg: "L' U' L U' L' U2 L'"
+        isLefty: true
+'27':
     name: '27'
     algs:
-    - alg: R U R' U R U2' R'
-    - alg: "[U2] L U L' U L U2 L'"
-  '28':
+    - 
+        alg: R U R' U R U2' R'
+    - 
+        setup: U2
+        alg: "L U L' U L U2 L'"
+        isLefty: true
+'28':
     name: '28'
     algs:
-    - alg: M' U M U2' M' U M
-  '29':
+    - 
+        alg: M' U M U2' M' U M
+        isLefty: true
+'29':
     name: '29'
     algs:
-    - alg: l D l' U l D' l2 U l U' l' U' l
-    - alg: "[U'] r2' D' r U r' D r2 U' r' U' r"
-    - alg: "[U2] M' U M U2 M' U M [T_ZBLL]"
-  '30':
+    - 
+        alg: l D l' U l D' l2 U l U' l' U' l
+        isLefty: true
+    - 
+        setup: U'
+        alg: "r2' D' r U r' D r2 U' r' U' r"
+    - 
+        setup: U2
+        alg: "M' U M U2 M' U M [T_ZBLL]"
+        isLefty: true
+'30':
     name: '30'
     algs:
-    - alg: "[U] l2 D l' U' l D' l2' U l U l'"
-    - alg: r' D' r U' r' D r2 U' r' U r U r'
-    - alg: "[U'] r U r' U' M U R U' R' [T_ZBLL]"
-  '31':
+    - 
+        setup: U
+        alg: "l2 D l' U' l D' l2' U l U l'"
+        isLefty: true
+    - 
+        alg: r' D' r U' r' D r2 U' r' U r U r'
+    - 
+        setup: U'
+        alg: "r U r' U' M U R U' R' [T_ZBLL]"
+'31':
     name: '31'
     algs:
-    - alg: R' U' F U R U' R' F' R
-    - alg: "[U2] L' U' B U L U' L' B' L"
-  '32':
+    - 
+        alg: R' U' F U R U' R' F' R
+    - 
+        setup: U2
+        alg: "L' U' B U L U' L' B' L"
+        isLefty: true
+'32':
     name: '32'
     algs:
-    - alg: L U F' U' L' U L F L'
-    - alg: "[U2] R U B' U' R' U R B R'"
-  '33':
+    - 
+        alg: L U F' U' L' U L F L'
+        isLefty: true
+    - 
+        setup: U2
+        alg: "R U B' U' R' U R B R'"
+'33':
     name: '33'
     algs:
-    - alg: "(L' U' L U) (L F' L' F)"
-    - alg: "[U2] (R U R' U') (R' F R F')"
-  '34':
+    - 
+        alg: "(L' U' L U) (L F' L' F)"
+        isLefty: true
+    - 
+        setup: U2
+        alg: "(R U R' U') (R' F R F')"
+'34':
     name: '34'
     algs:
-    - alg: "[U'] f R f' U' r' U' R U M'"
-    - alg: R U R2' U' R' F R U R U' F'
-    - alg: R U R' U' M' U R U' R' [T_ZBLL]
-  '35':
+    - 
+        setup: U'
+        alg: "f R f' U' r' U' R U M'"
+    - 
+        alg: R U R2' U' R' F R U R U' F'
+    - 
+        alg: R U R' U' M' U R U' R' [T_ZBLL]
+'35':
     name: '35'
     algs:
-    - alg: R U2' R2' F R F' R U2' R'
-  '36':
+    - 
+        alg: R U2' R2' F R F' R U2' R'
+'36':
     name: '36'
     algs:
-    - alg: L' U' L U' L' U L U L F' L' F
-  '37':
+    - 
+        alg: L' U' L U' L' U L U L F' L' F
+        isLefty: true
+'37':
     name: '37'
     algs:
-    - alg: F R' F' R U R U' R'
-    - alg: "[U] F' L F L' U' L' U L"
-  '38':
+    - 
+        alg: F R' F' R U R U' R'
+    - 
+        setup: U
+        alg: "F' L F L' U' L' U L"
+        isLefty: true
+'38':
     name: '38'
     algs:
-    - alg: R U R' U R U' R' U' R' F R F'
-    - alg: F U R U' R' F' [T_ZBLL]
-  '39':
+    - 
+        alg: R U R' U R U' R' U' R' F R F'
+    - 
+        alg: F U R U' R' F' [T_ZBLL]
+'39':
     name: '39'
     algs:
-    - alg: L F' L' U' L U F U' L'
-    - alg: F' L' U' L U F [T_ZBLL]
-  '40':
+    - 
+        alg: L F' L' U' L U F U' L'
+        isLefty: true
+    - 
+        alg: F' L' U' L U F [T_ZBLL]
+        isLefty: true
+'40':
     name: '40'
     algs:
-    - alg: R' F R U R' U' F' U R
-  '41':
+    - 
+        alg: R' F R U R' U' F' U R
+'41':
     name: '41'
     algs:
-    - alg: R U R' U R U2' R' F R U R' U' F'
-    - alg: F U R2 D R' U' R D' R2' F'
-    - alg: S' R U R' S R U' R [U_ZBLL]
-  '42':
+    - 
+        alg: R U R' U R U2' R' F R U R' U' F'
+    - 
+        alg: F U R2 D R' U' R D' R2' F'
+    - 
+        alg: S' R U R' S R U' R [U_ZBLL]
+'42':
     name: '42'
     algs:
-    - alg: L' U' L U' L' U2 L F' L' U' L U F
-    - alg: F' U' L2' D' L U L' D L2 F
-    - alg: "[U'] S' R U R' S R U' R [U_ZBLL]"
-  '43':
+    - 
+        alg: L' U' L U' L' U2 L F' L' U' L U F
+        isLefty: true
+    - 
+        alg: F' U' L2' D' L U L' D L2 F
+        isLefty: true
+    - 
+        setup: U'
+        alg: "S' R U R' S R U' R [U_ZBLL]"
+'43':
     name: '43'
     algs:
-    - alg: F' (U' L' U L) F
-  '44':
+    - 
+        alg: F' (U' L' U L) F
+        isLefty: true
+'44':
     name: '44'
     algs:
-    - alg: F (U R U' R') F'
-  '45':
+    - 
+        alg: F (U R U' R') F'
+'45':
     name: '45'
     algs:
-    - alg: F R U R' U' F'
-    - alg: "[U2] F' (L' U' L U) F"
-  '46':
+    - 
+        alg: F R U R' U' F'
+    - 
+        setup: U2
+        alg: "F' (L' U' L U) F"
+        isLefty: true
+'46':
     name: '46'
     algs:
-    - alg: "L U L F' L' F U' L'"
-    - alg: "[U2] R' U' R' F R F' U R"
-  '47':
+    - 
+        alg: "L U L F' L' F U' L'"
+        isLefty: true
+    - 
+        setup: U2
+        alg: "R' U' R' F R F' U R"
+'47':
     name: '47'
     algs:
-    - alg: F' (L' U' L U) (L' U' L U) F
-    - alg: "[U'] F R' F' R U2 R U' R U R U2' R'"
-  '48':
+    - 
+        alg: F' (L' U' L U) (L' U' L U) F
+        isLefty: true
+    - 
+        setup: U'
+        alg: "F R' F' R U2 R U' R U R U2' R'"
+'48':
     name: '48'
     algs:
-    - alg: F (R U R' U') (R U R' U') F'
-  '49':
+    - 
+        alg: F (R U R' U') (R U R' U') F'
+'49':
     name: '49'
     algs:
-    - alg: L F' (r' L') U (r L) F (r' L') U' (L x)
-  '50':
+    - 
+        alg: L F' (r' L') U (r L) F (r' L') U' (L x)
+        isLefty: true
+'50':
     name: '50'
     algs:
-    - alg: R' F (l R) U' (l' R') F' (l R) U (R' x)
-  '51':
+    - 
+        alg: R' F (l R) U' (l' R') F' (l R) U (R' x)
+'51':
     name: '51'
     algs:
-    - alg: F (U R U' R') (U R U' R') F'
-    - alg: "[U2] F' (U' L' U L) (U' L' U L) F"
-  '52':
+    - 
+        alg: F (U R U' R') (U R U' R') F'
+    - 
+        setup: U2
+        alg: "F' (U' L' U L) (U' L' U L) F"
+        isLefty: true
+'52':
     name: '52'
     algs:
-    - alg: R U R' U R U' B U' B' R'
-  '53':
+    - 
+        alg: R U R' U R U' B U' B' R'
+'53':
     name: '53'
     algs:
-    - alg: r U R' U R U' R' U R U2' r'
-  '54':
+    - 
+        alg: r U R' U R U' R' U R U2' r'
+'54':
     name: '54'
     algs:
-    - alg: l' U' L U' L' U L U' L' U2 l
-  '55':
+    - 
+        alg: l' U' L U' L' U L U' L' U2 l
+        isLefty: true
+'55':
     name: '55'
     algs:
-    - alg: R U2' R2' U' R U' R' U2' F R F'
-    - alg: "[U] R' F R U R U' R2' F' R2 U' R' U R U R'"
-  '56':
+    - 
+        alg: R U2' R2' U' R U' R' U2' F R F'
+    - 
+        setup: U
+        alg: "R' F R U R U' R2' F' R2 U' R' U R U R'"
+'56':
     name: '56'
     algs:
-    - alg: l U l' (U L U' L') (U L U' L') l U' l'
-    - alg: F (R U R' U') F' U [T_ZBLL]
+    - 
+        alg: l U l' (U L U' L') (U L U' L') l U' l'
+        isLefty: true
+    - 
+        alg: F (R U R' U') F' U [T_ZBLL]
     note: if you have the double sune H CP, do the alg otherwise reduce to ZBLL
-  '57':
+'57':
     name: '57'
     algs:
-    - alg: L' U' L U M' U' L' U l
+    - 
+        alg: L' U' L U M' U' L' U l
+        isLefty: true

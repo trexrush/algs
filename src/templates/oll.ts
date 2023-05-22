@@ -13,6 +13,7 @@ const Options: IOptions = createOptions({
         view: 'plan',
     },
     twistyplayerparams: {
+        cameraX: 30,
         stage: 'OLL'
     },
 })
