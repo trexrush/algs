@@ -3,50 +3,43 @@ Aa:
  algs: 
   - 
    alg: (x' L') U L' D2 L U' L' D2 (L2 x)
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U
    alg: (x L2) D2 L' U' L D2 L' U (L' x')
-   tags: 
-    - Lefty
+   isLefty: true
 Ab: 
  name: Ab
  algs: 
   - 
    alg: (x L) U' L D2 L' U L D2 (L2 x') 
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U'
    alg: (x' L2') D2 L U L' D2 L U' (L x)
-   tags: 
-    - Lefty
+   isLefty: true
 E: 
  name: E
  algs: 
   - 
    alg: (x' L') (U L D') (L' U' L D) (L' U' L D') (L' U L D) x
-   tags: 
-    - Lefty
+   isLefty: true
   - 
-   alg: "L' U' L U' L U L' F [LEFTY SEXY] L F' L2' U L2 U' L'"
+   alg: "[LEFTY SU] L U L' F [LEFTY SEXY] L F' L2' U L2 U' L'"
    tags: 
     - OH
-    - Lefty
+   isLefty: true
    note: megaminx CP transfer
   - 
    alg: L2 D (L' U L D') (L' U L D) (L' U' L D') (L' U' L')
-   tags: 
-    - Lefty
+   isLefty: true
 F: 
  name: F
  algs: 
   - 
    setup: U2
    alg: L U F (L' U' L U L F' L2' U L U L' U') L U' L'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: R' F R f' R' F R2 U R' U' R' F' R2 U R' S
   - 
@@ -54,7 +47,7 @@ F:
    alg: (L' U' L U) L U' L' U2 (R L U' L' U R') U L' U L
    tags: 
     - OH
-    - Lefty
+   isLefty: true
   - 
    setup: U'
    alg: R' U R U' R2' F' U' F U R F R' F' R2
@@ -65,34 +58,29 @@ Ga:
  algs: 
   - 
    alg: L2 U L' U L' U' L U' L2' (U' D) L' U L D'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U2
    alg: L2 F2' L' U2' L' U2 L F' (L' U' L U) L F' L2'
-   tags: 
-    - Lefty
+   isLefty: true
 Gb: 
  name: Gb
  algs: 
   - 
    alg: L' U' L (U D') L2' U L' U L U' L U' L2' D
-   tags: 
-    - Lefty
+   isLefty: true
 Gc: 
  name: Gc
  algs: 
   - 
    alg: L2' U' L U' L U L' U L2 (U D') L U' L' D
-   tags: 
-    - Lefty
+   isLefty: true
 Gd: 
  name: Gd
  algs: 
   - 
    alg: L U L' (U' D) L2' U' L U' L' U L' U L2 D'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U2
    alg: R U R' (U' D) R2 U' R U' R' U R' U R2 D'
@@ -117,16 +105,16 @@ H:
     - New
 Ja: 
  name: Ja
+ altNames: 
+  - L
  algs: 
   - 
    alg: L' U' L F L' U' L U L F' L2' U L
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U'
    alg: L' U' L2 F L' U' L' U L F' L' U L
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U2
    alg: (x R2') F R F' R U2' r' U r U2' x'
@@ -137,9 +125,6 @@ Ja:
     - Swag
 Jb: 
  name: Jb
- altNames: 
-  - 
-   L
  algs: 
   - 
    alg: R U R' F' R U R' U' R' F R2 U' R'
@@ -149,14 +134,13 @@ Jb:
   - 
    setup: U'
    alg: z' D L' U L2 D' L D L2' (U' D') z
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U2
    alg: L U2 L' U' L U2 R' U L' U' R
    tags: 
     - OH
-    - Lefty
+   isLefty: true
 Na: 
  name: Na
  algs: 
@@ -166,75 +150,69 @@ Na:
    alg: L U' L' U L F U F' L' U' L F' L F L' U L'
    tags: 
     - OH
-    - Lefty
+   isLefty: true
   - 
    alg: (L U' R U2 L' U R') (L U' R U2 L' U R')
    tags: 
     - OH
+   isLefty: true
 Nb: 
  name: Nb
  algs: 
   - 
    alg: l D l' U2 l D' l' U l D l' U' l D' l' U' l D l' U' l D' l'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: R' U R U' R' F' U' F R U R' F R' F' R U' R
   - 
    alg: L' F' U L U' L' U' F L2 F L' U' L' U L F'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: F L' U' L U L F' L2 F' U L U L' U' F L
    tags: 
     - OH
-    - Lefty
+   isLefty: true
   - 
    alg: (L' U R' U2' L U' R) (L' U R' U2' L U' R)
    tags: 
     - OH
-    - Lefty
+   isLefty: true
 Ra: 
  name: Ra
  algs: 
   - 
    alg: L U2' L D L' U L D' L' U' L' U L U L'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: L U2 L' U2 L F' L' U' L U L F L2'
    tags: 
     - OH
-    - Lefty
+   isLefty: true
   - 
    setup: U'
    alg: L2 F' L' U' L' U L F L' U2 L U2' L'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U'
    alg: L U' L' U' L U L D L' U' L D' L' U2 L'
-   tags: 
-    - Lefty
+   isLefty: true
 Rb: 
  name: Rb
  algs: 
   - 
    alg: L' U L U L' U' L U' L D L' U L D' L2' U' L
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: L' U L U L' U' L' D' L U L' D L U2' L
    tags: 
     - OH
-    - Lefty
+   isLefty: true
 T: 
  name: T
  algs: 
   - 
    alg: L' U' L U L F' L2' U L U L' U' L F
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: R2 U R2 U' R2 U' D R2 U' R2 U R2 D'
    tags: 
@@ -270,22 +248,19 @@ V:
  algs: 
   - 
    alg: L U' L U L' D L D' L (U' D) L2' U L2 D' L2'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U2
    alg: z' D' L U L' D L D' L U' L' D L2' U L2' U' z
    tags: 
     - OH
-    - Lefty
+   isLefty: true
   - 
    alg: L U' L' U L f U L' U2 L U L' U L f' L'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: L U' L U y' L F L2' U L U' L F' L' F'
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    alg: R' U R U' x' U [ANTISUNE] U2' [SEXY] x
 Y: 
@@ -293,8 +268,7 @@ Y:
  algs: 
   - 
    alg: F' L' U L U L' U' L F L' U' L U L F' L' F
-   tags: 
-    - Lefty
+   isLefty: true
   - 
    setup: U'
    alg: F R U' R' U' R U R' F' R U R' U' R' F R F'
@@ -311,6 +285,7 @@ Z:
    alg: L U L' U L' U' L' U L U' L' U' L2' U L
    tags: 
     - OH
+   isLefty: true
   - 
    setup: U
    alg: S M2' S' u' M2' u M2'

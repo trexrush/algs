@@ -13,6 +13,7 @@ export const convert4x4NotationToTwizzle = (a: string): string => {
   return a.replace("r", "2R")
 }
 
+//TODO: implement swapping triggers
 export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): string => {
   const baseMovesArray = baseMoveGroups[pzl]
   const mirrorMovesArray = mirrorMoveGroups[pzl]
@@ -23,10 +24,15 @@ export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): strin
   })
   return aArr.join(" ")
 }
+
 //TODO: finish logic
 // export const mirrorSet = (s: IAlgSetV2): IAlgSetV2 => {
 //     s.options.puzzle = puzzleDefinitionMapping[s.options.puzzle]?.mirror
 // }
+
+export const mirrorAlgOverrideTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality) => {
+  return mirrorAlg(expandAlgWithTriggers(a, pzl), pzl)
+}
 
 export const backAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string => {
   const baseMovesArray = baseMoveGroups[pzl]
@@ -41,11 +47,6 @@ export const backAlg = (a: string, pzl: keyof typeof baseMoveGroups ): string =>
 
 export const invertAlg = (a: string): string => {
   return new Alg(a).invert().toString(); 
-}
-
-//TODO: implement
-export const mirrorAlgTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality) => {
-  return mirrorAlg(a, pzl)
 }
 
 export const repeatAlg = (a: string, q: number): string => {
@@ -72,7 +73,8 @@ let modifiersList: Record<IModifiersList, (a: string, pzl: twistyPuzzleTypeWithC
 
 export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): string => {
   let triggerList: [...IModifiersList[], string] = t.split(' ') as [...IModifiersList[], string]
-  let currTrigger = triggerSubstitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1))
+  // https://stackoverflow.com/questions/7574054/javascript-how-to-pass-object-by-value (how did I miss this)
+  let currTrigger = structuredClone(triggerSubstitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1)))
   if (!currTrigger) { return '' }
   triggerList.pop() // remove base trigger and leave only modifiers
   while (triggerList.length) {
@@ -94,4 +96,8 @@ export const matchAllParenthesis: RegExp =  /([\(\)])/g
 export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
   const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
   return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)))
+}
+
+export const checkIfHasTriggers = (a: string): boolean => {
+  return a.match(isTriggerRegex) != null ? true : false
 }

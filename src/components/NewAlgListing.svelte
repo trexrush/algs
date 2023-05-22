@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { algDelimiterWithTriggers, expandAlgWithTriggers, isTriggerRegex, mirrorAlg } from "../scripts/alg";
+  import { algDelimiterWithTriggers, checkIfHasTriggers, expandAlgWithTriggers, isTriggerRegex, mirrorAlgOverrideTriggers } from "../scripts/alg";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import type { IAlgV2, twistyPuzzleTypeWithChirality } from "../scripts/types";
 
@@ -11,22 +11,22 @@
   let isExpanded: boolean = true
 
   // either mirrored or nonmirrored
-  let displayPzl = pzl //isMirrored ? puzzleDefinitionMapping[pzl]!.mirror : pzl
-  let displayAlg = alg.alg //isMirrored ? mirrorAlg(expandAlgWithTriggers(alg.alg, pzl), pzl) : alg.alg
+  let displayPzl = pzl
+  let displayAlg = alg.alg
   let displayLefty = isLefty
 
   export let isActive: boolean
   export let isMirrored: boolean = true;
   $: {
     ((state: boolean) => {
-      displayAlg = state ? mirrorAlg(expandAlgWithTriggers(alg.alg, pzl), pzl) : alg.alg
+      displayAlg = state ? mirrorAlgOverrideTriggers(alg.alg, pzl) : alg.alg
       displayPzl = state ? puzzleDefinitionMapping[pzl]!.mirror : pzl
       displayLefty = state ? !isLefty : isLefty
       // temp
-      isExpandable = state ? false : expandAlgWithTriggers(alg.alg, pzl) != displayAlg
+      isExpandable = state ? false : checkIfHasTriggers(displayAlg)
     })(isMirrored)
   }
-  let isExpandable: boolean = isMirrored ? false : expandAlgWithTriggers(alg.alg, pzl) != displayAlg
+  let isExpandable: boolean = isMirrored ? false : checkIfHasTriggers(alg.alg)
   $: isExpanded = isExpandable ? false : true;
 
 </script>

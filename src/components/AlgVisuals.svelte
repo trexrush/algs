@@ -10,6 +10,7 @@
   export let activeAlg: string
   export let options: IOptions
   export let size: number
+  export let isLefty: boolean | undefined
 
   let cssSize = size + "px";
   let imgSize: number
@@ -36,7 +37,7 @@
       <AlgImage {imageAlg} options={options} size={imgSize} />
     </div>
     {:else}
-    <TwistyPlayer {activeAlg} options={options} size={imgSize} />
+    <TwistyPlayer {activeAlg} options={options} size={imgSize} isLefty={isLefty} />
     <div
       class="absolute left-0 bottom-0 text-xs h-5 w-5 sm:h-7 sm:w-7 bg-red-300 dark:bg-red-600 rounded grid place-items-center select-none"
       on:click={toggleDisplay}

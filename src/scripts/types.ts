@@ -92,6 +92,7 @@ export interface ICaseV2 extends IGroupElementV2 {
 export interface IAlgV2 {
     setup?: string
     alg: string
+    isLefty?: boolean
     tags?: IAlgTagsV2[]
     note?: string
 }

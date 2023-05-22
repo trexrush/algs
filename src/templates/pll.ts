@@ -10,7 +10,7 @@ const Options: IOptions = createOptions({
     puzzle: '3x3x3',
     imgSource: "vc",
     twistyplayerparams: {
-        cameraX: -30,
+        cameraX: 30,
         rot: 'x2'
     },
 })
