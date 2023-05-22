@@ -38,13 +38,13 @@ F:
  algs: 
   - 
    setup: U2
-   alg: L U F (L' U' L U L F' L2' U L U L' U') L U' L'
+   alg: L U F [LEFTY T_PERM] F' U' L'
    isLefty: true
   - 
-   alg: R' F R f' R' F R2 U R' U' R' F' R2 U R' S
+   alg: R' F R f' R' F R [SEXY] R' F' R2 U R' S
   - 
    setup: U'
-   alg: (L' U' L U) L U' L' U2 (R L U' L' U R') U L' U L
+   alg: "[LEFTY SEXY] L U' L' U2 L [NIKLAS] L' U2 L' U L"
    tags: 
     - OH
    isLefty: true
@@ -109,11 +109,11 @@ Ja:
   - L
  algs: 
   - 
-   alg: L' U' L F L' U' L U L F' L2' U L
+   alg: L' U' L F [LEFTY SEXY] L F' L2' U L
    isLefty: true
   - 
    setup: U'
-   alg: L' U' L2 F L' U' L' U L F' L' U L
+   alg: L' U' L2 F L' [LEFTY INVERSE SEXY] F' L' U L
    isLefty: true
   - 
    setup: U2
@@ -127,10 +127,10 @@ Jb:
  name: Jb
  algs: 
   - 
-   alg: R U R' F' R U R' U' R' F R2 U' R'
+   alg: R U R' F' [SEXY] R' F R2 U' R'
   - 
    setup: U
-   alg: R U R2' F' R U R U' R' F R U' R'
+   alg: R U R2' F' R [INVERSE SEXY] F R U' R'
   - 
    setup: U'
    alg: z' D L' U L2 D' L D L2' (U' D') z
@@ -145,9 +145,10 @@ Na:
  name: Na
  algs: 
   - 
-   alg: F' R U R' U' R' F R2 F U' R' U' R U F' R'
+   alg: F' [SEXY] R' F R2 F U' R' U' R U F' R'
+   note: modified T perm with some Fs thrown in
   - 
-   alg: L U' L' U L F U F' L' U' L F' L F L' U L'
+   alg: L U' L' U L F U F' L' U' L [LEFTY HEDGE] U L'
    tags: 
     - OH
    isLefty: true
@@ -160,15 +161,15 @@ Nb:
  name: Nb
  algs: 
   - 
-   alg: l D l' U2 l D' l' U l D l' U' l D' l' U' l D l' U' l D' l'
+   alg: l D l' U2' l D' l' U l D l' U' l D' l' U' l D l' U' l D' l'
    isLefty: true
   - 
-   alg: R' U R U' R' F' U' F R U R' F R' F' R U' R
+   alg: R' U R U' R' F' U' F R U R' [HEDGE] U' R
   - 
-   alg: L' F' U L U' L' U' F L2 F L' U' L' U L F'
+   alg: L' F' U L U' L' U' F L2 F L' [LEFTY INVERSE SEXY] F'
    isLefty: true
   - 
-   alg: F L' U' L U L F' L2 F' U L U L' U' F L
+   alg: F [LEFT SEXY] L F' L2' F' U L U L' U' F L
    tags: 
     - OH
    isLefty: true
@@ -184,13 +185,13 @@ Ra:
    alg: L U2' L D L' U L D' L' U' L' U L U L'
    isLefty: true
   - 
-   alg: L U2 L' U2 L F' L' U' L U L F L2'
+   alg: L U2 L' U2 L F' [LEFTY SEXY] L F L2'
    tags: 
     - OH
    isLefty: true
   - 
    setup: U'
-   alg: L2 F' L' U' L' U L F L' U2 L U2' L'
+   alg: L2 F' L' [LEFTY INVERSE SEXY] F L' U2 L U2' L'
    isLefty: true
   - 
    setup: U'
@@ -211,7 +212,7 @@ T:
  name: T
  algs: 
   - 
-   alg: L' U' L U L F' L2' U L U L' U' L F
+   alg: "[LEFTY SEXY] L F' L2' U L U L' U' L F"
    isLefty: true
   - 
    alg: R2 U R2 U' R2 U' D R2 U' R2 U R2 D'
@@ -242,7 +243,7 @@ Ub:
    tags: 
     - Swag
   - 
-   alg: R2 U R U R' U' R' U' R' U R'
+   alg: R2 U [SEXY] R' U' R' U R'
 V: 
  name: V
  algs: 
@@ -256,7 +257,7 @@ V:
     - OH
    isLefty: true
   - 
-   alg: L U' L' U L f U L' U2 L U L' U L f' L'
+   alg: L U' L' U L f U [LEFT ANTISUNE] f' L'
    isLefty: true
   - 
    alg: L U' L U y' L F L2' U L U' L F' L' F'
@@ -267,11 +268,11 @@ Y:
  name: Y
  algs: 
   - 
-   alg: F' L' U L U L' U' L F L' U' L U L F' L' F
+   alg: F' L' U L U L' U' L F [LEFTY SEXY] [LEFTY SLEDGE]
    isLefty: true
   - 
    setup: U'
-   alg: F R U' R' U' R U R' F' R U R' U' R' F R F'
+   alg: F R U' R' U' R U R' F' [SEXY] [SLEDGE]
 Z: 
  name: Z
  algs: 
@@ -282,7 +283,7 @@ Z:
    alg: (M2' U') (M2' U') M' U2' M2' U2' M'
   - 
    setup: U
-   alg: L U L' U L' U' L' U L U' L' U' L2' U L
+   alg: "[LEFT BACK SU] L' U' L' U L U' L' U' L2' U L"
    tags: 
     - OH
    isLefty: true
