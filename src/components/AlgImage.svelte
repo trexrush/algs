@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { expandAlgWithTriggers } from "../scripts/alg";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import type { IOptions } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
@@ -25,7 +26,7 @@
       width: size,
       height: size,
       mask: options.vcparams?.stage! as Masking,
-      case: imageAlg + "" + options.vcparams?.rot!,
+      case: expandAlgWithTriggers(imageAlg, options.puzzle) + "" + options.vcparams?.rot!,
     });
   };
 
