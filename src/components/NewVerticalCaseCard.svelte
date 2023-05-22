@@ -85,7 +85,7 @@
       <hr class="flex-grow border-s-4 border-stone-800/70"/>
       <span class="flex m-1 justify-end items-center gap-1 cursor-default text-xs text-stone-500">
         {#if eachAlg.tags }<span class="max-sm:invisible">Tags</span>{#each eachAlg.tags as tag}
-        {#if tag != 'Lefty'}<span class="px-[.15rem] py-0 sm:px-1 bg-yellow-500/[.2] rounded-md md:text-sm text-[1.5vw] text-white">{tag}</span>{/if}
+        <span class="px-[.15rem] py-0 sm:px-1 bg-yellow-500/[.2] rounded-md md:text-sm text-[1.5vw] text-white">{tag}</span>
         {/each}{/if}
       </span>
     </div>
