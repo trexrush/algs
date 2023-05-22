@@ -44,8 +44,8 @@ export const invertAlg = (a: string): string => {
 }
 
 //TODO: implement
-export const invertAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality) => {
-  return invertAlg(expandAlgWithTriggers(a, pzl))
+export const mirrorAlgTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality) => {
+  return mirrorAlg(a, pzl)
 }
 
 export const repeatAlg = (a: string, q: number): string => {
