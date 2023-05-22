@@ -1,6 +1,9 @@
 import type { IAlgSet } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
 
+//@ts-expect-error
+import yml from './zblsData.yml'
+
 const algSet: IAlgSet = {
     options: createOptions({
         name: "ZBLS",
@@ -15,8 +18,7 @@ const algSet: IAlgSet = {
             stage: 'ZBLS',
         },
     }),
-    sets: [
-    ]
+    sets: yml
 }
 
 export { algSet }
