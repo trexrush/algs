@@ -24,7 +24,6 @@
     pzl = mirror ? puzzleDefinitionMapping[pzl]!.mirror : puzzleDefinitionMapping[options.puzzle]!.standard
     if ($activeAlg.setup) $activeAlg.setup = mirror ? mirrorAlg($activeAlg.setup, pzl) : caso.algs[activeElement].setup
     $activeAlg.isLefty = mirror ? !caso.algs[activeElement].isLefty : caso.algs[activeElement].isLefty
-    console.log("BASE: ", caso.algs[activeElement].isLefty, " CURR: ", $activeAlg.isLefty)
   })($isMirrored)
 
   let elementList: NewAlgListing[] = []

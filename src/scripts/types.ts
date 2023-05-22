@@ -97,7 +97,7 @@ export interface IAlgV2 {
     note?: string
 }
 
-export type IAlgTagsV2 = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "Lefty" | "New"
+export type IAlgTagsV2 = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New"
 
 export interface IAlgSetV2 { options: IOptions, sets: ISetV2[] }
 
@@ -118,7 +118,7 @@ export interface ILocalCaseOptionsV2 {
 }
 
 
-export type IModifiersList = "INVERSE" | "BACK" | "B" | "LEFTY" | "L" | "DOUBLE" | "X2" | "TRIPLE" | "X3" 
+export type IModifiersList = "INVERSE" | "BACK" | "B" | "LEFTY" | "LEFT" | "L" | "DOUBLE" | "X2" | "TRIPLE" | "X3" 
 
 
 export type modularPuzzleGroup<T> = Partial<Record<twistyPuzzleTypeWithChirality, T>>

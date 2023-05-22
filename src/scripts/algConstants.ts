@@ -108,7 +108,7 @@ const triggers = [
 
     { name: "SUNE", alg: "R U R' U R U2' R'" },
     { name: "ANTISUNE", alg: "R U2' R' U' R U' R'" },
-    { name: "FATSUNE", alg: "r U R' U R U2 r'" },
+    { name: "FATSUNE", alg: "r U R' U R U2' r'" },
     { name: "FATANTISUNE", alg: "r U2' R' U' R U' r'" },
     { name: "NIKLAS", alg: "R U' L' U R' U' L" },
     { name: "ADJFLIP", alg: "r U R' U' M U R U' R'" },

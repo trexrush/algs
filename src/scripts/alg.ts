@@ -56,12 +56,13 @@ export const repeatAlg = (a: string, q: number): string => {
 }
 
 export const simplifyAlg = (a: string): string => {
-  return new Alg(a).experimentalSimplify({cancel: true}).toString()
+  return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' }}).toString()
 }
 
 let modifiersList: Record<IModifiersList, (a: string, pzl: twistyPuzzleTypeWithChirality) => string> = {
   "INVERSE": (a, pzl) => { return invertAlg(a) },
   "LEFTY": (a, pzl) => { return mirrorAlg(a, pzl) },
+  "LEFT": (a, pzl) => { return mirrorAlg(a, pzl) },
   "L": (a, pzl) => { return mirrorAlg(a, pzl) },
   "BACK": (a, pzl) => { return backAlg(a, pzl) },
   "B": (a, pzl) => { return backAlg(a, pzl) },

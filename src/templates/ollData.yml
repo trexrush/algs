@@ -24,8 +24,10 @@
     name: '5'
     algs:
     - 
-        alg: l' U2' L U L' U l
+        alg: "[LEFTY FATANTISUNE]"
         isLefty: true
+    - 
+        alg: "[BACK FATANTISUNE]"
     - 
         alg: L' U L U2' l' U l U l' U' l
         isLefty: true
@@ -33,126 +35,129 @@
     name: '6'
     algs:
     - 
-        alg: r U2' R' U' R U' r'
+        alg: "[FATANTISUNE]"
+    -
+        alg: "[LEFT BACK FATANTISUNE]"
+        isLefty: true
 '7':
     name: '7'
     algs:
     - 
-        alg: r U R' U R U2 r'
+        alg: "[FATSUNE]"
     - 
         setup: U2
-        alg: "l U L' U L U2 l'"
+        alg: "[LEFT BACK FATSUNE]"
         isLefty: true
 '8':
     name: '8'
     algs:
     - 
-        alg: l' U' L U' L' U2' l
+        alg: "[LEFTY FATSUNE]"
         isLefty: true
     - 
         setup: U2
-        alg: "r' U' R U' R' U2 r"
+        alg: "[BACK FATSUNE]"
 '9':
     name: '9'
     algs:
     - 
-        alg: R U R' U' R' F R2 U R' U' F'
+        alg: "[SEXY] R' F R2 U R' U' F'"
     - 
         setup: U2
-        alg: "L' U' L U' L F' L' F L' U2 L"
+        alg: "[LEFT SU] [LEFT SLEDGE] [LEFT NE]"
         isLefty: true
 '10':
     name: '10'
     algs:
     - 
-        alg: L' U' L U L F' L2' U' L U F
+        alg: "[LEFTY SEXY] L F' L2' U' L U F"
         isLefty: true
     - 
         setup: U2
-        alg: "R U R' U R' F R F' R U2' R'"
+        alg: "[SU] [SLEDGE] [NE]"
 '11':
     name: '11'
     algs:
     - 
-        alg: r U R' U R' F R F' R U2' r'
+        alg: "[FATSU] [SLEDGE] [FATNE]"
     - 
         setup: U2
-        alg: "r' R2 U R' U R U2' R' U M'"
+        alg: "r' R [SUNE] U M'"
     - 
-        alg: F' U' L' U2 L U' L' U' L U' L' U L F
+        alg: F' U' [LEFT NE] U' [LEFT SU] L' U L F
         isLefty: true
     - 
-        alg: F' U' L' U L F [U_ZBLL]
+        alg: F' [LEFT INVERSE SEXY] F [U_ZBLL]
         isLefty: true
 '12':
     name: '12'
     algs:
     - 
-        alg: l' U' L U' L F' L' F L' U2 l
+        alg: "[LEFT FATSU] [LEFT SLEDGE] [LEFT FATNE]"
         isLefty: true
     - 
         setup: U2
-        alg: "l L2' U' L U' L' U2 L U' M'"
+        alg: "l L [LEFT SUNE] U' M'"
         isLefty: true
     - 
-        alg: F U R U' R' F' [U_ZBLL]
+        alg: F [SEXY] F' [U_ZBLL]
 '13':
     name: '13'
     algs:
     - 
-        alg: F U R U' R2' F' R U R U' R'
+        alg: F [INVERSE SEXY] F' [HEDGE] [INVERSE SEXY]
     note: possible diag avoidance alg if UBR and RFU are the same color - r U' r' U' r U r' F' U F I dont use this but its not hard to implement so maybe soon
 '14':
     name: '14'
     algs:
     - 
-        alg: F' U' L' U L2 F L' U' L' U L
+        alg: F' U' L' U L2 F L' [INVERSE SEXY]
         isLefty: true
     note: 'same as above note but mirror the alg to avoid diag '
 '15':
     name: '15'
     algs:
     - 
-        alg: l' U' l (L' U' L U) l' U l
+        alg: l' U' l [INVERSE SEXY] l' U l
         isLefty: true
     - 
         setup: U2
-        alg: "F R U R' U' F' [U_ZBLL]"
+        alg: "F [SEXY] F' [U_ZBLL]"
 '16':
     name: '16'
     algs:
     - 
-        alg: r U r' (R U R' U') r U' r'
+        alg: r U r' [SEXY] r U' r'
     - 
-        alg: F R U R' U' F' U2 [U_ZBLL]
+        alg: F [SEXY] F' U2 [U_ZBLL]
 '17':
     name: '17'
     algs:
     - 
         setup: U2
-        alg: "F R' F' R U S' R U' R' S"
+        alg: "[HEDGE] U S' R U' R' S"
     - 
-        alg: "(R U R' U) (R' F R F') U2' (R' F R F')"
+        alg: "[SEXY] [SLEDGE] U2' [SLEDGE]"
 '18':
     name: '18'
     algs:
     - 
-        alg: "(R U2') (R2' F R F') U2' M' U R U' r'"
+        alg: "[NE] [SLEDGE] U2' M' [INVERSE FATSEXY]"
 '19':
     name: '19'
     algs:
     - 
-        alg: S' R U R' S U' (R' F R F')
+        alg: S' R U R' S U' [SLEDGE]
 '20':
     name: '20'
     algs:
     - 
-        alg: S' R U R' S U' M' U R U' r'
+        alg: S' R U R' S U' M' [INVERSE FATSEXY]
 '21':
     name: '21'
     algs:
     - 
-        alg: R U R' U R U' R' U R U2' R'
+        alg: "[DOUBLE SUNE]"
 '22':
     name: '22'
     algs:
@@ -190,19 +195,19 @@
     name: '26'
     algs:
     - 
-        alg: R U2' R' U' R U' R'
+        alg: "[ANTISUNE]"
     - 
         setup: U
-        alg: "L' U' L U' L' U2 L'"
+        alg: "[LEFT SUNE]"
         isLefty: true
 '27':
     name: '27'
     algs:
     - 
-        alg: R U R' U R U2' R'
+        alg: "[SUNE]"
     - 
         setup: U2
-        alg: "L U L' U L U2 L'"
+        alg: "[LEFTY BACK SUNE]"
         isLefty: true
 '28':
     name: '28'
@@ -214,14 +219,14 @@
     name: '29'
     algs:
     - 
-        alg: l D l' U l D' l2 U l U' l' U' l
+        alg: l D l' U l D' l2' U l U' l' U' l
         isLefty: true
     - 
         setup: U'
         alg: "r2' D' r U r' D r2 U' r' U' r"
     - 
         setup: U2
-        alg: "M' U M U2 M' U M [T_ZBLL]"
+        alg: "M' U M U2' M' U M [T_ZBLL]"
         isLefty: true
 '30':
     name: '30'
@@ -234,7 +239,7 @@
         alg: r' D' r U' r' D r2 U' r' U r U r'
     - 
         setup: U'
-        alg: "r U r' U' M U R U' R' [T_ZBLL]"
+        alg: "[FATSEXY] M [INVERSE SEXY] [T_ZBLL]"
 '31':
     name: '31'
     algs:
@@ -257,11 +262,11 @@
     name: '33'
     algs:
     - 
-        alg: "(L' U' L U) (L F' L' F)"
+        alg: "[LEFT SEXY] [LEFT SLEDGE]"
         isLefty: true
     - 
         setup: U2
-        alg: "(R U R' U') (R' F R F')"
+        alg: "[SEXY] [SLEDGE]"
 '34':
     name: '34'
     algs:
@@ -271,34 +276,34 @@
     - 
         alg: R U R2' U' R' F R U R U' F'
     - 
-        alg: R U R' U' M' U R U' R' [T_ZBLL]
+        alg: "[SEXY] M' [INVERSE FATSEXY] [T_ZBLL]"
 '35':
     name: '35'
     algs:
     - 
-        alg: R U2' R2' F R F' R U2' R'
+        alg: "[NE] [SLEDGE] [NE]"
 '36':
     name: '36'
     algs:
     - 
-        alg: L' U' L U' L' U L U L F' L' F
+        alg: "[LEFT SUNE] [LEFTY SEXY] [LEFTY SLEDGE]"
         isLefty: true
 '37':
     name: '37'
     algs:
     - 
-        alg: F R' F' R U R U' R'
+        alg: "[HEDGE] [INVERSE SEXY]"
     - 
         setup: U
-        alg: "F' L F L' U' L' U L"
+        alg: "[LEFTY HEDGE] [LEFT INVERSE SEXY]"
         isLefty: true
 '38':
     name: '38'
     algs:
     - 
-        alg: R U R' U R U' R' U' R' F R F'
+        alg: "[SUNE] [SEXY] [SLEDGE]"
     - 
-        alg: F U R U' R' F' [T_ZBLL]
+        alg: F [INVERSE SEXY] F' [T_ZBLL]
 '39':
     name: '39'
     algs:
@@ -306,7 +311,7 @@
         alg: L F' L' U' L U F U' L'
         isLefty: true
     - 
-        alg: F' L' U' L U F [T_ZBLL]
+        alg: F' [LEFT SEXY] F [T_ZBLL]
         isLefty: true
 '40':
     name: '40'
@@ -317,11 +322,11 @@
     name: '41'
     algs:
     - 
-        alg: R U R' U R U2' R' F R U R' U' F'
+        alg: "[SUNE] F [SEXY] F'"
     - 
         alg: F U R2 D R' U' R D' R2' F'
     - 
-        alg: S' R U R' S R U' R [U_ZBLL]
+        alg: S' R U R' S R U' R' [U_ZBLL]
 '42':
     name: '42'
     algs:
@@ -333,32 +338,32 @@
         isLefty: true
     - 
         setup: U'
-        alg: "S' R U R' S R U' R [U_ZBLL]"
+        alg: "S' R U R' S R U' R' U [U_ZBLL]"
 '43':
     name: '43'
     algs:
     - 
-        alg: F' (U' L' U L) F
+        alg: F' [LEFTY INVERSE SEXY] F
         isLefty: true
 '44':
     name: '44'
     algs:
     - 
-        alg: F (U R U' R') F'
+        alg: F [INVERSE SEXY] F'
 '45':
     name: '45'
     algs:
     - 
-        alg: F R U R' U' F'
+        alg: F [SEXY] F'
     - 
         setup: U2
-        alg: "F' (L' U' L U) F"
+        alg: "F' [LEFTY SEXY] F"
         isLefty: true
 '46':
     name: '46'
     algs:
     - 
-        alg: "L U L F' L' F U' L'"
+        alg: "L U [LEFTY SLEDGE] U' L'"
         isLefty: true
     - 
         setup: U2
@@ -367,16 +372,20 @@
     name: '47'
     algs:
     - 
-        alg: F' (L' U' L U) (L' U' L U) F
+        alg: F' [DOUBLE L SEXY] F
         isLefty: true
     - 
         setup: U'
-        alg: "F R' F' R U2 R U' R U R U2' R'"
+        alg: "[HEDGE] U2 R U' R' U [NE]"
 '48':
     name: '48'
     algs:
     - 
-        alg: F (R U R' U') (R U R' U') F'
+        alg: F [DOUBLE SEXY] F'
+    -
+        setup: U
+        alg: "[LEFTY HEDGE] U2' L' U L U' [LEFT NE]"
+        isLefty: true
 '49':
     name: '49'
     algs:
@@ -392,26 +401,26 @@
     name: '51'
     algs:
     - 
-        alg: F (U R U' R') (U R U' R') F'
+        alg: F [DOUBLE INVERSE SEXY] F'
     - 
         setup: U2
-        alg: "F' (U' L' U L) (U' L' U L) F"
+        alg: F' [DOUBLE LEFTY INVERSE SEXY] F
         isLefty: true
 '52':
     name: '52'
     algs:
     - 
-        alg: R U R' U R U' B U' B' R'
+        alg: "[SU] R U' B U' B' R'"
 '53':
     name: '53'
     algs:
     - 
-        alg: r U R' U R U' R' U R U2' r'
+        alg: "[DOUBLE FATSUNE]"
 '54':
     name: '54'
     algs:
     - 
-        alg: l' U' L U' L' U L U' L' U2 l
+        alg: "[DOUBLE LEFTY FATSUNE]"
         isLefty: true
 '55':
     name: '55'
@@ -425,14 +434,14 @@
     name: '56'
     algs:
     - 
-        alg: l U l' (U L U' L') (U L U' L') l U' l'
+        alg: l U l' [DOUBLE INVERSE LEFT BACK SEXY] l U' l'
         isLefty: true
     - 
-        alg: F (R U R' U') F' U [T_ZBLL]
+        alg: F [SEXY] F' U [T_ZBLL]
     note: if you have the double sune H CP, do the alg otherwise reduce to ZBLL
 '57':
     name: '57'
     algs:
     - 
-        alg: L' U' L U M' U' L' U l
+        alg: "[LEFT SEXY] M' [INVERSE LEFT FATSEXY]"
         isLefty: true
