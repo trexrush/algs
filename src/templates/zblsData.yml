@@ -1,473 +1,630 @@
 ---
-- name: 1
-  cases:
-  - name: S
-    algs:
-    - "[U] R U' R'"
-    comment: normal insert or do Winter Variation
-  - name: Dot
-    algs:
-    - "[U2] M' U' R U' r' U2 M' U' M"
-    - R' F R2 U' R' (F' S) r' F r S'
-    comment: bad case, prolly better to sledge and get L 2nd alg is meme
-  - name: L1
-    algs:
-    - R' F R F'
-    - M' U R U' r'
-    comment: sledge (2h) m insert (oh)
-  - name: L2
-    algs:
-    - "[U] R B U' B' R'"
-  - name: Line
-    algs:
-    - "[U] F' L' U' L F"
-    - R' U' F U R U' F'
-  - name: i1
-    algs:
-    - "[U] R U R' U2 R' F R F'"
-    comment: setup to sledge
-  - name: i2
-    algs:
-    - "[U2] R U' R' U' R' F R F' "
-    - 'R'' F R2 U R'' U'' F'' '
-  - name: i3
-    algs:
-    - U S' R U' R' S
-- name: 2
-  cases:
-  - name: S
-    algs:
-    - "[U'] F' U F"
-    - "[U] r' D' r U' r' D r"
-  - name: Dot
-    algs:
-    - r U r' U2 M' U M
-  - name: L1
-    algs:
-    - "[U'] r U' r' U r U r'"
-  - name: L2
-    algs:
-    - F R' F' R
-  - name: Line
-    algs:
-    - "[U'] R B U B' R'"
-    - F U R' U' F' U R
-  - name: i1
-    algs:
-    - "[U] R' D' r U' r' D R"
-    comment: hold EO LL edge in UB, do block comm
-  - name: i2
-    algs:
-    - "[U'] R U R2' D' r U r' D R"
-    comment: setup to  2i3
-  - name: i3
-    algs:
-    - "[U'] R' D' r U r' D R"
-    comment: hold EO LL edge in UB, do block comm
-- name: 4
-  cases:
-  - name: S
-    algs:
-    - R U R'
-    comment: normal insert or do Summer Variation
-  - name: Dot
-    algs:
-    - R' D' r U r' D R2 U R'
-  - name: L1
-    algs:
-    - "[U'] F' U2 F U R U' R'"
-    comment: or insert into P oll
-  - name: L2
-    algs:
-    - R U2' R' U' R' F R F'
-    comment: insert pair normally cancelled into sexy sledge oll
-  - name: Line
-    algs:
-    - U2 L F' L' U' L F L'
-  - name: i1
-    algs:
-    - S' R U R' S
-  - name: i2
-    algs:
-    - R U2 B U' B' R'
-    - ''
-  - name: i3
-    algs:
-    - R U' R2' F R F' R U2' R'
-- name: 3
-  cases:
-  - name: S
-    algs:
-    - F' U' F
-    comment: normal insert
-  - name: Dot
-    algs:
-    - "[U2] S' R U' R' S U' R' F R F'"
-    comment: or rotate to 4Dot
-  - name: L1
-    algs:
-    - "[U2] S' R U' R' S R U' R'"
-    - "[U] R U2 R' U' F' U F"
-  - name: L2
-    algs:
-    - S U R U' R' S'
-  - name: Line
-    algs:
-    - "[U'] R' F R U R U' R2' F' R"
-  - name: i1
-    algs:
-    - "[y'] S' R' U' R S [y]"
-    - F' U' L' U' L U F
-    comment: rotate to mirror
-  - name: i2
-    algs:
-    - "[U] R2 D r' U' r D' R2'"
-  - name: i3
-    algs:
-    - "[U2] R' D' r U' r' D R2 U' R'"
-    comment: hold EO LL edge in UB, do block comm
-- name: 5
-  cases:
-  - name: S
-    algs:
-    - "[U'] R U R' U2 R U' R'"
-  - name: Dot
-    algs:
-    - "[U2] R2 D r' U' r D' R' U' R'"
-  - name: L1
-    algs:
-    - 'R'' D'' R U R'' D F R F'' '
-    comment: comm into sledge
-- name: 6
-  cases:
-  - name: S
-    algs:
-    - "[y'] U R' U' R U R' U2' R [y]"
-    comment: rotate to 5S
-  - name: L2
-    algs:
-    - "[U'] r U' R' U R U r'"
-  - name: i3
-    algs:
-    - R2 D r' U' r D' R' U R'
-- name: 7
-  cases:
-  - name: S
-    algs:
-    - "[U'] R U2 R' U2 R U' R' "
-  - name: L2
-    algs:
-    - R' D' R U2 R' D F R F'
-- name: 8
-  cases:
-  - name: S
-    algs:
-    - "[y'] U R' U2 R U2 R' U R [y]"
-    comment: rotate to 7S
-- name: 10
-  cases:
-  - name: S
-    algs:
-    - "[U2] R U' R' U' R U R'"
-- name: 9
-  cases:
-  - name: S
-    algs:
-    - R' D' R U' R' D R F' U' F
-- name: 12
-  cases:
-  - name: S
-    algs:
-    - R' D' R U2 R' D R2 U R'
-- name: 11
-  cases:
-  - name: S
-    algs:
-    - R U2' R' U R U R' F' U' F
-- name: 14
-  cases:
-  - name: S
-    algs:
-    - "[U'] R U' R' U R U R'"
-- name: 13
-  cases:
-  - name: S
-    algs:
-    - R' D' R U R' D R F' U' F
-  - name: i2
-    algs:
-    - R' F R F' U' R' F R F' R U R'
-    comment: sledge to 25Line
-- name: 15
-  cases:
-  - name: S
-    algs:
-    - R' D' R U' R' D R U R U' R'
-    comment: standard insert
-  - name: L1
-    algs:
-    - "[U] R' F R F' U R U R'"
-  - name: L2
-    algs:
-    - R' D' R U' R' D F R F'
-    comment: comm cansel into sledge
-  - name: i2
-    algs:
-    - R U R' U2 R U' R2 F R F'
-- name: 16
-  cases:
-  - name: S
-    algs:
-    - "[U] F R' F' R2 U' R' U R' F R F'"
-  - name: L1
-    algs:
-    - R U' R' U2 F' U' F
-  - name: L2
-    algs:
-    - R' D' R U R' D R F R' F' R
-    comment: comm hedge
-- name: 17
-  cases:
-  - name: S
-    algs:
-    - R U2 R' U' R U R'
-- name: 18
-  cases:
-  - name: S
-    algs:
-    - R' F R F' R U' R' U R U' R'
-    - ''
-    comment: damian pair
-- name: 19
-  cases:
-  - name: S
-    algs:
-    - "[U] R U2' R' U R U' R'"
-  - name: i3
-    algs:
-    - "[U] R U2 R2 F R F' "
-- name: 20
-  cases:
-  - name: S
-    algs:
-    - "[y'] U' R' U2 R U' R' U R [y]"
-    comment: rotate to 19S
-  - name: i2
-    algs:
-    - r U' r' U2' M' U' M U r U r'
-- name: 21
-  cases:
-  - name: S
-    algs:
-    - "[U2] R U R' U R U' R'"
-  - name: i1
-    algs:
-    - 'r U'' R'' U2 R U r'' '
-- name: 22
-  cases:
-  - name: S
-    algs:
-    - "[U2] R' F R F' R U R' U R U' R' "
-    comment: sledge into 21S
-  - name: i2
-    algs:
-    - "[U'] F' L' U' L U' F"
-- name: 23
-  cases:
-  - name: S
-    algs:
-    - "[U] R U' R' U' R U' R' U R U' R'"
-    - R U' R' U' R' D' R U' R' D R
-    comment: 1st alg - setup to 27S 2nd alg - setup to CLS
-  - name: Line
-    algs:
-    - "[U2] r U' r' U r U r' R' F R F'"
-  - name: i1
-    algs:
-    - "[U2] r U' r' U r U r' U R U' R'"
-- name: 24
-  cases:
-  - name: S
-    algs:
-    - U' R U R2' F R F' R U' R'
-  - name: L1
-    algs:
-    - F U R U' R' F' R U' R'
-  - name: Line
-    algs:
-    - 'R U'' R'' U r U'' R'' U R U r''  '
-    comment: setup to 6L2
-- name: 25
-  cases:
-  - name: S
-    algs:
-    - "[U'] F' R U R' U' R' F R"
-    - "[U] R U' R' U R' D' R U' R' D R"
-    comment: normal insert 2nd alg - setup to CLS
-  - name: Dot
-    algs:
-    - "[U] R2 D r' U r D' R' U' R'"
-  - name: L1
-    algs:
-    - "[U'] F' U F U R U' R'"
-    comment: beginner insert without the rotation
-  - name: L2
-    algs:
-    - "[U'] F' U' F U R U R'"
-  - name: Line
-    algs:
-    - "[U'] R' F R F' R U R'"
-    comment: sledge insert
-  - name: i1
-    algs:
-    - r U r' U2 r U R' U2 R U' r'
-  - name: i2
-    algs:
-    - B' R2 U' R' U R2 B
-  - name: i3
-    algs:
-    - r' U' R' U' R' U R U r
-- name: 26
-  cases:
-  - name: S
-    algs:
-    - L E' L' U L E L'
-  - name: Line
-    algs:
-    - "[U] R U' R' F R' F' R"
-    comment: normal insert
-- name: 27
-  cases:
-  - name: S
-    algs:
-    - R U' R' U R U' R'
-  - name: i1
-    algs:
-    - R U' R2 F R F'
-- name: 28
-  cases:
-  - name: S
-    algs:
-    - "[y'] R' U R U' R' U R [y]"
-    - r U' r' U2 r U r' R' F R F'
-    comment: rotate to 27S
-- name: 30
-  cases:
-  - name: S
-    algs:
-    - R U R' U' R U R'
-- name: 29
-  cases:
-  - name: S
-    algs:
-    - R' F R F' U R U' R'
-  - name: i2
-    algs:
-    - U' R U R' U' r U' r' U2 r U r'
-- name: 32
-  cases:
-  - name: S
-    algs:
-    - "[U] R U' R' U R U' R' U R U' R'"
-    comment: or do CLS
-  - name: Dot
-    algs:
-    - "[U2] r U2' r' U2 r U' r' U2 r U2' r' "
-    - "[U2] R' F R F' U2' r U' r' U2' r U r' "
-  - name: Lne
-    algs:
-    - "[U'] F R' F' R U' R U R'"
-  - name: Lnw
-    algs:
-    - "[U'] R U R' U' R U R2 F R F'"
-    - F R' F' R2 U R' U' R U R'
-  - name: Lse
-    algs:
-    - "[U] R' F R F' U F' U' F "
-    - "[U2] F' U r' F' r U' F"
-    comment: alg2 is j slotting
-  - name: Lsw
-    algs:
-    - "[U2] F R' F' R2 U R' U R U' R'"
-  - name: V Line
-    algs:
-    - U' F' U L' U2 L U' F
-    comment: j slotting
-  - name: H Line
-    algs:
-    - "[U] R U' R' U R U' R2 F R F' "
-- name: 31
-  cases:
-  - name: 3eF
-    algs:
-    - R U' R' U F' U F
-  - name: 3eL
-    algs:
-    - "[U'] R' F R F' R U' R' "
-    comment: normal insert
-- name: 33
-  cases:
-  - name: S
-    algs:
-    - "[U'] R U' R' U2 R U' R'"
-    comment: or do CLS/Zeroing
-- name: 35
-  cases:
-  - name: 3eF
-    algs:
-    - "[U2] R U R' U' F' U F"
-    comment: U2 sexy
-  - name: 3eB
-    algs:
-    - "[U2] R U' R' U' F' U' F"
-    comment: U2 insert nonEO edge
-  - name: 3eR
-    algs:
-    - "[U'] R U R' U F' U' F"
-    comment: normal insert
-  - name: 3eL
-    algs:
-    - "[U2] R U R' F R' F' R"
-    comment: U2 sexy hedge
-- name: 34
-  cases:
-  - name: S
-    algs:
-    - "[U] R' D' R U' R' D R"
-    comment: or do CLS/Zeroing
-- name: 36
-  cases:
-  - name: 3eF
-    algs:
-    - "[U] F' U' F U' R U R'"
-- name: 38
-  cases:
-  - name: S
-    algs:
-    - R' D' R U' R' D R2 U' R' U2 R U' R'
-    comment: or do CLS
-- name: 37
-  cases:
-  - name: 3e
-    algs:
-    - "[U2] R2 U2' F R2' F' U2' R' U R'"
-    - "[U] R U R' U2' R U2' R' U F' U' F"
-    comment: 2nd is intuitive. For 1st, thumb on top = regripless
-  - name: 1e
-    algs:
-    - 'R'' F R F'' U F'' U2'' F U'' R U R'' '
-- name: 39
-  cases:
-  - name: S
-    algs:
-    - R U2' R' U R U' R' U R U R'
-    comment: or do CLS
-- name: 40
-  cases:
-  - name: 3e
-    algs:
-    - R F U R U' R' F' U' R'
-    comment: R [P oll] U' R'
-  - name: 1e
-    algs:
-    - 'r U'' r'' U2'' r U r'' R U R'' '
+1_S:
+  name: 1_S
+  algs:
+  - 
+    alg: "[U] R U' R'"
+  note: normal insert or do Winter Variation
+1_Dot:
+  name: 1_Dot
+  algs:
+  - 
+    alg: "[U2] M' U' R U' r' U2 M' U' M"
+  - 
+    alg: R' F R2 U' R' (F' S) r' F r S'
+  note: bad case, prolly better to sledge and get L 2nd alg is meme
+1_L1:
+  name: 1_L1
+  algs:
+  - 
+    alg: R' F R F'
+  - 
+    alg: M' U R U' r'
+  note: sledge (2h) m insert (oh)
+1_L2:
+  name: 1_L2
+  algs:
+  - 
+    alg: "[U] R B U' B' R'"
+1_Line:
+  name: 1_Line
+  algs:
+  - 
+    alg: "[U] F' L' U' L F"
+  - 
+    alg: R' U' F U R U' F'
+1_i1:
+  name: 1_i1
+  algs:
+  - 
+    alg: "[U] R U R' U2 R' F R F'"
+  note: setup to sledge
+1_i2:
+  name: 1_i2
+  algs:
+  - 
+    alg: "[U2] R U' R' U' R' F R F' "
+  - 
+    alg: 'R'' F R2 U R'' U'' F'' '
+1_i3:
+  name: 1_i3
+  algs:
+  - 
+    alg: U S' R U' R' S
+2_S:
+  name: 2_S
+  algs:
+  - 
+    alg: "[U'] F' U F"
+  - 
+    alg: "[U] r' D' r U' r' D r"
+2_Dot:
+  name: 2_Dot
+  algs:
+  - 
+    alg: r U r' U2 M' U M
+2_L1:
+  name: 2_L1
+  algs:
+  - 
+    alg: "[U'] r U' r' U r U r'"
+2_L2:
+  name: 2_L2
+  algs:
+  - 
+    alg: F R' F' R
+2_Line:
+  name: 2_Line
+  algs:
+  - 
+    alg: "[U'] R B U B' R'"
+  - 
+    alg: F U R' U' F' U R
+2_i1:
+  name: 2_i1
+  algs:
+  - 
+    alg: "[U] R' D' r U' r' D R"
+  note: hold EO LL edge in UB, do block comm
+2_i2:
+  name: 2_i2
+  algs:
+  - 
+    alg: "[U'] R U R2' D' r U r' D R"
+  note: setup to  2i3
+2_i3:
+  name: 2_i3
+  algs:
+  - 
+    alg: "[U'] R' D' r U r' D R"
+  note: hold EO LL edge in UB, do block comm
+4_S:
+  name: 4_S
+  algs:
+  - 
+    alg: R U R'
+  note: normal insert or do Summer Variation
+4_Dot:
+  name: 4_Dot
+  algs:
+  - 
+    alg: R' D' r U r' D R2 U R'
+4_L1:
+  name: 4_L1
+  algs:
+  - 
+    alg: "[U'] F' U2 F U R U' R'"
+  note: or insert into P oll
+4_L2:
+  name: 4_L2
+  algs:
+  - 
+    alg: R U2' R' U' R' F R F'
+  note: insert pair normally cancelled into sexy sledge oll
+4_Line:
+  name: 4_Line
+  algs:
+  - 
+    alg: U2 L F' L' U' L F L'
+4_i1:
+  name: 4_i1
+  algs:
+  - 
+    alg: S' R U R' S
+4_i2:
+  name: 4_i2
+  algs:
+  - 
+    alg: R U2 B U' B' R'
+  - 
+    alg: ''
+4_i3:
+  name: 4_i3
+  algs:
+  - 
+    alg: R U' R2' F R F' R U2' R'
+3_S:
+  name: 3_S
+  algs:
+  - 
+    alg: F' U' F
+  note: normal insert
+3_Dot:
+  name: 3_Dot
+  algs:
+  - 
+    alg: "[U2] S' R U' R' S U' R' F R F'"
+  note: or rotate to 4Dot
+3_L1:
+  name: 3_L1
+  algs:
+  - 
+    alg: "[U2] S' R U' R' S R U' R'"
+  - 
+    alg: "[U] R U2 R' U' F' U F"
+3_L2:
+  name: 3_L2
+  algs:
+  - 
+    alg: S U R U' R' S'
+3_Line:
+  name: 3_Line
+  algs:
+  - 
+    alg: "[U'] R' F R U R U' R2' F' R"
+3_i1:
+  name: 3_i1
+  algs:
+  - 
+    alg: "[y'] S' R' U' R S [y]"
+  - 
+    alg: F' U' L' U' L U F
+  note: rotate to mirror
+3_i2:
+  name: 3_i2
+  algs:
+  - 
+    alg: "[U] R2 D r' U' r D' R2'"
+3_i3:
+  name: 3_i3
+  algs:
+  - 
+    alg: "[U2] R' D' r U' r' D R2 U' R'"
+  note: hold EO LL edge in UB, do block comm
+5_S:
+  name: 5_S
+  algs:
+  - 
+    alg: "[U'] R U R' U2 R U' R'"
+5_Dot:
+  name: 5_Dot
+  algs:
+  - 
+    alg: "[U2] R2 D r' U' r D' R' U' R'"
+5_L1:
+  name: 5_L1
+  algs:
+  - 
+    alg: 'R'' D'' R U R'' D F R F'' '
+  note: comm into sledge
+6_S:
+  name: 6_S
+  algs:
+  - 
+    alg: "[y'] U R' U' R U R' U2' R [y]"
+  note: rotate to 5S
+6_L2:
+  name: 6_L2
+  algs:
+  - 
+    alg: "[U'] r U' R' U R U r'"
+6_i3:
+  name: 6_i3
+  algs:
+  - 
+    alg: R2 D r' U' r D' R' U R'
+7_S:
+  name: 7_S
+  algs:
+  - 
+    alg: "[U'] R U2 R' U2 R U' R' "
+7_L2:
+  name: 7_L2
+  algs:
+  - 
+    alg: R' D' R U2 R' D F R F'
+8_S:
+  name: 8_S
+  algs:
+  - 
+    alg: "[y'] U R' U2 R U2 R' U R [y]"
+  note: rotate to 7S
+10_S:
+  name: 10_S
+  algs:
+  - 
+    alg: "[U2] R U' R' U' R U R'"
+9_S:
+  name: 9_S
+  algs:
+  - 
+    alg: R' D' R U' R' D R F' U' F
+12_S:
+  name: 12_S
+  algs:
+  - 
+    alg: R' D' R U2 R' D R2 U R'
+11_S:
+  name: 11_S
+  algs:
+  - 
+    alg: R U2' R' U R U R' F' U' F
+14_S:
+  name: 14_S
+  algs:
+  - 
+    alg: "[U'] R U' R' U R U R'"
+13_S:
+  name: 13_S
+  algs:
+  - 
+    alg: R' D' R U R' D R F' U' F
+13_i2:
+  name: 13_i2
+  algs:
+  - 
+    alg: R' F R F' U' R' F R F' R U R'
+  note: sledge to 25Line
+15_S:
+  name: 15_S
+  algs:
+  - 
+    alg: R' D' R U' R' D R U R U' R'
+  note: standard insert
+15_L1:
+  name: 15_L1
+  algs:
+  - 
+    alg: "[U] R' F R F' U R U R'"
+15_L2:
+  name: 15_L2
+  algs:
+  - 
+    alg: R' D' R U' R' D F R F'
+  note: comm cansel into sledge
+15_i2:
+  name: 15_i2
+  algs:
+  - 
+    alg: R U R' U2 R U' R2 F R F'
+16_S:
+  name: 16_S
+  algs:
+  - 
+    alg: "[U] F R' F' R2 U' R' U R' F R F'"
+16_L1:
+  name: 16_L1
+  algs:
+  - 
+    alg: R U' R' U2 F' U' F
+16_L2:
+  name: 16_L2
+  algs:
+  - 
+    alg: R' D' R U R' D R F R' F' R
+  note: comm hedge
+17_S:
+  name: 17_S
+  algs:
+  - 
+    alg: R U2 R' U' R U R'
+18_S:
+  name: 18_S
+  algs:
+  - 
+    alg: R' F R F' R U' R' U R U' R'
+  - 
+    alg: ''
+  note: damian pair
+19_S:
+  name: 19_S
+  algs:
+  - 
+    alg: "[U] R U2' R' U R U' R'"
+19_i3:
+  name: 19_i3
+  algs:
+  - 
+    alg: "[U] R U2 R2 F R F' "
+20_S:
+  name: 20_S
+  algs:
+  - 
+    alg: "[y'] U' R' U2 R U' R' U R [y]"
+  note: rotate to 19S
+20_i2:
+  name: 20_i2
+  algs:
+  - 
+    alg: r U' r' U2' M' U' M U r U r'
+21_S:
+  name: 21_S
+  algs:
+  - 
+    alg: "[U2] R U R' U R U' R'"
+21_i1:
+  name: 21_i1
+  algs:
+  - 
+    alg: 'r U'' R'' U2 R U r'' '
+22_S:
+  name: 22_S
+  algs:
+  - 
+    alg: "[U2] R' F R F' R U R' U R U' R' "
+  note: sledge into 21S
+22_i2:
+  name: 22_i2
+  algs:
+  - 
+    alg: "[U'] F' L' U' L U' F"
+23_S:
+  name: 23_S
+  algs:
+  - 
+    alg: "[U] R U' R' U' R U' R' U R U' R'"
+  - 
+    alg: R U' R' U' R' D' R U' R' D R
+  note: 1st alg - setup to 27S 2nd alg - setup to CLS
+23_Line:
+  name: 23_Line
+  algs:
+  - 
+    alg: "[U2] r U' r' U r U r' R' F R F'"
+23_i1:
+  name: 23_i1
+  algs:
+  - 
+    alg: "[U2] r U' r' U r U r' U R U' R'"
+24_S:
+  name: 24_S
+  algs:
+  - 
+    alg: U' R U R2' F R F' R U' R'
+24_L1:
+  name: 24_L1
+  algs:
+  - 
+    alg: F U R U' R' F' R U' R'
+24_Line:
+  name: 24_Line
+  algs:
+  - 
+    alg: 'R U'' R'' U r U'' R'' U R U r''  '
+  note: setup to 6L2
+25_S:
+  name: 25_S
+  algs:
+  - 
+    alg: "[U'] F' R U R' U' R' F R"
+  - 
+    alg: "[U] R U' R' U R' D' R U' R' D R"
+  note: normal insert 2nd alg - setup to CLS
+25_Dot:
+  name: 25_Dot
+  algs:
+  - 
+    alg: "[U] R2 D r' U r D' R' U' R'"
+25_L1:
+  name: 25_L1
+  algs:
+  - 
+    alg: "[U'] F' U F U R U' R'"
+  note: beginner insert without the rotation
+25_L2:
+  name: 25_L2
+  algs:
+  - 
+    alg: "[U'] F' U' F U R U R'"
+25_Line:
+  name: 25_Line
+  algs:
+  - 
+    alg: "[U'] R' F R F' R U R'"
+  note: sledge insert
+25_i1:
+  name: 25_i1
+  algs:
+  - 
+    alg: r U r' U2 r U R' U2 R U' r'
+25_i2:
+  name: 25_i2
+  algs:
+  - 
+    alg: B' R2 U' R' U R2 B
+25_i3:
+  name: 25_i3
+  algs:
+  - 
+    alg: r' U' R' U' R' U R U r
+26_S:
+  name: 26_S
+  algs:
+  - 
+    alg: L E' L' U L E L'
+26_Line:
+  name: 26_Line
+  algs:
+  - 
+    alg: "[U] R U' R' F R' F' R"
+  note: normal insert
+27_S:
+  name: 27_S
+  algs:
+  - 
+    alg: R U' R' U R U' R'
+27_i1:
+  name: 27_i1
+  algs:
+  - 
+    alg: R U' R2 F R F'
+28_S:
+  name: 28_S
+  algs:
+  - 
+    alg: "[y'] R' U R U' R' U R [y]"
+  - 
+    alg: r U' r' U2 r U r' R' F R F'
+  note: rotate to 27S
+30_S:
+  name: 30_S
+  algs:
+  - 
+    alg: R U R' U' R U R'
+29_S:
+  name: 29_S
+  algs:
+  - 
+    alg: R' F R F' U R U' R'
+29_i2:
+  name: 29_i2
+  algs:
+  - 
+    alg: U' R U R' U' r U' r' U2 r U r'
+32_S:
+  name: 32_S
+  algs:
+  - 
+    alg: "[U] R U' R' U R U' R' U R U' R'"
+  note: or do CLS
+32_Dot:
+  name: 32_Dot
+  algs:
+  - 
+    alg: "[U2] r U2' r' U2 r U' r' U2 r U2' r' "
+  - 
+    alg: "[U2] R' F R F' U2' r U' r' U2' r U r' "
+32_Lne:
+  name: 32_Lne
+  algs:
+  - 
+    alg: "[U'] F R' F' R U' R U R'"
+32_Lnw:
+  name: 32_Lnw
+  algs:
+  - 
+    alg: "[U'] R U R' U' R U R2 F R F'"
+  - 
+    alg: F R' F' R2 U R' U' R U R'
+32_Lse:
+  name: 32_Lse
+  algs:
+  - 
+    alg: "[U] R' F R F' U F' U' F "
+  - 
+    alg: "[U2] F' U r' F' r U' F"
+  note: alg2 is j slotting
+32_Lsw:
+  name: 32_Lsw
+  algs:
+  - 
+    alg: "[U2] F R' F' R2 U R' U R U' R'"
+32_V Line:
+  name: 32_V Line
+  algs:
+  - 
+    alg: U' F' U L' U2 L U' F
+  note: j slotting
+32_H Line:
+  name: 32_H Line
+  algs:
+  - 
+    alg: "[U] R U' R' U R U' R2 F R F' "
+31_3eF:
+  name: 31_3eF
+  algs:
+  - 
+    alg: R U' R' U F' U F
+31_3eL:
+  name: 31_3eL
+  algs:
+  - 
+    alg: "[U'] R' F R F' R U' R' "
+  note: normal insert
+33_S:
+  name: 33_S
+  algs:
+  - 
+    alg: "[U'] R U' R' U2 R U' R'"
+  note: or do CLS/Zeroing
+35_3eF:
+  name: 35_3eF
+  algs:
+  - 
+    alg: "[U2] R U R' U' F' U F"
+  note: U2 sexy
+35_3eB:
+  name: 35_3eB
+  algs:
+  - 
+    alg: "[U2] R U' R' U' F' U' F"
+  note: U2 insert nonEO edge
+35_3eR:
+  name: 35_3eR
+  algs:
+  - 
+    alg: "[U'] R U R' U F' U' F"
+  note: normal insert
+35_3eL:
+  name: 35_3eL
+  algs:
+  - 
+    alg: "[U2] R U R' F R' F' R"
+  note: U2 sexy hedge
+34_S:
+  name: 34_S
+  algs:
+  - 
+    alg: "[U] R' D' R U' R' D R"
+  note: or do CLS/Zeroing
+36_3eF:
+  name: 36_3eF
+  algs:
+  - 
+    alg: "[U] F' U' F U' R U R'"
+38_S:
+  name: 38_S
+  algs:
+  - 
+    alg: R' D' R U' R' D R2 U' R' U2 R U' R'
+  note: or do CLS
+37_3e:
+  name: 37_3e
+  algs:
+  - 
+    alg: "[U2] R2 U2' F R2' F' U2' R' U R'"
+  - 
+    alg: "[U] R U R' U2' R U2' R' U F' U' F"
+  note: 2nd is intuitive. For 1st, thumb on top = regripless
+37_1e:
+  name: 37_1e
+  algs:
+  - 
+    alg: 'R'' F R F'' U F'' U2'' F U'' R U R'' '
+39_S:
+  name: 39_S
+  algs:
+  - 
+    alg: R U2' R' U R U' R' U R U R'
+  note: or do CLS
+40_3e:
+  name: 40_3e
+  algs:
+  - 
+    alg: R F U R U' R' F' U' R'
+  note: R [P oll] U' R'
+40_1e:
+  name: 40_1e
+  algs:
+  - 
+    alg: 'r U'' r'' U2'' r U r'' R U R'' '

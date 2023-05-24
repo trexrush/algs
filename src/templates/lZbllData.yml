@@ -1,0 +1,40 @@
+---
+Pure_S:
+  name: Pure_S
+  algs:
+  - alg: "[U2] R U2' R' U2 R' U' R U R U' R' U2 R' U2' R"
+  note: U2 is R index eido/double flick, U2' is left double flick
+Pure_H:
+  name: Pure_H
+  algs:
+  - alg: "[U2] R U R' U (R U' R' U) (R U' R' U) R U2' R'"
+Diag_BarA:
+  name: Diag_BarA
+  algs:
+  - alg: r U2' R2' F R F' R U2' r'
+Diag_ABar:
+  name: Diag_ABar
+  algs:
+  - alg: "[U] l' U2 L2 F' L' F L' U2 l"
+  - alg: "[U'] L U L' U' L F L' U' L U L F' L2'"
+Stand_S:
+  name: Stand_S
+  algs:
+  - alg: F R' F' r U R U' r'
+  - alg: "[U'] F' r' U' L D L' U r"
+Sleep_S:
+  name: Sleep_S
+  algs:
+  - alg: "[U2] r' U L D' L' U' r F"
+HAnti_H:
+  name: HAnti_H
+  algs:
+  - alg: "[U2] L U' L' U L U' F L' U2' L U2' L F' L2'"
+HAnti_VArrow:
+  name: HAnti_VArrow
+  algs:
+  - alg: "[U2] L U2' L D L' U2' L D' L2'"
+VAnti_HArrow:
+  name: VAnti_HArrow
+  algs:
+  - alg: "[U] L' U2' L' D' L U2' L' D L2"

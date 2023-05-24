@@ -1,11 +1,11 @@
 ---
 import { EG1NoGrouping } from "../../templates/EG1";
-import VerticalLayout from "../../layouts/VerticalLayout.astro";
+import NewVerticalLayout from "../../layouts/NewVerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
 import Page from "../../layouts/Page.astro";
 ---
 
 <Page title={'EG-1'}>
   <Navbar slot="navbar" />
-  <VerticalLayout options={EG1NoGrouping.options} sets={EG1NoGrouping.sets} />
+  <NewVerticalLayout options={EG1NoGrouping.options} sets={EG1NoGrouping.sets} />
 </Page>

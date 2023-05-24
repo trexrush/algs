@@ -1,14 +1,10 @@
-import type { IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2 } from "../scripts/types"
+import type { IAlgSetV2, IOptions } from "../scripts/types"
 import { createOptions } from "../scripts/utilities";
-import { sheetURLV2 } from "./url";
+//@ts-expect-error
+import yml from './CLLData.yml'
 
-const response = await fetch(sheetURLV2 + "?name=CLL")
-const res: Awaited<ISheetsResponse> = await response.json()
-let _: ICaseListV2 = res.caseList
-
-
-const CLLOptions: IOptions = createOptions({
-  name: "CLL",
+const Options: IOptions = createOptions({
+  name: "EG1",
   puzzle: '2x2x2',
   imgSource: "vc",
   vcparams: {
@@ -17,15 +13,17 @@ const CLLOptions: IOptions = createOptions({
   },
   twistyplayerparams: {
     rot: "x2 y'",
-  },
+  }
 })
 
+const _:IAlgSetV2 = yml
+
 const CLLNoGrouping: IAlgSetV2 = {
-    options: CLLOptions,
+    options: Options,
     sets: [
         {
             name: "WIP Format",
-            children: res && Object.assign(_)
+            children: Object.assign(_)
         },
     ]
 }

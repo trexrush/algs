@@ -1,13 +1,9 @@
-import type { IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2 } from "../scripts/types"
+import type { IAlgSetV2, IOptions } from "../scripts/types"
 import { createOptions } from "../scripts/utilities";
-import { sheetURLV2 } from "./url";
+//@ts-expect-error
+import yml from './EG1Data.yml'
 
-const response = await fetch(sheetURLV2 + "?name=EG1")
-const res: Awaited<ISheetsResponse> = await response.json()
-let _: ICaseListV2 = res.caseList
-
-
-const EG1Options: IOptions = createOptions({
+const Options: IOptions = createOptions({
   name: "EG1",
   puzzle: '2x2x2',
   imgSource: "vc",
@@ -20,12 +16,14 @@ const EG1Options: IOptions = createOptions({
   }
 })
 
+const _:IAlgSetV2 = yml
+
 const EG1NoGrouping: IAlgSetV2 = {
-    options: EG1Options,
+    options: Options,
     sets: [
         {
             name: "WIP Format",
-            children: res && Object.assign(_)
+            children: Object.assign(_)
         },
     ]
 }

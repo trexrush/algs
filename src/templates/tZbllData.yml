@@ -1,0 +1,469 @@
+---
+Pure_S:
+  name: Pure_S
+  algs:
+  - 
+    alg: "[U'] (R U R' U R U2' R') (L' U' L U' L' U2 L)"
+  - 
+    alg: "[U2] L2 D L' U L D' F L' U' L' U L F' L'"
+    isLefty: true
+Pure_H:
+  name: Pure_H
+  algs:
+  - 
+    alg: "[U2] x' D' L' U L D L2' D2 L U' L' D2 L2 x"
+    isLefty: true
+  - 
+    alg: "[U2] R U' R' U2 R U R' U R' U' R U R U R' U' R' U R"
+    tags: ["OH"]
+  note: I use alg 1, alg 2 is a cope 2gen backup and maybe for OH (I use LU for OH
+    so pretend its mirrored)  EDIT- might switch back to 2gen
+Pure_Z:
+  name: Pure_Z
+  algs:
+  - 
+    alg: R U2 R' U' R U' R2 U2 R U R' U R
+Pure_AntiZ:
+  name: Pure_AntiZ
+  algs:
+  - 
+    alg: L' U2 L U L' U L2 U2 L' U' L U' L'
+    isLefty: true
+Pure_BarA:
+  name: Pure_BarA
+  algs:
+  - 
+    alg: "[U2]  L' U L U2 L' U' L U2 L' U' L U' L' U L"
+    isLefty: true
+  - 
+    alg: R' U R U2 R' U' R U2 R' U' R U' R' U R
+Pure_BarO:
+  name: Pure_BarO
+  algs:
+  - 
+    alg: L U' L' U2 L U L' U2 L U L' U L U' L'
+    isLefty: true
+  - 
+    alg: "[U2] R U' R' U2 R U R' U2 R U R' U R U' R' "
+Pure_HAnti:
+  name: Pure_HAnti
+  algs:
+  - 
+    alg: "(R U2 R' U' R U' R') U (R U R' U R U2 R')"
+Pure_OBar:
+  name: Pure_OBar
+  algs:
+  - 
+    alg: "(L' U2 L U L' U L) U' (L' U' L U' L' U2 L)"
+    isLefty: true
+Pure_HArrow:
+  name: Pure_HArrow
+  algs:
+  - 
+    alg: "[U'] R U R' U R U' R' U R' U' R2 U' R2 U2 R"
+Pure_ABar:
+  name: Pure_ABar
+  algs:
+  - 
+    alg: "[U] L' U' L U' L' U L U' L U L2 U L2 U2 L'"
+    isLefty: true
+Pure_VAnti:
+  name: Pure_VAnti
+  algs:
+  - 
+    alg: R U' R2' F R F' R U' B U' B' U' R'
+Pure_VArrow:
+  name: Pure_VArrow
+  algs:
+  - 
+    alg: "[U'] R' U' R2 U R2' U R2 U2' R' U R' U R"
+Diag_BarO:
+  name: Diag_BarO
+  algs:
+  - 
+    alg: L U' L2 D' l U2 l' D L2 U L'
+    isLefty: true
+  - 
+    alg: "[U2] R U' R2 D' r U2 r' D R2 U R'"
+Diag_OBar:
+  name: Diag_OBar
+  algs:
+  - 
+    alg: "[U2] L' U L2 D l' U2 l D' L2 U' L"
+    isLefty: true
+  - 
+    alg: R' U R2 D r' U2 r D' R2 U' R
+Diag_S:
+  name: Diag_S
+  algs:
+  - 
+    alg: "[U'] L' U L2 D l' U2 l D' L2 U L U L' U L"
+    isLefty: true
+Diag_HAnti:
+  name: Diag_HAnti
+  algs:
+  - 
+    alg: "[U'] L' U' L U' L' U' L2 D l' U2 l D' L2 U' L"
+    isLefty: true
+  - 
+    alg: "[U'] L U' L2 D' l U2 l' D L2 U' L' U' L U' L'"
+    isLefty: true
+  note: in process of switching to alg 1 (its just the inverse which flows nicer)
+Diag_AntiZ:
+  name: Diag_AntiZ
+  algs:
+  - 
+    alg: L U L' U2' L' D' L U L' D L2 U' L' U L U' L'
+    isLefty: true
+  - 
+    alg: "[U2] R U R' U2 R' D' R U R' D R2 U' R' U R U' R'"
+Diag_ABar:
+  name: Diag_ABar
+  algs:
+  - 
+    alg: "[U2] L' U' L U2 L D L' U' L D' L2 U L U' L' U L"
+    isLefty: true
+Diag_BarA:
+  name: Diag_BarA
+  algs:
+  - 
+    alg: "[U] R U R' U' R U R2 D' R U' R' D R U2 R U' R'"
+  - 
+    alg: "[U'] L U L' U' L U L2' D' L U' L' D L U2 L U' L'"
+    isLefty: true
+Diag_H:
+  name: Diag_H
+  algs:
+  - 
+    alg: "[U'] L' U' L U L' U' L2 D L' U L D' L' U2 L' U L"
+    isLefty: true
+Diag_HArrow:
+  name: Diag_HArrow
+  algs:
+  - 
+    alg: "[U2] z' D L2 D' L U L' D L U2 L D' L' U z"
+    isLefty: true
+  - 
+    alg: z' D' L2 D L' U' L D' L' U2 L' D L U' z
+    isLefty: true
+  note: might learn 2nd alg at some point bc better recog -> alg than my main alg
+Diag_VArrow:
+  name: Diag_VArrow
+  algs:
+  - 
+    alg: f' U' F R' D' R U2 R' D R U' f R' F' R
+  - 
+    alg: "[U] L U2 L D L2 U l F' L F l' U L D' L2"
+    isLefty: true
+  - 
+    alg: "[U'] L U' L' U L U' L' U' L U2' L' U L U L D L' U L D' L2'"
+    isLefty: true
+  note: 'aka "that bitch ass T case" bc it sucks so much  main alg is 1st, 2nd is
+    backup, third is a 21 mover that most ppl use, i should learn it since less risky '
+Diag_Z:
+  name: Diag_Z
+  algs:
+  - 
+    alg: L (U' D) L' U2 L D' L U L' U2 L U L2
+    isLefty: true
+Diag_VAnti:
+  name: Diag_VAnti
+  algs:
+  - 
+    alg: "[U'] L2 F' L' U' L' U L F' L' U2 L U2 L F2 L2"
+    isLefty: true
+  - 
+    alg: "[U2] L' (D' U) L U2 L' D L' U' L U2 L' U' L2"
+    isLefty: true
+  note: might learn 2nd alg
+AdjB_S:
+  name: AdjB_S
+  algs:
+  - 
+    alg: "[U2] L' U L U2 (R' L') U L U' R "
+    isLefty: true
+AdjB_BarA:
+  name: AdjB_BarA
+  algs:
+  - 
+    alg: "[U2] R U' R' U2 L R U' R' U L'"
+AdjB_BarO:
+  name: AdjB_BarO
+  algs:
+  - 
+    alg: "[U2] R' U' R2 U R' F' R U R' U' R' F R2 U' R' U' R' U R"
+AdjB_OBar:
+  name: AdjB_OBar
+  algs:
+  - 
+    alg: "[U2] r U' r U2' R' F R U2' r2' F "
+AdjB_Z:
+  name: AdjB_Z
+  algs:
+  - 
+    alg: "[U] (L' U' L' D' L U L' D L) U2 L U L' U L"
+    isLefty: true
+AdjB_ABar:
+  name: AdjB_ABar
+  algs:
+  - 
+    alg: "[U] L U L D L' U' L D' L' U2 L' U' L U' L'"
+    isLefty: true
+  - 
+    alg: "[U'] R U R D R' U' R D' R' U2 R' U' R U' R'"
+AdjB_H:
+  name: AdjB_H
+  algs:
+  - 
+    alg: "[U2] L D L' U' L D' L' (U' L' U L) (U' L' U L) U L' U' L"
+    isLefty: true
+  - 
+    alg: R D R' U' R D' R' U' R' U R U' R' U R U R' U' R
+AdjB_HAnti:
+  name: AdjB_HAnti
+  algs:
+  - 
+    alg: F U' R' U2 R U F' R' U' R U R' U R
+AdjB_VAnti:
+  name: AdjB_VAnti
+  algs:
+  - 
+    alg: "[U2] R' U' R U' R' U R F U' R' U2 R U F'"
+AdjB_AntiZ:
+  name: AdjB_AntiZ
+  algs:
+  - 
+    alg: L' U L U' (L' U' L U) (L' U' L U) L D L' U L D' L'
+    isLefty: true
+AdjB_HArrow:
+  name: AdjB_HArrow
+  algs:
+  - 
+    alg: R' F' R U' R' D R U2 R' (U' D') R' F R U R
+  note: starts at home grip, do U and D with L hand while regripping R hand
+AdjB_VArrow:
+  name: AdjB_VArrow
+  algs:
+  - 
+    alg: L F L' U L D' L' U2 L (U D) L F' L' U' L'
+    isLefty: true
+  note: starts at home grip, do U and D with R hand while regripping L hand
+AdjF_AntiZ:
+  name: AdjF_AntiZ
+  algs:
+  - 
+    alg: "[U2] F R U R' U' R U' R' U' R U R' F'"
+AdjF_Z:
+  name: AdjF_Z
+  algs:
+  - 
+    alg: r U2 R2 F R F' U2 r' F R U R U' R' F'
+  - 
+    alg: ''
+    isLefty: true
+AdjF_S:
+  name: AdjF_S
+  algs:
+  - 
+    alg: "[U] r' U2 L' D2 L U2 L' D2 L2 x"
+    isLefty: true
+AdjF_H:
+  name: AdjF_H
+  algs:
+  - 
+    alg: "[U] r U2 L D2 L' U2 L D2 L2 x'"
+AdjF_BarA:
+  name: AdjF_BarA
+  algs:
+  - 
+    alg: "[U] L F2' L' U L2 F2' L2' U L U2' L F2' L2' "
+    isLefty: true
+AdjF_OBar:
+  name: AdjF_OBar
+  algs:
+  - 
+    alg: "[U] L' U' L2 D L' U2 L D' L' U2 L' U' L U L' U L"
+    isLefty: true
+AdjF_BarO:
+  name: AdjF_BarO
+  algs:
+  - 
+    alg: "[U] R U R' U R' D' R U' R' D R U R U2 R'"
+AdjF_HAnti:
+  name: AdjF_HAnti
+  algs:
+  - 
+    alg: "[U'] L' U' L U' L D L' U L D' L' U' L' U2 L"
+    isLefty: true
+AdjF_VArrow:
+  name: AdjF_VArrow
+  algs:
+  - 
+    alg: 'L U'' L2'' D'' L U'' L'' D L U'' L U L'' U L U L'' '
+    isLefty: true
+AdjF_ABar:
+  name: AdjF_ABar
+  algs:
+  - 
+    alg: "[U2] L' U L2 D L' U L D' L' U L' U' L U' L' U' L"
+    isLefty: true
+  - 
+    alg: " [U2] (L' U2 L U L' U L2) x (U R' U' r' F R F')"
+    isLefty: true
+AdjF_VAnti:
+  name: AdjF_VAnti
+  algs:
+  - 
+    alg: "[U] R' U' R U' F U' R' U R U F' R' U R"
+AdjF_HArrow:
+  name: AdjF_HArrow
+  algs:
+  - 
+    alg: "[U'] L U L' U F' U L U' L' U' F L U' L'"
+    isLefty: true
+AdjL_VArrow:
+  name: AdjL_VArrow
+  algs:
+  - 
+    alg: "[U2]  r' U' L D' L' U L D x"
+AdjL_VAnti:
+  name: AdjL_VAnti
+  algs:
+  - 
+    alg: "[U'] R U2 R' U2 R' F R U R U' R' F'"
+AdjL_S:
+  name: AdjL_S
+  algs:
+  - 
+    alg: L' U' L (U D') L U' L U L U' L2 D
+    isLefty: true
+  - 
+    alg: L' U' L (U D') L U' L U L3' U' L2' D
+    isLefty: true
+  note: '2nd alg is the execution of the 1st (visualcube doesnt support L3 or L3'') '
+AdjL_ABar:
+  name: AdjL_ABar
+  algs:
+  - 
+    alg: "[U] L' D' L U L' D L2 U' L' U L U L' U' L U L'"
+    isLefty: true
+AdjL_AntiZ:
+  name: AdjL_AntiZ
+  algs:
+  - 
+    alg: "[U'] F' U' L' U2 L U' L' U' L F"
+    isLefty: true
+AdjL_BarO:
+  name: AdjL_BarO
+  algs:
+  - 
+    alg: "[U'] R U S' R' U' R S R2 F R F'"
+AdjL_BarA:
+  name: AdjL_BarA
+  algs:
+  - 
+    alg: "[U] R U R' U R U R' U2 L R U' R' U L'"
+AdjL_OBar:
+  name: AdjL_OBar
+  algs:
+  - 
+    alg: L U2 L' F' U L U' L' U' F L U' L'
+    isLefty: true
+AdjL_HArrow:
+  name: AdjL_HArrow
+  algs:
+  - 
+    alg: "(R' U' R U') (R2' F' R U R U' R' F) (U R U' R' U2 R)"
+AdjL_H:
+  name: AdjL_H
+  algs:
+  - 
+    alg: "[U'] B' U' R U R' B R U R' U' R U' R'"
+    isLefty: true
+AdjL_HAnti:
+  name: AdjL_HAnti
+  algs:
+  - 
+    alg: "[U] L U' L' U' L U L D L' U2 L D' L' U' L'"
+    isLefty: true
+AdjL_Z:
+  name: AdjL_Z
+  algs:
+  - 
+    alg: "[U2] F R U R' U' R' F' U2 R U R U' R2 U2 R"
+AdjR_S:
+  name: AdjR_S
+  algs:
+  - 
+    alg: L' U' L' D' L U L' D L2
+    isLefty: true
+AdjR_OBar:
+  name: AdjR_OBar
+  algs:
+  - 
+    alg: "[U] L' U2 L U2 L F' L' U' L' U L F"
+    isLefty: true
+AdjR_ABar:
+  name: AdjR_ABar
+  algs:
+  - 
+    alg: "[U2] L D' L2 U2 L U2 (L' U' L U) (L' U') L2 D L'"
+    isLefty: true
+AdjR_BarO:
+  name: AdjR_BarO
+  algs:
+  - 
+    alg: "[U] L D L' U' L D' L2 U L U' (L' U' L U) (L' U' L) "
+    isLefty: true
+AdjR_BarA:
+  name: AdjR_BarA
+  algs:
+  - 
+    alg: "[U] F U R U2 R' U R U R' F'"
+AdjR_AntiZ:
+  name: AdjR_AntiZ
+  algs:
+  - 
+    alg: R U R' U' R U' R' U' F R U R' U' R' F' R
+  - 
+    alg: "[U] L' U' S L U L' S' L2 F' L' F"
+    isLefty: true
+  note: 1st - main 2nd - ideal but lefty S is hard for me
+AdjR_VArrow:
+  name: AdjR_VArrow
+  algs:
+  - 
+    alg: "[U'] L' U' L U' L' U' L U2 (R' L') U L U' R"
+    isLefty: true
+AdjR_Z:
+  name: AdjR_Z
+  algs:
+  - 
+    alg: R' U2 R F U' R' U R U F' R' U R
+  - 
+    alg: "[U'] L2 U' L U L U' L (2') L U2 L' D"
+    isLefty: true
+AdjR_H:
+  name: AdjR_H
+  algs:
+  - 
+    alg: "(L U L' U) (L2 F L' U' L' U L F') (U' L' U L U2 L')"
+    isLefty: true
+AdjR_VAnti:
+  name: AdjR_VAnti
+  algs:
+  - 
+    alg: "[U] f R U' R' U f' L' U' L U L' U L"
+    isLefty: true
+AdjR_HArrow:
+  name: AdjR_HArrow
+  algs:
+  - 
+    alg: "[U] L' U L U L' U' L' D' L U2 L' D L U L"
+    isLefty: true
+AdjR_HAnti:
+  name: AdjR_HAnti
+  algs:
+  - 
+    alg: "[U2] F' L' U' L U L F U2 L' U' L' U L2 U2 L'"
+    isLefty: true

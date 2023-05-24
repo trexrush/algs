@@ -1,6 +1,7 @@
-import type { IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2 } from "../scripts/types"
+import type { IAlgSetV2, IOptions, ICaseListV2 } from "../scripts/types"
 import { createOptions } from "../scripts/utilities";
-import { sheetURLV2 } from "./url";
+//@ts-expect-error
+import yml from './lZbllData.yml'
 
 const Options: IOptions = createOptions({
     name: "ZBLL",
@@ -11,11 +12,7 @@ const Options: IOptions = createOptions({
     },
 })
 
-const response = await fetch(sheetURLV2 + "?name=L_ZBLL")
-const res: Awaited<ISheetsResponse> = await response.json()
-console.log(res)
-
-let _: ICaseListV2 = res.caseList
+let _: ICaseListV2 = yml
 
 // TODO: check for errors, though not high priority since these if these calls fail, the site wont build
 const LNoGrouping: IAlgSetV2 = {
@@ -23,7 +20,7 @@ const LNoGrouping: IAlgSetV2 = {
     sets: [
         {
             name: "WIP Format",
-            children: res && Object.assign(_)
+            children: Object.assign(_)
         },
     ]
 }

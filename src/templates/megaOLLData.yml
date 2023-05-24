@@ -109,7 +109,7 @@
     comment: 3x3 transfer (h)
 '4C':
     name: 4C
-    altNames: ['Hand']
+    altNames: ['Hand', 'Turtle']
     algs:
     -
      alg: L' U' L U' L' U' L U L' U2 L

@@ -1,0 +1,139 @@
+---
+Pure_S:
+  name: Pure_S
+  algs:
+  - alg: "(R U2' R' U' R U' R') U (L' U' L U' L' U2 L)"
+  note: 'Back AS U'' Front S '
+Pure_H:
+  name: Pure_H
+  algs:
+  - alg: "(L' U2 L U L' U L) U' (R U R' U R U2' R')"
+  - alg: "(L' U2 L U L' U L) U (L U L' U L U2 L')"
+  note: 'Left AS U'' Right S '
+Pure_Twist:
+  name: Pure_Twist
+  algs:
+  - alg: L' U' L U' L U L2' U L U' L U L' U' L U L' U' L U' L'
+Pure_AntiStair:
+  name: Pure_AntiStair
+  algs:
+  - alg: "(L' U' L U' L' U2 L) U (L U2 L' U' L U' L')"
+  - alg: "(L' U' L U' L' U2 L) U' (R U2' R' U' R U' R')"
+  note: Left S U Left Back AS Left S U' Right AS
+Pure_BarA:
+  name: Pure_BarA
+  algs:
+  - alg: L' U' L U' L' U L U' L' U2 L
+  note: Front S x2
+Pure_BarO:
+  name: Pure_BarO
+  algs:
+  - alg: L U2 L' U' L U L' U' L U' L'
+  note: Back AS x2
+Pure_VBeak:
+  name: Pure_VBeak
+  algs:
+  - alg: L' U2 L U L' U' L U L' U L
+  note: Front AS x2
+Pure_OBarber:
+  name: Pure_OBarber
+  algs:
+  - alg: L U L' U L U' L' U L U2' L'
+  - alg: "[U2] R U R' U R U' R' U R U2' R'"
+  note: 'Back S x2 Righty S x2 '
+Diag_Twist:
+  name: Diag_Twist
+  algs:
+  - alg: F' L U' L' U2' L2 U L' U2 L U L2' U' F
+  - alg: f' L' f U' L U' L' U L2 F' L' F L'
+Diag_H:
+  name: Diag_H
+  algs:
+  - alg: l' U2 L2 F' L' F L' U2 l R U2 R' U' R U' R'
+  - alg: L' U L2 U F2 U L2 U' L2 U' F2 L2 U' L
+Diag_VBeak:
+  name: Diag_VBeak
+  algs:
+  - alg: F' U L2 U' L' U2' L U' L2' U2 L U L' F
+  - alg: L F' L F L2 U' L U L' U f' L f
+  note: thumb on top, use thumbs for F moves
+Diag_BarO:
+  name: Diag_BarO
+  algs:
+  - alg: L' U R U' L U (R' L') U R U' L U R'
+  - alg: F R' F R F' R U2 R' F R' F' R F'
+  - alg: x' U L' U L U' L F2 L' U L' U' L U' x
+Diag_HAnti:
+  name: Diag_HAnti
+  algs:
+  - alg: r U2 R2' F R F' R U2 r' L' U2 L U L' U L
+Diag_VArrow:
+  name: Diag_VArrow
+  algs:
+  - alg: 'l'' U2 L2 F'' L'' F L'' U2 l R U R'' U R U2 R'' '
+Diag_UpArrow:
+  name: Diag_UpArrow
+  algs:
+  - alg: r U2' R2' F R F' R U2' r' L' U' L U' L' U2' L
+Diag_OBarber:
+  name: Diag_OBarber
+  algs:
+  - alg: F U R U' R' U R U' R' U R U' R' F'
+  - alg: F' U' L' U L U' L' U L U' L' U L F
+FBar_S:
+  name: FBar_S
+  algs:
+  - alg: F R' F' r U R U' r' L' U2 L U L' U L
+FBar_H:
+  name: FBar_H
+  algs:
+  - alg: F' U L' U2' L U2' L' U L U L' U' L U' F
+  - alg: l D l2' B' l2 F' l2' B2' l2 F' D' l'
+FBar_Twist:
+  name: FBar_Twist
+  algs:
+  - alg: L U2' L' U' L U' L D' L U' L' D L U L
+  - alg: "[U'] L' U2' L2 F' U L2' U L2 U' F U' L'"
+  - alg: "[U] L D' L2' U L2' D L' U L D' L2' U2' L2' D L'"
+FBar_AntiStair:
+  name: FBar_AntiStair
+  algs:
+  - alg: l F2' M' D' L2' U' L2 D F2' L'
+  - alg: L U2' L' U2' L2' F L' U' L' U L F' U' L'
+FBar_BarA:
+  name: FBar_BarA
+  algs:
+  - alg: L' F' L2 U L2' U L2 U2 L2' U F L
+  - alg: "[U'] L D2' L' U' R' U R L D2' L' U R' U2' R"
+  note: '1st alg prob better but 2ng alg fun(ny)  '
+FBar_BarO:
+  name: FBar_BarO
+  algs:
+  - alg: L U2' L2' U' L2' U' L' U2' L F' L' U' L' U L F
+FBar_VBeak:
+  name: FBar_VBeak
+  algs:
+  - alg: F L' U2 L U2' L F' L' U' L' U' L U L' U L
+FBar_HBeak:
+  name: FBar_HBeak
+  algs:
+  - alg: L' U2' L U L' U L' D L' U L D' L' U' L'
+FBar_VArrow:
+  name: FBar_VArrow
+  algs:
+  - alg: F' L' U L U' L' U2' L U L' U' L U F
+FBar_UpArrow:
+  name: FBar_UpArrow
+  algs:
+  - alg: L' U' L U' L' U L2 F L' U2' L' U2' L F' L' U L
+FBar_HAnti:
+  name: FBar_HAnti
+  algs:
+  - alg: F' r U R' U' r' F R2 U2 R' U' R U' R'
+FBar_OBarber:
+  name: FBar_OBarber
+  algs:
+  - alg: L' U2' L U L' U' L U F L' U' L U L F' L2' U L
+  - alg: l' U2' L' D' L U L' (U D) l F' L F
+  note: 'AS x2 cancelled into Jperm 2nd alg faster and slightly safer but also not
+    movespam '
