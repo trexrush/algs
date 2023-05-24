@@ -12,11 +12,20 @@ const { set, options, size } = Astro.props
 
 <div
   is="collapsible-set"
-  class=" bg-stone-900/[.07] dark:bg-stone-50/[.07] w-[95%] rounded-xl shadow-xl mb-5"
+  class=" flex flex-col justify-center items-center w-[95%] mb-5 rounded-xl shadow-xlbg-stone-900/[.07] dark:bg-stone-50/[.07] "
 >
-  <div class="toggle text-xl sm:text-3xl my-2 w-full text-center cursor-pointer font-bold hover:font-extrabold">
-    {set.name}
+  <div class="my-2 flex gap-5 w-fit items-baseline">
+    <div class="toggle text-xl sm:text-3xl cursor-pointer font-bold hover:font-extrabold">
+      {set.name}
+    </div>
+    <span class=" dark:text-stone-500 text-lg">
+      AKA
+    {set.altNames?.map((altName) => {
+      return "\"" + altName + "\" "
+    })}
+    </span>
   </div>
+
   <div class="collapsible w-full flex flex-col [&>*]:mb-5 items-center">
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
