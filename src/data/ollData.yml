@@ -137,7 +137,7 @@
         setup: U2
         alg: "[HEDGE] U S' R U' R' S"
     - 
-        alg: "[SEXY] [SLEDGE] U2' [SLEDGE]"
+        alg: "[SU] [SLEDGE] U2' [SLEDGE]"
 '18':
     name: '18'
     algs:
