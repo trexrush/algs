@@ -1,4 +1,4 @@
-import type { IAlgSetV2, ICaseListV2, IOptions } from "../scripts/types"
+import type { IAlgSet, ICaseList, IOptions } from "../scripts/types"
 //@ts-expect-error
 import yml from './megaOLLData.yml'
 
@@ -16,9 +16,9 @@ const Options: IOptions = {
     },
 }
 
-let _: ICaseListV2 = yml
+let _: ICaseList = yml
 
-const MegaOLLNoGrouping: IAlgSetV2 = {
+const MegaOLLNoGrouping: IAlgSet = {
   options: Options,
   sets: [
     {
@@ -29,7 +29,7 @@ const MegaOLLNoGrouping: IAlgSetV2 = {
 }
 
 //TODO: add
-// const MegaOLLGroupByNumber: IAlgSetV2 = {
+// const MegaOLLGroupByNumber: IAlgSet = {
 //     options: Options,
 //     sets: [
 //       {

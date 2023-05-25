@@ -1,18 +1,3 @@
-export interface ISet {
-    name: string
-    sets?: ISet[]
-    cases?: ICase[]
-    folder?: string
-}
-
-export interface ICase {
-    name: string
-    altNames?: string[]
-    algs: string[]
-    fileName?: string
-    comment?: string
-}
-
 interface IVCParams {
     stage?: string
     view?: "plan" | "trans"
@@ -42,9 +27,6 @@ export interface IOptions {
     note?: string
 }
 
-
-export interface IAlgSet { options: IOptions, sets: ISet[] }
-
 export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams: Required<ITwistyParams> } & Required<IOptions> = {
     name: "My Algset",
     imgSource: "vc",
@@ -68,49 +50,49 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
 //______V2______//
 
 // https://stackoverflow.com/questions/51352229/optional-generic-type-with-typescript
-export type ICaseListV2<T extends string = any> = Record<T, ICaseV2> 
-export type ISetListV2<T extends string = any> = Record<T, ISetV2>
-export type IGroupElementListV2<T extends string = any> = Record<T, ISetV2 | ICaseV2>
+export type ICaseList<T extends string = any> = Record<T, ICase> 
+export type ISetList<T extends string = any> = Record<T, ISet>
+export type IGroupElementList<T extends string = any> = Record<T, ISet | ICase>
 
 //WIP
-export type LocalOptionsList<T extends string = any> = Record<T, ILocalSetOptionsV2 | ILocalCaseOptionsV2> 
-export interface IGroupElementV2 {
+export type LocalOptionsList<T extends string = any> = Record<T, ILocalSetOptions | ILocalCaseOptions> 
+export interface IGroupElement {
     name: string
     altNames?: string[]
     note?: string
 }
-export interface ISetV2 extends IGroupElementV2 {
-    children?: IGroupElementListV2
+export interface ISet extends IGroupElement {
+    children?: IGroupElementList
     image?: string
 }
-export interface ICaseV2 extends IGroupElementV2 {
-    algs: IAlgV2[]
+export interface ICase extends IGroupElement {
+    algs: IAlg[]
     recognition?: string[],
     scrambles?: string[] // optional for now
 }
 
-export interface IAlgV2 {
+export interface IAlg {
     setup?: string
     alg: string
     isLefty?: boolean
-    tags?: IAlgTagsV2[]
+    tags?: IAlgTags[]
     note?: string
 }
 
-export type IAlgTagsV2 = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New"
+export type IAlgTags = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New"
 
-export interface IAlgSetV2 { options: IOptions, sets: ISetV2[] }
+export interface IAlgSet { options: IOptions, sets: ISet[] }
 
 export interface ISheetsResponse {
     nameList: string[],
-    caseList: ICaseListV2
+    caseList: ICaseList
 }
-export interface ILocalSetOptionsV2 {
+export interface ILocalSetOptions {
     loadCollapsed?: boolean
     personalNote?: string
 }
 
-export interface ILocalCaseOptionsV2 {
+export interface ILocalCaseOptions {
     personalNote?: string
     preferredAlg?: string // TODO: figure out how to to mark down preferredAlgs
     learnStatus?: "training" | "learned"

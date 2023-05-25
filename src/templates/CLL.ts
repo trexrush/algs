@@ -1,4 +1,4 @@
-import type { IAlgSetV2, IOptions } from "../scripts/types"
+import type { IAlgSet, IOptions } from "../scripts/types"
 import { createOptions } from "../scripts/utilities";
 //@ts-expect-error
 import yml from './CLLData.yml'
@@ -16,9 +16,9 @@ const Options: IOptions = createOptions({
   }
 })
 
-const _:IAlgSetV2 = yml
+const _:IAlgSet = yml
 
-const CLLNoGrouping: IAlgSetV2 = {
+const CLLNoGrouping: IAlgSet = {
     options: Options,
     sets: [
         {

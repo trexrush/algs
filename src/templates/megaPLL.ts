@@ -1,4 +1,4 @@
-import type { IAlgSetV2, IOptions, ICaseListV2 } from "../scripts/types"
+import type { IAlgSet, IOptions, ICaseList } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
 //@ts-expect-error
 import yml from './megaPLLData.yml'
@@ -15,9 +15,9 @@ const Options: IOptions = createOptions({
   },
 })
 
-let _: ICaseListV2 = yml
+let _: ICaseList = yml
 
-const MegaPLLNoGrouping: IAlgSetV2 = {
+const MegaPLLNoGrouping: IAlgSet = {
   options: Options,
   sets: [
     {
@@ -27,7 +27,7 @@ const MegaPLLNoGrouping: IAlgSetV2 = {
   ]
 }
 
-const MegaPLLGroupByLetter: IAlgSetV2 = {
+const MegaPLLGroupByLetter: IAlgSet = {
   options: Options,
   sets: [
     {
@@ -158,7 +158,7 @@ const MegaPLLGroupByLetter: IAlgSetV2 = {
   ]
 }
 
-const MegaPLLGroupByFeatures: IAlgSetV2 = {
+const MegaPLLGroupByFeatures: IAlgSet = {
   options: Options,
   sets: [
     {

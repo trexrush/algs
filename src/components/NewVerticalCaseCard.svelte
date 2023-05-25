@@ -1,6 +1,6 @@
 <script lang="ts">
   import { type Writable, writable } from "svelte/store";
-  import type { IAlgV2, ICaseV2, IOptions } from "../scripts/types";
+  import type { IAlg, ICase, IOptions } from "../scripts/types";
   import AlgVisuals from "./AlgVisuals.svelte";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import NewAlgListing from "./NewAlgListing.svelte";
@@ -10,12 +10,12 @@
   export let setName: string
   
   // always "non-mirrored"
-  export let caso: ICaseV2;
+  export let caso: ICase;
   export let options: IOptions
   
   // changes based on if mirrored or not
   const isMirrored: Writable<boolean> = writable(false)
-  const activeAlg: Writable<IAlgV2> = writable(structuredClone(caso.algs[0]))
+  const activeAlg: Writable<IAlg> = writable(structuredClone(caso.algs[0]))
   let pzl = puzzleDefinitionMapping[options.puzzle]!.standard
 
   $: ((mirror: boolean) => {
@@ -40,7 +40,7 @@
   let toggleDisplay: () => void
   let toggled: boolean
 
-  let algWithSetup = (alg:IAlgV2) => {
+  let algWithSetup = (alg:IAlg) => {
     return alg.setup ? alg.setup + " . . " + alg.alg : alg.alg
   }
 

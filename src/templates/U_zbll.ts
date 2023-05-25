@@ -1,4 +1,4 @@
-import type { IAlgSetV2, IOptions, ICaseListV2 } from "../scripts/types"
+import type { IAlgSet, IOptions, ICaseList } from "../scripts/types"
 import { createOptions } from "../scripts/utilities";
 //@ts-expect-error
 import yml from './uZbllData.yml'
@@ -12,10 +12,10 @@ const Options: IOptions = createOptions({
     },
 })
 
-let _: ICaseListV2 = yml
+let _: ICaseList = yml
 
 // TODO: check for errors, though not high priority since these if these calls fail, the site wont build
-const UNoGrouping: IAlgSetV2 = {
+const UNoGrouping: IAlgSet = {
     options: Options,
     sets: [
         {
@@ -25,7 +25,7 @@ const UNoGrouping: IAlgSetV2 = {
     ]
 }
 
-const UGroupByCP: IAlgSetV2 = {
+const UGroupByCP: IAlgSet = {
     options: Options,
     sets: [
         {
@@ -67,7 +67,7 @@ const UGroupByCP: IAlgSetV2 = {
     ]
 }
 
-const UGroupByBH: IAlgSetV2 = {
+const UGroupByBH: IAlgSet = {
     options: Options,
     sets: [
         {

@@ -1,11 +1,11 @@
 ---
   // import SetCard from "../components/SetCard.svelte";
   import NewVerticalSetCard from "../components/NewVerticalSetCard.astro";
-  import type { IOptions, ISetV2 } from "../scripts/types";
+  import type { IOptions, ISet } from "../scripts/types";
 
   interface Props {
     options: IOptions
-    sets: ISetV2[]
+    sets: ISet[]
     size?: number
   }
   const { sets, options, size = 128 } = Astro.props

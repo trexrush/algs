@@ -1,4 +1,4 @@
-import type { IAlgSetV2, ISheetsResponse, IOptions, ICaseListV2 } from "../scripts/types"
+import type { IAlgSet, ISheetsResponse, IOptions, ICaseList } from "../scripts/types"
 import { createOptions } from "../scripts/utilities";
 //@ts-expect-error
 import yml from './ollData.yml'
@@ -17,10 +17,10 @@ const Options: IOptions = createOptions({
     },
 })
 
-let _: ICaseListV2 = yml
+let _: ICaseList = yml
 
 // TODO: check for errors, though not high priority since these if these calls fail, the site wont build
-const OLLNoGrouping: IAlgSetV2 = {
+const OLLNoGrouping: IAlgSet = {
     options: Options,
     sets: [
         {
@@ -30,7 +30,7 @@ const OLLNoGrouping: IAlgSetV2 = {
     ]
 }
 
-const OLLGroupByEO: IAlgSetV2 = {
+const OLLGroupByEO: IAlgSet = {
     options: Options,
     sets: [
         {

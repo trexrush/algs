@@ -1,4 +1,4 @@
-import type { IAlgSetV2, IOptions } from "../scripts/types"
+import type { IAlgSet, IOptions } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
 
 //@ts-expect-error
@@ -18,9 +18,9 @@ let Options: IOptions = createOptions({
     },
 })
 
-let _:IAlgSetV2 = yml
+let _:IAlgSet = yml
 
-const ZBLSNoGrouping: IAlgSetV2 = {
+const ZBLSNoGrouping: IAlgSet = {
     options: Options,
     sets: [
         {

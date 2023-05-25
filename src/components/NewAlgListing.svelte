@@ -1,11 +1,11 @@
 <script lang="ts">
   import { algDelimiterWithTriggers, checkIfHasTriggers, expandAlgWithTriggers, isTriggerRegex, mirrorAlgOverrideTriggers } from "../scripts/alg";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
-  import type { IAlgV2, twistyPuzzleTypeWithChirality } from "../scripts/types";
+  import type { IAlg, twistyPuzzleTypeWithChirality } from "../scripts/types";
 
   // always "non mirrored"
   export let pzl: twistyPuzzleTypeWithChirality = '3x3x3'
-  export let alg: IAlgV2
+  export let alg: IAlg
   export let isLefty: boolean = false
   //TODO: move to activated on the set
   let isExpanded: boolean = true
