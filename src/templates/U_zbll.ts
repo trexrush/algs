@@ -1,7 +1,7 @@
 import type { IAlgSet, IOptions, ICaseList } from "../scripts/types"
 import { createOptions } from "../scripts/utilities";
 //@ts-expect-error
-import yml from './uZbllData.yml'
+import yml from '../data/uZbllData.yml'
 
 const Options: IOptions = createOptions({
     name: "ZBLL",

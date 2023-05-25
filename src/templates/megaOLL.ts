@@ -1,6 +1,6 @@
 import type { IAlgSet, ICaseList, IOptions } from "../scripts/types"
 //@ts-expect-error
-import yml from './megaOLLData.yml'
+import yml from '../data/megaOLLData.yml'
 
 
 const Options: IOptions = {

@@ -2,7 +2,7 @@ import type { IAlgSet, IOptions } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
 
 //@ts-expect-error
-import yml from './zblsData.yml'
+import yml from '../data/zblsData.yml'
 
 let Options: IOptions = createOptions({
     name: "ZBLS",
