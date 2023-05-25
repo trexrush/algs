@@ -111,14 +111,14 @@
     name: '14'
     algs:
     - 
-        alg: F' U' L' U L2 F L' [INVERSE SEXY]
+        alg: F' U' L' U L2 F L' [LEFTY INVERSE SEXY]
         isLefty: true
     note: 'same as above note but mirror the alg to avoid diag '
 '15':
     name: '15'
     algs:
     - 
-        alg: l' U' l [INVERSE SEXY] l' U l
+        alg: l' U' l [LEFTY SEXY] l' U l
         isLefty: true
     - 
         setup: U2
