@@ -58,6 +58,7 @@
         twistyPlayer.style.width = `${size}px`
 
     setAlg = (alg: string) => {
+        twistyPlayer.cameraLongitude = isLefty ? -options.twistyplayerparams!.cameraX! : options.twistyplayerparams!.cameraX!
         twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg, puzzleChirality) + " . ."
         twistyPlayer.jumpToStart()
         twistyPlayer.controller.animationController.playPause()
