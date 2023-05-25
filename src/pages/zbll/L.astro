@@ -1,5 +1,5 @@
 ---
-import NewVerticalLayout from "../../layouts/NewVerticalLayout.astro";
+import VerticalLayout from "../../layouts/VerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
 import { LNoGrouping } from "../../templates/L_zbll";
 import Page from "../../layouts/Page.astro";
@@ -7,5 +7,5 @@ import Page from "../../layouts/Page.astro";
 
 <Page title={'L_ZBLL'}>
   <Navbar slot="navbar" />
-  <NewVerticalLayout options={LNoGrouping.options} sets={LNoGrouping.sets} />
+  <VerticalLayout options={LNoGrouping.options} sets={LNoGrouping.sets} />
 </Page>

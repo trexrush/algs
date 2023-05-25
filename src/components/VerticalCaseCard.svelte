@@ -3,7 +3,7 @@
   import type { IAlg, ICase, IOptions } from "../scripts/types";
   import AlgVisuals from "./AlgVisuals.svelte";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
-  import NewAlgListing from "./NewAlgListing.svelte";
+  import AlgListing from "./AlgListing.svelte";
   import { mirrorAlg, mirrorAlgOverrideTriggers } from "../scripts/alg";
 
   export let size: number
@@ -26,7 +26,7 @@
     $activeAlg.isLefty = mirror ? !caso.algs[activeElement].isLefty : caso.algs[activeElement].isLefty
   })($isMirrored)
 
-  let elementList: NewAlgListing[] = []
+  let elementList: AlgListing[] = []
   let activeElement: number = 0
   let changeActiveElement = (algElementIndex: number) => {
     // prevent unnecessary dom updatesr
@@ -80,7 +80,7 @@
         ▶
       </span>
       <div on:click={() => changeActiveElement(i)}>
-        <NewAlgListing alg={eachAlg} isActive={activeElement == i} isLefty={eachAlg.isLefty} isMirrored={$isMirrored} pzl={pzl} bind:this={elementList[i]}/>
+        <AlgListing alg={eachAlg} isActive={activeElement == i} isLefty={eachAlg.isLefty} isMirrored={$isMirrored} pzl={pzl} bind:this={elementList[i]}/>
       </div>
       <hr class="flex-grow border-s-4 border-stone-800/70"/>
       <span class="flex m-1 justify-end items-center gap-1 cursor-default text-xs text-stone-500">

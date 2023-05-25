@@ -1,12 +1,12 @@
+export type twistyPuzzleType = "3x3x3" | "custom" | "2x2x2" | "4x4x4" | "5x5x5" | "6x6x6" | "7x7x7" | "40x40x40" | "megaminx" | "pyraminx" | "square1" | "clock" | "skewb" | "fto" | "gigaminx" | "master_tetraminx" | "kilominx" | "redi_cube" | "melindas2x2x2x2"
+export type twistyPuzzleTypeWithChirality = twistyPuzzleType | 'megaminx-lefty'
+
 interface IVCParams {
     stage?: string
     view?: "plan" | "trans"
     rot?: string
     colorScheme?: string
 }
-
-export type twistyPuzzleType = "3x3x3" | "custom" | "2x2x2" | "4x4x4" | "5x5x5" | "6x6x6" | "7x7x7" | "40x40x40" | "megaminx" | "pyraminx" | "square1" | "clock" | "skewb" | "fto" | "gigaminx" | "master_tetraminx" | "kilominx" | "redi_cube" | "melindas2x2x2x2"
-export type twistyPuzzleTypeWithChirality = twistyPuzzleType | 'megaminx-lefty'
 
 interface ITwistyParams {
     stage?: string
@@ -47,7 +47,6 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
     note: ""
 }
 
-//______V2______//
 
 // https://stackoverflow.com/questions/51352229/optional-generic-type-with-typescript
 export type ICaseList<T extends string = any> = Record<T, ICase> 

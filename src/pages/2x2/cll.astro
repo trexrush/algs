@@ -1,11 +1,11 @@
 ---
 import { CLLNoGrouping } from "../../templates/CLL";
-import NewVerticalLayout from "../../layouts/NewVerticalLayout.astro";
+import VerticalLayout from "../../layouts/VerticalLayout.astro";
 import Navbar from "../../layouts/Navbar.astro";
 import Page from "../../layouts/Page.astro";
 ---
 
 <Page title={'CLL'}>
   <Navbar slot="navbar" />
-  <NewVerticalLayout options={CLLNoGrouping.options} sets={CLLNoGrouping.sets} />
+  <VerticalLayout options={CLLNoGrouping.options} sets={CLLNoGrouping.sets} />
 </Page>

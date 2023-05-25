@@ -1,36 +1,39 @@
 ---
-import type { IOptions, ISet } from "../scripts/types";
-import VerticalAlgCard from "./VerticalAlgCard.svelte";
+import type { IOptions, ISet  } from "../scripts/types";
+import VerticalCaseCard from "./VerticalCaseCard.svelte";
 
 interface Props {
-  set: ISet;
-  options: IOptions;
-  size: number;
+  set: ISet
+  options: IOptions
+  size: number
 }
-const { set, options, size } = Astro.props;
+const { set, options, size } = Astro.props
 ---
 
 <div
   is="collapsible-set"
-  class=" bg-stone-900/[.07] dark:bg-stone-50/[.07] w-[95%] rounded-xl shadow-xl mb-5"
+  class=" flex flex-col justify-center items-center w-[95%] mb-5 rounded-xl shadow-xlbg-stone-900/[.07] dark:bg-stone-50/[.07] "
 >
-  <div class="toggle text-xl sm:text-3xl my-2 w-full text-center cursor-pointer font-bold hover:font-extrabold">
-    {set.name}
+  <div class="toggle cursor-pointer my-2 flex gap-5 w-fit items-baseline">
+    <div class="text-xl sm:text-3xl font-bold hover:font-extrabold">
+      {set.name}
+    </div>
+    <span class=" dark:text-stone-500 text-lg">
+      AKA
+    {set.altNames?.map((altName) => {
+      return "\"" + altName + "\" "
+    })}
+    </span>
   </div>
+
   <div class="collapsible w-full flex flex-col [&>*]:mb-5 items-center">
     {
-      set.cases
-        ? set.cases?.map((caso) => (
-            <VerticalAlgCard client:visible {caso} {options} size={size} setName={set.name} />
-          ))
-        : ""
-    }
-    {
-      set.sets
-        ? set.sets.map((subSet) => (
-            <Astro.self set={subSet} {options} size={size} />
-          ))
-        : ""
+      set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
+        setOrCase.hasOwnProperty("algs") ?
+          <VerticalCaseCard client:visible caso={setOrCase} options={options} size={size} setName={set.name}/>
+        :
+          <Astro.self set={setOrCase} options={options} size={size} />
+      ))
     }
   </div>
 </div>

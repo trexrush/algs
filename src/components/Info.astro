@@ -1,8 +1,7 @@
 ---
-import VerticalAlgCard from "../components/VerticalAlgCard.svelte";
-import { PLLGroupedBySet as algSet } from "../templates/pll";
-
-let exampleCase = { name: 'example-case', algs: ["R U R' U' M' U2 R U2' r'", "[SEXY] U2 [NE]"] }
+import VerticalCaseCard from "../components/VerticalCaseCard.svelte";
+import type { ICase } from "../scripts/types";
+import { OLLNoGrouping } from "../templates/oll";
 ---
 <div
   class="text-center bg-stone-200 dark:bg-stone-800 shadow-xl rounded-xl w-[300px] md:w-[500px] [&>*]:mb-3 mb-3"
@@ -37,6 +36,6 @@ let exampleCase = { name: 'example-case', algs: ["R U R' U' M' U2 R U2' r'", "[S
           Generate a link to a specific case by clicking the case name.
         </div>
     </div>
-    <VerticalAlgCard client:idle caso={exampleCase} options={algSet.options} size={128} setName={"an"} />
+    <VerticalCaseCard client:idle options={OLLNoGrouping.options} caso={OLLNoGrouping.sets[0].children!['17']} size={128} />
   </div>
 </div>
