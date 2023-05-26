@@ -98,8 +98,8 @@ export interface ILocalCaseOptions {
     trainerLists?: any[]
 }
 
-
-export type IModifiersList = "INVERSE" | "BACK" | "B" | "LEFTY" | "LEFT" | "L" | "DOUBLE" | "X2" | "TRIPLE" | "X3" 
+export const modifiersList = ["INVERSE", "BACK", "B", "LEFTY", "LEFT", "L", "DOUBLE", "X2", "TRIPLE", "X3"] as const
+export type TModifiersList = typeof modifiersList[number]
 
 
 export type modularPuzzleGroup<T> = Partial<Record<twistyPuzzleTypeWithChirality, T>>

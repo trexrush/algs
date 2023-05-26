@@ -54,7 +54,7 @@
   bg-stone-900/[.07] dark:bg-stone-50/[.07] shadow-lg hover:shadow-2xl hover:-translate-y-[1px]">
     <div class="absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.7em]">
       <div class="text-stone-500 text-[2.7vw] sm:text-[15px] flex gap-2 items-baseline">
-        <a href="#{setName}-{caso.name}" class="dark:text-white text-[3.2vw] sm:text-[20px]">
+        <a href="#{caso.name}" class="dark:text-white text-[3.2vw] sm:text-[20px]">
           <b>{caso.name}</b>
         </a>
         {#if caso.altNames?.length}<span>AKA</span>{#each caso.altNames as altName}
@@ -62,9 +62,9 @@
         {/each}{/if}
       </div>
       <span class="my-[2px] px-2 py-[1px] sm:text-sm text-[2.2vw] font-light bg-stone-50/[.15] rounded-lg shadow-md cursor-pointer select-none
-      bg-gradient-to-r from-red-600/40 to-lime-600/40
+      bg-gradient-to-r from-red-600/40 from-30% to-lime-600/40 to-70%
       transition-all hover:saturate-150 hover:brightness-125"
-      on:click={() => { isMirrored.set(!$isMirrored) }} title="Display the mirror cases of algs"><b>{"Mirror algs for case"}</b></span>
+      on:click={() => { isMirrored.set(!$isMirrored) }} title="Display the mirror cases of algs"><b>{"Mirror L/R"}</b></span>
     </div> 
     {#if caso.note}
     <div class="absolute text-[2.3vw] top-0 right-2 w-5/6

@@ -17,7 +17,7 @@
      alg: R' F' L F (L' R) U' L' U L
      isLefty: true
     -
-     alg: R' [LEFT INVERSE SLEDGE] [LEFT INVERSE SEXY] R
+     alg: R' [LEFT HEDGE] [LEFT UNSEXY] R
      isLefty: true
     comment: maybe try from LB to make the (B)R less awkward?
 '2A':

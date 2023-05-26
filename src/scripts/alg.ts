@@ -1,6 +1,6 @@
 import { Alg } from "cubing/alg"
 import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, triggerSubstitutionGroups } from "./algConstants"
-import type { IModifiersList, twistyPuzzleTypeWithChirality } from "./types"
+import type { TModifiersList, twistyPuzzleTypeWithChirality } from "./types"
 
 export const removePrePostAUF = (a: string): string => {
   // remove brackets and replace with a pause after
@@ -59,7 +59,7 @@ export const simplifyAlg = (a: string): string => {
   return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' }}).toString()
 }
 
-let modifiersList: Record<IModifiersList, (a: string, pzl: twistyPuzzleTypeWithChirality) => string> = {
+let modifierActionsList: Record<TModifiersList, (a: string, pzl: twistyPuzzleTypeWithChirality) => string> = {
   "INVERSE": (a, pzl) => { return invertAlg(a) },
   "LEFTY": (a, pzl) => { return mirrorAlg(a, pzl) },
   "LEFT": (a, pzl) => { return mirrorAlg(a, pzl) },
@@ -73,7 +73,7 @@ let modifiersList: Record<IModifiersList, (a: string, pzl: twistyPuzzleTypeWithC
 }
 
 export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): string => {
-  let triggerList: [...IModifiersList[], string] = t.split(' ') as [...IModifiersList[], string]
+  let triggerList: [...TModifiersList[], string] = t.split(' ') as [...TModifiersList[], string]
   // https://stackoverflow.com/questions/7574054/javascript-how-to-pass-object-by-value (how did I miss this)
   let currTrigger = structuredClone(triggerSubstitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1)))
   if (!currTrigger) { return '' }
@@ -81,8 +81,8 @@ export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): st
   while (triggerList.length) {
     let modifier = triggerList.pop()
     if (!modifier) { break }
-    if (Object.keys(modifiersList).includes(modifier)) {
-      currTrigger.alg = modifiersList[modifier as IModifiersList](currTrigger.alg, pzl) 
+    if (Object.keys(modifierActionsList).includes(modifier)) {
+      currTrigger.alg = modifierActionsList[modifier as TModifiersList](currTrigger.alg, pzl) 
     }
   }
   return currTrigger.alg

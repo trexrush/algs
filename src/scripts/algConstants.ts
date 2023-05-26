@@ -82,7 +82,8 @@ const megaLeftySubstitutes = [
 const triggers = [
     { name:"CANCEL", alg: "" },
     { name: "SEXY", alg: "R U R' U'" },
-    { name: "XESY", alg: "U R U' R'" }, // name help? or just remove and use 'INVERSE' modifier
+    { name: "INVSEXY", alg: "U R U' R'" }, // same as below
+    { name: "UNSEXY", alg: "U R U' R'" }, // same as above
     { name: "SLEDGE", alg: "R' F R F'" },
     { name: "HEDGE", alg: "F R' F' R" },
     { name: "SU", alg: "R U R' U" },

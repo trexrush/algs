@@ -113,7 +113,7 @@ Ja:
    isLefty: true
   - 
    setup: U'
-   alg: L' U' L2 F L' [LEFTY INVERSE SEXY] F' L' U L
+   alg: L' U' L2 F L' [LEFTY UNSEXY] F' L' U L
    isLefty: true
   - 
    setup: U2
@@ -130,7 +130,7 @@ Jb:
    alg: R U R' F' [SEXY] R' F R2 U' R'
   - 
    setup: U
-   alg: R U R2' F' R [INVERSE SEXY] F R U' R'
+   alg: R U R2' F' R [UNSEXY] F R U' R'
   - 
    setup: U'
    alg: z' D L' U L2 D' L D L2' (U' D') z
@@ -166,7 +166,7 @@ Nb:
   - 
    alg: R' U R U' R' F' U' F R U R' [HEDGE] U' R
   - 
-   alg: L' F' U L U' L' U' F L2 F L' [LEFTY INVERSE SEXY] F'
+   alg: L' F' U L U' L' U' F L2 F L' [LEFTY UNSEXY] F'
    isLefty: true
   - 
    alg: F [LEFT SEXY] L F' L2' F' U L U L' U' F L
@@ -191,7 +191,7 @@ Ra:
    isLefty: true
   - 
    setup: U'
-   alg: L2 F' L' [LEFTY INVERSE SEXY] F L' U2 L U2' L'
+   alg: L2 F' L' [LEFTY UNSEXY] F L' U2 L U2' L'
    isLefty: true
   - 
    setup: U'

@@ -87,7 +87,7 @@
         alg: F' U' [LEFT NE] U' [LEFT SU] L' U L F
         isLefty: true
     - 
-        alg: F' [LEFT INVERSE SEXY] F [U_ZBLL]
+        alg: F' [LEFT UNSEXY] F [U_ZBLL]
         isLefty: true
 '12':
     name: '12'
@@ -105,13 +105,13 @@
     name: '13'
     algs:
     - 
-        alg: F [INVERSE SEXY] F' [HEDGE] [INVERSE SEXY]
+        alg: F [UNSEXY] F' [HEDGE] [UNSEXY]
     note: possible diag avoidance alg if UBR and RFU are the same color - r U' r' U' r U r' F' U F I dont use this but its not hard to implement so maybe soon
 '14':
     name: '14'
     algs:
     - 
-        alg: F' U' L' U L2 F L' [LEFTY INVERSE SEXY]
+        alg: F' U' L' U L2 F L' [LEFTY UNSEXY]
         isLefty: true
     note: 'same as above note but mirror the alg to avoid diag '
 '15':
@@ -239,7 +239,7 @@
         alg: r' D' r U' r' D r2 U' r' U r U r'
     - 
         setup: U'
-        alg: "[FATSEXY] M [INVERSE SEXY] [T_ZBLL]"
+        alg: "[FATSEXY] M [UNSEXY] [T_ZBLL]"
 '31':
     name: '31'
     algs:
@@ -292,10 +292,10 @@
     name: '37'
     algs:
     - 
-        alg: "[HEDGE] [INVERSE SEXY]"
+        alg: "[HEDGE] [UNSEXY]"
     - 
         setup: U
-        alg: "[LEFTY HEDGE] [LEFT INVERSE SEXY]"
+        alg: "[LEFTY HEDGE] [LEFT UNSEXY]"
         isLefty: true
 '38':
     name: '38'
@@ -303,7 +303,7 @@
     - 
         alg: "[SUNE] [SEXY] [SLEDGE]"
     - 
-        alg: F [INVERSE SEXY] F' [T_ZBLL]
+        alg: F [UNSEXY] F' [T_ZBLL]
 '39':
     name: '39'
     algs:
@@ -343,13 +343,13 @@
     name: '43'
     algs:
     - 
-        alg: F' [LEFTY INVERSE SEXY] F
+        alg: F' [LEFTY UNSEXY] F
         isLefty: true
 '44':
     name: '44'
     algs:
     - 
-        alg: F [INVERSE SEXY] F'
+        alg: F [UNSEXY] F'
 '45':
     name: '45'
     algs:
@@ -401,10 +401,10 @@
     name: '51'
     algs:
     - 
-        alg: F [DOUBLE INVERSE SEXY] F'
+        alg: F [DOUBLE UNSEXY] F'
     - 
         setup: U2
-        alg: F' [DOUBLE LEFTY INVERSE SEXY] F
+        alg: F' [DOUBLE LEFTY UNSEXY] F
         isLefty: true
 '52':
     name: '52'
