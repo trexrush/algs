@@ -48,7 +48,7 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-missing-content -->
 
-<div id={setName + "-" + caso.name} class="w-[95%] m-4 ml-0 mt-0 pt-4 flex flex-row items-center justify-center">
+<div id={caso.name} class="w-[95%] m-4 ml-0 mt-0 pt-4 flex flex-row items-center justify-center">
   <AlgVisuals activeAlg={algWithSetup($activeAlg)} imageAlg={caso.algs[0]["alg"]} options={options} size={size} isLefty={$activeAlg.isLefty} bind:toggleDisplay={toggleDisplay} bind:isAlgVisDisplayed={toggled}/>
   <div class="flex flex-col justify-start items-start relative m-1 p-2 w-full min-h-[6em] h-fit ml-5 rounded-md 
   bg-stone-900/[.07] dark:bg-stone-50/[.07] shadow-lg hover:shadow-2xl hover:-translate-y-[1px]">
@@ -58,7 +58,7 @@
           <b>{caso.name}</b>
         </a>
         {#if caso.altNames?.length}<span>AKA</span>{#each caso.altNames as altName}
-        <span class="">{altName}</span>
+        <a id="{altName}" href="#{altName}">{altName}</a>
         {/each}{/if}
       </div>
       <span class="my-[2px] px-2 py-[1px] sm:text-sm text-[2.2vw] font-light bg-stone-50/[.15] rounded-lg shadow-md cursor-pointer select-none
