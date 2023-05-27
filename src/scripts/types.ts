@@ -66,7 +66,7 @@ export interface ISet extends IGroupElement {
 }
 export interface ICase extends IGroupElement {
     algs: IAlg[]
-    recognition?: string[],
+    recog?: string[],
     scrambles?: string[] // optional for now
 }
 

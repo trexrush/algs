@@ -1106,7 +1106,9 @@ X1:
     - 
       alg: F' U2' L' U2 L U' L' U' L U2 F L U L' U2 L U2 L'
       isLefty: true
-  note: all Z
+  recog:
+    - All Z / pseudoblock corners (a 2x3 pseudoblock is enough to identify though)
+  note: 
 X2:
   name: X2
   altNames: ["Vaporeon"]
@@ -1114,6 +1116,8 @@ X2:
     - 
       alg: F' L' U' L F' U' L U F U' L2' U2 L F
       isLefty: true
+  recog:
+    - Pseudoblock and no other pseudo stuff
 X3:
   name: X3
   altNames: ["Jolteon"]
@@ -1121,12 +1125,13 @@ X3:
     - 
       alg: L U L' U L U2' L2' U' L U2' L U2 L2' U L U2' L U' L'
       isLefty: true
-    - 
-      alg: L2' U' L2 U' L' U2 L U' L U2 L' U' L U' L2' U' L' U L2
-      isLefty: true
-    - 
-      alg: L' U' L2 U2' L2' U2' L2 y L U L' U2' L U L' U' BL'
-      isLefty: true
+    # - 
+    #   alg: L2' U' L2 U' L' U2 L U' L U2 L' U' L U' L2' U' L' U L2
+    #   isLefty: true
+    # - 
+    #   alg: L' U' L2 U2' L2' U2' L2 y L U L' U2' L U L' U' BL'
+    #   isLefty: true
+  recog: Pseudoline in BL
 X4:
   name: X4
   altNames: ["Flareon"]
@@ -1134,6 +1139,9 @@ X4:
     - 
       alg: L U L2' U L U' L' U L2 U L2' U' L U L' U' L2 U2' L'
       isLefty: true
+  recog: 
+    - pointing away headlights in L and R
+    - adj colors A and B - A corner and B edge on L face opposide B corner and A edge in R face, aligned to F
 X5+:
   name: X5+
   altNames: ["Bulbasaur"]
@@ -1141,9 +1149,12 @@ X5+:
     - 
       alg: L' U L U2 L' U2 L U L2' U' L U' L' U' L U2 L' U L2
       isLefty: true
-    - 
-      alg: L2 U L' U2 L U' L' U' L U' L2' U L U2 L' U2 L U L'
-      isLefty: true
+    # - 
+    #   alg: L2 U L' U2 L U' L' U' L U' L2' U L U2 L' U2 L U L'
+    #   isLefty: true
+  recog:
+    - Pseudobar J perm
+    - Pseudobar FB + Pseudoline on L with L headlights facing FB
   note: 'M but with Z instead of block, left arrow'
 X5-:
   name: X5-
@@ -1152,9 +1163,12 @@ X5-:
     - 
       alg: L U' L' U2' L U2' L' U' L2 U L' U L U L' U2' L U' L2'
       isLefty: true
-    - 
-      alg: L2' U' L U2' L' U L U L' U L2 U' L' U2' L U2' L' U' L
-      isLefty: true
+    # - 
+    #   alg: L2' U' L U2' L' U L U L' U L2 U' L' U2' L U2' L' U' L
+    #   isLefty: true
+  recog:
+    - Pseudobar J perm
+    - Pseudobar FL + Pseudoline on L with L headlights facing FL 
   note: 'M but with Z instead of block, right arrow'
 X6+:
   name: X6+
@@ -1166,6 +1180,8 @@ X6+:
     - 
       alg: BL L U L' U' L U' L2' U' BL' U' BL U2 L U' L U L' BL'
       isLefty: true
+  recog:
+    - Pseudobar F Perm
 X6-:
   name: X6-
   altNames: ["Wartortle"]
@@ -1174,8 +1190,11 @@ X6-:
       alg: L U2' L U L2' U L U L' U' L U' L U' L2' U L U2 L'
       isLefty: true
     - 
-      alg: F' L' U' L U L' U L2 U F U F' U2' L' U L' U' L F
+      setup: U2
+      alg: F' [LEFTY SEXY] L' U L2 U F U F' U2' L' U L' U' L F
       isLefty: true
+  recog: 
+    -  Pseudobar F Perm
 X7+:
   name: X7+
   altNames: ["Venusaur"]
@@ -1183,6 +1202,8 @@ X7+:
     - 
       alg: L' U' L2 F L' U2 L' U L U2 L F' L' U' L' U' L U2 L' U L
       isLefty: true
+  recog: 
+    - solved edge CW of solved corner
 X7-:
   name: X7-
   altNames: ["Blastoise"]
@@ -1193,6 +1214,8 @@ X7-:
     - 
       alg: L' U' L U F U F' U' L' U' L U' L' U2 F' L F L' U' L' U L2
       isLefty: true
+  recog: 
+    - solved edge CCW of solved corner
 Y1+:
   name: Y1+
   altNames: ["Charmander"]
