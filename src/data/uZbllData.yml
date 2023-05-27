@@ -3,13 +3,15 @@ Pure_S:
   name: Pure_S
   algs:
   - 
-    alg: "[U'] L F L' U' L U L F' D L' U' L D' L2"
+    setup: U'
+    alg: "L F L' U' L U L F' D L' U' L D' L2"
     isLefty: true
 Pure_H:
   name: Pure_H
   algs:
   - 
-    alg: "[U2] x L2 D2 L' U' L D2 L2' D L U L' D' x'"
+    setup: U2
+    alg: "x L2 D2 L' U' L D2 L2' D L U L' D' x'"
     isLefty: true
 Pure_Z:
   name: Pure_Z
@@ -26,49 +28,58 @@ Pure_BarA:
   name: Pure_BarA
   algs:
   - 
-    alg: "[U'] R U R' U' R U' R' U2 R U' R' U2 R U R'"
+    setup: U'
+    alg: "R U R' U' R U' R' U2 R U' R' U2 R U R'"
 Pure_BarO:
   name: Pure_BarO
   algs:
   - 
-    alg: "[U] L' U' L U L' U L U2 L' U L U2 L' U' L"
+    setup: U
+    alg: "L' U' L U L' U L U2 L' U L U2 L' U' L"
     isLefty: true
 Pure_HAnti:
   name: Pure_HAnti
   algs:
   - 
-    alg: "[U'] L' U2 L2 U L2 U L U' L U L' U' L U' L'"
+    setup: U'
+    alg: "L' U2 L2 U L2 U L U' L U L' U' L U' L'"
     isLefty: true
 Pure_OBar:
   name: Pure_OBar
   algs:
   - 
-    alg: "[U] R U2' R2' F R F' R U' B U' B' R'"
+    setup: U
+    alg: "R U2' R2' F R F' R U' B U' B' R'"
   - 
-    alg: "[U] R U2 R2 U' R2 U' R' U R' U' R U R' U R"
+    setup: U
+    alg: "R U2 R2 U' R2 U' R' U R' U' R U R' U R"
 Pure_HArrow:
   name: Pure_HArrow
   algs:
   - 
-    alg: "[U] (R U2 R' U' R U' R') U' (R U R' U R U2 R') "
+    setup: U
+    alg: "(R U2 R' U' R U' R') U' (R U R' U R U2 R') "
   - 
-    alg: "[U'] (L U2 L' U' L U' L') U' (L U L' U L U2 L')"
+    setup: U'
+    alg: "(L U2 L' U' L U' L') U' (L U L' U L U2 L')"
     isLefty: true
   note: non home grip start for the L variant
 Pure_ABar:
   name: Pure_ABar
   algs:
   - 
-    alg: "[U'] (L' U2 L U L' U L) U (L' U' L U' L' U2 L)"
+    setup: U'
+    alg: "(L' U2 L U L' U L) U (L' U' L U' L' U2 L)"
     isLefty: true
 Pure_VAnti:
   name: Pure_VAnti
   algs:
   - 
-    alg: "[U2] L' U' L U' L U L' U' L' U2 L U2 L U2 L' "
+    setup: U2
+    alg: "L' U' L U' L U L' U' L' U2 L U2 L U2 L' "
     isLefty: true
-Pure_OxA:
-  name: Pure_OxA
+Pure_VArrow:
+  name: VArrow
   algs:
   - 
     alg: L U L' U L' U' L U L U2 L' U2 L' U2 L
@@ -77,12 +88,14 @@ Diag_BarO:
   name: Diag_BarO
   algs:
   - 
-    alg: "[U'] r U2 R2 F R F' U2 r' R U R U' R'"
+    setup: U'
+    alg: "r U2 R2 F R F' U2 r' R U R U' R'"
 Diag_OBar:
   name: Diag_OBar
   algs:
   - 
-    alg: "[U] l' U2 L2 F' L' F U2 l L' U' L' U L"
+    setup: U
+    alg: "l' U2 L2 F' L' F U2 l L' U' L' U L"
     isLefty: true
 Diag_S:
   name: Diag_S
@@ -94,19 +107,23 @@ Diag_HAnti:
   name: Diag_HAnti
   algs:
   - 
-    alg: "[U2] L U L' U F' U L U' L' U' L U' L' U F"
+    setup: U2
+    alg: "L U L' U F' U L U' L' U' L U' L' U F"
     isLefty: true
   - 
-    alg: "[U2] (R L') (U' L U' L' U' L) U2 (R' L') U L"
+    setup: U2
+    alg: "(R L') (U' L U' L' U' L) U2 (R' L') U L"
     isLefty: true
 Diag_AntiZ:
   name: Diag_AntiZ
   algs:
   - 
-    alg: "[U2] L2 D' L U L' D L U L U' L' U' L"
+    setup: U2
+    alg: "L2 D' L U L' D L U L U' L' U' L"
     isLefty: true
   - 
-    alg: "[U] L D L' U L D' L2' U2 L U' L' U' L"
+    setup: U
+    alg: "L D L' U L D' L2' U2 L U' L' U' L"
     isLefty: true
   note: R perm but one move different
 Diag_ABar:
@@ -125,26 +142,29 @@ Diag_H:
   name: Diag_H
   algs:
   - 
-    alg: "[U2] L U' L' U' L U L D L' U L D' L2"
+    setup: U2
+    alg: "L U' L' U' L U L D L' U L D' L2"
     isLefty: true
 Diag_HArrow:
   name: Diag_HArrow
   algs:
   - 
     alg: F' U' L' U2 L U' L' U' L U' L' U2 L U' L' U' L F
-    isLefty: true
+    isLeft: true
   note: F [U' kind of antisune] x2 F' wait its a x2 of the 10 move T case you hated
 Diag_VArrow:
   name: Diag_VArrow
   algs:
   - 
-    alg: "[U'] F' U' L' U L F L' U' L U M' U' L' U l"
+    setup: U'
+    alg: "F' U' L' U L F L' U' L U M' U' L' U l"
     isLefty: true
 Diag_Z:
   name: Diag_Z
   algs:
   - 
-    alg: "[U'] S L U' L' S' L U2 L F' L' F U' L'"
+    setup: U'
+    alg: "S L U' L' S' L U2 L F' L' F U' L'"
     isLefty: true
 Diag_VAnti:
   name: Diag_VAnti
@@ -168,7 +188,8 @@ Bars_BarO:
   name: Bars_BarO
   algs:
   - 
-    alg: "[U] R' B2 R2 U R' U R U' R2 B2 R U2 R U R'"
+    setup: U
+    alg: "R' B2 R2 U R' U R U' R2 B2 R U2 R U R'"
 Bars_OBar:
   name: Bars_OBar
   algs:
@@ -191,37 +212,43 @@ Bars_H:
   name: Bars_H
   algs:
   - 
-    alg: "[U] l' U' L U l F' L2 U L U L' U2 L U F"
+    setup: U
+    alg: "l' U' L U l F' L2 U L U L' U2 L U F"
     isLefty: true
 Bars_HAnti:
   name: Bars_HAnti
   algs:
   - 
-    alg: "[U'] r U R' U' r' F R2 U' R' U' R U2 R' U' F'"
+    setup: U'
+    alg: "r U R' U' r' F R2 U' R' U' R U2 R' U' F'"
 Bars_VAnti:
   name: Bars_VAnti
   algs:
   - 
-    alg: "[U'] L2 D L' U L D' L2' U' L F' L' U' L U L F L2"
+    setup: U'
+    alg: "L2 D L' U L D' L2' U' L F' L' U' L U L F L2"
     isLefty: true
   note: THIS CASE SUCKS
 Bars_AntiZ:
   name: Bars_AntiZ
   algs:
   - 
-    alg: "[U'] F' U' L' U2 L U' L' U' L2 F l' U' L' U l"
+    setup: U'
+    alg: "F' U' L' U2 L U' L' U' L2 F l' U' L' U l"
     isLefty: true
 Bars_HArrow:
   name: Bars_HArrow
   algs:
   - 
-    alg: "[U] F' U' L2 D L' U L D' L2 F L U' L'"
+    setup: U
+    alg: "F' U' L2 D L' U L D' L2 F L U' L'"
     isLefty: true
 Bars_VArrow:
   name: Bars_VArrow
   algs:
   - 
-    alg: "[U] L U L' F' L2 D L' U' L D' L2 U F"
+    setup: U
+    alg: "L U L' F' L2 D L' U' L D' L2 U F"
     isLefty: true
 Checker_AntiZ:
   name: Checker_AntiZ
@@ -233,13 +260,15 @@ Checker_Z:
   name: Checker_Z
   algs:
   - 
-    alg: "[U'] F L' U' L U L F' L2 U' L U2 L' U' L U2 L' U L "
+    setup: U'
+    alg: "F L' U' L U L F' L2 U' L U2 L' U' L U2 L' U L "
     isLefty: true
 Checker_S:
   name: Checker_S
   algs:
   - 
-    alg: "[U2] r L D2 L' U2 L D2 L' U2 r'"
+    setup: U2
+    alg: "r L D2 L' U2 L D2 L' U2 r'"
     isLefty: true
 Checker_H:
   name: Checker_H
@@ -251,7 +280,8 @@ Checker_BarA:
   name: Checker_BarA
   algs:
   - 
-    alg: "[U2] L U L' U L U' L' U2 L' D' L U2 L' D L2 U' L'"
+    setup: U2
+    alg: "L U L' U L U' L' U2 L' D' L U2 L' D L2 U' L'"
     isLefty: true
   - 
     alg: R U R' U R U' R' U2 R' D' R U2 R' D R2 U' R'
@@ -265,13 +295,15 @@ Checker_BarO:
   name: Checker_BarO
   algs:
   - 
-    alg: "[U] L U' L' U' L U' L' U L' D' L U L' D L2 U L'"
+    setup: U
+    alg: "L U' L' U' L U' L' U L' D' L U L' D L2 U L'"
     isLefty: true
 Checker_HAnti:
   name: Checker_HAnti
   algs:
   - 
-    alg: "[U] L' U L U L' U L U' L D L' U' L D' L2 U' L"
+    setup: U
+    alg: "L' U L U L' U L U' L D L' U' L D' L2 U' L"
     isLefty: true
 Checker_VArrow:
   name: Checker_VArrow
@@ -283,7 +315,8 @@ Checker_ABar:
   name: Checker_ABar
   algs:
   - 
-    alg: "[U2] L' U2 L U L D L' U' L D' L' U L' U L"
+    setup: U2
+    alg: "L' U2 L U L D L' U' L D' L' U L' U L"
     isLefty: true
   - 
     alg: L' F' U L U L' U2 L U L' F L
@@ -292,7 +325,8 @@ Checker_VAnti:
   name: Checker_VAnti
   algs:
   - 
-    alg: "[U2] L' U' L U' L' U' L U2 L' U L2 D L' U L D' L'"
+    setup: U2
+    alg: "L' U' L U' L' U' L U2 L' U L2 D L' U L D' L'"
     isLefty: true
 Checker_HArrow:
   name: Checker_HArrow
@@ -304,31 +338,36 @@ Backslash_VArrow:
   name: Backslash_VArrow
   algs:
   - 
-    alg: "[U2] L2' D' L U2 L' D L U2 L"
+    setup: U2
+    alg: "L2' D' L U2 L' D L U2 L"
     isLefty: true
 Backslash_VAnti:
   name: Backslash_VAnti
   algs:
   - 
-    alg: "[U'] L U' L (U D) L' U L U2' L' U L D' L' U L'"
+    setup: U'
+    alg: "L U' L (U D) L' U L U2' L' U L D' L' U L'"
     isLefty: true
 Backslash_S:
   name: Backslash_S
   algs:
   - 
-    alg: "[U2] L2' D' l U2 l' D L U2 L"
+    setup: U2
+    alg: "L2' D' l U2 l' D L U2 L"
     isLefty: true
 Backslash_ABar:
   name: Backslash_ABar
   algs:
   - 
-    alg: "[U'] L2' D' L U' L' D L2 U' L' U2 L"
+    setup: U'
+    alg: "L2' D' L U' L' D L2 U' L' U2 L"
     isLefty: true
 Backslash_AntiZ:
   name: Backslash_AntiZ
   algs:
   - 
-    alg: "[U] L' U' L U' L' U L U' F L' U2 L U2 L F' L'"
+    setup: U
+    alg: "L' U' L U' L' U L U' F L' U2 L U2 L F' L'"
     isLefty: true
 Backslash_BarO:
   name: Backslash_BarO
@@ -346,31 +385,36 @@ Backslash_OBar:
   name: Backslash_OBar
   algs:
   - 
-    alg: "[U2] L D l' U2 l D' L' U2 L' U L U L' U L"
+    setup: U2
+    alg: "L D l' U2 l D' L' U2 L' U L U L' U L"
     isLefty: true
 Backslash_HArrow:
   name: Backslash_HArrow
   algs:
   - 
-    alg: "[U] L' U2 L2 D L' U2 L D' L2 U L U2 L' U2 L"
+    setup: U
+    alg: "L' U2 L2 D L' U2 L D' L2 U L U2 L' U2 L"
     isLefty: true
 Backslash_H:
   name: Backslash_H
   algs:
   - 
-    alg: "[U'] L' U' L U' L' U L U' L' U L U l F' L' F M'"
+    setup: U'
+    alg: "L' U' L U' L' U L U' L' U L U l F' L' F M'"
     isLefty: true
 Backslash_HAnti:
   name: Backslash_HAnti
   algs:
   - 
-    alg: "[U] L' U L U' L' U' L U2' L D L' U' L D' L2' U' L"
+    setup: U
+    alg: "L' U L U' L' U' L U2' L D L' U' L D' L2' U' L"
     isLefty: true
 Backslash_Z:
   name: Backslash_Z
   algs:
   - 
-    alg: "[U] L' U2 L' D' L U2 L' D L U2 L U L' U L"
+    setup: U
+    alg: "L' U2 L' D' L U2 L' D L U2 L U L' U L"
     isLefty: true
 Slash_S:
   name: Slash_S
@@ -382,7 +426,8 @@ Slash_OBar:
   name: Slash_OBar
   algs:
   - 
-    alg: "[U] R' U2 L F' L' U L' U' L U' F L' U2 L R"
+    setup: U
+    alg: "R' U2 L F' L' U L' U' L U' F L' U2 L R"
     isLefty: true
 Slash_ABar:
   name: Slash_ABar
@@ -394,25 +439,29 @@ Slash_BarO:
   name: Slash_BarO
   algs:
   - 
-    alg: "[U'] L2 D L' U L D' L2 U L U2 L' "
+    setup: U'
+    alg: "L2 D L' U L D' L2 U L U2 L' "
     isLefty: true
 Slash_BarA:
   name: Slash_BarA
   algs:
   - 
-    alg: "[U] L2 F L' U2 L' U2 L F' U L' U' L U L'"
+    setup: U
+    alg: "L2 F L' U2 L' U2 L F' U L' U' L U L'"
     isLefty: true
 Slash_AntiZ:
   name: Slash_AntiZ
   algs:
   - 
-    alg: "[U2] F' L' U' L U L2 D' L U L' D L2 U L' U' L F"
+    setup: U2
+    alg: "F' L' U' L U L2 D' L U L' D L2 U L' U' L F"
     isLefty: true
 Slash_VArrow:
   name: Slash_VArrow
   algs:
   - 
-    alg: "[U2] L U' L' U' L U2 L' U' L' D' L U2 L' D L"
+    setup: U2
+    alg: "L U' L' U' L U2 L' U' L' D' L U2 L' D L"
     isLefty: true
 Slash_Z:
   name: Slash_Z
@@ -430,16 +479,19 @@ Slash_VAnti:
   name: Slash_VAnti
   algs:
   - 
-    alg: "[U] R U R' U R U' R' U R U' R' U' r' F R F' M'"
+    setup: U
+    alg: "R U R' U R U' R' U R U' R' U' r' F R F' M'"
 Slash_HArrow:
   name: Slash_HArrow
   algs:
   - 
-    alg: "[U] L U' L' U L U L' U2 L' D' L U L' D L2 U L'"
+    setup: U
+    alg: "L U' L' U L U L' U2 L' D' L U L' D L2 U L'"
     isLefty: true
 Slash_HAnti:
   name: Slash_HAnti
   algs:
   - 
-    alg: "[U] L U2 L D L' U2 L D' L' U2 L' U' L U' L' "
+    setup: U
+    alg: "L U2 L D L' U2 L D' L' U2 L' U' L U' L' "
     isLefty: true

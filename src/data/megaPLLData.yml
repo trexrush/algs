@@ -351,9 +351,9 @@ H2+:
     - 
       alg: L2 U2 L2' U' L2 U' L2' y' L2' U' L2 U' L2' U2 L2
       isLefty: true
-    - 
-      alg: L2' U L2 U L2' U L2 U L2' U L2 U2 L2' U L2 U L2' U L2 U L2' U L2
-      isLefty: true
+    # - 
+    #   alg: L2' U L2 U L2' U L2 U L2' U L2 U2 L2' U L2 U L2' U L2 U L2' U L2
+    #   isLefty: true
 H2-:
   name: H2-
   altNames: ["Rapidash"]
@@ -361,9 +361,9 @@ H2-:
     - 
       alg: L2' U2' L2 U L2' U L2 y L2 U L2' U L2 U2' L2'
       isLefty: true
-    - 
-      alg: L2 U' L2' U' L2 U' L2' U' L2 U' L2' U2' L2 U' L2' U' L2 U' L2' U' L2 U' L2'
-      isLefty: true
+    # - 
+    #   alg: L2 U' L2' U' L2 U' L2' U' L2 U' L2' U2' L2 U' L2' U' L2 U' L2' U' L2 U' L2'
+    #   isLefty: true
 I1+:
   name: I1+
   altNames: ["Abra"]
