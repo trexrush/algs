@@ -30,7 +30,7 @@ const { set, options, size } = Astro.props
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?
-          <VerticalCaseCard client:visible caso={setOrCase} options={options} size={size} setName={set.name}/>
+          <VerticalCaseCard client:visible caso={setOrCase} options={options} size={size}/>
         :
           <Astro.self set={setOrCase} options={options} size={size} />
       ))

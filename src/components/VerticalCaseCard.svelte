@@ -7,7 +7,6 @@
   import { mirrorAlg, mirrorAlgOverrideTriggers } from "../scripts/alg";
 
   export let size: number
-  export let setName: string
   
   // always "non-mirrored"
   export let caso: ICase;
@@ -49,7 +48,7 @@
 <!-- svelte-ignore a11y-missing-content -->
 
 <div id={caso.name} class="w-[95%] m-4 ml-0 mt-0 pt-4 flex flex-row items-center justify-center">
-  <AlgVisuals activeAlg={algWithSetup($activeAlg)} imageAlg={caso.algs[0]["alg"]} options={options} size={size} isLefty={$activeAlg.isLefty} bind:toggleDisplay={toggleDisplay} bind:isAlgVisDisplayed={toggled}/>
+  <AlgVisuals activeAlg={algWithSetup($activeAlg)} imageAlg={caso.algs[0]} options={options} size={size} isLefty={$activeAlg.isLefty} bind:toggleDisplay={toggleDisplay} bind:isAlgVisDisplayed={toggled}/>
   <div class="flex flex-col justify-start items-start relative m-1 p-2 w-full min-h-[6em] h-fit ml-5 rounded-md 
   bg-stone-900/[.07] dark:bg-stone-50/[.07] shadow-lg hover:shadow-2xl hover:-translate-y-[1px]">
     <div class="absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.7em]">

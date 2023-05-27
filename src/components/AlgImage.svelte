@@ -1,12 +1,12 @@
 <script lang="ts">
   import { expandAlgWithTriggers } from "../scripts/alg";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
-  import type { IOptions } from "../scripts/types";
+  import type { IAlg, IOptions } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
   import { cubePNG, Axis, Masking } from "sr-visualizer";
   import { onMount } from "svelte";
 
-  export let imageAlg: string
+  export let imageAlg: IAlg
   export let options: IOptions
   export let size: number
 
@@ -26,7 +26,7 @@
       width: size,
       height: size,
       mask: options.vcparams?.stage! as Masking,
-      case: expandAlgWithTriggers(imageAlg, options.puzzle) + "" + options.vcparams?.rot!,
+      case: (imageAlg.setup || "") + expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!,
     });
   };
 
@@ -45,7 +45,7 @@
         {#if options.imgSource == "vc"}
         <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
         {:else if options.imgSource == "cubingjs"}
-        <TwistyPlayer {imageAlg} options={options} {size} />
+        <TwistyPlayer imageAlg={imageAlg.alg} options={options} {size} />
         {/if}
     </div>
 </div>

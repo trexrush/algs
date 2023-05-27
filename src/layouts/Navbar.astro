@@ -1,25 +1,63 @@
 ---
+import Info from "../components/Info.astro";
 let pages = [
-  { name: "OLL", href: "/algs/oll", folder: false, },
-  { name: "PLL", href: "/algs/pll", folder: false, },
-  { name: "ZBLS", href: "/algs/zbls", folder: false, },
-  { name: "ZBLL", href: "/algs/zbll" , folder: true, },
-  { name: "2x2", href: "/algs/2x2", folder: true, },
-  { name: "Megaminx", href: "/algs/mega", folder: true, },
+  { name: "CFOP", folder: [
+      { name: "OLL", href: "/algs/oll" },
+      { name: "PLL", href: "/algs/pll" },
+    ], 
+  },
+  { name: "ZBLS", href: "/algs/zbls" },
+  { name: "ZB", folder: [
+      { name: "T ZBLL", href: "/algs/zbll/T" , folder: true, },
+      { name: "U ZBLL", href: "/algs/zbll/U" , folder: true, },
+      { name: "L ZBLL", href: "/algs/zbll/L" , folder: true, },
+    ], 
+  },
+  { name: "2x2", href: "/algs/2x2", folder: [
+    { name: "CLL", href: "/algs/2x2/cll" }, 
+    { name: "EG1", href: "/algs/2x2/eg1" }, 
+  ] },
+  { name: "Megaminx", href: "/algs/mega", folder: [ 
+      { name: "Full OLL", href: "/algs/mega/megaOLL" }, 
+      { name: "Full PLL", href: "/algs/mega/megaPLL" }, 
+    ],
+  },
 
   { name: "GSheets", href: "https://docs.google.com/spreadsheets/d/1L0iR5AyRh2sTWymHSD2MiTJXzl8IoxGzyuRgqEhttSs/edit#gid=1313953242", external: true, },
   { name: "GitHub", href: "https://github.com/trexrush/algs", external: true, },
 ]
 ---
+<div class="invisible">
+  <dialog class="bg-transparent w-screen h-screen grid place-items-center backdrop:bg-stone-900/40 dark:text-white">
+    <div id="innerInfo">
+      <Info />
+    </div>
+  </dialog>
+</div>
 
 <!-- DESKTOP -->
-<nav
-  class="hidden md:flex w-fit items-baseline m-3 rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800 [&>*]:py-2 [&>*]:px-4"
->
-  <a href="/algs/" class="text-xl font-bold hover:font-black">Home</a>
-  {pages.map((page) => (
-    <a href={page.href} class="hover:font-semibold select-none overflow-hidden">{page.name} {(page.folder && "📂") || (page.external && "↗")}</a>
-  ))}
+<nav class="hidden md:flex items-baseline">
+  <div class="flex w-fit items-baseline m-3 rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800 [&>*]:py-2 [&>*]:px-4">
+    <a href="/algs/" class="text-xl font-bold hover:font-black relative">Home</a>
+    {pages.map((page) => (
+      page.folder ?
+      <div class="relative p-2">
+        <label for={page.name} class="select-none rounded-md shadow-lg bg-stone-200 dark:bg-stone-800 cursor-pointer w-fit font-bold" >{page.name} {"📂"}</label>
+        <input id={page.name} type="checkbox" class="peer hidden" />
+<!--  TODO: make dialog --->
+        <div class="hidden peer-checked:flex flex-col absolute top-12 z-20 w-fit rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800">
+          {page.folder.map((subpage) => (
+            <a href={subpage.href} class="hover:font-semibold select-none overflow-hidden p-3">{subpage.name}</a>
+          ))}
+        </div>
+      </div>
+      :
+      <a href={page.href} class="hover:font-semibold select-none overflow-hidden">{page.name} {(page.external && "↗")}</a>
+      ))}
+  </div>
+  <div id="showInfo" class="w-fit m-3 px-4 py-2 rounded-md shadow-lg bg-stone-200 dark:bg-stone-800 cursor-pointer hover:font-bold">
+    ❓
+  </div>
 </nav>
 
 <!-- MOBILE -->
@@ -35,3 +73,16 @@ let pages = [
     ))}
   </div>
 </nav>
+
+
+
+<script>
+  // Find all buttons with the `alert` class on the page.
+  const dialog = document.querySelector('dialog');
+  const buttonInfo = document.getElementById('showInfo')
+  const innerInfo = document.getElementById('innerInfo');
+
+  buttonInfo?.addEventListener('click', () => dialog?.showModal());
+  dialog?.addEventListener('click', () => dialog?.close());
+  innerInfo?.addEventListener('click', e => e.stopPropagation())
+</script>
