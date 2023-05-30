@@ -39,20 +39,23 @@
     : 'text-[2.8vw] sm:text-[17.5px] font-extralight'}
       hover:text-[2.95vw] sm:hover:text-[19px] transition-all duration-100 cursor-pointer group
       {displayLefty
-    ? isActive ? 'bg-gradient-to-r from-teal-500 via-green-500 to-lime-500' : 'dark:text-lime-100/40'
-    : isActive ? 'bg-gradient-to-r from-red-500 via-orange-500 to-amber-500' : 'dark:text-red-100/40'}">
+    ? isActive ? 'bg-gradient-to-r from-teal-500 via-green-500 to-lime-500' : 'text-lime-100/40'
+    : isActive ? 'bg-gradient-to-r from-red-500 via-orange-500 to-amber-500' : 'text-red-100/40'}">
   {#if !isExpanded}
     {#each displayAlg.split(algDelimiterWithTriggers) as movesOrTrigger }
       {#if movesOrTrigger.match(isTriggerRegex) != null}
-        <span class="{ isActive ? 'font-extrabold' : 'font-bold'}"
+        <span class="{ isActive ? 'font-extrabold' : 'font-bold'} group/trigger"
         title={expandAlgWithTriggers(movesOrTrigger, displayPzl)} data-tooltip-placement={'top'}>
         {#each movesOrTrigger.replace(isTriggerRegex, '$1').split(' ') as triggerOrModifier}
             {#if modifiersList.find((item) => item == triggerOrModifier) != undefined} <!-- MODIFIER -->
-              <span class="text-[1.5vw] group-hover:text-[1.6vw] sm:text-[10px] group-hover:sm:text-[10.7px] text-stone-500 transition-all duration-100">
+              <span class="mx-[1px] text-[1.5vw] sm:text-[10px] text-stone-500 transition-all duration-100
+              group-hover:text-[1.6vw] group-hover:sm:text-[10.7px] 
+              {displayLefty ? 'group-hover/trigger:text-lime-100' : 'group-hover/trigger:text-red-100'}">
                 {modifierActionsList[asModifier(triggerOrModifier)].text}
               </span>
             {:else} <!-- TRIGGER -->
-              <span class="{displayLefty ? 'group-hover:dark:text-lime-200' : 'group-hover:dark:text-red-200'}">{triggerOrModifier + " "}</span>
+              <span class="{isActive ? 'group-hover:text-white/40' : 
+              isLefty ? 'group-hover:text-lime-300' : 'group-hover:text-red-300'}">{triggerOrModifier + " "}</span>
             {/if}
           {/each}
         </span>
@@ -74,5 +77,5 @@ on:click={() => { navigator.clipboard.writeText(expandAlgWithTriggers(displayAlg
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 {#if isExpandable}
 <span class="my-[2px] p-[1px] px-1 sm:text-sm text-[1.5vw] bg-stone-50/[.15] rounded-md shadow-md cursor-pointer select-none"
-on:click={() => { isExpanded = !isExpanded }} title="Expand Alg">{!isExpanded ? 'Expand' : 'Triggers'}</span>
+on:click={() => { isExpanded = !isExpanded }} title="Expand Alg">{!isExpanded ? '➡️' : '⬅️'}</span>
 {/if}
