@@ -1,10 +1,8 @@
-// TODO: algorithmically handle INVERSE and DOUBLE and LEFTY and BACK
-
 import type { modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types"
-
 
 export const puzzleDefinitionMapping: modularPuzzleGroup<{ type: twistyPuzzleType, standard: twistyPuzzleTypeWithChirality, mirror: twistyPuzzleTypeWithChirality, vc: string | number }> = {
     '3x3x3': { type: '3x3x3', standard: '3x3x3', mirror: '3x3x3', vc: 3 },
+    '4x4x4': { type: '4x4x4', standard: '4x4x4', mirror: '4x4x4', vc: 4 },
     '2x2x2': { type: '2x2x2', standard: '2x2x2', mirror: '2x2x2', vc: 2 },
     'megaminx': { type: 'megaminx', standard: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega' },
     'megaminx-lefty': { type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega' },
@@ -29,23 +27,22 @@ const cubeRotations = [
     { name: "U2'", alg: "U2' . " },
 ]
 
-// TODO: add all of the PLLs here apparently lol thanks PLL parity sheet
 const pllSubstitutes = [
-    // { name: "Aa Perm", alg: "" },
-    // { name: "Ab Perm", alg: "" },
-    // { name: "E Perm", alg: "" },
-    // { name: "F Perm", alg: "" },
-    // { name: "H Perm", alg: "" },
-    // { name: "Ja Perm", alg: "" },
-    // { name: "Jb Perm", alg: "" },
-    // { name: "Ra Perm", alg: "" },
-    // { name: "Rb Perm", alg: "" },
+    { name: "Aa Perm", alg: "x R' U R' D2' R U' R' D2' R2 x'" },
+    { name: "Ab Perm", alg: "x R2' D2' R U R' D2' R U' R x'" },
+    { name: "E Perm", alg: "x' R U' R' D R U R' D' R U R' D R U' R' D'" },
+    { name: "F Perm", alg: "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R" },
+    { name: "H Perm", alg: "M2 U M2 U2 M2 U M2" },
+    { name: "Ja Perm", alg: "x R2 F R F' R U2' r' U r U2 x'" },
+    { name: "Jb Perm", alg: "R U R' F' R U R' U' R' F R2 U' R'" },
+    { name: "Ra Perm", alg: "R U' R' U' R U R D R' U' R D' R' U2 R'" },
+    { name: "Rb Perm", alg: "R' U2 R' D' R U' R' D R U R U' R' U' R" },
     { name: "T_PERM", alg: "R U R' U' R' F R2 U' R' U' R U R' F'" },
-    // { name: "Ua Perm", alg: "" },
-    // { name: "Ub Perm", alg: "" },
-    // { name: "V Perm", alg: "" },
+    { name: "Ua Perm", alg: "R U R' U R' U' R2 U' R' U R' U R" },
+    { name: "Ub Perm", alg: "R' U R' U' R3 U' R' U R U R2'" },
+    { name: "V Perm", alg: "R' U R' U' R D' R' D R' U D' R2 U' R2' D R2" },
     { name: "Y_PERM", alg: "F R U' R' U' R U R' F' R U R' U' R' F R F'" },
-    // { name: "Z Perm", alg: "" },
+    { name: "Z Perm", alg: "M' U M2' U M2' U M' U2 M2'" },
 ]
 
 const zbllSubstitutes = [
@@ -56,18 +53,21 @@ const zbllSubstitutes = [
 
 const bigCubeSubstitutes = [
     { name: "OPP", alg: ". . Uw2 r2 Uw2 r2 U2 r2" },
-    // { name: "DREW", alg: "" },
-    // { name: "LUCAS", alg: "" },
-    // { name: "FRONT", alg: "" }, // same as above for the purpose of triggers
+    { name: "DREW", alg: "Rw2 B2' Rw' U2 Rw' U2 x' U2' Rw' U2 Rw U2' Rw' U2 Rw2 U2 x" },
+    { name: "LUKE", alg: "Rw' U2' Rw U2 Rw' F2 Rw2 U2' Rw U2 Rw' U2' F2 Rw2 F2'" },
+    { name: "LUCAS", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" },
+    { name: "FRONT", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" }, // same as above for the purpose of triggers
 ]
 
 const megaSubstitutes = [
+    { name: "SUPERSUNE", alg: "R2 U R2' U R2 U2' R2'" },
     { name: "UP_CW_7MOVER", alg: "R2 U2 R2' U R2 U2 R2'" },
     { name: "UP_CCW_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
     { name: "DOWN_CW_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
     { name: "DOWN_CCW_7MOVER", alg: "R2' U2' R2 U' R2' U2' R2" },
     { name: "ANTISUNE", alg: "R U2 R' U' R U' R'" },
-
+    { name: "Ja Perm", alg: "x R2 F R F' R U2' Rw' U Rw U2 x'" },
+    
 ]
 
 const megaRightySubstitutes = [
@@ -86,6 +86,20 @@ const triggers = [
     { name: "UNSEXY", alg: "U R U' R'" }, // same as above
     { name: "SLEDGE", alg: "R' F R F'" },
     { name: "HEDGE", alg: "F R' F' R" },
+    { name: "FATSLEDGE", alg: "r' F R F'" },
+    { name: "FATSEXY", alg: "r U R' U'" },
+    
+    { name: "SUNE", alg: "R U R' U R U2' R'" },
+    { name: "ANTISUNE", alg: "R U2' R' U' R U' R'" },
+    { name: "FATSUNE", alg: "r U R' U R U2' r'" },
+    { name: "FATANTISUNE", alg: "r U2' R' U' R U' r'" },
+    { name: "NIKLAS", alg: "R U' L' U R' U' L" },
+    { name: "ADJFLIP", alg: "r U R' U' M U R U' R'" },
+    { name: "OPPFLIP", alg: "R U R' U' M' U R U' R'" },
+    { name: "FRURUF", alg: "F R U R' U' F'" },
+]
+
+const rareTriggers = [
     { name: "SU", alg: "R U R' U" },
     { name: "NE", alg: "R U2' R'" },
     { name: "PAIR_U2", alg: "R U2' R'" }, // TODO - find what patrick / rami use
@@ -96,8 +110,6 @@ const triggers = [
     { name: "NPERMSTART", alg: "R' U R U'" }, // name help?
     { name: "VPERMSTART", alg: "R' U R' U'" }, // name help?
     { name: "OHSLEDGE", alg: "r' F R F' M'" },
-    { name: "FATSLEDGE", alg: "r' F R F'" },
-    { name: "FATSEXY", alg: "r U R' U'" },
     { name: "FATSU", alg: "r U R' U" },
     { name: "FATNE", alg: "R U2' r'" },
     { name: "MEGASLEDGE", alg: "R' F' R F" },
@@ -107,21 +119,14 @@ const triggers = [
     { name: "U'_ZERO", alg: "R' D' R U' R' D R" },
     { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },
 
-    { name: "SUNE", alg: "R U R' U R U2' R'" },
-    { name: "ANTISUNE", alg: "R U2' R' U' R U' R'" },
-    { name: "FATSUNE", alg: "r U R' U R U2' r'" },
-    { name: "FATANTISUNE", alg: "r U2' R' U' R U' r'" },
-    { name: "NIKLAS", alg: "R U' L' U R' U' L" },
-    { name: "ADJFLIP", alg: "r U R' U' M U R U' R'" },
-    { name: "OPPFLIP", alg: "R U R' U' M' U R U' R'" },
 ]
 
 export const triggerSubstitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
-    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...triggers],
-    "2x2x2": [...cubeRotations, ...triggers],
-    "4x4x4": [...pllSubstitutes, ...cubeRotations, ...triggers],
-    "megaminx": [...megaSubstitutes, ...megaRightySubstitutes, ...pllSubstitutes, ...triggers],
-    "megaminx-lefty": [...megaSubstitutes, ...megaLeftySubstitutes, ...pllSubstitutes, ...triggers]
+    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
+    "2x2x2": [...cubeRotations, ...rareTriggers, ...triggers],
+    "4x4x4": [...bigCubeSubstitutes, ...pllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
+    "megaminx": [...megaSubstitutes, ...megaRightySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers],
+    "megaminx-lefty": [...megaSubstitutes, ...megaLeftySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers]
 }
 
 // im sorry to the gods of hardcoding but cubingJS doesnt have a mirror function somehow? discrimination against left handed ppl smh
