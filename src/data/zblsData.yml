@@ -1,20 +1,34 @@
 ---
 1_S:
   name: 1_S
+  altNames:
+    - Winter Variation
   algs:
   - 
-    alg: "[U] R U' R'"
-  note: normal insert or do Winter Variation
+    setup: U
+    alg: R U' R'
+  note: normal insert
 1_Dot:
   name: 1_Dot
   algs:
   - 
-    alg: "[U2] M' U' R U' r' U2 M' U' M"
+    setup: U2
+    alg: M' U' R U' r' U2 M' U' M
   - 
     alg: R' F R2 U' R' (F' S) r' F r S'
-  note: bad case, prolly better to sledge and get L 2nd alg is meme
+    tags: 
+      - Swag
+  -
+    setup: U2
+    alg: "[SLEDGE] U2' [SLEDGE]"
+    note: no dont
+  -
+    alg: M' U R U' r2' U2' R U R' U r
+  note: bad case, prolly better to sledge and get L
 1_L1:
   name: 1_L1
+  altNames:
+    - Sledgehammer
   algs:
   - 
     alg: R' F R F'
@@ -25,27 +39,34 @@
   name: 1_L2
   algs:
   - 
-    alg: "[U] R B U' B' R'"
+    setup: U
+    alg: R B U' B' R'
+  - 
+    setup: U2
+    alg: "[SLEDGE] [NE]"
 1_Line:
   name: 1_Line
   algs:
   - 
-    alg: "[U] F' L' U' L F"
-  - 
     alg: R' U' F U R U' F'
+  - 
+    setup: U
+    alg: F' L' U' L F
 1_i1:
   name: 1_i1
   algs:
   - 
-    alg: "[U] R U R' U2 R' F R F'"
+    setup: U
+    alg: R U R' U2' R' F R F'
   note: setup to sledge
 1_i2:
   name: 1_i2
   algs:
   - 
-    alg: "[U2] R U' R' U' R' F R F' "
+    setup: U2
+    alg: R U' R' U' R' F R F' 
   - 
-    alg: 'R'' F R2 U R'' U'' F'' '
+    alg: R' F R2 U R' U' F'
 1_i3:
   name: 1_i3
   algs:
@@ -55,19 +76,22 @@
   name: 2_S
   algs:
   - 
-    alg: "[U'] F' U F"
+    setup: U'
+    alg: F' U F
   - 
-    alg: "[U] r' D' r U' r' D r"
+    setup: U
+    alg: r' D' r U' r' D r
 2_Dot:
   name: 2_Dot
   algs:
   - 
-    alg: r U r' U2 M' U M
+    alg: r U r' U2' M' U M
 2_L1:
   name: 2_L1
   algs:
   - 
-    alg: "[U'] r U' r' U r U r'"
+    setup: U'
+    alg: r U' r' U r U r'
 2_L2:
   name: 2_L2
   algs:
@@ -77,26 +101,33 @@
   name: 2_Line
   algs:
   - 
-    alg: "[U'] R B U B' R'"
+    setup: U'
+    alg: R B U B' R'
   - 
     alg: F U R' U' F' U R
+  -
+    alg: r' U r
+    note: calvin nielsen block comm
 2_i1:
   name: 2_i1
   algs:
   - 
-    alg: "[U] R' D' r U' r' D R"
+    setup: U
+    alg: R' D' r U' r' D R
   note: hold EO LL edge in UB, do block comm
 2_i2:
   name: 2_i2
   algs:
   - 
-    alg: "[U'] R U R2' D' r U r' D R"
+    setup: U'
+    alg: R U R2' D' r U r' D R
   note: setup to  2i3
 2_i3:
   name: 2_i3
   algs:
   - 
-    alg: "[U'] R' D' r U r' D R"
+    setup: U'
+    alg: R' D' r U r' D R
   note: hold EO LL edge in UB, do block comm
 4_S:
   name: 4_S
@@ -113,7 +144,8 @@
   name: 4_L1
   algs:
   - 
-    alg: "[U'] F' U2 F U R U' R'"
+    setup: U'
+    alg: F' U2 F U R U' R'
   note: or insert into P oll
 4_L2:
   name: 4_L2
@@ -153,15 +185,18 @@
   name: 3_Dot
   algs:
   - 
-    alg: "[U2] S' R U' R' S U' R' F R F'"
+    setup: U2
+    alg: S' R U' R' S U' R' F R F'
   note: or rotate to 4Dot
 3_L1:
   name: 3_L1
   algs:
   - 
-    alg: "[U2] S' R U' R' S R U' R'"
+    setup: U2
+    alg: S' R U' R' S R U' R'
   - 
-    alg: "[U] R U2 R' U' F' U F"
+    setup: U
+    alg: R U2 R' U' F' U F
 3_L2:
   name: 3_L2
   algs:
@@ -171,7 +206,8 @@
   name: 3_Line
   algs:
   - 
-    alg: "[U'] R' F R U R U' R2' F' R"
+    setup: U'
+    alg: R' F R U R U' R2' F' R
 3_i1:
   name: 3_i1
   algs:
@@ -184,23 +220,27 @@
   name: 3_i2
   algs:
   - 
-    alg: "[U] R2 D r' U' r D' R2'"
+    setup: U
+    alg: R2 D r' U' r D' R2'
 3_i3:
   name: 3_i3
   algs:
   - 
-    alg: "[U2] R' D' r U' r' D R2 U' R'"
+    setup: U2
+    alg: R' D' r U' r' D R2 U' R'
   note: hold EO LL edge in UB, do block comm
 5_S:
   name: 5_S
   algs:
   - 
-    alg: "[U'] R U R' U2 R U' R'"
+    setup: U'
+    alg: R U R' U2 R U' R'
 5_Dot:
   name: 5_Dot
   algs:
   - 
-    alg: "[U2] R2 D r' U' r D' R' U' R'"
+    setup: U2
+    alg: R2 D r' U' r D' R' U' R'
 5_L1:
   name: 5_L1
   algs:
@@ -217,7 +257,8 @@
   name: 6_L2
   algs:
   - 
-    alg: "[U'] r U' R' U R U r'"
+    setup: U'
+    alg: r U' R' U R U r'
 6_i3:
   name: 6_i3
   algs:
@@ -227,7 +268,8 @@
   name: 7_S
   algs:
   - 
-    alg: "[U'] R U2 R' U2 R U' R' "
+    setup: U'
+    alg: R U2 R' U2 R U' R' 
 7_L2:
   name: 7_L2
   algs:
@@ -243,7 +285,8 @@
   name: 10_S
   algs:
   - 
-    alg: "[U2] R U' R' U' R U R'"
+    setup: U2
+    alg: R U' R' U' R U R'
 9_S:
   name: 9_S
   algs:
@@ -263,7 +306,8 @@
   name: 14_S
   algs:
   - 
-    alg: "[U'] R U' R' U R U R'"
+    setup: U'
+    alg: R U' R' U R U R'
 13_S:
   name: 13_S
   algs:
@@ -285,7 +329,8 @@
   name: 15_L1
   algs:
   - 
-    alg: "[U] R' F R F' U R U R'"
+    setup: U
+    alg: R' F R F' U R U R'
 15_L2:
   name: 15_L2
   algs:
@@ -301,7 +346,8 @@
   name: 16_S
   algs:
   - 
-    alg: "[U] F R' F' R2 U' R' U R' F R F'"
+    setup: U
+    alg: F R' F' R2 U' R' U R' F R F'
 16_L1:
   name: 16_L1
   algs:
@@ -330,12 +376,14 @@
   name: 19_S
   algs:
   - 
-    alg: "[U] R U2' R' U R U' R'"
+    setup: U
+    alg: R U2' R' U R U' R'
 19_i3:
   name: 19_i3
   algs:
   - 
-    alg: "[U] R U2 R2 F R F' "
+    setup: U
+    alg: R U2 R2 F R F' 
 20_S:
   name: 20_S
   algs:
@@ -351,7 +399,8 @@
   name: 21_S
   algs:
   - 
-    alg: "[U2] R U R' U R U' R'"
+    setup: U2
+    alg: R U R' U R U' R'
 21_i1:
   name: 21_i1
   algs:
@@ -361,18 +410,21 @@
   name: 22_S
   algs:
   - 
-    alg: "[U2] R' F R F' R U R' U R U' R' "
+    setup: U2
+    alg: R' F R F' R U R' U R U' R' 
   note: sledge into 21S
 22_i2:
   name: 22_i2
   algs:
   - 
-    alg: "[U'] F' L' U' L U' F"
+    setup: U'
+    alg: F' L' U' L U' F
 23_S:
   name: 23_S
   algs:
   - 
-    alg: "[U] R U' R' U' R U' R' U R U' R'"
+    setup: U
+    alg: R U' R' U' R U' R' U R U' R'
   - 
     alg: R U' R' U' R' D' R U' R' D R
   note: 1st alg - setup to 27S 2nd alg - setup to CLS
@@ -380,12 +432,14 @@
   name: 23_Line
   algs:
   - 
-    alg: "[U2] r U' r' U r U r' R' F R F'"
+    setup: U2
+    alg: r U' r' U r U r' R' F R F'
 23_i1:
   name: 23_i1
   algs:
   - 
-    alg: "[U2] r U' r' U r U r' U R U' R'"
+    setup: U2
+    alg: r U' r' U r U r' U R U' R'
 24_S:
   name: 24_S
   algs:
@@ -406,31 +460,37 @@
   name: 25_S
   algs:
   - 
-    alg: "[U'] F' R U R' U' R' F R"
+    setup: U'
+    alg: F' R U R' U' R' F R
   - 
-    alg: "[U] R U' R' U R' D' R U' R' D R"
+    setup: U
+    alg: R U' R' U R' D' R U' R' D R
   note: normal insert 2nd alg - setup to CLS
 25_Dot:
   name: 25_Dot
   algs:
   - 
-    alg: "[U] R2 D r' U r D' R' U' R'"
+    setup: U
+    alg: R2 D r' U r D' R' U' R'
 25_L1:
   name: 25_L1
   algs:
   - 
-    alg: "[U'] F' U F U R U' R'"
+    setup: U'
+    alg: F' U F U R U' R'
   note: beginner insert without the rotation
 25_L2:
   name: 25_L2
   algs:
   - 
-    alg: "[U'] F' U' F U R U R'"
+    setup: U'
+    alg: F' U' F U R U R'
 25_Line:
   name: 25_Line
   algs:
   - 
-    alg: "[U'] R' F R F' R U R'"
+    setup: U'
+    alg: R' F R F' R U R'
   note: sledge insert
 25_i1:
   name: 25_i1
@@ -456,7 +516,8 @@
   name: 26_Line
   algs:
   - 
-    alg: "[U] R U' R' F R' F' R"
+    setup: U
+    alg: R U' R' F R' F' R
   note: normal insert
 27_S:
   name: 27_S
@@ -495,40 +556,48 @@
   name: 32_S
   algs:
   - 
-    alg: "[U] R U' R' U R U' R' U R U' R'"
+    setup: U
+    alg: R U' R' U R U' R' U R U' R'
   note: or do CLS
 32_Dot:
   name: 32_Dot
   algs:
   - 
-    alg: "[U2] r U2' r' U2 r U' r' U2 r U2' r' "
+    setup: U2
+    alg: r U2' r' U2 r U' r' U2 r U2' r' 
   - 
-    alg: "[U2] R' F R F' U2' r U' r' U2' r U r' "
+    setup: U2
+    alg: R' F R F' U2' r U' r' U2' r U r' 
 32_Lne:
   name: 32_Lne
   algs:
   - 
-    alg: "[U'] F R' F' R U' R U R'"
+    setup: U'
+    alg: F R' F' R U' R U R'
 32_Lnw:
   name: 32_Lnw
   algs:
   - 
-    alg: "[U'] R U R' U' R U R2 F R F'"
+    setup: U'
+    alg: R U R' U' R U R2 F R F'
   - 
     alg: F R' F' R2 U R' U' R U R'
 32_Lse:
   name: 32_Lse
   algs:
   - 
-    alg: "[U] R' F R F' U F' U' F "
+    setup: U
+    alg: R' F R F' U F' U' F 
   - 
-    alg: "[U2] F' U r' F' r U' F"
+    setup: U2
+    alg: F' U r' F' r U' F
   note: alg2 is j slotting
 32_Lsw:
   name: 32_Lsw
   algs:
   - 
-    alg: "[U2] F R' F' R2 U R' U R U' R'"
+    setup: U2
+    alg: F R' F' R2 U R' U R U' R'
 32_V Line:
   name: 32_V Line
   algs:
@@ -539,7 +608,8 @@
   name: 32_H Line
   algs:
   - 
-    alg: "[U] R U' R' U R U' R2 F R F' "
+    setup: U
+    alg: R U' R' U R U' R2 F R F' 
 31_3eF:
   name: 31_3eF
   algs:
@@ -549,49 +619,57 @@
   name: 31_3eL
   algs:
   - 
-    alg: "[U'] R' F R F' R U' R' "
+    setup: U'
+    alg: R' F R F' R U' R' 
   note: normal insert
 33_S:
   name: 33_S
   algs:
   - 
-    alg: "[U'] R U' R' U2 R U' R'"
+    setup: U'
+    alg: R U' R' U2 R U' R'
   note: or do CLS/Zeroing
 35_3eF:
   name: 35_3eF
   algs:
   - 
-    alg: "[U2] R U R' U' F' U F"
+    setup: U2
+    alg: R U R' U' F' U F
   note: U2 sexy
 35_3eB:
   name: 35_3eB
   algs:
   - 
-    alg: "[U2] R U' R' U' F' U' F"
+    setup: U2
+    alg: R U' R' U' F' U' F
   note: U2 insert nonEO edge
 35_3eR:
   name: 35_3eR
   algs:
   - 
-    alg: "[U'] R U R' U F' U' F"
+    setup: U'
+    alg: R U R' U F' U' F
   note: normal insert
 35_3eL:
   name: 35_3eL
   algs:
   - 
-    alg: "[U2] R U R' F R' F' R"
+    setup: U2
+    alg: R U R' F R' F' R
   note: U2 sexy hedge
 34_S:
   name: 34_S
   algs:
   - 
-    alg: "[U] R' D' R U' R' D R"
+    setup: U
+    alg: R' D' R U' R' D R
   note: or do CLS/Zeroing
 36_3eF:
   name: 36_3eF
   algs:
   - 
-    alg: "[U] F' U' F U' R U R'"
+    setup: U
+    alg: F' U' F U' R U R'
 38_S:
   name: 38_S
   algs:
@@ -602,9 +680,11 @@
   name: 37_3e
   algs:
   - 
-    alg: "[U2] R2 U2' F R2' F' U2' R' U R'"
+    setup: U2
+    alg: R2 U2' F R2' F' U2' R' U R'
   - 
-    alg: "[U] R U R' U2' R U2' R' U F' U' F"
+    setup: U
+    alg: R U R' U2' R U2' R' U F' U' F
   note: 2nd is intuitive. For 1st, thumb on top = regripless
 37_1e:
   name: 37_1e

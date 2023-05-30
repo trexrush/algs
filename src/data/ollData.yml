@@ -100,7 +100,7 @@
         alg: "l L [LEFT SUNE] U' M'"
         isLefty: true
     - 
-        alg: F [SEXY] F' [U_ZBLL]
+        alg: "[FRURUF] [U_ZBLL]"
 '13':
     name: '13'
     algs:
@@ -122,14 +122,14 @@
         isLefty: true
     - 
         setup: U2
-        alg: "F [SEXY] F' [U_ZBLL]"
+        alg: "[FRURUF] [U_ZBLL]"
 '16':
     name: '16'
     algs:
     - 
         alg: r U r' [SEXY] r U' r'
     - 
-        alg: F [SEXY] F' U2 [U_ZBLL]
+        alg: "[FRURUF] U2 [U_ZBLL]"
 '17':
     name: '17'
     algs:
@@ -273,6 +273,8 @@
     - 
         setup: U'
         alg: "f R f' U' r' U' R U M'"
+        tags: 
+            - Swag
     - 
         alg: R U R2' U' R' F R U R U' F'
     - 
@@ -288,6 +290,10 @@
     - 
         alg: "[LEFT SUNE] [LEFTY SEXY] [LEFTY SLEDGE]"
         isLefty: true
+    - 
+        alg: r U' r2' D r2 U' r2' U r2 (U D') r'
+        tags:
+            - Swag
 '37':
     name: '37'
     algs:
@@ -311,7 +317,7 @@
         alg: L F' L' U' L U F U' L'
         isLefty: true
     - 
-        alg: F' [LEFT SEXY] F [T_ZBLL]
+        alg: "[LEFTY FRURUF] [T_ZBLL]"
         isLefty: true
 '40':
     name: '40'
@@ -322,7 +328,11 @@
     name: '41'
     algs:
     - 
-        alg: "[SUNE] F [SEXY] F'"
+        setup: U
+        alg: L U F2' u L' U' L u' F2' L'
+        isLefty: true
+    - 
+        alg: "[SUNE] [FRURUF]"
     - 
         alg: F U R2 D R' U' R D' R2' F'
     - 
@@ -331,14 +341,21 @@
     name: '42'
     algs:
     - 
-        alg: L' U' L U' L' U2 L F' L' U' L U F
+        alg: "[LEFTY SUNE] [LEFTY FRURUF]"
         isLefty: true
     - 
         alg: F' U' L2' D' L U L' D L2 F
         isLefty: true
     - 
+        alg: R' U' F2 u' R U R' D R2 B
+    - 
         setup: U'
         alg: "S' R U R' S R U' R' U [U_ZBLL]"
+    -
+        setup: U'
+        alg: F S' [SEXY] F' U S
+        tags:
+            - Swag
 '43':
     name: '43'
     algs:
@@ -354,10 +371,10 @@
     name: '45'
     algs:
     - 
-        alg: F [SEXY] F'
+        alg: "[FRURUF]"
     - 
         setup: U2
-        alg: "F' [LEFTY SEXY] F"
+        alg: "[LEFTY FRURUF]"
         isLefty: true
 '46':
     name: '46'
@@ -437,8 +454,8 @@
         alg: l U l' [DOUBLE INVERSE LEFT BACK SEXY] l U' l'
         isLefty: true
     - 
-        alg: F [SEXY] F' U [T_ZBLL]
-    note: if you have the double sune H CP, do the alg otherwise reduce to ZBLL
+        alg: "[FRURUF] U [T_ZBLL]"
+    note: if you have the pure H CP, do the alg otherwise reduce to ZBLL
 '57':
     name: '57'
     algs:

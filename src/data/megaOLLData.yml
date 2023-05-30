@@ -973,6 +973,10 @@
     -
      alg: (BL R') L F' L F L2' (BL' R)
      isLefty: true
+    -
+     alg: F' U' L' U2 L U' L' U' L U' L' U L F
+     isLefty: true
+     note: "ethan davis says this is slower"
 '31A+':
     name: 31A+
     algs:

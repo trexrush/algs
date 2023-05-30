@@ -7,6 +7,7 @@ const Options: IOptions = {
     name: "Megaminx OLL",
     puzzle: "megaminx",
     imgSource: "cubingjs",
+    //  TODO: test dr2 L2' F' b y2'
     twistyplayerparams: {
         rot: 'y',
         cameraX: 10,

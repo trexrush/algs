@@ -9,6 +9,9 @@ A1+:
     # - # dont use
     #   alg: L U2 L F L' U' L' U L F' L' U' L U' L'
     #   isLefty: true
+        # - # dont use
+    #   alg: L2' U2 L2 U L2' U2 L2 U L2' U2 L2 U L2' U2 L2
+    #   isLefty: true
 A1-:
   name: A1-
   altNames: ["Spearow"]
@@ -216,7 +219,10 @@ E2:
     - 
       alg: dr' U L FL' L' U' L FL L' U' L FL' L' U dr F
       isLefty: true
-  note: 3x3 transfer (E perm)
+      note: 3x3 transfer (E perm)
+    - 
+      alg: F' U L' U [LEFT SUNE] U' L U L' U2' L F
+      isLefty: true
 E3:
   name: E3
   altNames: ["Jynx"]
@@ -863,6 +869,10 @@ S2-:
     - 
       alg: L2' U2 L2 U2 L2' U L U2' L U L U2 L2' U' L2 U' L'
       isLefty: true
+    - 
+      alg: L F' U2' L2' U2 L2 U L2' U L2 U' F L' U L' U L
+      isLefty: true
+      note: orekehstrah alg
 S3+:
   name: S3+
   altNames: ["Dodrio"]
@@ -877,6 +887,10 @@ S3-:
     - 
       alg: L2' U2 L2 U L' F L' U' L2 U L F' L3' U2 L2
       isLefty: true
+    - 
+      alg: L' U' L U' L F' U L2' U' L2 U' L2' U2' L2 U2 F L'
+      isLefty: true
+      note: orekehstrah alg
 S4+:
   name: S4+
   altNames: ["Pidgey"]
@@ -1154,8 +1168,8 @@ X5+:
     #   isLefty: true
   recog:
     - Pseudobar J perm
-    - Pseudobar FB + Pseudoline on L with L headlights facing FB
-  note: 'M but with Z instead of block, left arrow'
+    - Pseudobar FB + Pseudoline on L with L headlights facing BL
+    - Pseudoblock M perm, blocks on FR LB with vertical arrow in FL (arrow is part of a pseudoline)
 X5-:
   name: X5-
   altNames: ["Squirtle"]
@@ -1166,10 +1180,15 @@ X5-:
     # - 
     #   alg: L2' U' L U2' L' U L U L' U L2 U' L' U2' L U2' L' U' L
     #   isLefty: true
+    - 
+      alg: L U2' L' F L U L' F' U2' L U2' L' F L U L' F'
+      isLefty: true
+      note: orekehstrah alg
   recog:
     - Pseudobar J perm
     - Pseudobar FL + Pseudoline on L with L headlights facing FL 
-  note: 'M but with Z instead of block, right arrow'
+    - Pseudoblock M perm, blocks on FL B with vertical arrow in BL (arrow is part of a pseudoline)
+
 X6+:
   name: X6+
   altNames: ["Ivysaur"]
@@ -1288,6 +1307,10 @@ Z1:
     - 
       alg: L U F' L' U L U L' U2' L F L' F' U F L U2' L'
       isLefty: true
+    - 
+      alg: L U L U L' F' L F U' L' F U F' U2' L'
+      isLefty: true
+      note: orekehstrah alg?
 Z2:
   name: Z2
   altNames: ["Zapdos"]

@@ -33,6 +33,11 @@ E:
   - 
    alg: L2 D (L' U L D') (L' U L D) (L' U' L D') (L' U' L')
    isLefty: true
+  - 
+   alg: F' U L' U [LEFT SUNE] U' L U L' U2' L F
+   isLefty: true
+   tags: 
+      - OH
 F: 
  name: F
  algs: 
@@ -185,7 +190,7 @@ Ra:
    alg: L U2' L D L' U L D' L' U' L' U L U L'
    isLefty: true
   - 
-   alg: L U2 L' U2 L F' [LEFTY SEXY] L F L2'
+   alg: L U2' L' U2 L F' [LEFTY SEXY] L F L2'
    tags: 
     - OH
    isLefty: true
@@ -202,6 +207,10 @@ Rb:
  algs: 
   - 
    alg: L' U L U L' U' L U' L D L' U L D' L2' U' L
+   isLefty: true
+  - 
+   setup: U'
+   alg: L' U2' L' D' L U' L' D L U L U' L' U' L
    isLefty: true
   - 
    alg: L' U L U L' U' L' D' L U L' D L U2' L
