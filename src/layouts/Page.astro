@@ -1,4 +1,6 @@
 ---
+import { Tooltips } from 'astro-tooltips'
+
 const { title } = Astro.props;
 ---
 <html lang="en" class=" font-juju">
@@ -24,6 +26,7 @@ const { title } = Astro.props;
         console.log("PAGE: sw registered")
       }
     </script>
+    <Tooltips interactive={false} placement={'right'} animateFill={true} />
     
   </head>
   <body class="shadow-stone-800 bg-stone-100 dark:bg-stone-900 dark:shadow-stone-100 dark:text-stone-50">
