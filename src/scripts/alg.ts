@@ -59,17 +59,17 @@ export const simplifyAlg = (a: string): string => {
   return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' }}).toString()
 }
 
-let modifierActionsList: Record<TModifiersList, (a: string, pzl: twistyPuzzleTypeWithChirality) => string> = {
-  "INVERSE": (a, pzl) => { return invertAlg(a) },
-  "LEFTY": (a, pzl) => { return mirrorAlg(a, pzl) },
-  "LEFT": (a, pzl) => { return mirrorAlg(a, pzl) },
-  "L": (a, pzl) => { return mirrorAlg(a, pzl) },
-  "BACK": (a, pzl) => { return backAlg(a, pzl) },
-  "B": (a, pzl) => { return backAlg(a, pzl) },
-  "DOUBLE": (a, pzl) => { return repeatAlg(a, 2) },
-  "X2": (a, pzl) => { return repeatAlg(a, 2) },
-  "TRIPLE": (a, pzl) => { return repeatAlg(a, 3) },
-  "X3": (a, pzl) => { return repeatAlg(a, 3) },
+export const modifierActionsList: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
+  "INVERSE": { action: (a, pzl) => { return invertAlg(a) }, text: 'INV'},
+  "LEFTY": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
+  "LEFT": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
+  "L": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
+  "BACK": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
+  "B": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
+  "DOUBLE": { action: (a, pzl) => { return repeatAlg(a, 2) }, text: '2x'},
+  "X2": { action: (a, pzl) => { return repeatAlg(a, 2) }, text: '2x'},
+  "TRIPLE": { action: (a, pzl) => { return repeatAlg(a, 3) }, text: '3x'},
+  "X3": { action: (a, pzl) => { return repeatAlg(a, 3) }, text: '3x'},
 }
 
 export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): string => {
@@ -82,7 +82,7 @@ export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): st
     let modifier = triggerList.pop()
     if (!modifier) { break }
     if (Object.keys(modifierActionsList).includes(modifier)) {
-      currTrigger.alg = modifierActionsList[modifier as TModifiersList](currTrigger.alg, pzl) 
+      currTrigger.alg = modifierActionsList[modifier as TModifiersList].action(currTrigger.alg, pzl) 
     }
   }
   return currTrigger.alg
