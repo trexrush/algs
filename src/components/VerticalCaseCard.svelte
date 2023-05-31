@@ -54,7 +54,7 @@
     <div class="absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.7em]">
       <div class="text-stone-500 text-[2.7vw] sm:text-[15px] flex gap-2 items-baseline">
         <a href="#{caso.name}" class="dark:text-white text-[3.2vw] sm:text-[20px] group">
-          <span class="group-hover:visible invisible"># </span>
+          <span class="group-hover:opacity-100 opacity-0 transition-opacity duration-100"># </span>
           <b>{caso.name}</b>
         </a>
         {#if caso.altNames?.length}<span>AKA</span>{#each caso.altNames as altName}
