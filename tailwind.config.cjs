@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin')
 
 //TODO: https://tailwindcss.com/docs/dark-mode
 
@@ -10,5 +11,10 @@ module.exports = {
 		},
 		extend: {},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function({ addVariant }) {
+			addVariant('child', '&>*')
+		}),
+		require('@tailwindcss/container-queries'),
+	]
 }

@@ -11,7 +11,7 @@
   const { sets, options, size = 128 } = Astro.props
 ---
 
-<div class=" relative text-5xl sm:text-7xl w-full text-center my-5">{options.name}</div>
+<div class=" relative text-5xl sm:text-7xl w-full text-center my-5 -z-10">{options.name}</div>
 
 {sets.map((set) => (
       <VerticalSetCard set={set} options={options} size={size}/>

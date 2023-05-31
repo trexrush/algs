@@ -26,7 +26,7 @@ const { set, options, size } = Astro.props
     </span>
   </div>
 
-  <div class="collapsible w-full flex flex-col [&>*]:mb-5 items-center">
+  <div class="collapsible w-full flex flex-col child:mb-5 items-center">
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?

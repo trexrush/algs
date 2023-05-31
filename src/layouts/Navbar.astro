@@ -37,8 +37,9 @@ let github = { name: "GitHub", href: "https://github.com/trexrush/algs", externa
 </div>
 
 <!-- DESKTOP -->
-<nav class="hidden md:flex items-baseline">
-  <div class="flex w-fit items-baseline m-3 rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800 [&>*]:py-2 [&>*]:px-4">
+<nav class="hidden md:flex items-baseline @container">
+  <div class="flex w-fit items-baseline m-3 child:py-1 child:px-4
+  rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800">
     <a href="/algs/" class="text-xl font-bold hover:font-black relative">Home</a>
     {pages.map((page) => (
       page.folder ?
@@ -46,9 +47,10 @@ let github = { name: "GitHub", href: "https://github.com/trexrush/algs", externa
         <label for={page.name} class="select-none rounded-md shadow-lg bg-stone-200 dark:bg-stone-800 cursor-pointer w-fit font-bold" >{page.name} {"📂"}</label>
         <input id={page.name} type="checkbox" class="peer hidden" />
 <!--  TODO: make dialog / popover --->
-        <div class="hidden peer-checked:flex flex-col absolute top-12 z-20 w-fit rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800">
+        <div class="hidden peer-checked:flex flex-col absolute top-10 left-0 w-4/5 
+        text-center rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800">
           {page.folder.map((subpage) => (
-            <a href={subpage.href} class="hover:font-semibold select-none overflow-hidden p-3">{subpage.name}</a>
+            <a href={subpage.href} class="hover:font-semibold select-none p-2">{subpage.name}</a>
           ))}
         </div>
       </div>
@@ -63,7 +65,7 @@ let github = { name: "GitHub", href: "https://github.com/trexrush/algs", externa
         <i class="bi bi-github"></i> {github.external && "↗"}
       </a>
   </div>
-  <div id="showInfo" class="w-fit m-3 px-4 py-2 rounded-md shadow-lg bg-stone-200 dark:bg-stone-800 cursor-pointer hover:font-bold">
+  <div id="showInfo" class="w-fit m-3 px-4 py-1 rounded-md shadow-lg bg-stone-200 dark:bg-stone-800 cursor-pointer hover:font-bold">
     ❓
   </div>
 </nav>
