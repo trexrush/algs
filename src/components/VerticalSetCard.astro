@@ -10,16 +10,14 @@ interface Props {
 const { set, options, size } = Astro.props
 ---
 
-<div
-  is="collapsible-set"
-  class=" flex flex-col justify-center items-center w-[95%] mb-5 rounded-xl shadow-xlbg-stone-900/[.07] dark:bg-stone-50/[.07] "
->
+<collapsible-set
+  class="flex flex-col justify-center items-center w-[95%] mb-5 rounded-xl shadow-xlbg-stone-900/[.07] dark:bg-stone-50/[.07]">
   <div class="toggle cursor-pointer my-2 flex gap-5 w-fit items-baseline select-none">
     <div class="text-xl sm:text-3xl font-bold hover:font-extrabold">
       {set.name}
     </div>
     <span class="dark:text-stone-500 text-sm font-light">
-      AKA
+      {set.altNames ? 'AKA' : ''}
     {set.altNames?.map((altName, i) => {
       return <span class="font-semibold text-lg">{altName + (i < set.altNames!.length! - 1 ? ", " : "")}</span>
     })}
@@ -36,28 +34,30 @@ const { set, options, size } = Astro.props
       ))
     }
   </div>
-</div>
+</collapsible-set>
 
 <script>
   customElements.define(
     "collapsible-set",
-    class extends HTMLDivElement {
-      constructor() {
-        super();
+    class extends HTMLElement {
+      connectedCallback() {
         let isCollapsed = false;
 
         const toggler: HTMLElement | null = this.querySelector(".toggle");
         const section: HTMLElement | null = this.querySelector(".collapsible");
 
-        toggler?.addEventListener("click", () => {
+        const toggleCollapsed = () => {
           section &&
-            (isCollapsed
-              ? (section.style.display = "")
-              : (section.style.display = "none"));
-              isCollapsed = !isCollapsed
+          (isCollapsed
+          ? (section.style.display = "")
+          : (section.style.display = "none"));
+          isCollapsed = !isCollapsed
+        }
+
+        toggler?.addEventListener("click", () => {
+          toggleCollapsed()
         });
       }
     },
-    { extends: "div" }
   );
 </script>
