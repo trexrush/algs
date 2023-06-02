@@ -11,8 +11,21 @@
   const { sets, options, size = 128 } = Astro.props
 ---
 
+<div id="collapse" class="cursor-pointer bg-stone-800 rounded-sm p-1 px-2 
+hover:brightness-110 hover:-translate-y-[1px] transition-all">Collapse / Expand all Sets</div>
 <div class=" relative text-5xl sm:text-7xl w-full text-center my-5 -z-10">{options.name}</div>
 
 {sets.map((set) => (
-  <VerticalSetCard set={set} options={options} size={size} recursiveCollapse/>
+  <VerticalSetCard set={set} options={options} size={size}/>
 ))}
+
+<script>
+  let globalOpenState = true
+  let setCards = document.getElementsByTagName('details')
+  document.getElementById('collapse')?.addEventListener("click", (e) => {
+    for (let set of setCards) {
+      globalOpenState ? set.removeAttribute('open') : set.setAttribute('open', 'true')
+    }
+    globalOpenState = !globalOpenState
+  })
+</script>
