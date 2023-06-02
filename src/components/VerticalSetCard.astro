@@ -6,25 +6,26 @@ interface Props {
   set: ISet
   options: IOptions
   size: number
+  recursiveCollapse?: boolean
 }
-const { set, options, size } = Astro.props
+const { set, options, size, recursiveCollapse } = Astro.props
 ---
 
-<collapsible-set
+<details open={recursiveCollapse ? false : true}
   class="flex flex-col justify-center items-center w-[95%] mb-5 rounded-xl shadow-xlbg-stone-900/[.07] dark:bg-stone-50/[.07]">
-  <div class="toggle cursor-pointer my-2 flex gap-5 w-fit items-baseline select-none">
-    <div class="text-xl sm:text-3xl font-bold hover:font-extrabold">
+  <summary class="my-2 flex justify-center items-baseline gap-5 w-full select-none">
+    <div class="text-xl sm:text-3xl font-bold hover:font-extrabold cursor-pointer">
       {set.name}
     </div>
-    <span class="dark:text-stone-500 text-sm font-light">
-      {set.altNames ? 'AKA' : ''}
+    <span class="dark:text-stone-500 text-sm font-light cursor-pointer">
+      {set.altNames ? 'AKA ' : ''}
     {set.altNames?.map((altName, i) => {
       return <span class="font-semibold text-lg">{altName + (i < set.altNames!.length! - 1 ? ", " : "")}</span>
     })}
     </span>
-  </div>
+  </summary>
 
-  <div class="collapsible w-full flex flex-col child:mb-5 items-center">
+  <div class="w-full flex flex-col child:mb-5 items-center">
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?
@@ -34,30 +35,4 @@ const { set, options, size } = Astro.props
       ))
     }
   </div>
-</collapsible-set>
-
-<script>
-  customElements.define(
-    "collapsible-set",
-    class extends HTMLElement {
-      connectedCallback() {
-        let isCollapsed = false;
-
-        const toggler: HTMLElement | null = this.querySelector(".toggle");
-        const section: HTMLElement | null = this.querySelector(".collapsible");
-
-        const toggleCollapsed = () => {
-          section &&
-          (isCollapsed
-          ? (section.style.display = "")
-          : (section.style.display = "none"));
-          isCollapsed = !isCollapsed
-        }
-
-        toggler?.addEventListener("click", () => {
-          toggleCollapsed()
-        });
-      }
-    },
-  );
-</script>
+</details>
