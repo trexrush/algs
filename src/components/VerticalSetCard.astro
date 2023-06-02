@@ -13,11 +13,11 @@ const { set, options, size, recursiveCollapse } = Astro.props
 
 <details open={recursiveCollapse ? false : true}
   class="flex flex-col justify-center items-center w-[95%] mb-5 rounded-xl shadow-xlbg-stone-900/[.07] dark:bg-stone-50/[.07]">
-  <summary class="my-2 flex justify-center items-baseline gap-5 w-full select-none">
-    <div class="text-xl sm:text-3xl font-bold hover:font-extrabold cursor-pointer">
+  <summary class="my-2 flex justify-center items-baseline gap-5 w-full select-none pointer-events-none">
+    <div class="text-xl sm:text-3xl font-bold hover:font-extrabold cursor-pointer pointer-events-auto">
       {set.name}
     </div>
-    <span class="dark:text-stone-500 text-sm font-light cursor-pointer">
+    <span class="dark:text-stone-500 text-sm font-light cursor-pointer pointer-events-auto">
       {set.altNames ? 'AKA ' : ''}
     {set.altNames?.map((altName, i) => {
       return <span class="font-semibold text-lg">{altName + (i < set.altNames!.length! - 1 ? ", " : "")}</span>
