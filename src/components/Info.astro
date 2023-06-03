@@ -9,30 +9,32 @@ import { OLLNoGrouping } from "../templates/oll";
     class="h-10 bg-orange-400 rounded-t-xl text-white grid place-items-center text-3xl relative"
   >
     Information
-    <div class="absolute right-1 top-1 leading-none">🛈</div>
+    <div class="absolute right-1 top-1 leading-none">❗</div>
   </div>
   <div class="text-sm md:text-base w-full px-1">
     <!-- use markdown? -->
     <div>
       This site is my personal reference for learning and sharing algs. I am
-      left handed so <b>pretty much all my algs are lefty</b>, but the alg
-      visualization should make it easy to mentally mirror the alg for right
-      handed people.
+      left handed so <b>pretty much all my algs are lefty</b>, but alg visualization and
+      mirroring tools, anyone can learn algs from this site.
     </div>
     <br />
     <div class="text-xs md:text-base divide-y-2 mb-10 divide-stone-400/30 dark:divide-stone-700/40">
         <div class="text-lg md:text-2xl">Features</div>
-        <div>Click on a case image to see an animated alg vis.</div>
-        <div>Tap on the alg vis to pause and play the animation.</div>
+        <div>Click on a case image (or the play buttons) to see an animated alg vis. <br>
+        (Tap on the animation to pause and play.)</div>
         <div>Click on a set to collapse or uncollapse it. <br>
-          (If a set can't be uncollapsed then its empty or a WIP)
+          (Collapse / Expand all sets can help you scroll to a deeper set faster)
         </div>
         <div>
-          Clicking on any alg will set the visualizer to visualize it <br>
+          Clicking on any alg will "select" it, and the alg animation will switch to that alg. <br>
           (by default the visualizer uses the first alg)
         </div>
+        <div>Mirror an alg from LU to RU using the Mirror LR button <br> (alg animation will update)</div>
+        <div>Some algs show trigger names for easier learning, <br>
+           click ➡️ to show the ""unabbreviated"" alg.</div>
         <div>
-          Generate a link to a specific case by clicking the case name.
+          Share a link to a specific case by clicking the case name (eg. 17).
         </div>
     </div>
     <VerticalCaseCard client:idle options={OLLNoGrouping.options} caso={OLLNoGrouping.sets[0].children!['17']} size={128} />
