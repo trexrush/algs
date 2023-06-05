@@ -37,17 +37,21 @@
   });
 </script>
 
-<div class="relative group">
-    <span class="absolute grid items-center text-center w-full h-full text-2xl drop-shadow-md font-extrabold z-10 transition-all duration-400 ease-in-out group-hover:backdrop-blur-[1px] group-hover:bg-opacity-30 group-hover:opacity-100 opacity-0" >
-        <span>View Alg</span>
-    </span>
-    <div class="transition-all ease-in-out duration-300 group-hover:translate-y-[-2px] group-hover:mix-blend-soft-light">
-        {#if options.imgSource == "vc"}
-        <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
-        {:else if options.imgSource == "cubingjs"}
-        <TwistyPlayer imageAlg={imageAlg.alg} options={options} {size} />
-        {/if}
-    </div>
+<!-- TODO: Scale on size better -->
+<div class="relative group
+child:transition-all child:duration-300 child:ease-in-out hover:translate-y-[-2px]">
+  <span class="absolute grid items-center text-center w-full h-full 
+  text-2xl drop-shadow-md font-extrabold z-10 
+  group-hover:backdrop-blur-[1px] group-hover:bg-opacity-30 group-hover:opacity-100 opacity-0" >
+    <span>View Alg</span>
+  </span>
+  <div class="group-hover:opacity-30">
+    {#if options.imgSource == "vc"}
+      <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
+    {:else if options.imgSource == "cubingjs"}
+      <TwistyPlayer imageAlg={imageAlg.alg} options={options} {size} />
+    {/if}
+  </div>
 </div>
 
 <style>

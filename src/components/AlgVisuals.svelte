@@ -23,13 +23,11 @@
   onMount(async () => { mounted = true })
 </script>
 
+<!-- TODO: make container query -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div
-  class="flex flex-row items-center justify-center cursor-pointer relative aspect-square sm:h-[--size] sm:w-[--size] h-[35%] w-[35%]"
-  use:styles={{ size: cssSize }}
-  bind:clientHeight={imgSize}
->
+<div class="flex flex-row items-center justify-center cursor-pointer relative aspect-square sm:h-[--size] h-[35%]"
+use:styles={{ size: cssSize }} bind:clientHeight={imgSize}>
   {#if mounted}
     {#if !isAlgVisDisplayed}
     <div on:click={toggleDisplay}>

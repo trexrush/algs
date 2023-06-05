@@ -36,6 +36,7 @@ let github = { name: "GitHub", href: "https://github.com/trexrush/algs", externa
   </dialog>
 </div>
 
+<!--  TODO: make dialog / popover --->
 <!-- DESKTOP -->
 <nav class="hidden md:flex items-baseline @container">
   <div class="flex w-fit items-baseline m-3 child:py-1 child:px-4
@@ -46,7 +47,6 @@ let github = { name: "GitHub", href: "https://github.com/trexrush/algs", externa
       <div class="relative p-2">
         <label for={page.name} class="select-none rounded-md shadow-lg bg-stone-200 dark:bg-stone-800 cursor-pointer w-fit font-bold" >{page.name} {"📂"}</label>
         <input id={page.name} type="checkbox" class="peer hidden" />
-<!--  TODO: make dialog / popover --->
         <div class="hidden peer-checked:flex flex-col absolute top-10 left-0 w-4/5 
         text-center rounded-md shadow-lg divide-x-2 divide-stone-400/10 dark:divide-stone-600/10 bg-stone-200 dark:bg-stone-800">
           {page.folder.map((subpage) => (
