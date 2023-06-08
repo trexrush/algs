@@ -2,15 +2,9 @@
 import Navbar from "../layouts/Navbar.astro";
 import Page from "../layouts/Page.astro";
 import Info from "../components/Info.astro"
+import { CorePageRoutes } from "../scripts/routes";
 
-let pages = [
-  { name: "OLL", href: "/algs/oll" },
-  { name: "PLL", href: "/algs/pll" },
-  { name: "ZBLS", href: "/algs/zbls" },
-  { name: "ZBLL", href: "/algs/zbll" },
-  { name: "2x2", href: "/algs/2x2" },
-  { name: "Megaminx", href: "/algs/mega" },
-]
+let pages = CorePageRoutes
 
 
 ---
@@ -23,7 +17,7 @@ let pages = [
       <br>
       <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 dark:divide-stone-600/20 bg-stone-200 dark:bg-stone-800 mb-10 items-center text-center text-3xl text-stone-700 dark:text-stone-300 child:w-full child:px-3 child:py-1">
         {pages.map(page => (
-          <a href={page.href} class="hover:font-semibold">{page.name}</a>
+          <a href={page.path} class="hover:font-semibold">{page.name}</a>
         ))}
       </div>
       <Info />

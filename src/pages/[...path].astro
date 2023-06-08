@@ -1,0 +1,27 @@
+---
+
+import VerticalLayout from "../layouts/VerticalLayout.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Page from "../layouts/Page.astro";
+import type { IAlgSet } from "../scripts/types";
+import { PageRoutes, type IPageData } from '../scripts/routes'
+
+
+type Props = Omit<IPageData, 'path'>
+
+export function getStaticPaths() {
+  const pages = PageRoutes
+  return pages.map(({ path, name, data }) => {
+    return {
+      params: { path },
+      props: { name, data },
+    }
+  })
+}
+const { name, data } = Astro.props
+---
+
+<Page title={name}>
+  <Navbar slot="navbar" />
+  <VerticalLayout options={data.options} sets={data.sets} />
+</Page>

@@ -1,10 +1,11 @@
 ---
-import Navbar from "../../layouts/Navbar.astro";
-import Page from "../../layouts/Page.astro";
+import Navbar from "../layouts/Navbar.astro";
+import Page from "../layouts/Page.astro";
 
 let pages = [
-  { name: "CLL", href: "/algs/2x2/cll" },
-  { name: "EG1", href: "/algs/2x2/eg1" },
+  { name: "T Set", href: "/algs/zbll/T" },
+  { name: "U Set", href: "/algs/zbll/U" },
+  { name: "L Set", href: "/algs/zbll/L" },
 ]
 ---
 
@@ -12,7 +13,7 @@ let pages = [
   <Navbar slot="navbar" />
   <main>
     <div class="flex flex-col items-center">
-      <h1 class="text-4xl mt-10">2x2 Algs</h1>
+      <h1 class="text-4xl mt-10">ZBLL Algs</h1>
       <br>
       <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 dark:divide-stone-600/20 bg-stone-200 dark:bg-stone-800 mb-10 items-center text-center text-3xl text-stone-700 dark:text-stone-300 child:w-full child:px-3 child:py-1">
         {pages.map(page => (
