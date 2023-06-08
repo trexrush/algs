@@ -50,9 +50,8 @@ export const invertAlg = (a: string): string => {
 }
 
 export const repeatAlg = (a: string, q: number): string => {
-  let res = new Alg(a)
-  for (let i = 1; i < q; i++) { res = res.concat(a) }
-  return res.toString()
+  let res = (a + " ").repeat(q)
+  return simplifyAlg(res)
 }
 
 export const simplifyAlg = (a: string): string => {
