@@ -217,12 +217,12 @@ E2:
   altNames: ["Magmar"]
   algs:
     - 
+      alg: F' U L' U [LEFT SUNE] U' L U L' U2' L F
+      isLefty: true
+    - 
       alg: dr' U L FL' L' U' L FL L' U' L FL' L' U dr F
       isLefty: true
       note: 3x3 transfer (E perm)
-    - 
-      alg: F' U L' U [LEFT SUNE] U' L U L' U2' L F
-      isLefty: true
 E3:
   name: E3
   altNames: ["Jynx"]
@@ -1107,7 +1107,7 @@ V4-:
       alg: L U' L U L2' U L' U' L' U L U' L' U' L2 U L
       isLefty: true
 W:
-  name: W1+
+  name: W
   altNames: ["Mewtwo"]
   algs:
     - 

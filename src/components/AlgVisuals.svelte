@@ -26,7 +26,7 @@
 <!-- TODO: make container query -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div class="flex flex-row items-center justify-center cursor-pointer relative aspect-square sm:h-[--size] h-[35%]"
+<div class="flex flex-row items-center justify-center cursor-pointer relative aspect-square sm:h-[--size] sm:w-[--size] h-[35%] w-[35%]"
 use:styles={{ size: cssSize }} bind:clientHeight={imgSize}>
   {#if mounted}
     {#if !isAlgVisDisplayed}
@@ -38,8 +38,7 @@ use:styles={{ size: cssSize }} bind:clientHeight={imgSize}>
     <TwistyPlayer {activeAlg} options={options} size={imgSize} isLefty={isLefty} />
     <div
       class="absolute left-0 bottom-0 h-5 w-5 sm:h-7 sm:w-7 bg-red-300 dark:bg-red-500 rounded grid place-items-center font-black select-none"
-      on:click={toggleDisplay}
-      >
+      on:click={toggleDisplay}>
       x
     </div>
     {/if}

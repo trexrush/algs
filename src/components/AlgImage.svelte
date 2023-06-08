@@ -11,6 +11,7 @@
   export let size: number
 
   let puzzle: number | string = puzzleDefinitionMapping[options.puzzle]?.vc!!
+  let setupAUF: string = imageAlg.setup ? imageAlg.setup + ' ' : ''
 
   let visualCubeImage: HTMLElement;
   const configVisualCubeImage = () => {
@@ -26,7 +27,7 @@
       width: size,
       height: size,
       mask: options.vcparams?.stage! as Masking,
-      case: (imageAlg.setup || "") + expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!,
+      case: setupAUF + expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!,
     });
   };
 
@@ -49,7 +50,7 @@ child:transition-all child:duration-300 child:ease-in-out hover:translate-y-[-2p
     {#if options.imgSource == "vc"}
       <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
     {:else if options.imgSource == "cubingjs"}
-      <TwistyPlayer imageAlg={imageAlg.alg} options={options} {size} />
+      <TwistyPlayer imageAlg={imageAlg + " " + imageAlg.alg} options={options} {size} />
     {/if}
   </div>
 </div>

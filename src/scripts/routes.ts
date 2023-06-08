@@ -4,7 +4,7 @@ import { LNoGrouping } from "../templates/L_zbll";
 import { TGroupByBH, TGroupByCP, TNoGrouping } from "../templates/T_zbll";
 import { UGroupByBH, UGroupByCP, UNoGrouping } from "../templates/U_zbll";
 import { MegaOLLNoGrouping } from "../templates/megaOLL";
-import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter } from "../templates/megaPLL";
+import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter, MegaPLLNoGrouping } from "../templates/megaPLL";
 import { OLLGroupByEO, OLLNoGrouping } from "../templates/oll";
 import { PLLGroupedBySet, PLLNoGrouping } from "../templates/pll";
 import { ZBLSNoGrouping } from "../templates/zbls";
@@ -46,18 +46,18 @@ const a: Record<string, IPageData> = {
   7: { path: b.eg1.path + '/list', name: b.eg1.name, data: EG1NoGrouping },
   8: { path: b.cll.path + '/list', name: b.cll.name, data: CLLNoGrouping },
   9: { path: b.moll.path + '/list', name: b.moll.name, data: MegaOLLNoGrouping },
-  10: { path: b.mpll.path + '/list', name: b.mpll.name, data: MegaOLLNoGrouping },
+  10: { path: b.mpll.path + '/list', name: b.mpll.name, data: MegaPLLNoGrouping },
   
-  a1: { path: b.oll.path + '/group', name: "OLL", data: OLLGroupByEO },
-  a2: { path: b.pll.path + '/group', name: "PLL", data: PLLGroupedBySet },
-  a4: { path: b.zbllt.path + '/cp', name: "T ZBLL", data: TGroupByCP },
-  b4: { path: b.zbllt.path + '/bh', name: "T ZBLL", data: TGroupByBH },
-  a5: { path: b.zbllu.path + '/cp', name: "U ZBLL", data: UGroupByCP },
-  b5: { path: b.zbllu.path + '/bh', name: "U ZBLL", data: UGroupByBH },
-  a7: { path: b.eg1.path + '/set', name: "EG1", data: EG1GroupByOLL },
-  a8: { path: b.cll.path + '/set', name: "CLL", data: CLLGroupByOLL },
-  a9: { path: b.moll.path + '/set', name: "Full PLL", data: MegaPLLGroupByLetter },
-  b9: { path: b.mpll.path + '/group', name: "Full PLL", data: MegaPLLGroupByFeatures },
+  a1: { path: b.oll.path + '/group', name: b.oll.name, data: OLLGroupByEO },
+  a2: { path: b.pll.path + '/group', name: b.pll.name, data: PLLGroupedBySet },
+  a4: { path: b.zbllt.path + '/cp', name: b.zbllt.name, data: TGroupByCP },
+  b4: { path: b.zbllt.path + '/bh', name: b.zbllt.name, data: TGroupByBH },
+  a5: { path: b.zbllu.path + '/cp', name: b.zbllu.name, data: UGroupByCP },
+  b5: { path: b.zbllu.path + '/bh', name: b.zbllu.name, data: UGroupByBH },
+  a7: { path: b.eg1.path + '/set', name: b.eg1.name, data: EG1GroupByOLL },
+  a8: { path: b.cll.path + '/set', name: b.cll.name, data: CLLGroupByOLL },
+  a9: { path: b.mpll.path + '/set', name: b.mpll.name, data: MegaPLLGroupByLetter },
+  b9: { path: b.mpll.path + '/group', name: b.moll.name, data: MegaPLLGroupByFeatures },
 }
 
 export const PageRoutes: IPageData[] = Object.values(a)

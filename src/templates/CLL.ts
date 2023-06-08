@@ -4,7 +4,7 @@ import { createOptions } from "../scripts/utilities";
 import yml from '../data/CLLData.yml'
 
 const Options: IOptions = createOptions({
-  name: "EG1",
+  name: "CLL",
   puzzle: '2x2x2',
   imgSource: "vc",
   vcparams: {
