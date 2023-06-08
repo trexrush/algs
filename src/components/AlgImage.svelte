@@ -50,7 +50,7 @@ child:transition-all child:duration-300 child:ease-in-out hover:translate-y-[-2p
     {#if options.imgSource == "vc"}
       <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
     {:else if options.imgSource == "cubingjs"}
-      <TwistyPlayer imageAlg={imageAlg + " " + imageAlg.alg} options={options} {size} />
+      <TwistyPlayer imageAlg={imageAlg.setup + " " + imageAlg.alg} options={options} {size} />
     {/if}
   </div>
 </div>
