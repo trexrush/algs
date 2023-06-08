@@ -23,6 +23,7 @@
     pzl = mirror ? puzzleDefinitionMapping[pzl]!.mirror : puzzleDefinitionMapping[options.puzzle]!.standard
     if ($activeAlg.setup) $activeAlg.setup = mirror ? mirrorAlg($activeAlg.setup, pzl) : caso.algs[activeElement].setup
     $activeAlg.isLefty = mirror ? !caso.algs[activeElement].isLefty : caso.algs[activeElement].isLefty
+    // console.log("CASE ", pzl, $isMirrored, $activeAlg.isLefty, getTriggerAlg('UP_CW_7MOVER', pzl) )
   })($isMirrored)
 
   let elementList: AlgListing[] = []

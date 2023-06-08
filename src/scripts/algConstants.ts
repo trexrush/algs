@@ -28,21 +28,22 @@ const cubeRotations = [
 ]
 
 const pllSubstitutes = [
-    { name: "Aa Perm", alg: "x R' U R' D2' R U' R' D2' R2 x'" },
-    { name: "Ab Perm", alg: "x R2' D2' R U R' D2' R U' R x'" },
-    { name: "E Perm", alg: "x' R U' R' D R U R' D' R U R' D R U' R' D'" },
-    { name: "F Perm", alg: "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R" },
-    { name: "H Perm", alg: "M2 U M2 U2 M2 U M2" },
-    { name: "Ja Perm", alg: "x R2 F R F' R U2' r' U r U2 x'" },
-    { name: "Jb Perm", alg: "R U R' F' R U R' U' R' F R2 U' R'" },
-    { name: "Ra Perm", alg: "R U' R' U' R U R D R' U' R D' R' U2 R'" },
-    { name: "Rb Perm", alg: "R' U2 R' D' R U' R' D R U R U' R' U' R" },
+    { name: "Aa_PERM", alg: "x R' U R' D2' R U' R' D2' R2 x'" },
+    { name: "Ab_PERM", alg: "x R2' D2' R U R' D2' R U' R x'" },
+    { name: "E_PERM", alg: "x' R U' R' D R U R' D' R U R' D R U' R' D'" },
+    { name: "F_PERM", alg: "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R" },
+    { name: "H_PERM", alg: "M2 U M2 U2 M2 U M2" },
+    { name: "Ja_PERM", alg: "x R2 F R F' R U2' r' U r U2 x'" },
+    { name: "J_PERM", alg: "R U R' F' R U R' U' R' F R2 U' R'" },
+    { name: "Jb_PERM", alg: "R U R' F' R U R' U' R' F R2 U' R'" },
+    { name: "Ra_PERM", alg: "R U' R' U' R U R D R' U' R D' R' U2 R'" },
+    { name: "Rb_PERM", alg: "R' U2 R' D' R U' R' D R U R U' R' U' R" },
     { name: "T_PERM", alg: "R U R' U' R' F R2 U' R' U' R U R' F'" },
-    { name: "Ua Perm", alg: "R U R' U R' U' R2 U' R' U R' U R" },
-    { name: "Ub Perm", alg: "R' U R' U' R3 U' R' U R U R2'" },
-    { name: "V Perm", alg: "R' U R' U' R D' R' D R' U D' R2 U' R2' D R2" },
+    { name: "Ua_PERM", alg: "R U R' U R' U' R2 U' R' U R' U R" },
+    { name: "Ub_PERM", alg: "R' U R' U' R3 U' R' U R U R2'" },
+    { name: "V_PERM", alg: "R' U R' U' R D' R' D R' U D' R2 U' R2' D R2" },
     { name: "Y_PERM", alg: "F R U' R' U' R U R' F' R U R' U' R' F R F'" },
-    { name: "Z Perm", alg: "M' U M2' U M2' U M' U2 M2'" },
+    { name: "Z_PERM", alg: "M' U M2' U M2' U M' U2 M2'" },
 ]
 
 const zbllSubstitutes = [
@@ -57,26 +58,37 @@ const bigCubeSubstitutes = [
     { name: "LUKE", alg: "Rw' U2' Rw U2 Rw' F2 Rw2 U2' Rw U2 Rw' U2' F2 Rw2 F2'" },
     { name: "LUCAS", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" },
     { name: "FRONT", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" }, // same as above for the purpose of triggers
+    { name: "Ja_PERM", alg: "x R2 F R F' R U2' Rw' U Rw U2 x'" },
 ]
 
 const megaSubstitutes = [
     { name: "SUPERSUNE", alg: "R2 U R2' U R2 U2' R2'" },
-    { name: "UP_CW_7MOVER", alg: "R2 U2 R2' U R2 U2 R2'" },
-    { name: "UP_CCW_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
-    { name: "DOWN_CW_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
-    { name: "DOWN_CCW_7MOVER", alg: "R2' U2' R2 U' R2' U2' R2" },
+    { name: "SUPERANTISUNE", alg: "R2 U2 R2' U' R2 U' R2'" },
     { name: "ANTISUNE", alg: "R U2 R' U' R U' R'" },
-    { name: "Ja Perm", alg: "x R2 F R F' R U2' Rw' U Rw U2 x'" },
-    
+    //temp
+    { name: "F1+_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
+    { name: "F1-_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
 ]
 
 const megaRightySubstitutes = [
     { name: "x", alg: "dL' R" },
     { name: "x'", alg: "dL R'" },
+    // { name: "UP_CW_7MOVER", alg: "R2 U2 R2' U R2 U2 R2'" },
+    // { name: "UP_CCW_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
+    // { name: "DOWN_CW_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
+    // { name: "DOWN_CCW_7MOVER", alg: "R2' U2' R2 U' R2' U2' R2" },
+    // { name: "CCW_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
+    // { name: "CW_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
 ]
 const megaLeftySubstitutes = [
     { name: "x", alg: "dR L'" },
     { name: "x'", alg: "dR' L" },
+    // { name: "UP_CW_7MOVER", alg: "L2' U2 L2 U L2' U2 L2" },
+    // { name: "UP_CCW_7MOVER", alg: "L2' U2' L2 U' L2' U2' L2" },
+    // { name: "DOWN_CW_7MOVER", alg: "L2 U2 L2' U L2 U2 L2'" },
+    // { name: "DOWN_CCW_7MOVER", alg: "L2 U2' L2' U' L2 U2' L2'" },
+    // { name: "CW_7MOVER", alg: "L2' U2 L2 U L2' U2 L2" },
+    // { name: "CCW_7MOVER", alg: "L2 U2' L2' U' L2 U2' L2'" },
 ]
 
 const triggers = [
