@@ -184,6 +184,9 @@ Bars_BarA:
   - 
     alg: L2 D' L2' U L U L' U' L F L' U' L U L F' D L2'
     isLefty: true
+  - 
+    alg: "L [LEFT BACK SU] [LEFT J_PERM] L U' L2'"
+    isLefty: true
 Bars_BarO:
   name: Bars_BarO
   algs:

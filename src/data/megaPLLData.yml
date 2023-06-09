@@ -597,6 +597,7 @@ K1-:
   algs:
     - 
       #  alg: "[TRIPLE LEFT F1-_7MOVER]"
+      setup: U2
       alg: L2 U2' L2' U' L2 U L2' U' L2 U L2' U' L2 U2' L2'
       isLefty: true
   note: 7 move EP x3
@@ -1331,6 +1332,9 @@ Y1-:
   algs:
     - 
       alg: "[LEFTY Y_PERM]"
+      isLefty: true
+    - 
+      alg: L U L' U L' U' L F L' U' L U L F' L2' U L2 U' L'
       isLefty: true
   note: 3x3 transfer (Y perm)
 Y2+:

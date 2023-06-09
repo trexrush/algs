@@ -280,8 +280,11 @@ Y:
    alg: F' L' U L U L' U' L F [LEFTY SEXY] [LEFTY SLEDGE]
    isLefty: true
   - 
-   setup: U'
-   alg: F R U' R' U' R U R' F' [SEXY] [SLEDGE]
+   alg: "[LEFT BACK SU] [LEFT J_PERM] L U' L'"
+   isLefty: true
+   tags: 
+    - Bigcube
+    - OH
 Z: 
  name: Z
  algs: 

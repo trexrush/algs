@@ -30,7 +30,7 @@ const cubeRotations = [
 const pllSubstitutes = [
     { name: "Aa_PERM", alg: "x R' U R' D2' R U' R' D2' R2 x'" },
     { name: "Ab_PERM", alg: "x R2' D2' R U R' D2' R U' R x'" },
-    { name: "E_PERM", alg: "x' R U' R' D R U R' D' R U R' D R U' R' D'" },
+    { name: "E_PERM", alg: "x' R U' R' D R U R' D' R U R' D R U' R' D' x" },
     { name: "F_PERM", alg: "R' U' F' R U R' U' R' F R2 U' R' U' R U R' U R" },
     { name: "H_PERM", alg: "M2 U M2 U2 M2 U M2" },
     { name: "Ja_PERM", alg: "x R2 F R F' R U2' r' U r U2 x'" },
@@ -53,12 +53,12 @@ const zbllSubstitutes = [
 ]
 
 const bigCubeSubstitutes = [
-    { name: "OPP", alg: ". . Uw2 r2 Uw2 r2 U2 r2" },
+    { name: "OPP", alg: ". . Uw2 2R2 Uw2 2R2 U2 2R2" },
     { name: "DREW", alg: "Rw2 B2' Rw' U2 Rw' U2 x' U2' Rw' U2 Rw U2' Rw' U2 Rw2 U2 x" },
     { name: "LUKE", alg: "Rw' U2' Rw U2 Rw' F2 Rw2 U2' Rw U2 Rw' U2' F2 Rw2 F2'" },
     { name: "LUCAS", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" },
     { name: "FRONT", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" }, // same as above for the purpose of triggers
-    { name: "Ja_PERM", alg: "x R2 F R F' R U2' Rw' U Rw U2 x'" },
+    { name: "Ja_PERM", alg: "x R2 F R F' R U2' x' L' U L F2" },
 ]
 
 const megaSubstitutes = [
@@ -149,6 +149,7 @@ const baseMoves = [
     "U2", "R2", "L2", "D2", "B2", "F2", "u2", "r2", "l2", "d2", "b2", "f2",
     "U2'", "R2'", "L2'", "D2'", "B2'", "F2'", "u2'", "r2'", "l2'", "d2'", "b2'", "f2'",
 ]
+
 const baseRotations = [
     "x", "y", "z",
     "x'", "y'", "z'",
@@ -161,6 +162,10 @@ const baseSlices = [
     "M2", "E2", "S2",
     "M2'", "E2'", "S2'",
 ]
+const tripleMoves = [
+    "U3", "R3", "L3", "D3", "B3", "F3", "u3", "r3", "l3", "d3", "b3", "f3",
+    "U3'", "R3'", "L3'", "D3'", "B3'", "F3'", "u3'", "r3'", "l3'", "d3'", "b3'", "f3'",
+]
 const baseMega = [
     "BL", "BR", "FL", "FR", "DL", "DR", "bl", "br", "fl", "fr", "dl", "dr",
     "BL'", "BR'", "FL'", "FR'", "DL'", "DR'", "bl'", "br'", "fl'", "fr'", "dl'", "dr'",
@@ -172,6 +177,12 @@ const baseMegaF = [
     "F'", "f'",
     "F2", "f2",
     "F2'", "f2'",
+]
+const wideMoves = [
+    "Uw", "Rw", "Lw", "Dw", "Bw", "Fw", "2U", "2R", "2L", "2D", "2B", "2F",
+    "Uw'", "Rw'", "Lw'", "Dw'", "Bw'", "Fw'", "2U'", "2R'", "2L'", "2D'", "2B'", "2F'",
+    "Uw2", "Rw2", "Lw2", "Dw2", "Bw2", "Fw2", "2U2", "2R2", "2L2", "2D2", "2B2", "2F2",
+    "Uw2'", "Rw2'", "Lw2'", "Dw2'", "Bw2'", "Fw2'", "2U2'", "2R2'", "2L2'", "2D2'", "2B2'", "2F2'",
 ]
 
 const mirrorMoves = [
@@ -192,6 +203,10 @@ const mirrorSlices = [
     "M2", "E2'", "S2'",
     "M2'", "E2", "S2",
 ]
+const tripleMirrorMoves = [
+    "U3'", "L3'", "R3'", "D3'", "B3'", "F3'", "u3'", "l3'", "r3'", "d3'", "b3'", "f3'",
+    "U3", "L3", "R3", "D3", "B3", "F3", "u3", "l3", "r3", "d3", "b3", "f3",
+]
 const mirrorMega = [
     "BR'", "BL'", "FR'", "FL'", "DR'", "DL'", "br'", "bl'", "fr'", "fl'", "dr'", "dl'",
     "BR", "BL", "FR", "FL", "DR", "DL", "br", "bl", "fr", "fl", "dr", "dl",
@@ -203,6 +218,12 @@ const mirrorMegaF = [
     "F", "f",
     "F2'", "f2'",
     "F2", "f2",
+]
+const mirrorWideMoves = [
+    "Uw'", "Lw'", "Rw'", "Dw'", "Bw'", "Fw'", "2U'", "2L'", "2R'", "2D'", "2B'", "2F'",
+    "Uw", "Lw", "Rw", "Dw", "Bw", "Fw", "2U", "2L", "2L", "2D", "2B", "2F",
+    "Uw2'", "Lw2'", "Rw2'", "Dw2'", "Bw2'", "Fw2'", "2U2'", "2L2'", "2R2'", "2D2'", "2B2'", "2F2'",
+    "Uw2", "Lw2", "Rw2", "Dw2", "Bw2", "Fw2", "2U2", "2L2", "2R2", "2D2", "2B2", "2F2",
 ]
 
 const backMoves = [
@@ -223,6 +244,10 @@ const backSlices = [
     "M2'", "E2'", "S2",
     "M2", "E2", "S2'",
 ]
+const tripleBackMoves = [
+    "U3'", "R3'", "L3'", "D3'", "F3'", "B3'", "u3'", "r3'", "l3'", "d3'", "f3'", "b3'",
+    "U3", "R3", "L3", "D3", "F3", "B3", "u3", "r3", "l3", "d3", "f3", "b3",
+]
 const backMega = [
     "F'", "F'", "DL'", "DR'", "BL'", "BR'", "f'", "f'", "dl'", "dr'", "fl'", "fr'",
     "F", "F", "DL", "DR", "BL", "BR", "f", "f", "dl", "dr", "fl", "fr",
@@ -241,24 +266,35 @@ const backRightMegaF = [
     "BR2'", "br2'",
     "BR2", "br2",
 ]
+const backWideMoves = [
+    "Uw'", "Rw'", "Lw'", "Dw'", "Fw'", "Bw'", "2U'", "2R'", "2L'", "2D'", "2F'", "2B'",
+    "Uw", "Rw", "Lw", "Dw", "Fw", "Bw", "2U", "2R", "2L", "2D", "2F", "2B",
+    "Uw2'", "Rw2'", "Lw2'", "Dw2'", "Fw2'", "Bw2'", "2U2'", "2R2'", "2L2'", "2D2'", "2F2'", "2B2'",
+    "Uw2", "Rw2", "Lw2", "Dw2", "Fw2", "Bw2", "2U2", "2R2", "2L2", "2D2", "2F2", "2B2",
+]
 
+// TODO: slices arent working on bigs, talk to lucas garron about that and like the billion other things cubingjs
+// hasnt implemented for my usecase
 export const baseMoveGroups: modularPuzzleGroup<string[]> = {
-    "3x3x3": [...baseSlices, ...baseRotations, ...baseMoves],
+    "3x3x3": [...tripleMoves, ...baseSlices, ...baseRotations, ...baseMoves],
     "2x2x2": [...baseRotations, ...baseMoves],
+    "4x4x4": [...wideMoves, ...tripleMoves, ...baseRotations, ...baseMoves],
     "megaminx": [...baseMegaF, ...baseMega, ...baseMoves],
     "megaminx-lefty": [...baseMegaF, ...baseMega, ...baseMoves]
 }
 export const mirrorMoveGroups: modularPuzzleGroup<string[]> = {
-    "3x3x3": [...mirrorSlices, ...mirrorRotations, ...mirrorMoves],
+    "3x3x3": [...tripleMirrorMoves, ...mirrorSlices, ...mirrorRotations, ...mirrorMoves],
     "2x2x2": [...mirrorRotations, ...mirrorMoves],
+    "4x4x4": [...mirrorWideMoves, ...tripleMirrorMoves, ...mirrorRotations, ...mirrorMoves],
     "megaminx": [...mirrorMegaF, ...mirrorMega, ...mirrorMoves],
     "megaminx-lefty": [...mirrorMegaF, ...mirrorMega, ...mirrorMoves]
 }
 // megaminx F would be mapped to B', (which is not intentional, should be BL' or BR'), 
 // so earlier moves are set to take precedence and megaminx modules need to go first
 export const backMoveGroups: modularPuzzleGroup<string[]> = {
-    "3x3x3": [...backSlices, ...backRotations, ...backMoves],
+    "3x3x3": [ ...tripleBackMoves, ...backSlices, ...backRotations, ...backMoves],
     "2x2x2": [...backMoves, ...backRotations],
+    "4x4x4": [...backWideMoves, ...tripleBackMoves, ...backRotations, ...backMoves],
     "megaminx": [...backRightMegaF, ...backMega, ...backMoves],
     "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backMoves]
 }

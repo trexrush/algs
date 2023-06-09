@@ -3,13 +3,13 @@ Pure_S:
   name: Pure_S
   algs:
   - alg: "(R U2' R' U' R U' R') U (L' U' L U' L' U2 L)"
-  note: 'Back AS U'' Front S '
+  note: Back AS U' Front S 
 Pure_H:
   name: Pure_H
   algs:
-  - alg: "(L' U2 L U L' U L) U' (R U R' U R U2' R')"
-  - alg: "(L' U2 L U L' U L) U (L U L' U L U2 L')"
-  note: 'Left AS U'' Right S '
+  - alg: "[LEFT ANTISUNE] U' [SUNE]"
+  - alg: "[LEFT ANTISUNE] U [LEFT BACK SUNE]"
+  note: Left AS U' Right S 
 Pure_Twist:
   name: Pure_Twist
   algs:
@@ -70,7 +70,7 @@ Diag_HAnti:
 Diag_VArrow:
   name: Diag_VArrow
   algs:
-  - alg: 'l'' U2 L2 F'' L'' F L'' U2 l R U R'' U R U2 R'' '
+  - alg: "l' U2 L2 F' L' F L' U2 l R U R' U R U2 R' "
 Diag_UpArrow:
   name: Diag_UpArrow
   algs:

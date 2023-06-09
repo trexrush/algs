@@ -1,0 +1,179 @@
+opp:
+    name: opp
+    algs:
+    - 
+        alg: Uw2 2R2 Uw2 2R2 U2 2R2
+adj:
+    name: adj
+    algs:
+    - 
+        setup: U2
+        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' 2R' U Rw U R' U' R'
+        tags: ['Direct']
+    - 
+        setup: U2
+        alg: R U R U' Rw' U' 2R U Rw U Rw' U' Rw' U Rw U R' Rw U' Rw'
+        tags: ['Direct']
+    - 
+        alg: "[SU] [OPP] [UNSEXY]"
+Oa:
+    name: Oa 
+    algs:
+    - 
+        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' 2R' U Rw U R' U' R' [Ua_PERM]
+        tags: ['Direct']
+    # -    
+    #     alg: M2 U' M2 U' M' U2 2L2 U2 2R2 Uw2 2R2 Uw2 U2 M'
+    note: opp into zperm or adj into U
+Ob:
+    name: Ob 
+#     algs:
+#     -
+#         alg: M2 U M2 U M' U2 l2 U2 r2 Uw2 r2 Uw2 U2 M'
+#    note: opp into zperm
+W:
+    name: W
+    algs:
+    - 
+        alg: Rw R U Rw' R U' Rw' U' Rw U Rw U' Rw' U' Rw' R U Rw U2 R U' R' U' R2
+        tags: ['Direct']
+    - 
+        setup: U
+        alg: "[OPP] [Ua_PERM]"
+    - 
+        setup: U
+        alg: "[Ub_PERM] [OPP]"
+pJ:
+    name: pJ
+    algs:
+    - 
+        alg: Lw L2' U L U' 2L' U L' U2' L U 2L' U' 2L U Lw F' Lw2' U Lw U Lw' U' Lw F
+        isLefty: true
+        tag: ['Direct']
+pN:
+    name: pN
+    algs:
+    - 
+        alg: 2L' U' 2L U Lw F' Lw2' U Lw U Lw' U' Lw F [LEFTY SEXY] Lw D Lw' U2' Lw D' Lw'
+        isLefty: true
+        tag: ['Direct']
+        note: wide T perm sexy block comm
+M:
+    name: M
+    algs:
+    - 
+        alg: "[OPP] [LEFTY T_PERM]"
+        isLefty: true
+Ka:
+    name: Ka 
+    algs:
+    - 
+        alg: "[OPP] [Aa_PERM]"
+Kb:
+    name: Kb 
+    algs:
+    - 
+        setup: U
+        alg: "[OPP] U' [Aa_PERM]"
+Ba:
+    name: Ba 
+    algs:
+    - 
+        alg: "[OPP] U' [J_PERM]"
+Bb:
+    name: Bb 
+    algs:
+    - 
+        alg: R U R' U' R' F R2 U' R' [OPP] U R U R' F'
+        note: T perm with opp inside
+    -
+        setup: U'
+        alg: "[OPP] U [LEFTY J_PERM]"
+        isLefty: true
+Ca:
+    name: Ca 
+    algs:
+    - 
+        setup: U2
+        alg: "[OPP] [LEFT Ra_PERM]"
+        isLefty: true
+    -   
+        alg: "[OPP] U' [Rb_PERM]"
+Cb:
+    name: Cb 
+    algs:
+    - 
+        setup: U2
+        alg: "[OPP] U [LEFT Rb_PERM]"
+Da:
+    name: Da 
+    algs:
+    - 
+        alg: F R U' R' U' [OPP] R U R2 F' R U R U' R'
+    -  
+        setup: U
+        alg: "[LEFTY J_PERM] [OPP]"
+        isLefty: true
+Db:
+    name: Db 
+    algs:
+    - 
+        alg: "[J_PERM] [OPP]"
+    - 
+        alg: R U R' U [OPP] R' F R2 U' R' U' R U R' F'
+        note: T perm with opp inside
+Pa:
+    name: Pa 
+    algs:
+    - 
+        setup: U'
+        alg: (Lw2' D' Lw U2' Lw' D Lw U2' Lw) U (Lw U2' Lw D Lw' U2' Lw D' Lw2')
+        isLefty: true
+        tags: ['Direct']
+Pb:
+    name: Pb 
+    algs:
+    - 
+        setup: U'
+        alg: (Lw2' D Lw' U2' Lw D' Lw' U2' Lw') U' (Lw' U2' Lw' D' Lw U2' Lw' D Lw2')
+        isLefty: true
+        tags: ['Direct']
+Q:
+    name: Q
+    algs:
+    - 
+        alg: R2 Uw2' U R2' U2' y R2 Uw2' U' R2' U F2 Uw2' R2 U' F2'
+        tags: ['Direct']
+    - 
+        alg: "[OPP] U' [LEFT E_PERM]"
+        isLefty: true
+    -
+        alg: F R U' R' U' R U R' F' U2 [INV OPP] R U R' U' R' F R F'
+X:
+    name: X
+    algs:
+    - 
+        setup: U2
+        alg: '[OPP] [E_PERM]'
+Sa:
+    name: Sa 
+    algs:
+    - 
+        setup: U2
+        alg: "[BACK LEFT SEXY] [OPP] [LEFT J_PERM] L U' L'"
+        isLefty: true
+        note: y perm alt alg with opp in the middle
+    - 
+        setup: U'
+        alg: L2' U L2 Uw2 F2' U' L2' Uw2 U L2 U2 F2' Uw2 U' L2'
+        isLefty: true
+        tags: ['Direct']
+
+Sb:
+    name: Sb 
+    algs:
+    - 
+        setup: U
+        alg: z' U2' L' U2' Lw2' F2' L U2' Lw2' L' U2' L2' F2' Lw2' L U2' z
+        isLefty: true
+        tags: ['Direct']

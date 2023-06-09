@@ -1,6 +1,8 @@
 import { CLLGroupByOLL, CLLNoGrouping } from "../templates/CLL";
 import { EG1GroupByOLL, EG1NoGrouping } from "../templates/EG1";
+import { HNoGrouping } from "../templates/H_zbll";
 import { LNoGrouping } from "../templates/L_zbll";
+import { ParityPLLNoGrouping } from "../templates/ParityPLL";
 import { TGroupByBH, TGroupByCP, TNoGrouping } from "../templates/T_zbll";
 import { UGroupByBH, UGroupByCP, UNoGrouping } from "../templates/U_zbll";
 import { MegaOLLNoGrouping } from "../templates/megaOLL";
@@ -29,10 +31,12 @@ const b: Record<string, IPageData> = {
   zbllt: { path: 'ZB/ZBLL/T', name: "T ZBLL", data: TGroupByCP },
   zbllu: { path: 'ZB/ZBLL/U', name: "U ZBLL", data: UGroupByCP },
   zblll: { path: 'ZB/ZBLL/L', name: "L ZBLL", data: LNoGrouping },
+  zbllh: { path: 'ZB/ZBLL/H', name: "H ZBLL", data: HNoGrouping },
   eg1: { path: '222/EG1', name: "EG1", data: EG1GroupByOLL },
   cll: { path: '222/CLL', name: "CLL", data: CLLGroupByOLL },
   mpll: { path: 'mega/PLL', name: "Mega PLL", data: MegaPLLGroupByFeatures },
   moll: { path: 'mega/OLL', name: "Mega OLL", data: MegaOLLNoGrouping },
+  bcppll: { path: 'bigs/ParityPLL', name: "Parity PLL", data: ParityPLLNoGrouping },
 }
 
 const a: Record<string, IPageData> = {
@@ -47,6 +51,8 @@ const a: Record<string, IPageData> = {
   8: { path: b.cll.path + '/list', name: b.cll.name, data: CLLNoGrouping },
   9: { path: b.moll.path + '/list', name: b.moll.name, data: MegaOLLNoGrouping },
   10: { path: b.mpll.path + '/list', name: b.mpll.name, data: MegaPLLNoGrouping },
+  11: { path: b.zbllh.path + '/list', name: b.zbllh.name, data: HNoGrouping },
+  12: { path: b.bcppll.path + '/list', name: b.bcppll.name, data: ParityPLLNoGrouping },
   
   a1: { path: b.oll.path + '/group', name: b.oll.name, data: OLLGroupByEO },
   a2: { path: b.pll.path + '/group', name: b.pll.name, data: PLLGroupedBySet },
@@ -74,6 +80,7 @@ export const NavbarRoutes = [
       { name: a.zbllt.name, href: "/algs/" + a.zbllt.path },
       { name: a.zbllu.name, href: "/algs/" + a.zbllu.path },
       { name: a.zblll.name, href: "/algs/" + a.zblll.path },
+      { name: a.zbllh.name, href: "/algs/" + a.zbllh.path },
     ], 
   },
   { name: "2x2", href: "/algs/2x2", folder: [
@@ -83,6 +90,10 @@ export const NavbarRoutes = [
   { name: "Megaminx", href: "/algs/mega", folder: [ 
       { name: a.moll.name, href: "/algs/" + a.moll.path }, 
       { name: a.mpll.name, href: "/algs/" + a.mpll.path }, 
+    ],
+  },
+  { name: "Big Cube", href: "/algs/bigs", folder: [ 
+      { name: a.bcppll.name, href: "/algs/" + a.bcppll.path }, 
     ],
   },
 ]
