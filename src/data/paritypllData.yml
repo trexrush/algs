@@ -2,7 +2,7 @@ opp:
     name: opp
     algs:
     - 
-        alg: Uw2 2R2 Uw2 2R2 U2 2R2
+        alg: Uw2' 2R2 Uw2' 2R2 U2' 2R2
 adj:
     name: adj
     algs:
@@ -15,7 +15,8 @@ adj:
         alg: R U R U' Rw' U' 2R U Rw U Rw' U' Rw' U Rw U R' Rw U' Rw'
         tags: ['Direct']
     - 
-        alg: "[SU] [OPP] [UNSEXY]"
+        alg: "[LEFT SEXY] [OPP] U L' U L"
+        isLefty: true
 Oa:
     name: Oa 
     algs:
@@ -35,14 +36,14 @@ W:
     name: W
     algs:
     - 
-        alg: Rw R U Rw' R U' Rw' U' Rw U Rw U' Rw' U' Rw' R U Rw U2 R U' R' U' R2
-        tags: ['Direct']
-    - 
         setup: U
         alg: "[OPP] [Ua_PERM]"
     - 
-        setup: U
-        alg: "[Ub_PERM] [OPP]"
+        alg: Rw R U Rw' R U' Rw' U' Rw U Rw U' Rw' U' Rw' R U Rw U2 R U' R' U' R2
+        tags: ['Direct']
+    - 
+        alg: "[OPP] 2R2' 2L2 U' 2-3r' U2' 2-3r U' 2-3R2"
+    note: TODO fix the dumb notation i had to pull on alg 3
 pJ:
     name: pJ
     algs:
@@ -155,6 +156,9 @@ X:
     - 
         setup: U2
         alg: '[OPP] [E_PERM]'
+    - 
+        setup: U2
+        alg: '[E_PERM] [OPP]'
 Sa:
     name: Sa 
     algs:
