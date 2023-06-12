@@ -78,7 +78,8 @@ export interface IAlg {
     note?: string
 }
 
-export type IAlgTags = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New"
+// TODO: rethink role of tags
+export type IAlgTags = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New" | string
 
 export interface IAlgSet { options: IOptions, sets: ISet[] }
 
