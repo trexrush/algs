@@ -1,12 +1,6 @@
+import type { PuzzleSpecificSimplifyOptions } from "cubing/dist/types/alg";
 import type { modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types"
-
-export const puzzleDefinitionMapping: modularPuzzleGroup<{ type: twistyPuzzleType, standard: twistyPuzzleTypeWithChirality, mirror: twistyPuzzleTypeWithChirality, vc: string | number }> = {
-    '3x3x3': { type: '3x3x3', standard: '3x3x3', mirror: '3x3x3', vc: 3 },
-    '4x4x4': { type: '4x4x4', standard: '4x4x4', mirror: '4x4x4', vc: 4 },
-    '2x2x2': { type: '2x2x2', standard: '2x2x2', mirror: '2x2x2', vc: 2 },
-    'megaminx': { type: 'megaminx', standard: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega' },
-    'megaminx-lefty': { type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega' },
-}
+import { cube3x3x3 } from "cubing/puzzles";
 
 const cubeRotations = [
     { name: "y", alg: "y . " },
@@ -65,9 +59,8 @@ const megaSubstitutes = [
     { name: "SUPERSUNE", alg: "R2 U R2' U R2 U2' R2'" },
     { name: "SUPERANTISUNE", alg: "R2 U2 R2' U' R2 U' R2'" },
     { name: "ANTISUNE", alg: "R U2 R' U' R U' R'" },
-    //temp
-    { name: "F1+_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
-    { name: "F1-_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
+    { name: "MEGALOOP", alg: "R2 U2' R2' U' R2 U2' R2'" },
+    { name: "ANTILOOP", alg: "R2' U2 R2 U R2' U2 R2" },
 ]
 
 const megaRightySubstitutes = [
@@ -126,20 +119,12 @@ const rareTriggers = [
     { name: "FATNE", alg: "R U2' r'" },
     { name: "MEGASLEDGE", alg: "R' F' R F" },
     { name: "OHSWAG", alg: "L U' R U L'" },
-
+    
     { name: "U_ZERO", alg: "R' D' R U R' D R" },
     { name: "U'_ZERO", alg: "R' D' R U' R' D R" },
     { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },
-
+    
 ]
-
-export const triggerSubstitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
-    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
-    "2x2x2": [...cubeRotations, ...rareTriggers, ...triggers],
-    "4x4x4": [...bigCubeSubstitutes, ...pllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
-    "megaminx": [...megaSubstitutes, ...megaRightySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers],
-    "megaminx-lefty": [...megaSubstitutes, ...megaLeftySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers]
-}
 
 // im sorry to the gods of hardcoding but cubingJS doesnt have a mirror function somehow? discrimination against left handed ppl smh
 // TODO - big cube move module
@@ -272,6 +257,29 @@ const backWideMoves = [
     "Uw2'", "Rw2'", "Lw2'", "Dw2'", "Fw2'", "Bw2'", "2U2'", "2R2'", "2L2'", "2D2'", "2F2'", "2B2'",
     "Uw2", "Rw2", "Lw2", "Dw2", "Fw2", "Bw2", "2U2", "2R2", "2L2", "2D2", "2F2", "2B2",
 ]
+
+export const puzzleDefinitionMapping: modularPuzzleGroup<{ 
+    type: twistyPuzzleType, 
+    standard: twistyPuzzleTypeWithChirality, 
+    mirror: twistyPuzzleTypeWithChirality, 
+    vc: string | number, 
+    cancel?: PuzzleSpecificSimplifyOptions 
+}> = {
+    '3x3x3': { type: '3x3x3', standard: '3x3x3', mirror: '3x3x3', vc: 3, cancel: cube3x3x3.puzzleSpecificSimplifyOptions },
+    '4x4x4': { type: '4x4x4', standard: '4x4x4', mirror: '4x4x4', vc: 4 },
+    '2x2x2': { type: '2x2x2', standard: '2x2x2', mirror: '2x2x2', vc: 2 },
+    'megaminx': { type: 'megaminx', standard: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega', cancel: { quantumMoveOrder: () => 5 } },
+    'megaminx-lefty': { type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega', cancel: { quantumMoveOrder: () => 5 } },
+}
+
+const commonSubs = [...cubeRotations, ...rareTriggers, ...triggers]
+export const triggerSubstitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
+    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
+    "2x2x2": [...cubeRotations, ...rareTriggers, ...triggers],
+    "4x4x4": [...bigCubeSubstitutes, ...pllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
+    "megaminx": [...megaSubstitutes, ...megaRightySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers],
+    "megaminx-lefty": [...megaSubstitutes, ...megaLeftySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers]
+}
 
 // TODO: slices arent working on bigs, talk to lucas garron about that and like the billion other things cubingjs
 // hasnt implemented for my usecase

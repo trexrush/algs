@@ -26,13 +26,4 @@ const ParityPLLNoGrouping: IAlgSet = {
     ]
 }
 
-// 4x4
-// Preferred    PuzzleGen   Cubingjs|   changes
-// ________________________________ | __________
-// r            r           2R      |   fine
-// Rw           Rw           Rw     |   no change
-// M            M           2-3r'   |   this issue
-// 3Rw          3Rw         3Rw     |   no change
-
-
 export { ParityPLLNoGrouping }

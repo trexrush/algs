@@ -2,15 +2,20 @@ import { Alg } from "cubing/alg"
 import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, triggerSubstitutionGroups } from "./algConstants"
 import type { TModifiersList, twistyPuzzleTypeWithChirality } from "./types"
 
-export const removePrePostAUF = (a: string): string => {
-  // remove brackets and replace with a pause after
-  // functionality moved to expandAlgWithTriggers but keeping in incase I move triggers to using brackets or smth
-  return a.replace(/\[(.*)\]/, '$1 . ')
-}
+export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
+  const notation = {
+    display: ["r", "r'", "r2", "r2'", "M", "M'", "M2", "M2'"],
+    cubingjs: ["2R", "2R'", "2R2", "2R2'", "m", "m'", "m2", "m2'"],
+  }
 
-export const convert4x4NotationToTwizzle = (a: string): string => {
-  // there better not be algs with wide moves, ig i could rewrite them as 3Rw but its kinda...
-  return a.replace("r", "2R")
+  return to === 'cubingjs' ? a.split(' ').map(e => notation.display.includes(e) ? notation.cubingjs[notation.display.indexOf(e)] : e).join(' ') : a
+
+// Preferred    PuzzleGen   Cubingjs|
+// ________________________________ |
+// r            r           2R      |  
+// Rw           Rw           Rw     |  
+// M            M           m       | 
+// 3Rw          3Rw         3Rw     |  
 }
 
 //TODO: implement swapping triggers
@@ -49,13 +54,13 @@ export const invertAlg = (a: string): string => {
   return new Alg(a).invert().toString(); 
 }
 
-export const repeatAlg = (a: string, q: number): string => {
+export const repeatAlg = (a: string, q: number, pzl: twistyPuzzleTypeWithChirality): string => {
   let res = (a + " ").repeat(q)
-  return simplifyAlg(res)
+  return simplifyAlg(res, pzl)
 }
 
-export const simplifyAlg = (a: string): string => {
-  return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' }}).toString()
+export const simplifyAlg = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
+  return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction' }, puzzleSpecificSimplifyOptions: puzzleDefinitionMapping[pzl]?.cancel }).toString()
 }
 
 export const modifierActionsList: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
@@ -65,10 +70,10 @@ export const modifierActionsList: Record<TModifiersList, { action: (a: string, p
   "L": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
   "BACK": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
   "B": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
-  "DOUBLE": { action: (a, pzl) => { return repeatAlg(a, 2) }, text: '2x'},
-  "X2": { action: (a, pzl) => { return repeatAlg(a, 2) }, text: '2x'},
-  "TRIPLE": { action: (a, pzl) => { return repeatAlg(a, 3) }, text: '3x'},
-  "X3": { action: (a, pzl) => { return repeatAlg(a, 3) }, text: '3x'},
+  "DOUBLE": { action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
+  "X2": { action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
+  "TRIPLE": { action: (a, pzl) => { return repeatAlg(a, 3, pzl) }, text: '3x'},
+  "X3": { action: (a, pzl) => { return repeatAlg(a, 3, pzl) }, text: '3x'},
 }
 
 export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): string => {
@@ -95,7 +100,7 @@ export const matchAllParenthesis: RegExp =  /([\(\)])/g
 // TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers)
 export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
   const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
-  return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)))
+  return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)), pzl)
 }
 
 export const checkIfHasTriggers = (a: string): boolean => {

@@ -11,7 +11,7 @@ A1+:
     #   alg: L U2 L F L' U' L' U L F' L' U' L U' L'
     #   isLefty: true
         # - # dont use
-    #   alg: L2' U2 L2 U L2' U2 L2 U L2' U2 L2 U L2' U2 L2
+    #   alg: "[MEGALOOP] U [MEGALOOP]"
     #   isLefty: true
   note: can be a 3x3 transfer (A Perm), but mega alg is better
 A1-:
@@ -144,7 +144,7 @@ C3-:
   altNames: ["Victreebell"]
   algs:
     - 
-      alg: L2 U2 L2' U L2 U2 L2' U L2 U2' L2' U' L2 U2' L2'
+      alg: "[LEFT MEGALOOP] U [LEFT ANTILOOP]"
       isLefty: true
     - 
       alg: L2 U2' L2' BL2 U' L2 U L2' U BL2' U' L2 U2 L2'
@@ -152,9 +152,9 @@ C3-:
 C4+:
   name: C4+
   altNames: ["Caterpie"]
-  algs:
+  algs:    
     - 
-      alg: L2 U2' L2' U' L2 U2' L2' U' L2 U2 L2' U L2 U2 L2'
+      alg: "[LEFT ANTILOOP] U' [LEFT MEGALOOP]"
       isLefty: true
     - 
       alg: L2' U2 L2 F2' U L2' U' L2 U' F2 U L2' U2' L2
@@ -250,7 +250,7 @@ F1+:
   altNames: ["Chansey"]
   algs:
     - 
-      alg: "[LEFT F1+_7MOVER]"
+      alg: "[LEFT MEGALOOP]"
       isLefty: true
   note: "\"7 mover\" EP (the L2s can go either way)"
 F1-:
@@ -258,7 +258,7 @@ F1-:
   altNames: ["Kangaskhan"]
   algs:
     - 
-      alg: "[LEFT F1-_7MOVER]"
+      alg: "[LEFT ANTILOOP]"
       isLefty: true
   note: "\"7 mover\" EP (the L2s can go either way)"
 F2+:
@@ -584,8 +584,7 @@ K1+:
   altNames: ["Diglett"]
   algs:
     - 
-      # alg: "[TRIPLE LEFT F1+_7MOVER]"
-      alg: L2' U2 L2 U L2' U' L2 U L2' U' L2 U L2' U2 L2
+      alg: "[TRIPLE LEFT MEGALOOP]"
       isLefty: true
   note: 7 move EP x3
   recog:
@@ -596,9 +595,8 @@ K1-:
   altNames: ["Zubat"]
   algs:
     - 
-      #  alg: "[TRIPLE LEFT F1-_7MOVER]"
       setup: U2
-      alg: L2 U2' L2' U' L2 U L2' U' L2 U L2' U' L2 U2' L2'
+      alg: "[TRIPLE LEFT ANTILOOP]"
       isLefty: true
   note: 7 move EP x3
   recog:
@@ -609,7 +607,7 @@ K2+:
   altNames: ["Dugtrio"]
   algs:
     - 
-      alg: "[LEFT F1+_7MOVER] [LEFT T_PERM]"
+      alg: "[LEFT MEGALOOP] [LEFT T_PERM]"
       isLefty: true
     - 
       alg: L U2' L' U L U2' L' U2 L U L' U2 L U' L' U2 L U' L'
@@ -827,7 +825,7 @@ Q1+:
   altNames: ["Mankey"]
   algs:
     - 
-      alg: "[LEFT F1+_7MOVER] U' [LEFT F1+_7MOVER]"
+      alg: "[LEFT MEGALOOP] U' [LEFT MEGALOOP]"
       isLefty: true
   recog: 
     - BL BR R edge cycle, L F edge swap
@@ -836,7 +834,7 @@ Q1-:
   altNames: ["Drowzee"]
   algs:
     - 
-      alg: "[LEFT F1-_7MOVER] U [LEFT F1-_7MOVER]"
+      alg: "[LEFT ANTILOOP] U [LEFT ANTILOOP]"
       isLefty: true
   recog: 
     - F R BR edge cycle, L BL edge swap
@@ -972,7 +970,7 @@ S4+:
   altNames: ["Pidgey"]
   algs:
     - 
-      alg: L2 U2' L2' U' L2 U2' L2' U L2 U2 L2' U L2 U2 L2'
+      alg: "[LEFT ANTILOOP] U [LEFT MEGALOOP]"
       isLefty: true
     - 
       alg: L2' U2 L2 U' F2' U L2' U L2 U' F2 L2' U2' L2
@@ -982,7 +980,7 @@ S4-:
   altNames: ["Poliwag"]
   algs:
     - 
-      alg: L2 U2 L2' U L2 U2 L2' U' L2 U2' L2' U' L2 U2' L2'
+      alg: "[LEFT MEGALOOP] U' [LEFT ANTILOOP]"
       isLefty: true
     - 
       alg: L2 U2' L2' U BL2 U' L2 U' L2' U BL2' L2 U2 L2'
@@ -1050,23 +1048,24 @@ T3+:
   altNames: ["Omastar"]
   algs:
     - 
-      alg: L2' U2 L2 U L2' U' L2 U L2' U2 L2
+      setup: U'
+      alg: "[DOUBLE LEFTY MEGALOOP]"
       isLefty: true
-  note: 7 move EP x2
 T3-:
   name: T3-
   altNames: ["Kabutops"]
   algs:
     - 
-      alg: L2 U2' L2' U' L2 U L2' U' L2 U2' L2'
+      setup: U
+      alg: "[DOUBLE LEFTY ANTILOOP]"
+      # alg: L2 U2' L2' U' L2 U L2' U' L2 U2' L2'
       isLefty: true
-  note: 7 move EP x2
 T4+:
   name: T4+
   altNames: ["Ditto"]
   algs:
     - 
-      alg: L U L' U2 [LEFT F1+_7MOVER] U' L U' L'
+      alg: L U L' U2 [LEFT MEGALOOP] U' L U' L'
       isLefty: true
   note: setup to 7 move EP, L2' maybe better than the L2 shown
 T4-:
@@ -1077,7 +1076,7 @@ T4-:
       alg: "[LEFT J_PERM] [LEFT T_PERM]"
       isLefty: true
     - 
-      alg: L' U' L U' [LEFT F1+_7MOVER] U2 L' U L
+      alg: L' U' L U' [LEFT MEGALOOP] U2 L' U L
       isLefty: true
   note: '3x3 transfer (J + T perm) for alg 1, or setup to 7 move EP for alg 2'
 U1+:
