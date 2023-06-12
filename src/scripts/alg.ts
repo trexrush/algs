@@ -30,11 +30,6 @@ export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): strin
   return aArr.join(" ")
 }
 
-//TODO: finish logic
-// export const mirrorSet = (s: IAlgSet): IAlgSet => {
-//     s.options.puzzle = puzzleDefinitionMapping[s.options.puzzle]?.mirror
-// }
-
 export const mirrorAlgOverrideTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality) => {
   return mirrorAlg(expandAlgWithTriggers(a, pzl), pzl)
 }
@@ -60,7 +55,8 @@ export const repeatAlg = (a: string, q: number, pzl: twistyPuzzleTypeWithChirali
 }
 
 export const simplifyAlg = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
-  return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' }, puzzleSpecificSimplifyOptions: puzzleDefinitionMapping[pzl]?.cancel }).toString()
+  return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' },
+  puzzleSpecificSimplifyOptions: puzzleDefinitionMapping[pzl]?.cancel }).toString()
 }
 
 export const modifierActionsList: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
