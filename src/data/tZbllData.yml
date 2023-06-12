@@ -133,7 +133,7 @@ Pure_VAnti:
     - BBFF_A/O
   algs:
   - 
-    alg: R U' R2' F R F' R U' B U' B' U' R'
+    alg: R U' R' [SLEDGE] R U' B U' B' U' R'
 Pure_VArrow:
   name: T67
   altNames:
