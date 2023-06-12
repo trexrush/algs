@@ -211,6 +211,7 @@ const mirrorWideMoves = [
     "Uw2", "Lw2", "Rw2", "Dw2", "Bw2", "Fw2", "2U2", "2L2", "2R2", "2D2", "2B2", "2F2",
 ]
 
+// TODO: dont reverse U2 and U2' (same with d2s) but do reverse for mega
 const backMoves = [
     "U'", "R'", "L'", "D'", "F'", "B'", "u'", "r'", "l'", "d'", "f'", "b'",
     "U", "R", "L", "D", "F", "B", "u", "r", "l", "d", "f", "b",

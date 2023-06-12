@@ -60,7 +60,7 @@ export const repeatAlg = (a: string, q: number, pzl: twistyPuzzleTypeWithChirali
 }
 
 export const simplifyAlg = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
-  return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction' }, puzzleSpecificSimplifyOptions: puzzleDefinitionMapping[pzl]?.cancel }).toString()
+  return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' }, puzzleSpecificSimplifyOptions: puzzleDefinitionMapping[pzl]?.cancel }).toString()
 }
 
 export const modifierActionsList: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
