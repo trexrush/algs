@@ -1,15 +1,15 @@
-import { CLLGroupByOLL, CLLNoGrouping } from "../templates/CLL";
-import { EG1GroupByOLL, EG1NoGrouping } from "../templates/EG1";
-import { HNoGrouping } from "../templates/H_zbll";
-import { LNoGrouping } from "../templates/L_zbll";
-import { ParityPLLNoGrouping } from "../templates/ParityPLL";
-import { TGroupByBH, TGroupByCP, TNoGrouping } from "../templates/T_zbll";
-import { UGroupByBH, UGroupByCP, UNoGrouping } from "../templates/U_zbll";
-import { MegaOLLNoGrouping } from "../templates/megaOLL";
-import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter, MegaPLLNoGrouping } from "../templates/megaPLL";
-import { OLLGroupByEO, OLLNoGrouping } from "../templates/oll";
-import { PLLGroupedBySet, PLLNoGrouping } from "../templates/pll";
-import { ZBLSNoGrouping } from "../templates/zbls";
+import { CLLGroupByOLL, CLLNoGrouping } from "../data/2x2/cllObj";
+import { EG1GroupByOLL, EG1NoGrouping } from "../data/2x2/eg1Obj";
+import { HNoGrouping } from "../data/ZBLL/hObj";
+import { LNoGrouping } from "../data/ZBLL/lObj";
+import { ParityPLLNoGrouping } from "../data/paritypllObj";
+import { TGroupByBH, TGroupByCP, TNoGrouping } from "../data/ZBLL/tObj";
+import { UGroupByBH, UGroupByCP, UNoGrouping } from "../data/ZBLL/uObj";
+import { MegaOLLNoGrouping } from "../data/MEGA/megaollObj";
+import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter, MegaPLLNoGrouping } from "../data/MEGA/megapllObj";
+import { OLLGroupByEO, OLLNoGrouping } from "../data/ollObj";
+import { PLLGroupedBySet, PLLNoGrouping } from "../data/pllObj";
+import { ZBLSNoGrouping } from "../data/ZBLS/zblsObj";
 import type { IAlgSet } from "./types";
 
 /* NAMING CONVENTION -

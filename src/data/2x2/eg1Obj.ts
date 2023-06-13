@@ -1,7 +1,7 @@
-import type { IAlgSet, ICaseList, IOptions } from "../scripts/types"
-import { createOptions } from "../scripts/utilities";
+import type { IAlgSet, ICaseList, IOptions } from "../../scripts/types"
+import { createOptions } from "../../scripts/utilities";
 //@ts-expect-error
-import yml from '../data/EG1Data.yml'
+import yml from './eg1.yml'
 
 const Options: IOptions = createOptions({
   name: "EG1",

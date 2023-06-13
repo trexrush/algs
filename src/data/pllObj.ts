@@ -1,7 +1,7 @@
 import type { ICaseList, IAlgSet, IOptions } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
 //@ts-expect-error
-import yml from '../data/pllData.yml'
+import yml from './pll.yml'
 
 const _: ICaseList = yml
 

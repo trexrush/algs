@@ -1,13 +1,12 @@
-import type { IAlgSet, IOptions, ICaseList } from "../scripts/types"
-import { createOptions } from "../scripts/utilities";
+import type { IAlgSet, IOptions, ICaseList } from "../../scripts/types"
+import { createOptions } from "../../scripts/utilities";
 //@ts-expect-error
-import yml from '../data/paritypllData.yml'
+import yml from './h.yml'
 
 const Options: IOptions = createOptions({
-    name: "ParityPLL (WARNING: EXPERIMENTAL AND PROBABLY BROKEN)",
-    puzzle: '4x4x4',
-    imgSource: "cubingjs",
-    // imgSource: "vc",
+    name: "ZBLL",
+    puzzle: '3x3x3',
+    imgSource: "vc",
     vcparams: {
         view: 'plan',
     },
@@ -16,7 +15,7 @@ const Options: IOptions = createOptions({
 let _: ICaseList = yml
 
 // TODO: check for errors, though not high priority since these if these calls fail, the site wont build
-const ParityPLLNoGrouping: IAlgSet = {
+const HNoGrouping: IAlgSet = {
     options: Options,
     sets: [
         {
@@ -26,4 +25,4 @@ const ParityPLLNoGrouping: IAlgSet = {
     ]
 }
 
-export { ParityPLLNoGrouping }
+export { HNoGrouping }
