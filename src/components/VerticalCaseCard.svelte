@@ -45,6 +45,13 @@
     return alg.setup ? alg.setup + " . . " + alg.alg : alg.alg
   }
 
+  const copyAndRedirect = (e: Event) => { 
+    e.preventDefault()
+    const elem: HTMLAnchorElement = e.currentTarget as HTMLAnchorElement
+    navigator.clipboard.writeText(elem.href ?? '')
+    window.location.replace(elem.href)
+  }
+
 </script>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <!-- svelte-ignore a11y-missing-content -->
@@ -55,7 +62,8 @@
   bg-stone-900/[.07] dark:bg-stone-50/[.07] shadow-lg hover:shadow-2xl hover:-translate-y-[1px]">
     <div class="absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.7em]">
       <div class="text-stone-500 text-[2.7vw] sm:text-[15px] flex gap-2 items-baseline">
-        <a href="#{caso.name}" class="dark:text-white text-[3.2vw] sm:text-[20px] group">
+        <a href="#{caso.name}" on:click={e => copyAndRedirect(e)} 
+        class="dark:text-white text-[3.2vw] sm:text-[20px] group">
           <span class="group-hover:opacity-100 opacity-0 transition-opacity duration-100"># </span>
           <b>{caso.name}</b>
         </a>
