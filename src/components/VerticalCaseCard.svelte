@@ -5,6 +5,7 @@
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import AlgListing from "./AlgListing.svelte";
   import { mirrorAlg, mirrorAlgOverrideTriggers } from "../scripts/alg";
+  import { tooltip } from "../scripts/utilities";
 
   export let size: number
   
@@ -65,7 +66,7 @@
       <span class="my-[2px] px-2 py-[1px] sm:text-sm text-[2.2vw] font-light bg-stone-50/[.15] rounded-lg shadow-md cursor-pointer select-none
       bg-gradient-to-r from-red-600/40 from-30% to-lime-600/40 to-70%
       transition-all hover:saturate-150 hover:brightness-125"
-      on:click={() => { isMirrored.set(!$isMirrored) }} title="Display the mirror cases of algs"><b>{"Mirror L/R"}</b></span>
+      on:click={() => { isMirrored.set(!$isMirrored) }} use:tooltip title="Display the mirror cases of algs"><b>{"Mirror L/R"}</b></span>
     </div> 
     {#if caso.note}
     <div class="absolute text-[2.3vw] top-0 right-2 w-5/6
@@ -76,8 +77,8 @@
     {#each caso.algs as eachAlg, i}
     <div class="flex items-center gap-1 relative w-full leading-none overflow-x-visible">
       <span class="my-[2px] sm:p-[1px] sm:px-2 p-1 px-1 sm:text-sm text-[1.5vw]
-      bg-stone-50/[.15] hover:bg-stone-50/[.3] transition-colors duration-75 text-red-300 rounded-md shadow-md cursor-pointer"
-      on:click={() => { changeActiveElement(i); if (!toggled) (toggleDisplay()) }} title="View Alg">
+      bg-stone-50/[.15] hover:bg-stone-50/[.3] transition-colors duration-75 text-red-300 rounded-md shadow-md cursor-pointer select-none"
+      on:click={() => { changeActiveElement(i); if (!toggled) (toggleDisplay()) }} use:tooltip title="View Alg">
         ▶
       </span>
       <div on:click={() => changeActiveElement(i)}>

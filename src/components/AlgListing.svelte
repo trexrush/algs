@@ -2,6 +2,7 @@
   import { algDelimiterWithTriggers, checkIfHasTriggers, expandAlgWithTriggers, isTriggerRegex, mirrorAlgOverrideTriggers, modifierActionsList } from "../scripts/alg";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import { type IAlg, modifiersList, type twistyPuzzleTypeWithChirality, type TModifiersList } from "../scripts/types";
+  import { tooltip } from "../scripts/utilities";
 
   // always "non mirrored"
   export let pzl: twistyPuzzleTypeWithChirality = '3x3x3'
@@ -45,7 +46,7 @@
     {#each displayAlg.split(algDelimiterWithTriggers) as movesOrTrigger }
       {#if movesOrTrigger.match(isTriggerRegex) != null}
         <span class="{ isActive ? 'font-extrabold' : 'font-bold'} group/trigger"
-        title={expandAlgWithTriggers(movesOrTrigger, displayPzl)} data-tooltip-placement={'top'}>
+        use:tooltip={{ placement: 'top' }} title={expandAlgWithTriggers(movesOrTrigger, displayPzl)}>
         {#each movesOrTrigger.replace(isTriggerRegex, '$1').split(' ') as triggerOrModifier}
             {#if modifiersList.find((item) => item == triggerOrModifier) != undefined} <!-- MODIFIER -->
               <span class="mx-[1px] text-[1.5vw] sm:text-[10px] text-stone-500 transition-all duration-100
@@ -69,13 +70,13 @@
 
 </span>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<span class="my-[2px] p-[1px] text-[2vw] sm:text-sm bg-stone-50/[.07] rounded-md shadow-md cursor-pointer"
-on:click={() => { navigator.clipboard.writeText(expandAlgWithTriggers(displayAlg, displayPzl)) }} title="Copy to Clipboard">
+<span class="my-[2px] p-[1px] text-[2vw] sm:text-sm bg-stone-50/[.07] rounded-md shadow-md cursor-pointer select-none"
+on:click={() => { navigator.clipboard.writeText(expandAlgWithTriggers(displayAlg, displayPzl)) }} use:tooltip title="Copy to Clipboard">
 <!--TODO: ^ on click animate a toast or scale up the button for a split second  -->
 🔗
 </span>
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 {#if isExpandable}
 <span class="my-[2px] p-[1px] px-1 sm:text-sm text-[1.5vw] bg-stone-50/[.15] rounded-md shadow-md cursor-pointer select-none"
-on:click={() => { isExpanded = !isExpanded }} title="Expand Alg">{!isExpanded ? '➡️' : '⬅️'}</span>
+on:click={() => { isExpanded = !isExpanded }} use:tooltip title="Expand Alg">{!isExpanded ? '➡️' : '⬅️'}</span>
 {/if}

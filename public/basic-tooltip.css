@@ -1,0 +1,5 @@
+.tippy-box[data-theme~='basic'] {
+  padding: 3px;
+  background-color: rgba(40, 40, 40, .8);
+  border-radius: 5px;
+}

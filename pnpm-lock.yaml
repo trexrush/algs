@@ -6,12 +6,12 @@ specifiers:
   '@rollup/plugin-yaml': ^4.1.0
   '@tailwindcss/container-queries': ^0.1.1
   astro: ^2.5.0
-  astro-tooltips: ^0.6.2
   cubing: ^0.35.19
   sr-puzzlegen: ^1.0.4
   sr-visualizer: ^1.0.13
   svelte: ^3.59.1
   tailwindcss: ^3.3.2
+  tippy.js: ^6.3.7
   ts-deepmerge: ^6.0.3
 
 dependencies:
@@ -19,12 +19,12 @@ dependencies:
   '@astrojs/tailwind': 3.1.3_a23agce3bc7262tagzln7yakoy
   '@tailwindcss/container-queries': 0.1.1_tailwindcss@3.3.2
   astro: 2.5.0
-  astro-tooltips: 0.6.2
   cubing: 0.35.19
   sr-puzzlegen: 1.0.4
   sr-visualizer: 1.0.13
   svelte: 3.59.1
   tailwindcss: 3.3.2
+  tippy.js: 6.3.7
   ts-deepmerge: 6.0.3
 
 devDependencies:
@@ -915,12 +915,6 @@ packages:
 
   /array-iterate/2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
-    dev: false
-
-  /astro-tooltips/0.6.2:
-    resolution: {integrity: sha512-I9uXbchctnRqbc0mnxKcBRfweMuql/U+619+MzNvq3kANc7xthOXj6cMNgAkTaXoHJLdFMKL3Fx6vB5cyiiRXg==}
-    dependencies:
-      tippy.js: 6.3.7
     dev: false
 
   /astro/2.5.0:
