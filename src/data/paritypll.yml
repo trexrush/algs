@@ -2,17 +2,17 @@ opp:
     name: opp
     algs:
     - 
-        alg: Uw2' 2R2 Uw2' 2R2 U2' 2R2
+        alg: "[OPP]"
 adj:
     name: adj
     algs:
     - 
         setup: U2
-        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' 2R' U Rw U R' U' R'
+        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' r' U Rw U R' U' R'
         tags: ['Direct']
     - 
         setup: U2
-        alg: R U R U' Rw' U' 2R U Rw U Rw' U' Rw' U Rw U R' Rw U' Rw'
+        alg: R U R U' Rw' U' r U Rw U Rw' U' Rw' U Rw U R' Rw U' Rw'
         tags: ['Direct']
     - 
         alg: "[LEFT SEXY] [OPP] U L' U L"
@@ -21,10 +21,10 @@ Oa:
     name: Oa 
     algs:
     - 
-        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' 2R' U Rw U R' U' R' [Ua_PERM]
+        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' r' U Rw U R' U' R' [Ua_PERM]
         tags: ['Direct']
     # -    
-    #     alg: M2 U' M2 U' M' U2 2L2 U2 2R2 Uw2 2R2 Uw2 U2 M'
+    #     alg: M2 U' M2 U' M' U2 l2 U2 r2 Uw2 r2 Uw2 U2 M'
     note: opp into zperm or adj into U
 Ob:
     name: Ob 
@@ -42,20 +42,20 @@ W:
         alg: Rw R U Rw' R U' Rw' U' Rw U Rw U' Rw' U' Rw' R U Rw U2 R U' R' U' R2
         tags: ['Direct']
     - 
-        alg: "[OPP] 2R2' 2L2 U' 2-3r' U2' 2-3r U' 2-3R2"
+        alg: "[OPP] r2' l2' U' M U2' M' U' M2"
     note: TODO fix the dumb notation i had to pull on alg 3
 pJ:
     name: pJ
     algs:
     - 
-        alg: Lw L2' U L U' 2L' U L' U2' L U 2L' U' 2L U Lw F' Lw2' U Lw U Lw' U' Lw F
+        alg: Lw L2' U L U' l' U L' U2' L U l' U' l U Lw F' Lw2' U Lw U Lw' U' Lw F
         isLefty: true
         tag: ['Direct']
 pN:
     name: pN
     algs:
     - 
-        alg: 2L' U' 2L U Lw F' Lw2' U Lw U Lw' U' Lw F [LEFTY SEXY] Lw D Lw' U2' Lw D' Lw'
+        alg: l' U' l U Lw F' Lw2' U Lw U Lw' U' Lw F [LEFTY SEXY] Lw D Lw' U2' Lw D' Lw'
         isLefty: true
         tag: ['Direct']
         note: wide T perm sexy block comm
@@ -143,13 +143,17 @@ Q:
     name: Q
     algs:
     - 
-        alg: R2 Uw2' U R2' U2' y R2 Uw2' U' R2' U F2 Uw2' R2 U' F2'
-        tags: ['Direct']
-    - 
         alg: "[OPP] U' [LEFT E_PERM]"
         isLefty: true
     -
-        alg: F R U' R' U' R U R' F' U2 [INV OPP] R U R' U' R' F R F'
+        alg: F R U' R' U' R U R' F' U2 [OPP] R U R' U' R' F R F'
+    - 
+        alg: R2 Uw2' U R2' U2' y R2 Uw2' U' R2' U F2 Uw2' R2 U' F2'
+        tags: ['Direct']
+    - 
+        alg: z' U2 L' F2' Lw2 U2 L F2' l Lw F2' L2' U2 l' Lw' U2' z 
+        isLefty: true
+        tags: ['Direct']
 X:
     name: X
     algs:
@@ -163,7 +167,6 @@ Sa:
     name: Sa 
     algs:
     - 
-        setup: U2
         alg: "[BACK LEFT SEXY] [OPP] [LEFT J_PERM] L U' L'"
         isLefty: true
         note: y perm alt alg with opp in the middle
@@ -178,6 +181,6 @@ Sb:
     algs:
     - 
         setup: U
-        alg: z' U2' L' U2' Lw2' F2' L U2' Lw2' L' U2' L2' F2' Lw2' L U2' z
+        alg: z' U2' L' U2 Lw2 F2' L U2 L' Lw2' U2 L2 F2' Lw' l' U2' z
         isLefty: true
         tags: ['Direct']

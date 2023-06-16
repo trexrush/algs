@@ -6,8 +6,8 @@ import yml from './paritypll.yml'
 const Options: IOptions = createOptions({
     name: "ParityPLL (WARNING: EXPERIMENTAL AND PROBABLY BROKEN)",
     puzzle: '4x4x4',
-    imgSource: "cubingjs",
-    // imgSource: "vc",
+    // imgSource: "cubingjs",
+    imgSource: "vc",
     vcparams: {
         view: 'plan',
     },

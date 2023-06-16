@@ -19,8 +19,6 @@ interface ITwistyParams {
 export interface IOptions {
     name: string;
     puzzle: twistyPuzzleType
-    // vc - doesnt work with non-cubics
-    // cubingjs - needs to hydrate to display image
     imgSource?: "vc" | "cubingjs" | "none"
     vcparams?: IVCParams
     twistyplayerparams?: ITwistyParams

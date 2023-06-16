@@ -2,21 +2,31 @@ import { Alg } from "cubing/alg"
 import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, triggerSubstitutionGroups } from "./algConstants"
 import type { TModifiersList, twistyPuzzleTypeWithChirality } from "./types"
 
+
+// TODO: OBJECT ORIENTIFY THIS MF SHIT BC GAAADDAMN I NEED CLEANER CODE
+// class CaseAlg {
+// }
+
 export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
-    display: ["r", "r'", "r2", "r2'", "M", "M'", "M2", "M2'"],
-    cubingjs: ["2R", "2R'", "2R2", "2R2'", "m", "m'", "m2", "m2'"],
+    display: ["r", "r'", "r2", "r2'", "l", "l'", "l2", "l2'", "M", "M'", "M2", "M2'"],
+    vc: ["Rw R'", "Rw' R", "Rw2 R2", "Rw2 R2", "Lw L'", "Lw' L", "Lw2 L2", "Lw2 L2", "M", "M'", "M2", "M2'"],
+    cubingjs: ["2R", "2R'", "2R2", "2R2'", "2L", "2L'", "2L2", "2L2'", "m", "m'", "m2", "m2'"],
   }
-
-  return to === 'cubingjs' ? a.split(' ').map(e => notation.display.includes(e) ? notation.cubingjs[notation.display.indexOf(e)] : e).join(' ') : a
+  return a.split(' ').map(e => 
+    notation.display.includes(e) 
+      ? notation[to][notation.display.indexOf(e)]
+      : e
+    ).join(' ')
 
 // Preferred    PuzzleGen   Cubingjs|
 // ________________________________ |
-// r            r           2R      |  
-// Rw           Rw           Rw     |  
+// r / 2R       Rw R'       2R      |  
+// Rw           Rw          Rw      |  
 // M            M           m       | 
 // 3Rw          3Rw         3Rw     |  
 }
+
 
 //TODO: implement swapping triggers
 export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): string => {

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { expandAlgWithTriggers } from "../scripts/alg";
+  import { convert4x4Notation, expandAlgWithTriggers } from "../scripts/alg";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
   import type { IAlg, IOptions } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
@@ -10,9 +10,9 @@
   export let options: IOptions
   export let size: number
 
-  let puzzle: number | string = puzzleDefinitionMapping[options.puzzle]?.vc!!
+  let vcpuzzle: number | string = puzzleDefinitionMapping[options.puzzle]?.vc!!
   let setupAUF: string = imageAlg.setup ? imageAlg.setup + ' ' : ''
-
+  
   let visualCubeImage: HTMLElement;
   const configVisualCubeImage = () => {
     cubePNG(visualCubeImage, {
@@ -22,12 +22,14 @@
         [Axis.Y, 30],
         [Axis.X, -30],
       ],
-      cubeSize: typeof puzzle === 'number' ? puzzle : 3,
+      cubeSize: typeof vcpuzzle === 'number' ? vcpuzzle : 3,
       view: options.vcparams!.view,
       width: size,
       height: size,
       mask: options.vcparams?.stage! as Masking,
-      case: setupAUF + expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!,
+      case: options.puzzle == '4x4x4' 
+        ? setupAUF + convert4x4Notation(expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!, 'vc')
+        : setupAUF + expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!,
     });
   };
 
@@ -50,7 +52,7 @@ child:transition-all child:duration-300 child:ease-in-out hover:translate-y-[-2p
     {#if options.imgSource == "vc"}
       <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
     {:else if options.imgSource == "cubingjs"}
-      <TwistyPlayer imageAlg={setupAUF + imageAlg.alg} options={options} {size} />
+        <TwistyPlayer imageAlg={setupAUF + imageAlg.alg} options={options} {size} />
     {/if}
   </div>
 </div>

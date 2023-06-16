@@ -2,7 +2,7 @@
 <script lang="ts">
   import { TwistyPlayer } from "cubing/twisty";
   import { onMount } from "svelte";
-  import { expandAlgWithTriggers } from "../scripts/alg";
+  import { convert4x4Notation, expandAlgWithTriggers } from "../scripts/alg";
   import type { IOptions, twistyPuzzleType } from "../scripts/types";
   import { DefaultOptions } from "../scripts/types";
   import { puzzleDefinitionMapping } from "../scripts/algConstants";
@@ -22,12 +22,15 @@
   const setAlg = (alg: string) => {
     twistyPlayer.cameraLongitude = isLefty ? -options.twistyplayerparams!.cameraX! : options.twistyplayerparams!.cameraX!
     twistyPlayer.alg = ". . " + expandAlgWithTriggers(alg, puzzleChirality) + " . ."
+    // temp hack for 4x4
+    if (puzzle == '4x4x4') twistyPlayer.alg = ". . " + convert4x4Notation(expandAlgWithTriggers(alg, puzzleChirality) + " . .", 'cubingjs')
     twistyPlayer.jumpToStart()
     twistyPlayer.controller.animationController.playPause()
   }
   
   export let imageAlg: string | null = null
   export let activeAlg: string | null = null
+
   $: {
     if (!imageAlg && activeAlg) {
       setAlg(activeAlg)

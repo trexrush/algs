@@ -47,7 +47,7 @@ const zbllSubstitutes = [
 ]
 
 const bigCubeSubstitutes = [
-    { name: "OPP", alg: ". Uw2' 2R2 Uw2' 2R2 U2' 2R2" },
+    { name: "OPP", alg: "Uw2' r2 Uw2' r2 U2' r2" },
     { name: "DREW", alg: "Rw2 B2' Rw' U2 Rw' U2 x' U2' Rw' U2 Rw U2' Rw' U2 Rw2 U2 x" },
     { name: "LUKE", alg: "Rw' U2' Rw U2 Rw' F2 Rw2 U2' Rw U2 Rw' U2' F2 Rw2 F2'" },
     { name: "LUCAS", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" },
@@ -267,7 +267,7 @@ export const puzzleDefinitionMapping: modularPuzzleGroup<{
     cancel?: PuzzleSpecificSimplifyOptions 
 }> = {
     '3x3x3': { type: '3x3x3', standard: '3x3x3', mirror: '3x3x3', vc: 3, cancel: cube3x3x3.puzzleSpecificSimplifyOptions },
-    '4x4x4': { type: '4x4x4', standard: '4x4x4', mirror: '4x4x4', vc: 4 },
+    '4x4x4': { type: '4x4x4', standard: '4x4x4', mirror: '4x4x4', vc: 4, cancel: { quantumMoveOrder: () => 4 } },
     '2x2x2': { type: '2x2x2', standard: '2x2x2', mirror: '2x2x2', vc: 2 },
     'megaminx': { type: 'megaminx', standard: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega', cancel: { quantumMoveOrder: () => 5 } },
     'megaminx-lefty': { type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega', cancel: { quantumMoveOrder: () => 5 } },
@@ -283,7 +283,7 @@ export const triggerSubstitutionGroups: modularPuzzleGroup<Array<{ name: string,
 }
 
 // TODO: slices arent working on bigs, talk to lucas garron about that and like the billion other things cubingjs
-// hasnt implemented for my usecase
+// hasnt implemented for my usecaser
 export const baseMoveGroups: modularPuzzleGroup<string[]> = {
     "3x3x3": [...tripleMoves, ...baseSlices, ...baseRotations, ...baseMoves],
     "2x2x2": [...baseRotations, ...baseMoves],
