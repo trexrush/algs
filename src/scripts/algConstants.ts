@@ -51,8 +51,7 @@ const bigCubeSubstitutes = [
     { name: "DREW", alg: "Rw2 B2' Rw' U2 Rw' U2 x' U2' Rw' U2 Rw U2' Rw' U2 Rw2 U2 x" },
     { name: "LUKE", alg: "Rw' U2' Rw U2 Rw' F2 Rw2 U2' Rw U2 Rw' U2' F2 Rw2 F2'" },
     { name: "LUCAS", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" },
-    { name: "FRONT", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" }, // same as above for the purpose of triggers
-    { name: "Ja_PERM", alg: "x R2 F R F' R U2' x' L' U L F2" },
+    { name: "Ja_PERM", alg: "x R2 F R F' R U2' 3Rw' U 3Rw U2 x'" },
 ]
 
 const megaSubstitutes = [
@@ -66,25 +65,15 @@ const megaSubstitutes = [
 const megaRightySubstitutes = [
     { name: "x", alg: "dL' R" },
     { name: "x'", alg: "dL R'" },
-    // { name: "UP_CW_7MOVER", alg: "R2 U2 R2' U R2 U2 R2'" },
-    // { name: "UP_CCW_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
-    // { name: "DOWN_CW_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
-    // { name: "DOWN_CCW_7MOVER", alg: "R2' U2' R2 U' R2' U2' R2" },
-    // { name: "CCW_7MOVER", alg: "R2 U2' R2' U' R2 U2' R2'" },
-    // { name: "CW_7MOVER", alg: "R2' U2 R2 U R2' U2 R2" },
+    ...megaSubstitutes
 ]
 const megaLeftySubstitutes = [
     { name: "x", alg: "dR L'" },
     { name: "x'", alg: "dR' L" },
-    // { name: "UP_CW_7MOVER", alg: "L2' U2 L2 U L2' U2 L2" },
-    // { name: "UP_CCW_7MOVER", alg: "L2' U2' L2 U' L2' U2' L2" },
-    // { name: "DOWN_CW_7MOVER", alg: "L2 U2 L2' U L2 U2 L2'" },
-    // { name: "DOWN_CCW_7MOVER", alg: "L2 U2' L2' U' L2 U2' L2'" },
-    // { name: "CW_7MOVER", alg: "L2' U2 L2 U L2' U2 L2" },
-    // { name: "CCW_7MOVER", alg: "L2 U2' L2' U' L2 U2' L2'" },
+    ...megaSubstitutes
 ]
 
-const triggers = [
+const baseTriggers = [
     { name:"CANCEL", alg: "" },
     { name: "SEXY", alg: "R U R' U'" },
     { name: "INVSEXY", alg: "U R U' R'" }, // same as below
@@ -122,8 +111,7 @@ const rareTriggers = [
     
     { name: "U_ZERO", alg: "R' D' R U R' D R" },
     { name: "U'_ZERO", alg: "R' D' R U' R' D R" },
-    { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },
-    
+    { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },  
 ]
 
 // im sorry to the gods of hardcoding but cubingJS doesnt have a mirror function somehow? discrimination against left handed ppl smh
@@ -273,13 +261,14 @@ export const puzzleDefinitionMapping: modularPuzzleGroup<{
     'megaminx-lefty': { type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega', cancel: { quantumMoveOrder: () => 5 } },
 }
 
-const commonSubs = [...cubeRotations, ...rareTriggers, ...triggers]
+const triggers = [...baseTriggers, ...rareTriggers]
+const commonSubs = [...cubeRotations, ...triggers]
 export const triggerSubstitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
-    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
-    "2x2x2": [...cubeRotations, ...rareTriggers, ...triggers],
-    "4x4x4": [...bigCubeSubstitutes, ...pllSubstitutes, ...cubeRotations, ...rareTriggers, ...triggers],
-    "megaminx": [...megaSubstitutes, ...megaRightySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers],
-    "megaminx-lefty": [...megaSubstitutes, ...megaLeftySubstitutes, ...pllSubstitutes, ...rareTriggers, ...triggers]
+    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...commonSubs],
+    "2x2x2": [...cubeRotations, ...rareTriggers, ...baseTriggers],
+    "4x4x4": [...bigCubeSubstitutes, ...pllSubstitutes, ...commonSubs],
+    "megaminx": [...megaRightySubstitutes, ...pllSubstitutes, ...triggers],
+    "megaminx-lefty": [...megaLeftySubstitutes, ...pllSubstitutes, ...triggers]
 }
 
 // TODO: slices arent working on bigs, talk to lucas garron about that and like the billion other things cubingjs
