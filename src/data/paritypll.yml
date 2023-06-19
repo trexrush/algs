@@ -145,15 +145,12 @@ Q:
     - 
         alg: "[OPP] U' [LEFT E_PERM]"
         isLefty: true
+    - 
+        alg: z U2' R F2' Rw2' U2' R' F2 Rw2 R F2' R2' U2' Rw2 R' U2 z'
+        tags: ['Direct']
     -
         alg: F R U' R' U' R U R' F' U2 [OPP] R U R' U' R' F R F'
-    - 
-        alg: R2 Uw2' U R2' U2' y R2 Uw2' U' R2' U F2 Uw2' R2 U' F2'
-        tags: ['Direct']
-    - 
-        alg: z' U2 L' F2' Lw2 U2 L F2' l Lw F2' L2' U2 l' Lw' U2' z 
-        isLefty: true
-        tags: ['Direct']
+    # R2 U' F2 u2 R2 U F2 U' u2 F2 U2 R2 U u2 R2
 X:
     name: X
     algs:
