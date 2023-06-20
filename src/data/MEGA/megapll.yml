@@ -628,8 +628,11 @@ L1:
   altNames: ["Magikarp"]
   algs:
     - 
-      alg: L U2' L' U' L U' L' U L U2' L' U L' U' L U' L' U2 L
+      setup: U2
+      alg: L U2' L' U' L U' L' U L U2' L' U [LEFT SUNE]
       isLefty: true
+  recog:
+    - antiZ block in headlight-free corner
 L2:
   name: L2
   altNames: ["Gyarados"]
@@ -638,8 +641,11 @@ L2:
       alg: L U2 L' U L U' L' U' L U' L2' U' L U' L' U' L U L' U2 L
       isLefty: true
     - 
+      setup: U2
       alg: L' U2' L U' L' U L U L' U L2 U L' U L U L' U' L U2' L'
       isLefty: true
+  recog:
+    - antiZ block in headlight-free corner, pseudobars in front
 L3+:
   name: L3+
   altNames: ["Tangela"]

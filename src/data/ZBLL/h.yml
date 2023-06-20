@@ -14,6 +14,7 @@ Pure_Twist:
   name: Pure_Twist
   algs:
   - alg: L' U' L U' L U L2' U L U' L U L' U' L U L' U' L U' L'
+  - alg: L' U2' L R U' L' U L U2' L' U2' L U2' R' U L' U L
 Pure_AntiStair:
   name: Pure_AntiStair
   algs:
