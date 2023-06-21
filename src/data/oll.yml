@@ -329,7 +329,7 @@
     algs:
     - 
         setup: U
-        alg: L U F2' u L' U' L u' F2' L'
+        alg: L U F2' u L' U' L D' L2' B'
         isLefty: true
     - 
         alg: "[SUNE] [FRURUF]"
