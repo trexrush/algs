@@ -639,6 +639,10 @@ J3-:
     - 
       alg: L U' L' [LEFT SUNE] U L U L' U2 L U2' L'
       isLefty: true
+    - 
+      setup: U2'
+      alg: L F U F' U2 L' U' L U2' L' U L F U F' U' L'
+      isLefty: true
     # - 
     #   alg: L' U' L U L U2 L' U' L' U' L2 U' L2' U2' L2 U2 L'
     #   isLefty: true
@@ -692,7 +696,6 @@ L1:
   altNames: ["Magikarp"]
   algs:
     - 
-      setup: U2
       alg: L U2' L' U' L U' L' U L U2' L' U [LEFT SUNE]
       isLefty: true
   recog:
@@ -702,10 +705,11 @@ L2:
   altNames: ["Gyarados"]
   algs:
     - 
+      setup: U2'
       alg: L U2 L' U L U' L' U' L U' L2' U' L U' L' U' L U L' U2 L
       isLefty: true
+      note: eido the first U2 then ring the following U followed by a index eido for U'
     - 
-      setup: U2
       alg: L' U2' L U' L' U L U L' U L2 U L' U L U L' U' L U2' L'
       isLefty: true
   recog:
@@ -715,26 +719,38 @@ L3+:
   altNames: ["Tangela"]
   algs:
     - 
+      setup: U
       alg: L' U' L U L U2' L' U' L' U' L2 U' L' U L' U' L U L' U2 L
       isLefty: true
     # - 
     #   alg: L U2' L' U2' F L y L' U' L b' L' U2' L' U' L U2' L'
     #   isLefty: true
     - 
+      setup: U2'
       alg: L U2' L' U2' L2 F L' U' L' U L F' U2' L' U' L U2' L'
       isLefty: true
+  recog: 
+    - pseudoblock in headlight-free corner + pseudobar
 L3-:
   name: L3-
   altNames: ["Lickitung"]
   algs:
     - 
+      setup: U2
+      alg: L U L' U' L' U2 L U L U L2' U L U' L U L' U' L U2' L'
+      isLefty: true
+    - 
+      setup: U'
       alg: F' U2 F U2 L' F' L U L' F U2 L U L' U2 L
       isLefty: true
+  recog: 
+    - pseudoblock in headlight-free corner + pseudobar
 L4+:
   name: L4+
   altNames: ["Tauros"]
   algs:
     - 
+      setup: U
       alg: L' U2 L U' L' U2' L' U2' L U' L U L' U L' U L U L
       isLefty: true
 L4-:
@@ -742,9 +758,11 @@ L4-:
   altNames: ["Onix"]
   algs:
     - 
+      setup: U'
       alg: L' U' L' U' L U' L U' L' U L' U2 L U2 L U L' U2' L
       isLefty: true
     - 
+      setup: U2
       alg: L U2' L' U L U2 L U2 L' U L' U' L U' L U' L' U' L'
       isLefty: true
 L5+:
@@ -752,28 +770,32 @@ L5+:
   altNames: ["Exeggcute"]
   algs:
     - 
-      alg: L' U2' L U L' U L2 U2' L' U' L U L' U2' L U' L'
+      setup: U2
+      alg: "[LEFT ANTISUNE] L U2' L' U' [LEFT BACK SEXY] U' L U' L'"
       isLefty: true
 L5-:
   name: L5-
   altNames: ["Rhyhron"]
   algs:
     - 
-      alg: L U2 L' U' L U' L2' U2 L U L' U' L U2 L' U L
+      setup: U
+      alg: "[LEFT ANTISUNE] L' U2 L U [LEFT SEXY] U L' U L"
       isLefty: true
 L6+:
   name: L6+
   altNames: ["Exeggutor"]
   algs:
     - 
-      alg: L U L' U2 L U' L' U L U2 L2' U' L U' L' U2 L
+      setup: U
+      alg: L U L' U2 L U' L' U L U2 L' [LEFT SUNE]
       isLefty: true
 L6-:
   name: L6-
   altNames: ["Rhydon"]
   algs:
     - 
-      alg: L' U' L U2' L' U L U' L' U2' L2 U L' U L U2' L'
+      setup: U2
+      alg: L' U' L U2' L' U L U' L' U2' L [LEFT BACK SUNE]
       isLefty: true
 M:
   name: M
@@ -1519,7 +1541,7 @@ Z1:
     - 
       alg: L U L U L' F' L F U' L' F U F' U2' L'
       isLefty: true
-      note: orekehstrah alg?
+      note: john cena alg
 Z2:
   name: Z2
   altNames: ["Zapdos"]
