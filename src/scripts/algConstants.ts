@@ -277,15 +277,15 @@ export const baseMoveGroups: modularPuzzleGroup<string[]> = {
     "3x3x3": [...tripleMoves, ...baseSlices, ...baseRotations, ...baseMoves],
     "2x2x2": [...baseRotations, ...baseMoves],
     "4x4x4": [...wideMoves, ...tripleMoves, ...baseRotations, ...baseMoves],
-    "megaminx": [...baseMegaF, ...baseMega, ...baseMoves],
-    "megaminx-lefty": [...baseMegaF, ...baseMega, ...baseMoves]
+    "megaminx": [...baseMegaF, ...baseMega, ...baseRotations, ...baseMoves],
+    "megaminx-lefty": [...baseMegaF, ...baseMega, ...baseRotations, ...baseMoves]
 }
 export const mirrorMoveGroups: modularPuzzleGroup<string[]> = {
     "3x3x3": [...tripleMirrorMoves, ...mirrorSlices, ...mirrorRotations, ...mirrorMoves],
     "2x2x2": [...mirrorRotations, ...mirrorMoves],
     "4x4x4": [...mirrorWideMoves, ...tripleMirrorMoves, ...mirrorRotations, ...mirrorMoves],
-    "megaminx": [...mirrorMegaF, ...mirrorMega, ...mirrorMoves],
-    "megaminx-lefty": [...mirrorMegaF, ...mirrorMega, ...mirrorMoves]
+    "megaminx": [...mirrorMegaF, ...mirrorMega, ...mirrorRotations,...mirrorMoves],
+    "megaminx-lefty": [...mirrorMegaF, ...mirrorMega, ...mirrorRotations, ...mirrorMoves]
 }
 // megaminx F would be mapped to B', (which is not intentional, should be BL' or BR'), 
 // so earlier moves are set to take precedence and megaminx modules need to go first
@@ -293,6 +293,6 @@ export const backMoveGroups: modularPuzzleGroup<string[]> = {
     "3x3x3": [ ...tripleBackMoves, ...backSlices, ...backRotations, ...backMoves],
     "2x2x2": [...backMoves, ...backRotations],
     "4x4x4": [...backWideMoves, ...tripleBackMoves, ...backRotations, ...backMoves],
-    "megaminx": [...backRightMegaF, ...backMega, ...backMoves],
-    "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backMoves]
+    "megaminx": [...backRightMegaF, ...backMega, ...backRotations, ...backMoves],
+    "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backRotations, ...backMoves]
 }
