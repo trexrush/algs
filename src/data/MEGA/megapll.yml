@@ -1074,20 +1074,23 @@ S1+:
   altNames: ["Farfetch'd"]
   algs:
     - 
-      alg: L U L' U2 L U2 L' U' L' U' L U' L' U2 L
+      setup: U'
+      alg: L U L' U2 L U2 L' U' [LEFT SUNE]
       isLefty: true
 S1-:
   name: S1-
   altNames: ["Lapras"]
   algs:
     - 
-      alg: L U2 L' U' L U' L' U' L' U2 L U2 L' U L
+      setup: U'
+      alg: "[LEFT BACK ANTISUNE] U' L' U2 L U2 L' U L"
       isLefty: true
 S2+:
   name: S2+
   altNames: ["Doduo"]
   algs:
     - 
+      setup: U
       alg: L2 U2' L2' U2' L2 U' L' U2 L' U' L' U2' L2 U L2' U L
       isLefty: true
     - 
@@ -1101,9 +1104,11 @@ S2-:
   altNames: ["Seel"]
   algs:
     - 
+      setup: U
       alg: L2' U2 L2 U2 L2' U L U2' L U L U2 L2' U' L2 U' L'
       isLefty: true
     - 
+      setup: U'
       alg: L F' U2' L2' U2 L2 U L2' U L2 U' F L' U L' U L
       isLefty: true
       note: orekehstrah alg
@@ -1112,10 +1117,12 @@ S3+:
   altNames: ["Dodrio"]
   algs:
     - 
+      setup: U
       alg: L' U' L2 U' L2' U2 L U L U2' L U L2' U2 L2 U2 L2'
       isLefty: true
     - 
-      alg: L U L' U L2 F L' U' L' U L F' U' L' U2 L U2 L'
+      setup: U2
+      alg: L U L' U L2 F L' [LEFT UNSEXY] F' U' L' U2 L U2 L'
       isLefty: true
 S3-:
   name: S3-
@@ -1136,6 +1143,7 @@ S4+:
       alg: "[LEFT ANTILOOP] U [LEFT MEGALOOP]"
       isLefty: true
     - 
+      setup: U'
       alg: L2' U2 L2 U' F2' U L2' U L2 U' F2 L2' U2' L2
       isLefty: true
 S4-:
@@ -1143,9 +1151,11 @@ S4-:
   altNames: ["Poliwag"]
   algs:
     - 
+      setup: U2
       alg: "[LEFT MEGALOOP] U' [LEFT ANTILOOP]"
       isLefty: true
     - 
+      setup: U2'
       alg: L2 U2' L2' U BL2 U' L2 U' L2' U BL2' L2 U2 L2'
       isLefty: true
 S5+:
@@ -1153,8 +1163,10 @@ S5+:
   altNames: ["Pidgeotto"]
   algs:
     - 
+      setup: U2
       alg: L' U2' L U' BL U' L' U L U BL' L' U2 L
       isLefty: true
+      note: very similar to either a T or U zbll
 S5-:
   name: S5-
   altNames: ["Poliwhirl"]
@@ -1162,6 +1174,7 @@ S5-:
     - 
       alg: L U2 L' U F' U L U' L' U' F L U2' L'
       isLefty: true
+      note: very similar to either a T or U zbll
     - 
       alg: L U2 L' R' U2 L U' L' U2' R U L U2' L'
       isLefty: true
@@ -1170,10 +1183,11 @@ S6+:
   altNames: ["Pidgeot"]
   algs:
     - 
+      setup: U2
       alg: L U L U L' U L U L' U2' L U' L2' U2' L U L'
       isLefty: true
     - 
-      alg: L' U' L2 F L' U2 L' U2' L F' L' U L2 U L' U L U2' L'
+      alg: L' U' L2 F L' U2 L' U2' L F' L' U L [LEFT BACK SUNE]
       isLefty: true
 S6-:
   name: S6-
