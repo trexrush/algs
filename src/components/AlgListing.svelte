@@ -42,10 +42,10 @@
       {displayLefty
     ? isActive ? 'bg-gradient-to-r from-teal-500 via-green-500 to-lime-500' : 'text-lime-100/40'
     : isActive ? 'bg-gradient-to-r from-red-500 via-orange-500 to-amber-500' : 'text-red-100/40'}">
+  {#if alg.setup && !isMirrored}
+    <span class="px-1 rounded-sm text-[2vw] sm:text-[13px] text-stone-500 font-bold bg-stone-200/[.07]">{alg.setup}</span>
+  {/if}
   {#if !isExpanded}
-    {#if alg.setup && !isMirrored}
-      <span class="px-1 rounded-sm text-[2vw] sm:text-[13px] text-stone-500 font-bold bg-stone-200/[.07]">{alg.setup}</span>
-    {/if}
     {#each displayAlg.split(algDelimiterWithTriggers) as movesOrTrigger }
       {#if movesOrTrigger.match(isTriggerRegex) != null}
         <span class="{ isActive ? 'font-extrabold' : 'font-bold'} group/trigger"
