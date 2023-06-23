@@ -1526,7 +1526,7 @@ Y1-:
       alg: "[LEFTY Y_PERM]"
       isLefty: true
     - 
-      alg: L U L' U L' U' L F L' U' L U L F' L2' U L2 U' L'
+      alg: L U L' U [LEFT J_PERM] L U' L'
       isLefty: true
   note: 3x3 transfer (Y perm)
 Y2+:
@@ -1548,9 +1548,6 @@ Y2-:
       isLefty: true
     - 
       alg: L U2 L' U' L' U' L2 U' L2' U2 L2 U2' L'
-      isLefty: true
-    - 
-      alg: L2 U2' L2' U2 L2 U2 L2' U2 L2 U2' L2'
       isLefty: true
 Y3+:
   name: Y3+
