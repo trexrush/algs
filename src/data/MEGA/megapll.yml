@@ -1012,6 +1012,7 @@ R1+:
   altNames: ["Psyduck"]
   algs:
     - 
+      setup: U2
       alg: L' U2 L U' L2' U2 L2 U L' U' L' U2' L U' L
       isLefty: true
 R1-:
@@ -1026,6 +1027,7 @@ R2+:
   altNames: ["Golduck"]
   algs:
     - 
+      setup: U2
       alg: L' U L' U2 L U L U' L2' U2' L2 U L' U2' L
       isLefty: true
 R2-:
@@ -1047,6 +1049,7 @@ R3-:
   altNames: ["Krabby"]
   algs:
     - 
+      setup: U2
       alg: L' U' L2 U' L' U' L' U L U L' U L2 U L' U L U' L'
       isLefty: true
 R4+:
@@ -1054,6 +1057,7 @@ R4+:
   altNames: ["Tentacruel"]
   algs:
     - 
+      setup: U2'
       alg: L' U' L U L' U L2 U L' U L U L' U' L' U' L2 U' L'
       isLefty: true
 R4-:
@@ -1061,6 +1065,7 @@ R4-:
   altNames: ["Kingler"]
   algs:
     - 
+      setup: U'
       alg: L U L' U' L U' L2' U' L U' L' U' L U L U L2' U L
       isLefty: true
 S1+:
