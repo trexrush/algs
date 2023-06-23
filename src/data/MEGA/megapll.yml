@@ -887,7 +887,7 @@ P1+:
   algs:
     - 
       setup: U'
-      alg: L U L F' L' U' L' U L y L2 U L' U L U2' L' BL'
+      alg: L U L F' L' U' L' U L y L [LEFT BACK SUNE] BL'
       isLefty: true
     - 
       setup: U2
@@ -895,7 +895,7 @@ P1+:
       isLefty: true
     - 
       setup: U'
-      alg: L U2 F U2' F' L2' U2 L F' L F L2' U2' L
+      alg: L U2 F U2' F' L2' U2 L [LEFT HEDGE] L' U2' L
       isLefty: true
 P1-:
   name: P1-
@@ -903,7 +903,7 @@ P1-:
   algs:
     - 
       setup: U
-      alg: L F' L2' U' L U' L' U2 L U' L F L' F' U F
+      alg: L F' L' [LEFT SUNE] U' L F L' F' U F
       isLefty: true
 P2+:
   name: P2+
@@ -911,7 +911,7 @@ P2+:
   algs:
     - 
       setup: U2
-      alg: L' U2 L2 F' L' F L' U2' L2 F U2 F' U2' L'
+      alg: L' U2 L [LEFT SLEDGE] L' U2' L2 F U2 F' U2' L'
       isLefty: true
     # - 
     #   alg:  BL L U2 L' U' L U' L2' [x] U' R U L U' R'
@@ -934,7 +934,7 @@ P3+:
   altNames: ["Horsea"]
   algs:
     - 
-      alg: BL L U' L' U' L U L U2 L' U' L U' L2' BL'
+      alg: BL L U' L' U' L U [LEFT BACK ANTISUNE] L' BL'
       isLefty: true
     -
       setup: U'
@@ -950,6 +950,7 @@ P3-:
     - 
       setup: U2
       alg: F' L' U L U L' U' L' U2' L U L' U L2 F
+      note: very similar to start of Y perm
       isLefty: true
 P4+:
   name: P4+
@@ -957,7 +958,7 @@ P4+:
   algs:
     - 
       setup: U2'
-      alg: BL L2 U L' U L U2' L' U' L' U L U L' BL'
+      alg: BL L [LEFT BACK SUNE] U' L' U L U L' BL'
       isLefty: true
 P4-:
   name: P4-
@@ -965,7 +966,7 @@ P4-:
   algs:
     - 
       setup: U'
-      alg: F' L2' U' L U' L' U2 L U L U' L' U' L F
+      alg: F' L' [LEFT SUNE] U L U' L' U' L F
       isLefty: true
 Q1+:
   name: Q1+
@@ -1042,7 +1043,7 @@ R3+:
   altNames: ["Tentacool"]
   algs:
     - 
-      alg: L U L2' U L U L U' L' U' L U' L2' U' L U' L' U L
+      alg: L U L2' U L U L U' L' U' L U' L2' U' L [LEFT UNSEXY]
       isLefty: true
 R3-:
   name: R3-
@@ -1050,7 +1051,7 @@ R3-:
   algs:
     - 
       setup: U2
-      alg: L' U' L2 U' L' U' L' U L U L' U L2 U L' U L U' L'
+      alg: L' U' L2 U' L' U' L' U L U L' U L2 U L' [LEFT BACK UNSEXY]
       isLefty: true
 R4+:
   name: R4+
@@ -1058,7 +1059,7 @@ R4+:
   algs:
     - 
       setup: U2'
-      alg: L' U' L U L' U L2 U L' U L U L' U' L' U' L2 U' L'
+      alg: "[LEFT SEXY] L' U L2 U L' U L U L' U' L' U' L2 U' L'"
       isLefty: true
 R4-:
   name: R4-
@@ -1066,7 +1067,7 @@ R4-:
   algs:
     - 
       setup: U'
-      alg: L U L' U' L U' L2' U' L U' L' U' L U L U L2' U L
+      alg: "[LEFT BACK SEXY] L U' L2' U' L U' L' U' L U L U L2' U L"
       isLefty: true
 S1+:
   name: S1+
