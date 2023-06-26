@@ -313,12 +313,12 @@ const MegaPLLGroupByFeatures: IAlgSet = {
         {
           name: "L",
           altNames: ["Double headlights, no blocks"],
-          children: Object.assign([_['L1'], _['L2'], _['L3+'], _['L3-'], _['L4+'], _['L4-'], _['L5+'], _['L5-'], _['L6+'], _['L6-']])
+          children: Object.assign([_['L1'], _['L2'], _['L3+'], _['L3-'], _['L4+'], _['L4-'], _['L5+'], _['L5-'], _['L6+'], _['L6-']]) // , _['K2+'], _['K2-']
         },
         {
           name: "X",
           altNames: ["No blocks / headlights"],
-          children: Object.assign([_['X1'], _['X2'], _['X3'], _['X4'], _['X5+'], _['X5-'], _['X6+'], _['X6-'], _['X7+'], _['X7-']])
+          children: Object.assign([_['X1'], _['X2'], _['X3'], _['X4'], _['X5+'], _['X5-'], _['X6+'], _['X6-'], _['X7+'], _['X7-']]) // , _['K1+'], _['K1-']
         },        
       ])
     },

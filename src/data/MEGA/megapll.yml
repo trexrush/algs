@@ -467,6 +467,12 @@ H2-:
       alg: "[LEFT SUPERANTISUNE] y [LEFT BACK SUPERSUNE]"
       isLefty: true
       note: first move goes away from headlights
+    - 
+      alg: L U' L' U2' L2 U2' L' F L F' U2 L' U2 L F L' F' U L'
+      isLefty: true
+    - 
+      alg: L U' F' L2' U2' L2 U L2' U L2 F U L U L2' U L2 U2' L2'
+      isLefty: true
     # - 
     #   alg: L2 U' L2' U' L2 U' L2' U' L2 U' L2' U2' L2 U' L2' U' L2 U' L2' U' L2 U' L2'
     #   isLefty: true
@@ -795,7 +801,7 @@ L5-:
   algs:
     - 
       setup: U
-      alg: "[LEFT ANTISUNE] L' U2 L U [LEFT SEXY] U L' U L"
+      alg: "[LEFT BACK ANTISUNE] L' U2 L U [LEFT SEXY] U L' U L"
       isLefty: true
 L6+:
   name: L6+
@@ -975,6 +981,9 @@ Q1+:
     - 
       alg: "[LEFT MEGALOOP] U' [LEFT MEGALOOP]"
       isLefty: true
+    - 
+      alg: L U L' U2 L U' L' U' L U2 L' U F L F' U F L' F'
+      isLefty: true
   recog: 
     - BL BR R edge cycle, L F edge swap
 Q1-:
@@ -983,6 +992,10 @@ Q1-:
   algs:
     - 
       alg: "[LEFT ANTILOOP] U [LEFT ANTILOOP]"
+      isLefty: true
+    - 
+      setup: U
+      alg: "F L F' U' F L' F' U' L U2' L' U L U L' U2' L U' L'"
       isLefty: true
   recog: 
     - F R BR edge cycle, L BL edge swap
