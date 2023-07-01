@@ -5,7 +5,7 @@
   import { convert4x4Notation, expandAlgWithTriggers } from "../scripts/alg";
   import type { IOptions, twistyPuzzleType } from "../scripts/types";
   import { DefaultOptions } from "../scripts/types";
-  import { puzzleDefinitionMapping } from "../scripts/algConstants";
+  import { puzzleDefinitionMapping } from "../scripts/alg";
 
   export let options: IOptions
   export let size: number

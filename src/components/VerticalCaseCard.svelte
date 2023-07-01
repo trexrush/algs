@@ -2,9 +2,9 @@
   import { type Writable, writable } from "svelte/store";
   import type { IAlg, ICase, IOptions } from "../scripts/types";
   import AlgVisuals from "./AlgVisuals.svelte";
-  import { puzzleDefinitionMapping } from "../scripts/algConstants";
+  import { puzzleDefinitionMapping } from "../scripts/alg";
   import AlgListing from "./AlgListing.svelte";
-  import { mirrorAlg, mirrorAlgOverrideTriggers } from "../scripts/alg";
+  import { mirrorAlgOverrideTriggers } from "../scripts/alg";
   import { tooltip } from "../scripts/utilities";
 
   export let size: number
@@ -22,7 +22,7 @@
     $activeAlg = structuredClone(caso.algs[activeElement])
     $activeAlg.alg = mirror ? mirrorAlgOverrideTriggers($activeAlg.alg, pzl) : caso.algs[activeElement].alg
     pzl = mirror ? puzzleDefinitionMapping[pzl]!.mirror : puzzleDefinitionMapping[options.puzzle]!.standard
-    if ($activeAlg.setup) $activeAlg.setup = mirror ? mirrorAlg($activeAlg.setup, pzl) : caso.algs[activeElement].setup
+    if ($activeAlg.setup) $activeAlg.setup = mirror ? mirrorAlgOverrideTriggers($activeAlg.setup, pzl) : caso.algs[activeElement].setup
     $activeAlg.isLefty = mirror ? !caso.algs[activeElement].isLefty : caso.algs[activeElement].isLefty
     // console.log("CASE ", pzl, $isMirrored, $activeAlg.isLefty, getTriggerAlg('UP_CW_7MOVER', pzl) )
   })($isMirrored)

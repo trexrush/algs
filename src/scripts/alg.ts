@@ -1,11 +1,7 @@
-import { Alg } from "cubing/alg"
-import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, puzzleDefinitionMapping, triggerSubstitutionGroups } from "./algConstants"
-import type { TModifiersList, twistyPuzzleTypeWithChirality } from "./types"
-
-
-// TODO: OBJECT ORIENTIFY THIS MF SHIT BC GAAADDAMN I NEED CLEANER CODE
-// class CaseAlg {
-// }
+import { Alg, PuzzleSpecificSimplifyOptions } from "cubing/alg"
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, triggerSubstitutionGroups } from "./algConstants"
+import type { IAlg, IOptions, ITrigger, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types"
+import { cube3x3x3 } from "cubing/puzzles";
 
 export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
@@ -19,12 +15,9 @@ export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => 
       : e
     ).join(' ')
 
-// Preferred    PuzzleGen   Cubingjs|
-// ________________________________ |
-// r / 2R       Rw R'       2R      |  
-// Rw           Rw          Rw      |  
-// M            M           m       | 
-// 3Rw          3Rw         3Rw     |  
+// Disp PuzzleGen Cubingjs
+// r    Rw R'     2R      
+// M    M         m       
 }
 
 
@@ -71,9 +64,9 @@ export const simplifyAlg = (a: string, pzl: twistyPuzzleTypeWithChirality): stri
 
 export const modifierActionsList: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
   "INVERSE": { action: (a, pzl) => { return invertAlg(a) }, text: 'INV'},
-  "LEFTY": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
-  "LEFT": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
-  "L": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
+  "LEFTY": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
+  "LEFT": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
+  "L": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
   "BACK": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
   "B": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
   "DOUBLE": { action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
@@ -111,4 +104,34 @@ export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChiral
 
 export const checkIfHasTriggers = (a: string): boolean => {
   return a.match(isTriggerRegex) != null ? true : false
+}
+
+export const puzzleDefinitionMapping: modularPuzzleGroup<{ 
+  type: twistyPuzzleType, 
+  standard: twistyPuzzleTypeWithChirality, 
+  mirror: twistyPuzzleTypeWithChirality, 
+  vc: string | number, 
+  cancel?: PuzzleSpecificSimplifyOptions,
+  notation?: (a: string, to: "vc" | "cubingjs") => string,
+}> = {
+  '3x3x3': { 
+    type: '3x3x3', standard: '3x3x3', mirror: '3x3x3', vc: 3, 
+    cancel: cube3x3x3.puzzleSpecificSimplifyOptions 
+  },
+  '4x4x4': { 
+    type: '4x4x4', standard: '4x4x4', mirror: '4x4x4', vc: 4, 
+    cancel: { quantumMoveOrder: () => 4 }, 
+    notation: (a, to) => { return convert4x4Notation(a, to) }
+  },
+  '2x2x2': { 
+    type: '2x2x2', standard: '2x2x2', mirror: '2x2x2', vc: 2 
+  },
+  'megaminx': { 
+    type: 'megaminx', standard: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega', 
+    cancel: { quantumMoveOrder: () => 5 } 
+  },
+  'megaminx-lefty': { 
+    type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega', 
+    cancel: { quantumMoveOrder: () => 5 } 
+  },
 }

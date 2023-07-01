@@ -1,6 +1,6 @@
 <script lang="ts">
   import { algDelimiterWithTriggers, checkIfHasTriggers, expandAlgWithTriggers, isTriggerRegex, mirrorAlgOverrideTriggers, modifierActionsList } from "../scripts/alg";
-  import { puzzleDefinitionMapping } from "../scripts/algConstants";
+  import { puzzleDefinitionMapping } from "../scripts/alg";
   import { type IAlg, modifiersList, type twistyPuzzleTypeWithChirality, type TModifiersList } from "../scripts/types";
   import { tooltip } from "../scripts/utilities";
 

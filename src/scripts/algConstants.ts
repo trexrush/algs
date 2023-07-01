@@ -1,6 +1,4 @@
-import type { PuzzleSpecificSimplifyOptions } from "cubing/dist/types/alg";
-import type { modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types"
-import { cube3x3x3 } from "cubing/puzzles";
+import type { modularPuzzleGroup } from "./types"
 
 const cubeRotations = [
     { name: "y", alg: "y . " },
@@ -246,20 +244,6 @@ const backWideMoves = [
     "Uw2'", "Rw2'", "Lw2'", "Dw2'", "Fw2'", "Bw2'", "2U2'", "2R2'", "2L2'", "2D2'", "2F2'", "2B2'",
     "Uw2", "Rw2", "Lw2", "Dw2", "Fw2", "Bw2", "2U2", "2R2", "2L2", "2D2", "2F2", "2B2",
 ]
-
-export const puzzleDefinitionMapping: modularPuzzleGroup<{ 
-    type: twistyPuzzleType, 
-    standard: twistyPuzzleTypeWithChirality, 
-    mirror: twistyPuzzleTypeWithChirality, 
-    vc: string | number, 
-    cancel?: PuzzleSpecificSimplifyOptions 
-}> = {
-    '3x3x3': { type: '3x3x3', standard: '3x3x3', mirror: '3x3x3', vc: 3, cancel: cube3x3x3.puzzleSpecificSimplifyOptions },
-    '4x4x4': { type: '4x4x4', standard: '4x4x4', mirror: '4x4x4', vc: 4, cancel: { quantumMoveOrder: () => 4 } },
-    '2x2x2': { type: '2x2x2', standard: '2x2x2', mirror: '2x2x2', vc: 2 },
-    'megaminx': { type: 'megaminx', standard: 'megaminx', mirror: 'megaminx-lefty', vc: 'mega', cancel: { quantumMoveOrder: () => 5 } },
-    'megaminx-lefty': { type: 'megaminx', standard: 'megaminx-lefty', mirror: 'megaminx', vc: 'mega', cancel: { quantumMoveOrder: () => 5 } },
-}
 
 const triggers = [...baseTriggers, ...rareTriggers]
 const commonSubs = [...cubeRotations, ...triggers]

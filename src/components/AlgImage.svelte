@@ -1,6 +1,6 @@
 <script lang="ts">
   import { convert4x4Notation, expandAlgWithTriggers } from "../scripts/alg";
-  import { puzzleDefinitionMapping } from "../scripts/algConstants";
+  import { puzzleDefinitionMapping } from "../scripts/alg";
   import type { IAlg, IOptions } from "../scripts/types";
   import TwistyPlayer from "./TwistyPlayer.svelte";
   import { cubePNG, Axis, Masking } from "sr-visualizer";
