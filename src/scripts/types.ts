@@ -51,17 +51,21 @@ export type ICaseList<T extends string = any> = Record<T, ICase>
 export type ISetList<T extends string = any> = Record<T, ISet>
 export type IGroupElementList<T extends string = any> = Record<T, ISet | ICase>
 
-//WIP
+export type TNotationTargets = 'vc' | 'cubingjs'
+
 export type LocalOptionsList<T extends string = any> = Record<T, ILocalSetOptions | ILocalCaseOptions> 
 export interface IGroupElement {
     name: string
     altNames?: string[]
     note?: string
 }
+//TODO: make iterable
 export interface ISet extends IGroupElement {
     children?: IGroupElementList
     image?: string
 }
+
+// TODO: make iterable
 export interface ICase extends IGroupElement {
     algs: IAlg[]
     recog?: string[],
@@ -74,6 +78,12 @@ export interface IAlg {
     isLefty?: boolean
     tags?: IAlgTags[]
     note?: string
+}
+
+export interface ITrigger {
+    baseTrigger: string
+    modifiers: TModifiersList[]
+    resultMoves: string
 }
 
 // TODO: rethink role of tags
@@ -99,6 +109,5 @@ export interface ILocalCaseOptions {
 
 export const modifiersList = ["INVERSE", "BACK", "B", "LEFTY", "LEFT", "L", "DOUBLE", "X2", "TRIPLE", "X3"] as const
 export type TModifiersList = typeof modifiersList[number]
-
 
 export type modularPuzzleGroup<T> = Partial<Record<twistyPuzzleTypeWithChirality, T>>
