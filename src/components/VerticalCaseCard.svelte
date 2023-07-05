@@ -10,7 +10,7 @@
   export let size: number
   
   // always "non-mirrored"
-  export let caso: ICase;
+  export let caso: ICase
   export let options: IOptions
   
   // changes based on if mirrored or not

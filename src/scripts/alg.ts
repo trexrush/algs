@@ -1,7 +1,7 @@
 import { Alg, PuzzleSpecificSimplifyOptions } from "cubing/alg"
 import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, triggerSubstitutionGroups } from "./algConstants"
-import type { IAlg, IOptions, ITrigger, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types"
 import { cube3x3x3 } from "cubing/puzzles";
+import type { IAlg, IOptions, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types";
 
 // AlgImage, TwistyPlayer
 export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
@@ -112,10 +112,11 @@ export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChiral
 
 // IMPLEMENTED, NOT NEEDED
 export const checkIfHasTriggers = (a: string): boolean => {
-  return a.match(isTriggerRegex) != null ? true : false
+  return a.match(isTriggerRegex) ? true : false
 }
 
 // AlgImage (vc), AlgListing (mirror), TwistyPuzzle (type), CaseCard (standard / mirror)
+// IMPLEMENTED, LIKELY NOT NEEDED
 export const puzzleDefinitionMapping: modularPuzzleGroup<{ 
   type: twistyPuzzleType, 
   standard: twistyPuzzleTypeWithChirality, 
@@ -150,22 +151,51 @@ export const puzzleDefinitionMapping: modularPuzzleGroup<{
 // TODO: implement Collection class that uses the generic data type thing and Symbol.iterator
 
 // move to types
+const modifierAlias = {
+  "INVERSE": 'invert',
+  "INV": 'invert',
 
+  "LEFTY": 'left',
+  "LEFT": 'left',
+  "L": 'left',
+
+  "BACK": 'back',
+  "B": 'back',
+
+  "DOUBLE": 'double',
+  "X2": 'double',
+  "2x": 'double',
+
+  "TRIPLE": 'triple',
+  "X3": 'triple',
+  "3x": 'triple',
+} as const
+type TModifierAliases = keyof typeof modifierAlias
+type TModifiers = typeof modifierAlias[TModifierAliases]
+type TModifierActions = { type: TModifiers, action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: TModifierAliases }
 type TAlgCommon = Pick<IOptions, "puzzle" | "imgSource"> & {
   isMirror: boolean
   puzzleMap: IPuzzleDefinitionMapping
-  mirror: () => string
-  invert: () => string
-  backMirror: () => string
-  notation: (to: TNotationTargets) => string
-  simplify: () => string
+  mirror: () => TAlgCommon
+  notation: (to: TNotationTargets) => TAlgCommon
+  simplify: () => TAlgCommon
+}
+interface ITrigger {
+  baseTrigger: string
+  modifiers: TModifierActions[]
+  resultMoves: string
 }
 interface IAlgorithmClass extends IAlg, TAlgCommon {
   isExpanded: boolean,
   isExpandable: () => boolean,
-  expand: () => string,
+  expand: () => IAlgorithmClass,
 }
-interface ITriggerClass extends ITrigger, TAlgCommon {}
+interface ITriggerClass extends ITrigger, TAlgCommon {
+  invert: () => ITriggerClass
+  back: () => ITriggerClass
+  double: () => ITriggerClass
+  triple: () => ITriggerClass
+}
 
 type IPuzzleDefinitionMapping = { 
   type: twistyPuzzleType, 
@@ -178,7 +208,9 @@ type IPuzzleDefinitionMapping = {
 
 // ___ //
 
-const AlgBuilder = () => { // TODO: take into account chirality
+export const AlgBuilder = () => { // TODO: take into account chirality
+  // CONSTANTS NEEDED TO BE DEFINED IN THE BUILDER FOR NOW
+
   const puzzleMapping: modularPuzzleGroup<IPuzzleDefinitionMapping> = {
     '3x3x3': { 
       type: '3x3x3', right: '3x3x3', left: '3x3x3', vc: 3, 
@@ -197,79 +229,103 @@ const AlgBuilder = () => { // TODO: take into account chirality
       cancel: { quantumMoveOrder: () => 5 } 
     },
   }
-  
-  // TODO: localize
-  const modifierActions: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
-    "INVERSE": { action: (a, pzl) => { return invertAlg(a) }, text: 'INV'},
-    "LEFTY": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
-    "LEFT": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
-    "L": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
-    "BACK": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
-    "B": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
-    "DOUBLE": { action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
-    "X2": { action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
-    "TRIPLE": { action: (a, pzl) => { return repeatAlg(a, 3, pzl) }, text: '3x'},
-    "X3": { action: (a, pzl) => { return repeatAlg(a, 3, pzl) }, text: '3x'},
+
+  // TRIGGER HELPER FUNCS
+  const modifierActions: Record<TModifiers, TModifierActions> = {
+    "invert": { type: "invert", action: (a, pzl) => { return invertAlg(a) }, text: 'INV'},
+    "left": { type: "left",  action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
+    "back": { type: "back",  action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
+    "double": { type: "double",  action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
+    "triple": { type: "triple",  action: (a, pzl) => { return repeatAlg(a, 3, pzl) }, text: '3x'},
+  }
+  const getModActionsFromText = (m: TModifierAliases) => { return modifierActions[modifierAlias[m]] }
+  const expandedTrigger = (base: string, mods: TModifierActions[]) => { // TODO: rewrite to not have side effects?
+    let initTrig = triggerSubstitutionGroups[resAlg.puzzle!]?.find(item => item.name === base)?.alg // add structuredClone if issues arise
+    if (!initTrig) { return '' }
+    return mods.reduce(((acc, curr) => {
+      // console.log(curr, acc)
+      return curr.action(acc, resAlg.puzzle!)
+    }), initTrig)
+  }
+  const toggleModifier = (a: TModifiers): ITriggerClass => {
+    console.log(resAlg)
+    const act = modifierActions[a]
+    const remainingMods = resAlg.modifiers?.filter((el) => el.type !== act.type) ?? null
+    // need to recalculate the result alg
+    if (remainingMods && remainingMods?.length !== resAlg.modifiers?.length) {
+      return { ...resAlg,  modifiers: remainingMods, resultMoves: expandedTrigger(resAlg.baseTrigger!, remainingMods) } as ITriggerClass
+    } else {
+      const newMods = [...resAlg.modifiers!, getModActionsFromText(act.text)]
+      return { ...resAlg,  modifiers: newMods, resultMoves: expandedTrigger(resAlg.baseTrigger!, newMods) } as ITriggerClass
+    }
   }
   
-  let algorithm: Partial<IAlgorithmClass & ITriggerClass> = {
+  let initAlg: IAlg
+
+  // ACTUAL BUILDER AND RESULT ALGORITHM OBJECT
+
+  let resAlg: Partial<IAlgorithmClass & ITriggerClass> = {
     isMirror: false,
   }
 
   const builders = {
     stage1: {
       withPuzzle: (p: twistyPuzzleType) => {
-        algorithm = {...algorithm, puzzle: p, puzzleMap: puzzleMapping[p] }
+        // FOLLOWUP: do we need puzzlemap? maybe a waste but not sure
+        resAlg = {...resAlg, puzzle: p, puzzleMap: puzzleMapping[p] }
         return builders.stage2
       }
     },
     stage2: {
       withAlgData: (algo: IAlg) => {
-        const puzzleTraits = puzzleMapping[algorithm.puzzle!]
-        algorithm = { ...algorithm, ...algo,
-          isExpanded: false,
-          isExpandable: () => { algorithm.alg!.match(isTriggerRegex) != null ? true : false },
+        initAlg = algo
+        resAlg = { ...resAlg, ...algo,
+          isExpanded: false, // FOLLOWUP: need?
+          isExpandable: () => { return resAlg.isMirror ? false : resAlg.alg!.match(isTriggerRegex) ? true : false }, // temp force false on mirrored
           expand: () => {
-            if (!algorithm.isExpandable!()) {
-              throw new Error('alg is not expandable')
-            }
-            algorithm.isExpanded = !algorithm.isExpanded
-            return expandAlgWithTriggers(algorithm.alg!, algorithm.puzzle!)
+            if (!resAlg.isExpandable!()) { console.log('alg is not expandable, skipping'); return resAlg }
+            resAlg.isExpanded = !resAlg.isExpanded
+            resAlg.alg = resAlg.isExpanded ? expandAlgWithTriggers(resAlg.alg!, resAlg.puzzle!) : initAlg.alg
+            return resAlg
           },
-          notation: (to) => { return puzzleTraits?.notation ? puzzleTraits?.notation(algorithm.alg!, to) : algorithm.alg! },
-          mirror: () => { return mirrorAlgOverrideTriggers(algorithm.alg!, algorithm.puzzle!) },
-          backMirror: () => { return backAlg(algorithm.alg!, algorithm.puzzle!) },
-          invert: () => { return invertAlg(algorithm.alg!) },
-          simplify: () => { return simplifyAlg(algorithm.alg!, algorithm.puzzle!) },
+          mirror: () => { 
+            resAlg.isMirror = !resAlg.isMirror
+            resAlg.isLefty = !resAlg.isLefty
+            resAlg.alg = resAlg.isMirror ? mirrorAlgOverrideTriggers(resAlg.alg!, resAlg.puzzle!) : initAlg.alg
+            return resAlg
+          },
+          notation: (to) => { 
+            if (resAlg.puzzleMap?.notation) resAlg.alg = resAlg.puzzleMap?.notation!(resAlg.alg!, to)
+            return resAlg
+          },
+          simplify: () => { 
+            resAlg.alg = simplifyAlg(resAlg.alg!, resAlg.puzzle!)
+            return resAlg
+          },
         } as IAlgorithmClass
         return builders.stage3
       },
       withTrigger: (t: string) => {
-        const triggerAndModifiers: [...TModifiersList[], string] = t.split(' ') as [...TModifiersList[], string]
-
+        const triggerAndModifiers: [...TModifierAliases[], string] = t.split(' ') as [...TModifierAliases[], string]
         const base = triggerAndModifiers.at(-1) ?? ''
-        const mods = triggerAndModifiers.slice(0, -1) as TModifiersList[]
-        const fields: ITrigger = {
-          baseTrigger: base,
-          modifiers: mods,
-          resultMoves: (() => {
-            let curr = structuredClone(triggerSubstitutionGroups[algorithm.puzzle!]?.find(item => item.name === base)?.alg)
-            if (!curr) { return '' }
-            for (let mod of mods) {
-              if (Object.keys(modifierActionsList).includes(mod)) {
-                curr = modifierActions[mod].action(curr, algorithm.puzzle!) 
-              }
-            }
-            return curr
-          })()
-        }
-        algorithm = {...algorithm, ...fields } as ITriggerClass
+        const mods = triggerAndModifiers.slice(0, -1).map(m => getModActionsFromText(m as TModifierAliases))
+        resAlg = {...resAlg, ...{ baseTrigger: base, modifiers: mods, resultMoves: expandedTrigger(base, mods),
+          mirror: () => { 
+            return {...toggleModifier("left"), isMirror: !resAlg.isMirror }
+          },
+          back: () => { return { ...toggleModifier("back") } },
+          invert: () => { return { ...toggleModifier("invert") } },
+          double: () => { return { ...toggleModifier("double") } },
+          triple: () => { return { ...toggleModifier("triple") } },
+          notation: (to) => { return resAlg },
+        },
+      } as ITriggerClass
         return builders.stage3
       },
     },
     stage3: {
       build: () => {
-        return algorithm
+        return resAlg
       }
     }
   }

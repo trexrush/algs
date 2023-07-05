@@ -80,12 +80,6 @@ export interface IAlg {
     note?: string
 }
 
-export interface ITrigger {
-    baseTrigger: string
-    modifiers: TModifiersList[]
-    resultMoves: string
-}
-
 // TODO: rethink role of tags
 export type IAlgTags = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New" | string
 
@@ -107,6 +101,7 @@ export interface ILocalCaseOptions {
     trainerLists?: any[]
 }
 
+// AlgListing, TODO remove in future
 export const modifiersList = ["INVERSE", "BACK", "B", "LEFTY", "LEFT", "L", "DOUBLE", "X2", "TRIPLE", "X3"] as const
 export type TModifiersList = typeof modifiersList[number]
 
