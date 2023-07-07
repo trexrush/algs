@@ -22,10 +22,6 @@
     ))(alg)
   }
 
-  $: {
-    console.log(isActive)
-  }
-
   let isExpanded = false
   // let a = algorithm.alg // expanded logic
 </script>
