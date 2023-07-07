@@ -13,6 +13,7 @@ specifiers:
   tailwindcss: ^3.3.2
   tippy.js: ^6.3.7
   ts-deepmerge: ^6.0.3
+  ts-essentials: ^9.3.2
 
 dependencies:
   '@astrojs/svelte': 2.2.0_astro@2.5.0+svelte@3.59.1
@@ -29,6 +30,7 @@ dependencies:
 
 devDependencies:
   '@rollup/plugin-yaml': 4.1.0
+  ts-essentials: 9.3.2
 
 packages:
 
@@ -3319,6 +3321,12 @@ packages:
     resolution: {integrity: sha512-MBBJL0UK/mMnZRONMz4J1CRu5NsGtsh+gR1nkn8KLE9LXo/PCzeHhQduhNary8m5/m9ryOOyFwVKxq81cPlaow==}
     engines: {node: '>=14.13.1'}
     dev: false
+
+  /ts-essentials/9.3.2:
+    resolution: {integrity: sha512-JxKJzuWqH1MmH4ZFHtJzGEhkfN3QvVR3C3w+4BIoWeoY68UVVoA2Np/Bca9z0IPSErVCWhv439aT0We4Dks8kQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dev: true
 
   /ts-interface-checker/0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}

@@ -4,12 +4,6 @@ import tippy from 'tippy.js';
 import 'tippy.js/animations/scale-subtle.css';
 import '../../public/basic-tooltip.css'
 
-export namespace importUtility {
-    export const importJSON = (s: string): Object => {
-        return JSON.parse(s)
-    }
-}
-
 // https://svelte.school/tutorials/how-to-use-variables-in-style-tags-in-svelte
 export const styles = (node: any, styles: any) => {
 	setCustomProperties(node, styles)
