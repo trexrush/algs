@@ -1,6 +1,5 @@
 <script lang="ts">
   import type { IAlgorithmClass } from "../scripts/alg";
-  //TODO: move to activated on the set
 
   export let algorithm: IAlgorithmClass
   export let isActive: boolean
@@ -26,6 +25,7 @@
     },
     copy: {
       main: `my-[2px] p-[1px] text-[2vw] sm:text-sm bg-stone-50/[.07] rounded-md shadow-md`
+      // TODO: ^ on click animate a toast or scale up the button for a split second
     },
     expand: {
       main: `my-[2px] p-[1px] px-1 sm:text-sm text-[1.5vw] bg-stone-50/[.15] rounded-md shadow-md`
@@ -34,8 +34,8 @@
 </script>
 
 <span class="{Styles.container.main} {isActive ? Styles.container.active : Styles.container.normal} {algorithm.isLefty ? Styles.container.left : Styles.container.right}">
-  <slot name="setup" css={Styles} />
-  <slot name="display" css={Styles} />
+  <slot name="setup" css={Styles.setup} />
+  <slot name="display" css={Styles.display} />
 </span>
-<slot name="copy" css={Styles} />
-<slot name="expand" css={Styles} />
+<slot name="copy" css={Styles.copy} />
+<slot name="expand" css={Styles.expand} />
