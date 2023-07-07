@@ -11,6 +11,16 @@ pnpm i
 pnpm astro dev
 ```
 
+add this to `settings.json` in VSCode for Tailwind intellisense in strings (i.e. in `AlgListing.svelte`):
+
+```
+  "tailwindCSS.experimental.classRegex": [
+    ["Styles \\=([^;]*);", "'([^']*)'"],
+    ["Styles \\=([^;]*);", "\"([^\"]*)\""],
+    ["Styles \\=([^;]*);", "\\`([^\\`]*)\\`"]
+  ],
+```
+
 ### Build site locally
 
 ```
@@ -19,4 +29,4 @@ pnpm astro build && pnpm astro preview
 
 ## Stack
 
-Powered by [Astro 🚀](https://astro.build), [Tailwind ☁️](https://tailwindcss.com), and [Svelte 🦾](https://svelte.dev)
+Powered by [Astro 🚀](https://astro.build), [Tailwind ☁️](https://tailwindcss.com), [Svelte 🦾](https://svelte.dev), and [CubingJS 📦](https://js.cubing.net/cubing/)

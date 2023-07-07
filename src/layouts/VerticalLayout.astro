@@ -1,6 +1,6 @@
 ---
   // import SetCard from "../components/SetCard.svelte";
-  import VerticalSetCard from "../components/VerticalSetCard.astro";
+  import SetCard from "../components/SetCard.astro";
   import type { IOptions, ISet } from "../scripts/types";
 
   interface Props {
@@ -16,7 +16,7 @@ hover:brightness-110 hover:-translate-y-[1px] transition-all select-none">Collap
 <div class=" relative text-5xl sm:text-7xl w-full text-center my-5 -z-10">{options.name}</div>
 
 {sets.map((set) => (
-  <VerticalSetCard set={set} options={options} size={size}/>
+  <SetCard set={set} options={options} size={size}/>
 ))}
 
 <script>

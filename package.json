@@ -24,6 +24,7 @@
     "ts-deepmerge": "^6.0.3"
   },
   "devDependencies": {
-    "@rollup/plugin-yaml": "^4.1.0"
+    "@rollup/plugin-yaml": "^4.1.0",
+    "ts-essentials": "^9.3.2"
   }
 }

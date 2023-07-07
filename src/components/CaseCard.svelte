@@ -3,7 +3,7 @@
   import type { IAlg, ICase, IOptions } from "../scripts/types";
   import AlgVisuals from "./AlgVisuals.svelte";
   import { puzzleDefinitionMapping } from "../scripts/alg";
-  import AlgListing from "./AlgListing.svelte";
+  import AlgListing from "./templates/AlgListing.svelte";
   import { mirrorAlgOverrideTriggers } from "../scripts/alg";
   import { tooltip } from "../scripts/utilities";
 
@@ -89,7 +89,7 @@
         ▶
       </span>
       <div on:click={() => changeActiveElement(i)}>
-        <AlgListing alg={eachAlg} isActive={activeElement == i} isLefty={eachAlg.isLefty} isMirrored={$isMirrored} pzl={pzl} bind:this={elementList[i]}/>
+        <AlgListing alg={eachAlg} isActive={activeElement == i} bind:this={elementList[i]}/>
       </div>
       <hr class="flex-grow border-s-4 border-stone-800/70"/>
       <span class="flex m-1 justify-end items-center gap-1 cursor-default text-xs text-stone-500">

@@ -72,7 +72,7 @@ const megaLeftySubstitutes = [
 ]
 
 const baseTriggers = [
-    { name:"CANCEL", alg: "" },
+    { name: "CANCEL", alg: "" },
     { name: "SEXY", alg: "R U R' U'" },
     { name: "INVSEXY", alg: "U R U' R'" }, // same as below
     { name: "UNSEXY", alg: "U R U' R'" }, // same as above
