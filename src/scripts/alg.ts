@@ -19,8 +19,7 @@ export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => 
 }
 
 // NO EXTERNAL but technically only called as the OverrideTriggers variant
-// TODO: implement swapping modifiers to work with triggers
-export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): string => {
+const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): string => {
   const baseMovesArray = baseMoveGroups[pzl]
   const mirrorMovesArray = mirrorMoveGroups[pzl]
   if (!baseMovesArray || !mirrorMovesArray) { return '' }
@@ -31,7 +30,7 @@ export const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): strin
   return aArr.join(" ")
 }
 
-// AlgListing, CaseCard
+// CaseCard
 export const mirrorAlgOverrideTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality) => {
   return mirrorAlg(expandAlgWithTriggers(a, pzl), pzl)
 }
@@ -65,12 +64,12 @@ const simplifyAlg = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
   puzzleSpecificSimplifyOptions: puzzleDefinitionMapping[pzl]?.cancel }).toString()
 }
 
-// AlgListing
-export const modifierActionsList: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
+
+const modifierActionsList: Record<TModifiersList, { action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: string }> = {
   "INVERSE": { action: (a, pzl) => { return invertAlg(a) }, text: 'INV'},
-  "LEFTY": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
-  "LEFT": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
-  "L": { action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
+  "LEFTY": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
+  "LEFT": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
+  "L": { action: (a, pzl) => { return mirrorAlg(a, pzl) }, text: 'LEFT'},
   "BACK": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
   "B": { action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
   "DOUBLE": { action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
@@ -80,7 +79,7 @@ export const modifierActionsList: Record<TModifiersList, { action: (a: string, p
 }
 
 // NO EXTERNAL
-export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): string => {
+const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): string => {
   let triggerList: [...TModifiersList[], string] = t.split(' ') as [...TModifiersList[], string]
   // https://stackoverflow.com/questions/7574054/javascript-how-to-pass-object-by-value (how did I miss this)
   let currTrigger = structuredClone(triggerSubstitutionGroups[pzl]?.find(item => item.name === triggerList.at(-1)))
@@ -96,27 +95,21 @@ export const getTriggerAlg = (t: string, pzl: twistyPuzzleTypeWithChirality): st
   return currTrigger.alg
 }
 
-// AlgListing
-export const isTriggerRegex: RegExp = /\[(.*?)\]/g
-// AlgListing
+
+const isTriggerRegex: RegExp = /\[(.*?)\]/g
 // https://stackoverflow.com/questions/19414193/regex-extract-string-not-between-two-brackets
-export const algDelimiterWithTriggers: RegExp = /[\s\(\)]+(?![^\[]*\])/g
-// in BackAlg, no External files
+const algDelimiterWithTriggers: RegExp = /[\s\(\)]+(?![^\[]*\])/g
+// in backAlg, no External files
 const matchAllParenthesis: RegExp =  /([\(\)])/g
 
 // TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers)
-// AlgImage, AlgListing, TwistyPlayer
+// AlgImage, TwistyPlayer
 export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
   const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
   return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)), pzl)
 }
 
-// IMPLEMENTED, NOT NEEDED
-export const checkIfHasTriggers = (a: string): boolean => {
-  return a.match(isTriggerRegex) ? true : false
-}
-
-// AlgImage (vc), AlgListing (mirror), TwistyPuzzle (type), CaseCard (standard / mirror)
+// AlgImage (vc), TwistyPuzzle (type), CaseCard (standard / mirror)
 // IMPLEMENTED, LIKELY NOT NEEDED
 export const puzzleDefinitionMapping: modularPuzzleGroup<{ 
   type: twistyPuzzleType, 
@@ -310,7 +303,7 @@ export const AlgBuilder = function () {
             return { ...this, 
               isMirror: !this.isMirror, 
               isLefty: !this.isLefty, 
-              setup: this.setup ? mirrorAlgOverrideTriggers(this.setup, this.puzzle) : undefined,
+              setup: this.setup ? mirrorAlg(this.setup, this.puzzle) : undefined,
               alg: this.components.map(comp => (
                 comp.alg == undefined
                 ? "[" + comp.mirror().collapsedString + "]" // trigger
