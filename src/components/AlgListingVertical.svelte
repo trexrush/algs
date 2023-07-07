@@ -18,6 +18,17 @@
     },
     display: {
       expandMove: `group-hover:text-stone-900 dark:group-hover:text-stone-100`,
+      expandTrigger: `${ isActive ? 'font-extrabold' : 'font-bold'}`,
+      expandTriggerBase: `${isActive ? 'group-hover:text-white/40' : algorithm.isLefty ? 'group-hover:text-lime-300' : 'group-hover:text-red-300'}`,
+      expandMods: `mx-[1px] text-[1.5vw] sm:text-[10px] text-stone-500 transition-all duration-100 group-hover:text-[1.6vw] group-hover:sm:text-[10.7px] 
+        ${algorithm.isLefty ? 'group-hover/trigger:text-lime-100' : 'group-hover/trigger:text-red-100'}`,
+      alg: `group-hover:text-stone-900 dark:group-hover:text-stone-100`,
+    },
+    copy: {
+      main: `my-[2px] p-[1px] text-[2vw] sm:text-sm bg-stone-50/[.07] rounded-md shadow-md`
+    },
+    expand: {
+      main: `my-[2px] p-[1px] px-1 sm:text-sm text-[1.5vw] bg-stone-50/[.15] rounded-md shadow-md`
     }
   };
 </script>
