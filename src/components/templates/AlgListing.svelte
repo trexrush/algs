@@ -14,17 +14,9 @@
   export let algorithm: IAlgorithmClass = AlgBuilder().withPuzzle('3x3x3').withAlgData(alg).build() as IAlgorithmClass
   export let Layout: ComponentType = AlgListingVertical
   export let playAlg: () => void
-  
-  // $: {
-  //   ((alg: IAlg) => (
-  //     AlgBuilder()
-  //       .withPuzzle('3x3x3')
-  //       .withAlgData(alg)
-  //       .build()
-  //   ))(alg)
-  // }
 
   let isExpanded = false
+  // let displayAlg
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
@@ -45,7 +37,11 @@
   </svelte:fragment>
 
   <svelte:fragment slot="display" let:css={css}>
-    {#if algorithm.isExpandable()}
+    {#if !algorithm.isExpandable()}
+      <span class={css.alg}>{algorithm.alg}</span>
+    {:else if isExpanded}
+      <span class={css.expand}>{algorithm.expand}</span>
+    {:else}
       {#each algorithm.components as component }
         {#if !component.resultModifiers } <!-- MOVE/ALG -->
           <span class={css.expandMove}>{component.alg + " "}</span>
@@ -62,9 +58,7 @@
           </span>
         {/if}
       {/each}
-    {:else} 
-      <span class={css.alg}>{algorithm.alg}</span>
-    {/if}
+    {/if} 
   </svelte:fragment>
 
   <!-- svelte-ignore a11y-click-events-have-key-events -->
