@@ -16,14 +16,14 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <svelte:component this={Layout} {isActive} {algorithm}>
-  <svelte:fragment slot="play" let:css={css}>
+  <svelte:fragment slot="play" let:css>
     <span class="{css.main}"
     on:click={playAlg} use:tooltip title="View Alg">
       ▶
     </span>
   </svelte:fragment>
 
-  <svelte:fragment slot="setup" let:css={css}>
+  <svelte:fragment slot="setup" let:css>
     {#if algorithm.setup}
       <span class={css.main}>
         {algorithm.setup}
@@ -31,15 +31,15 @@
     {/if}
   </svelte:fragment>
 
-  <svelte:fragment slot="display" let:css={css}>
+  <svelte:fragment slot="display" let:css>
     {#if !algorithm.isExpandable()}
       <span class={css.alg}>{algorithm.alg}</span>
     {:else if isExpanded}
-      <span class={css.expand}>{algorithm.expand}</span>
+      <span class={css.alg}>{algorithm.expand}</span>
     {:else}
       {#each algorithm.components as component }
         {#if !component.resultModifiers } <!-- MOVE/ALG -->
-          <span class={css.expandMove}>{component.alg + " "}</span>
+          <span class={css.alg}>{component.alg + " "}</span>
         {:else} <!-- TRIGGER -->
           <span class="{css.expandTrigger}" use:tooltip={{ placement: 'top' }} title={component.resultMoves}>
             {#each component.resultModifiers as mods} <!-- MODIFIER -->
@@ -57,7 +57,7 @@
   </svelte:fragment>
 
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <svelte:fragment slot="copy" let:css={css}>
+  <svelte:fragment slot="copy" let:css>
     <span class="{css.main}"
     on:click={() => { navigator.clipboard.writeText(algorithm.expand) }} use:tooltip title="Copy to Clipboard">
       🔗
@@ -65,7 +65,7 @@
   </svelte:fragment>
   
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <svelte:fragment slot="expand" let:css={css}>
+  <svelte:fragment slot="expand" let:css>
     {#if algorithm.isExpandable()}
       <span class="{css.main}"
       on:click={() => { isExpanded = !isExpanded }} use:tooltip title="Expand Alg">
