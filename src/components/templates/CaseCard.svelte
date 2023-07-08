@@ -18,7 +18,7 @@
 
   $: activeElement, (() => { activeAlg = algorithmList[activeElement] as IAlgorithmClass })()
 
-  let algWithSetup = (alg:IAlg) => { // REMOVE AFTER CHANGING ALGVISUALS
+  let algWithSetup = (alg: IAlgorithmClass) => { // REMOVE AFTER CHANGING ALGVISUALS
     return alg.setup ? alg.setup + " . . " + alg.alg : alg.alg
   }
   
@@ -30,11 +30,11 @@
 <svelte:component this={Layout} {caso}>
   <svelte:fragment slot="visuals">
     <AlgVisuals 
-      activeAlg={algWithSetup(caso.algs[activeElement])} 
+      activeAlg={algWithSetup(activeAlg)} 
       imageAlg={caso.algs[0]} 
       options={options} 
       size={128} 
-      isLefty={caso.algs[activeElement].isLefty} 
+      isLefty={activeAlg.isLefty} 
       bind:toggleDisplay={toggleDisplay} 
       bind:isAlgVisDisplayed={toggled}
     />

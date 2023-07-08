@@ -1,9 +1,8 @@
-<!-- <svelte:options immutable={true} /> -->
+<svelte:options immutable={true} />
 
 <script lang="ts">
   import type { ComponentType } from "svelte";
   import type { IAlgorithmClass } from "../../scripts/alg";
-  import type { IAlg } from "../../scripts/types";
   import { tooltip } from "../../scripts/utilities";
   import AlgListingVertical from "../AlgListingVertical.svelte";
 
@@ -13,7 +12,6 @@
   export let playAlg: () => void
 
   let isExpanded = false
-  // let displayAlg
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
