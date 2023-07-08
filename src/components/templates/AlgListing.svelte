@@ -2,16 +2,13 @@
 
 <script lang="ts">
   import type { ComponentType } from "svelte";
-  import { AlgBuilder, type IAlgorithmClass } from "../../scripts/alg";
+  import type { IAlgorithmClass } from "../../scripts/alg";
   import type { IAlg } from "../../scripts/types";
   import { tooltip } from "../../scripts/utilities";
   import AlgListingVertical from "../AlgListingVertical.svelte";
 
-  // temp (also isMirror, pzl)
-  export let alg: IAlg
-
   export let isActive: boolean
-  export let algorithm: IAlgorithmClass = AlgBuilder().withPuzzle('3x3x3').withAlgData(alg).build() as IAlgorithmClass
+  export let algorithm: IAlgorithmClass
   export let Layout: ComponentType = AlgListingVertical
   export let playAlg: () => void
 
