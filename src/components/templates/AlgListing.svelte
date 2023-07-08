@@ -1,5 +1,7 @@
+<!-- <svelte:options immutable={true} /> -->
+
 <script lang="ts">
-  import type { ComponentType, SvelteComponentTyped } from "svelte";
+  import type { ComponentType } from "svelte";
   import { AlgBuilder, type IAlgorithmClass } from "../../scripts/alg";
   import type { IAlg } from "../../scripts/types";
   import { tooltip } from "../../scripts/utilities";
@@ -9,22 +11,31 @@
   export let alg: IAlg
 
   export let isActive: boolean
-  export let algorithm: IAlgorithmClass = AlgBuilder().withPuzzle('3x3x3').withAlgData(alg).build()
-  export let Layout: ComponentType<SvelteComponentTyped<{ algorithm: IAlgorithmClass, isActive: boolean }>> = AlgListingVertical
-
-  $: {
-    ((alg: IAlg) => (
-      AlgBuilder()
-        .withPuzzle('3x3x3')
-        .withAlgData(alg)
-        .build()
-    ))(alg)
-  }
+  export let algorithm: IAlgorithmClass = AlgBuilder().withPuzzle('3x3x3').withAlgData(alg).build() as IAlgorithmClass
+  export let Layout: ComponentType = AlgListingVertical
+  export let playAlg: () => void
+  
+  // $: {
+  //   ((alg: IAlg) => (
+  //     AlgBuilder()
+  //       .withPuzzle('3x3x3')
+  //       .withAlgData(alg)
+  //       .build()
+  //   ))(alg)
+  // }
 
   let isExpanded = false
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <svelte:component this={Layout} {isActive} {algorithm}>
+  <svelte:fragment slot="play" let:css={css}>
+    <span class="{css.main}"
+    on:click={playAlg} use:tooltip title="View Alg">
+      ▶
+    </span>
+  </svelte:fragment>
+
   <svelte:fragment slot="setup" let:css={css}>
     {#if algorithm.setup}
       <span class={css.main}>
@@ -36,10 +47,10 @@
   <svelte:fragment slot="display" let:css={css}>
     {#if algorithm.isExpandable()}
       {#each algorithm.components as component }
-        {#if component.alg } <!-- MOVE/ALG -->
+        {#if !component.resultModifiers } <!-- MOVE/ALG -->
           <span class={css.expandMove}>{component.alg + " "}</span>
         {:else} <!-- TRIGGER -->
-          <span class="group/trigger {css.expandTrigger}" use:tooltip={{ placement: 'top' }} title={component.resultMoves}>
+          <span class="{css.expandTrigger}" use:tooltip={{ placement: 'top' }} title={component.resultMoves}>
             {#each component.resultModifiers as mods} <!-- MODIFIER -->
               <span class={css.expandMods}>
                 {mods}
@@ -58,7 +69,7 @@
 
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <svelte:fragment slot="copy" let:css={css}>
-    <span class="cursor-pointer select-none {css.main}"
+    <span class="{css.main}"
     on:click={() => { navigator.clipboard.writeText(algorithm.expand) }} use:tooltip title="Copy to Clipboard">
       🔗
     </span>
@@ -67,11 +78,10 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <svelte:fragment slot="expand" let:css={css}>
     {#if algorithm.isExpandable()}
-      <span class="cursor-pointer select-none {css.main}"
+      <span class="{css.main}"
       on:click={() => { isExpanded = !isExpanded }} use:tooltip title="Expand Alg">
         {!isExpanded ? '➡️' : '⬅️'}
       </span>
     {/if}
-    </svelte:fragment>
-
+  </svelte:fragment>
 </svelte:component>
