@@ -33,21 +33,21 @@
 
   <svelte:fragment slot="display" let:css>
     {#if !algorithm.isExpandable()}
-      <span class={css.alg}>{algorithm.alg}</span>
+      <span class="{css.alg}">{algorithm.alg}</span>
     {:else if isExpanded}
-      <span class={css.alg}>{algorithm.expand}</span>
+      <span class="{css.alg}">{algorithm.expand}</span>
     {:else}
       {#each algorithm.components as component }
         {#if !component.resultModifiers } <!-- MOVE/ALG -->
           <span class={css.alg}>{component.alg + " "}</span>
         {:else} <!-- TRIGGER -->
-          <span class="{css.expandTrigger}" use:tooltip={{ placement: 'top' }} title={component.resultMoves}>
+          <span class="{css.triggerGroup}" use:tooltip={{ placement: 'top' }} title={component.resultMoves}>
             {#each component.resultModifiers as mods} <!-- MODIFIER -->
-              <span class={css.expandMods}>
+              <span class="{css.mods}">
                 {mods}
               </span>
             {/each}
-            <span class={css.expandTriggerBase}> <!-- TRIGGER BASE -->
+            <span class={css.triggerBase}> <!-- TRIGGER BASE -->
               {component.baseTrigger + " "}
             </span>
           </span>

@@ -1,7 +1,7 @@
 <script lang="ts">
   import AlgListing from "./AlgListing.svelte";
   import AlgVisuals from "../AlgVisuals.svelte";
-  import type { IAlg, ICase, IOptions } from "../../scripts/types";
+  import type { ICase, IOptions } from "../../scripts/types";
   import { AlgBuilder,  type IAlgorithmClass } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";
   import CaseCardVertical from "../CaseCardVertical.svelte";
@@ -40,7 +40,7 @@
     />
   </svelte:fragment>
   
-  <svelte:fragment slot="caseName" let:css={css}>
+  <svelte:fragment slot="caseName" let:css>
     <a href="#{caso.name}" 
       on:click={(e) => { 
         e.preventDefault()
@@ -68,12 +68,12 @@
   
   
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <svelte:fragment slot="mirrorToggle" let:css={css}>
+  <svelte:fragment slot="mirrorToggle" let:css>
     <span class={css.main}
     on:click={() => { algorithmList = algorithmList.map(a => a.mirror()) }} use:tooltip title="Display the mirror cases of algs"><b>{"Mirror L/R"}</b></span>
   </svelte:fragment>
   
-  <svelte:fragment slot="note" let:css={css}>
+  <svelte:fragment slot="note" let:css>
     {#if caso.note}
     <div class={css.main}>
       <b>{caso.note}</b>
@@ -83,7 +83,7 @@
   
   <!-- svelte-ignore a11y-missing-content -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->
-  <svelte:fragment slot="algorithmList" let:css={css}>
+  <svelte:fragment slot="algorithmList" let:css>
     {#each algorithmList as eachAlg, i}
       <div class={css.main}>
         <div on:click={() => activeElement = i}>
