@@ -1,4 +1,4 @@
-<svelte:options immutable={true} />
+<!-- <svelte:options immutable={true} /> -->
 
 <script lang="ts">
   import type { ComponentType } from "svelte";
@@ -35,9 +35,9 @@
     {#if !algorithm.isExpandable()}
       <span class="{css.alg}">{algorithm.alg}</span>
     {:else if isExpanded}
-      <span class="{css.alg}">{algorithm.expand}</span>
+      <span class="{css.alg}">{algorithm.expand()}</span>
     {:else}
-      {#each algorithm.components as component }
+      {#each algorithm.components() as component }
         {#if !component.resultModifiers } <!-- MOVE/ALG -->
           <span class={css.alg}>{component.alg + " "}</span>
         {:else} <!-- TRIGGER -->
@@ -59,7 +59,7 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <svelte:fragment slot="copy" let:css>
     <span class="{css.main}"
-    on:click={() => { navigator.clipboard.writeText(algorithm.expand) }} use:tooltip title="Copy to Clipboard">
+    on:click={() => { navigator.clipboard.writeText(algorithm.expand()) }} use:tooltip title="Copy to Clipboard">
       🔗
     </span>
   </svelte:fragment>

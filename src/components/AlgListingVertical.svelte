@@ -4,27 +4,25 @@
   export let algorithm: IAlgorithmClass
   export let isActive: boolean
 
-  const commonStyles = {
+  let commonStyles = {
     button: `my-[2px] p-[1px] 
       sm:text-sm text-[2vw]
       bg-stone-50/[.07] rounded-[.01em] shadow-md
       cursor-pointer select-none`,
     text: 'text-stone-500',
     lightText: 'group-hover:text-stone-900 dark:group-hover:text-stone-100',
+  };
+  
+  let localStyles = {
+    main: `hover:text-[2.95vw] sm:hover:text-[19px] transition-all duration-100 cursor-pointer group`,
+    active: `text-[2.9vw] sm:text-[18.5px] font-semibold bg-clip-text text-transparent`,
+    normal: `text-[2.8vw] sm:text-[17.5px] font-extralight`,
     redGradient: 'bg-gradient-to-r from-red-500 via-orange-500 to-amber-500',
     greenGradient: 'bg-gradient-to-r from-teal-500 via-green-500 to-lime-500'
-  };
-
-  const localStyles = {
-    main: `hover:text-[2.95vw] sm:hover:text-[19px] transition-all duration-100 cursor-pointer group`,
-    active: `text-[2.9vw] sm:text-[18.5px] font-semibold bg-clip-text text-transparent 
-    ${algorithm.isLefty ? `${commonStyles.greenGradient}` : `${commonStyles.redGradient}`}`,
-    normal: `text-[2.8vw] sm:text-[17.5px] font-extralight 
-    ${algorithm.isLefty ? 'text-lime-100/40' : 'text-red-100/40'}`,
   
   };
   
-  const Styles = {
+  let Styles = {
     setup: { 
       main: `px-1 rounded-sm text-[2vw] sm:text-[13px] ${commonStyles.text} font-bold` 
     },
@@ -49,9 +47,18 @@
 </script>
 
 <slot name="play" css={Styles.play}/>
-<span class="{localStyles.main} {isActive ? localStyles.active : localStyles.normal}">
+<span class="{isActive ? localStyles.active : localStyles.normal}
+    {localStyles.main} {algorithm.isLefty
+  ? (isActive ? localStyles.greenGradient : 'text-lime-100/40')
+  : (isActive ? localStyles.redGradient : 'text-red-100/40')}">
   <slot name="setup" css={Styles.setup} />
   <slot name="display" css={Styles.display} />
 </span>
 <slot name="copy" css={Styles.copy} />
 <slot name="expand" css={Styles.expand} />
+
+<style lang="postcss">
+  /* .button {
+    @apply my-[2px] sm:text-sm p-[1px] text-[2vw] bg-stone-50/[.07] rounded-[.01em] shadow-md cursor-pointer select-none;
+  } */
+</style>
