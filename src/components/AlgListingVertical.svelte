@@ -40,7 +40,7 @@
       main: `px-1 ${commonStyles.button}`
     },
     play: {
-      main: `${commonStyles.button} max-sm:hidden px-1 text-red-300 text-[1.3vw] hover:bg-stone-50/[.3] transition-colors duration-75`
+      main: `bg-stone-500/[.4] ${commonStyles.button} max-sm:hidden px-1 text-red-300 text-[1.3vw] hover:bg-stone-50/[.3] transition-colors duration-75`
     },
   };
 </script>

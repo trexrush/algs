@@ -4,7 +4,7 @@
   export let caso: ICase
   
   const localStyles = {
-    container: 'w-[95%] ml-0 mt-0 pt-4 flex flex-row items-center justify-center',
+    container: 'w-full px-1 pt-4 flex flex-row items-center justify-center',
     card: 'flex flex-col justify-start items-start relative m-1 p-2 w-full min-h-[6em] h-fit rounded-md bg-stone-900/[.07] dark:bg-stone-50/[.07] shadow-lg hover:shadow-2xl',
     aboveCard: "absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.7em]",
     nameGroup: "text-stone-500 text-[2.7vw] sm:text-[15px] flex gap-2 items-baseline",
