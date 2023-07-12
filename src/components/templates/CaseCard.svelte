@@ -30,11 +30,9 @@
 <svelte:component this={Layout} {caso}>
   <svelte:fragment slot="visuals">
     <AlgVisuals 
-      activeAlg={algWithSetup(activeAlg)} 
-      imageAlg={caso.algs[0]} 
-      options={options} 
-      size={128} 
-      isLefty={activeAlg.isLefty} 
+      activeAlg={activeAlg} 
+      imageAlg={algorithmList[0]} 
+      options={options}
       bind:toggleDisplay={toggleDisplay} 
       bind:isAlgVisDisplayed={toggled}
     />

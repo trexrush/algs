@@ -6,9 +6,8 @@
   interface Props {
     options: IOptions
     sets: ISet[]
-    size?: number
   }
-  const { sets, options, size = 128 } = Astro.props
+  const { sets, options } = Astro.props
 ---
 
 <div id="collapse" class="cursor-pointer dark:bg-stone-800 rounded-sm p-1 px-2 
@@ -16,7 +15,7 @@ hover:brightness-110 hover:-translate-y-[1px] transition-all select-none">Collap
 <div class=" relative text-5xl sm:text-7xl w-full text-center my-5 -z-10">{options.name}</div>
 
 {sets.map((set) => (
-  <SetCard set={set} options={options} size={size}/>
+  <SetCard set={set} options={options} />
 ))}
 
 <script>

@@ -8,7 +8,7 @@
 
   export let imageAlg: IAlg
   export let options: IOptions
-  export let size: number
+  const FIXED_SIZE_TEMP = 128
 
   let vcpuzzle: number | string = puzzleDefinitionMapping[options.puzzle]?.vc!!
   let setupAUF: string = imageAlg.setup ? imageAlg.setup + ' ' : ''
@@ -24,8 +24,8 @@
       ],
       cubeSize: typeof vcpuzzle === 'number' ? vcpuzzle : 3,
       view: options.vcparams!.view,
-      width: size,
-      height: size,
+      width: FIXED_SIZE_TEMP,
+      height: FIXED_SIZE_TEMP,
       mask: options.vcparams?.stage! as Masking,
       case: options.puzzle == '4x4x4' 
         ? setupAUF + convert4x4Notation(expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!, 'vc')
@@ -52,7 +52,7 @@ child:transition-all child:duration-300 child:ease-in-out hover:translate-y-[-2p
     {#if options.imgSource == "vc"}
       <div class="cursor-pointer  " bind:this={visualCubeImage} /> 
     {:else if options.imgSource == "cubingjs"}
-        <TwistyPlayer imageAlg={setupAUF + imageAlg.alg} options={options} {size} />
+        <TwistyPlayer imageAlg={setupAUF + imageAlg.alg} options={options} />
     {/if}
   </div>
 </div>

@@ -5,10 +5,9 @@ import CaseCard from "./templates/CaseCard.svelte";
 interface Props {
   set: ISet
   options: IOptions
-  size: number
   recursiveCollapse?: boolean
 }
-const { set, options, size, recursiveCollapse } = Astro.props
+const { set, options, recursiveCollapse } = Astro.props
 ---
 
 <details open={recursiveCollapse ? false : true}
@@ -29,9 +28,9 @@ const { set, options, size, recursiveCollapse } = Astro.props
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?
-          <CaseCard client:visible caso={setOrCase} options={options} size={size}/>
+          <CaseCard client:visible caso={setOrCase} options={options}/>
         :
-          <Astro.self set={setOrCase} options={options} size={size} />
+          <Astro.self set={setOrCase} options={options} />
       ))
     }
   </div>

@@ -7,8 +7,8 @@
   import { DefaultOptions } from "../scripts/types";
   import { puzzleDefinitionMapping } from "../scripts/alg";
 
+  const FIXED_SIZE_TEMP = 128
   export let options: IOptions
-  export let size: number
   export let isLefty: boolean = false
   let puzzle: twistyPuzzleType = puzzleDefinitionMapping[options.puzzle]?.type || DefaultOptions.puzzle
   let puzzleChirality: twistyPuzzleType = options.puzzle == puzzle ? puzzle : options.puzzle  // bit of a hack
@@ -57,8 +57,8 @@
 
   if (imageAlg) { twistyPlayer.alg = expandAlgWithTriggers(imageAlg, puzzleChirality) }
   twistyPlayer.experimentalFaceletScale = 0.88, // works here but not in vanillaJS??????
-  twistyPlayer.style.height = `${size}px`
-  twistyPlayer.style.width = `${size}px`
+  twistyPlayer.style.height = `${FIXED_SIZE_TEMP}px`
+  twistyPlayer.style.width = `${FIXED_SIZE_TEMP}px`
 
   onMount(async () => {
     twistyDiv.appendChild(twistyPlayer);
