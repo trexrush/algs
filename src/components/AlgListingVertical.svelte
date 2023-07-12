@@ -15,7 +15,7 @@
   };
   
   $: localStyles = {
-    main: `hover:text-[2.95vw] py-3 sm:hover:text-[19px] transition-all duration-100 cursor-pointer group`,
+    main: `hover:text-[2.95vw] sm:hover:text-[19px] transition-all duration-100 cursor-pointer group`,
     gradient: `${ algorithm.isLefty ? commonStyles.greenGradient : commonStyles.redGradient }`,
     active: `text-[2.9vw] sm:text-[18.5px] font-semibold bg-clip-text text-transparent`,
     normal: `text-[2.8vw] sm:text-[17.5px] font-extralight`,

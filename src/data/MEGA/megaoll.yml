@@ -104,7 +104,7 @@
     altNames: ['H, Double Antisune']
     algs:
     -
-     alg: 'L'' U2'' L U L'' U'' L U L'' U L '
+     alg: L' U2' L U L' U' L U L' U L
      isLefty: true
     comment: 3x3 transfer (h)
 '4C':

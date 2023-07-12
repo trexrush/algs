@@ -5,12 +5,12 @@
   import { convert4x4Notation, expandAlgWithTriggers } from "../scripts/alg";
   import type { IOptions, twistyPuzzleType } from "../scripts/types";
   import { DefaultOptions } from "../scripts/types";
-  import { puzzleDefinitionMapping } from "../scripts/alg";
+  import { puzzleMapping } from "../scripts/alg";
 
-  const FIXED_SIZE_TEMP = 128
+  const FIXED_SIZE_TEMP = 120
   export let options: IOptions
   export let isLefty: boolean = false
-  let puzzle: twistyPuzzleType = puzzleDefinitionMapping[options.puzzle]?.type || DefaultOptions.puzzle
+  let puzzle: twistyPuzzleType = puzzleMapping[options.puzzle]?.type || DefaultOptions.puzzle
   let puzzleChirality: twistyPuzzleType = options.puzzle == puzzle ? puzzle : options.puzzle  // bit of a hack
 
   export let setup = "";

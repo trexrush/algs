@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { IAlg, IOptions } from "../scripts/types"
+  import type { IOptions } from "../scripts/types"
   import TwistyPlayer from "./TwistyPlayer.svelte"
   import AlgImage from "./AlgImage.svelte";
   import type { IAlgorithmClass } from "../scripts/alg";
 
-  export let imageAlg: IAlg
+  export let imageAlg: IAlgorithmClass
   export let activeAlg: IAlgorithmClass
   export let options: IOptions
 
@@ -14,11 +14,11 @@
 
 <!-- TODO: make container query -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- TODO: clean up code, move Image logic to algCard tbh and use slots for images and twistyplayer  -->
 
 <div class="flex flex-row items-center justify-center cursor-pointer relative aspect-square sm:h-[128px] sm:w-[128px] h-[35%] w-[35%]">
   {#if !isAlgVisDisplayed}
     <div on:click={toggleDisplay}>
-      <!-- TODO: clean up code, move all this logic to algCard tbh and use slots for images and twistyplayer  -->
       <AlgImage {imageAlg} options={options} />
     </div>
     {:else}
