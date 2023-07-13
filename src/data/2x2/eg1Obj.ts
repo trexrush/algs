@@ -1,4 +1,4 @@
-import type { IAlgSet, ICaseList, IOptions } from "../../scripts/types"
+import type { IDataAlgset, IDataCaseList, IOptions } from "../../scripts/types"
 import { createOptions } from "../../scripts/utilities";
 //@ts-expect-error
 import yml from './eg1.yml'
@@ -16,9 +16,9 @@ const Options: IOptions = createOptions({
   }
 })
 
-const _:ICaseList = yml
+const _:IDataCaseList = yml
 
-const EG1NoGrouping: IAlgSet = {
+const EG1NoGrouping: IDataAlgset = {
     options: Options,
     sets: [
         {
@@ -28,7 +28,7 @@ const EG1NoGrouping: IAlgSet = {
     ]
 }
 
-const EG1GroupByOLL: IAlgSet = {
+const EG1GroupByOLL: IDataAlgset = {
   options: Options,
   sets: [
     {

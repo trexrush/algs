@@ -1,9 +1,9 @@
-import type { ICaseList, IAlgSet, IOptions } from "../scripts/types"
+import type { IDataCaseList, IDataAlgset, IOptions } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
 //@ts-expect-error
 import yml from './pll.yml'
 
-const _: ICaseList = yml
+const _: IDataCaseList = yml
 
 const Options: IOptions = createOptions({
     name: "PLL",
@@ -15,7 +15,7 @@ const Options: IOptions = createOptions({
     },
 })
 
-const PLLNoGrouping: IAlgSet = {
+const PLLNoGrouping: IDataAlgset = {
     options: Options,
     sets: [
         {
@@ -28,7 +28,7 @@ const PLLNoGrouping: IAlgSet = {
     ]
 }
 
-const PLLGroupedBySet: IAlgSet = {
+const PLLGroupedBySet: IDataAlgset = {
     options: Options,
     sets: [
         {

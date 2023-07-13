@@ -47,9 +47,9 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
 
 
 // https://stackoverflow.com/questions/51352229/optional-generic-type-with-typescript
-export type ICaseList<T extends string = any> = Record<T, ICase> 
-export type ISetList<T extends string = any> = Record<T, ISet>
-export type IGroupElementList<T extends string = any> = Record<T, ISet | ICase>
+export type IDataCaseList<T extends string = any> = Record<T, IDataCase> 
+export type IDataSetList<T extends string = any> = Record<T, IDataSet>
+export type IGroupElementList<T extends string = any> = Record<T, IDataSet | IDataCase>
 
 export type TNotationTargets = 'vc' | 'cubingjs'
 
@@ -60,19 +60,19 @@ export interface IGroupElement {
     note?: string
 }
 //TODO: make iterable
-export interface ISet extends IGroupElement {
+export interface IDataSet extends IGroupElement {
     children?: IGroupElementList
     image?: string
 }
 
 // TODO: make iterable
-export interface ICase extends IGroupElement {
-    algs: IAlg[]
+export interface IDataCase extends IGroupElement {
+    algs: IDataAlg[]
     recog?: string[],
     scrambles?: string[] // optional for now
 }
 
-export interface IAlg {
+export interface IDataAlg {
     setup?: string
     alg: string
     isLefty?: boolean
@@ -83,11 +83,11 @@ export interface IAlg {
 // TODO: rethink role of tags
 export type IAlgTags = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New" | string
 
-export interface IAlgSet { options: IOptions, sets: ISet[] }
+export interface IDataAlgset { options: IOptions, sets: IDataSet[] }
 
 export interface ISheetsResponse {
     nameList: string[],
-    caseList: ICaseList
+    caseList: IDataCaseList
 }
 export interface ILocalSetOptions {
     loadCollapsed?: boolean

@@ -1,7 +1,7 @@
 import { Alg, PuzzleSpecificSimplifyOptions } from "cubing/alg"
 import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, triggerSubstitutionGroups } from "./algConstants"
 import { cube3x3x3 } from "cubing/puzzles";
-import type { IAlg, IOptions, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types";
+import type { IDataAlg, IOptions, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types";
 import type { XOR } from "ts-essentials";
 
 // AlgImage, TwistyPlayer
@@ -145,7 +145,7 @@ interface ITrigger {
   baseTrigger: string
   modifiers: TModifierActions[]
 }
-export interface IAlgorithmClass extends IAlg, TAlgCommon<IAlgorithmClass> {
+export interface IAlgorithmClass extends IDataAlg, TAlgCommon<IAlgorithmClass> {
   isExpandable: () => boolean,
   expand: () => string,
   components: () => (XOR<IAlgorithmClass, ITriggerClass>)[]
@@ -249,7 +249,7 @@ export const AlgBuilder = function () {
     }},
     stage2: (algObj: Partial<IAlgorithmClass & ITriggerClass>) => { return {
       // _______________ ALG _______________ //
-      withAlgData: (algo: IAlg) => {
+      withAlgData: (algo: IDataAlg) => {
         const newAlgObj = { ...algObj, ...algo,
           isLefty: algo.isLefty ?? false,
           isExpanded: false,
@@ -318,8 +318,8 @@ export const AlgBuilder = function () {
 }
 
 // POOR MANS UNIT TESTING TODO: use jest
-let testData: IAlg = { alg: "R U R' U' R U2' R'" }
-let testData2: IAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }
+let testData: IDataAlg = { alg: "R U R' U' R U2' R'" }
+let testData2: IDataAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }
 let testTriggerData: string = "LEFT BACK SUNE"
 let testAlg = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData).build() as IAlgorithmClass
 let testAlg2 = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData2).build() as IAlgorithmClass

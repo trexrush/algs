@@ -1,4 +1,4 @@
-import type { IAlgSet, IOptions, ICaseList } from "../../scripts/types"
+import type { IDataAlgset, IOptions, IDataCaseList } from "../../scripts/types"
 import { createOptions } from "../../scripts/utilities";
 //@ts-expect-error
 import yml from './h.yml'
@@ -12,10 +12,10 @@ const Options: IOptions = createOptions({
     },
 })
 
-let _: ICaseList = yml
+let _: IDataCaseList = yml
 
 // TODO: check for errors, though not high priority since these if these calls fail, the site wont build
-const HNoGrouping: IAlgSet = {
+const HNoGrouping: IDataAlgset = {
     options: Options,
     sets: [
         {

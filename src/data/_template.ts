@@ -1,4 +1,4 @@
-import type { IOptions, IAlgSet, ICaseList } from "../scripts/types"
+import type { IOptions, IDataAlgset, IDataCaseList } from "../scripts/types"
 import { createOptions } from "../scripts/utilities"
 //@ts-expect-error
 import yml from './oll.yml' // REPLACE WITH THE SET YAML
@@ -11,9 +11,9 @@ const Options: IOptions = createOptions({
         puzzle: '3x3x3',
 })
 
-let _: ICaseList = yml
+let _: IDataCaseList = yml
 
-const VIEWNAMEHERE: IAlgSet = {
+const VIEWNAMEHERE: IDataAlgset = {
     options: Options,
     sets: [
         {

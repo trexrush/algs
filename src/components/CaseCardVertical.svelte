@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { ICase } from "../scripts/types";
+  import type { IDataCase } from "../scripts/types";
 
-  export let caso: ICase
+  export let caso: IDataCase
   export let mirror: boolean
   
   $: localStyles = {

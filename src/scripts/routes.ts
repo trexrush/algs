@@ -10,7 +10,7 @@ import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter, MegaPLLNoGrouping } from 
 import { OLLGroupByEO, OLLNoGrouping } from "../data/ollObj";
 import { PLLGroupedBySet, PLLNoGrouping } from "../data/pllObj";
 import { ZBLSNoGrouping } from "../data/ZBLS/zblsObj";
-import type { IAlgSet } from "./types";
+import type { IDataAlgset } from "./types";
 
 /* NAMING CONVENTION -
 - a new set's unsorted AlgSet goes as a new letter in the "a" object
@@ -21,7 +21,7 @@ import type { IAlgSet } from "./types";
 export interface IPageData {
   path: string,
   name: string,
-  data: IAlgSet
+  data: IDataAlgset
 }
 
 const b: Record<string, IPageData> = {
