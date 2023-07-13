@@ -5,9 +5,9 @@
   export let mirror: boolean
   
   $: localStyles = {
-    container: 'w-full px-1 pt-4 flex flex-row items-center justify-center',
+    container: 'w-full px-1 flex flex-row items-center justify-center',
     card: 'flex flex-col justify-start items-start relative m-1 p-2 w-full min-h-[6em] h-fit rounded-md bg-stone-600/10 dark:bg-stone-300/10 shadow-xl dark:shadow-lg hover:shadow-2xl',
-    aboveCard: "absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.2em]",
+    aboveCard: "absolute top-0 right-0 w-full flex justify-between items-center gap-1 px-2 pb-1 translate-y-[-1.3em]",
     nameGroup: "text-stone-500 text-[2.7vw] sm:text-[15px] flex gap-2 items-baseline",
     mirrorButtonColors: `hover:border-[1px] ${ mirror 
       ? 'hover:bg-red-500/10 text-red-700 dark:text-red-500 border-red-900/20 dark:border-red-500/20' 
