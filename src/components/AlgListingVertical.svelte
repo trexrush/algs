@@ -6,12 +6,12 @@
 
   
   $: commonStyles = {
-    button: `my-[2px] p-[1px] sm:text-sm text-[2vw] bg-stone-50/[.07] rounded-[.2em] shadow-md cursor-pointer select-none`,
-    greyText: 'text-stone-500',
+    button: `my-[2px] p-[1px] sm:text-sm text-[2vw] dark:bg-stone-50/5 bg-stone-200/20 rounded-[.2em] dark:shadow-md shadow-sm cursor-pointer select-none`,
+    greyText: 'dark:text-stone-500 text-stone-400',
     lightTextOnHover: 'group-hover:text-stone-900 dark:group-hover:text-stone-100',
-    redGradient: 'bg-gradient-to-r from-red-500 via-orange-500 to-amber-500',
-    greenGradient: 'bg-gradient-to-r from-teal-500 via-green-500 to-lime-500',
-    fadedColorText: `${ algorithm.isLefty ? 'text-lime-100/40' : 'text-red-100/40' }`,
+    redGradient: 'bg-gradient-to-r dark:from-red-500 dark:via-orange-500 dark:to-amber-500 from-red-700 via-orange-700 to-amber-700',
+    greenGradient: 'bg-gradient-to-r dark:from-teal-500 dark:via-green-500 dark:to-lime-500 from-teal-600 via-green-600 to-lime-600',
+    fadedColorText: `${ algorithm.isLefty ? 'dark:text-lime-100/40 text-lime-950/50' : 'dark:text-red-100/40 text-red-900/50' }`,
   };
   
   $: localStyles = {
@@ -27,9 +27,10 @@
       main: `px-1 rounded-sm text-[2vw] sm:text-[13px] ${commonStyles.greyText} font-bold` 
     },
     display: {
-      triggerGroup: `group/trigger font-bold`,
-      triggerBase: `${isActive ? commonStyles.lightTextOnHover : algorithm.isLefty ? 'group-hover:text-lime-300' : 'group-hover:text-red-300'}`,
-      mods: `${commonStyles.greyText} mx-[1px] text-[1.5vw] sm:text-[10px] transition-all duration-100 group-hover:text-[1.6vw] group-hover:sm:text-[10.7px] ${algorithm.isLefty ? 'group-hover/trigger:text-lime-100' : 'group-hover/trigger:text-red-100'}`,
+      triggerGroup: `group/trigger font-bold last:child:-ml-1 ml-1`,
+      triggerBase: `${isActive ? commonStyles.lightTextOnHover : algorithm.isLefty ? 'dark:group-hover:text-lime-300 group-hover:text-lime-500' : 'dark:group-hover:text-red-300 group-hover:text-red-500'}`,
+      mods: `${commonStyles.greyText} mx-[1px] text-[1.5vw] sm:text-[10px] transition-all duration-100 group-hover:text-[1.6vw] group-hover:sm:text-[10.7px]
+        ${algorithm.isLefty ? 'dark:group-hover/trigger:text-lime-100 group-hover/trigger:text-lime-500' : 'dark:group-hover/trigger:text-red-100 group-hover/trigger:text-red-500'}`,
       alg: `${commonStyles.lightTextOnHover}`,
     },
     copy: {
@@ -40,7 +41,7 @@
       main: `px-1 ${commonStyles.button}`
     },
     play: {
-      main: `bg-stone-500/[.4] ${commonStyles.button} max-sm:hidden px-1 text-red-300 text-[1.3vw] hover:bg-stone-50/[.3] transition-colors duration-75`
+      main: `!dark:bg-stone-500/40 !bg-stone-100/30 ${commonStyles.button} max-sm:hidden px-1 dark:text-red-300 text-red-600 text-[1.3vw] dark:hover:bg-stone-50/30 hover:bg-stone-500/30 transition-colors duration-75`
     },
   };
 </script>

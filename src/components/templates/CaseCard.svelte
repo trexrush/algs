@@ -23,7 +23,7 @@
 
 </script>
 
-<svelte:component this={Layout} {caso} left={activeAlg.isLefty}>
+<svelte:component this={Layout} {caso} mirror={activeAlg.isMirror}>
   <svelte:fragment slot="visuals">
     <AlgVisuals 
       activeAlg={activeAlg} 

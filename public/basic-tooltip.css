@@ -1,3 +1,12 @@
+
+@media (prefers-color-scheme: dark) {
+  .tippy-box[data-theme~='basic'] {
+    padding: 3px;
+    background-color: rgba(233, 233, 233, 0.8);;
+    border-radius: 5px;
+  }
+}
+
 .tippy-box[data-theme~='basic'] {
   padding: 3px;
   background-color: rgba(40, 40, 40, .8);

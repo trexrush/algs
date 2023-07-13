@@ -41,8 +41,9 @@ const { title } = Astro.props;
     </style>
     
   </head>
-  <body class="shadow-stone-800 bg-stone-100 dark:bg-stone-900 dark:shadow-stone-100 dark:text-stone-50">
+  <body class=" bg-stone-100 dark:bg-stone-900 shadow-stone-800 dark:shadow-stone-100 dark:text-stone-50 box-border">
     <slot name="navbar"/>
+    <!-- TODO: dedupe the <main> tags in the page files -->
     <main>
         <div class="lg:w-[900px] m-auto flex flex-col items-center">
             <slot /> 
