@@ -27,7 +27,7 @@
     },
     algorithmList: {
       main: 'flex items-center gap-1 py-[2px] relative w-full sm:-ml-4 leading-none overflow-x-visible',
-      line: 'flex-grow border-s-4 dark:border-stone-800/70 border-stone-400/40',
+      line: 'flex-grow border-s-4 dark:border-stone-800/40 border-stone-400/40',
       tagList: 'flex m-1 justify-end items-center gap-1 cursor-default text-xs text-stone-500',
       tagName: 'max-sm:invisible',
       tag: 'px-[.15rem] py-0 sm:px-1 dark:bg-yellow-500/[.2] bg-yellow-700/60 rounded-md md:text-sm text-[1.5vw] text-white',
