@@ -1095,7 +1095,7 @@ S1-:
   altNames: ["Lapras"]
   algs:
     - 
-      setup: U'
+      setup: U2'
       alg: "[LEFT BACK ANTISUNE] U' L' U2 L U2 L' U L"
       isLefty: true
 S2+:
