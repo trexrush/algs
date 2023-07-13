@@ -61,6 +61,10 @@
   twistyPlayer.style.width = `${FIXED_SIZE_TEMP}px`
 
   onMount(async () => {
+    // TODO: [PR] for adding megaminx svg to puzzleLoader
+    // if (imageAlg) {
+    //   twistyDiv.append(twistyPlayer.experimentalModel.puzzleLoader.svg)
+    // }
     twistyDiv.appendChild(twistyPlayer);
 
     if (!imageAlg) {
@@ -71,6 +75,7 @@
 
 </script>
 
+<!-- TODO: await block -->
 <div class="h-full w-full" bind:this={twistyDiv} />
 
 <style>

@@ -17,17 +17,13 @@
   let activeElement: number = 0
 
   $: activeElement, (() => { activeAlg = algorithmList[activeElement] as IAlgorithmClass })()
-
-  let algWithSetup = (alg: IAlgorithmClass) => { // REMOVE AFTER CHANGING ALGVISUALS
-    return alg.setup ? alg.setup + " . . " + alg.alg : alg.alg
-  }
   
   let toggleDisplay: () => void
   let toggled: boolean
 
 </script>
 
-<svelte:component this={Layout} {caso}>
+<svelte:component this={Layout} {caso} left={activeAlg.isLefty}>
   <svelte:fragment slot="visuals">
     <AlgVisuals 
       activeAlg={activeAlg} 
@@ -68,7 +64,9 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <svelte:fragment slot="mirrorToggle" let:css>
     <span class={css.main}
-    on:click={() => { algorithmList = algorithmList.map(a => a.mirror()) }} use:tooltip title="Display the mirror cases of algs"><b>{"Mirror L/R"}</b></span>
+    on:click={() => { algorithmList = algorithmList.map(a => a.mirror()) }} use:tooltip title="Display the mirror cases of algs">
+      <b>{"Mirror Case Algs"}</b>
+    </span>
   </svelte:fragment>
   
   <svelte:fragment slot="note" let:css>
