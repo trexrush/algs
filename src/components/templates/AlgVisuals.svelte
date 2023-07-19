@@ -6,7 +6,6 @@
   import { convert4x4Notation, expandAlgWithTriggers } from "../../scripts/alg";
   import { puzzleMapping } from "../../scripts/alg";
   import { cubePNG, Axis, Masking, ICubeOptions } from "sr-visualizer";
-  import { onMount } from "svelte";
 
   export let imageAlg: IAlgorithmClass
   export let activeAlg: IAlgorithmClass
@@ -26,8 +25,6 @@
 
   // LIFECYCLE //
 
-  let mounted = false
-  onMount(() => { mounted = true });
   const vcImage = (node: HTMLElement) => {
     let imageOptions: ICubeOptions = {
       cubeOpacity: 65,
@@ -74,9 +71,7 @@
   {#if options.imgSource == "vc"}
     <div class={css.vcImg} use:vcImage /> 
   {:else if options.imgSource == "cubingjs"}
-    {#if mounted}
-      <TwistyPlayer imageAlg={setupAUF + imageAlg.alg} options={options} />
-    {/if}
+    <TwistyPlayer imageAlg={setupAUF + imageAlg.alg} options={options} />
   {/if}
 
   <!-- / -->
