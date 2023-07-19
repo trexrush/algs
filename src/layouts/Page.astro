@@ -45,6 +45,7 @@ const { title } = Astro.props;
     <slot name="navbar"/>
     <!-- TODO: dedupe the <main> tags in the page files -->
     <main>
+        <noscript><br>⚠️ <br>algs<br> requires JavaScript to work.</noscript>
         <div class="lg:w-[900px] m-auto flex flex-col items-center">
             <slot /> 
         </div>
