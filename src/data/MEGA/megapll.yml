@@ -285,12 +285,7 @@ E2:
     - 
       alg: F' U L' U [LEFT SUNE] U' L U L' U2' L F
       isLefty: true
-    - 
-      setup: U
-      alg: dr' U L FL' L' U' L FL L' U' L FL' L' U dr F
-      isLefty: true
-      note: 3x3 transfer (E perm)
-  note: can be a 3x3 transfer (E Perm), but mega alg is better
+  note: can be a 3x3 transfer (E Perm), but this alg is better
 E3:
   name: E3
   altNames: ["Jynx"]
