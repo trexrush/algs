@@ -1,6 +1,6 @@
 <script lang="ts">
   import AlgListing from "./AlgListing.svelte";
-  import AlgVisuals from "../AlgVisuals.svelte";
+  import AlgVisuals from "./AlgVisuals.svelte";
   import type { IDataCase, IOptions } from "../../scripts/types";
   import { AlgBuilder,  type IAlgorithmClass } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";

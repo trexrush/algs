@@ -1,10 +1,10 @@
 <script lang="ts">
-  import type { IOptions } from "../scripts/types"
-  import TwistyPlayer from "./TwistyPlayer.svelte"
-  import type { IAlgorithmClass } from "../scripts/alg";
-  import AlgVisualsVertical from "./templates/AlgVisualsVertical.svelte";
-  import { convert4x4Notation, expandAlgWithTriggers } from "../scripts/alg";
-  import { puzzleMapping } from "../scripts/alg";
+  import type { IOptions } from "../../scripts/types"
+  import TwistyPlayer from "../TwistyPlayer.svelte"
+  import type { IAlgorithmClass } from "../../scripts/alg";
+  import AlgVisualsVertical from "../AlgVisualsVertical.svelte";
+  import { convert4x4Notation, expandAlgWithTriggers } from "../../scripts/alg";
+  import { puzzleMapping } from "../../scripts/alg";
   import { cubePNG, Axis, Masking, ICubeOptions } from "sr-visualizer";
   import { onMount } from "svelte";
 
