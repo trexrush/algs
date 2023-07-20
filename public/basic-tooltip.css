@@ -1,14 +1,14 @@
 
+.tippy-box[data-theme~='basic'] {
+  padding: 3px;
+  background-color: rgba(220, 220, 220, 0.8);
+  border-radius: 5px;
+}
+
 @media (prefers-color-scheme: dark) {
   .tippy-box[data-theme~='basic'] {
     padding: 3px;
-    background-color: rgba(233, 233, 233, 0.8);;
+    background-color: rgba(40, 40, 40, 0.8);
     border-radius: 5px;
   }
-}
-
-.tippy-box[data-theme~='basic'] {
-  padding: 3px;
-  background-color: rgba(40, 40, 40, .8);
-  border-radius: 5px;
 }
