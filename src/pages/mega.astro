@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar.astro";
 import Page from "../layouts/Page.astro";
 
 let pages = [
-  { name: "Full PLL", href: "/algs/mega/megaPLL" },
-  { name: "Full OLL", href: "/algs/mega/megaOLL" },
+  { name: "Full PLL", href: "/algs/mega/PLL" },
+  { name: "Full OLL", href: "/algs/mega/OLL" },
 ]
 ---
 
@@ -18,7 +18,7 @@ let pages = [
       rounded-md shadow-lg divide-y-2 divide-stone-400/20 dark:divide-stone-600/20 bg-stone-200 dark:bg-stone-800 
       text-3xl text-stone-700 dark:text-stone-300 child:w-full child:px-3 child:py-1">
         {pages.map(page => (
-          <a href={page.href} class="hover:font-semibold">{page.name}</a>
+          <a href={page.href} class="hover:scale-105">{page.name}</a>
         ))}
       </div>
     </div>

@@ -4,7 +4,7 @@ import { cube3x3x3 } from "cubing/puzzles";
 import type { IDataAlg, IOptions, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types";
 import type { XOR } from "ts-essentials";
 
-// AlgImage, TwistyPlayer
+// AlgVisuals, TwistyPlayer
 export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
     display: ["r", "r'", "r2", "r2'", "l", "l'", "l2", "l2'", "M", "M'", "M2", "M2'"],
@@ -99,9 +99,8 @@ const isTriggerRegex: RegExp = /\[(.*?)\]/g
 const algDelimiterWithTriggers: RegExp = /[\s\(\)]+(?![^\[]*\])/g
 // in backAlg, no External files
 const matchAllParenthesis: RegExp =  /([\(\)])/g
-
-// TODO: allow multiple layers of expanding algs (would allow definitions of triggers to use triggers) aka  
-// AlgImage, TwistyPlayer
+ 
+// AlgVisuals
 export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
   const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
   return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)), pzl)

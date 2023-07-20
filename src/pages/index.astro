@@ -15,11 +15,7 @@ let pages = CorePageRoutes
     <div class="flex flex-col items-center">
       <h1 class="text-4xl mt-10 text-center">Eduardo Mazuera's Algorithms:</h1>
       <br>
-      <div class="flex flex-col rounded-md shadow-lg divide-y-2 divide-stone-400/20 dark:divide-stone-600/20 bg-stone-200 dark:bg-stone-800 mb-10 items-center text-center text-3xl text-stone-700 dark:text-stone-300 child:w-full child:px-3 child:py-1">
-        {pages.map(page => (
-          <a href={page.path} class="hover:font-semibold">{page.name}</a>
-        ))}
-      </div>
+    
       <Info />
     </div>
   </main>
