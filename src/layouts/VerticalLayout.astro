@@ -21,7 +21,7 @@ hover:brightness-110 hover:-translate-y-[1px] transition-all select-none">Collap
 
 <script>
   let globalOpenState = true
-  let setCards = document.getElementsByTagName('details')
+  let setCards = document.querySelectorAll('details:not(nav details)')
   document.getElementById('collapse')?.addEventListener("click", (e) => {
     for (let set of setCards) {
       globalOpenState ? set.removeAttribute('open') : set.setAttribute('open', 'true')
