@@ -5,12 +5,11 @@ import CaseCard from "./templates/CaseCard.svelte";
 interface Props {
   set: IDataSet
   options: IOptions
-  recursiveCollapse?: boolean
 }
-const { set, options, recursiveCollapse } = Astro.props
+const { set, options } = Astro.props
 ---
 
-<details open={recursiveCollapse ? false : true}
+<details open
   class="flex flex-col justify-center items-center w-[97%] mb-5 rounded-xl shadow-xl bg-stone-900/[.07] dark:bg-stone-50/[.07]">
   <summary class=" flex my-1 pl-6 items-baseline gap-5 select-none pointer-events-none">
     <div class="text-2xl sm:text-4xl font-bold hover:scale-105 cursor-pointer pointer-events-auto">
