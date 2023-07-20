@@ -21,13 +21,11 @@
 
 <div class="flex flex-row items-center justify-center cursor-pointer relative aspect-square sm:h-[128px] sm:w-[128px] h-[35%] w-[35%]">
   {#if !isAlgVisDisplayed}
-    <div on:click={toggleDisplay}>
-      <div class="relative group
-      child:transition-all child:duration-300 child:ease-in-out">
-        <slot name="hoverOverlay" css={Styles.hoverOverlay}/>
-        <div class="group-hover:opacity-25 group-hover:scale-[.97]">
-          <slot name="image" css={Styles.image}/>
-        </div>
+    <div class="relative group h-full w-full
+    child:transition-all child:duration-300 child:ease-in-out" on:click={toggleDisplay}>
+      <slot name="hoverOverlay" css={Styles.hoverOverlay}/>
+      <div class="group-hover:opacity-25 group-hover:scale-[.97]">
+        <slot name="image" css={Styles.image}/>
       </div>
     </div>
   {:else}

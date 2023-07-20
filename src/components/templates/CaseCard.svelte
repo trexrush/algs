@@ -69,13 +69,13 @@
     </span>
   </svelte:fragment>
   
-  <svelte:fragment slot="note" let:css>
+  <!-- <svelte:fragment slot="note" let:css>
     {#if caso.note}
     <div class={css.main}>
       <b>{caso.note}</b>
     </div>
     {/if}
-  </svelte:fragment>
+  </svelte:fragment> -->
   
   <!-- svelte-ignore a11y-missing-content -->
   <!-- svelte-ignore a11y-click-events-have-key-events -->

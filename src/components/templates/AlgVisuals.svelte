@@ -39,7 +39,7 @@
       height: FIXED_SIZE_TEMP,
       mask: options.vcparams?.stage! as Masking,
       case: options.puzzle == '4x4x4' 
-      // TODO: implement generic expand
+      // TODO: implement generic expand (or check if u alr made it, im kinda dummy rn)
         ? setupAUF + convert4x4Notation(expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!, 'vc')
         : setupAUF + expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!,
     }
@@ -55,7 +55,7 @@
 
 <svelte:component this={Layout} {toggleDisplay} {isAlgVisDisplayed}>
   <svelte:fragment slot="algAnimation" let:css>
-    <TwistyPlayer activeAlg={activeAlg.alg} options={options} isLefty={activeAlg.isLefty} />
+    <TwistyPlayer options={options} algorithm={activeAlg} />
     <div class={css.main} on:click={toggleDisplay}>
       x
     </div>
@@ -63,18 +63,16 @@
   
   <svelte:fragment slot="hoverOverlay" let:css>
     <span class={css.overlay} >
-    <span>View Alg</span>
-  </span>
-</svelte:fragment>
+      <span>View Alg</span>
+    </span>
+  </svelte:fragment>
 
-<svelte:fragment slot="image" let:css>
-  {#if options.imgSource == "vc"}
-    <div class={css.vcImg} use:vcImage /> 
-  {:else if options.imgSource == "cubingjs"}
-    <TwistyPlayer imageAlg={setupAUF + imageAlg.alg} options={options} />
-  {/if}
-
-  <!-- / -->
+  <svelte:fragment slot="image" let:css>
+    {#if options.imgSource == "vc"}
+      <div class={css.vcImg} use:vcImage /> 
+    {:else if options.imgSource == "cubingjs"}
+      <TwistyPlayer options={options} algorithm={imageAlg} _2D={true} />
+    {/if}
   </svelte:fragment>
 
 </svelte:component>

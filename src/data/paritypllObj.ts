@@ -4,7 +4,7 @@ import { createOptions } from "../scripts/utilities";
 import yml from './paritypll.yml'
 
 const Options: IOptions = createOptions({
-    name: "ParityPLL (WARNING: EXPERIMENTAL AND PROBABLY BROKEN)",
+    name: "ParityPLL",
     puzzle: '4x4x4',
     // imgSource: "cubingjs",
     imgSource: "vc",
