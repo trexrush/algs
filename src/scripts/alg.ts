@@ -255,7 +255,7 @@ export const AlgBuilder = function () {
           isExpanded: false,
           isExpandable: function () { return this.alg.match(isTriggerRegex) ? true : false },
           expand: function () { // currently same as alg, but once I implement trigger functionality into mirror
-            if (!this.isExpandable()) { console.log('alg is not expandable, skipping'); return this.alg }
+            if (!this.isExpandable()) { return this.alg } // pass through alg
             return expandAlgWithTriggers(this.alg, this.puzzle)
           },
           components: function () { return returnAlgAsComponents(this) },

@@ -12,10 +12,8 @@
   export let Layout: ComponentType = CaseCardVertical
   let algorithmList = caso.algs.map(a => AlgBuilder().withPuzzle(options.puzzle).withAlgData(a).build() as IAlgorithmClass)
 
-  // ACTIVE
   let activeAlg: IAlgorithmClass
   let activeElement: number = 0
-
   $: activeElement, (() => { activeAlg = algorithmList[activeElement] as IAlgorithmClass })()
   
   let toggleDisplay: () => void
@@ -51,11 +49,11 @@
     </a>  
   </svelte:fragment>
   
-  <svelte:fragment slot="altNames">
+  <svelte:fragment slot="altNames" let:css>
     {#if caso.altNames?.length}
-    <span>AKA</span>
+    <span class={css.aka}>AKA</span>
     {#each caso.altNames as altName}
-    <a id="{altName}" href="#{altName}">{altName}</a>
+    <a id="{altName}" href="#{altName}" class={css.list}>{altName}</a>
     {/each}
     {/if}
   </svelte:fragment>
@@ -81,7 +79,7 @@
   <!-- svelte-ignore a11y-click-events-have-key-events -->
   <svelte:fragment slot="algorithmList" let:css>
     {#each algorithmList as eachAlg, i}
-      <div class={css.main}>
+      <li class={css.main}>
         <div on:click={() => activeElement = i}>
           <AlgListing 
             algorithm={eachAlg} 
@@ -98,7 +96,7 @@
           {/each}
           {/if}
         </span>
-      </div>
+      </li>
     {/each}
   </svelte:fragment>
 </svelte:component>

@@ -11,11 +11,11 @@ const { set, options } = Astro.props
 
 <details open
   class="flex flex-col justify-center items-center w-[97%] mb-5 rounded-xl shadow-xl bg-stone-900/[.07] dark:bg-stone-50/[.07]">
-  <summary class=" flex my-1 pl-6 items-baseline gap-5 select-none pointer-events-none">
-    <div class="text-2xl sm:text-4xl font-bold hover:scale-105 cursor-pointer pointer-events-auto">
+  <summary class=" flex my-1 pl-6 items-baseline gap-5 select-none pointer-events-auto cursor-pointer whitespace-nowrap overflow-hidden">
+    <div class="text-2xl sm:text-4xl font-bold hover:scale-105">
       {set.name}
     </div>
-    <span class="text-stone-500 text-xs sm:text-sm font-light cursor-pointer pointer-events-auto">
+    <span class="text-stone-500 text-xs sm:text-sm font-light">
       {set.altNames ? 'AKA ' : ''}
     {set.altNames?.map((altName, i) => {
       return <span class="font-semibold text-sm sm:text-lg">{altName + (i < set.altNames!.length! - 1 ? ", " : "")}</span>
@@ -23,7 +23,7 @@ const { set, options } = Astro.props
     </span>
   </summary>
 
-  <div class="w-full flex flex-col child:mb-5 items-center">
+  <div class="w-full flex flex-col gap-4 items-center">
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?

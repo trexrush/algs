@@ -10,10 +10,10 @@
   const { sets, options } = Astro.props
 ---
 
-<div id="collapse" class="cursor-pointer bg-stone-200 dark:bg-stone-800 rounded-md p-1 px-2 
+<div id="collapse" class=" z-20 cursor-pointer sticky top-3 sm:top-12 bg-stone-200 dark:bg-stone-800 rounded-md p-1 px-2 
 hover:brightness-110 hover:-translate-y-[1px] transition-all select-none">Collapse / Expand all Sets</div>
 
-<div class=" relative text-5xl sm:text-7xl w-full text-center my-5 -z-10">{options.name}</div>
+<div class=" relative text-3xl w-full text-center my-5">{options.name}</div>
 
 {sets.map((set) => (
   <SetCard set={set} options={options} />
