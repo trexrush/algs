@@ -4,8 +4,8 @@ import { cube3x3x3 } from "cubing/puzzles";
 import type { IDataAlg, IOptions, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types";
 import type { XOR } from "ts-essentials";
 
-// AlgVisuals, TwistyPlayer
-export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
+// NO EXTERNAL
+const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
     display: ["r", "r'", "r2", "r2'", "l", "l'", "l2", "l2'", "M", "M'", "M2", "M2'"],
     vc: ["Rw R'", "Rw' R", "Rw2 R2", "Rw2 R2", "Lw L'", "Lw' L", "Lw2 L2", "Lw2 L2", "M", "M'", "M2", "M2'"],
@@ -15,7 +15,7 @@ export const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => 
     notation.display.includes(e) 
       ? notation[to][notation.display.indexOf(e)]
       : e
-    ).join(' ')    
+  ).join(' ')    
 }
 
 // NO EXTERNAL
@@ -100,8 +100,8 @@ const algDelimiterWithTriggers: RegExp = /[\s\(\)]+(?![^\[]*\])/g
 // in backAlg, no External files
 const matchAllParenthesis: RegExp =  /([\(\)])/g
  
-// AlgVisuals
-export const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
+// NO EXTERNAL
+const expandAlgWithTriggers = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
   const getTriggerAlgWrapper = (b: string) => { return getTriggerAlg(b, pzl) } // curry away puzzle type to allow func call bind
   return simplifyAlg(a.replaceAll(isTriggerRegex, Function.prototype.call.bind(getTriggerAlgWrapper)), pzl)
 }
@@ -132,14 +132,14 @@ const modifierAlias = {
 type TModifierAliases = keyof typeof modifierAlias
 type TModifiers = typeof modifierAlias[TModifierAliases]
 type TModifierActions = { type: TModifiers, action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: TModifierAliases }
+
 type TAlgCommon<T extends TAlgCommon<T>> = Pick<IOptions, "puzzle" | "imgSource"> & {
   isMirror: boolean
   mirror(): T
-  notation(to: TNotationTargets): T
+  notation(to: TNotationTargets): string
   simplify(): T
   // getPuzzle: () => twistyPuzzleTypeWithChirality
 } 
-
 interface ITrigger {
   baseTrigger: string
   modifiers: TModifierActions[]
@@ -171,70 +171,71 @@ type IPuzzleDefinitionMapping = {
 
 // AlgImage (vc), TwistyPuzzle (type), backAlg/moveGroups
 export const puzzleMapping: modularPuzzleGroup<IPuzzleDefinitionMapping> = {
-  '3x3x3': { 
-    type: '3x3x3', right: '3x3x3', left: '3x3x3', vc: 3, 
+  '3x3x3': { type: '3x3x3', right: '3x3x3', left: '3x3x3', vc: 3, 
     cancel: cube3x3x3.puzzleSpecificSimplifyOptions 
   },
-  '4x4x4': { 
-    type: '4x4x4', right: '4x4x4', left: '4x4x4', vc: 4, 
+  '4x4x4': { type: '4x4x4', right: '4x4x4', left: '4x4x4', vc: 4, 
     cancel: { quantumMoveOrder: () => 4 }, 
     notation: (a, to) => { return convert4x4Notation(a, to) }
   },
-  '2x2x2': { 
-    type: '2x2x2', right: '2x2x2', left: '2x2x2', vc: 2 
+  '2x2x2': { type: '2x2x2', right: '2x2x2', left: '2x2x2', vc: 2 
   },
-  'megaminx': { 
-    type: 'megaminx', right: 'megaminx', left: 'megaminx-lefty', vc: 'mega', 
+  'megaminx': { type: 'megaminx', right: 'megaminx', left: 'megaminx-lefty', vc: 'mega', 
     cancel: { quantumMoveOrder: () => 5 } 
   },
 }
-
 // ___ //
 
 //https://stackoverflow.com/questions/73072541/call-chain-order-dependent-builder-pattern-in-typescript-compiler-limitation
   
-  // TRIGGER HELPER FUNCS
-  const modifierActions: Record<TModifiers, TModifierActions> = {
-    "invert": { type: "invert", action: (a, pzl) => { return invertAlg(a) }, text: 'INV'},
-    "left": { type: "left",  action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
-    "back": { type: "back",  action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
-    "double": { type: "double",  action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
-    "triple": { type: "triple",  action: (a, pzl) => { return repeatAlg(a, 3, pzl) }, text: '3x'},
+// TRIGGER HELPER FUNCS
+const modifierActions: Record<TModifiers, TModifierActions> = {
+  "invert": { type: "invert", action: (a, pzl) => { return invertAlg(a) }, text: 'INV'},
+  "left": { type: "left",  action: (a, pzl) => { return mirrorAlgOverrideTriggers(a, pzl) }, text: 'LEFT'},
+  "back": { type: "back",  action: (a, pzl) => { return backAlg(a, pzl) }, text: 'BACK'},
+  "double": { type: "double",  action: (a, pzl) => { return repeatAlg(a, 2, pzl) }, text: '2x'},
+  "triple": { type: "triple",  action: (a, pzl) => { return repeatAlg(a, 3, pzl) }, text: '3x'},
+}
+const getModActionsFromText = (m: TModifierAliases): TModifierActions => { return modifierActions[modifierAlias[m]] }
+const expandedTrigger = (obj: ITriggerClass) => {
+  const initTrig = triggerSubstitutionGroups[obj.puzzle!]?.find(item => item.name === obj.baseTrigger)?.alg // add structuredClone if issues arise
+  if (!initTrig) { return '' }
+  return obj.modifiers.reduce(((acc, curr) => {
+    return curr.action(acc, obj.puzzle!)
+  }), initTrig)
+}
+const returnAlgAsComponents = (obj: IAlgorithmClass) => {
+  return obj.alg.split(algDelimiterWithTriggers).map(moveOrTrigger => {
+    return moveOrTrigger.match(isTriggerRegex) != null 
+    ? AlgBuilder().withPuzzle(obj.puzzle).withTrigger(moveOrTrigger.replace(isTriggerRegex, '$1')).build() as ITriggerClass
+    : AlgBuilder().withPuzzle(obj.puzzle).withAlgData({ alg: moveOrTrigger, isLefty: obj.isLefty }).build() as IAlgorithmClass
+  })
+}
+const toggleModifier = (a: TModifiers, obj: ITriggerClass): ITriggerClass => {
+  const act = modifierActions[a]
+  const remainingMods = obj.modifiers?.filter((el) => el.type !== act.type) ?? null
+  if (remainingMods && remainingMods?.length !== obj.modifiers?.length) {
+    return { ...obj,  modifiers: remainingMods, 
+      get resultMoves() { return expandedTrigger(this) },
+      get resultModifiers() { return this.modifiers.map(m => ( m.text )) },
+      get collapsedString() { return [...this.resultModifiers, this.baseTrigger].join(' ') }, 
+    } as ITriggerClass
+  } else {
+    const newMods = [...obj.modifiers!, getModActionsFromText(act.text)]
+    return { ...obj,  modifiers: newMods, 
+      get resultMoves() { return expandedTrigger(this) },
+      get resultModifiers() { return this.modifiers.map(m => ( m.text )) },
+      get collapsedString() { return [...this.resultModifiers, this.baseTrigger].join(' ') },
+    } as ITriggerClass
   }
-  const getModActionsFromText = (m: TModifierAliases): TModifierActions => { return modifierActions[modifierAlias[m]] }
-  const expandedTrigger = (obj: ITriggerClass) => {
-    const initTrig = triggerSubstitutionGroups[obj.puzzle!]?.find(item => item.name === obj.baseTrigger)?.alg // add structuredClone if issues arise
-    if (!initTrig) { return '' }
-    return obj.modifiers.reduce(((acc, curr) => {
-      return curr.action(acc, obj.puzzle!)
-    }), initTrig)
+}
+const notationTrigger = (obj: ITriggerClass, to: TNotationTargets): string => {
+  if (puzzleMapping[obj.puzzle] && puzzleMapping[obj.puzzle]!.notation) {
+    return puzzleMapping[obj.puzzle]!.notation!(obj.baseTrigger, to)
   }
-  const returnAlgAsComponents = (obj: IAlgorithmClass) => {
-    return obj.alg.split(algDelimiterWithTriggers).map(moveOrTrigger => {
-      return moveOrTrigger.match(isTriggerRegex) != null 
-      ? AlgBuilder().withPuzzle(obj.puzzle).withTrigger(moveOrTrigger.replace(isTriggerRegex, '$1')).build() as ITriggerClass
-      : AlgBuilder().withPuzzle(obj.puzzle).withAlgData({ alg: moveOrTrigger, isLefty: obj.isLefty }).build() as IAlgorithmClass
-    })
-  }
-  const toggleModifier = (a: TModifiers, obj: ITriggerClass): ITriggerClass => {
-    const act = modifierActions[a]
-    const remainingMods = obj.modifiers?.filter((el) => el.type !== act.type) ?? null
-    if (remainingMods && remainingMods?.length !== obj.modifiers?.length) {
-      return { ...obj,  modifiers: remainingMods, 
-        get resultMoves() { return expandedTrigger(this) },
-        get resultModifiers() { return this.modifiers.map(m => ( m.text )) },
-        get collapsedString() { return [...this.resultModifiers, this.baseTrigger].join(' ') }, 
-      } as ITriggerClass
-    } else {
-      const newMods = [...obj.modifiers!, getModActionsFromText(act.text)]
-      return { ...obj,  modifiers: newMods, 
-        get resultMoves() { return expandedTrigger(this) },
-        get resultModifiers() { return this.modifiers.map(m => ( m.text )) },
-        get collapsedString() { return [...this.resultModifiers, this.baseTrigger].join(' ') },
-      } as ITriggerClass
-    }
-  }
-  
+  else return obj.resultMoves
+}
+
 export const AlgBuilder = function () { 
   // TODO: take into account chirality
   // FOLLOWUP: do we need puzzleMap?
@@ -271,9 +272,10 @@ export const AlgBuilder = function () {
             }
           },
           notation(to) { 
-            return (puzzleMapping[this.puzzle]?.notation) 
-            ? {...this, alg: puzzleMapping[this.puzzle]?.notation!(this.alg, to) }
-            : this
+            if (puzzleMapping[this.puzzle]?.notation) {
+              return puzzleMapping[this.puzzle]!.notation!(this.expand(), to)
+            }
+            else return this.expand()
           },
           simplify() { 
             return {...this, alg: simplifyAlg(this.alg, this.puzzle) }
@@ -301,7 +303,7 @@ export const AlgBuilder = function () {
           invert() { return { ...toggleModifier("invert", this) } },
           double() { return { ...toggleModifier("double", this) } },
           triple() { return { ...toggleModifier("triple", this) } },
-          notation(to) { return this }, // TODO: implement
+          notation(to) { return notationTrigger(this, to) }, // TODO: implement
         } as ITriggerClass
         return builders.stage3(newAlgObj)
       }
@@ -317,40 +319,55 @@ export const AlgBuilder = function () {
 }
 
 // POOR MANS UNIT TESTING TODO: use jest
-let testData: IDataAlg = { alg: "R U R' U' R U2' R'" }
-let testData2: IDataAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }
-let testTriggerData: string = "LEFT BACK SUNE"
-let testAlg = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData).build() as IAlgorithmClass
-let testAlg2 = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData2).build() as IAlgorithmClass
-let testTrig = AlgBuilder().withPuzzle('3x3x3').withTrigger(testTriggerData).build() as ITriggerClass
-let testCounter = 0
+// let testData: IDataAlg = { alg: "R U R' U' R U2' R'" }
+// let testData2: IDataAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }
+// let test4x4Data: IDataAlg = { setup: "U", alg: "[OPP] [Ua_PERM]"}
+// let testTriggerData: string = "LEFT BACK SUNE"
+// let testAlg = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData).build() as IAlgorithmClass
+// let testAlg2 = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData2).build() as IAlgorithmClass
+// let test4x4Alg = AlgBuilder().withPuzzle('4x4x4').withAlgData(test4x4Data).build() as IAlgorithmClass
+// let testTrig = AlgBuilder().withPuzzle('3x3x3').withTrigger(testTriggerData).build() as ITriggerClass
+// let testCounter = 0
 
-let test = (s: unknown, e: unknown) => { 
-  console.log(++testCounter)
-  if (e != s) console.log("TEST:\n\tEXPECTED ||\t", e, "\n\tACTUAL ||\t",  s)
-  return e == s 
-}
-let testSuite = (args: boolean[]): boolean => { return args.every(t => t == true) }
+// let test = (s: unknown, e: unknown) => { 
+//   ++testCounter
+//   if (e != s) console.log(testCounter, "TEST:\n\tEXPECTED ||", e, "ACTUAL ||",  s)
+//   return e == s 
+// }
+// let testSuite = (args: boolean[]): boolean => { return args.every(t => t == true) }
 
 
 // testSuite([
+//   // alg
 //   test(testAlg.mirror().alg, "L' U' L U L' U2 L"),
+//   test(testAlg2.mirror().alg, "[SUNE] U2' [BACK SUNE]"),
+//   // isMirror
 //   test(testAlg.mirror().isMirror, true),
-//   test(testAlg.mirror().isLefty, true),
-//   test(testAlg.isExpandable(), false),
-//   test(testAlg2.isExpandable(), true), // test(testAlg2.isExpanded, false),
-//   test(testAlg2.expand(), "L' U' L U' L' U2 L U2 L U L' U L U2' L'"),
+//   test(testAlg2.mirror().isMirror, true),
+//   // islefty
 //   test(testAlg.isLefty, false),
+//   test(testAlg2.isLefty, true),
+//   test(testAlg.mirror().isLefty, true),
+//   test(testAlg2.mirror().isLefty, false),
+//   // mirroring multiple times returns correct data
 //   test(testAlg.mirror().mirror().isLefty, false),
 //   test(testAlg.mirror().mirror().alg, "R U R' U' R U2' R'"),
 //   test(testAlg.mirror().mirror().mirror().alg, "L' U' L U L' U2 L"),
-//   test(testAlg2.isLefty, true),
-//   test(testAlg2.mirror().isLefty, false),
-//   test(testAlg2.mirror().isMirror, true),
+//   // isExpandable
+//   test(testAlg.isExpandable(), false),
+//   test(testAlg2.isExpandable(), true), 
+//   // expand
+//   test(testAlg.expand(), testAlg.alg),
+//   test(testAlg2.expand(), "L' U' L U' L' U2 L U2 L U L' U L U2' L'"),
+//   // setup
 //   test(testAlg2.mirror().setup, "U'"),
-//   test(testAlg2.mirror().alg, "[SUNE] U2' [BACK SUNE]"),
+//   // chaining state changes
 //   test(testTrig.mirror().invert().back().resultMoves, "R U2 R' U' R U' R'"),
 //   test(testTrig.mirror().invert().back().resultModifiers.join(' '), "INV"),
 //   test(testTrig.mirror().invert().back().mirror().resultModifiers.join(' '), "INV LEFT" || "LEFT INV"),
+//   // 4x4 puzzle + notation
+//   test(test4x4Alg.expand(), "Uw2' r2 Uw2' r2 U2' r2 R U R' U R' U' R2 U' R' U R' U R"),
+//   test(test4x4Alg.notation('cubingjs'), "Uw2' 2R2 Uw2' 2R2 U2' 2R2 R U R' U R' U' R2 U' R' U R' U R"),
+//   test(test4x4Alg.notation('vc'), "Uw2' Rw2 R2 Uw2' Rw2 R2 U2' Rw2 R2 R U R' U R' U' R2 U' R' U R' U R")
 // ])
 

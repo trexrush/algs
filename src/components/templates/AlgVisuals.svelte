@@ -3,7 +3,6 @@
   import TwistyPlayer from "../TwistyPlayer.svelte"
   import type { IAlgorithmClass } from "../../scripts/alg";
   import AlgVisualsVertical from "../AlgVisualsVertical.svelte";
-  import { convert4x4Notation, expandAlgWithTriggers } from "../../scripts/alg";
   import { puzzleMapping } from "../../scripts/alg";
   import { cubePNG, Axis, Masking, ICubeOptions } from "sr-visualizer";
 
@@ -12,18 +11,11 @@
   export let options: IOptions
   export let Layout = AlgVisualsVertical
 
-  // TODO: add back the setup move in ALG
-
   export let isAlgVisDisplayed: boolean = false
   export const toggleDisplay = () => { isAlgVisDisplayed = !isAlgVisDisplayed }
 
-
   const FIXED_SIZE_TEMP = 128
-
   let vcpuzzle = puzzleMapping[imageAlg.puzzle]?.vc
-  let setupAUF: string = imageAlg.setup ? imageAlg.setup + ' ' : ''
-
-  // LIFECYCLE //
 
   const vcImage = (node: HTMLElement) => {
     let imageOptions: ICubeOptions = {
@@ -38,10 +30,7 @@
       width: FIXED_SIZE_TEMP,
       height: FIXED_SIZE_TEMP,
       mask: options.vcparams?.stage! as Masking,
-      case: options.puzzle == '4x4x4' 
-      // TODO: implement generic expand (or check if u alr made it, im kinda dummy rn)
-        ? setupAUF + convert4x4Notation(expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!, 'vc')
-        : setupAUF + expandAlgWithTriggers(imageAlg.alg, options.puzzle) + "" + options.vcparams?.rot!,
+      case: (imageAlg.setup ?? '') + imageAlg.notation('vc') + " " + options.vcparams?.rot!
     }
     cubePNG(node, imageOptions)
     return {
