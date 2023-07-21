@@ -118,8 +118,12 @@ let github = { name: "Sheets", href: "https://github.com/trexrush/algs", externa
     transition-all duration-200 ease-in-out will-change-transform scale-125
     text-3xl md:text-xl py-0
   }
+  input:checked ~ label > .cubing-icon {
+    @apply -rotate-6 opacity-90 scale-150 
+  }
+
   .menu {
-    @apply absolute flex-col min-w-min w-fit z-20
+    @apply absolute flex-col min-w-min w-fit z-40
   }
   .bg {
     @apply bg-stone-200 dark:bg-stone-800 border-2 dark:border-stone-900 border-stone-200/50
