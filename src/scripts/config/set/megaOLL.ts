@@ -59,7 +59,7 @@ const caseNames = [
 ] as const
 type ICaseName = typeof caseNames[number]
 
-const useGrouping = (grouping: "none" | "oll" | 'feature', data: ICaseList): IAlgset => {
+const useGrouping = (grouping: "none" | "oll" | 'feature' | '4LLLjustCO', data: ICaseList): IAlgset => {
   // curry away data and type to make defining sets easier
   const ch = (list: ICaseName[]) => { return Object.assign(listFromData<ICaseName>(list, data)) }
 
@@ -217,6 +217,15 @@ const useGrouping = (grouping: "none" | "oll" | 'feature', data: ICaseList): IAl
     }
   }
 
+  const just4LLL = (): IAlgset => {
+    return {
+      config: config,
+      sets: [
+        { name: "CO", altNames: ["OCLL", "Star(2LLL)", "2 3 4 5"], children: Object.assign([c[2], c[3], c[4], c[5], ]) },
+      ]
+    }
+  }
+
   switch (grouping) {
     case 'none':
       return noGrouping()
@@ -224,6 +233,8 @@ const useGrouping = (grouping: "none" | "oll" | 'feature', data: ICaseList): IAl
       return ollGrouping()
     case 'feature':
       return featureGrouping()
+    case '4LLLjustCO':
+      return just4LLL()
   }
 }
 

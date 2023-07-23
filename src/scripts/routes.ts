@@ -12,6 +12,7 @@ import { PLLGroupedBySet, PLLNoGrouping } from "../data/pllObj";
 import { ZBLSNoGrouping } from "../data/ZBLS/zblsObj";
 import type { XOR } from "ts-essentials";
 import type { IAlgset } from "./config/set";
+import { MegaCO, MegaCP } from "../data/MEGA/mega4LLLObj";
 
 /* NAMING CONVENTION -
 - a new set's unsorted AlgSet goes as a new letter in the "a" object
@@ -38,6 +39,8 @@ const p: Record<string, IPageData> = {
   mpll: { path: 'mega/PLL', name: "Mega PLL", data: MegaPLLGroupByFeatures },
   moll: { path: 'mega/OLL', name: "Mega OLL", data: MegaOLLGroupByFeature },
   bcppll: { path: 'bigs/ParityPLL', name: "Parity PLL", data: ParityPLLGroupByCP },
+  megaco: { path: 'mega/CO', name: "Mega 4LLL CO", data: MegaCO },
+  megacp: { path: 'mega/CP', name: "Mega 4LLL CP", data: MegaCP },
 }
 
 const a: Record<string, IPageData> = {
@@ -123,14 +126,14 @@ export const NavbarRoutes = [
           { name: "PLL", href: "/algs/" + a.mpll.path }, 
         ],
       },
-      // { name: "4LLL (Coming Soon)",
-      //   folder: [
-      //     { name: "CO", href: "#" }, 
-      //     { name: "EO", href: "#" }, 
-      //     { name: "CP", href: "#" }, 
-      //     { name: "EP", href: "#" }, 
-      //   ],
-      // },
+      { name: "4LLL",
+        folder: [
+          // { name: "EO", href: "#" }, 
+          { name: "CO", href: "/algs/" + a.megaco.path }, 
+          // { name: "EP", href: "#" }, 
+          { name: "CP", href: "/algs/" + a.megacp.path }, 
+        ],
+      },
     ],
   },
 ] as XOR<IMainSection, IRoute>[]
