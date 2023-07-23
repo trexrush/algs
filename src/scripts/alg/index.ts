@@ -70,7 +70,7 @@ export const AlgBuilder = function () {
 }
 
 // POOR MANS UNIT TESTING TODO: use jest
-// /* comment this line out to enable / disable
+/* comment this line out to enable / disable
 const testData: IAlg = { alg: "R U R' U' R U2' R'" }
 const testData2: IAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }
 const test4x4Data: IAlg = { setup: "U", alg: "[OPP] [Ua_PERM]"}

@@ -2,7 +2,7 @@ import { CLLGroupByOLL, CLLNoGrouping } from "../data/2x2/cllObj";
 import { EG1GroupByOLL, EG1NoGrouping } from "../data/2x2/eg1Obj";
 import { HNoGrouping } from "../data/ZBLL/hObj";
 import { LNoGrouping } from "../data/ZBLL/lObj";
-import { ParityPLLNoGrouping } from "../data/paritypllObj";
+import { ParityPLLNoGrouping, ParityPLLGroupByCP } from "../data/paritypllObj";
 import { TGroupByBH, TGroupByCP, TNoGrouping } from "../data/ZBLL/tObj";
 import { UGroupByBH, UGroupByCP, UNoGrouping } from "../data/ZBLL/uObj";
 import { MegaOLLNoGrouping, MegaOLLGroupByOLL, MegaOLLGroupByFeature } from "../data/MEGA/megaollObj";
@@ -37,7 +37,7 @@ const p: Record<string, IPageData> = {
   cll: { path: '222/CLL', name: "CLL", data: CLLGroupByOLL },
   mpll: { path: 'mega/PLL', name: "Mega PLL", data: MegaPLLGroupByFeatures },
   moll: { path: 'mega/OLL', name: "Mega OLL", data: MegaOLLGroupByFeature },
-  bcppll: { path: 'bigs/ParityPLL', name: "Parity PLL", data: ParityPLLNoGrouping },
+  bcppll: { path: 'bigs/ParityPLL', name: "Parity PLL", data: ParityPLLGroupByCP },
 }
 
 const a: Record<string, IPageData> = {
@@ -67,6 +67,7 @@ const a: Record<string, IPageData> = {
   b9: { path: p.moll.path + '/set', name: p.moll.name, data: MegaOLLGroupByFeature },
   a10: { path: p.mpll.path + '/set', name: p.mpll.name, data: MegaPLLGroupByLetter },
   b10: { path: p.mpll.path + '/group', name: p.moll.name, data: MegaPLLGroupByFeatures },
+  a12: { path: p.bcppll.path + '/group', name: p.bcppll.name, data: ParityPLLGroupByCP },
 }
 
 export const PageRoutes: IPageData[] = Object.values(a)
