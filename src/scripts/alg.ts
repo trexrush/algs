@@ -1,22 +1,8 @@
-import { Alg, PuzzleSpecificSimplifyOptions } from "cubing/alg"
+import { Alg } from "cubing/alg"
 import { backMoveGroups, baseMoveGroups, mirrorMoveGroups, triggerSubstitutionGroups } from "./algConstants"
-import { cube3x3x3 } from "cubing/puzzles";
-import type { IDataAlg, IOptions, TModifiersList, TNotationTargets, modularPuzzleGroup, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types";
+import type { IDataAlg, IOptions, TModifiersList, TNotationTargets, twistyPuzzleType, twistyPuzzleTypeWithChirality } from "./types";
 import type { XOR } from "ts-essentials";
-
-// NO EXTERNAL
-const convert4x4Notation = (a: string, to: 'vc' | 'cubingjs'): string => {
-  const notation = {
-    display: ["r", "r'", "r2", "r2'", "l", "l'", "l2", "l2'", "M", "M'", "M2", "M2'"],
-    vc: ["Rw R'", "Rw' R", "Rw2 R2", "Rw2 R2", "Lw L'", "Lw' L", "Lw2 L2", "Lw2 L2", "M", "M'", "M2", "M2'"],
-    cubingjs: ["2R", "2R'", "2R2", "2R2'", "2L", "2L'", "2L2", "2L2'", "m", "m'", "m2", "m2'"],
-  }
-  return a.split(' ').map(e => 
-    notation.display.includes(e) 
-      ? notation[to][notation.display.indexOf(e)]
-      : e
-  ).join(' ')    
-}
+import { puzzleMapping } from "./definitions";
 
 // NO EXTERNAL
 const mirrorAlg = (a: string, pzl: twistyPuzzleTypeWithChirality ): string => {
@@ -159,31 +145,6 @@ interface ITriggerClass extends ITrigger, TAlgCommon<ITriggerClass> {
   triple(): ITriggerClass
 }
 
-type IPuzzleDefinitionMapping = { 
-  type: twistyPuzzleType, 
-  right: twistyPuzzleTypeWithChirality, 
-  left: twistyPuzzleTypeWithChirality, 
-  vc: string | number, 
-  cancel?: PuzzleSpecificSimplifyOptions,
-  notation?: (a: string, to: "vc" | "cubingjs") => string,
-}
-
-
-// AlgImage (vc), TwistyPuzzle (type), backAlg/moveGroups
-export const puzzleMapping: modularPuzzleGroup<IPuzzleDefinitionMapping> = {
-  '3x3x3': { type: '3x3x3', right: '3x3x3', left: '3x3x3', vc: 3, 
-    cancel: cube3x3x3.puzzleSpecificSimplifyOptions 
-  },
-  '4x4x4': { type: '4x4x4', right: '4x4x4', left: '4x4x4', vc: 4, 
-    cancel: { quantumMoveOrder: () => 4 }, 
-    notation: (a, to) => { return convert4x4Notation(a, to) }
-  },
-  '2x2x2': { type: '2x2x2', right: '2x2x2', left: '2x2x2', vc: 2 
-  },
-  'megaminx': { type: 'megaminx', right: 'megaminx', left: 'megaminx-lefty', vc: 'mega', 
-    cancel: { quantumMoveOrder: () => 5 } 
-  },
-}
 // ___ //
 
 //https://stackoverflow.com/questions/73072541/call-chain-order-dependent-builder-pattern-in-typescript-compiler-limitation
