@@ -199,7 +199,7 @@ const useGrouping = (grouping: "none" | "oll" | 'feature', data: ICaseList): IAl
     return {
       config: config,
       sets: [
-        { name: "Star", altNames: ["OCLL", "4LLL CO", "2 3 4 5"], children: Object.assign([c[2], c[3], c[4], c[5], ]) },
+        { name: "Star", altNames: ["OCLL", "CO(4LLL)", "2 3 4 5"], children: Object.assign([c[2], c[3], c[4], c[5], ]) },
         { name: "Line", children: Object.assign([
           { name: "3 Corner Line", altNames: ["6 7 8 9 10 11"], children: Object.assign([c[6], c[7], c[8], c[9], c[10], c[11], ])},
           { name: "2 Corner Line", altNames: ["12 13 14 15 16 17"], children: Object.assign([c[12], c[13], c[14], c[15], c[16], c[17], ])},
