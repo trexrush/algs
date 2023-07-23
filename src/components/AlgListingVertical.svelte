@@ -1,5 +1,6 @@
 <script lang="ts">
-  import type { IAlgorithmClass } from "../scripts/alg";
+  import type { IAlgorithmClass } from "../scripts/alg/algorithm";
+
 
   export let algorithm: IAlgorithmClass
   export let isActive: boolean

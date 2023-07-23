@@ -53,9 +53,6 @@ export type IDataCaseList<T extends string = any> = Record<T, IDataCase>
 export type IDataSetList<T extends string = any> = Record<T, IDataSet>
 export type IGroupElementList<T extends string = any> = Record<T, IDataSet | IDataCase>
 
-// ALG.TS
-export type TNotationTargets = 'vc' | 'cubingjs'
-
 // UNUSED
 export type LocalOptionsList<T extends string = any> = Record<T, ILocalSetOptions | ILocalCaseOptions> 
 

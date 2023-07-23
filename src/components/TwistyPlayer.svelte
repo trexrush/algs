@@ -1,7 +1,7 @@
 <!-- credit to anicolao https://github.com/cubing/cubing.js/issues/223#issuecomment-1249980565 -->
 <script lang="ts">
   import { TwistyPlayer } from "cubing/twisty";
-  import type { IAlgorithmClass } from "../scripts/alg";
+  import type { IAlgorithmClass } from "../scripts/alg/algorithm";
   import type { IOptions } from "../scripts/types";
 
   export let algorithm: IAlgorithmClass

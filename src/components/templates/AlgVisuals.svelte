@@ -1,10 +1,10 @@
 <script lang="ts">
   import type { IOptions } from "../../scripts/types"
   import TwistyPlayer from "../TwistyPlayer.svelte"
-  import type { IAlgorithmClass } from "../../scripts/alg";
   import AlgVisualsVertical from "../AlgVisualsVertical.svelte";
-  import { puzzleMapping } from "../../scripts/alg";
   import { cubePNG, Axis, Masking, ICubeOptions } from "sr-visualizer";
+  import { puzzleMapping } from "../../scripts/config/puzzle";
+  import type { IAlgorithmClass } from "../../scripts/alg/algorithm";
 
   export let imageAlg: IAlgorithmClass
   export let activeAlg: IAlgorithmClass

@@ -2,10 +2,11 @@
   import AlgListing from "./AlgListing.svelte";
   import AlgVisuals from "./AlgVisuals.svelte";
   import type { IDataCase, IOptions } from "../../scripts/types";
-  import { AlgBuilder,  type IAlgorithmClass } from "../../scripts/alg";
+  import { AlgBuilder } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";
   import CaseCardVertical from "../CaseCardVertical.svelte";
   import type { ComponentType } from "svelte";
+  import type { IAlgorithmClass } from "../../scripts/alg/algorithm";
 
   export let caso: IDataCase
   export let options: IOptions

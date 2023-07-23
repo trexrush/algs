@@ -2,9 +2,9 @@
 
 <script lang="ts">
   import type { ComponentType } from "svelte";
-  import type { IAlgorithmClass } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";
   import AlgListingVertical from "../AlgListingVertical.svelte";
+  import type { IAlgorithmClass } from "../../scripts/alg/algorithm";
 
   export let isActive: boolean
   export let algorithm: IAlgorithmClass
