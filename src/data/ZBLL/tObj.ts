@@ -1,4 +1,4 @@
-import type { IDataAlgset, ISheetsResponse, IOptions, IDataCaseList } from "../../scripts/types"
+import type { IDataAlgset, IOptions, IDataCaseList } from "../../scripts/types"
 import { createOptions } from "../../scripts/utilities";
 //@ts-expect-error
 import yml from './t.yml'

@@ -1,10 +1,13 @@
-import type { IPuzzleDefinitionMapping } from ".."
+import type { IPuzzleConfig } from ".";
 
-export const puzzleMegaminx: IPuzzleDefinitionMapping = {
+export const puzzleMegaminx: IPuzzleConfig = {
   type: 'megaminx',
   right: 'megaminx',
   left: 'megaminx-lefty',
   vc: 'mega',
   imgSource:"cubingjs",
   cancel: { quantumMoveOrder: () => 5 } ,
+  twistyPlayerConfig: {
+    cameraDist: 5.5
+  },
 }

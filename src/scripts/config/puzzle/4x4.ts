@@ -1,4 +1,5 @@
-import type { IPuzzleDefinitionMapping } from ".."
+import type { IPuzzleConfig } from "."
+
 
 const notation4 = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
@@ -13,7 +14,7 @@ const notation4 = (a: string, to: 'vc' | 'cubingjs'): string => {
   ).join(' ')    
 }
 
-export const puzzle4x4x4: IPuzzleDefinitionMapping = { 
+export const puzzle4x4x4: IPuzzleConfig = { 
   type: '4x4x4', 
   right: '4x4x4', 
   left: '4x4x4', 
@@ -21,7 +22,4 @@ export const puzzle4x4x4: IPuzzleDefinitionMapping = {
   cancel: { quantumMoveOrder: () => 4 }, 
   notation: (a, to) => { return notation4(a, to) },
   imgSource: "vc",
-  visualcubeConfig: {
-      view: 'plan',
-  },
 }

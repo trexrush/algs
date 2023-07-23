@@ -1,3 +1,4 @@
+import { useGrouping } from "../../scripts/config/set/cll";
 import type { IDataAlgset, IDataCaseList, IOptions } from "../../scripts/types"
 import { createOptions } from "../../scripts/utilities";
 //@ts-expect-error
@@ -17,6 +18,8 @@ const Options: IOptions = createOptions({
 })
 
 const _:IDataCaseList = yml
+
+console.log(useGrouping("oll", _))
 
 const CLLNoGrouping: IDataAlgset = {
     options: Options,
@@ -63,5 +66,6 @@ const CLLGroupByOLL: IDataAlgset = {
     },
   ]
 } 
+// const CLLGroupByOLL = ollGrouping(yml)
 
 export { CLLNoGrouping, CLLGroupByOLL }

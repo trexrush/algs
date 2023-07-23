@@ -1,13 +1,14 @@
+// STAY HERE
 export type twistyPuzzleType = "3x3x3" | "custom" | "2x2x2" | "4x4x4" | "5x5x5" | "6x6x6" | "7x7x7" | "40x40x40" | "megaminx" | "pyraminx" | "square1" | "clock" | "skewb" | "fto" | "gigaminx" | "master_tetraminx" | "kilominx" | "redi_cube" | "melindas2x2x2x2"
 export type twistyPuzzleTypeWithChirality = twistyPuzzleType | 'megaminx-lefty'
-
+// OLD
 interface IVCParams {
     stage?: string
     view?: "plan" | "trans"
     rot?: string
     colorScheme?: string
 }
-
+// OLD
 interface ITwistyParams {
     stage?: string
     rot?: string
@@ -15,7 +16,7 @@ interface ITwistyParams {
     cameraY?: number
     tempo?: number
 }
-
+// OLD
 export interface IOptions {
     name: string;
     puzzle: twistyPuzzleType
@@ -24,7 +25,7 @@ export interface IOptions {
     twistyplayerparams?: ITwistyParams
     note?: string
 }
-
+// OLD
 export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams: Required<ITwistyParams> } & Required<IOptions> = {
     name: "My Algset",
     imgSource: "vc",
@@ -46,63 +47,61 @@ export const DefaultOptions: { vcparams: Required<IVCParams>, twistyplayerparams
 }
 
 
+// SET / DATA
 // https://stackoverflow.com/questions/51352229/optional-generic-type-with-typescript
 export type IDataCaseList<T extends string = any> = Record<T, IDataCase> 
 export type IDataSetList<T extends string = any> = Record<T, IDataSet>
 export type IGroupElementList<T extends string = any> = Record<T, IDataSet | IDataCase>
 
+// ALG.TS
 export type TNotationTargets = 'vc' | 'cubingjs'
 
+// UNUSED
 export type LocalOptionsList<T extends string = any> = Record<T, ILocalSetOptions | ILocalCaseOptions> 
-export interface IGroupElement {
+
+// USED BELOW
+interface IGroupElement {
     name: string
     altNames?: string[]
     note?: string
 }
 //TODO: make iterable
+// FRONTEND / BELOW
 export interface IDataSet extends IGroupElement {
     children?: IGroupElementList
     image?: string
 }
 
 // TODO: make iterable
+// FRONTEND / BELOW
 export interface IDataCase extends IGroupElement {
     algs: IDataAlg[]
     recog?: string[],
     scrambles?: string[] // optional for now
 }
 
+// ALG.TS / ABOVE
 export interface IDataAlg {
     setup?: string
     alg: string
     isLefty?: boolean
-    tags?: IAlgTags[]
+    tags?: string[]
     note?: string
 }
 
-// TODO: rethink role of tags
-export type IAlgTags = "OH" | "BLD" | "BigCube" | "Swag" | "2Gen" | "New" | string
-
+// MOVE TO SET
 export interface IDataAlgset { options: IOptions, sets: IDataSet[] }
 
-export interface ISheetsResponse {
-    nameList: string[],
-    caseList: IDataCaseList
-}
+// UNUSED
 export interface ILocalSetOptions {
     loadCollapsed?: boolean
     personalNote?: string
 }
 
+// UNUSED
 export interface ILocalCaseOptions {
     personalNote?: string
     preferredAlg?: string // TODO: figure out how to to mark down preferredAlgs
     learnStatus?: "training" | "learned"
     trainerLists?: any[]
 }
-
-// AlgListing, TODO remove in future
-export const modifiersList = ["INVERSE", "BACK", "B", "LEFTY", "LEFT", "L", "DOUBLE", "X2", "TRIPLE", "X3"] as const
-export type TModifiersList = typeof modifiersList[number]
-
-export type modularPuzzleGroup<T> = Partial<Record<twistyPuzzleTypeWithChirality, T>>
