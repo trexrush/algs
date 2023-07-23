@@ -5,13 +5,13 @@ import merge from "ts-deepmerge";
 import { DefaultConfig } from "./defaults";
 
 export interface IVisualCubeConfig {
-  stage?: string
+  stage: string
   view: "plan" | "trans"
-  rot?: string
+  rot: string
 }
 export interface ITwistyPlayerConfig {
   stage: string
-  rot?: string
+  rot: string
   cameraDist: number
   cameraX: number
   cameraY: number

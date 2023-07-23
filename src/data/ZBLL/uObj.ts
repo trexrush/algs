@@ -1,22 +1,21 @@
-import type { IDataAlgset, IOptions, IDataCaseList } from "../../scripts/types"
-import { createOptions } from "../../scripts/utilities";
+import { IConfig, createConfig } from "../../scripts/config";
+import { puzzle3x3x3 } from "../../scripts/config/puzzle/3x3";
+import type { IAlgset, ICaseList } from "../../scripts/config/set"
 //@ts-expect-error
 import yml from './u.yml'
 
-const Options: IOptions = createOptions({
+const config: IConfig = createConfig(puzzle3x3x3, {
     name: "ZBLL",
-    puzzle: '3x3x3',
-    imgSource: "vc",
-    vcparams: {
+    visualCubeConfig: {
         view: 'plan',
     },
 })
 
-let _: IDataCaseList = yml
+let _: ICaseList = yml
 
 // TODO: check for errors, though not high priority since these if these calls fail, the site wont build
-const UNoGrouping: IDataAlgset = {
-    options: Options,
+const UNoGrouping: IAlgset = {
+    config: config,
     sets: [
         {
             name: "WIP Format",
@@ -25,8 +24,8 @@ const UNoGrouping: IDataAlgset = {
     ]
 }
 
-const UGroupByCP: IDataAlgset = {
-    options: Options,
+const UGroupByCP: IAlgset = {
+    config: config,
     sets: [
         {
             name: "Pure",
@@ -67,8 +66,8 @@ const UGroupByCP: IDataAlgset = {
     ]
 }
 
-const UGroupByBH: IDataAlgset = {
-    options: Options,
+const UGroupByBH: IAlgset = {
+    config: config,
     sets: [
         {
             name: "S",

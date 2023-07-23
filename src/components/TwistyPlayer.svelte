@@ -2,17 +2,17 @@
 <script lang="ts">
   import { TwistyPlayer } from "cubing/twisty";
   import type { IAlgorithmClass } from "../scripts/alg/algorithm";
-  import type { IOptions } from "../scripts/types";
+  import type { IConfig } from "../scripts/config";
 
   export let algorithm: IAlgorithmClass
-  export let options: IOptions
+  export let config: IConfig
   export let _2D = false
   
   export let drag = true;
   
   let tw: TwistyPlayer
   $: displayAlg = (algorithm.setup ? ". . " + algorithm.setup : ". ") + " . " + algorithm.notation('cubingjs') + " . ."
-  $: puzzleAngle = algorithm.isLefty ? -options.twistyplayerparams!.cameraX! : options.twistyplayerparams!.cameraX!
+  $: puzzleAngle = algorithm.isLefty ? -config.twistyPlayerConfig.cameraX : config.twistyPlayerConfig.cameraX
 
   let x: number
   let y: number
@@ -30,11 +30,11 @@
     twComponent = new TwistyPlayer({
       puzzle: algObj.puzzle,
       alg: displayAlg,
-      experimentalSetupAlg: options.twistyplayerparams!.rot!,
+      experimentalSetupAlg: config.twistyPlayerConfig.rot,
       visualization: _2D ? "experimental-2D-LL" : "3D",
-      experimentalStickering: options.twistyplayerparams!.stage!,
-      tempoScale: options.twistyplayerparams!.tempo!,
-      cameraLatitude: options.twistyplayerparams!.cameraY!,
+      experimentalStickering: config.twistyPlayerConfig.stage,
+      tempoScale: config.twistyPlayerConfig.tempo,
+      cameraLatitude: config.twistyPlayerConfig.cameraY,
       // TODO: same as above but just move it to another func in this file
       cameraLongitude: puzzleAngle,
       cameraDistance: algObj.puzzle == 'megaminx' ? 5.5 : 5,
@@ -65,8 +65,6 @@
   const twisty = (node: HTMLElement, alg: IAlgorithmClass) => {
     (async () => {
       tw = setPlayer(alg, tw)
-
-      // console.log(size)
 
       node.appendChild(tw);
       if (!_2D) {

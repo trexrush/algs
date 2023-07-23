@@ -1,5 +1,3 @@
-import merge from "ts-deepmerge";
-import { DefaultOptions, IOptions } from "./types";
 import tippy from 'tippy.js';
 import 'tippy.js/animations/scale-subtle.css';
 import '../../public/basic-tooltip.css'
@@ -62,5 +60,3 @@ export function tooltip(node: HTMLElement, params: any = {}) {
     destroy: () => tip.destroy(),
   };
 };
-
-export const createOptions = (o: IOptions): IOptions => { return merge(DefaultOptions, o) }

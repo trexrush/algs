@@ -1,17 +1,18 @@
 <script lang="ts">
   import AlgListing from "./AlgListing.svelte";
   import AlgVisuals from "./AlgVisuals.svelte";
-  import type { IDataCase, IOptions } from "../../scripts/types";
+  import type { ICase } from "../../scripts/config/set";
   import { AlgBuilder } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";
   import CaseCardVertical from "../CaseCardVertical.svelte";
   import type { ComponentType } from "svelte";
   import type { IAlgorithmClass } from "../../scripts/alg/algorithm";
+  import type { IConfig } from "../../scripts/config";
 
-  export let caso: IDataCase
-  export let options: IOptions
+  export let caso: ICase
+  export let config: IConfig
   export let Layout: ComponentType = CaseCardVertical
-  let algorithmList = caso.algs.map(a => AlgBuilder().withPuzzle(options.puzzle).withAlgData(a).build() as IAlgorithmClass)
+  let algorithmList = caso.algs.map(a => AlgBuilder().withPuzzle(config.type).withAlgData(a).build() as IAlgorithmClass)
 
   let activeAlg: IAlgorithmClass
   let activeElement: number = 0
@@ -27,7 +28,7 @@
     <AlgVisuals 
       activeAlg={activeAlg} 
       imageAlg={algorithmList[0]} 
-      options={options}
+      config={config}
       bind:toggleDisplay={toggleDisplay} 
       bind:isAlgVisDisplayed={toggled}
     />

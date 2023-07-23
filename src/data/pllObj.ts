@@ -1,22 +1,21 @@
-import type { IDataCaseList, IDataAlgset, IOptions } from "../scripts/types"
-import { createOptions } from "../scripts/utilities"
+import { IConfig, createConfig } from "../scripts/config";
+import { puzzle3x3x3 } from "../scripts/config/puzzle/3x3";
+import type { IAlgset, ICaseList } from "../scripts/config/set"
 //@ts-expect-error
 import yml from './pll.yml'
 
-const _: IDataCaseList = yml
+const _: ICaseList = yml
 
-const Options: IOptions = createOptions({
+const config: IConfig = createConfig(puzzle3x3x3, {
     name: "PLL",
-    puzzle: '3x3x3',
-    imgSource: "vc",
-    twistyplayerparams: {
+    twistyPlayerConfig: {
         cameraX: 30,
         rot: 'x2'
     },
 })
 
-const PLLNoGrouping: IDataAlgset = {
-    options: Options,
+const PLLNoGrouping: IAlgset = {
+    config: config,
     sets: [
         {
             name: "",
@@ -28,8 +27,8 @@ const PLLNoGrouping: IDataAlgset = {
     ]
 }
 
-const PLLGroupedBySet: IDataAlgset = {
-    options: Options,
+const PLLGroupedBySet: IAlgset = {
+    config: config,
     sets: [
         {
             name: "EPLL",

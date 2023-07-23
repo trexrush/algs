@@ -1,13 +1,16 @@
 
-import type { IDataAlg, IOptions, twistyPuzzleType } from "../types";
+import type { twistyPuzzleType } from "../types";
 import type { XOR } from "ts-essentials";
 import type { ITriggerClass } from "./trigger";
 import { expandTrigger, notationTrigger, toggleModifier } from "./trigger/actions";
 import { getModActionsFromText, type TModifierAliases } from "./trigger/modifier";
 import type { IAlgorithmClass } from "./algorithm";
 import { checkExpandible, expandAlg, mirrorAlg, notationAlg, returnAlgAsComponents } from "./algorithm/actions";
+import type { IConfig } from "../config";
+import type { IAlg } from "../config/set";
 
-export type TAlgCommon<T extends TAlgCommon<T>> = Pick<IOptions, "puzzle" | "imgSource"> & {
+export type TAlgCommon<T extends TAlgCommon<T>> = Pick<IConfig, "imgSource"> & {
+  puzzle: twistyPuzzleType
   isMirror: boolean
   mirror(): T
   notation(to: TNotationTargets): string
@@ -24,7 +27,7 @@ export const AlgBuilder = function () {
       }
     }},
     stage2: (algObj: Partial<IAlgorithmClass & ITriggerClass>) => { return {
-      withAlgData: (algo: IDataAlg) => {
+      withAlgData: (algo: IAlg) => {
         const newAlgObj = { ...algObj, ...algo,
           isLefty: algo.isLefty ?? false,
           isExpanded: false,
@@ -68,9 +71,9 @@ export const AlgBuilder = function () {
 
 // POOR MANS UNIT TESTING TODO: use jest
 // /* comment this line out to enable / disable
-const testData: IDataAlg = { alg: "R U R' U' R U2' R'" }
-const testData2: IDataAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }
-const test4x4Data: IDataAlg = { setup: "U", alg: "[OPP] [Ua_PERM]"}
+const testData: IAlg = { alg: "R U R' U' R U2' R'" }
+const testData2: IAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }
+const test4x4Data: IAlg = { setup: "U", alg: "[OPP] [Ua_PERM]"}
 const testTriggerData: string = "LEFT BACK SUNE"
 const testAlg = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData).build() as IAlgorithmClass
 const testAlg2 = AlgBuilder().withPuzzle('3x3x3').withAlgData(testData2).build() as IAlgorithmClass

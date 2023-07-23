@@ -5,13 +5,13 @@ import { LNoGrouping } from "../data/ZBLL/lObj";
 import { ParityPLLNoGrouping } from "../data/paritypllObj";
 import { TGroupByBH, TGroupByCP, TNoGrouping } from "../data/ZBLL/tObj";
 import { UGroupByBH, UGroupByCP, UNoGrouping } from "../data/ZBLL/uObj";
-import { MegaOLLNoGrouping } from "../data/MEGA/megaollObj";
+import { MegaOLLNoGrouping, MegaOLLGroupByOLL, MegaOLLGroupByFeature } from "../data/MEGA/megaollObj";
 import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter, MegaPLLNoGrouping } from "../data/MEGA/megapllObj";
 import { OLLGroupByEO, OLLNoGrouping } from "../data/ollObj";
 import { PLLGroupedBySet, PLLNoGrouping } from "../data/pllObj";
 import { ZBLSNoGrouping } from "../data/ZBLS/zblsObj";
-import type { IDataAlgset } from "./types";
 import type { XOR } from "ts-essentials";
+import type { IAlgset } from "./config/set";
 
 /* NAMING CONVENTION -
 - a new set's unsorted AlgSet goes as a new letter in the "a" object
@@ -22,7 +22,7 @@ import type { XOR } from "ts-essentials";
 export interface IPageData {
   path: string,
   name: string,
-  data: IDataAlgset
+  data: IAlgset
 }
 
 const p: Record<string, IPageData> = {
@@ -36,7 +36,7 @@ const p: Record<string, IPageData> = {
   eg1: { path: '222/EG1', name: "EG1", data: EG1GroupByOLL },
   cll: { path: '222/CLL', name: "CLL", data: CLLGroupByOLL },
   mpll: { path: 'mega/PLL', name: "Mega PLL", data: MegaPLLGroupByFeatures },
-  moll: { path: 'mega/OLL', name: "Mega OLL", data: MegaOLLNoGrouping },
+  moll: { path: 'mega/OLL', name: "Mega OLL", data: MegaOLLGroupByFeature },
   bcppll: { path: 'bigs/ParityPLL', name: "Parity PLL", data: ParityPLLNoGrouping },
 }
 
@@ -63,8 +63,10 @@ const a: Record<string, IPageData> = {
   b5: { path: p.zbllu.path + '/bh', name: p.zbllu.name, data: UGroupByBH },
   a7: { path: p.eg1.path + '/set', name: p.eg1.name, data: EG1GroupByOLL },
   a8: { path: p.cll.path + '/set', name: p.cll.name, data: CLLGroupByOLL },
-  a9: { path: p.mpll.path + '/set', name: p.mpll.name, data: MegaPLLGroupByLetter },
-  b9: { path: p.mpll.path + '/group', name: p.moll.name, data: MegaPLLGroupByFeatures },
+  a9: { path: p.moll.path + '/set', name: p.moll.name, data: MegaOLLGroupByOLL },
+  b9: { path: p.moll.path + '/set', name: p.moll.name, data: MegaOLLGroupByFeature },
+  a10: { path: p.mpll.path + '/set', name: p.mpll.name, data: MegaPLLGroupByLetter },
+  b10: { path: p.mpll.path + '/group', name: p.moll.name, data: MegaPLLGroupByFeatures },
 }
 
 export const PageRoutes: IPageData[] = Object.values(a)

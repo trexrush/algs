@@ -37,7 +37,7 @@
     -
      alg: L' BL' L F' L' BL L F
      isLefty: true
-    comment: 3x3 transfer (t)
+     comment: 3x3 transfer (t)
 '2C':
     name: 2C
     altNames: ['Wide L']
@@ -53,12 +53,12 @@
     altNames: ['L']
     algs:
     -
-     alg: L' BL L F' L' BL' L F
-     isLefty: true
-    -
      alg: F' L' U' L U' L' U2 L F
      isLefty: true
-    comment: 3x3 transfer (l)
+    -
+     alg: L' BL L F' L' BL' L F
+     isLefty: true
+     comment: 3x3 transfer (l)
 '3A+':
     name: 3A+
     altNames: ['Sune']

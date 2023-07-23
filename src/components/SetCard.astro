@@ -1,12 +1,13 @@
 ---
-import type { IOptions, IDataSet  } from "../scripts/types";
+import type { IConfig } from "../scripts/config";
+import type { ISet  } from "../scripts/config/set";
 import CaseCard from "./templates/CaseCard.svelte";
 
 interface Props {
-  set: IDataSet
-  options: IOptions
+  set: ISet
+  config: IConfig
 }
-const { set, options } = Astro.props
+const { set, config } = Astro.props
 ---
 
 <details open
@@ -27,9 +28,9 @@ const { set, options } = Astro.props
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
         setOrCase.hasOwnProperty("algs") ?
-          <CaseCard client:visible caso={setOrCase} options={options}/>
+          <CaseCard client:visible caso={setOrCase} config={config}/>
         :
-          <Astro.self set={setOrCase} options={options} />
+          <Astro.self set={setOrCase} config={config} />
       ))
     }
   </div>

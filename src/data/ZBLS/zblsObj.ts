@@ -1,27 +1,26 @@
-import type { IDataAlgset, IOptions } from "../../scripts/types"
-import { createOptions } from "../../scripts/utilities"
+import { IConfig, createConfig } from "../../scripts/config";
+import { puzzle3x3x3 } from "../../scripts/config/puzzle/3x3";
+import type { IAlgset, ICaseList } from "../../scripts/config/set"
 
 //@ts-expect-error
 import yml from './zbls.yml'
 
-let Options: IOptions = createOptions({
+let config: IConfig = createConfig(puzzle3x3x3, {
     name: "ZBLS",
-    puzzle: '3x3x3',
-    imgSource: "vc",
-    vcparams: {
+    visualCubeConfig: {
         stage: 'vh',
         view: 'trans',
         rot: "y'",
     },
-    twistyplayerparams: {
+    twistyPlayerConfig: {
         stage: 'ZBLS',
     },
 })
 
-let _:IDataAlgset = yml
+let _:ICaseList = yml
 
-const ZBLSNoGrouping: IDataAlgset = {
-    options: Options,
+const ZBLSNoGrouping: IAlgset = {
+    config: config,
     sets: [
         {
             name: "WIP Format",

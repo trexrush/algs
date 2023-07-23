@@ -1,24 +1,21 @@
-import type { IDataAlgset, IOptions, IDataCaseList } from "../../scripts/types"
-import { createOptions } from "../../scripts/utilities"
+import { createConfig, type IConfig } from "../../scripts/config"
+import { puzzleMegaminx } from "../../scripts/config/puzzle/megaminx"
+import type { IAlgset, ICaseList } from "../../scripts/config/set"
 //@ts-expect-error
 import yml from './megapll.yml'
 
-const Options: IOptions = createOptions({
+const config: IConfig = createConfig(puzzleMegaminx, {
   name: "Megaminx PLL",
-  puzzle: 'megaminx',
-  imgSource: "cubingjs",
-  twistyplayerparams: {
+  twistyPlayerConfig: {
     rot: 'x2 y3',
-    cameraX: 10,
     cameraY: 45,
-    tempo: 3,
   },
 })
 
-let _: IDataCaseList = yml
+let _: ICaseList = yml
 
-const MegaPLLNoGrouping: IDataAlgset = {
-  options: Options,
+const MegaPLLNoGrouping: IAlgset = {
+  config: config,
   sets: [
     {
       name: "WIP Format",
@@ -27,8 +24,8 @@ const MegaPLLNoGrouping: IDataAlgset = {
   ]
 }
 
-const MegaPLLGroupByLetter: IDataAlgset = {
-  options: Options,
+const MegaPLLGroupByLetter: IAlgset = {
+  config: config,
   sets: [
     {
       name: "A",
@@ -158,8 +155,8 @@ const MegaPLLGroupByLetter: IDataAlgset = {
   ]
 }
 
-const MegaPLLGroupByFeatures: IDataAlgset = {
-  options: Options,
+const MegaPLLGroupByFeatures: IAlgset = {
+  config: config,
   sets: [
     {
       name: "CPLL",

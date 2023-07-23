@@ -1,20 +1,19 @@
-import type { IOptions, IDataAlgset, IDataCaseList } from "../scripts/types"
-import { createOptions } from "../scripts/utilities"
+import { IConfig, createConfig } from "../scripts/config";
+import { puzzle3x3x3 } from "../scripts/config/puzzle/3x3";
+import type { IAlgset, ICaseList } from "../scripts/config/set"
 //@ts-expect-error
 import yml from './oll.yml' // REPLACE WITH THE SET YAML
 
 // note that by default everything will be assumed to be righty. you MUST indicate that an alg is lefty if it is.
 // assume starting rotation or algvis to be a righty view, the code will flip it for any algs marked lefty.
-const Options: IOptions = createOptions({
+const config: IConfig = createConfig(puzzle3x3x3, {
         name: "",
-        imgSource: "vc",
-        puzzle: '3x3x3',
 })
 
-let _: IDataCaseList = yml
+let _: ICaseList = yml
 
-const VIEWNAMEHERE: IDataAlgset = {
-    options: Options,
+const VIEWNAMEHERE: IAlgset = {
+    config: config,
     sets: [
         {
             name: "TEMPLATE SET",

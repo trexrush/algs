@@ -1,27 +1,27 @@
-import type { IDataAlgset, IOptions, IDataCaseList } from "../scripts/types"
-import { createOptions } from "../scripts/utilities";
+
+import { createConfig, type IConfig } from '../scripts/config'
+import { puzzle3x3x3 } from '../scripts/config/puzzle/3x3'
+import type { IAlgset, ICaseList } from '../scripts/config/set'
 //@ts-expect-error
 import yml from './oll.yml'
 
-const Options: IOptions = createOptions({
+const config: IConfig = createConfig(puzzle3x3x3, {
     name: "OLL",
-    puzzle: '3x3x3',
-    imgSource: "vc",
-    vcparams: {
+    visualCubeConfig: {
         stage: 'oll',
         view: 'plan',
     },
-    twistyplayerparams: {
+    twistyPlayerConfig: {
         cameraX: 30,
         stage: 'OLL'
     },
 })
 
-let _: IDataCaseList = yml
+let _: ICaseList = yml
 
 // TODO: check for errors, though not high priority since these if these calls fail, the site wont build
-const OLLNoGrouping: IDataAlgset = {
-    options: Options,
+const OLLNoGrouping: IAlgset = {
+    config: config,
     sets: [
         {
             name: "WIP Format",
@@ -30,8 +30,8 @@ const OLLNoGrouping: IDataAlgset = {
     ]
 }
 
-const OLLGroupByEO: IDataAlgset = {
-    options: Options,
+const OLLGroupByEO: IAlgset = {
+    config: config,
     sets: [
         {
             name: "Dot",

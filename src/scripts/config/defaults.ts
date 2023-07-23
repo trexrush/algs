@@ -9,7 +9,7 @@ const DefaultPuzzleConfig: IJustPuzzleConfig = {
   left: '3x3x3', 
   vc: 3, 
   imgSource: "none",
-  note: ""
+  note: ''
 }
 
 const DefaultSetConfig: IJustSetConfig= {
@@ -17,16 +17,18 @@ const DefaultSetConfig: IJustSetConfig= {
 }
 
 const DefaultVisualCubeConfig: IVisualCubeConfig = {
-  stage: "",
-  view: "plan",
+  stage: '',
+  view: 'plan',
+  rot: ''
 }
 
 const DefaultTwistyPlayerConfig: ITwistyPlayerConfig = {
-  stage: "full",
+  stage: 'full',
   cameraX: 30,
   cameraY: 30,
   tempo: 4,
   cameraDist: 5,
+  rot: ''
 }
 
 export const DefaultConfig: IConfig = merge(

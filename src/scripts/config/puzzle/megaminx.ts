@@ -8,6 +8,8 @@ export const puzzleMegaminx: IPuzzleConfig = {
   imgSource:"cubingjs",
   cancel: { quantumMoveOrder: () => 5 } ,
   twistyPlayerConfig: {
-    cameraDist: 5.5
+    cameraDist: 5.5,
+    cameraX: 10,
+    tempo: 3,
   },
 }

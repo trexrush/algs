@@ -1,22 +1,23 @@
 ---
   // import SetCard from "../components/SetCard.svelte";
   import SetCard from "../components/SetCard.astro";
-  import type { IOptions, IDataSet } from "../scripts/types";
+import type { IConfig } from "../scripts/config";
+  import type { ISet } from "../scripts/config/set";
 
   interface Props {
-    options: IOptions
-    sets: IDataSet[]
+    config: IConfig
+    sets: ISet[]
   }
-  const { sets, options } = Astro.props
+  const { sets, config } = Astro.props
 ---
 
 <div id="collapse" class=" z-20 cursor-pointer sticky top-3 sm:top-12 bg-stone-200 dark:bg-stone-800 rounded-md p-1 px-2 
 hover:brightness-110 hover:-translate-y-[1px] transition-all select-none">Collapse / Expand all Sets</div>
 
-<div class=" relative text-3xl w-full text-center my-5">{options.name}</div>
+<div class=" relative text-3xl w-full text-center my-5">{config.name}</div>
 
 {sets.map((set) => (
-  <SetCard set={set} options={options} />
+  <SetCard set={set} config={config} />
 ))}
 
 <script>

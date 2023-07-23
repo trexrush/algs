@@ -22,5 +22,5 @@ const { name, data } = Astro.props
 
 <Page title={name}>
   <Navbar slot="navbar" />
-  <VerticalLayout options={data.options} sets={data.sets} />
+  <VerticalLayout config={data.config} sets={data.sets} />
 </Page>

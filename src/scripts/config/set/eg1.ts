@@ -7,7 +7,7 @@ import { puzzle2x2x2 } from "../puzzle/2x2"
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzle2x2x2
 const setOptions: ISetConfig = {
-  name: "CLL",
+  name: "EG1",
   visualCubeConfig: {
     rot: "y",
   },
@@ -29,7 +29,7 @@ const caseNames = [
 ] as const
 type ICaseName = typeof caseNames[number]
 
-const useGrouping = (grouping: "none" | "oll", data: ICaseList): IAlgset => {
+const useGrouping = (grouping: "none" | "oll", data: ICaseList) => {
   const ch = (list: ICaseName[]) => { return Object.assign(listFromData<ICaseName>(list, data)) }
 
   const noGrouping = (): IAlgset => {
