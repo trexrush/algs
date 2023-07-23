@@ -6,9 +6,6 @@ import yml from './h.yml'
 
 const config: IConfig = createConfig(puzzle3x3x3, {
     name: "ZBLL",
-    visualCubeConfig: {
-        view: 'plan',
-    },
 })
 
 let _: ICaseList = yml

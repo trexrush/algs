@@ -6,9 +6,6 @@ import yml from './t.yml'
 
 const config: IConfig = createConfig(puzzle3x3x3, {
     name: "ZBLL",
-    visualCubeConfig: {
-        view: 'plan',
-    },
 })
 
 

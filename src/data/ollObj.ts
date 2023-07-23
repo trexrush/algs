@@ -9,10 +9,8 @@ const config: IConfig = createConfig(puzzle3x3x3, {
     name: "OLL",
     visualCubeConfig: {
         stage: 'oll',
-        view: 'plan',
     },
     twistyPlayerConfig: {
-        cameraX: 30,
         stage: 'OLL'
     },
 })

@@ -4,6 +4,8 @@ import { createConfig } from ".."
 import type { IPuzzleConfig } from "../puzzle"
 import { puzzleMegaminx } from "../puzzle/megaminx"
 
+// TODO: define constants for each alg like pokePLL altNames and alg mirrors / inverses
+
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzleMegaminx
 const setOptions: ISetConfig = {
