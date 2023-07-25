@@ -92,7 +92,7 @@ export const NavbarRoutes = [
           { name: a.pll.name, href: "/algs/" + a.pll.path },
         ],
       },
-      { name: "ZB", // href: "/algs/zbll", 
+      { name: "ZB",
         folder: [
           { name: a.zbls.name, href: "/algs/" + a.zbls.path },
           { name: a.zbllt.name, href: "/algs/" + a.zbllt.path },
@@ -103,7 +103,7 @@ export const NavbarRoutes = [
       },
     ], 
   },
-  { name: "2x2", href: "/algs/2x2", icon: "cubing-icon event-222", 
+  { name: "2x2", icon: "cubing-icon event-222", 
     folder: [
       { name: "EG",
         folder: [
@@ -113,14 +113,14 @@ export const NavbarRoutes = [
       }
     ] 
   },
-  { name: "Big Cube", href: "/algs/bigs", icon: "cubing-icon event-444", 
+  { name: "Big Cube", icon: "cubing-icon event-444", 
     folder: [ 
       { name: a.bcppll.name, href: "/algs/" + a.bcppll.path }, 
     ],
   },
-  { name: "Megaminx", href: "/algs/mega", icon: "cubing-icon event-minx", 
+  { name: "Megaminx", icon: "cubing-icon event-minx", 
     folder: [ 
-      { name: "2LLL", // href: "/algs/zbll", 
+      { name: "2LLL", 
         folder: [
           { name: "OLL", href: "/algs/" + a.moll.path }, 
           { name: "PLL", href: "/algs/" + a.mpll.path }, 
