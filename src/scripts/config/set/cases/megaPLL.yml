@@ -1,0 +1,683 @@
+
+A1+:
+  name: A1+
+  mirror: A1-
+  altNames: ["Rattata"]
+A1-:
+  name: A1-
+  mirror: A1+
+  altNames: ["Spearow"]
+A2+:
+  name: A2+
+  mirror: A2-
+  altNames: ["Raticate"]
+A2-:
+  name: A2-
+  mirror: A2+
+  altNames: ["Fearow"]
+B1+:
+  name: B1+
+  mirror: B1-
+  altNames: ["Vulpix"]
+  recog:
+    - fat L headlight and adj cycle in edges
+B1-:
+  name: B1-
+  mirror: B1+
+  altNames: ["Growlithe"]
+  recog:
+    - fat R headlight and adj cycle in edges
+B2+:
+  name: B2+
+  mirror: B2-
+  altNames: ["Ninetales"]
+  recog:
+    - fat L headlight and no adj cycle in edges
+B2-:
+  name: B2-
+  mirror: B2+
+  altNames: ["Arcanine"]
+  recog:
+    - fat R headlight and no adj cycle in edges
+C1+:
+  name: C1+
+  mirror: C1-
+  altNames: ["Oddish"]
+C1-:
+  name: C1-
+  mirror: C1+
+  altNames: ["Bellsprout"]
+C2+:
+  name: C2+
+  mirror: C2-
+  altNames: ["Gloom"]
+C2-:
+  name: C2-
+  mirror: C2+
+  altNames: ["Weepinbell"]
+C3+:
+  name: C3+
+  mirror: C3-
+  altNames: ["Vileplume"]
+C3-:
+  name: C3-
+  mirror: C3+
+  altNames: ["Victreebell"]
+C4+:
+  name: C4+
+  mirror: C4-
+  altNames: ["Caterpie"]
+C4-:
+  name: C4-
+  mirror: C4+
+  altNames: ["Weedle"]
+C5+:
+  name: C5+
+  mirror: C5-
+  altNames: ["Metapod"]
+C5-:
+  name: C5-
+  mirror: C5+
+  altNames: ["Kakuna"]
+C6+:
+  name: C6+
+  mirror: C6-
+  altNames: ["Butterfree"]
+C6-:
+  name: C6-
+  mirror: C6+
+  altNames: ["Beedrill"]
+D+:
+  name: D+
+  mirror: D-
+  altNames: ["Hitmonlee"]
+D-:
+  name: D-
+  mirror: D+
+  altNames: ["Hitmonchan"]
+E1:
+  name: E1
+  mirror: E1
+  altNames: ["Electabuzz"]
+E2:
+  name: E2
+  mirror: E2
+  altNames: ["Magmar"]
+E3:
+  name: E3
+  mirror: E3
+  altNames: ["Jynx"]
+F1+:
+  name: F1+
+  mirror: F1-
+  altNames: ["Chansey"]
+F1-:
+  name: F1-
+  mirror: F1+
+  altNames: ["Kangaskhan"]
+F2+:
+  name: F2+
+  mirror: F2-
+  altNames: ["Clefairy"]
+F2-:
+  name: F2-
+  mirror: F2+
+  altNames: ["Cubone"]
+F3+:
+  name: F3+
+  mirror: F3-
+  altNames: ["Clefable"]
+F3-:
+  name: F3-
+  mirror: F3+
+  altNames: ["Marowak"]
+F4+:
+  name: F4+
+  mirror: F4-
+  altNames: ["Jigglypuff"]
+F4-:
+  name: F4-
+  mirror: F4+
+  altNames: ["Meowth"]
+F5+:
+  name: F5+
+  mirror: F5-
+  altNames: ["Wigglytuff"]
+F5-:
+  name: F5-
+  mirror: F5+
+  altNames: ["Persian"]
+G1+:
+  name: G1+
+  mirror: G1-
+  altNames: ["Scyther"]
+  recog: 
+    - no pseudoblock
+G1-:
+  name: G1-
+  mirror: G1+
+  altNames: ["Pinsir"]
+  recog: 
+    - no pseudoblock
+G2+:
+  name: G2+
+  mirror: G2-
+  altNames: ["Snorlax"]
+  recog: 
+    - pseudoblocks
+G2-:
+  name: G2-
+  mirror: G2+
+  altNames: ["Mr. Mime"]
+  recog: 
+    - pseudoblocks
+H1+:
+  name: H1+
+  mirror: H1-
+  altNames: ["Pikachu"]
+H1-:
+  name: H1-
+  mirror: H1+
+  altNames: ["Ponyta"]
+H2+:
+  name: H2+
+  mirror: H2-
+  altNames: ["Raichu"]
+H2-:
+  name: H2-
+  mirror: H2+
+  altNames: ["Rapidash"]
+I1+:
+  name: I1+
+  mirror: I1-
+  altNames: ["Abra"]
+I1-:
+  name: I1-
+  mirror: I1+
+  altNames: ["Machop"]
+I2+:
+  name: I2+
+  mirror: I2-
+  altNames: ["Kadabra"]
+I2-:
+  name: I2-
+  mirror: I2+
+  altNames: ["Machoke"]
+I3+:
+  name: I3+
+  mirror: I3-
+  altNames: ["Alacazam"]
+I3-:
+  name: I3-
+  mirror: I3+
+  altNames: ["Machamp"]
+I4+:
+  name: I4+
+  mirror: I4-
+  altNames: ["Geodude"]
+I4-:
+  name: I4-
+  mirror: I4+
+  altNames: ["Gastly"]
+I5+:
+  name: I5+
+  mirror: I5-
+  altNames: ["Graveler"]
+I5-:
+  name: I5-
+  mirror: I5+
+  altNames: ["Haunter"]
+I6+:
+  name: I6+
+  mirror: I6-
+  altNames: ["Golem"]
+I6-:
+  name: I6-
+  mirror: I6+
+  altNames: ["Gengar"]
+J1+:
+  name: J1+
+  mirror: J1-
+  altNames: ["Nirodan♀️"]
+J1-:
+  name: J1-
+  mirror: J1+
+  altNames: ["Nidoran♂️"]
+J2+:
+  name: J2+
+  mirror: J2-
+  altNames: ["Nidorina"]
+J2-:
+  name: J2-
+  mirror: J2+
+  altNames: ["Nidorino"]
+J3+:
+  name: J3+
+  mirror: J3-
+  altNames: ["Nidoqueen"]
+J3-:
+  name: J3-
+  mirror: J3+
+  altNames: ["Nidoking"]
+K1+:
+  name: K1+
+  mirror: K1-
+  altNames: ["Diglett"]
+  recog:
+    - S perm of pseudobars
+    - "2 disjoint adj swaps of corners form a counter-clockwise U, with the bottom of the U on the L side: starting move rotates toward the flow of the adj cycles"
+K1-:
+  name: K1-
+  mirror: K1+
+  altNames: ["Zubat"]
+  recog:
+    - S perm of pseudobars
+    - "2 disjoint adj swaps of corners form a clockwise U, with the bottom of the U on the L side: starting move rotates toward the flow of the adj cycles"
+K2+:
+  name: K2+
+  mirror: K2-
+  altNames: ["Dugtrio"]
+  recog:
+    - headlights CP case with arrow / pseudobar on both sides of the headlights facing the same way, nonheadlight corner on FR with a horizontal arrow
+K2-:
+  name: K2-
+  mirror: K2+
+  altNames: ["Golbat"]
+  recog:
+    - headlights CP case with arrow / pseudobar on both sides of the headlights facing the same way, nonheadlight corner on FR with a vertical arrow
+L1:
+  name: L1
+  mirror: L1
+  altNames: ["Magikarp"]
+  recog:
+    - antiZ block in headlight-free corner
+L2:
+  name: L2
+  mirror: L2
+  altNames: ["Gyarados"]
+  recog:
+    - antiZ block in headlight-free corner, pseudobars in front
+L3+:
+  name: L3+
+  mirror: L3-
+  altNames: ["Tangela"]
+  recog: 
+    - pseudoblock in headlight-free corner + pseudobar
+L3-:
+  name: L3-
+  mirror: L3+
+  altNames: ["Lickitung"]
+  recog: 
+    - pseudoblock in headlight-free corner + pseudobar
+L4+:
+  name: L4+
+  mirror: L4-
+  altNames: ["Tauros"]
+L4-:
+  name: L4-
+  mirror: L4+
+  altNames: ["Onix"]
+L5+:
+  name: L5+
+  mirror: L5-
+  altNames: ["Exeggcute"]
+L5-:
+  name: L5-
+  mirror: L5+
+  altNames: ["Rhyhron"]
+L6+:
+  name: L6+
+  mirror: L6-
+  altNames: ["Exeggutor"]
+L6-:
+  name: L6-
+  mirror: L6+
+  altNames: ["Rhydon"]
+M:
+  name: M
+  mirror: M
+  altNames: ["Mew"]
+  recog:
+    - 2 lines
+N1+:
+  name: N1+
+  mirror: N1-
+  altNames: ["Grimer"]
+  recog: 
+    - AUF and find the EP case idk tbh
+N1-:
+  name: N1-
+  mirror: N1+
+  altNames: ["Koffing"]
+  recog: 
+    - AUF and find the EP case idk tbh
+N2+:
+  name: N2+
+  mirror: N2-
+  altNames: ["Muk"]
+N2-:
+  name: N2-
+  mirror: N2+
+  altNames: ["Weezing"]
+P1+:
+  name: P1+
+  mirror: P1-
+  altNames: ["Shelder"]
+P1-:
+  name: P1-
+  mirror: P1+
+  altNames: ["Staryu"]
+P2+:
+  name: P2+
+  mirror: P2-
+  altNames: ["Cloyster"]
+P2-:
+  name: P2-
+  mirror: P2+
+  altNames: ["Starmie"]
+P3+:
+  name: P3+
+  mirror: P3-
+  altNames: ["Horsea"]
+P3-:
+  name: P3-
+  mirror: P3+
+  altNames: ["Goldeen"]
+P4+:
+  name: P4+
+  mirror: P4-
+  altNames: ["Kingdre"]
+P4-:
+  name: P4-
+  mirror: P4+
+  altNames: [Seaking"]
+Q1+:
+  name: Q1+
+  mirror: Q1-
+  altNames: ["Mankey"]
+  recog: 
+    - BL BR R edge cycle, L F edge swap
+Q1-:
+  name: Q1-
+  mirror: Q1+
+  altNames: ["Drowzee"]
+  recog: 
+    - F R BR edge cycle, L BL edge swap
+    
+Q2+:
+  name: Q2+
+  mirror: Q2-
+  altNames: ["Primeape"]
+  recog:
+    - 2 adj cycles (adj swap edge in L, noswap edge in F)
+    - S perm pseudo (first 3 moves move one pseudobar to where the other was)
+Q2-:
+  name: Q2-
+  mirror: Q2+
+  altNames: ["Hypno"]
+  recog:
+    - 2 adj cycles (adj swap edge in L, noswap edge in BL)
+    - S perm pseudo (first 3 moves move one pseudobar to where the other was)
+R1+:
+  name: R1+
+  mirror: R1-
+  altNames: ["Psyduck"]
+R1-:
+  name: R1-
+  mirror: R1+
+  altNames: ["Slowpoke"]
+R2+:
+  name: R2+
+  mirror: R2-
+  altNames: ["Golduck"]
+R2-:
+  name: R2-
+  mirror: R2+
+  altNames: ["Slowbro"]
+R3+:
+  name: R3+
+  mirror: R3-
+  altNames: ["Tentacool"]
+R3-:
+  name: R3-
+  mirror: R3+
+  altNames: ["Krabby"]
+R4+:
+  name: R4+
+  mirror: R4-
+  altNames: ["Tentacruel"]
+R4-:
+  name: R4-
+  mirror: R4+
+  altNames: ["Kingler"]
+S1+:
+  name: S1+
+  mirror: S1-
+  altNames: ["Farfetch'd"]
+S1-:
+  name: S1-
+  mirror: S1+
+  altNames: ["Lapras"]
+S2+:
+  name: S2+
+  mirror: S2-
+  altNames: ["Doduo"]
+S2-:
+  name: S2-
+  mirror: S2+
+  altNames: ["Seel"]
+S3+:
+  name: S3+
+  mirror: S3-
+  altNames: ["Dodrio"]
+S3-:
+  name: S3-
+  mirror: S3+
+  altNames: ["Dewgong"]
+S4+:
+  name: S4+
+  mirror: S4-
+  altNames: ["Pidgey"]
+S4-:
+  name: S4-
+  mirror: S4+
+  altNames: ["Poliwag"]
+S5+:
+  name: S5+
+  mirror: S5-
+  altNames: ["Pidgeotto"]
+S5-:
+  name: S5-
+  mirror: S5+
+  altNames: ["Poliwhirl"]
+S6+:
+  name: S6+
+  mirror: S6-
+  altNames: ["Pidgeot"]
+S6-:
+  name: S6-
+  mirror: S6+
+  altNames: ["Poliwrath"]
+T1:
+  name: T1
+  mirror: T1
+  altNames: ["Aerodactyl"]
+T2+:
+  name: T2+
+  mirror: T2-
+  altNames: ["Omanyte"]
+T2-:
+  name: T2-
+  mirror: T2+
+  altNames: ["Kabuto"]
+T3+:
+  name: T3+
+  mirror: T3-
+  altNames: ["Omastar"]
+T3-:
+  name: T3-
+  mirror: T3+
+  altNames: ["Kabutops"]
+T4+:
+  name: T4+
+  mirror: T4-
+  altNames: ["Ditto"]
+T4-:
+  name: T4-
+  mirror: T4+
+  altNames: ["Porygon"]
+U1+:
+  name: U1+
+  mirror: U1-
+  altNames: ["Ekans"]
+U1-:
+  name: U1-
+  mirror: U1+
+  altNames: ["Sandshrew"]
+U2+:
+  name: U2+
+  mirror: U2-
+  altNames: ["Arbok"]
+U2-:
+  name: U2-
+  mirror: U2+
+  altNames: ["Sandslash"]
+V1+:
+  name: V1+
+  mirror: V1-
+  altNames: ["Magnemite"]
+V1-:
+  name: V1-
+  mirror: V1+
+  altNames: ["Voltorb"]
+V2+:
+  name: V2+
+  mirror: V2-
+  altNames: ["Magneton"]
+V2-:
+  name: V2-
+  mirror: V2+
+  altNames: ["Electrode"]
+V3+:
+  name: V3+
+  mirror: V3-
+  altNames: ["Paras"]
+V3-:
+  name: V3-
+  mirror: V3+
+  altNames: ["Venonat"]
+V4+:
+  name: V4+
+  mirror: V4-
+  altNames: ["Parasect"]
+V4-:
+  name: V4-
+  mirror: V4+
+  altNames: ["Venomoth"]
+W:
+  name: W
+  mirror: W
+  altNames: ["Mewtwo"]
+X1:
+  name: X1
+  mirror: X1
+  altNames: ["Eevee"]
+  recog:
+    - All Z / pseudoblock corners (a 2x3 pseudoblock is enough to identify though)
+X2:
+  name: X2
+  mirror: X2
+  altNames: ["Vaporeon"]
+  recog:
+    - Pseudoblock and no other pseudo stuff
+X3:
+  name: X3
+  mirror: X3
+  altNames: ["Jolteon"]
+  recog: Pseudoline in BL
+X4:
+  name: X4
+  mirror: X4
+  altNames: ["Flareon"]
+  recog: 
+    - pointing away headlights in L and R
+    - adj colors A and B - A corner and B edge on L face opposide B corner and A edge in R face, aligned to F
+X5+:
+  name: X5+
+  mirror: X5-
+  altNames: ["Bulbasaur"]
+  recog:
+    - Pseudobar J perm
+    - Pseudobar FB + Pseudoline on L with L headlights facing BL
+    - Pseudoblock M perm, blocks on FR LB with vertical arrow in FL (arrow is part of a pseudoline)
+X5-:
+  name: X5-
+  mirror: X5+
+  altNames: ["Squirtle"]
+  recog:
+    - Pseudobar J perm
+    - Pseudobar FL + Pseudoline on L with L headlights facing FL 
+    - Pseudoblock M perm, blocks on FL B with vertical arrow in BL (arrow is part of a pseudoline)
+
+X6+:
+  name: X6+
+  mirror: X6-
+  altNames: ["Ivysaur"]
+  recog:
+    - Pseudobar F Perm
+X6-:
+  name: X6-
+  mirror: X6+
+  altNames: ["Wartortle"]
+  recog: 
+    -  Pseudobar F Perm
+X7+:
+  name: X7+
+  mirror: X7-
+  altNames: ["Venusaur"]
+  recog: 
+    - solved edge CCW of solved corner
+    - CW order = E C
+X7-:
+  name: X7-
+  mirror: X7+
+  altNames: ["Blastoise"]
+  recog: 
+    - solved edge CW of solved corner
+    - CW order = C E 
+Y1+:
+  name: Y1+
+  mirror: Y1-
+  altNames: ["Charmander"]
+Y1-:
+  name: Y1-
+  mirror: Y1+
+  altNames: ["Dratini"]
+Y2+:
+  name: Y2+
+  mirror: Y2-
+  altNames: ["Charmeleon"]
+Y2-:
+  name: Y2-
+  mirror: Y2+
+  altNames: ["Dragonair"]
+Y3+:
+  name: Y3+
+  mirror: Y3-
+  altNames: ["Charizard"]
+Y3-:
+  name: Y3-
+  mirror: Y3+
+  altNames: ["Dragonite"]
+Z1:
+  name: Z1
+  mirror: Z1
+  altNames: ["Articuno"]
+Z2:
+  name: Z2
+  mirror: Z2
+  altNames: ["Zapdos"]
+Z3:
+  name: Z3
+  mirror: Z3
+  altNames: ["Moltres"]

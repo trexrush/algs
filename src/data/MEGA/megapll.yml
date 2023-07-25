@@ -1,7 +1,5 @@
 
 A1+:
-  name: A1+
-  altNames: ["Rattata"]
   algs:
     - 
       setup: U
@@ -15,8 +13,6 @@ A1+:
     #   isLefty: true
   note: can be a 3x3 transfer (A Perm), but mega alg is better
 A1-:
-  name: A1-
-  altNames: ["Spearow"]
   algs:
     - 
       alg: "[LEFT INVERSE MEGASLEDGE] U L F L' [LEFT SEXY] [LEFT SLEDGE] F'"
@@ -26,8 +22,6 @@ A1-:
     #   isLefty: true
   note: can be a 3x3 transfer (A Perm), but mega alg is better
 A2+:
-  name: A2+
-  altNames: ["Raticate"]
   algs:
     - 
       alg: L U2' L F L' [LEFT UNSEXY] F' L' U' L U2' L'
@@ -37,8 +31,6 @@ A2+:
       # alg: BL L2 U' R' U L' U' R U L' BL'
       # isLefty: true
 A2-:
-  name: A2-
-  altNames: ["Fearow"]
   algs:
     - 
       alg: L U2 L' U L F [LEFT SEXY] L F' L' U2 L'
@@ -48,26 +40,16 @@ A2-:
       # alg: BL L U' R' U L U' R U L2' BL'
       # isLefty: true
 B1+:
-  name: B1+
-  altNames: ["Vulpix"]
   algs:
     - 
       alg: "[BACK LEFT SEXY] L' U2' L U L U' L2' U2 L"
       isLefty: true
-  recog:
-    - fat L headlight and adj cycle in edges
 B1-:
-  name: B1-
-  altNames: ["Growlithe"]
   algs:
     - 
       alg: "[LEFT SEXY] L U2 L' U' L' U L2 U2' L'"
       isLefty: true
-  recog:
-    - fat R headlight and adj cycle in edges
 B2+:
-  name: B2+
-  altNames: ["Ninetales"]
   algs:
     - 
       alg: L2 U L2' U2 L U2' [BACK LEFT SEXY] L U' L2' U2 L U L'
@@ -84,11 +66,7 @@ B2+:
     # - 
     #   alg: L U' L' U2' L2 U L' U L U' L' U2 L' U2' L2 U' L2'
     #   isLefty: true
-  recog:
-    - fat L headlight and no adj cycle in edges
 B2-:
-  name: B2-
-  altNames: ["Arcanine"]
   algs:
     - 
       alg: L2' U' L2 U2' L' U2 [LEFT SEXY] L' U L2 U2' L' U' L
@@ -96,11 +74,7 @@ B2-:
     # - 
     #   alg: L' U L U2 L2' U' L U' L' U L U2' L U2 L2' U L2
     #   isLefty: true
-  recog:
-    - fat R headlight and no adj cycle in edges
 C1+:
-  name: C1+
-  altNames: ["Oddish"]
   algs:
     - 
       alg: L U2 L' U' L U2' L' U L U L2' U' L U' L U L2' U L
@@ -110,8 +84,6 @@ C1+:
       alg: L U L' U2' L' U2' L U' L U L2' U2 L U2' L U2' L'
       isLefty: true
 C1-:
-  name: C1-
-  altNames: ["Bellsprout"]
   algs:
     -
       setup: U2
@@ -126,8 +98,6 @@ C1-:
       alg: L2 U2' L2' U2 L2 U' L2' U2' L2 U' L2' U L2 U2 L2'
       isLefty: true
 C2+:
-  name: C2+
-  altNames: ["Gloom"]
   algs:
     - 
       alg: L' U' L U' L U2 L2' U' L2 U' L2' U2' L U L' U2 L
@@ -137,8 +107,6 @@ C2+:
       alg: L' U2' L U' L' U2 L2 U L2' U L2 U2' L' U L' U L
       isLefty: true
 C2-:
-  name: C2-
-  altNames: ["Weepinbell"]
   algs:
     - 
       setup: U2
@@ -156,8 +124,6 @@ C2-:
       alg: L U2' L' F' U' L U L' F U' F U2 L U L' U2 F'
       isLefty: true
 C3+:
-  name: C3+
-  altNames: ["Vileplume"]
   algs:
     - 
       setup: U2
@@ -172,8 +138,6 @@ C3+:
       alg: L U2' L' F' U L U' L' U' F L U' L' F' L U' L' U F
       isLefty: true
 C3-:
-  name: C3-
-  altNames: ["Victreebell"]
   algs:
     - 
       alg: L2 U2' L2' U' L2 U L2' U2 L2 U L2' U2' L2 U2 L2'
@@ -187,8 +151,6 @@ C3-:
       alg: F' U' L U L' F L U L' F' U L U L' U' F L U2 L'
       isLefty: true
 C4+:
-  name: C4+
-  altNames: ["Caterpie"]
   algs:    
     - 
       setup: U2
@@ -199,8 +161,6 @@ C4+:
       alg: L2' U2 L2 F2' U L2' U' L2 U' F2 U L2' U2' L2
       isLefty: true
 C4-:
-  name: C4-
-  altNames: ["Weedle"]
   algs:
     - 
       alg: "[LEFT MEGALOOP] U [LEFT ANTILOOP]"
@@ -217,8 +177,6 @@ C4-:
       alg: L F L' U2 F' U2 L U' L' U' F L U2 L' U L F' L'
       isLefty: true
 C5+:
-  name: C5+
-  altNames: ["Metapod"]
   algs:
     - 
       alg: L' U2' L BL U' L' U' L U BL' U L' U2 L
@@ -227,8 +185,6 @@ C5+:
       alg: F L' U2' L U' F' L' U L U' L F L' U L' U2 L F'
       isLefty: true
 C5-:
-  name: C5-
-  altNames: ["Kakuna"]
   algs:
     - 
       setup: U2
@@ -239,39 +195,29 @@ C5-:
       alg: L U2 L' U' R' U2 L U L' U2' R L U2' L'
       isLefty: true
 C6+:
-  name: C6+
-  altNames: ["Butterfree"]
   algs:
     - 
       alg: L U' L' U2 L2 U L' U2 L U' L' U' L U' L' U' L'
       isLefty: true
 C6-:
-  name: C6-
-  altNames: ["Beedrill"]
   algs:
     - 
       setup: U2
       alg: L' U L U2' L2' U' L U2' L' U L U L' U L U L
       isLefty: true
 D+:
-  name: D+
-  altNames: ["Hitmonlee"]
   algs:
     - 
       alg: L U2 L' U' L U L' U L U2' L' U2 L U2 L'
       isLefty: true
   note: nice alg and case
 D-:
-  name: D-
-  altNames: ["Hitmonchan"]
   algs:
     - 
       alg: L' U2' L U L' U' L U' L' U2 L U2' L' U2' L
       isLefty: true
   note: nice alg and case
 E1:
-  name: E1
-  altNames: ["Electabuzz"]
   algs:
     - 
       setup: U2
@@ -279,114 +225,84 @@ E1:
       isLefty: true
   note: also a good OH E perm
 E2:
-  name: E2
-  altNames: ["Magmar"]
   algs:
     - 
       alg: F' U L' U [LEFT SUNE] U' L U L' U2' L F
       isLefty: true
   note: can be a 3x3 transfer (E Perm), but this alg is better
 E3:
-  name: E3
-  altNames: ["Jynx"]
   algs:
     - 
       setup: U
       alg: R [TRIPLE LEFT ANTISUNE] R'
       isLefty: true
 F1+:
-  name: F1+
-  altNames: ["Chansey"]
   algs:
     - 
       alg: "[LEFT MEGALOOP]"
       isLefty: true
   note: "\"7 mover\" EP (the L2s can go either way)"
 F1-:
-  name: F1-
-  altNames: ["Kangaskhan"]
   algs:
     - 
       alg: "[LEFT ANTILOOP]"
       isLefty: true
   note: "\"7 mover\" EP (the L2s can go either way)"
 F2+:
-  name: F2+
-  altNames: ["Clefairy"]
   algs:
     - 
       alg: L U L' U2 L' U2' L2 U' L' U L' U2 L
       isLefty: true
       note: variation on Uperm
 F2-:
-  name: F2-
-  altNames: ["Cubone"]
   algs:
     - 
       alg: L' U' L U2' L U2 L2' U L U' L U2' L'
       isLefty: true
       note: variation on Uperm
 F3+:
-  name: F3+
-  altNames: ["Clefable"]
   algs:
     - 
       alg: L' U2' L U' L U L2' U2 L U2' L U' L'
       isLefty: true
       note: variation on Uperm
 F3-:
-  name: F3-
-  altNames: ["Marowak"]
   algs:
     - 
       alg: L U2 L' U L' U' L2 U2' L' U2 L' U L
       isLefty: true
       note: variation on Uperm
 F4+:
-  name: F4+
-  altNames: ["Jigglypuff"]
   algs:
     - 
       alg: L U L' U L2 U2' L2' U2' L U2 L U2 L' U2' L'
       isLefty: true
       note: similar to W
 F4-:
-  name: F4-
-  altNames: ["Meowth"]
   algs:
     - 
       alg: L' U' L U' L2' U2 L2 U2 L' U2' L' U2' L U2 L
       isLefty: true
       note: similar to W
 F5+:
-  name: F5+
-  altNames: ["Wigglytuff"]
   algs:
     - 
       alg: L U2 L U2' L' U2' L' U2 L2 U2 L2' U' L U' L'
       isLefty: true
       note: similar to W
 F5-:
-  name: F5-
-  altNames: ["Persian"]
   algs:
     - 
       alg: L' U2' L' U2 L U2 L U2' L2' U2' L2 U L' U L
       isLefty: true
       note: similar to W
 G1+:
-  name: G1+
-  altNames: ["Scyther"]
   algs:
     - 
       setup: U
       alg: L' U2 L2 U2' L' U2 L' U L U2 L' U L2 U2 L2' U2' L
       isLefty: true
-  recog: 
-    - no pseudoblock
 G1-:
-  name: G1-
-  altNames: ["Pinsir"]
   algs:
     - 
       setup: U2
@@ -396,21 +312,13 @@ G1-:
       setup: U2
       alg: L' U2' L U L U L2' F' U L2 U2' L' U' L' U' F U' L
       isLefty: true
-  recog: 
-    - no pseudoblock
 G2+:
-  name: G2+
-  altNames: ["Snorlax"]
   algs:
     - 
       setup: U2
       alg: F' U2 L U L' F L U L' F' U L U2 L' U2' F
       isLefty: true
-  recog: 
-    - pseudoblocks
 G2-:
-  name: G2-
-  altNames: ["Mr. Mime"]
   algs:
     - 
       setup: U
@@ -423,27 +331,19 @@ G2-:
     - 
       alg: L U2' L' R' U L U' R U2 L2' U2' L U' L' U2' L
       isLefty: true
-  recog: 
-    - pseudoblocks
 H1+:
-  name: H1+
-  altNames: ["Pikachu"]
   algs:
     - 
       alg: F [LEFT SEXY] L F' L' U L' U2 L U' L' U' L U2 L' U2 L
       isLefty: true
       note: edge determines starting move face
 H1-:
-  name: H1-
-  altNames: ["Ponyta"]
   algs:
     - 
       alg: L' U2' L U2' L' U L U L' U2' L U' L F L' [LEFT UNSEXY] F'
       isLefty: true
       note: edge determines starting move face
 H2+:
-  name: H2+
-  altNames: ["Raichu"]
   algs:
     - 
       alg: "[LEFT BACK SUPERANTISUNE] y' [LEFT SUPERSUNE]"
@@ -455,8 +355,6 @@ H2+:
     #   isLefty: true
   note: alg is worth learning over comms
 H2-:
-  name: H2-
-  altNames: ["Rapidash"]
   algs:
     - 
       alg: "[LEFT SUPERANTISUNE] y [LEFT BACK SUPERSUNE]"
@@ -473,8 +371,6 @@ H2-:
     #   isLefty: true
   note: alg is worth learning over comms
 I1+:
-  name: I1+
-  altNames: ["Abra"]
   algs:
     - 
       alg: L2' U2 L2 U L2' BL2 U' L2 U L2' U BL2' U L2
@@ -489,8 +385,6 @@ I1+:
       alg: L' U2' L2 F' L' F2 U' F' U2 L' U L2 F U2 F' U2' L'
       isLefty: true
 I1-:
-  name: I1-
-  altNames: ["Machop"]
   algs:
     - 
       alg: L' U2' L U' L U L' U' F L' U' L U L F' U' L2' U' L
@@ -499,8 +393,6 @@ I1-:
       alg: L2 U2' L2' U' L2 F2' U L2' U' L2 U' F2 U' L2'
       isLefty: true
 I2+:
-  name: I2+
-  altNames: ["Kadabra"]
   algs:
     - 
       alg: L2' U' BL2 U' L2 U' L2' U BL2' L2 U' L2' U2' L2
@@ -512,8 +404,6 @@ I2+:
       alg: L' U2' L U L' U L BL L2 U L2' U L2 U2' L2' BL'
       isLefty: true
 I2-:
-  name: I2-
-  altNames: ["Machoke"]
   algs:
     - 
       alg: L' U L2 U F L' U' L' U L F' U L U' L' U L' U2 L
@@ -522,8 +412,6 @@ I2-:
       alg: L2 U F2' U L2' U L2 U' F2 L2' U L2 U2 L2'
       isLefty: true
 I3+:
-  name: I3+
-  altNames: ["Alacazam"]
   algs:
     - 
       alg: L' U2 L2 U2 L' U2' L' U2' L U2 L U L' U2' L U' L'
@@ -532,8 +420,6 @@ I3+:
       alg: L2 U L2' U L2 U2' L2' U2 y' L2' U' L2 U2' L2' U2' L2
       isLefty: true
 I3-:
-  name: I3-
-  altNames: ["Machamp"]
   algs:
     - 
       alg: L U2' L2' U2' L U2 L U2 L' U2' L' U' L U2 L' U L
@@ -542,15 +428,11 @@ I3-:
       alg: L2' U' L2 U' L2' U2 L2 U2' y L2 U L2' U2 L2 U2 L2'
       isLefty: true
 I4+:
-  name: I4+
-  altNames: ["Geodude"]
   algs:
     - 
       alg: L U2' L' U' L U' L U2 L' U' L U' L2' U L U2' L'
       isLefty: true
 I4-:
-  name: I4-
-  altNames: ["Gastly"]
   algs:
     - 
       alg: L U L U2 F L' U' L' U L F' L U2' L' U' L'
@@ -559,15 +441,11 @@ I4-:
       alg: L' U2 L U L' U L' U2' L U L' U L2 U' L' U2 L
       isLefty: true
 I5+:
-  name: I5+
-  altNames: ["Graveler"]
   algs:
     - 
       alg: L U2 L' U' L2 U L' U L U2' L' U L' U L U2 L'
       isLefty: true
 I5-:
-  name: I5-
-  altNames: ["Haunter"]
   algs:
     - 
       alg: L U L U2 L' F L' U' L U L F' U2' L' U' L'
@@ -576,8 +454,6 @@ I5-:
       alg: L' U2' L U L2' U' L U' L' U2 L U' L U' L' U2' L
       isLefty: true
 I6+:
-  name: I6+
-  altNames: ["Golem"]
   algs:
     - 
       alg: L2 F2' L2' U L2 F2 L2' U2' L2 F2' L2' U L2 F2 L2'
@@ -595,15 +471,11 @@ I6+:
       alg: F L' U' L2 U F' L' U F L' U' L2 U2 L' U2' L U' F' L'
       isLefty: true
 I6-:
-  name: I6-
-  altNames: ["Gengar"]
   algs:
     - 
       alg: F' L' U2' L U L' U L F U' L U L' U2 L U' L' U' L U' L'
       isLefty: true
 J1+:
-  name: J1+
-  altNames: ["Nirodan♀️"]
   algs:
     - 
       setup: U2
@@ -616,8 +488,6 @@ J1+:
       isLefty: true
       note: flows like a T perm
 J1-:
-  name: J1-
-  altNames: ["Nidoran♂️"]
   algs:
     - 
       alg: "[LEFT J_PERM]"
@@ -629,29 +499,21 @@ J1-:
       note: alt case for diff auf
   note: 3x3 transfer (J perm)
 J2+:
-  name: J2+
-  altNames: ["Nidorina"]
   algs:
     - 
       alg: L' U2' L U2 L' U L U [LEFT BACK ANTISUNE] L' U' L
       isLefty: true
 J2-:
-  name: J2-
-  altNames: ["Nidorino"]
   algs:
     - 
       alg: L U2 L' U2' L U' L' U' [LEFT ANTISUNE] L U L'
       isLefty: true
 J3+:
-  name: J3+
-  altNames: ["Nidoqueen"]
   algs:
     - 
       alg: L' U L [BACK LEFT SUNE] U' L' U' L U2' L' U2 L
       isLefty: true
 J3-:
-  name: J3-
-  altNames: ["Nidoking"]
   algs:
     - 
       alg: L U' L' [LEFT SUNE] U L U L' U2 L U2' L'
@@ -664,31 +526,19 @@ J3-:
     #   alg: L' U' L U L U2 L' U' L' U' L2 U' L2' U2' L2 U2 L'
     #   isLefty: true
 K1+:
-  name: K1+
-  altNames: ["Diglett"]
   algs:
     - 
       alg: "[TRIPLE LEFT MEGALOOP]"
       isLefty: true
   note: 7 move EP x3
-  recog:
-    - S perm of pseudobars
-    - "2 disjoint adj swaps of corners form a counter-clockwise U, with the bottom of the U on the L side: starting move rotates toward the flow of the adj cycles"
 K1-:
-  name: K1-
-  altNames: ["Zubat"]
   algs:
     - 
       setup: U2
       alg: "[TRIPLE LEFT ANTILOOP]"
       isLefty: true
   note: 7 move EP x3
-  recog:
-    - S perm of pseudobars
-    - "2 disjoint adj swaps of corners form a clockwise U, with the bottom of the U on the L side: starting move rotates toward the flow of the adj cycles"
 K2+:
-  name: K2+
-  altNames: ["Dugtrio"]
   algs:
     - 
       alg: "[LEFT MEGALOOP] [LEFT T_PERM]"
@@ -697,29 +547,17 @@ K2+:
       setup: U'
       alg: L U2' L' U L U2' L' U2 L U L' U2 L U' L' U2 L U' L'
       isLefty: true
-  recog:
-    - headlights CP case with arrow / pseudobar on both sides of the headlights facing the same way, nonheadlight corner on FR with a horizontal arrow
 K2-:
-  name: K2-
-  altNames: ["Golbat"]
   algs:
     - 
       alg: L' U' L U2 L' U' L U2 L' U L U2 L' U2' L U L' U2' L
       isLefty: true
-  recog:
-    - headlights CP case with arrow / pseudobar on both sides of the headlights facing the same way, nonheadlight corner on FR with a vertical arrow
 L1:
-  name: L1
-  altNames: ["Magikarp"]
   algs:
     - 
       alg: L U2' L' U' L U' L' U L U2' L' U [LEFT SUNE]
       isLefty: true
-  recog:
-    - antiZ block in headlight-free corner
 L2:
-  name: L2
-  altNames: ["Gyarados"]
   algs:
     - 
       setup: U2'
@@ -729,11 +567,7 @@ L2:
     - 
       alg: L' U2' L U' L' U L U L' U L2 U L' U L U L' U' L U2' L'
       isLefty: true
-  recog:
-    - antiZ block in headlight-free corner, pseudobars in front
 L3+:
-  name: L3+
-  altNames: ["Tangela"]
   algs:
     - 
       setup: U
@@ -746,11 +580,7 @@ L3+:
       setup: U2'
       alg: L U2' L' U2' L2 F L' U' L' U L F' U2' L' U' L U2' L'
       isLefty: true
-  recog: 
-    - pseudoblock in headlight-free corner + pseudobar
 L3-:
-  name: L3-
-  altNames: ["Lickitung"]
   algs:
     - 
       setup: U2
@@ -760,19 +590,13 @@ L3-:
       setup: U'
       alg: F' U2 F U2 L' F' L U L' F U2 L U L' U2 L
       isLefty: true
-  recog: 
-    - pseudoblock in headlight-free corner + pseudobar
 L4+:
-  name: L4+
-  altNames: ["Tauros"]
   algs:
     - 
       setup: U
       alg: L' U2 L U' L' U2' L' U2' L U' L U L' U L' U L U L
       isLefty: true
 L4-:
-  name: L4-
-  altNames: ["Onix"]
   algs:
     - 
       setup: U'
@@ -783,40 +607,30 @@ L4-:
       alg: L U2' L' U L U2 L U2 L' U L' U' L U' L U' L' U' L'
       isLefty: true
 L5+:
-  name: L5+
-  altNames: ["Exeggcute"]
   algs:
     - 
       setup: U2
       alg: "[LEFT ANTISUNE] L U2' L' U' [LEFT BACK SEXY] U' L U' L'"
       isLefty: true
 L5-:
-  name: L5-
-  altNames: ["Rhyhron"]
   algs:
     - 
       setup: U
       alg: "[LEFT BACK ANTISUNE] L' U2 L U [LEFT SEXY] U L' U L"
       isLefty: true
 L6+:
-  name: L6+
-  altNames: ["Exeggutor"]
   algs:
     - 
       setup: U
       alg: L U L' U2 L U' L' U L U2 L' [LEFT SUNE]
       isLefty: true
 L6-:
-  name: L6-
-  altNames: ["Rhydon"]
   algs:
     - 
       setup: U2
       alg: L' U' L U2' L' U L U' L' U2' L [LEFT BACK SUNE]
       isLefty: true
 M:
-  name: M
-  altNames: ["Mew"]
   algs:
     - 
       alg: L U2' L' U2' L U F' [LEFT SUPERSUNE] F L'
@@ -827,11 +641,7 @@ M:
     # - 
     #   alg: L' U' L U L' U' L U2 L' U' L2 U L' U L U2' L' U2' L' U L
     #   isLefty: true
-  recog:
-    - 2 lines
 N1+:
-  name: N1+
-  altNames: ["Grimer"]
   algs:
     - 
       alg: L U2 L' BL' L U L' U' L' BL L2 U2' L'
@@ -841,11 +651,7 @@ N1+:
       alg: L U2' L U2 L' U L U2 L' U2' L'
       isLefty: true
       note: should switch to this
-  recog: 
-    - AUF and find the EP case idk tbh
 N1-:
-  name: N1-
-  altNames: ["Koffing"]
   algs:
     - 
       alg: L' U2' L F L' U' L U L F' L2' U2 L
@@ -855,11 +661,7 @@ N1-:
       alg: L' U2' L2 F L' U' L' U L F' L' U2 L
       isLefty: true
   note: 3x3 transfer (J perm with U2 instead of U) (inverse for alt angle)
-  recog: 
-    - AUF and find the EP case idk tbh
 N2+:
-  name: N2+
-  altNames: ["Muk"]
   algs:
     - 
       alg: (R L) U2 L' U (R' L) U' R U2 L' U2 R'
@@ -869,8 +671,6 @@ N2+:
       isLefty: true
       note: should learn this
 N2-:
-  name: N2-
-  altNames: ["Weezing"]
   algs:
     - 
       alg: (L' R') U2' R U' (L R') U L' U2' R U2' L
@@ -883,8 +683,6 @@ N2-:
       isLefty: true
   note: EP alg for this case
 P1+:
-  name: P1+
-  altNames: ["Shelder"]
   algs:
     - 
       setup: U'
@@ -899,16 +697,12 @@ P1+:
       alg: L U2 F U2' F' L2' U2 L [LEFT HEDGE] L' U2' L
       isLefty: true
 P1-:
-  name: P1-
-  altNames: ["Staryu"]
   algs:
     - 
       setup: U
       alg: L F' L' [LEFT SUNE] U' L F L' F' U F
       isLefty: true
 P2+:
-  name: P2+
-  altNames: ["Cloyster"]
   algs:
     - 
       setup: U2
@@ -919,8 +713,6 @@ P2+:
     #   isLefty: true
     #   notes: old alg
 P2-:
-  name: P2-
-  altNames: ["Starmie"]
   algs:
     - 
       setup: U
@@ -931,8 +723,6 @@ P2-:
       alg: F' L' U2' L U F L F' L' U2' L F L' F' L' U2' L F
       isLefty: true
 P3+:
-  name: P3+
-  altNames: ["Horsea"]
   algs:
     - 
       alg: BL L U' L' U' L U [LEFT BACK ANTISUNE] L' BL'
@@ -945,8 +735,6 @@ P3+:
       alg: L U' L F L' U2 L' U2 L U L F' L2' U' L U2 L'
       isLefty: true
 P3-:
-  name: P3-
-  altNames: ["Goldeen"]
   algs:
     - 
       setup: U2
@@ -954,24 +742,18 @@ P3-:
       note: very similar to start of Y perm
       isLefty: true
 P4+:
-  name: P4+
-  altNames: ["Kingdre"]
   algs:
     - 
       setup: U2'
       alg: BL L [LEFT BACK SUNE] U' L' U L U L' BL'
       isLefty: true
 P4-:
-  name: P4-
-  altNames: [Seaking"]
   algs:
     - 
       setup: U'
       alg: F' L' [LEFT SUNE] U L U' L' U' L F
       isLefty: true
 Q1+:
-  name: Q1+
-  altNames: ["Mankey"]
   algs:
     - 
       alg: "[LEFT MEGALOOP] U' [LEFT MEGALOOP]"
@@ -979,11 +761,7 @@ Q1+:
     - 
       alg: L U L' U2 L U' L' U' L U2 L' U F L F' U F L' F'
       isLefty: true
-  recog: 
-    - BL BR R edge cycle, L F edge swap
 Q1-:
-  name: Q1-
-  altNames: ["Drowzee"]
   algs:
     - 
       alg: "[LEFT ANTILOOP] U [LEFT ANTILOOP]"
@@ -992,110 +770,76 @@ Q1-:
       setup: U
       alg: "F L F' U' F L' F' U' L U2' L' U L U L' U2' L U' L'"
       isLefty: true
-  recog: 
-    - F R BR edge cycle, L BL edge swap
     
 Q2+:
-  name: Q2+
-  altNames: ["Primeape"]
   algs:
     - 
       alg: L' U2' L U' L' U2' L2 U2' L' U' L U2' L'
       isLefty: true
-  recog:
-    - 2 adj cycles (adj swap edge in L, noswap edge in F)
-    - S perm pseudo (first 3 moves move one pseudobar to where the other was)
 Q2-:
-  name: Q2-
-  altNames: ["Hypno"]
   algs:
     - 
       setup: U2'
       alg: L U2 L' U L U2 L2' U2 L U L' U2 L
       isLefty: true
-  recog:
-    - 2 adj cycles (adj swap edge in L, noswap edge in BL)
-    - S perm pseudo (first 3 moves move one pseudobar to where the other was)
 R1+:
-  name: R1+
-  altNames: ["Psyduck"]
   algs:
     - 
       setup: U2
       alg: L' U2 L U' L2' U2 L2 U L' U' L' U2' L U' L
       isLefty: true
 R1-:
-  name: R1-
-  altNames: ["Slowpoke"]
   algs:
     - 
       alg: L U2' L' U L2 U2' L2' U' L U L U2 L' U L'
       isLefty: true
 R2+:
-  name: R2+
-  altNames: ["Golduck"]
   algs:
     - 
       setup: U2
       alg: L' U L' U2 L U L U' L2' U2' L2 U L' U2' L
       isLefty: true
 R2-:
-  name: R2-
-  altNames: ["Slowbro"]
   algs:
     - 
       alg: L U' L U2' L' U' L' U L2 U2 L2' U' L U2 L'
       isLefty: true
 R3+:
-  name: R3+
-  altNames: ["Tentacool"]
   algs:
     - 
       alg: L U L2' U L U L U' L' U' L U' L2' U' L [LEFT UNSEXY]
       isLefty: true
 R3-:
-  name: R3-
-  altNames: ["Krabby"]
   algs:
     - 
       setup: U2
       alg: L' U' L2 U' L' U' L' U L U L' U L2 U L' [LEFT BACK UNSEXY]
       isLefty: true
 R4+:
-  name: R4+
-  altNames: ["Tentacruel"]
   algs:
     - 
       setup: U2'
       alg: "[LEFT SEXY] L' U L2 U L' U L U L' U' L' U' L2 U' L'"
       isLefty: true
 R4-:
-  name: R4-
-  altNames: ["Kingler"]
   algs:
     - 
       setup: U'
       alg: "[LEFT BACK SEXY] L U' L2' U' L U' L' U' L U L U L2' U L"
       isLefty: true
 S1+:
-  name: S1+
-  altNames: ["Farfetch'd"]
   algs:
     - 
       setup: U'
       alg: L U L' U2 L U2 L' U' [LEFT SUNE]
       isLefty: true
 S1-:
-  name: S1-
-  altNames: ["Lapras"]
   algs:
     - 
       setup: U2'
       alg: "[LEFT BACK ANTISUNE] U' L' U2 L U2 L' U L"
       isLefty: true
 S2+:
-  name: S2+
-  altNames: ["Doduo"]
   algs:
     - 
       setup: U
@@ -1108,8 +852,6 @@ S2+:
       alg: F' U2' L U L2' U2 L2 U2' L' U2 L U2 L2' U2' L U F
       isLefty: true
 S2-:
-  name: S2-
-  altNames: ["Seel"]
   algs:
     - 
       setup: U
@@ -1121,8 +863,6 @@ S2-:
       isLefty: true
       note: orekehstrah alg
 S3+:
-  name: S3+
-  altNames: ["Dodrio"]
   algs:
     - 
       setup: U
@@ -1133,8 +873,6 @@ S3+:
       alg: L U L' U L2 F L' [LEFT UNSEXY] F' U' L' U2 L U2 L'
       isLefty: true
 S3-:
-  name: S3-
-  altNames: ["Dewgong"]
   algs:
     - 
       alg: L2' U2 L2 U L' F L' U' L2 U L F' L3' U2 L2
@@ -1144,8 +882,6 @@ S3-:
       isLefty: true
       note: orekehstrah alg
 S4+:
-  name: S4+
-  altNames: ["Pidgey"]
   algs:
     - 
       alg: "[LEFT ANTILOOP] U [LEFT MEGALOOP]"
@@ -1155,8 +891,6 @@ S4+:
       alg: L2' U2 L2 U' F2' U L2' U L2 U' F2 L2' U2' L2
       isLefty: true
 S4-:
-  name: S4-
-  altNames: ["Poliwag"]
   algs:
     - 
       setup: U2
@@ -1167,8 +901,6 @@ S4-:
       alg: L2 U2' L2' U BL2 U' L2 U' L2' U BL2' L2 U2 L2'
       isLefty: true
 S5+:
-  name: S5+
-  altNames: ["Pidgeotto"]
   algs:
     - 
       setup: U2
@@ -1176,8 +908,6 @@ S5+:
       isLefty: true
       note: very similar to either a T or U zbll
 S5-:
-  name: S5-
-  altNames: ["Poliwhirl"]
   algs:
     - 
       alg: L U2 L' U F' U L U' L' U' F L U2' L'
@@ -1187,8 +917,6 @@ S5-:
       alg: L U2 L' R' U2 L U' L' U2' R U L U2' L'
       isLefty: true
 S6+:
-  name: S6+
-  altNames: ["Pidgeot"]
   algs:
     - 
       setup: U2
@@ -1198,47 +926,35 @@ S6+:
       alg: L' U' L2 F L' U2 L' U2' L F' L' U L [LEFT BACK SUNE]
       isLefty: true
 S6-:
-  name: S6-
-  altNames: ["Poliwrath"]
   algs:
     - 
       alg: L' U' L' U' L U' L' U' L U2 L' U L2 U2 L' U' L
       isLefty: true
 T1:
-  name: T1
-  altNames: ["Aerodactyl"]
   algs:
     - 
       alg: "[LEFTY T_PERM]"
       isLefty: true
   note: 3x3 transfer (T perm)
 T2+:
-  name: T2+
-  altNames: ["Omanyte"]
   algs:
     - 
       alg: L2 F' L' [LEFT UNSEXY] F L' U2 L U2' L'
       isLefty: true
   note: 3x3 transfer (LUF R perm)
 T2-:
-  name: T2-
-  altNames: ["Kabuto"]
   algs:
     - 
       alg: L U2 L' U2' L F' [LEFT SEXY] L F L2'
       isLefty: true
   note: 3x3 transfer (LUF R perm)
 T3+:
-  name: T3+
-  altNames: ["Omastar"]
   algs:
     - 
       setup: U'
       alg: "[DOUBLE LEFTY MEGALOOP]"
       isLefty: true
 T3-:
-  name: T3-
-  altNames: ["Kabutops"]
   algs:
     - 
       setup: U
@@ -1246,16 +962,12 @@ T3-:
       # alg: L2 U2' L2' U' L2 U L2' U' L2 U2' L2'
       isLefty: true
 T4+:
-  name: T4+
-  altNames: ["Ditto"]
   algs:
     - 
       alg: L U L' U2 [LEFT MEGALOOP] U' L U' L'
       isLefty: true
   note: setup to 7 move EP, L2' maybe better than the L2 shown
 T4-:
-  name: T4-
-  altNames: ["Porygon"]
   algs:
     - 
       alg: "[LEFT J_PERM] [LEFT T_PERM]"
@@ -1265,39 +977,29 @@ T4-:
       isLefty: true
   note: '3x3 transfer (J + T perm) for alg 1, or setup to 7 move EP for alg 2'
 U1+:
-  name: U1+
-  altNames: ["Ekans"]
   algs:
     - 
       setup: U2
       alg: L' U' L U' L U L2' U L U' L U' L'
       isLefty: true
 U1-:
-  name: U1-
-  altNames: ["Sandshrew"]
   algs:
     - 
       alg: L U L' U L' U' L2 U' L' U L' U L
       isLefty: true
 U2+:
-  name: U2+
-  altNames: ["Arbok"]
   algs:
     - 
       alg: L' U2' L U' L U L2' U L U' L U' L' U2 L' U L
       isLefty: true
   note: first 3 moves match lone edge to its headlights, cancel into U1+
 U2-:
-  name: U2-
-  altNames: ["Sandslash"]
   algs:
     - 
       alg: L U2 L' U L' U' L2 U' L' U L' U L U2' L U' L'
       isLefty: true
   note: first 3 moves match lone edge to its headlights, cancel into U1-
 V1+:
-  name: V1+
-  altNames: ["Magnemite"]
   algs:
     - 
       alg: L' U L2 FL L' U' L FL' L' U L' U L U' L' U' L
@@ -1307,39 +1009,29 @@ V1+:
       isLefty: true
   note: 3x3 transfer (LUD R perm) for alg 1
 V1-:
-  name: V1-
-  altNames: ["Voltorb"]
   algs:
     - 
       alg: L U2' L FL L' U L FL' L' U' L' U L U L'
       isLefty: true
   note: 3x3 transfer (LUD R perm)
 V2+:
-  name: V2+
-  altNames: ["Magneton"]
   algs:
     - 
       alg: L' U L U L' U' L U' L FL L' U L FL' L2' U' L
       isLefty: true
   note: 3x3 transfer (LUD R perm)
 V2-:
-  name: V2-
-  altNames: ["Electrode"]
   algs:
     - 
       alg: L U' L' U' L U L FL L' U' L FL' L' U2 L'
       isLefty: true
   note: 3x3 transfer (LUD R perm)
 V3+:
-  name: V3+
-  altNames: ["Paras"]
   algs:
     - 
       alg: L U2 L' U' L' U L F' L U2' L' U2 F L' U' L
       isLefty: true
 V3-:
-  name: V3-
-  altNames: ["Venonat"]
   algs:
     - 
       alg: L U2' L' U F' L' U' L U L F U L' U' L' U L
@@ -1351,8 +1043,6 @@ V3-:
     #   alg: L' U' L2' U L U L' U' L U L U' L2 U' L' U L'
     #   isLefty: true
 V4+:
-  name: V4+
-  altNames: ["Parasect"]
   algs:
     - 
       alg: L' U L F' U2' L U2 L' F L' U' L U L U2' L'
@@ -1361,8 +1051,6 @@ V4+:
     #   alg: L' U L' U' L2 U' L U L U' L' U L U L2' U' L'
     #   isLefty: true
 V4-:
-  name: V4-
-  altNames: ["Venomoth"]
   algs:
     - 
       alg: L' U' L U L U' F' L' U' L' U L F U' L U2 L'
@@ -1374,8 +1062,6 @@ V4-:
       alg: L' U2' L U F L' U' L2 U L F' L' U' L2' U2 L
       isLefty: true
 W:
-  name: W
-  altNames: ["Mewtwo"]
   algs:
     - 
       alg: L U2 L U2' L' U2' L' U L2 U2' L2' U2' L U' L'
@@ -1384,27 +1070,16 @@ W:
       alg: L2' U2 L2 U L2' U' L2 U2' L2' U L2 U2 L2' U2' L2
       isLefty: true
 X1:
-  name: X1
-  altNames: ["Eevee"]
   algs:
     - 
       alg: F' U2' L' U2 L U' L' U' L U2 F L U L' U2 L U2 L'
       isLefty: true
-  recog:
-    - All Z / pseudoblock corners (a 2x3 pseudoblock is enough to identify though)
-  note: 
 X2:
-  name: X2
-  altNames: ["Vaporeon"]
   algs:
     - 
       alg: F' L' U' L F' U' L U F U' L2' U2 L F
       isLefty: true
-  recog:
-    - Pseudoblock and no other pseudo stuff
 X3:
-  name: X3
-  altNames: ["Jolteon"]
   algs:
     - 
       alg: "[BACK LEFT SUNE] L' U' L U2' L U2 L2' U L U2' L U' L'"
@@ -1415,20 +1090,12 @@ X3:
     # - 
     #   alg: L' U' L2 U2' L2' U2' L2 y L U L' U2' L U L' U' BL'
     #   isLefty: true
-  recog: Pseudoline in BL
 X4:
-  name: X4
-  altNames: ["Flareon"]
   algs:
     - 
       alg: L U L2' U L U' L' U L2 U L2' U' L U L' U' L2 U2' L'
       isLefty: true
-  recog: 
-    - pointing away headlights in L and R
-    - adj colors A and B - A corner and B edge on L face opposide B corner and A edge in R face, aligned to F
 X5+:
-  name: X5+
-  altNames: ["Bulbasaur"]
   algs:
     - 
       alg: L' U L U2 L' U2 L U L2' U' L U' L' U' L U2 L' U L2
@@ -1437,13 +1104,7 @@ X5+:
       alg: L2 U L' U2 L U' L' U' L U' L2' U L U2 L' U2 L U L'
       isLefty: true
   note: ore uses 2nd, maybe learn that one
-  recog:
-    - Pseudobar J perm
-    - Pseudobar FB + Pseudoline on L with L headlights facing BL
-    - Pseudoblock M perm, blocks on FR LB with vertical arrow in FL (arrow is part of a pseudoline)
 X5-:
-  name: X5-
-  altNames: ["Squirtle"]
   algs:
     - 
       alg: L U' L' U2' L U2' L' U' L2 U L' U L U L' U2' L U' L2'
@@ -1456,14 +1117,7 @@ X5-:
       isLefty: true
       note: orekehstrah alg
   note: ore uses 2nd, maybe learn that one
-  recog:
-    - Pseudobar J perm
-    - Pseudobar FL + Pseudoline on L with L headlights facing FL 
-    - Pseudoblock M perm, blocks on FL B with vertical arrow in BL (arrow is part of a pseudoline)
-
 X6+:
-  name: X6+
-  altNames: ["Ivysaur"]
   algs:
     - 
       alg: L' U2 L' U' L2 U' L' U' L U L' U L' U L2 U' L' U2' L
@@ -1471,11 +1125,7 @@ X6+:
     # - 
     #   alg: BL L U L' U' L U' L2' U' BL' U' BL U2 L U' L U L' BL'
     #   isLefty: true
-  recog:
-    - Pseudobar F Perm
 X6-:
-  name: X6-
-  altNames: ["Wartortle"]
   algs:
     - 
       alg: L U2' L U L2' U L U L' U' L U' L U' L2' U L U2 L'
@@ -1484,11 +1134,7 @@ X6-:
       setup: U2
       alg: F' [LEFTY SEXY] L' U L2 U F U F' U2' L' U L' U' L F
       isLefty: true
-  recog: 
-    -  Pseudobar F Perm
 X7+:
-  name: X7+
-  altNames: ["Venusaur"]
   algs:
     - 
       alg: L' U' L2 F L' U2 L' U L U2 L F' L' U' L' U' L U2 L' U L
@@ -1498,12 +1144,7 @@ X7+:
       isLefty: true
       tags: ["Swag"]
       note: orekehstrah swag alg
-  recog: 
-    - solved edge CCW of solved corner
-    - CW order = E C
 X7-:
-  name: X7-
-  altNames: ["Blastoise"]
   algs:
     - 
       alg: L2' U L2 U F' U' F L2' U2 L2 U' L2' U2' L2 F' U F
@@ -1512,12 +1153,7 @@ X7-:
       alg: "[LEFTY SEXY] F U F' U' [LEFT SUNE] L' [LEFT HEDGE] [LEFT UNSEXY] L"
       isLefty: true
       note: jose's alg
-  recog: 
-    - solved edge CW of solved corner
-    - CW order = C E 
 Y1+:
-  name: Y1+
-  altNames: ["Charmander"]
   algs:
     - 
       alg: "[LEFTY INVERSE Y_PERM]"
@@ -1527,8 +1163,6 @@ Y1+:
       isLefty: true    
   note: 3x3 transfer (Inverse of Y perm)
 Y1-:
-  name: Y1-
-  altNames: ["Dratini"]
   algs:
     - 
       alg: "[LEFTY Y_PERM]"
@@ -1538,8 +1172,6 @@ Y1-:
       isLefty: true
   note: 3x3 transfer (Y perm)
 Y2+:
-  name: Y2+
-  altNames: ["Charmeleon"]
   algs:
     - 
       alg: L2 U2' L2' U2 L2 U' L2' U2 L2 U2' L2'
@@ -1548,8 +1180,6 @@ Y2+:
       alg: L U2 L2' U2' L2 U L2' U L U L U2' L'
       isLefty: true
 Y2-:
-  name: Y2-
-  altNames: ["Dragonair"]
   algs:
     - 
       alg: L2' U2 L2 U2' L2' U L2 U2' L2' U2 L2
@@ -1558,8 +1188,6 @@ Y2-:
       alg: L U2 L' U' L' U' L2 U' L2' U2 L2 U2' L'
       isLefty: true
 Y3+:
-  name: Y3+
-  altNames: ["Charizard"]
   algs:
     - 
       alg: L2 U F2' U L2' U L2 U' F2 U2' L2'
@@ -1571,8 +1199,6 @@ Y3+:
       alg: L2 F2 L' U2 L' U2' L F' L' U' L U L F' L2'
       isLefty: true
 Y3-:
-  name: Y3-
-  altNames: ["Dragonite"]
   algs:
     - 
       alg: L2' U' L2 U' L2' U2 L2 U2' L2' U' L2 U' L2' U2 L2
@@ -1581,8 +1207,6 @@ Y3-:
       alg: L2' U' BL2 U' L2 U' L2' U BL2' U2 L2
       isLefty: true
 Z1:
-  name: Z1
-  altNames: ["Articuno"]
   algs:
     - 
       alg: L U F' L' U L U L' U2' L F L' F' U F L U2' L'
@@ -1592,8 +1216,6 @@ Z1:
       isLefty: true
       note: john cena alg
 Z2:
-  name: Z2
-  altNames: ["Zapdos"]
   algs:
     - 
       alg: L U2 L U L' F' L F U' L' F U F' U2 L'
@@ -1606,8 +1228,6 @@ Z2:
       alg: L U2 F' L' U L U L' U2' L F L' F' U F L U2 L'
       isLefty: true
 Z3:
-  name: Z3
-  altNames: ["Moltres"]
   algs:
     - 
       alg: L R U2' R' U' L' BL' F' U2' F U' BL

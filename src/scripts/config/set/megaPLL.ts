@@ -5,6 +5,9 @@ import type { IPuzzleConfig } from "../puzzle"
 import { puzzleMegaminx } from "../puzzle/megaminx"
 import type { IAlgset, ICaseList } from "./dataFormat"
 
+import caseDefinitions from './cases/megaPLL.yml'
+import merge from "ts-deepmerge"
+
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzleMegaminx
 const setOptions: ISetConfig = {
@@ -47,8 +50,10 @@ const caseNames = [
 ] as const
 type ICaseName = typeof caseNames[number]
 
-const useGrouping = (grouping: "none" | "letter" | 'feature' | '4LLLjustCP', data: ICaseList): IAlgset => {
+const useGrouping = (grouping: "none" | "letter" | 'feature' | '4LLLjustCP', d: ICaseList): IAlgset => {
+  const data = merge(caseDefinitions, d) as unknown as ICaseList
   const ch = (list: ICaseName[]) => { return Object.assign(listFromData<ICaseName>(list, data)) }
+
 
   const c = {
     "A": { name: "A", altNames: ["3 Corner CP"],
