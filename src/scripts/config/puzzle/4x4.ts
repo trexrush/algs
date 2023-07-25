@@ -1,6 +1,5 @@
 import type { IPuzzleConfig } from "."
 
-
 const notation4 = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
     display: ["r", "r'", "r2", "r2'", "l", "l'", "l2", "l2'", "M", "M'", "M2", "M2'"],
