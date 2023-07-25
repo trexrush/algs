@@ -1,125 +1,167 @@
 S1:
   name: S1
+  mirror: AS1
 
 S2:
   name: S2
+  mirror: AS2
 
 S3:
   name: S3
+  mirror: AS3
 
 S4:
   name: S4
+  mirror: AS4
 
 S5:
   name: S5
+  mirror: AS5
 
 S6:
   name: S6
+  mirror: AS6
 
 AS1:
   name: AS1
+  mirror: S1
 
 AS2:
   name: AS2
+  mirror: S2
 
 AS3:
   name: AS3
+  mirror: S3
 
 AS4:
   name: AS4
+  mirror: S4
 
 AS5:
   name: AS5
+  mirror: S5
 
 AS6:
   name: AS6
+  mirror: S6
 
 T1:
   name: T1
+  mirror: T2
 
 T2:
   name: T2
+  mirror: T1
 
 T3:
   name: T3
+  mirror: T3
 
 T4:
   name: T4
+  mirror: T4
 
 T5:
   name: T5
+  mirror: T5
 
 T6:
   name: T6
+  mirror: T6
 
 U1:
   name: U1
+  mirror: U2
 
 U2:
   name: U2
+  mirror: U1
 
 U3:
   name: U3
+  mirror: U3
 
 U4:
   name: U4
+  mirror: U4
 
 U5:
   name: U5
+  mirror: U5
 
 U6:
   name: U6
+  mirror: U6
 
 L1:
   name: L1
+  mirror: L2
 
 L2:
   name: L2
+  mirror: L1
 
 L3:
   name: L3
+  mirror: L4
 
 L4:
   name: L4
+  mirror: L3
 
 L5:
   name: L5
+  mirror: L5
 
 L6:
   name: L6
+  mirror: L6
 
 H1:
   name: H1
+  mirror: H1
 
 H2:
   name: H2
+  mirror: H2
 
 H3:
   name: H3
+  mirror: H3
 
 H4:
   name: H4
+  mirror: H4
 
 Pi1:
   name: Pi1
+  mirror: Pi1
 
 Pi2:
   name: Pi2
+  mirror: Pi2
 
 Pi3:
   name: Pi3
+  mirror: Pi4
 
 Pi4:
   name: Pi4
+  mirror: Pi3
 
 Pi5:
   name: Pi5
+  mirror: Pi5
 
 Pi6:
   name: Pi6
+  mirror: Pi6
 
 PLL1:
   name: PLL1
+  mirror: PLL1
 
 PLL2:
   name: PLL2
+  mirror: PLL2

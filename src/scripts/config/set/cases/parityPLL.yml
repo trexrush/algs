@@ -1,65 +1,87 @@
 opp:
     name: opp
+    mirror: opp
 
 adj:
     name: adj
+    mirror: adj
 
 Oa:
     name: Oa 
+    mirror: Ob 
 
 Ob:
     name: Ob 
+    mirror: Oa 
 
 W:
     name: W
+    mirror: W
 
 pJ:
     name: pJ
+    mirror: pJ
 
 pN:
     name: pN
+    mirror: pN
 
 M:
     name: M
+    mirror: M
 
 Ka:
     name: Ka 
+    mirror: Kb 
 
 Kb:
     name: Kb 
+    mirror: Ka 
 
 Ba:
     name: Ba 
+    mirror: Bb 
 
 Bb:
     name: Bb 
+    mirror: Ba
 
 Ca:
     name: Ca 
+    mirror: Cb 
 
 Cb:
     name: Cb 
+    mirror: Ca 
 
 Da:
     name: Da 
+    mirror: Db 
 
 Db:
     name: Db 
+    mirror: Da 
 
 Pa:
     name: Pa 
+    mirror: Pb 
 
 Pb:
     name: Pb 
+    mirror: Pa 
 
 Q:
     name: Q
+    mirror: Q
 
 X:
     name: X
+    mirror: X
 
 Sa:
     name: Sa 
+    mirror: Sb 
 
 Sb:
     name: Sb 
+    mirror: Sa 

@@ -1,0 +1,217 @@
+# TEMP FILE WHILE I FIGURE OUT NEW FORMAT FOR ZBLL STUFF
+qS:
+    name: qS
+    mirror: qS
+qAa:
+    name: qAa
+    # mirror: qAa
+qAa+:
+    name: qAa+
+    # mirror: qAa+
+qAa-:
+    name: qAa-
+    # mirror: qAa-
+qAa2:
+    name: qAa2
+    # mirror: qAa2
+qAb:
+    name: qAb
+    # mirror: qAb
+qAb+:
+    name: qAb+
+    # mirror: qAb+
+qAb-:
+    name: qAb-
+    # mirror: qAb-
+qAb2:
+    name: qAb2
+    # mirror: qAb2
+qE+:
+    name: qE+
+    # mirror: qE+
+qE-:
+    name: qE-
+    # mirror: qE-
+qF:
+    name: qF
+    # mirror: qF
+qF+:
+    name: qF+
+    # mirror: qF+
+qF-:
+    name: qF-
+    # mirror: qF-
+qF2:
+    name: qF2
+    # mirror: qF2
+qGa:
+    name: qGa
+    # mirror: qGa
+qGa+:
+    name: qGa+
+    # mirror: qGa+
+qGa-:
+    name: qGa-
+    # mirror: qGa-
+qGa2:
+    name: qGa2
+    # mirror: qGa2
+qGb:
+    name: qGb
+    # mirror: qGb
+qGb+:
+    name: qGb+
+    # mirror: qGb+
+qGb-:
+    name: qGb-
+    # mirror: qGb-
+qGb2:
+    name: qGb2
+    # mirror: qGb2
+qGc:
+    name: qGc
+    # mirror: qGc
+qGc+:
+    name: qGc+
+    # mirror: qGc+
+qGc-:
+    name: qGc-
+    # mirror: qGc-
+qGc2:
+    name: qGc2
+    # mirror: qGc2
+qGd:
+    name: qGd
+    # mirror: qGd
+qGd+:
+    name: qGd+
+    # mirror: qGd+
+qGd-:
+    name: qGd-
+    # mirror: qGd-
+qGd2:
+    name: qGd2
+    # mirror: qGd2
+qH:
+    name: qH
+    mirror: qH
+qJa:
+    name: qJa
+    # mirror: qJa
+qJa+:
+    name: qJa+
+    # mirror: qJa+
+qJa-:
+    name: qJa-
+    # mirror: qJa-
+qJa2:
+    name: qJa2
+    # mirror: qJa2
+qJb:
+    name: qJb
+    # mirror: qJb
+qJb+:
+    name: qJb+
+    # mirror: qJb+
+qJb-:
+    name: qJb-
+    # mirror: qJb-
+qJb2:
+    name: qJb2
+    # mirror: qJb2
+qNa:
+    name: qNa
+    mirror: qNb
+qNb:
+    name: qNb
+    mirror: qNa
+qRa:
+    name: qRa
+    # mirror: qRa
+qRa+:
+    name: qRa+
+    # mirror: qRa+
+qRa-:
+    name: qRa-
+    # mirror: qRa-
+qRa2:
+    name: qRa2
+    # mirror: qRa2
+qRb:
+    name: qRb
+    # mirror: qRb
+qRb+:
+    name: qRb+
+    # mirror: qRb+
+qRb-:
+    name: qRb-
+    # mirror: qRb-
+qRb2:
+    name: qRb2
+    # mirror: qRb2
+qT:
+    name: qT
+    # mirror: qT
+qT+:
+    name: qT+
+    # mirror: qT+
+qT-:
+    name: qT-
+    # mirror: qT-
+qT2:
+    name: qT2
+    # mirror: qT2
+qUa:
+    name: qUa
+    # mirror: qUa
+qUa+:
+    name: qUa+
+    # mirror: qUa+
+qUa-:
+    name: qUa-
+    # mirror: qUa-
+qUa2:
+    name: qUa2
+    # mirror: qUa2
+qUb:
+    name: qUb
+    # mirror: qUb
+qUb+:
+    name: qUb+
+    # mirror: qUb+
+qUb-:
+    name: qUb-
+    # mirror: qUb-
+qUb2:
+    name: qUb2
+    # mirror: qUb2
+qV:
+    name: qV
+    # mirror: qV
+qV+:
+    name: qV+
+    # mirror: qV+
+qV-:
+    name: qV-
+    # mirror: qV-
+qV2:
+    name: qV2
+    # mirror: qV2
+qY:
+    name: qY
+    # mirror: qY
+qY+:
+    name: qY+
+    # mirror: qY+
+qY-:
+    name: qY-
+    # mirror: qY-
+qY2:
+    name: qY2
+    # mirror: qY2
+qZ+:
+    name: qZ+
+    # mirror: qZ+
+qZ:
+    name: qZ
+    # mirror: qZ

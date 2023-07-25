@@ -1,5 +1,4 @@
 Aa: 
- name: Aa
  algs: 
   - 
    alg: (x' L') U L' D2 L U' L' D2 (L2 x)
@@ -9,7 +8,6 @@ Aa:
    alg: (x L2) D2 L' U' L D2 L' U (L' x')
    isLefty: true
 Ab: 
- name: Ab
  algs: 
   - 
    alg: (x L) U' L D2 L' U L D2 (L2 x') 
@@ -19,7 +17,6 @@ Ab:
    alg: (x' L2') D2 L U L' D2 L U' (L x)
    isLefty: true
 E: 
- name: E
  algs: 
   - 
    alg: (x' L') (U L D') (L' U' L D) (L' U' L D') (L' U L D) x
@@ -39,7 +36,6 @@ E:
    tags: 
       - OH
 F: 
- name: F
  algs: 
   - 
    setup: U2
@@ -59,7 +55,6 @@ F:
    tags: 
     - Swag
 Ga: 
- name: Ga
  algs: 
   - 
    alg: L2 U L' U L' U' L U' L2' (U' D) L' U L D'
@@ -69,19 +64,16 @@ Ga:
    alg: L2 F2' L' U2' L' U2 L F' (L' U' L U) L F' L2'
    isLefty: true
 Gb: 
- name: Gb
  algs: 
   - 
    alg: L' U' L (U D') L2' U L' U L U' L U' L2' D
    isLefty: true
 Gc: 
- name: Gc
  algs: 
   - 
    alg: L2' U' L U' L U L' U L2 (U D') L U' L' D
    isLefty: true
 Gd: 
- name: Gd
  algs: 
   - 
    alg: L U L' (U' D) L2' U' L U' L' U L' U L2 D'
@@ -90,7 +82,6 @@ Gd:
    setup: U2
    alg: R U R' (U' D) R2 U' R U' R' U R' U R2 D'
 H: 
- name: H
  algs: 
   - 
    alg: M2' U' M2' U2' M2' U' M2'
@@ -109,9 +100,6 @@ H:
     - Swag
     - New
 Ja: 
- name: Ja
- altNames: 
-  - L
  algs: 
   - 
    alg: L' U' L F [LEFTY SEXY] L F' L2' U L
@@ -129,7 +117,6 @@ Ja:
    tags: 
     - Swag
 Jb: 
- name: Jb
  algs: 
   - 
    alg: R U R' F' [SEXY] R' F R2 U' R'
@@ -147,7 +134,6 @@ Jb:
     - OH
    isLefty: true
 Na: 
- name: Na
  algs: 
   - 
    alg: F' [SEXY] R' F R2 F U' R' U' R U F' R'
@@ -163,7 +149,6 @@ Na:
     - OH
    isLefty: true
 Nb: 
- name: Nb
  algs: 
   - 
    alg: l D l' U2' l D' l' U l D l' U' l D' l' U' l D l' U' l D' l'
@@ -184,7 +169,6 @@ Nb:
     - OH
    isLefty: true
 Ra: 
- name: Ra
  algs: 
   - 
    alg: L U2' L D L' U L D' L' U' L' U L U L'
@@ -203,7 +187,6 @@ Ra:
    alg: L U' L' U' L U L D L' U' L D' L' U2 L'
    isLefty: true
 Rb: 
- name: Rb
  algs: 
   - 
    alg: L' U L U L' U' L U' L D L' U L D' L2' U' L
@@ -218,7 +201,6 @@ Rb:
     - OH
    isLefty: true
 T: 
- name: T
  algs: 
   - 
    alg: "[LEFTY SEXY] L F' L2' U L U L' U' L F"
@@ -228,7 +210,6 @@ T:
    tags: 
     - Swag
 Ua: 
- name: Ua
  algs: 
   - 
    setup: U2
@@ -241,7 +222,6 @@ Ua:
   - 
    alg: R U' R U R U R U' R' U' R2
 Ub: 
- name: Ub
  algs: 
   - 
    setup: U2
@@ -254,7 +234,6 @@ Ub:
   - 
    alg: R2 U [SEXY] R' U' R' U R'
 V: 
- name: V
  algs: 
   - 
    alg: L U' L U L' D L D' L (U' D) L2' U L2 D' L2'
@@ -274,7 +253,6 @@ V:
   - 
    alg: R' U R U' x' U [ANTISUNE] U2' [SEXY] x
 Y: 
- name: Y
  algs: 
   - 
    alg: F' L' U L U L' U' L F [LEFTY SEXY] [LEFTY SLEDGE]
@@ -286,7 +264,6 @@ Y:
     - Bigcube
     - OH
 Z: 
- name: Z
  algs: 
   - 
    setup: U

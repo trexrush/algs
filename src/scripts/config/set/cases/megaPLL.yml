@@ -103,6 +103,7 @@ E2:
   name: E2
   mirror: E2
   altNames: ["Magmar"]
+  imageAlg: F' U L' U L' U' L U' L' U2 L U' L U L' U2' L F
 E3:
   name: E3
   mirror: E3
@@ -546,18 +547,22 @@ V1+:
   name: V1+
   mirror: V1-
   altNames: ["Magnemite"]
+  imageAlg: U R' U2 R F U F' U' R' U F U' F' U2' R
 V1-:
   name: V1-
   mirror: V1+
   altNames: ["Voltorb"]
+  imageAlg: L U2' L' F' U' F U L U' F' U F U2 L'
 V2+:
   name: V2+
   mirror: V2-
   altNames: ["Magneton"]
+  imageAlg: U2' R' U2 F U F' U' R U F U' F' R' U2' R
 V2-:
   name: V2-
   mirror: V2+
   altNames: ["Electrode"]
+  imageAlg: U2 L U2' F' U' F U L' U' F' U F L U2 L'
 V3+:
   name: V3+
   mirror: V3-

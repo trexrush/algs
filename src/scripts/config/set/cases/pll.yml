@@ -1,0 +1,65 @@
+Aa: 
+ name: Aa
+ mirror: Ab
+Ab: 
+ name: Ab
+ mirror: Aa
+E: 
+ name: E
+ mirror: E
+F: 
+ name: F
+ mirror: F
+Ga: 
+ name: Ga
+ mirror: Gc
+Gb: 
+ name: Gb
+ mirror: Gd
+Gc: 
+ name: Gc
+ mirror: Ga
+Gd: 
+ name: Gd
+ mirror: Gb
+H: 
+ name: H
+ mirror: H
+Ja: 
+ name: Ja
+ mirror: Jb
+ altNames: 
+    - L
+Jb: 
+ name: Jb
+ mirror: Ja
+Na: 
+ name: Na
+ mirror: Nb
+Nb: 
+ name: Nb
+ mirror: Na
+Ra: 
+ name: Ra
+ mirror: Rb
+Rb: 
+ name: Rb
+ mirror: Ra
+T: 
+ name: T
+ mirror: T
+Ua: 
+ name: Ua
+ mirror: Ub
+Ub: 
+ name: Ub
+ mirror: Ua
+V: 
+ name: V
+ mirror: V
+Y: 
+ name: Y
+ mirror: Y
+Z: 
+ name: Z
+ mirror: Z

@@ -2,7 +2,7 @@ import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
 import { useGrouping } from "../../scripts/config/set/parityPLL"
 
 
-import yml from '../paritypll.yml'
+import yml from '../userSets/paritypll.yml'
 let data: ICaseList = yml
 
 const ParityPLLNoGrouping: IAlgset = useGrouping('none', data)
