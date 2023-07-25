@@ -83,7 +83,6 @@ const mirrorWideMoves = [
   "Uw2", "Lw2", "Rw2", "Dw2", "Bw2", "Fw2", "2U2", "2L2", "2R2", "2D2", "2B2", "2F2",
 ]
 
-// TODO: dont reverse U2 and U2' (same with d2s) but do reverse for mega
 const backMoves = [
   "U'", "R'", "L'", "D'", "F'", "B'", "u'", "r'", "l'", "d'", "f'", "b'",
   "U", "R", "L", "D", "F", "B", "u", "r", "l", "d", "f", "b",
@@ -131,21 +130,17 @@ const backWideMoves = [
   "Uw2", "Rw2", "Lw2", "Dw2", "Fw2", "Bw2", "2U2", "2R2", "2L2", "2D2", "2F2", "2B2",
 ]
 
-// TODO: slices arent working on bigs, talk to lucas garron about that and like the billion other things cubingjs
-// hasnt implemented for my usecaser
 export const baseMoveGroups: modularPuzzleGroup<string[]> = {
   "3x3x3": [...tripleMoves, ...baseSlices, ...baseRotations, ...baseMoves],
   "2x2x2": [...baseRotations, ...baseMoves],
   "4x4x4": [...wideMoves, ...tripleMoves, ...baseRotations, ...baseMoves],
   "megaminx": [...baseMegaF, ...baseMega, ...baseRotations, ...baseMoves],
-  "megaminx-lefty": [...baseMegaF, ...baseMega, ...baseRotations, ...baseMoves]
 }
 export const mirrorMoveGroups: modularPuzzleGroup<string[]> = {
   "3x3x3": [...tripleMirrorMoves, ...mirrorSlices, ...mirrorRotations, ...mirrorMoves],
   "2x2x2": [...mirrorRotations, ...mirrorMoves],
   "4x4x4": [...mirrorWideMoves, ...tripleMirrorMoves, ...mirrorRotations, ...mirrorMoves],
   "megaminx": [...mirrorMegaF, ...mirrorMega, ...mirrorRotations,...mirrorMoves],
-  "megaminx-lefty": [...mirrorMegaF, ...mirrorMega, ...mirrorRotations, ...mirrorMoves]
 }
 // megaminx F would be mapped to B', (which is not intentional, should be BL' or BR'), 
 // so earlier moves are set to take precedence and megaminx modules need to go first
@@ -154,5 +149,5 @@ export const backMoveGroups: modularPuzzleGroup<string[]> = {
   "2x2x2": [...backMoves, ...backRotations],
   "4x4x4": [...backWideMoves, ...tripleBackMoves, ...backRotations, ...backMoves],
   "megaminx": [...backRightMegaF, ...backMega, ...backRotations, ...backMoves],
-  "megaminx-lefty": [...backLeftMegaF, ...backMega, ...backRotations, ...backMoves]
+  "megaminx-l": [...backLeftMegaF, ...backMega, ...backRotations, ...backMoves]
 }

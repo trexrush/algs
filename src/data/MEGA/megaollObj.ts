@@ -4,7 +4,7 @@ import { useGrouping } from "../../scripts/config/set/megaOLL"
 
 //@ts-expect-error
 import yml from './megaoll.yml'
-let data: ICaseList = yml // TODO: validation
+let data: ICaseList = yml
 
 const MegaOLLNoGrouping: IAlgset = useGrouping('none', data)
 const MegaOLLGroupByOLL: IAlgset = useGrouping('oll', data)

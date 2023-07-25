@@ -1,6 +1,6 @@
 import type { IAlgorithmClass } from "."
 import { AlgBuilder, TNotationTargets } from ".."
-import { puzzleMapping } from "../../config/puzzle"
+import { getConfig } from "../../config/puzzle"
 import { mirrorAction, simplifyAlg } from "../actions"
 import { algDelimiterWithTriggers, isTriggerRegex } from "../regex"
 import type { ITriggerClass } from "../trigger"
@@ -36,10 +36,8 @@ export const mirrorAlg = (obj: IAlgorithmClass): IAlgorithmClass => {
 }
 
 export const notationAlg = (obj: IAlgorithmClass, to: TNotationTargets): string => {
-  if (puzzleMapping[obj.puzzle]?.notation) {
-    return puzzleMapping[obj.puzzle]!.notation!(obj.expand(), to)
-  }
-  else return obj.expand()
+  const puzzleDef = getConfig(obj.puzzle)
+  return puzzleDef.notation ? puzzleDef.notation(obj.expand(), to) : obj.expand()
 }
 
 export const checkExpandible = (obj: IAlgorithmClass) => { return obj.alg.match(isTriggerRegex) ? true : false }

@@ -38,7 +38,6 @@
   };
 </script>
 
-<!-- TODO: make container query -->
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
 <svelte:component this={Layout} {toggleDisplay} {isAlgVisDisplayed}>

@@ -11,7 +11,6 @@ const config: IConfig = createConfig(puzzle3x3x3, {
 
 let _: ICaseList = yml
 
-// TODO: check for errors, though not high priority since these if these calls fail, the site wont build
 const TNoGrouping: IAlgset = {
     config: config,
     sets: [

@@ -1,4 +1,4 @@
-import type { twistyPuzzleTypeWithChirality } from "../../types"
+import type { ITriggerClass } from "."
 import { backAction, invertAction, mirrorAction, repeatAction } from "../actions"
 
 const modifierAlias = {
@@ -24,13 +24,13 @@ export const modifiersList = ["INVERSE", "BACK", "B", "LEFTY", "LEFT", "L", "DOU
 export type TModifiersList = typeof modifiersList[number]
 export type TModifierAliases = keyof typeof modifierAlias
 export type TModifiers = typeof modifierAlias[TModifierAliases]
-export type TModifierActions = { type: TModifiers, action: (a: string, pzl: twistyPuzzleTypeWithChirality) => string, text: TModifierAliases }
+export type TModifierActions = { type: TModifiers, action: (a: string, tr: ITriggerClass) => string, text: TModifierAliases }
 
 export const getModActionsFromText = (m: TModifierAliases): TModifierActions => { return modifierActions[modifierAlias[m]] }
 export const modifierActions: Record<TModifiers, TModifierActions> = {
-  "invert": { type: "invert", action: (a, pzl) => { return invertAction(a) }, text: 'INV'},
-  "left": { type: "left",  action: (a, pzl) => { return mirrorAction(a, pzl) }, text: 'LEFT'},
-  "back": { type: "back",  action: (a, pzl) => { return backAction(a, pzl) }, text: 'BACK'},
-  "double": { type: "double",  action: (a, pzl) => { return repeatAction(a, 2, pzl) }, text: '2x'},
-  "triple": { type: "triple",  action: (a, pzl) => { return repeatAction(a, 3, pzl) }, text: '3x'},
+  "invert": { type: "invert", action: (a, tr) => { return invertAction(a) }, text: 'INV'},
+  "left": { type: "left",  action: (a, tr) => { return mirrorAction(a, tr.puzzle) }, text: 'LEFT'},
+  "back": { type: "back",  action: (a, tr) => { return backAction(a, tr.puzzle, tr.resultModifiers.includes('LEFT')) }, text: 'BACK'},
+  "double": { type: "double",  action: (a, tr) => { return repeatAction(a, 2, tr.puzzle) }, text: '2x'},
+  "triple": { type: "triple",  action: (a, tr) => { return repeatAction(a, 3, tr.puzzle) }, text: '3x'},
 }

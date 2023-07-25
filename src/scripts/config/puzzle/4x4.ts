@@ -1,4 +1,6 @@
 import type { IPuzzleConfig } from "."
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "./moveTranslations"
+import { triggerSubstitutionGroups } from "./triggers"
 
 const notation4 = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
@@ -15,10 +17,12 @@ const notation4 = (a: string, to: 'vc' | 'cubingjs'): string => {
 
 export const puzzle4x4x4: IPuzzleConfig = { 
   type: '4x4x4', 
-  right: '4x4x4', 
-  left: '4x4x4', 
   vc: 4,
   cancel: { quantumMoveOrder: () => 4 }, 
   notation: (a, to) => { return notation4(a, to) },
   imgSource: "vc",
+  triggers: triggerSubstitutionGroups["4x4x4"]!,
+  baseMoves: baseMoveGroups['4x4x4']!,
+  mirrorTranslation: mirrorMoveGroups['4x4x4']!,
+  backTranslation: { left: backMoveGroups['4x4x4']!, right: backMoveGroups['4x4x4']! }
 }

@@ -35,7 +35,6 @@
       experimentalStickering: config.twistyPlayerConfig.stage,
       tempoScale: config.twistyPlayerConfig.tempo,
       cameraLatitude: config.twistyPlayerConfig.cameraY,
-      // TODO: same as above but just move it to another func in this file
       cameraLongitude: puzzleAngle,
       cameraDistance: algObj.puzzle == 'megaminx' ? 5.5 : 5,
       experimentalDragInput: drag ? "auto" : "none",
@@ -50,7 +49,7 @@
     twComponent.style.height = `${size}px`
     twComponent.style.width = `${size}px`
 
-    // twComponent.experimentalFaceletScale = 0.88
+    twComponent.experimentalFaceletScale = 0.88
     // twComponent.experimentalModel.anchorTransformation = { }
     return twComponent
   }

@@ -43,7 +43,6 @@ W:
         tags: ['Direct']
     - 
         alg: "[OPP] r2' l2' U' M U2' M' U' M2"
-    note: TODO fix the dumb notation i had to pull on alg 3
 pJ:
     name: pJ
     algs:

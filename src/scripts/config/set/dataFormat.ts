@@ -20,10 +20,19 @@ export interface ICase extends IGroupElement {
   recog?: string[],
 }
 
-// TODO
-interface ICaseScrambles {}
-interface ICaseDefinition {}
-interface ICaseData {}
+// TODO: use this format to reduce unnecessary data pulled in for a case
+interface ICaseScrambles {
+  scrambles: string[]
+}
+interface ICaseDefinition {
+  imageAlg?: string
+  altNames: string[]
+}
+interface ICaseData {
+  algs: IAlg[]
+  recog?: string[],
+  note?: string
+}
 
 export interface IAlg {
   setup?: string

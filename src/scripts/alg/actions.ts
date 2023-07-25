@@ -1,14 +1,12 @@
 import { Alg } from "cubing/alg"
-import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "../config/puzzle/moveTranslations"
-import type { twistyPuzzleTypeWithChirality } from "../types"
+import type { twistyPuzzleType } from "../types"
 import { matchAllParenthesis } from "./regex"
-import { puzzleMapping } from "../config/puzzle"
+import { getConfig } from "../config/puzzle"
 
 // ALG.TS, MODIFIER
-export const mirrorAction = (a: string, pzl: twistyPuzzleTypeWithChirality ): string => {
-  const baseMovesArray = baseMoveGroups[pzl]
-  const mirrorMovesArray = mirrorMoveGroups[pzl]
-  if (!baseMovesArray || !mirrorMovesArray) { return '' }
+export const mirrorAction = (a: string, pzl: twistyPuzzleType ): string => {
+  const baseMovesArray = getConfig(pzl).baseMoves
+  const mirrorMovesArray = getConfig(pzl).mirrorTranslation
   let aArr: string[] = a.replace(matchAllParenthesis, '').split(' ')
   aArr.forEach((move, i) => {
     aArr[i] = mirrorMovesArray[baseMovesArray.indexOf(move)]
@@ -17,10 +15,10 @@ export const mirrorAction = (a: string, pzl: twistyPuzzleTypeWithChirality ): st
 }
 
 // MODIFIER ONLY
-export const backAction = (a: string, pzl: keyof typeof baseMoveGroups ): string => {
-  const baseMovesArray = baseMoveGroups[pzl]
-  const backMovesArray = backMoveGroups[pzl]
-  if (!baseMovesArray || !backMovesArray) { return '' }
+export const backAction = (a: string, pzl: twistyPuzzleType, isLefty: boolean): string => {
+  const baseMovesArray: string[] = getConfig(pzl).baseMoves
+  const backMovesArray: string[] = isLefty ? getConfig(pzl).backTranslation.left : getConfig(pzl).backTranslation.right
+  if (baseMovesArray.length != backMovesArray.length) return '' // idiot proofing just in case
   let aArr: string[] = a.replace(matchAllParenthesis, '').split(' ')
   aArr.forEach((move, i) => {
     aArr[i] = backMovesArray[baseMovesArray.indexOf(move)]
@@ -34,12 +32,12 @@ export const invertAction = (a: string): string => {
 }
 
 // MODIFIER ONLY
-export const repeatAction = (a: string, q: number, pzl: twistyPuzzleTypeWithChirality): string => {
+export const repeatAction = (a: string, q: number, pzl: twistyPuzzleType): string => {
   let res = (a + " ").repeat(q)
   return simplifyAlg(res, pzl)
 }
 
-export const simplifyAlg = (a: string, pzl: twistyPuzzleTypeWithChirality): string => {
+export const simplifyAlg = (a: string, pzl: twistyPuzzleType): string => {
   return new Alg(a).experimentalSimplify({cancel: { directional: 'any-direction', puzzleSpecificModWrap: 'gravity' },
-  puzzleSpecificSimplifyOptions: puzzleMapping[pzl]?.cancel }).toString()
+  puzzleSpecificSimplifyOptions: getConfig(pzl).cancel }).toString()
 }

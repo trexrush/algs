@@ -1,9 +1,9 @@
 import type { IPuzzleConfig } from ".";
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "./moveTranslations";
+import { triggerSubstitutionGroups } from "./triggers";
 
 export const puzzleMegaminx: IPuzzleConfig = {
   type: 'megaminx',
-  right: 'megaminx',
-  left: 'megaminx-lefty',
   vc: 'mega',
   imgSource:"cubingjs",
   cancel: { quantumMoveOrder: () => 5 } ,
@@ -12,4 +12,8 @@ export const puzzleMegaminx: IPuzzleConfig = {
     cameraX: 10,
     tempo: 3,
   },
+  triggers: triggerSubstitutionGroups["megaminx"]!,
+  baseMoves: baseMoveGroups['megaminx']!,
+  mirrorTranslation: mirrorMoveGroups['megaminx']!,
+  backTranslation: { left: backMoveGroups['megaminx-l']!, right: backMoveGroups['megaminx']! }
 }

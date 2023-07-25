@@ -2,13 +2,10 @@ import merge from "ts-deepmerge"
 import type { IConfig, ITwistyPlayerConfig, IVisualCubeConfig } from "."
 import type { IJustPuzzleConfig } from "./puzzle"
 import type { IJustSetConfig } from "./set"
+import { puzzle3x3x3 } from "./puzzle/3x3"
 
 const DefaultPuzzleConfig: IJustPuzzleConfig = {
-  type: '3x3x3', // TODO: remove twistypuzzlewithchirality
-  right: '3x3x3', 
-  left: '3x3x3', 
-  vc: 3, 
-  imgSource: "none",
+  ...puzzle3x3x3,
   note: ''
 }
 

@@ -18,7 +18,6 @@ export type TAlgCommon<T extends TAlgCommon<T>> = Pick<IConfig, "imgSource"> & {
 export type TNotationTargets = 'vc' | 'cubingjs'
 
 export const AlgBuilder = function () { 
-  // TODO: take into account chirality
   const builders = {
     stage1: (algObj: Partial<IAlgorithmClass & ITriggerClass>) => { return {
       withPuzzle: (p: twistyPuzzleType) => {
@@ -54,7 +53,7 @@ export const AlgBuilder = function () {
           invert() { return { ...toggleModifier("invert", this) } },
           double() { return { ...toggleModifier("double", this) } },
           triple() { return { ...toggleModifier("triple", this) } },
-          notation(to) { return notationTrigger(this, to) }, // TODO: implement
+          notation(to) { return notationTrigger(this, to) },
         } as ITriggerClass
         return builders.stage3(newAlgObj)
       }

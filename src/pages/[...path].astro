@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar.astro";
 import Page from "../layouts/Page.astro";
 import { PageRoutes, type IPageData } from '../scripts/routes'
 
-
 type Props = Omit<IPageData, 'path'>
 
 export function getStaticPaths() {

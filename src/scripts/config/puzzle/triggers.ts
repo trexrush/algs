@@ -1,5 +1,7 @@
 import type { modularPuzzleGroup } from "."
 
+export type TTrigger = { name: string, alg: string }
+
 const cubeRotations = [
   { name: "y", alg: "y . " },
   { name: "y'", alg: "y' . " },
@@ -60,17 +62,6 @@ const megaSubstitutes = [
   { name: "ANTILOOP", alg: "R2' U2 R2 U R2' U2 R2" },
 ]
 
-const megaRightySubstitutes = [
-  { name: "x", alg: "dL' R" },
-  { name: "x'", alg: "dL R'" },
-  ...megaSubstitutes
-]
-const megaLeftySubstitutes = [
-  { name: "x", alg: "dR L'" },
-  { name: "x'", alg: "dR' L" },
-  ...megaSubstitutes
-]
-
 const baseTriggers = [
   { name: "CANCEL", alg: "" },
   { name: "SEXY", alg: "R U R' U'" },
@@ -114,10 +105,9 @@ const rareTriggers = [
 
 const triggers = [...baseTriggers, ...rareTriggers]
 const commonSubs = [...cubeRotations, ...triggers]
-export const triggerSubstitutionGroups: modularPuzzleGroup<Array<{ name: string, alg: string }>> = {
+export const triggerSubstitutionGroups: modularPuzzleGroup<TTrigger[]> = {
     "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...commonSubs],
     "2x2x2": [...cubeRotations, ...rareTriggers, ...baseTriggers],
     "4x4x4": [...bigCubeSubstitutes, ...pllSubstitutes, ...commonSubs],
-    "megaminx": [...megaRightySubstitutes, ...pllSubstitutes, ...triggers],
-    "megaminx-lefty": [...megaLeftySubstitutes, ...pllSubstitutes, ...triggers]
+    "megaminx": [...megaSubstitutes, ...pllSubstitutes, ...triggers],
 }

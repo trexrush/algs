@@ -13,7 +13,7 @@ export interface ILocalSetOptions {
 // UNUSED
 export interface ILocalCaseOptions {
     personalNote?: string
-    preferredAlg?: string // TODO: figure out how to to mark down preferredAlgs
+    preferredAlg?: string
     learnStatus?: "training" | "learned"
     trainerLists?: any[]
 }
