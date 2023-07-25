@@ -1,6 +1,4 @@
-'1A':
-    name: 1A
-    altNames: ['Opp CLL']
+1A:
     algs:
     -
      alg: L' U' L U (R' L) F' L' F R
@@ -9,9 +7,7 @@
      alg: R' [LEFT SEXY] [LEFT SLEDGE] R
      isLefty: true
     comment: maybe try from LB to make the (B)R less awkward?
-'1B':
-    name: 1B
-    altNames: ['Adj CLL']
+1B:
     algs:
     -
      alg: R' F' L F (L' R) U' L' U L
@@ -20,16 +16,12 @@
      alg: R' [LEFT HEDGE] [LEFT UNSEXY] R
      isLefty: true
     comment: maybe try from LB to make the (B)R less awkward?
-'2A':
-    name: 2A
-    altNames: ['U']
+2A:
     algs:
     -
      alg: L' U' L U' L' U' L U2 L' U L
      isLefty: true
-'2B':
-    name: 2B
-    altNames: ['T']
+2B:
     algs:
     -
      alg: F' L' U2' L U L' U L F
@@ -38,9 +30,7 @@
      alg: L' BL' L F' L' BL L F
      isLefty: true
      comment: 3x3 transfer (t)
-'2C':
-    name: 2C
-    altNames: ['Wide L']
+2C:
     algs:
     -
      alg: L' U2 L U L' U2 L
@@ -48,9 +38,7 @@
     -
      alg: L U2' L' U' L U2' L'
      isLefty: true
-'2D':
-    name: 2D
-    altNames: ['L']
+2D:
     algs:
     -
      alg: F' L' U' L U' L' U2 L F
@@ -59,57 +47,43 @@
      alg: L' BL L F' L' BL' L F
      isLefty: true
      comment: 3x3 transfer (l)
-'3A+':
-    name: 3A+
-    altNames: ['Sune']
+3A+:
     algs:
     -
      alg: L U L' U L U2' L'
      isLefty: true
     comment: 3x3 transfer (sune)
-'3A-':
-    name: 3A-
-    altNames: ['Left Sune']
+3A-:
     algs:
     -
      alg: L' U' L U' L' U2 L
      isLefty: true
     comment: 3x3 transfer (sune)
-'3B+':
-    name: 3B+
-    altNames: ['Antisune']
+3B+:
     algs:
     -
      alg: L U2 L' U' L U' L'
      isLefty: true
     comment: 3x3 transfer (antisune)
-'3B-':
-    name: 3B-
-    altNames: ['Left Antisune']
+3B-:
     algs:
     -
      alg: L' U2' L U L' U L
      isLefty: true
     comment: 3x3 transfer (antisune)
-'4A':
-    name: 4A
-    altNames: ['H, Double Sune']
+4A:
     algs:
     -
      alg: L' U' L U' L' U L U' L' U2 L
      isLefty: true
     comment: 3x3 transfer (h)
-'4B':
-    name: 4B
-    altNames: ['H, Double Antisune']
+4B:
     algs:
     -
      alg: L' U2' L U L' U' L U L' U L
      isLefty: true
     comment: 3x3 transfer (h)
-'4C':
-    name: 4C
-    altNames: ['Hand', 'Turtle']
+4C:
     algs:
     -
      alg: L' U' L U' L' U' L U L' U2 L
@@ -121,9 +95,7 @@
      alg: (L' U' L U' L' U2 L) U' (L' U' L U' L' U2 L)
      isLefty: true
     comment: tbh for this I just the last alg (sune x2) cuz I cant learn this alg lol
-'4D':
-    name: 4D
-    altNames: ['Empress']
+4D:
     algs:
     -
      alg: L U2' L' U2' L U2 L' U2' L U' L'
@@ -132,37 +104,32 @@
      alg: L' U2' L U L' U L2 U L' U L U2' L'
      isLefty: true
     comment: 'never learned this case, I just do sune into I think T'
-'4E+':
-    name: 4E+
+4E+:
     algs:
     -
      alg: L U2 L2' U' L2 U' L2' U2 L
      isLefty: true
     comment: 3x3 transfer (pi) theres a better alt alg tho maybe learn it
-'4E-':
-    name: 4E-
+4E-:
     algs:
     -
      alg: L' U2' L2 U L2' U L2 U2' L'
      isLefty: true
     comment: 3x3 transfer (pi) theres a better alt alg tho maybe learn it
 
-'5+':
-    name: 5+
+5+:
     algs:
     -
      alg: L U L' U2 L U2' L' U L U2' L'
      isLefty: true
     comment: 'U + sune, alg starts on the middle sune corner'
-'5-':
-    name: 5-
+5-:
     algs:
     -
      alg: L' U' L U2' L' U2 L U' L' U2 L
      isLefty: true
     comment: 'U + sune, alg starts on the middle sune corner'
-'6A':
-    name: 6A
+6A:
     algs:
     -
      alg: BL U L2 F' L' F L' U' BL'
@@ -170,28 +137,24 @@
     -
      alg: L' U2 L F' L F L' U L' U2 L
      isLefty: true
-'6B':
-    name: 6B
+6B:
     algs:
     -
      alg: F' L' U L U2' L' U' L F
      isLefty: true
-'7A':
-    name: 7A
+7A:
     algs:
     -
      alg: L' U' L U L F' L' F
      isLefty: true
     comment: 3x3 transfer
-'7B':
-    name: 7B
+7B:
     algs:
     -
      alg: F' L' U' L U F
      isLefty: true
     comment: 3x3 transfer
-'8A+':
-    name: 8A+
+8A+:
     algs:
     -
      alg: L' U' L' BL L BL' U L
@@ -200,15 +163,13 @@
      alg: L U2 F U' F' U' L'
      isLefty: true
     comment: 3x3 transfer
-'8A-':
-    name: 8A-
+8A-:
     algs:
     -
      alg: L U L F' L' F U' L'
      isLefty: true
     comment: 3x3 transfer
-'8B+':
-    name: 8B+
+8B+:
     algs:
     -
      alg: L U L' U' F' L' BL L (BL' F)
@@ -217,8 +178,7 @@
      alg: F' L' U' L U L' U' L U' L' U2 L F
      isLefty: true
     comment: 3x3 transfer?
-'8B-':
-    name: 8B-
+8B-:
     algs:
     -
      alg: L' U' L U BL L F' L' (F BL')
@@ -227,8 +187,7 @@
      alg: L' U' L2 U L F' L' U' L' U F
      isLefty: true
     comment: 3x3 transfer
-'9A+':
-    name: 9A+
+9A+:
     algs:
     -
      alg: L' BL L U L' U' BL' U L
@@ -237,21 +196,18 @@
      alg: L' U' L F U F' U' L' U2 L
      isLefty: true
     comment: 3x3 transfer
-'9A-':
-    name: 9A-
+9A-:
     algs:
     -
      alg: L F' L' U' L U F U' L'
      isLefty: true
     comment: 3x3 transfer
-'9B+':
-    name: 9B+
+9B+:
     algs:
     -
      alg: F' U' L' U' L U2 F
      isLefty: true
-'9B-':
-    name: 9B-
+9B-:
     algs:
     -
      alg: L U F U F' U2' L'
@@ -259,32 +215,27 @@
     -
      alg: BR L' U' L U L F' L' F BR'
      isLefty: true
-'10A+':
-    name: 10A+
+10A+:
     algs:
     -
      alg: L F U F' U2 L' U' L U2' L'
      isLefty: true
-'10A-':
-    name: 10A-
+10A-:
     algs:
     -
      alg: L' U' L U2' L' U L U2 L F' L' F
      isLefty: true
-'10B+':
-    name: 10B+
+10B+:
     algs:
     -
      alg: L' U2' L U' L F' L' F L' U2' L
      isLefty: true
-'10B-':
-    name: 10B-
+10B-:
     algs:
     -
      alg: L' U L U2 L F' L' F U2' L' U' L
      isLefty: true
-'11A+':
-    name: 11A+
+11A+:
     algs:
     -
      alg: L' U2' L U' L F U F' U' L2' U2' L
@@ -292,8 +243,7 @@
     -
      alg: R' L F' L' U' L U F R U' L'
      isLefty: true
-'11A-':
-    name: 11A-
+11A-:
     algs:
     -
      alg: L U F U F' L2' U' L2 U' L2' U2 L
@@ -301,8 +251,7 @@
     -
      alg: L U2 L F' L2' U' L U' L' U2 L F L'
      isLefty: true
-'11B+':
-    name: 11B+
+11B+:
     algs:
     -
      alg: L U L R' F' L' F R U' L'
@@ -310,27 +259,23 @@
     -
      alg: L' U2 L U L F' L' F U' L' U2' L
      isLefty: true
-'11B-':
-    name: 11B-
+11B-:
     algs:
     -
      alg: L U2 L F' L' F L' U' L U' L'
      isLefty: true
-'12+':
-    name: 12+
+12+:
     algs:
     -
      alg: L U2 L' U L U' F U' F' U' L'
      isLefty: true
-'12-':
-    name: 12-
+12-:
     algs:
     -
      alg: F' L' U L U2' L' U' L U' L' U L F
      isLefty: true
     comment: 3x3 transfer but I think its a zbll
-'13+':
-    name: 13+
+13+:
     algs:
     -
      alg: F' L F U2 F' L' F L U2' L'
@@ -338,51 +283,43 @@
     -
      alg: L F' L' U2' L F L' U F' U F
      isLefty: true
-'13-':
-    name: 13-
+13-:
     algs:
     -
      alg: L F' L' U2' L F L' F' U2 F
      isLefty: true
-'14A+':
-    name: 14A+
+14A+:
     algs:
     -
      alg: F' U' L' U L2 F L' U' L' U L
      isLefty: true
     comment: maybe replace with the 6 mover lol
-'14A-':
-    name: 14A-
+14A-:
     algs:
     -
      alg: F' L' U2' L U2 F
      isLefty: true
-'14B+':
-    name: 14B+
+14B+:
     algs:
     -
      alg: L F U F' L' U2 L U2 L'
      isLefty: true
-'14B-':
-    name: 14B-
+14B-:
     algs:
     -
      alg: L U2' L' U2' L F U' F' L'
      isLefty: true
-'15A+':
-    name: 15A+
+15A+:
     algs:
     -
      alg: F' L F U F' L' F L U' L'
      isLefty: true
-'15A-':
-    name: 15A-
+15A-:
     algs:
     -
      alg: L F' L' U' L F L' F' U F
      isLefty: true
-'15B+':
-    name: 15B+
+15B+:
     algs:
     -
      alg: L2 F' L' F L' U' L F U F' U L'
@@ -390,14 +327,12 @@
     -
      alg: L' U2' L U L' U L F' L F L' U' L' U L
      isLefty: true
-'15B-':
-    name: 15B-
+15B-:
     algs:
     -
      alg: L U2' L' U' L F' L F L' U2' L'
      isLefty: true
-'16A+':
-    name: 16A+
+16A+:
     algs:
     -
      alg: L U2 L F' L' F L' U L U2 L'
@@ -405,14 +340,12 @@
     -
      alg: L' BL L2 U L' U L U2' L2' BL' L
      isLefty: true
-'16A-':
-    name: 16A-
+16A-:
     algs:
     -
      alg: L F' L2' U' L U' L' U2 L2 F L'
      isLefty: true
-'16B+':
-    name: 16B+
+16B+:
     algs:
     -
      alg: L U L' U L F' U' L' U L F U2' L'
@@ -420,14 +353,12 @@
     -
      alg: L F U2 F' U L' U' L U2' L'
      isLefty: true
-'16B-':
-    name: 16B-
+16B-:
     algs:
     -
      alg: F' L' U2' L U F' L F L' U F
      isLefty: true
-'17A+':
-    name: 17A+
+17A+:
     algs:
     -
      alg: F' U' L' U2 L U2' L' U' L F
@@ -438,14 +369,12 @@
     -
      alg: L' U2' L U' F' L F L2' U2' L
      isLefty: true
-'17A-':
-    name: 17A-
+17A-:
     algs:
     -
      alg: L U2 L F' L' F U2' L'
      isLefty: true
-'17B+':
-    name: 17B+
+17B+:
     algs:
     -
      alg: R' BL L U L' U' BL' R
@@ -453,8 +382,7 @@
     -
      alg: R' F' L' U' L U F R
      isLefty: true
-'17B-':
-    name: 17B-
+17B-:
     algs:
     -
      alg: BR F' L' U' L U F BR'
@@ -465,8 +393,7 @@
     -
      alg: L U2 L' U' L F U F' U2' L'
      isLefty: true
-'18A':
-    name: 18A
+18A:
     algs:
     -
      alg: L' U2' L2 U L' U L U2' F' L' F
@@ -475,8 +402,7 @@
      alg: L F' U' L' U L2 F L2' U' L U L'
      isLefty: true
     comment: 3x3 transfer
-'18B':
-    name: 18B
+18B:
     algs:
     -
      alg: L U2 L' F' L F U2' L' U2 L' U2' L
@@ -484,35 +410,30 @@
     -
      alg: F' L F R' F' L2' U' L U F R
      isLefty: true
-'18C':
-    name: 18C
+18C:
     algs:
     -
      alg: F' U' L' U L U' L' U L F
      isLefty: true
     comment: 3x3 transfer
-'18D':
-    name: 18D
+18D:
     algs:
     -
      alg: L U2 L' U' L F' L F L' U' L'
      isLefty: true
-'18E+':
-    name: 18E+
+18E+:
     algs:
     -
      alg: L' U' L U' L' U BL' U BL L
      isLefty: true
     comment: 3x3 transfer?
-'18E-':
-    name: 18E-
+18E-:
     algs:
     -
      alg: L U L' U L U' F U' F' L'
      isLefty: true
     comment: 3x3 transfer?
-'19A+':
-    name: 19A+
+19A+:
     algs:
     -
      alg: F' U2' L' U L U L' U' L U F
@@ -520,8 +441,7 @@
     -
      alg: BL U L U' L' U L U L' U2' BL'
      isLefty: true
-'19A-':
-    name: 19A-
+19A-:
     algs:
     -
      alg: F' U' L' U L U' L' U' L U2 F
@@ -529,26 +449,22 @@
     -
      alg: BL U2 L U' L' U' L U L' U' BL'
      isLefty: true
-'19B+':
-    name: 19B+
+19B+:
     algs:
     -
      alg: L U2 L' U' L F U F' L' U' L U' L'
      isLefty: true
-'19B-':
-    name: 19B-
+19B-:
     algs:
     -
      alg: L' U2 L F U F' U L' U L
      isLefty: true
-'19C+':
-    name: 19C+
+19C+:
     algs:
     -
      alg: L' U2 L F' L F L' U2 L' U L
      isLefty: true
-'19C-':
-    name: 19C-
+19C-:
     algs:
     -
      alg: L U2' L' BL L' BL' L U2' L U' L'
@@ -559,8 +475,7 @@
     -
      alg: L' U' L U2' L' U L2 F' L' F U' L' U2' L
      isLefty: true
-'19D+':
-    name: 19D+
+19D+:
     algs:
     -
      alg: BL U L U L' U' L U L' U2' BL'
@@ -568,14 +483,12 @@
     -
      alg: L' U' L U' L' U L U L F' L2' U' L U F
      isLefty: true
-'19D-':
-    name: 19D-
+19D-:
     algs:
     -
      alg: F' U' L' U' L U L' U' L U2 F
      isLefty: true
-'19E+':
-    name: 19E+
+19E+:
     algs:
     -
      alg: L U L F' L2' U L U2' L' U' L F L'
@@ -583,8 +496,7 @@
     -
      alg: L F' L' U L U2 L' U' L2 F L' U' L'
      isLefty: true
-'19E-':
-    name: 19E-
+19E-:
     algs:
     -
      alg: F' U' L' U L' U' L U' L' U2 L2 F
@@ -592,14 +504,12 @@
     -
      alg: L' U' L U' L' U L U' L' U L U L F' L' F
      isLefty: true
-'19F+':
-    name: 19F+
+19F+:
     algs:
     -
      alg: L U2 L2' U' L2 U' L' U2 L F' L' F
      isLefty: true
-'19F-':
-    name: 19F-
+19F-:
     algs:
     -
      alg: L' U2 L U2 L' U' L U2 L F' L' F
@@ -607,14 +517,12 @@
     -
      alg: L' U2' L2 U L2' U L U2' L' BL L BL'
      isLefty: true
-'20A+':
-    name: 20A+
+20A+:
     algs:
     -
      alg: F' L' U2' L U2 L' U' L U F
      isLefty: true
-'20A-':
-    name: 20A-
+20A-:
     algs:
     -
      alg: BL L U2 L' U2' L U L' U' BL'
@@ -625,14 +533,12 @@
     -
      alg: L U2 F' L F L' F' L F L' U2' L'
      isLefty: true
-'20B+':
-    name: 20B+
+20B+:
     algs:
     -
      alg: L F U F' U' L2' U2' L U L' U L
      isLefty: true
-'20B-':
-    name: 20B-
+20B-:
     algs:
     -
      alg: L F U F' U' L' U2 L U2 L' U' L U' L'
@@ -643,14 +549,12 @@
     -
      alg: F' L' U' L U' L' U L F' L F L' U F
      isLefty: true
-'20C+':
-    name: 20C+
+20C+:
     algs:
     -
      alg: F' U2' L' U L U' L' U L U F
      isLefty: true
-'20C-':
-    name: 20C-
+20C-:
     algs:
     -
      alg: BL U2 L U' L' U L U' L' U' BL'
@@ -658,8 +562,7 @@
     -
      alg: L U2 L' F' L F L' U' L U' L2' U2 L
      isLefty: true
-'20D+':
-    name: 20D+
+20D+:
     algs:
     -
      alg: F' L' U L U' L' U2 L U L' U L F
@@ -667,8 +570,7 @@
     -
      alg: L U2 L' F' U' L U' L' U L' U L F
      isLefty: true
-'20D-':
-    name: 20D-
+20D-:
     algs:
     -
      alg: L F' L F L2' U L F U F' L'
@@ -676,26 +578,22 @@
     -
      alg: L' U2 L F' L F L2' U L U L' U L
      isLefty: true
-'20E+':
-    name: 20E+
+20E+:
     algs:
     -
      alg: F' L' U' L U L' U2' L U L' U L F
      isLefty: true
-'20E-':
-    name: 20E-
+20E-:
     algs:
     -
      alg: L U2 L' F' U' L U' L2' U2 L F
      isLefty: true
-'20F+':
-    name: 20F+
+20F+:
     algs:
     -
      alg: L U L' F' U L U2' L' U2' L' U L F
      isLefty: true
-'20F-':
-    name: 20F-
+20F-:
     algs:
     -
      alg: L' U2 L U L' U L U L F' L' F
@@ -703,32 +601,27 @@
     -
      alg: L' U' L U' L' U2 L2 U F U' F' L'
      isLefty: true
-'21A+':
-    name: 21A+
+21A+:
     algs:
     -
      alg: BL U2 L U2' L' U L U' L' BL'
      isLefty: true
-'21A-':
-    name: 21A-
+21A-:
     algs:
     -
      alg: F' U2' L' U2 L U' L' U L F
      isLefty: true
-'21B+':
-    name: 21B+
+21B+:
     algs:
     -
      alg: L F U F' L' U2 L U2' L' U L U2' L'
      isLefty: true
-'21B-':
-    name: 21B-
+21B-:
     algs:
     -
      alg: L U2 F U' F' U L' U' L U' L'
      isLefty: true
-'21C+':
-    name: 21C+
+21C+:
     algs:
     -
      alg: BL U L U' L' U2 L U2' L' U L U' L' BL'
@@ -736,8 +629,7 @@
     -
      alg: F' L' U2' L2 F U F' U' L' U2 F
      isLefty: true
-'21C-':
-    name: 21C-
+21C-:
     algs:
     -
      alg: L F U2 F2' L' U' L U F U2' L'
@@ -748,14 +640,12 @@
     -
      alg: L' U2 L F' L F U2 L2' U L2 U2 L'
      isLefty: true
-'21D+':
-    name: 21D+
+21D+:
     algs:
     -
      alg: BL U2 L U2' L' U2 L U2' L' BL'
      isLefty: true
-'21D-':
-    name: 21D-
+21D-:
     algs:
     -
      alg: L F U F' U2 L' U2' L U' L'
@@ -763,74 +653,63 @@
     -
      alg: F' U2' L' U2 L U2' L' U2 L F
      isLefty: true
-'21E+':
-    name: 21E+
+21E+:
     algs:
     -
      alg: F' L' U' L U L' U2' L U2 F
      isLefty: true
-'21E-':
-    name: 21E-
+21E-:
     algs:
     -
      alg: BL L U L' U' L U2 L' U2' BL'
      isLefty: true
-'22A':
-    name: 22A
+22A:
     algs:
     -
      alg: L' U2' L2 F' L' F L' U2 L
      isLefty: true
     comment: 3x3 transfer
-'22B':
-    name: 22B
+22B:
     algs:
     -
      alg: F' L F L' U' L' U L
      isLefty: true
     comment: 3x3 transfer
-'23A':
-    name: 23A
+23A:
     algs:
     -
      alg: L' U2' L U' L' U L U2 L F' L' F
      isLefty: true
-'23B':
-    name: 23B
+23B:
     algs:
     -
      alg: L' U2 L U F' L F L' U L' U L
      isLefty: true
-'24A+':
-    name: 24A+
+24A+:
     algs:
     -
      alg: L U F U' F' L'
      isLefty: true
     comment: 3x3 transfer
-'24A-':
-    name: 24A-
+24A-:
     algs:
     -
      alg: F' U' L' U L F
      isLefty: true
     comment: 3x3 transfer
-'24B+':
-    name: 24B+
+24B+:
     algs:
     -
      alg: L U F' U' L' U L F L'
      isLefty: true
     comment: 3x3 transfer
-'24B-':
-    name: 24B-
+24B-:
     algs:
     -
      alg: L' U' BL U L U' L' BL' L
      isLefty: true
     comment: 3x3 transfer
-'25A+':
-    name: 25A+
+25A+:
     algs:
     -
      alg: L' U' L2 F U F' U' L2' U2 L
@@ -841,14 +720,12 @@
     -
      alg: L F U F2' U' L' U L F L'
      isLefty: true
-'25A-':
-    name: 25A-
+25A-:
     algs:
     -
      alg: F' L' U' L2 U F U' F' L' F
      isLefty: true
-'25B+':
-    name: 25B+
+25B+:
     algs:
     -
      alg: F' L F L' U2' L' U' L U L' U2 L
@@ -856,40 +733,34 @@
     -
      alg: F' L' U2' L F U F' L' U L F
      isLefty: true
-'25B-':
-    name: 25B-
+25B-:
     algs:
     -
      alg: L U2' L' U2' L F' L F L' U' L'
      isLefty: true
-'26A+':
-    name: 26A+
+26A+:
     algs:
     -
      alg: F' L U2 L' F' L F U2' L' F
      isLefty: true
-'26A-':
-    name: 26A-
+26A-:
     algs:
     -
      alg: L' U' L U' L F' L' F U' L' U2' L
      isLefty: true
-'26B+':
-    name: 26B+
+26B+:
     algs:
     -
      alg: F' U' L' U2 L U L' U2' L U F
      isLefty: true
     comment: technically another valid 3x3 OLL for one of the awkward cases
-'26B-':
-    name: 26B-
+26B-:
     algs:
     -
      alg: L U2 L2' U' L U L U2' F' L' F
      isLefty: true
     comment: technically yet another valid 3x3 OLL for one of the awkward cases
-'27A+':
-    name: 27A+
+27A+:
     algs:
     -
      alg: (R' BL)  L' BL' L U L U' (L' R)
@@ -898,27 +769,23 @@
      alg: L' F' L U' L' F L2 F' L' U L F L'
      isLefty: true
     comment: setup to sexy sledge inverse
-'27A-':
-    name: 27A-
+27A-:
     algs:
     -
      alg: (BR F') L F L' U' L' U (L BR')
      isLefty: true
     comment: setup to sexy sledge inverse
-'27B+':
-    name: 27B+
+27B+:
     algs:
     -
      alg: L F' L' F L F' L' F L' U' L U L' U' L
      isLefty: true
-'27B-':
-    name: 27B-
+27B-:
     algs:
     -
      alg: F' L F L' U2 L' U L U' L' U2' L 
      isLefty: true
-'28+':
-    name: 28+
+28+:
     algs:
     -
      alg: BL L2 F' L' F L' BL'
@@ -927,15 +794,13 @@
      alg: L F2 R' F' R F' L'
      isLefty: true
     comment: 3x3 transfer but angle is different for better fingertricks
-'28-':
-    name: 28-
+28-:
     algs:
     -
      alg: F' L2' BL L BL' L F
      isLefty: true
     comment: 3x3 transfer but angle is different for better fingertricks
-'29+':
-    name: 29+
+29+:
     algs:
     -
      alg: BL U2 L U' L' U L U2' L' BL'
@@ -943,32 +808,27 @@
     -
      alg: L' U2 L U L' U' L F U F' L' U2 L
      isLefty: true
-'29-':
-    name: 29-
+29-:
     algs:
     -
      alg: F' U2' L' U L U' L' U2 L F
      isLefty: true
-'30A+':
-    name: 30A+
+30A+:
     algs:
     -
      alg: BL U2 L U2' L' BL'
      isLefty: true
-'30A-':
-    name: 30A-
+30A-:
     algs:
     -
      alg: F' U2' L' U2 L F
      isLefty: true
-'30B+':
-    name: 30B+
+30B+:
     algs:
     -
      alg: L' U L U' L' U L U F' L F L2' U' L
      isLefty: true
-'30B-':
-    name: 30B-
+30B-:
     algs:
     -
      alg: (BL R') L F' L F L2' (BL' R)
@@ -977,15 +837,13 @@
      alg: F' U' L' U2 L U' L' U' L U' L' U L F
      isLefty: true
      note: "ethan davis says this is slower"
-'31A+':
-    name: 31A+
+31A+:
     algs:
     -
      alg: BL L F' L F L2' BL'
      isLefty: true
     comment: 3x3 transfer from a diff angle
-'31A-':
-    name: 31A-
+31A-:
     algs:
     -
      alg: F' L F L' U2 L' U2' L
@@ -994,38 +852,32 @@
      alg: F' L' BL L' BL' L2 F
      isLefty: true
     comment: 3x3 transfer from a diff angle
-'31B+':
-    name: 31B+
+31B+:
     algs:
     -
      alg: BL U L U L' U' L U' L' BL'
      isLefty: true
-'31B-':
-    name: 31B-
+31B-:
     algs:
     -
      alg: F' U' L' U' L U L' U L F
      isLefty: true
-'32A+':
-    name: 32A+
+32A+:
     algs:
     -
      alg: L U L' U' L' BL L2 U L' U' BL'
      isLefty: true
-'32A-':
-    name: 32A-
+32A-:
     algs:
     -
      alg: L' U' L U L F' L2' U' L U F
      isLefty: true
-'32B+':
-    name: 32B+
+32B+:
     algs:
     -
      alg: L' U2 L2 F' L' F L' U2' L
      isLefty: true
-'32B-':
-    name: 32B-
+32B-:
     algs:
     -
      alg: F' U' F L F' L' U L F L'
@@ -1033,32 +885,27 @@
     -
      alg: L' U' L U' L F' L' F L' U2 L
      isLefty: true
-'33A+':
-    name: 33A+
+33A+:
     algs:
     -
      alg: L U L' U L U' F U F' L' U' L U' L'
      isLefty: true
-'33A-':
-    name: 33A-
+33A-:
     algs:
     -
      alg: F' U' L' U L F L U2 L' U' L U' L'
      isLefty: true
-'33B+':
-    name: 33B+
+33B+:
     algs:
     -
      alg: BL U L U L' U' L U L' U' L U' L' BL'
      isLefty: true
-'33B-':
-    name: 33B-
+33B-:
     algs:
     -
      alg: F' U' L' U' L U L' U' L U L' U L F
      isLefty: true
-'34A':
-    name: 34A
+34A:
     algs:
     -
      alg: F' L F L' U' L' U' L U' L' U L U' L' U2' L
@@ -1069,8 +916,7 @@
     -
      alg: R U2' L' U2 L2 R' F' L' F L' U2' L
      isLefty: true
-'34B':
-    name: 34B
+34B:
     algs:
     -
      alg: F' L F L' U2 L' U L U L' U L
@@ -1081,8 +927,7 @@
     -
      alg: L U' F U F' L' U' L U' L' U' L U' L'
      isLefty: true
-'34C':
-    name: 34C
+34C:
     algs:
     -
      alg: L' U' L U' L F' L' F U' L' U2 L U' L' U2 L
@@ -1090,14 +935,12 @@
     -
      alg: L U2 L' U' F' L U' L2' U' L U2 F
      isLefty: true
-'34D':
-    name: 34D
+34D:
     algs:
     -
      alg: F' L F L' U' L' U' L U' L' U2' L
      isLefty: true
-'34E+':
-    name: 34E+
+34E+:
     algs:
     -
      alg: F' L F L' U' L' U L2 U2 L' U' L U' L'
@@ -1105,14 +948,12 @@
     -
      alg: BL L' BL' L U2 L' U' L2 U' L2' U2 L
      isLefty: true
-'34E-':
-    name: 34E-
+34E-:
     algs:
     -
      alg: F' L F L' U2' L U L2' U L2 U2' L'
      isLefty: true
-'35A+':
-    name: 35A+
+35A+:
     algs:
     -
      alg: BL L F' L F L' F' L F L2' BL'
@@ -1121,22 +962,19 @@
      alg: F' L F L' U' L' U' L U L' U L
      isLefty: true
     comment: 3x3 transfer (double sune) from a better angle for mega, alg 2 is also 3x3 transfer
-'35A-':
-    name: 35A-
+35A-:
     algs:
     -
      alg: F' dr' U L' U' L  U L' U' (L dr) F
      isLefty: true
     comment: 3x3 transfer (double sune) from a better angle for mega
-'35B+':
-    name: 35B+
+35B+:
     algs:
     -
      alg: F' (L' dr') U L U' L' U L U' dr F
      isLefty: true
     comment: 3x3 transfer (double antisune) from a better angle for mega
-'35B-':
-    name: 35B-
+35B-:
     algs:
     -
      alg: BL L2 F' L' F L F' L' F L' BL'
@@ -1145,57 +983,49 @@
      alg: L F' L' F U F' L F L2' U L
      isLefty: true
     comment: alg 1 is 3x3 transfer (double antisune) from a better angle for mega
-'35C+':
-    name: 35C+
+35C+:
     algs:
     -
      alg: L' BL L2 F' L2' BL' L2 F L'
      isLefty: true
     comment: 3x3 transfer
-'35C-':
-    name: 35C-
+35C-:
     algs:
     -
      alg: L F' L2' BL L2 F L2' BL' L
      isLefty: true
     comment: 3x3 transfer
-'35D+':
-    name: 35D+
+35D+:
     algs:
     -
      alg: BL L U L' U' L U L' U' BL'
      isLefty: true
     comment: 3x3 transfer
-'35D-':
-    name: 35D-
+35D-:
     algs:
     -
      alg: F' L' U' L U L' U' L U F
      isLefty: true
     comment: 3x3 transfer
-'35E+':
-    name: 35E+
+35E+:
     algs:
     -
      alg: BR F' L' U' L U L' U' L U F BR'
      isLefty: true
     comment: setup to 35D-
-'35E-':
-    name: 35E-
+35E-:
     algs:
     -
      alg: L U L F' L' F L F' L' F U' L'
      isLefty: true
     comment: the good C shape but you sledge twice
-'35F+':
-    name: 35F+
+35F+:
     algs:
     -
      alg: L' U' L2 F' L' F U' F' L F L'
      isLefty: true
     comment: this and alg 2 for 35B- are inverses
-'35F-':
-    name: 35F-
+35F-:
     algs:
     -
      alg: F U F2' L F L' U L F' L' F
@@ -1203,20 +1033,17 @@
     -
      alg: L U2 F' U' L' U2 L U2 L' U' L F L'
      isLefty: true
-'36A-':
-    name: 36A-
+36A-:
     algs:
     -
      alg: F' U2 F U L F' L' U2 L F L'
      isLefty: true
-'36A+':
-    name: 36A+
+36A+:
     algs:
     -
      alg: L' U' L U2' L F' L' F L' U2' L
      isLefty: true
-'36B+':
-    name: 36B+
+36B+:
     algs:
     -
      alg: BL U2 L U2 L' U' L U2 L' U' BL'
@@ -1224,8 +1051,7 @@
     -
      alg: L' U' L U' L' U2 L2 F U F' U' L'
      isLefty: true
-'36B-':
-    name: 36B-
+36B-:
     algs:
     -
      alg: F' L F U F' U' L2' U' L U L' U L F
@@ -1233,8 +1059,7 @@
     -
      alg: F' U2' L' U2' L U L' U2' L U F
      isLefty: true
-'36C+':
-    name: 36C+
+36C+:
     algs:
     -
      alg: L' U' L U2' L' U BL' U BL U L
@@ -1242,26 +1067,22 @@
     -
      alg: L' U' L U2' L' U y' L' U L U F
      isLefty: true
-'36C-':
-    name: 36C-
+36C-:
     algs:
     -
      alg: L U L' U2 L U' F U' F' U' L'
      isLefty: true
-'36D+':
-    name: 36D+
+36D+:
     algs:
     -
      alg: L' U2 L U F' L F L2' U2 L
      isLefty: true
-'36D-':
-    name: 36D-
+36D-:
     algs:
     -
      alg: L U2' L' U2' L2 F' L' F U' L'
      isLefty: true
-'36E+':
-    name: 36E+
+36E+:
     algs:
     -
      alg: BR BL L U L' U' L U L' U' BL' BR'
@@ -1269,8 +1090,7 @@
     -
      alg: L' U2 L U' F U F' U2' L F' L' F
      isLefty: true
-'36E-':
-    name: 36E-
+36E-:
     algs:
     -
      alg: R' F' L' U' L U L' U' L U F R
@@ -1278,14 +1098,12 @@
     -
      alg: L' U2' L U' L' U L2 F' L' F L' U2 L
      isLefty: true
-'36F+':
-    name: 36F+
+36F+:
     algs:
     -
      alg: F L' U2 L2 F' L' F L' U2' L F'
      isLefty: true
-'36F-':
-    name: 36F-
+36F-:
     algs:
     -
      alg: L' U2 L2 U2 L' U L U2 F' L' F
@@ -1299,8 +1117,7 @@
     -
      alg: F' L2' U' L U' L U L' U' L' U2 L2 F
      isLefty: true
-'37A+':
-    name: 37A+
+37A+:
     algs:
     -
      alg: L' U2 L2 F' L' F U2 L' U L
@@ -1311,14 +1128,12 @@
     -
      alg: L' U2 L2 F U F' U' L' U2 L' U L
      isLefty: true
-'37A-':
-    name: 37A-
+37A-:
     algs:
     -
      alg: L U2 F' L F L2' U' L U' L'
      isLefty: true
-'37B+':
-    name: 37B+
+37B+:
     algs:
     -
      alg: L' U2' L U L' U' L U2 L F' L' F
@@ -1326,20 +1141,17 @@
     -
      alg: L' U2 L F U F' U2 L F' L' F
      isLefty: true
-'37B-':
-    name: 37B-
+37B-:
     algs:
     -
      alg: F' L F L' U2' L' U L U' L' U2 L
      isLefty: true
-'37C+':
-    name: 37C+
+37C+:
     algs:
     -
      alg: L U L' U L2 F' L' F U2' L'
      isLefty: true
-'37C-':
-    name: 37C-
+37C-:
     algs:
     -
      alg: L' U' L U2' F' L F L2' U2' L
@@ -1350,20 +1162,17 @@
     -
      alg: BL L U2 L' U2' L U2 L' U2' BL'
      isLefty: true
-'37D+':
-    name: 37D+
+37D+:
     algs:
     -
      alg: L' U2' L U L' U2' L F U F' L' U2 L
      isLefty: true
-'37D-':
-    name: 37D-
+37D-:
     algs:
     -
      alg: F' L F U L' U2 L' U2' L2 U' L'
      isLefty: true
-'37E+':
-    name: 37E+
+37E+:
     algs:
     -
      alg: L U L' U L U' F U F' U2' L'
@@ -1371,14 +1180,12 @@
     -
      alg: L' U2 L U' F U F' U2 L' U L
      isLefty: true
-'37E-':
-    name: 37E-
+37E-:
     algs:
     -
      alg: F' L F L' U2 L' U2 L U' L' U2 L
      isLefty: true
-'O':
-    name: O
+O:
     algs:
     -
      alg: L' U' L U L F' L' F U2' F' L' U' L U F

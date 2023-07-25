@@ -2,7 +2,7 @@ import { useGrouping } from "../../scripts/config/set/cll";
 import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
 
 
-import yml from './cll.yml'
+import yml from '../userSets/cll.yml'
 const data:ICaseList = yml
 
 const CLLNoGrouping: IAlgset = useGrouping('none', data)

@@ -1,18 +1,18 @@
-import { CLLGroupByOLL, CLLNoGrouping } from "../data/2x2/cllObj";
-import { EG1GroupByOLL, EG1NoGrouping } from "../data/2x2/eg1Obj";
+import { CLLGroupByOLL, CLLNoGrouping } from "../data/output/cllObj";
+import { EG1GroupByOLL, EG1NoGrouping } from "../data/output/eg1Obj";
 import { HNoGrouping } from "../data/ZBLL/hObj";
 import { LNoGrouping } from "../data/ZBLL/lObj";
-import { ParityPLLNoGrouping, ParityPLLGroupByCP } from "../data/paritypllObj";
+import { ParityPLLNoGrouping, ParityPLLGroupByCP } from "../data/output/paritypllObj";
 import { TGroupByBH, TGroupByCP, TNoGrouping } from "../data/ZBLL/tObj";
 import { UGroupByBH, UGroupByCP, UNoGrouping } from "../data/ZBLL/uObj";
-import { MegaOLLNoGrouping, MegaOLLGroupByOLL, MegaOLLGroupByFeature } from "../data/MEGA/megaollObj";
-import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter, MegaPLLNoGrouping } from "../data/MEGA/megapllObj";
+import { MegaOLLNoGrouping, MegaOLLGroupByOLL, MegaOLLGroupByFeature } from "../data/output/megaollObj";
+import { MegaPLLGroupByFeatures, MegaPLLGroupByLetter, MegaPLLNoGrouping } from "../data/output/megapllObj";
 import { OLLGroupByEO, OLLNoGrouping } from "../data/ollObj";
 import { PLLGroupedBySet, PLLNoGrouping } from "../data/pllObj";
 import { ZBLSNoGrouping } from "../data/ZBLS/zblsObj";
 import type { XOR } from "ts-essentials";
 import type { IAlgset } from "./config/set/dataFormat";
-import { MegaCO, MegaCP } from "../data/MEGA/mega4LLLObj";
+import { MegaCO, MegaCP } from "../data/output/mega4LLLObj";
 
 /* NAMING CONVENTION -
 - a new set's unsorted AlgSet goes as a new letter in the "a" object

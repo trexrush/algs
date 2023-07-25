@@ -5,6 +5,8 @@ import type { IPuzzleConfig } from "../puzzle"
 import { puzzle2x2x2 } from "../puzzle/2x2"
 import type { IAlgset, ICaseList } from "./dataFormat"
 
+import caseDefinitions from './cases/eg1.yml'
+import merge from "ts-deepmerge"
 
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzle2x2x2
@@ -31,7 +33,8 @@ const caseNames = [
 ] as const
 type ICaseName = typeof caseNames[number]
 
-const useGrouping = (grouping: "none" | "oll", data: ICaseList) => {
+const useGrouping = (grouping: "none" | "oll", d: ICaseList) => {
+  const data = merge(caseDefinitions, d) as unknown as ICaseList
   const ch = (list: ICaseName[]) => { return Object.assign(listFromData<ICaseName>(list, data)) }
 
   const noGrouping = (): IAlgset => {

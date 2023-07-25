@@ -3,7 +3,7 @@ import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
 import { useGrouping } from "../../scripts/config/set/megaOLL"
 
 
-import yml from './megaoll.yml'
+import yml from '../userSets/megaoll.yml'
 let data: ICaseList = yml
 
 const MegaOLLNoGrouping: IAlgset = useGrouping('none', data)

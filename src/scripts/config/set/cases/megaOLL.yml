@@ -1,0 +1,550 @@
+1A:
+    name: 1A
+    altNames: ['Opp CLL']
+
+1B:
+    name: 1B
+    altNames: ['Adj CLL']
+
+2A:
+    name: 2A
+    altNames: ['U']
+
+2B:
+    name: 2B
+    altNames: ['T']
+
+2C:
+    name: 2C
+    altNames: ['Wide L']
+
+2D:
+    name: 2D
+    altNames: ['L']
+
+3A+:
+    name: 3A+
+    altNames: ['Sune']
+
+3A-:
+    name: 3A-
+    altNames: ['Left Sune']
+
+3B+:
+    name: 3B+
+    altNames: ['Antisune']
+
+3B-:
+    name: 3B-
+    altNames: ['Left Antisune']
+
+4A:
+    name: 4A
+    altNames: ['H, Double Sune']
+
+4B:
+    name: 4B
+    altNames: ['H, Double Antisune']
+
+4C:
+    name: 4C
+    altNames: ['Hand', 'Turtle']
+
+4D:
+    name: 4D
+    altNames: ['Empress']
+
+4E+:
+    name: 4E+
+
+4E-:
+    name: 4E-
+
+5+:
+    name: 5+
+
+5-:
+    name: 5-
+
+6A:
+    name: 6A
+
+6B:
+    name: 6B
+
+7A:
+    name: 7A
+
+7B:
+    name: 7B
+
+8A+:
+    name: 8A+
+
+8A-:
+    name: 8A-
+
+8B+:
+    name: 8B+
+
+8B-:
+    name: 8B-
+
+9A+:
+    name: 9A+
+
+9A-:
+    name: 9A-
+
+9B+:
+    name: 9B+
+
+9B-:
+    name: 9B-
+
+10A+:
+    name: 10A+
+
+10A-:
+    name: 10A-
+
+10B+:
+    name: 10B+
+
+10B-:
+    name: 10B-
+
+11A+:
+    name: 11A+
+
+11A-:
+    name: 11A-
+
+11B+:
+    name: 11B+
+
+11B-:
+    name: 11B-
+
+12+:
+    name: 12+
+
+12-:
+    name: 12-
+
+13+:
+    name: 13+
+
+13-:
+    name: 13-
+
+14A+:
+    name: 14A+
+
+14A-:
+    name: 14A-
+
+14B+:
+    name: 14B+
+
+14B-:
+    name: 14B-
+
+15A+:
+    name: 15A+
+
+15A-:
+    name: 15A-
+
+15B+:
+    name: 15B+
+
+15B-:
+    name: 15B-
+
+16A+:
+    name: 16A+
+
+16A-:
+    name: 16A-
+
+16B+:
+    name: 16B+
+
+16B-:
+    name: 16B-
+
+17A+:
+    name: 17A+
+
+17A-:
+    name: 17A-
+
+17B+:
+    name: 17B+
+
+17B-:
+    name: 17B-
+
+18A:
+    name: 18A
+
+18B:
+    name: 18B
+
+18C:
+    name: 18C
+
+18D:
+    name: 18D
+
+18E+:
+    name: 18E+
+
+18E-:
+    name: 18E-
+
+19A+:
+    name: 19A+
+
+19A-:
+    name: 19A-
+
+19B+:
+    name: 19B+
+
+19B-:
+    name: 19B-
+
+19C+:
+    name: 19C+
+
+19C-:
+    name: 19C-
+
+19D+:
+    name: 19D+
+
+19D-:
+    name: 19D-
+
+19E+:
+    name: 19E+
+
+19E-:
+    name: 19E-
+
+19F+:
+    name: 19F+
+
+19F-:
+    name: 19F-
+
+20A+:
+    name: 20A+
+
+20A-:
+    name: 20A-
+
+20B+:
+    name: 20B+
+
+20B-:
+    name: 20B-
+
+20C+:
+    name: 20C+
+
+20C-:
+    name: 20C-
+
+20D+:
+    name: 20D+
+
+20D-:
+    name: 20D-
+
+20E+:
+    name: 20E+
+
+20E-:
+    name: 20E-
+
+20F+:
+    name: 20F+
+
+20F-:
+    name: 20F-
+
+21A+:
+    name: 21A+
+
+21A-:
+    name: 21A-
+
+21B+:
+    name: 21B+
+
+21B-:
+    name: 21B-
+
+21C+:
+    name: 21C+
+
+21C-:
+    name: 21C-
+
+21D+:
+    name: 21D+
+
+21D-:
+    name: 21D-
+
+21E+:
+    name: 21E+
+
+21E-:
+    name: 21E-
+
+22A:
+    name: 22A
+
+22B:
+    name: 22B
+
+23A:
+    name: 23A
+
+23B:
+    name: 23B
+
+24A+:
+    name: 24A+
+
+24A-:
+    name: 24A-
+
+24B+:
+    name: 24B+
+
+24B-:
+    name: 24B-
+
+25A+:
+    name: 25A+
+
+25A-:
+    name: 25A-
+
+25B+:
+    name: 25B+
+
+25B-:
+    name: 25B-
+
+26A+:
+    name: 26A+
+
+26A-:
+    name: 26A-
+
+26B+:
+    name: 26B+
+
+26B-:
+    name: 26B-
+
+27A+:
+    name: 27A+
+
+27A-:
+    name: 27A-
+
+27B+:
+    name: 27B+
+
+27B-:
+    name: 27B-
+
+28+:
+    name: 28+
+
+28-:
+    name: 28-
+
+29+:
+    name: 29+
+
+29-:
+    name: 29-
+
+30A+:
+    name: 30A+
+
+30A-:
+    name: 30A-
+
+30B+:
+    name: 30B+
+
+30B-:
+    name: 30B-
+
+31A+:
+    name: 31A+
+
+31A-:
+    name: 31A-
+
+31B+:
+    name: 31B+
+
+31B-:
+    name: 31B-
+
+32A+:
+    name: 32A+
+
+32A-:
+    name: 32A-
+
+32B+:
+    name: 32B+
+
+32B-:
+    name: 32B-
+
+33A+:
+    name: 33A+
+
+33A-:
+    name: 33A-
+
+33B+:
+    name: 33B+
+
+33B-:
+    name: 33B-
+
+34A:
+    name: 34A
+
+34B:
+    name: 34B
+
+34C:
+    name: 34C
+
+34D:
+    name: 34D
+
+34E+:
+    name: 34E+
+
+34E-:
+    name: 34E-
+
+35A+:
+    name: 35A+
+
+35A-:
+    name: 35A-
+
+35B+:
+    name: 35B+
+
+35B-:
+    name: 35B-
+
+35C+:
+    name: 35C+
+
+35C-:
+    name: 35C-
+
+35D+:
+    name: 35D+
+
+35D-:
+    name: 35D-
+
+35E+:
+    name: 35E+
+
+35E-:
+    name: 35E-
+
+35F+:
+    name: 35F+
+
+35F-:
+    name: 35F-
+
+36A-:
+    name: 36A-
+
+36A+:
+    name: 36A+
+
+36B+:
+    name: 36B+
+
+36B-:
+    name: 36B-
+
+36C+:
+    name: 36C+
+
+36C-:
+    name: 36C-
+
+36D+:
+    name: 36D+
+
+36D-:
+    name: 36D-
+
+36E+:
+    name: 36E+
+
+36E-:
+    name: 36E-
+
+36F+:
+    name: 36F+
+
+36F-:
+    name: 36F-
+
+37A+:
+    name: 37A+
+
+37A-:
+    name: 37A-
+
+37B+:
+    name: 37B+
+
+37B-:
+    name: 37B-
+
+37C+:
+    name: 37C+
+
+37C-:
+    name: 37C-
+
+37D+:
+    name: 37D+
+
+37D-:
+    name: 37D-
+
+37E+:
+    name: 37E+
+
+37E-:
+    name: 37E-
+
+O:
+    name: O

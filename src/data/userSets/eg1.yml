@@ -1,185 +1,150 @@
 ---
 S1:
-  name: S1
   algs:
   - 
     alg: R U R' U F R U' R2 F' R
 S2:
-  name: S2
   algs:
   - 
     alg: F' R' F R2 U R' U' F R' F' R
 S3:
-  name: S3
   algs:
   - 
     alg: R' F R2 U' R' U R U' R' F
 S4:
-  name: S4
   algs:
   - 
     alg: F R' F' R U R' F' R2 U R'
 S5:
-  name: S5
   algs:
   - 
     alg: R U R' F2 U F R U R'
 S6:
-  name: S6
   algs:
   - 
     alg: R U' R' U R U' R' U F R U' R'
 AS1:
-  name: AS1
   algs:
   - 
     alg: R' F' R U' F' R' F R2 U R'
 AS2:
-  name: AS2
   algs:
   - 
     alg: F L F' L2 U' L U F' L F L'
   note: mirror cuz I didnt have anything on my old scdb algsheet
 AS3:
-  name: AS3
   algs:
   - 
     alg: L F' L2 U L U' L' U L F'
   note: mirror cuz I didnt have anything on my old scdb algsheet
 AS4:
-  name: AS4
   algs:
   - 
     alg: F' L F L' U' L F L2 U' L
   note: mirror cuz I didnt have anything on my old scdb algsheet
 AS5:
-  name: AS5
   algs:
   - 
     alg: R' F' R F2' U' F' R' F' R
   note: left hand starts with index on top grip
 AS6:
-  name: AS6
   algs:
   - 
     alg: L' U L U' L' U L U' F' L' U L
   note: mirror cuz I didnt have anything on my old scdb algsheet
 T1:
-  name: T1
   algs:
   - 
     alg: F R U' R2 F' R U R' F' R
 T2:
-  name: T2
   algs:
   - 
     alg: F' R' F R2 U R' U' R U R'
 T3:
-  name: T3
   algs:
   - 
     alg: R U' R' U2 F R U2 R' F
 T4:
-  name: T4
   algs:
   - 
     alg: R2 B2 U' R' U' R U' R' U R'
 T5:
-  name: T5
   algs:
   - 
     alg: R' F' R2 U R' F' R U R'
 T6:
-  name: T6
   algs:
   - 
     alg: R U' R2 F R U R U2 R'
 U1:
-  name: U1
   algs:
   - 
     alg: R' F R U' R' F R U' R U R' F'
 U2:
-  name: U2
   algs:
   - 
     alg: 'R U'' R'' U R U'' R'' U'' F R U'' R'' '
   - 
     alg: L F' L' U L F' L' U L' U' L F
 U3:
-  name: U3
   algs:
   - 
     alg: F R2 B R2 F U F2 R2 x2
 U4:
-  name: U4
   algs:
   - 
     alg: R' F R F' R' F R2 U' R'
 U5:
-  name: U5
   algs:
   - 
     alg: R U R' U R U R2 F R2 U' R'
 U6:
-  name: U6
   algs:
   - 
     alg: F' U2 R U2 R' U2 F
 L1:
-  name: L1
   algs:
   - 
     alg: R' F R F' R' F R U R U2 R'
   - 
     alg: R' F R U' R' F R2 U R' F'
 L2:
-  name: L2
   algs:
   - 
     alg: R U' R' U R U' R2 F' R F
 L3:
-  name: L3
   algs:
   - 
     alg: R U R' F' R U R' U' F R' F' R
 L4:
-  name: L4
   algs:
   - 
     alg: R' U2 F R U2 R U' R2 F
 L5:
-  name: L5
   algs:
   - 
     alg: 'R'' U R2 U'' R2 U'' F R2 U'' R'' '
 L6:
-  name: L6
   algs:
   - 
     alg: 'R'' F R2 U R'' F'' R U2 R'' '
 H1:
-  name: H1
   algs:
   - 
     alg: R' F R2 U' R2 U' F U R
 H2:
-  name: H2
   algs:
   - 
     alg: F' U R U' R2 F2 R U' F
 H3:
-  name: H3
   algs:
   - 
     alg: R' F R F' U2 F R U2 R' F
 H4:
-  name: H4
   algs:
   - 
     alg: 'R U R'' F'' R U R'' U'' R U R'' U'' '
 Pi1:
-  name: Pi1
   algs:
   - 
     alg: F2 R U R' U2 R U R' U' F
@@ -187,45 +152,37 @@ Pi1:
     alg: F2' R' F' R U2' R' F' R U F'
   note: alt alg is mirror with no auf
 Pi2:
-  name: Pi2
   algs:
   - 
     alg: R' F R2 U' R2 F R
   note: best eg1
 Pi3:
-  name: Pi3
   algs:
   - 
     alg: R U R' U R U' R2 F' R F R' F' R
 Pi4:
-  name: Pi4
   algs:
   - 
     alg: 'R'' F'' R U'' R'' F R2 U R'' F'' R U R'' '
 Pi5:
-  name: Pi5
   algs:
   - 
     alg: F R' F U' F2 R U R
 Pi6:
-  name: Pi6
   algs:
   - 
     alg: R U' R' U R U' R' F R U' R'
 PBL1:
-  name: PBL1
   algs:
   - 
     alg: R2 B2 U R2 U' R2 U R2 U' R2
   note: bar in the back for these 3 too
 PBL2:
-  name: PBL2
   algs:
   - 
     alg: R2 U' R2 U2 F2 U' R2
   note: ik pbl but these are new optimal algs idk yet
 PBL3:
-  name: PBL3
   algs:
   - 
     alg: R U' R' U' R' F2 U' R U R

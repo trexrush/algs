@@ -1,211 +1,172 @@
 ---
 S1:
-  name: S1
   algs:
   - 
     alg: R U R' U R U2' R'
 S2:
-  name: S2
   algs:
   - 
     alg: R U' R' F R' F' R
 S3:
-  name: S3
   algs:
   - 
     alg: R' F2 R U2 R U' R' F
 S4:
-  name: S4
   algs:
   - 
     alg: F R' F' R U2 R U2' R'
 S5:
-  name: S5
   algs:
   - 
     alg: R' F R2 F' U' R' U' R2 U R'
   note: my favorite CLL to execute
 S6:
-  name: S6
   algs:
   - 
     alg: R U R' U' R' F R F' R U R' U R U2' R'
   note: prolly bad alg
 AS1:
-  name: AS1
   algs:
   - 
     alg: R' F' R U' R' F2 R
 AS2:
-  name: AS2
   algs:
   - 
     alg: R' F R F' R U R'
 AS3:
-  name: AS3
   algs:
   - 
     alg: R U2' R' U2' R' F R F'
 AS4:
-  name: AS4
   algs:
   - 
     alg: F' R U R' U2' R' F2 R
 AS5:
-  name: AS5
   algs:
   - 
     alg: R U' R2' U R U F R2 F' R
   note: technically exec like the mirror of the S case rather than its inverse
 AS6:
-  name: AS6
   algs:
   - 
     alg: R U R' U' R' F R F' R U R' U R U2' R'
 T1:
-  name: T1
   algs:
   - 
     alg: R U R' U' R' F R F'
 T2:
-  name: T2
   algs:
   - 
     alg: R' F' R U R U' R' F
 T3:
-  name: T3
   algs:
   - 
     alg: R' U R U2 R2 F R F' R
   note: thumb top grip
 T4:
-  name: T4
   algs:
   - 
     alg: R' U R U2 R2 F' R U' R' F2 R2
   note: similar to last case but cancelled into some anticll shenanigans
 T5:
-  name: T5
   algs:
   - 
     alg: F R U R' U' R U' R' U' R U R' F'
 T6:
-  name: T6
   algs:
   - 
     alg: R U2 R2 F R F' R U' R' U R U2 R'
   note: one of the L cases cancelled into sune
 U1:
-  name: U1
   algs:
   - 
     alg: R' U R' F R F' R U2 R' U R
   note: thumb top grip
 U2:
-  name: U2
   algs:
   - 
     alg: R U' R2 F R F' R U R' U' R U R'
 U3:
-  name: U3
   algs:
   - 
     alg: R2 F2 R U R U2 R2 F' R U' R
   note: fun to execute
 U4:
-  name: U4
   algs:
   - 
     alg: 'F R'' F'' R U'' R U'' R'' U2 R U'' R'' '
 U5:
-  name: U5
   algs:
   - 
     alg: F R U R' U' F'
   - 
     alg: R' U' F R' F' R U R
 U6:
-  name: U6
   algs:
   - 
     alg: 'F R U R'' U2 F'' R U'' R'' F '
 L1:
-  name: L1
   algs:
   - 
     alg: F R' F' R U R U' R'
 L2:
-  name: L2
   algs:
   - 
     alg: F' R U R' U' R' F R
 L3:
-  name: L3
   algs:
   - 
     alg: " R U2' R' U' y' R2 U' R' U R2"
   note: bad alg
 L4:
-  name: L4
   algs:
   - 
     alg: R' F2 R U y' R2' U R U' R2'
   note: bad alg
 L5:
-  name: L5
   algs:
   - 
     alg: R U2' R2' F R F' R U2' R'
 L6:
-  name: L6
   algs:
   - 
     alg: R U R' U R U' R' U R U' R' U R U2' R'
   note: bad alg
 H1:
-  name: H1
   algs:
   - 
     alg: R2 U2 R U2 R2
 H2:
-  name: H2
   algs:
   - 
     alg: R U' R' F R' F' R2 U' R' F R' F' R
 H3:
-  name: H3
   algs:
   - 
     alg: R U R' U R U R' F R' F' R
   note: maybe gen something? this one kinda wierd to fingertrick
 H4:
-  name: H4
   algs:
   - 
     alg: R' U2 R y R' U R' U' R U' R
   note: bad alg
 Pi1:
-  name: Pi1
   algs:
   - 
     alg: F R U R' U' R U R' U' F'
 Pi2:
-  name: Pi2
   algs:
   - 
     alg: R' U' R' F R F' R U' R' U2 R
 Pi3:
-  name: Pi3
   algs:
   - 
     alg: R U2 R' U' R U R' U2 R' F R F'
 Pi4:
-  name: Pi4
   algs:
   - 
     alg: F R' F' R U2 R U' R' U R U2' R'
 Pi5:
-  name: Pi5
   algs:
   - 
     alg: R U' R' F R' F R U R' F R
@@ -213,13 +174,11 @@ Pi5:
     alg: R' F R F' R U' R' U' R U' R'
   note: alt alg is mirror
 Pi6:
-  name: Pi6
   algs:
   - 
     alg: F R2 U' R2 U R2 U R2 F'
   note: index top grip
 PLL1:
-  name: PLL1
   algs:
   - 
     alg: R' F R F' R U2 R' U R U2 R'
@@ -227,7 +186,6 @@ PLL1:
     alg: R' F L' U2 L U' L' U2 R L
   note: 2nd alg shoutout to tucker chamberlain
 PLL2:
-  name: PLL2
   algs:
   - 
     alg: R U' R' U' F2 U' R U R' U F2
