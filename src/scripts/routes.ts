@@ -11,7 +11,7 @@ import { OLLGroupByEO, OLLNoGrouping } from "../data/ollObj";
 import { PLLGroupedBySet, PLLNoGrouping } from "../data/pllObj";
 import { ZBLSNoGrouping } from "../data/ZBLS/zblsObj";
 import type { XOR } from "ts-essentials";
-import type { IAlgset } from "./config/set";
+import type { IAlgset } from "./config/set/dataFormat";
 import { MegaCO, MegaCP } from "../data/MEGA/mega4LLLObj";
 
 /* NAMING CONVENTION -

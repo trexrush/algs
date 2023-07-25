@@ -1,7 +1,7 @@
 <script lang="ts">
   import AlgListing from "./AlgListing.svelte";
   import AlgVisuals from "./AlgVisuals.svelte";
-  import type { ICase } from "../../scripts/config/set";
+  import type { ICase } from "../../scripts/config/set/dataFormat";
   import { AlgBuilder } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";
   import CaseCardVertical from "../CaseCardVertical.svelte";
@@ -91,7 +91,7 @@
         </div>
         <hr class={css.line}/>
         <span class={css.tagList}>
-          {#if eachAlg.tags }
+          {#if eachAlg?.tags }
             <span class={css.tagName}>Tags</span>
             {#each eachAlg.tags as tag}
             <span class={css.tag}>{tag}</span>

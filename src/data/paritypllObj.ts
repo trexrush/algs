@@ -1,4 +1,4 @@
-import type { IAlgset, ICaseList } from "../scripts/config/set"
+import type { IAlgset, ICaseList } from "../scripts/config/set/dataFormat"
 import { useGrouping } from "../scripts/config/set/parityPLL"
 
 //@ts-expect-error

@@ -1,8 +1,10 @@
-import type { IAlgset, ICaseList, ISetConfig } from "."
+import type { ISetConfig } from "."
 import { listFromData } from "."
-import { createConfig } from ".."
+import { IConfig, createConfig } from ".."
 import type { IPuzzleConfig } from "../puzzle"
 import { puzzle2x2x2 } from "../puzzle/2x2"
+import type { IAlgset, ICaseList } from "./dataFormat"
+
 
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzle2x2x2
@@ -15,7 +17,7 @@ const setOptions: ISetConfig = {
     rot: "x2 y'",
   }
 }
-const config = createConfig(puzzleOptions, setOptions)
+const config: IConfig = createConfig(puzzleOptions, setOptions)
 
 // CASES
 const caseNames = [

@@ -7,7 +7,7 @@ import { getModActionsFromText, type TModifierAliases } from "./trigger/modifier
 import type { IAlgorithmClass } from "./algorithm";
 import { checkExpandible, expandAlg, mirrorAlg, notationAlg, returnAlgAsComponents } from "./algorithm/actions";
 import type { IConfig } from "../config";
-import type { IAlg } from "../config/set";
+import type { IAlg } from "../config/set/dataFormat";
 
 export type TAlgCommon<T extends TAlgCommon<T>> = Pick<IConfig, "imgSource"> & {
   puzzle: twistyPuzzleType

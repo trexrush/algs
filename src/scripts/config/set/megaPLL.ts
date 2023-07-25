@@ -1,8 +1,9 @@
-import type { IAlgset, ICaseList, ISetConfig } from "."
+import type { ISetConfig } from "."
 import { listFromData } from "."
-import { createConfig } from ".."
+import { IConfig, createConfig } from ".."
 import type { IPuzzleConfig } from "../puzzle"
 import { puzzleMegaminx } from "../puzzle/megaminx"
+import type { IAlgset, ICaseList } from "./dataFormat"
 
 // TODO: define constants for each alg like pokePLL altNames and alg mirrors / inverses
 
@@ -15,7 +16,7 @@ const setOptions: ISetConfig = {
     cameraY: 45,
   }
 }
-const config = createConfig(puzzleOptions, setOptions)
+const config: IConfig = createConfig(puzzleOptions, setOptions)
 
 // CASES
 const caseNames = [

@@ -1,4 +1,4 @@
-import type { IAlgset, ICaseList } from "../../scripts/config/set"
+import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
 import { useGrouping as OLL } from "../../scripts/config/set/megaOLL"
 import { useGrouping as PLL } from "../../scripts/config/set/megaPLL"
 
