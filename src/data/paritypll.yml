@@ -1,10 +1,8 @@
 opp:
-    name: opp
     algs:
     - 
         alg: "[OPP]"
 adj:
-    name: adj
     algs:
     - 
         setup: U2
@@ -18,7 +16,6 @@ adj:
         alg: "[LEFT SEXY] [OPP] U L' U L"
         isLefty: true
 Oa:
-    name: Oa 
     algs:
     - 
         alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' r' U Rw U R' U' R' [Ua_PERM]
@@ -27,13 +24,11 @@ Oa:
     #     alg: M2 U' M2 U' M' U2 l2 U2 r2 Uw2 r2 Uw2 U2 M'
     note: opp into zperm or adj into U
 Ob:
-    name: Ob 
 #     algs:
 #     -
 #         alg: M2 U M2 U M' U2 l2 U2 r2 Uw2 r2 Uw2 U2 M'
 #    note: opp into zperm
 W:
-    name: W
     algs:
     - 
         setup: U
@@ -44,14 +39,12 @@ W:
     - 
         alg: "[OPP] r2' l2' U' M U2' M' U' M2"
 pJ:
-    name: pJ
     algs:
     - 
         alg: Lw L2' U L U' l' U L' U2' L U l' U' l U Lw F' Lw2' U Lw U Lw' U' Lw F
         isLefty: true
         tag: ['Direct']
 pN:
-    name: pN
     algs:
     - 
         alg: l' U' l U Lw F' Lw2' U Lw U Lw' U' Lw F [LEFTY SEXY] Lw D Lw' U2' Lw D' Lw'
@@ -59,29 +52,24 @@ pN:
         tag: ['Direct']
         note: wide T perm sexy block comm
 M:
-    name: M
     algs:
     - 
         alg: "[OPP] [LEFTY T_PERM]"
         isLefty: true
 Ka:
-    name: Ka 
     algs:
     - 
         alg: "[OPP] [Aa_PERM]"
 Kb:
-    name: Kb 
     algs:
     - 
         setup: U
         alg: "[OPP] U' [Aa_PERM]"
 Ba:
-    name: Ba 
     algs:
     - 
         alg: "[OPP] U' [J_PERM]"
 Bb:
-    name: Bb 
     algs:
     - 
         alg: R U R' U' R' F R2 U' R' [OPP] U R U R' F'
@@ -91,7 +79,6 @@ Bb:
         alg: "[OPP] U [LEFTY J_PERM]"
         isLefty: true
 Ca:
-    name: Ca 
     algs:
     - 
         setup: U2
@@ -100,13 +87,11 @@ Ca:
     -   
         alg: "[OPP] U' [Rb_PERM]"
 Cb:
-    name: Cb 
     algs:
     - 
         setup: U2
         alg: "[OPP] U [LEFT Rb_PERM]"
 Da:
-    name: Da 
     algs:
     - 
         alg: F R U' R' U' [OPP] R U R2 F' R U R U' R'
@@ -115,7 +100,6 @@ Da:
         alg: "[LEFTY J_PERM] [OPP]"
         isLefty: true
 Db:
-    name: Db 
     algs:
     - 
         alg: "[J_PERM] [OPP]"
@@ -123,7 +107,6 @@ Db:
         alg: R U R' U [OPP] R' F R2 U' R' U' R U R' F'
         note: T perm with opp inside
 Pa:
-    name: Pa 
     algs:
     - 
         setup: U'
@@ -131,7 +114,6 @@ Pa:
         isLefty: true
         tags: ['Direct']
 Pb:
-    name: Pb 
     algs:
     - 
         setup: U'
@@ -139,7 +121,6 @@ Pb:
         isLefty: true
         tags: ['Direct']
 Q:
-    name: Q
     algs:
     - 
         alg: "[OPP] U' [LEFT E_PERM]"
@@ -151,7 +132,6 @@ Q:
         alg: F R U' R' U' R U R' F' U2 [OPP] R U R' U' R' F R F'
     # R2 U' F2 u2 R2 U F2 U' u2 F2 U2 R2 U u2 R2
 X:
-    name: X
     algs:
     - 
         setup: U2
@@ -160,7 +140,6 @@ X:
         setup: U2
         alg: '[E_PERM] [OPP]'
 Sa:
-    name: Sa 
     algs:
     - 
         alg: "[BACK LEFT SEXY] [OPP] [LEFT J_PERM] L U' L'"
@@ -173,7 +152,6 @@ Sa:
         tags: ['Direct']
 
 Sb:
-    name: Sb 
     algs:
     - 
         setup: U

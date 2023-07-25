@@ -5,6 +5,9 @@ import type { IPuzzleConfig } from "../puzzle"
 import { puzzle4x4x4 } from "../puzzle/4x4"
 import type { IAlgset, ICaseList } from "./dataFormat"
 
+import caseDefinitions from './cases/parityPLL.yml'
+import merge from "ts-deepmerge"
+
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzle4x4x4
 const setOptions: ISetConfig = {
@@ -18,8 +21,9 @@ const caseNames = [
 ] as const
 type ICaseName = typeof caseNames[number]
 
-const useGrouping = (grouping: "none" | "cp", data: ICaseList) => {
-  const ch = (list: ICaseName[]) => { return Object.assign(listFromData<ICaseName>(list, data)) }
+const useGrouping = (grouping: "none" | "cp", d: ICaseList) => {
+  const data = merge(caseDefinitions, d) as unknown as ICaseList
+  const ch = (list:ICaseName[]) => { return Object.assign(listFromData<ICaseName>(list, data)) }
 
   const noGrouping = (): IAlgset => {
     return {
