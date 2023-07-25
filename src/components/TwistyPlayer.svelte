@@ -16,15 +16,17 @@
 
   let x: number
   let y: number
-  let size: number
 
-  const updateHeight = (size: number) => {
-    tw.style.height = `${size}px`
-    tw.style.width = `${size}px`
+  const updateHeight = (twP: TwistyPlayer, size: number) => {
+    twP.style.height = `${size}px`
+    twP.style.width = `${size}px`
+    return twP
   }
 
-  $: size = Math.min(x, y) //, console.log("SIZE IN REACTIVE STATEMENT ", size, algorithm.alg)
-  $: x != null && updateHeight(size) //, console.log("SIZE IN REACTIVE STATEMENT ", size, algorithm.alg)
+  $: x != null && (() => {
+    const size = Math.min(x, y)
+    updateHeight(tw, size)
+  })()
 
   const setPlayer = (algObj: IAlgorithmClass, twComponent: TwistyPlayer) => {
     twComponent = new TwistyPlayer({
@@ -46,8 +48,6 @@
       backView: "none",
       cameraLatitudeLimit: 50,
     });
-    twComponent.style.height = `${size}px`
-    twComponent.style.width = `${size}px`
 
     twComponent.experimentalFaceletScale = 0.88
     // twComponent.experimentalModel.anchorTransformation = { }
@@ -64,6 +64,7 @@
   const twisty = (node: HTMLElement, alg: IAlgorithmClass) => {
     (async () => {
       tw = setPlayer(alg, tw)
+      tw = updateHeight(tw, x)
 
       node.appendChild(tw);
       if (!_2D) {
