@@ -18,7 +18,7 @@ interface ICaseCommon<T extends string> {
 interface ICaseScrambles<T extends string> extends ICaseCommon<T> {
   scrambles: string[]
 }
-export interface ICaseDefinition<T extends string> extends ICaseCommon<T> {
+interface ICaseDefinition<T extends string> extends ICaseCommon<T> {
   imageAlg?: string
   altNames: string[]
   mirror?: T

@@ -208,7 +208,7 @@ const useGrouping = (grouping: "none" | "oll" | 'feature' | '4LLLjustCO', d: ICa
         { name: "Line", children: Object.assign([
           { name: "3 Corner Line", altNames: ["6 7 8 9 10 11"], children: Object.assign([c[6], c[7], c[8], c[9], c[10], c[11], ])},
           { name: "2 Corner Line", altNames: ["12 13 14 15 16 17"], children: Object.assign([c[12], c[13], c[14], c[15], c[16], c[17], ])},
-          { name: "0/1 Corner Line", altNames: ["18 19 20 21"], children: Object.assign(c[18], c[19], c[20], c[21])},
+          { name: "0/1 Corner Line", altNames: ["18 19 20 21"], children: Object.assign([c[18], c[19], c[20], c[21]])},
         ])},
         { name: "L", children: Object.assign([
           { name: "3 Corner L", altNames: ["22 23 24 25 26 27"], children: Object.assign([c[22], c[23], c[24], c[25], c[26], c[27], ])},
