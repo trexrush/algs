@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 // https://astro.build/config
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
-import yaml from '@rollup/plugin-yaml'
+import ViteYaml from '@modyfi/vite-plugin-yaml';
 
 // https://astro.build/config
 export default defineConfig({
@@ -11,6 +11,6 @@ export default defineConfig({
   site: 'https://trexrush.github.io',
   base: '/algs',
   vite: {
-    plugins: [yaml()]
+    plugins: [ViteYaml()]
   }
 });

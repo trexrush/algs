@@ -4,13 +4,7 @@
     "node_modules/*"
   ],
   "compilerOptions": {
-    // "types": ["vite-plugin-pwa/info"]
-    "paths": {
-      "@components/*": ["src/components/*"],
-      "@data/*": ["src/data/*"],
-      "@layouts/*": ["src/layouts/*"],
-      "@scripts/*": ["src/scripts/*"],
-      "@templates/*": ["src/templates/*"],
-    }
+    "types": ["@modyfi/vite-plugin-yaml/modules"]
+
   }
 }

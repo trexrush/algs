@@ -1,5 +1,5 @@
 import type { DeepPartial } from "ts-essentials"
-import type { IConfig, IImageConfig } from ".."
+import type { IImageConfig } from ".."
 import type { ICase, ICaseList } from "./dataFormat"
 
 

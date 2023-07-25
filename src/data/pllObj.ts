@@ -1,7 +1,6 @@
 import { IConfig, createConfig } from "../scripts/config";
 import { puzzle3x3x3 } from "../scripts/config/puzzle/3x3";
 import type { IAlgset, ICaseList } from "../scripts/config/set/dataFormat"
-//@ts-expect-error
 import yml from './pll.yml'
 
 const _: ICaseList = yml

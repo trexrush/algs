@@ -1,8 +1,9 @@
-import type { IAlgset, ICaseList, ISetConfig } from "."
+import type { ISetConfig } from "."
 import { listFromData } from "."
 import { createConfig } from ".."
 import type { IPuzzleConfig } from "../puzzle"
 import { puzzle4x4x4 } from "../puzzle/4x4"
+import type { IAlgset, ICaseList } from "./dataFormat"
 
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzle4x4x4

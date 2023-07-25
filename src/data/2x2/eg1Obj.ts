@@ -1,6 +1,6 @@
 import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
 import { useGrouping } from "../../scripts/config/set/eg1"
-//@ts-expect-error
+
 import yml from './eg1.yml'
 const data: ICaseList = yml
 

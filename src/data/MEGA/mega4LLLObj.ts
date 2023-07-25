@@ -2,9 +2,9 @@ import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
 import { useGrouping as OLL } from "../../scripts/config/set/megaOLL"
 import { useGrouping as PLL } from "../../scripts/config/set/megaPLL"
 
-//@ts-expect-error
+
 import yml from './megaoll.yml'
-//@ts-expect-error
+
 import yml2 from './megapll.yml'
 let olldata: ICaseList = yml
 let plldata: ICaseList = yml2

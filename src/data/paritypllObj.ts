@@ -1,7 +1,7 @@
 import type { IAlgset, ICaseList } from "../scripts/config/set/dataFormat"
 import { useGrouping } from "../scripts/config/set/parityPLL"
 
-//@ts-expect-error
+
 import yml from './paritypll.yml'
 let data: ICaseList = yml
 

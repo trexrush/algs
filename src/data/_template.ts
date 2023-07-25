@@ -2,7 +2,7 @@ import { IConfig, createConfig } from "../scripts/config";
 import { puzzle3x3x3 } from "../scripts/config/puzzle/3x3";
 import type { IAlgset, ICaseList } from "../scripts/config/set/dataFormat";
 
-//@ts-expect-error
+
 import yml from './oll.yml' // REPLACE WITH THE SET YAML
 
 // note that by default everything will be assumed to be righty. you MUST indicate that an alg is lefty if it is.

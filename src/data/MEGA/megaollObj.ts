@@ -2,7 +2,7 @@
 import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
 import { useGrouping } from "../../scripts/config/set/megaOLL"
 
-//@ts-expect-error
+
 import yml from './megaoll.yml'
 let data: ICaseList = yml
 
