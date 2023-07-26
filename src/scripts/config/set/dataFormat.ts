@@ -1,8 +1,9 @@
+import type { XOR } from "ts-essentials"
 import type { IConfig } from ".."
 
 // https://stackoverflow.com/questions/51352229/optional-generic-type-with-typescript
 export type ICaseList<T extends string = any> = Record<T, ICase> 
-type IGroupElementList<T extends string = any> = Record<T, ICase | ISet>
+type IGroupElementList<T extends string = any> = Record<T, XOR<ICase, ISet>>
 
 interface IGroupElement {
   name: string

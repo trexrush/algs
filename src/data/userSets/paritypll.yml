@@ -24,10 +24,10 @@ Oa:
     #     alg: M2 U' M2 U' M' U2 l2 U2 r2 Uw2 r2 Uw2 U2 M'
     note: opp into zperm or adj into U
 Ob:
-#     algs:
-#     -
-#         alg: M2 U M2 U M' U2 l2 U2 r2 Uw2 r2 Uw2 U2 M'
-#    note: opp into zperm
+    algs:
+    -
+        alg: M2' U M2' U M' U2 l2' U2 r2 Uw2 r2 Uw2 U2 M'
+    note: opp into zperm
 W:
     algs:
     - 

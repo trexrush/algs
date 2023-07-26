@@ -1,6 +1,6 @@
 ---
 import type { IConfig } from "../scripts/config";
-import type { ISet } from "../scripts/config/set/dataFormat";
+import type { ICase, ISet } from "../scripts/config/set/dataFormat";
 import CaseCard from "./templates/CaseCard.svelte";
 
 interface Props {
@@ -27,10 +27,10 @@ const { set, config } = Astro.props
   <div class="w-full flex flex-col gap-4 items-center">
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
-        setOrCase.hasOwnProperty("algs") ?
-          <CaseCard client:visible caso={setOrCase} config={config}/>
+        setOrCase.algs != undefined ? 
+          <CaseCard client:visible caso={setOrCase as ICase} config={config}/>
         :
-          <Astro.self set={setOrCase} config={config} />
+          <Astro.self set={setOrCase as ISet} config={config} />
       ))
     }
   </div>

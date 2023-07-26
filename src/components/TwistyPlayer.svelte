@@ -8,7 +8,7 @@
   export let config: IConfig
   export let _2D = false
   
-  export let drag = true;
+  export let drag = false;
   
   let tw: TwistyPlayer
   $: displayAlg = (algorithm.setup ? ". . " + algorithm.setup : ". ") + " . " + algorithm.notation('cubingjs') + " . ."
