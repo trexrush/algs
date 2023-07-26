@@ -29,6 +29,7 @@
       activeAlg={activeAlg} 
       imageAlg={algorithmList[0]} 
       config={config}
+      {caso}
       bind:toggleDisplay={toggleDisplay} 
       bind:isAlgVisDisplayed={toggled}
     />

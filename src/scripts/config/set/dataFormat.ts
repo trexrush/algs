@@ -12,20 +12,20 @@ interface IGroupElement {
 
 
 // TODO: use this format to reduce unnecessary data pulled in for a case
-interface ICaseCommon<T extends string> {
-  name: T
+interface ICaseCommon {
+  name: string
 }
-interface ICaseScrambles<T extends string> extends ICaseCommon<T> {
+interface ICaseScrambles extends ICaseCommon{
   scrambles: string[]
 }
-interface ICaseDefinition<T extends string> extends ICaseCommon<T> {
+interface ICaseDefinition extends ICaseCommon {
   imageAlg?: string
   altNames: string[]
-  mirror?: T
+  mirror?: string
   recog?: string[],
   recogImage?: string
 }
-interface ICaseData<T extends string> extends ICaseCommon<T> {
+interface ICaseData extends ICaseCommon {
   algs: IAlg[]
   note?: string
 }
@@ -35,7 +35,7 @@ export interface ISet extends IGroupElement {
   image?: string
 }
 
-export interface ICase extends IGroupElement {
+export interface ICase extends ICaseDefinition, ICaseData {
   algs: IAlg[]
   recog?: string[],
 }

@@ -11,6 +11,9 @@ export default defineConfig({
   site: 'https://trexrush.github.io',
   base: '/algs',
   vite: {
-    plugins: [ViteYaml()]
+    plugins: [ViteYaml()],
+    ssr: {
+      noExternal: ['sr-puzzlegen']
+    }
   }
 });
