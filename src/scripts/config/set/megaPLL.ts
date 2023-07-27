@@ -15,9 +15,24 @@ const setOptions: ISetConfig = {
   twistyPlayerConfig: {
     rot: 'x2 y3',
     cameraY: 45,
+  },
+  puzzleGenConfig: {
+    options: {
+      puzzle: {
+        scheme: {
+          U: { value: '#222', stroke: '#111' },
+          F: { value: '#5dc9ea', stroke: '#1aa2cb' },
+          L: { value: '#ffffa5', stroke: '#c1c185' },
+          BL: { value: '#ff66d8', stroke: '#bc52a2' },
+          R: { value: '#ffae0c', stroke: '#c4870e' },
+          BR: { value: '#93ff0f', stroke: '#70cc00' },
+        }
+      }
+    }
   }
 }
 const config: IConfig = createConfig(puzzleOptions, setOptions)
+console.log(config.puzzleGenConfig.options)
 
 // CASES
 const caseNames = [

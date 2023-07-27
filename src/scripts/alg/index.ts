@@ -15,7 +15,7 @@ export type TAlgCommon<T extends TAlgCommon<T>> = Pick<IConfig, "imgSource"> & {
   mirror(): T
   notation(to: TNotationTargets): string
 }
-export type TNotationTargets = 'vc' | 'cubingjs'
+export type TNotationTargets = 'vc' | 'pg' | 'cubingjs'
 
 export const AlgBuilder = function () { 
   const builders = {

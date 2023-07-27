@@ -15,6 +15,20 @@ const setOptions: ISetConfig = {
   twistyPlayerConfig: {
     cameraY: 55,
     stage: 'OLL'
+  },
+  puzzleGenConfig: {
+    options: {
+      puzzle: {
+        scheme: {
+          U: { value: '#333', stroke: '#222'},
+          F: { value: '#b7c7cc', stroke: '#b7c7cc' },
+          R: { value: '#ccccb7', stroke: '#ccccb7' },
+          BR: { value: '#ccb7c7', stroke: '#ccb7c7' },
+          BL: { value: '#ccc5b7', stroke: '#ccc5b7' },
+          L: { value: '#c2ccb7', stroke: '#c2ccb7' },
+        }
+      }
+    }
   }
 }
 const config: IConfig = createConfig(puzzleOptions, setOptions)

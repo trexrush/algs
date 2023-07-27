@@ -8,13 +8,14 @@ import { puzzleMegaminx } from "./megaminx";
 import type { DeepPartial } from "ts-essentials";
 import type { TTrigger } from "./triggers";
 import { DefaultConfig } from "../defaults";
+import type { TNotationTargets } from "../../alg";
 
 export interface IJustPuzzleConfig {
   type: twistyPuzzleType,
   vc: string | number, 
   cancel?: PuzzleSpecificSimplifyOptions,
-  notation?: (a: string, to: "vc" | "cubingjs") => string,
-  imgSource: "vc" | "cubingjs" | "none"
+  notation?: (a: string, to: TNotationTargets) => string,
+  imgSource: "vc" | "pg" | "cubingjs" | "none"
   note?: string
   triggers: TTrigger[]
   baseMoves: string[]
