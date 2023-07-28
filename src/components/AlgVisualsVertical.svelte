@@ -19,7 +19,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 
-<div class="flex flex-row items-center justify-center cursor-pointer relative">
+<div class="flex flex-row items-center justify-center cursor-pointer relative aspect-square">
   {#if !isAlgVisDisplayed}
     <div class="relative group h-full w-full
     child:transition-all child:duration-300 child:ease-in-out" on:click={toggleDisplay}>
@@ -29,8 +29,8 @@
       </div>
     </div>
   {:else}
-  <div class="h-full w-full">
-    <slot name="algAnimation" css={Styles.anim}/>
-  </div>
+    <div class="h-full w-full">
+      <slot name="algAnimation" css={Styles.anim}/>
+    </div>
   {/if}
 </div>

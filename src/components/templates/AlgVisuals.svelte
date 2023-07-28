@@ -42,8 +42,9 @@
   };
 
   const pgImage = (node: HTMLElement) => {
-    // hardcoded everything for now, TODO: add a new config section for puzzleGen and unhardcode in a future commit
     const op: PNGVisualizerOptions = merge(config.puzzleGenConfig.options, { 
+      width: FIXED_SIZE_TEMP,
+      height: FIXED_SIZE_TEMP,
       puzzle: {
         case: caso.imageAlg
           ? caso.imageAlg

@@ -17,15 +17,14 @@
   let x: number
   let y: number
 
-  const updateHeight = (twP: TwistyPlayer, size: number) => {
-    twP.style.height = `${size}px`
-    twP.style.width = `${size}px`
-    return twP
+  const updateHeight = (size: number) => {
+    tw.style.height = `${size}px`
+    tw.style.width = `${size}px`
   }
 
   $: x != null && (() => {
     const size = Math.min(x, y)
-    updateHeight(tw, size)
+    updateHeight(size)
   })()
 
   const setPlayer = (algObj: IAlgorithmClass, twComponent: TwistyPlayer) => {
@@ -63,16 +62,18 @@
 
   const twisty = (node: HTMLElement, alg: IAlgorithmClass) => {
     (async () => {
+      // console.log("START ASYNC")
       tw = setPlayer(alg, tw)
-      tw = updateHeight(tw, x)
-
+      // console.log("SET")
       node.appendChild(tw);
+      // console.log("APPENDED")
       if (!_2D) {
         tw.play()
         tw.onclick = () => { tw.controller.animationController.playPause(); }
+        // console.log("PLAY")
       }
+      // console.log("DONE ASYNC")
     })()
-    
     return {
       update(){
         tw = updatePlayer(tw)

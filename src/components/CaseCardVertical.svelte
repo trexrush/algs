@@ -37,7 +37,7 @@
 
 </script>
 
-<div id={caso.name} class='h-fit w-full px-1 md:flex md:flex-row items-center grid grid-cols-5 gap-2'>
+<div id={caso.name} class='w-full px-1 md:flex md:flex-row items-center grid grid-cols-5 gap-2'>
   <div class="overflow-clip aspect-square md:basis-32">
     <slot name="visuals" />
   </div>
