@@ -59,7 +59,7 @@ const caseNames = [
   "U1+", "U1-", "U2+", "U2-",
   "V1+", "V1-", "V2+", "V2-", "V3+", "V3-", "V4+", "V4-",
   "W",
-  "X1+", "X1-", "X2+", "X2-", "X3+", "X3-", "X4+", "X4-", "X5+", "X5-", "X6+", "X6-",
+  "X1", "X2", "X3", "X4", "X5+", "X5-", "X6+", "X6-", "X7+", "X7-",
   "Y1+", "Y1-", "Y2+", "Y2-", "Y3+", "Y3-",
   "Z1", "Z2", "Z3",
 ] as const
@@ -125,7 +125,7 @@ const useGrouping = (grouping: "none" | "letter" | 'feature' | '4LLLjustCP', d: 
     "S": { name: "S", altNames: ["2 2x1s, not touching"],
       children: ch(["S1+", "S1-", "S2+", "S2-", "S3+", "S3-", "S4+", "S4-", "S5+", "S5-", "S6+", "S6-",])
     },
-    "T": { name: "T", altNames: ["2/3/4 2x1s in a symettrical T like pattern"],
+    "T": { name: "T", altNames: ["2/3/4 2x1s in a symmetrical T like pattern"],
       children: ch(["T1", "T2+", "T2-", "T3+", "T3-", "T4+", "T4-",])
     },
     "U": { name: "U", altNames: ["3 Edge EP"],
@@ -138,7 +138,7 @@ const useGrouping = (grouping: "none" | "letter" | 'feature' | '4LLLjustCP', d: 
       children: ch(["W",])
     },
     "X": { name: "X", altNames: ["No blocks / headlights"],
-      children: ch(["X1+", "X1-", "X2+", "X2-", "X3+", "X3-", "X4+", "X4-", "X5+", "X5-", "X6+", "X6-",])
+      children: ch(["X1", "X2","X3", "X4", "X5+", "X5-", "X6+", "X6-", "X7+", "X7-"])
     },
     "Y": { name: "Y", altNames: ["2 2x1s in Y pattern + other stuff"],
       children: ch(["Y1+", "Y1-", "Y2+", "Y2-", "Y3+", "Y3-",])

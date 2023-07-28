@@ -1,19 +1,19 @@
 1A:
     algs:
     -
-     alg: L' U' L U (R' L) F' L' F R
+     alg: R' [LEFT SEXY] [LEFT SLEDGE] R
      isLefty: true
     -
-     alg: R' [LEFT SEXY] [LEFT SLEDGE] R
+     alg: "[LEFT SEXY] (R' L) F' L' F R"
      isLefty: true
     comment: maybe try from LB to make the (B)R less awkward?
 1B:
     algs:
     -
-     alg: R' F' L F (L' R) U' L' U L
+     alg: R' [LEFT HEDGE] [LEFT UNSEXY] R
      isLefty: true
     -
-     alg: R' [LEFT HEDGE] [LEFT UNSEXY] R
+     alg: R' F' L F (L' R) [LEFT UNSEXY]
      isLefty: true
     comment: maybe try from LB to make the (B)R less awkward?
 2A:
@@ -24,7 +24,8 @@
 2B:
     algs:
     -
-     alg: F' L' U2' L U L' U L F
+     setup: U2'
+     alg: F' [LEFT ANTISUNE] F
      isLefty: true
     -
      alg: L' BL' L F' L' BL L F
@@ -33,80 +34,85 @@
 2C:
     algs:
     -
-     alg: L' U2 L U L' U2 L
+     alg: L' U2' L U' L' U2' L
      isLefty: true
     -
+     setup: U
      alg: L U2' L' U' L U2' L'
      isLefty: true
 2D:
     algs:
     -
-     alg: F' L' U' L U' L' U2 L F
+     alg: F' [LEFT SUNE] F
      isLefty: true
     -
+     setup: U
      alg: L' BL L F' L' BL' L F
      isLefty: true
      comment: 3x3 transfer (l)
 3A+:
     algs:
     -
-     alg: L U L' U L U2' L'
+     alg: "[LEFT BACK SUNE]"
      isLefty: true
     comment: 3x3 transfer (sune)
 3A-:
     algs:
     -
-     alg: L' U' L U' L' U2 L
+     alg: "[LEFT SUNE]"
      isLefty: true
     comment: 3x3 transfer (sune)
 3B+:
     algs:
     -
-     alg: L U2 L' U' L U' L'
+     alg: "[LEFT BACK ANTISUNE]"
      isLefty: true
     comment: 3x3 transfer (antisune)
 3B-:
     algs:
     -
-     alg: L' U2' L U L' U L
+     alg: "[LEFT ANTISUNE]"
      isLefty: true
     comment: 3x3 transfer (antisune)
 4A:
     algs:
     -
-     alg: L' U' L U' L' U L U' L' U2 L
+     alg: "[LEFT DOUBLE SUNE]"
      isLefty: true
     comment: 3x3 transfer (h)
 4B:
     algs:
     -
-     alg: L' U2' L U L' U' L U L' U L
+     setup: U
+     alg: "F' [LEFT DOUBLE SUNE] F "
+     isLefty: true
+    -
+     alg: "[LEFT DOUBLE ANTISUNE]"
      isLefty: true
     comment: 3x3 transfer (h)
 4C:
     algs:
     -
+     setup: U'
      alg: L' U' L U' L' U' L U L' U2 L
      isLefty: true
     -
-     alg: L U L' U L U2' L2' U' L U' L' U2 L
+     alg: "[LEFT BACK SUNE] [LEFT SUNE]"
      isLefty: true
-    -
-     alg: (L' U' L U' L' U2 L) U' (L' U' L U' L' U2 L)
-     isLefty: true
-    comment: tbh for this I just the last alg (sune x2) cuz I cant learn this alg lol
 4D:
     algs:
     -
      alg: L U2' L' U2' L U2 L' U2' L U' L'
      isLefty: true
     -
-     alg: L' U2' L U L' U L2 U L' U L U2' L'
+     setup: U
+     alg: "[LEFT BACK ANTISUNE] [LEFT SUNE]"
      isLefty: true
     comment: 'never learned this case, I just do sune into I think T'
 4E+:
     algs:
     -
+     setup: U2'
      alg: L U2 L2' U' L2 U' L2' U2 L
      isLefty: true
     comment: 3x3 transfer (pi) theres a better alt alg tho maybe learn it
@@ -120,12 +126,14 @@
 5+:
     algs:
     -
+     setup: U'
      alg: L U L' U2 L U2' L' U L U2' L'
      isLefty: true
     comment: 'U + sune, alg starts on the middle sune corner'
 5-:
     algs:
     -
+     setup: U2'
      alg: L' U' L U2' L' U2 L U' L' U2 L
      isLefty: true
     comment: 'U + sune, alg starts on the middle sune corner'
@@ -145,48 +153,57 @@
 7A:
     algs:
     -
-     alg: L' U' L U L F' L' F
+     alg: "[LEFT SEXY] [LEFT SLEDGE]"
      isLefty: true
     comment: 3x3 transfer
 7B:
     algs:
     -
-     alg: F' L' U' L U F
+     alg: F' [LEFT SEXY] F
      isLefty: true
     comment: 3x3 transfer
 8A+:
     algs:
     -
-     alg: L' U' L' BL L BL' U L
+     setup: U2'
+     alg: L U2 F U' F' U' L'
      isLefty: true
     -
-     alg: L U2 F U' F' U' L'
+     alg: "[LEFT SU] [LEFT HEDGE] L' U2 L"
+     isLefty: true
+    -
+     alg: L' U' [LEFT BACK SLEDGE] U L
      isLefty: true
     comment: 3x3 transfer
 8A-:
     algs:
     -
-     alg: L U L F' L' F U' L'
+     alg: L U [LEFT SLEDGE] U' L'
      isLefty: true
     comment: 3x3 transfer
 8B+:
     algs:
     -
-     alg: L U L' U' F' L' BL L (BL' F)
+     setup: U'
+     alg: F' [L SEXY] [L SUNE] F
      isLefty: true
     -
-     alg: F' L' U' L U L' U' L U' L' U2 L F
+     setup: U'
+     alg: L U L' U' F' L' BL L (BL' F)
      isLefty: true
-    comment: 3x3 transfer?
+     comment: 3x3 transfer
 8B-:
     algs:
     -
-     alg: L' U' L U BL L F' L' (F BL')
-     isLefty: true
-    -
+     setup: U
      alg: L' U' L2 U L F' L' U' L' U F
      isLefty: true
-    comment: 3x3 transfer
+    -
+     setup: U
+     alg: L' U' L U BL L F' L' (F BL')
+     isLefty: true
+     comment: 3x3 transfer
+# CHECKED UNTIL HERE
 9A+:
     algs:
     -
@@ -763,10 +780,15 @@
 27A+:
     algs:
     -
+     setup: U2
      alg: (R' BL)  L' BL' L U L U' (L' R)
      isLefty: true
     -
+     setup: U
      alg: L' F' L U' L' F L2 F' L' U L F L'
+     isLefty: true
+    -
+     alg: F' L U L2' U L2 U2' L' U F
      isLefty: true
     comment: setup to sexy sledge inverse
 27A-:
@@ -1188,5 +1210,5 @@
 O:
     algs:
     -
-     alg: L' U' L U L F' L' F U2' F' L' U' L U F
+     alg: "[LEFT SEXY] [LEFT SLEDGE] U2' [LEFT FRURUF]"
      isLefty: true

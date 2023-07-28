@@ -17,6 +17,8 @@ export const puzzleMegaminx: IPuzzleConfig = {
     type: Type.MEGAMINX_TOP,
     options: { 
       puzzle: {
+        scale: -1.5,
+        rotations: [{z: 180}]
       }
     }
   },

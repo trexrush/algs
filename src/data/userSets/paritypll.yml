@@ -10,7 +10,8 @@ adj:
         tags: ['Direct']
     - 
         setup: U2
-        alg: R U R U' Rw' U' r U Rw U Rw' U' Rw' U Rw U R' Rw U' Rw'
+        alg: L' U' L' U Lw U l' U' Lw' U' Lw U Lw U' Lw' U' l' U Lw
+        isLefty: true
         tags: ['Direct']
     - 
         alg: "[LEFT SEXY] [OPP] U L' U L"
