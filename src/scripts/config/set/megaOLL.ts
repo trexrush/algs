@@ -20,7 +20,7 @@ const setOptions: ISetConfig = {
     options: {
       puzzle: {
         scheme: {
-          U: { value: '#333', stroke: '#222'},
+          U: { value: '#222', stroke: '#111'},
           F: { value: '#b7c7cc', stroke: '#b7c7cc' },
           R: { value: '#ccccb7', stroke: '#ccccb7' },
           BR: { value: '#ccb7c7', stroke: '#ccb7c7' },

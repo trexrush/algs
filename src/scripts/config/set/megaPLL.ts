@@ -21,18 +21,17 @@ const setOptions: ISetConfig = {
       puzzle: {
         scheme: {
           U: { value: '#222', stroke: '#111' },
-          F: { value: '#5dc9ea', stroke: '#1aa2cb' },
-          L: { value: '#ffffa5', stroke: '#c1c185' },
+          F: { value: '#5dc9ea', stroke: '#1a8bad' },
+          L: { value: '#ffffa5', stroke: '#939360' },
           BL: { value: '#ff66d8', stroke: '#bc52a2' },
-          R: { value: '#ffae0c', stroke: '#c4870e' },
-          BR: { value: '#93ff0f', stroke: '#70cc00' },
+          R: { value: '#ffae0c', stroke: '#8e6616' },
+          BR: { value: '#93ff0f', stroke: '#538e0b' },
         }
       }
     }
   }
 }
 const config: IConfig = createConfig(puzzleOptions, setOptions)
-console.log(config.puzzleGenConfig.options)
 
 // CASES
 const caseNames = [
