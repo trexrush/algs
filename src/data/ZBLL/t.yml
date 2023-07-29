@@ -1,8 +1,8 @@
 ---
 Pure_S:
-  name: T72
+  name: TS
   altNames:
-    - T1/12
+    - T72
     - Pure_S
     - BBFF_C/C
   algs:
@@ -23,9 +23,9 @@ Pure_S:
     alg: L2 D L' U L D' F L' [LEFT UNSEXY] F' L'
     isLefty: true
 Pure_H:
-  name: T71
+  name: TH
   altNames:
-    - T1/11
+    - T71
     - Pure_H
     - BBFF_O/O
   algs:
@@ -40,9 +40,9 @@ Pure_H:
   note: I use alg 1, alg 2 is a cope 2gen backup and maybe for OH (I use LU for OH
     so pretend its mirrored)  EDIT- might switch back to 2gen
 Pure_Z:
-  name: T69
+  name: TZ+
   altNames:
-    - T1/9
+    - T69
     - Pure_Z
     - BBFF_A/A
   algs:
@@ -51,9 +51,9 @@ Pure_Z:
     alg: "[LEFT BACK ANTISUNE] [LEFT ANTISUNE]"
     isLefty: true
 Pure_AntiZ:
-  name: T70
+  name: TZ-
   altNames:
-    - T1/10
+    - T70
     - Pure_AntiZ
     - BBFF_OxO
   algs:
@@ -61,9 +61,9 @@ Pure_AntiZ:
     alg: "[LEFT ANTISUNE] [LEFT BACK ANTISUNE]"
     isLefty: true
 Pure_BarA:
-  name: T62
+  name: TUa2
   altNames:
-    - T1/2
+    - T62
     - Pure_BarA
     - BBFF_C/A
   algs:
@@ -72,9 +72,9 @@ Pure_BarA:
     alg:  L' U L U2' L' U' L U2' L' U' L U' L' U L
     isLefty: true
 Pure_BarO:
-  name: T61
+  name: TUb2
   altNames:
-    - T1/1
+    - T61
     - Pure_BarO
     - BBFF_C/O
   algs:
@@ -82,18 +82,18 @@ Pure_BarO:
     alg: L U' L' U2 L U L' U2 L U L' U L U' L'
     isLefty: true
 Pure_HAnti:
-  name: T64
+  name: TUb-
   altNames:
-    - T1/5
+    - T64
     - Pure_HAnti
     - BBFF_O/A
   algs:
   - 
     alg: "[ANTISUNE] U [SUNE]"
 Pure_OBar:
-  name: T66
+  name: TUa+
   altNames:
-    - T1/6
+    - T66
     - Pure_OBar
     - BBFF_O/C
   algs:
@@ -101,9 +101,9 @@ Pure_OBar:
     alg: "[LEFT ANTISUNE] U' [LEFT SUNE]"
     isLefty: true
 Pure_HArrow:
-  name: T63
+  name: TUa-
   altNames:
-    - T1/3
+    - T63
     - Pure_HArrow
     - BBFF_CxO
   algs:
@@ -115,9 +115,9 @@ Pure_HArrow:
     alg: L U L' [LEFT BACK UNSEXY] U L' U' L2 U' L2' U2 L
     isLefty: true
 Pure_ABar:
-  name: T65
+  name: TUb+
   altNames:
-    - T1/4
+    - T65
     - Pure_ABar
     - BBFF_A/C
   algs:
@@ -126,153 +126,147 @@ Pure_ABar:
     alg: L' U' L [LEFT UNSEXY] U' L U L2' U L2 U2 L'
     isLefty: true
 Pure_VAnti:
-  name: T68
+  name: TUa
   altNames:
-    - T1/8
+    - T68
     - Pure_VAnti
     - BBFF_A/O
   algs:
   - 
     alg: R U' R' [SLEDGE] R U' B U' B' U' R'
 Pure_VArrow:
-  name: T67
+  name: TUb
   altNames:
-    - T1/7
+    - T67
     - Pure_VArrow
     - BBFF_OxC
   algs:
   - 
     setup: U'
     alg: R' U' R2 U R2' U R2 U2' R' U R' U R
+
 Diag_BarO:
-  name: Diag_BarO
+  name: TNa
   altNames:
-    - T
+    - T55
     - Diag_BarO
     - FBFB_C/O
   algs:
   - 
-    alg: L U' L2 D' l U2 l' D L2 U L'
+    alg: L U' L2' D' l U2' l' D L2 U L'
     isLefty: true
-  - 
-    setup: U2
-    alg: R U' R2 D' r U2 r' D R2 U R'
 Diag_OBar:
-  name: Diag_OBar
+  name: TNb
   altNames:
-    - T
+    - T56
     - Diag_OBar
     - FBFB_O/C
   algs:
   - 
     setup: U2
-    alg: L' U L2 D l' U2 l D' L2 U' L
+    alg: L' U L2 D l' U2' l D' L2' U' L
     isLefty: true
-  - 
-    alg: R' U R2 D r' U2 r D' R2 U' R
 Diag_S:
-  name: Diag_S
+  name: TV-
   altNames:
-    - T
+    - T60
     - Diag_S
     - FBFB_C/C
   algs:
   - 
     setup: U'
-    alg: L' U L2 D l' U2 l D' L2 U L U L' U L
+    alg: L' U L2 D l' U2' l D' L2' U L U L' U L
     isLefty: true
 Diag_HAnti:
-  name: Diag_HAnti
+  name: TV
   altNames:
-    - T
+    - T51
     - Diag_HAnti
     - FBFB_O/A
   algs:
   - 
     setup: U'
-    alg: L' U' L U' L' U' L2 D l' U2 l D' L2 U' L
+    alg: L' U' L U' L' U' L2 D l' U2' l D' L2' U' L
     isLefty: true
   - 
     setup: U'
-    alg: L U' L2 D' l U2 l' D L2 U' L' U' L U' L'
+    alg: L U' L2' D' l U2' l' D L2 U' L' U' L U' L'
     isLefty: true
   note: in process of switching to alg 1 (its just the inverse which flows nicer)
 Diag_AntiZ:
-  name: Diag_AntiZ
+  name: TY2
   altNames:
-    - T
+    - T52
     - Diag_AntiZ
     - FBFB_OxO
   algs:
   - 
     alg: L U L' U2' L' D' L U L' D L2 U' L' U L U' L'
     isLefty: true
-  - 
-    setup: U2
-    alg: R U R' U2 R' D' R U R' D R2 U' R' U R U' R'
 Diag_ABar:
-  name: Diag_ABar
+  name: TY-
   altNames:
-    - T
+    - T57
     - Diag_ABar
     - FBFB_A/C
   algs:
   - 
     setup: U2
-    alg: L' U' L U2 L D L' U' L D' L2 U L U' L' U L
+    alg: L' U' L U2 L D L' U' L D' L2' U L U' L' U L
     isLefty: true
 Diag_BarA:
-  name: Diag_BarA
+  name: TY+
   altNames:
-    - T
+    - T59
     - Diag_BarA
     - FBFB_C/A
   algs:
-  - 
-    setup: U
-    alg: R U R' U' R U R2 D' R U' R' D R U2 R U' R'
   - 
     setup: U'
     alg: L U L' U' L U L2' D' L U' L' D L U2 L U' L'
     isLefty: true
 Diag_H:
-  name: Diag_H
+  name: TY
   altNames:
-    - T
+    - T49
     - Diag_H
     - FBFB_O/O
   algs:
   - 
     setup: U'
-    alg: L' U' L U L' U' L2 D L' U L D' L' U2 L' U L
+    alg: L' U' L U L' U' L2 D L' U L D' L' U2' L' U L
     isLefty: true
 Diag_HArrow:
-  name: Diag_HArrow
+  name: TE-
   altNames:
-    - T
+    - T53
     - Diag_HArrow
     - FBFB_CxO
   algs:
   - 
     setup: U2
-    alg: z' D L2 D' L U L' D L U2 L D' L' U z
+    alg: z' D L2' D' L U L' D L U2' L D' L' U z
     isLefty: true
   - 
-    alg: z' D' L2 D L' U' L D' L' U2 L' D L U' z
+    alg: z' D' L2 D L' U' L D' L' U2' L' D L U' z
     isLefty: true
   note: might learn 2nd alg at some point bc better recog -> alg than my main alg
 Diag_VArrow:
-  name: Diag_VArrow
+  name: TE+
   altNames:
-    - T
+    - T54
     - Diag_VArrow
     - FBFB_OxC
+    - Bitchass
   algs:
+  - 
+    alg: F U F' L D L' U2' L D' L' U f' L F L' S
+    isLefty: true
   - 
     alg: f' U' F R' D' R U2 R' D R U' f R' F' R
   - 
     setup: U
-    alg: L U2 L D L2 U l F' L F l' U L D' L2
+    alg: L U2' L D L2' U l F' L F l' U L D' L2'
     isLefty: true
   - 
     setup: U'
@@ -281,35 +275,36 @@ Diag_VArrow:
   note: 'aka "that bitch ass T case" bc it sucks so much  main alg is 1st, 2nd is
     backup, third is a 21 mover that most ppl use, i should learn it since less risky '
 Diag_Z:
-  name: Diag_Z
+  name: TV+
   altNames:
-    - T
+    - T58
     - Diag_Z
     - FBFB_A/A
   algs:
   - 
-    alg: L (U' D) L' U2 L D' L U L' U2 L U L2
+    alg: L (U' D) L' U2 L D' L U L' U2' L U L2'
     isLefty: true
 Diag_VAnti:
-  name: Diag_VAnti
+  name: TV2
   altNames:
-    - T
+    - T50
     - Diag_VAnti
     - FBFB_A/O
   algs:
   - 
     setup: U'
-    alg: L2 F' L' U' L' U L F' L' U2 L U2 L F2 L2
+    alg: L2 F' L' U' L' U L F' L' U2 L U2' L F2' L2'
     isLefty: true
   - 
     setup: U2
-    alg: L' (D' U) L U2 L' D L' U' L U2 L' U' L2
+    alg: L' (D' U) L U2' L' D L' U' L U2' L' U' L2
     isLefty: true
   note: might learn 2nd alg
+
 AdjB_S:
   name: AdjB_S
   altNames:
-    - T
+    - AdjB_S
     - AdjB_S
     - RLFF_C/C
   algs:
@@ -320,7 +315,7 @@ AdjB_S:
 AdjB_BarA:
   name: AdjB_BarA
   altNames:
-    - T
+    - AdjB_BarA
     - AdjB_BarA
     - RLFF_C/A
   algs:
@@ -330,7 +325,7 @@ AdjB_BarA:
 AdjB_BarO:
   name: AdjB_BarO
   altNames:
-    - T
+    - AdjB_BarO
     - AdjB_BarO
     - RLFF_C/O
   algs:
@@ -340,7 +335,7 @@ AdjB_BarO:
 AdjB_OBar:
   name: AdjB_OBar
   altNames:
-    - T
+    - AdjB_OBar
     - AdjB_OBar
     - RLFF_O/C
   algs:
@@ -354,7 +349,7 @@ AdjB_OBar:
 AdjB_Z:
   name: AdjB_Z
   altNames:
-    - T
+    - AdjB_Z
     - AdjB_Z
     - RLFF_A/A
   algs:
@@ -365,7 +360,7 @@ AdjB_Z:
 AdjB_ABar:
   name: AdjB_ABar
   altNames:
-    - T
+    - AdjB_ABar
     - AdjB_ABar
     - RLFF_A/C
   algs:
@@ -379,7 +374,7 @@ AdjB_ABar:
 AdjB_H:
   name: AdjB_H
   altNames:
-    - T
+    - AdjB_H
     - AdjB_H
     - RLFF_O/O
   algs:
@@ -392,7 +387,7 @@ AdjB_H:
 AdjB_HAnti:
   name: AdjB_HAnti
   altNames:
-    - T
+    - AdjB_HAnti
     - AdjB_HAnti
     - RLFF_O/A
   algs:
@@ -401,7 +396,7 @@ AdjB_HAnti:
 AdjB_VAnti:
   name: AdjB_VAnti
   altNames:
-    - T
+    - AdjB_VAnti
     - AdjB_VAnti
     - RLFF_A/O
   algs:
@@ -411,7 +406,7 @@ AdjB_VAnti:
 AdjB_AntiZ:
   name: AdjB_AntiZ
   altNames:
-    - T
+    - AdjB_AntiZ
     - AdjB_AntiZ
     - RLFF_OxO
   algs:
@@ -421,7 +416,7 @@ AdjB_AntiZ:
 AdjB_HArrow:
   name: AdjB_HArrow
   altNames:
-    - T
+    - AdjB_HArrow
     - AdjB_HArrow
     - RLFF_CxO
   algs:
@@ -431,7 +426,7 @@ AdjB_HArrow:
 AdjB_VArrow:
   name: AdjB_VArrow
   altNames:
-    - T
+    - AdjB_VArrow
     - AdjB_VArrow
     - RLFF_OxC
   algs:
@@ -442,7 +437,7 @@ AdjB_VArrow:
 AdjF_AntiZ:
   name: AdjF_AntiZ
   altNames:
-    - T
+    - AdjF_AntiZ
     - AdjF_AntiZ
     - FFLR_OxO
   algs:
@@ -452,7 +447,7 @@ AdjF_AntiZ:
 AdjF_Z:
   name: AdjF_Z
   altNames:
-    - T
+    - AdjF_Z
     - AdjF_Z
     - FFLR_A/A
   algs:
@@ -461,7 +456,7 @@ AdjF_Z:
 AdjF_S:
   name: AdjF_S
   altNames:
-    - T
+    - AdjF_S
     - AdjF_S
     - FFLR_C/C
   algs:
@@ -472,7 +467,7 @@ AdjF_S:
 AdjF_H:
   name: AdjF_H
   altNames:
-    - T
+    - AdjF_H
     - AdjF_H
     - FFLR_O/O
   algs:
@@ -482,7 +477,7 @@ AdjF_H:
 AdjF_BarA:
   name: AdjF_BarA
   altNames:
-    - T
+    - AdjF_BarA
     - AdjF_BarA
     - FFLR_C/A
   algs:
@@ -493,7 +488,7 @@ AdjF_BarA:
 AdjF_OBar:
   name: AdjF_OBar
   altNames:
-    - T
+    - AdjF_OBar
     - AdjF_OBar
     - FFLR_O/C
   algs:
@@ -504,7 +499,7 @@ AdjF_OBar:
 AdjF_BarO:
   name: AdjF_BarO
   altNames:
-    - T
+    - AdjF_BarO
     - AdjF_BarO
     - FFLR_C/O
   algs:
@@ -514,7 +509,7 @@ AdjF_BarO:
 AdjF_HAnti:
   name: AdjF_HAnti
   altNames:
-    - T
+    - AdjF_HAnti
     - AdjF_HAnti
     - FFLR_O/A
   algs:
@@ -525,7 +520,7 @@ AdjF_HAnti:
 AdjF_VArrow:
   name: AdjF_VArrow
   altNames:
-    - T
+    - AdjF_VArrow
     - AdjF_VArrow
     - FFLR_OxC
   algs:
@@ -535,7 +530,7 @@ AdjF_VArrow:
 AdjF_ABar:
   name: AdjF_ABar
   altNames:
-    - T
+    - AdjF_ABar
     - AdjF_ABar
     - FFLR_A/C
   algs:
@@ -550,7 +545,7 @@ AdjF_ABar:
 AdjF_VAnti:
   name: AdjF_VAnti
   altNames:
-    - T
+    - AdjF_VAnti
     - AdjF_VAnti
     - FFLR_A/O
   algs:
@@ -562,7 +557,7 @@ AdjF_VAnti:
 AdjF_HArrow:
   name: AdjF_HArrow
   altNames:
-    - T
+    - AdjF_HArrow
     - AdjF_HArrow
     - FFLR_CxO
   algs:
@@ -575,7 +570,7 @@ AdjF_HArrow:
 AdjL_VArrow:
   name: AdjL_VArrow
   altNames:
-    - T
+    - AdjL_VArrow
     - AdjL_VArrow
     - FLFR_OxC
   algs:
@@ -585,7 +580,7 @@ AdjL_VArrow:
 AdjL_VAnti:
   name: AdjL_VAnti
   altNames:
-    - T
+    - AdjL_VAnti
     - AdjL_VAnti
     - FLFR_A/O
   algs:
@@ -595,7 +590,7 @@ AdjL_VAnti:
 AdjL_S:
   name: AdjL_S
   altNames:
-    - T
+    - AdjL_S
     - AdjL_S
     - FLFR_C/C
   algs:
@@ -609,7 +604,7 @@ AdjL_S:
 AdjL_ABar:
   name: AdjL_ABar
   altNames:
-    - T
+    - AdjL_ABar
     - AdjL_ABar
     - FLFR_A/C
   algs:
@@ -620,7 +615,7 @@ AdjL_ABar:
 AdjL_AntiZ:
   name: AdjL_AntiZ
   altNames:
-    - T
+    - AdjL_AntiZ
     - AdjL_AntiZ
     - FLFR_OxO
   algs:
@@ -631,7 +626,7 @@ AdjL_AntiZ:
 AdjL_BarO:
   name: AdjL_BarO
   altNames:
-    - T
+    - AdjL_BarO
     - AdjL_BarO
     - FLFR_C/O
   algs:
@@ -641,7 +636,7 @@ AdjL_BarO:
 AdjL_BarA:
   name: AdjL_BarA
   altNames:
-    - T
+    - AdjL_BarA
     - AdjL_BarA
     - FLFR_C/A
   algs:
@@ -651,7 +646,7 @@ AdjL_BarA:
 AdjL_OBar:
   name: AdjL_OBar
   altNames:
-    - T
+    - AdjL_OBar
     - AdjL_OBar
     - FLFR_O/C
   algs:
@@ -661,7 +656,7 @@ AdjL_OBar:
 AdjL_HArrow:
   name: AdjL_HArrow
   altNames:
-    - T
+    - AdjL_HArrow
     - AdjL_HArrow
     - FLFR_CxO
   algs:
@@ -670,7 +665,7 @@ AdjL_HArrow:
 AdjL_H:
   name: AdjL_H
   altNames:
-    - T
+    - AdjL_H
     - AdjL_H
     - FLFR_O/O
   algs:
@@ -681,7 +676,7 @@ AdjL_H:
 AdjL_HAnti:
   name: AdjL_HAnti
   altNames:
-    - T
+    - AdjL_HAnti
     - AdjL_HAnti
     - FLFR_O/A
   algs:
@@ -692,7 +687,7 @@ AdjL_HAnti:
 AdjL_Z:
   name: AdjL_Z
   altNames:
-    - T
+    - AdjL_Z
     - AdjL_Z
     - FLFR_A/A
   algs:
@@ -702,7 +697,7 @@ AdjL_Z:
 AdjR_S:
   name: AdjR_S
   altNames:
-    - T
+    - AdjR_S
     - AdjR_S
     - RFLF_C/C
   algs:
@@ -712,7 +707,7 @@ AdjR_S:
 AdjR_OBar:
   name: AdjR_OBar
   altNames:
-    - T
+    - AdjR_OBar
     - AdjR_OBar
     - RFLF_O/C
   algs:
@@ -723,7 +718,7 @@ AdjR_OBar:
 AdjR_ABar:
   name: AdjR_ABar
   altNames:
-    - T
+    - AdjR_ABar
     - AdjR_ABar
     - RFLF_A/C
   algs:
@@ -734,7 +729,7 @@ AdjR_ABar:
 AdjR_BarO:
   name: AdjR_BarO
   altNames:
-    - T
+    - AdjR_BarO
     - AdjR_BarO
     - RFLF_C/O
   algs:
@@ -745,7 +740,7 @@ AdjR_BarO:
 AdjR_BarA:
   name: AdjR_BarA
   altNames:
-    - T
+    - AdjR_BarA
     - AdjR_BarA
     - RFLF_C/A
   algs:
@@ -755,7 +750,7 @@ AdjR_BarA:
 AdjR_AntiZ:
   name: AdjR_AntiZ
   altNames:
-    - T
+    - AdjR_AntiZ
     - AdjR_AntiZ
     - RFLF_OxO
   algs:
@@ -769,7 +764,7 @@ AdjR_AntiZ:
 AdjR_VArrow:
   name: AdjR_VArrow
   altNames:
-    - T
+    - AdjR_VArrow
     - AdjR_VArrow
     - RFLF_OxC
   algs:
@@ -780,7 +775,7 @@ AdjR_VArrow:
 AdjR_Z:
   name: AdjR_Z
   altNames:
-    - T
+    - AdjR_Z
     - AdjR_Z
     - RFLF_A/A
   algs:
@@ -789,7 +784,7 @@ AdjR_Z:
 AdjR_H:
   name: AdjR_H
   altNames:
-    - T
+    - AdjR_H
     - AdjR_H
     - RFLF_O/O
   algs:
@@ -799,7 +794,7 @@ AdjR_H:
 AdjR_VAnti:
   name: AdjR_VAnti
   altNames:
-    - T
+    - AdjR_VAnti
     - AdjR_VAnti
     - RFLF_A/O
   algs:
@@ -810,7 +805,7 @@ AdjR_VAnti:
 AdjR_HArrow:
   name: AdjR_HArrow
   altNames:
-    - T
+    - AdjR_HArrow
     - AdjR_HArrow
     - RFLF_CxO
   algs:
@@ -821,7 +816,7 @@ AdjR_HArrow:
 AdjR_HAnti:
   name: AdjR_HAnti
   altNames:
-    - T
+    - AdjR_HAnti
     - AdjR_HAnti
     - RFLF_O/A
   algs:
