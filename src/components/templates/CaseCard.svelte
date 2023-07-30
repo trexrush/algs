@@ -23,6 +23,9 @@
 
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<!-- svelte-ignore a11y-click-events-have-key-events -->
+
 <svelte:component this={Layout} {caso} mirror={activeAlg.isMirror}>
   <svelte:fragment slot="visuals">
     <AlgVisuals 
@@ -62,7 +65,6 @@
   </svelte:fragment>
   
   
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <svelte:fragment slot="mirrorToggle" let:css>
     <span class={css.main}
     on:click={() => { algorithmList = algorithmList.map(a => a.mirror()) }} use:tooltip title="Display the mirror cases of algs">
@@ -78,8 +80,6 @@
     {/if}
   </svelte:fragment> -->
   
-  <!-- svelte-ignore a11y-missing-content -->
-  <!-- svelte-ignore a11y-click-events-have-key-events -->
   <svelte:fragment slot="algorithmList" let:css>
     {#each algorithmList as eachAlg, i}
       <li class={css.main}>
