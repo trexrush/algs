@@ -302,7 +302,7 @@ Diag_VAnti:
   note: might learn 2nd alg
 
 AdjB_S:
-  name: AdjB_S
+  name: TJb+
   altNames:
     - AdjB_S
     - AdjB_S
@@ -313,7 +313,7 @@ AdjB_S:
     alg: L' U L U2 (R' L') U L U' R 
     isLefty: true
 AdjB_BarA:
-  name: AdjB_BarA
+  name: TJA-
   altNames:
     - AdjB_BarA
     - AdjB_BarA
@@ -323,7 +323,7 @@ AdjB_BarA:
     setup: U2
     alg: R U' R' U2 L R U' R' U L'
 AdjB_BarO:
-  name: AdjB_BarO
+  name: TF-
   altNames:
     - AdjB_BarO
     - AdjB_BarO
@@ -333,7 +333,7 @@ AdjB_BarO:
     setup: U2
     alg: R' U' R2 U R' F' R U R' U' R' F R2 U' R' U' R' U R
 AdjB_OBar:
-  name: AdjB_OBar
+  name: TT-
   altNames:
     - AdjB_OBar
     - AdjB_OBar
@@ -347,7 +347,7 @@ AdjB_OBar:
     tags: 
       - "Swag"
 AdjB_Z:
-  name: AdjB_Z
+  name: TRb
   altNames:
     - AdjB_Z
     - AdjB_Z
@@ -358,7 +358,7 @@ AdjB_Z:
     alg: (L' U' L' D' L U L' D L) U2 L U L' U L
     isLefty: true
 AdjB_ABar:
-  name: AdjB_ABar
+  name: TRa
   altNames:
     - AdjB_ABar
     - AdjB_ABar
@@ -372,7 +372,7 @@ AdjB_ABar:
     setup: U'
     alg: R U R D R' U' R D' R' U2 R' U' R U' R'
 AdjB_H:
-  name: AdjB_H
+  name: TGb
   altNames:
     - AdjB_H
     - AdjB_H
@@ -385,7 +385,7 @@ AdjB_H:
   - 
     alg: R D R' U' R D' R' U' R' U R U' R' U R U R' U' R
 AdjB_HAnti:
-  name: AdjB_HAnti
+  name: TGd+
   altNames:
     - AdjB_HAnti
     - AdjB_HAnti
@@ -394,7 +394,7 @@ AdjB_HAnti:
   - 
     alg: F U' R' U2 R U F' R' U' R U R' U R
 AdjB_VAnti:
-  name: AdjB_VAnti
+  name: TGc+
   altNames:
     - AdjB_VAnti
     - AdjB_VAnti
@@ -404,7 +404,7 @@ AdjB_VAnti:
     setup: U2
     alg: R' U' R U' R' U R F U' R' U2 R U F'
 AdjB_AntiZ:
-  name: AdjB_AntiZ
+  name: TGa+
   altNames:
     - AdjB_AntiZ
     - AdjB_AntiZ
