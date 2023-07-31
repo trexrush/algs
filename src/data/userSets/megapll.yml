@@ -5,10 +5,10 @@ A1+:
       setup: U
       alg: L F L' [LEFT UNSEXY] L F' L' U' [LEFT MEGASLEDGE]
       isLefty: true
-    # - # dont use
+    # -
     #   alg: L U2 L F L' U' L' U L F' L' U' L U' L'
     #   isLefty: true
-        # - # dont use
+    # -
     #   alg: "[MEGALOOP] U [MEGALOOP]"
     #   isLefty: true
   note: can be a 3x3 transfer (A Perm), but mega alg is better
@@ -17,7 +17,7 @@ A1-:
     - 
       alg: "[LEFT INVERSE MEGASLEDGE] U L F L' [LEFT SEXY] [LEFT SLEDGE] F'"
       isLefty: true
-    # - # dont use
+    # -
     #   alg: L U L' U L F L' U' L U L F' L' U2' L'
     #   isLefty: true
   note: can be a 3x3 transfer (A Perm), but mega alg is better
@@ -26,7 +26,7 @@ A2+:
     - 
       alg: L U2' L F L' [LEFT UNSEXY] F' L' U' L U2' L'
       isLefty: true
-    # - # dont use
+    # -
       # setup: U' 
       # alg: BL L2 U' R' U L' U' R U L' BL'
       # isLefty: true
@@ -35,7 +35,7 @@ A2-:
     - 
       alg: L U2 L' U L F [LEFT SEXY] L F' L' U2 L'
       isLefty: true
-    # - # dont use
+    # -
       # setup: U' 
       # alg: BL L U' R' U L U' R U L2' BL'
       # isLefty: true
@@ -54,15 +54,15 @@ B2+:
     - 
       alg: L2 U L2' U2 L U2' [BACK LEFT SEXY] L U' L2' U2 L U L'
       isLefty: true
-    - 
-      alg: L' U L U2 L U F' L' U' L' U L F U2 L' U' L2 U' L'
-      isLefty: true
-    -
-      alg: F L U' F' L2' U2 L2 U L2' U2 L2 U F U L' F'
-      isLefty: true
-    -
-      alg: F L U' F' U' L2' U2' L2 U' L2' U2' L2 F U L' F'
-      isLefty: true
+    # - 
+    #   alg: L' U L U2 L U F' L' U' L' U L F U2 L' U' L2 U' L'
+    #   isLefty: true
+    # -
+    #   alg: F L U' F' L2' U2 L2 U L2' U2 L2 U F U L' F'
+    #   isLefty: true
+    # -
+    #   alg: F L U' F' U' L2' U2' L2 U' L2' U2' L2 F U L' F'
+    #   isLefty: true
     # - 
     #   alg: L U' L' U2' L2 U L' U L U' L' U2 L' U2' L2 U' L2'
     #   isLefty: true
@@ -308,10 +308,10 @@ G1-:
       setup: U2
       alg: L U2' L2' U2 L U2' L U' L' U2' L U' L2' U2' L2 U2 L'
       isLefty: true
-    - 
-      setup: U2
-      alg: L' U2' L U L U L2' F' U L2 U2' L' U' L' U' F U' L
-      isLefty: true
+    # - 
+    #   setup: U2
+    #   alg: L' U2' L U L U L2' F' U L2 U2' L' U' L' U' F U' L
+    #   isLefty: true
 G2+:
   algs:
     - 
@@ -320,17 +320,17 @@ G2+:
       isLefty: true
 G2-:
   algs:
-    - 
-      setup: U
-      alg: L' U L2 U F' U' F L2' U2 L U' L' U2' L F' U F
-      isLefty: true
+    # - 
+    #   setup: U
+    #   alg: L' U L2 U F' U' F L2' U2 L U' L' U2' L F' U F
+    #   isLefty: true
     - 
       setup: U2
       alg: L' U2 L U L' U2 L2 U2' R' U L' U' R L U2 L'
       isLefty: true
-    - 
-      alg: L U2' L' R' U L U' R U2 L2' U2' L U' L' U2' L
-      isLefty: true
+    # - 
+    #   alg: L U2' L' R' U L U' R U2 L2' U2' L U' L' U2' L
+    #   isLefty: true
 H1+:
   algs:
     - 
@@ -349,10 +349,6 @@ H2+:
       alg: "[LEFT BACK SUPERANTISUNE] y' [LEFT SUPERSUNE]"
       isLefty: true
       note: first move goes away from headlights
-
-    # - 
-    #   alg: L2' U L2 U L2' U L2 U L2' U L2 U2 L2' U L2 U L2' U L2 U L2' U L2
-    #   isLefty: true
   note: alg is worth learning over comms
 H2-:
   algs:
@@ -363,31 +359,35 @@ H2-:
     - 
       alg: L U' L' U2' L2 U2' L' F L F' U2 L' U2 L F L' F' U L'
       isLefty: true
+      tags:
+        - Swag
     - 
-      alg: L U' F' L2' U2' L2 U L2' U L2 F U L U L2' U L2 U2' L2'
+      alg: L U' F' [LEFT SUPERANTISUNE] F U L U L2' U L2 U2' L2'
       isLefty: true
-    # - 
-    #   alg: L2 U' L2' U' L2 U' L2' U' L2 U' L2' U2' L2 U' L2' U' L2 U' L2' U' L2 U' L2'
-    #   isLefty: true
+      tags:
+        - Swag
   note: alg is worth learning over comms
 I1+:
   algs:
     - 
+      setup: U2
       alg: L2' U2 L2 U L2' BL2 U' L2 U L2' U BL2' U L2
       isLefty: true
     - 
-      alg: BL L2 U2 L2' U' L2 U' L2' BL' L' U' L U' L' U2 L
+      setup: U'
+      alg: BL [BACK LEFT SUPERANTISUNE] BL' [LEFT SUNE]
       isLefty: true
     - 
-      alg: L U2 L' U L' U' L U BL' L U L' U' L' BL U L2 U L'
+      setup: U2
+      alg: L U2 L' U [LEFT SEXY] BL' [BACK LEFT SEXY] L' BL U L2 U L'
       isLefty: true
     - 
-      alg: L' U2' L2 F' L' F2 U' F' U2 L' U L2 F U2 F' U2' L'
+      alg: L' U2' L [LEFT SLEDGE] F U' F' U2 L' U L2 F U2 F' U2' L'
       isLefty: true
 I1-:
   algs:
     - 
-      alg: L' U2' L U' L U L' U' F L' U' L U L F' U' L2' U' L
+      alg: L' U2' L U' [LEFT BACK SEXY] F [LEFT SEXY] L F' U' L2' U' L
       isLefty: true
     - 
       alg: L2 U2' L2' U' L2 F2' U L2' U' L2 U' F2 U' L2'
@@ -395,13 +395,15 @@ I1-:
 I2+:
   algs:
     - 
+      setup: U2
       alg: L2' U' BL2 U' L2 U' L2' U BL2' L2 U' L2' U2' L2
       isLefty: true
     - 
+      setup: U2
       alg: L U' L2' U' BL' L U L U' L' BL U' L' U L U' L U2' L'
       isLefty: true
     - 
-      alg: L' U2' L U L' U L BL L2 U L2' U L2 U2' L2' BL'
+      alg: "[LEFT ANTISUNE] BL [LEFT BACK SUPERSUNE] BL'"
       isLefty: true
 I2-:
   algs:
@@ -414,23 +416,28 @@ I2-:
 I3+:
   algs:
     - 
+      setup: U'
       alg: L' U2 L2 U2 L' U2' L' U2' L U2 L U L' U2' L U' L'
       isLefty: true
     - 
-      alg: L2 U L2' U L2 U2' L2' U2 y' L2' U' L2 U2' L2' U2' L2
+      setup: U2'
+      alg: "[LEFT BACK SUPERSUNE] U2 y' L2' U' L2 U2' L2' U2' L2"
       isLefty: true
 I3-:
   algs:
     - 
+      setup: U2'
       alg: L U2' L2' U2' L U2 L U2 L' U2' L' U' L U2 L' U L
       isLefty: true
     - 
-      alg: L2' U' L2 U' L2' U2 L2 U2' y L2 U L2' U2 L2 U2 L2'
+      setup: U'
+      alg: "[LEFT SUPERSUNE] U2' y L2 U L2' U2 L2 U2 L2'"
       isLefty: true
 I4+:
   algs:
     - 
-      alg: L U2' L' U' L U' L U2 L' U' L U' L2' U L U2' L'
+      setup: U2'
+      alg: L U2' L' U' L U' [LEFT BACK ANTISUNE] L' U L U2' L'
       isLefty: true
 I4-:
   algs:
@@ -438,42 +445,47 @@ I4-:
       alg: L U L U2 F L' U' L' U L F' L U2' L' U' L'
       isLefty: true
     - 
-      alg: L' U2 L U L' U L' U2' L U L' U L2 U' L' U2 L
+      alg: L' U2 L U L' U [LEFT ANTISUNE] L U' L' U2 L
       isLefty: true
 I5+:
   algs:
     - 
-      alg: L U2 L' U' L2 U L' U L U2' L' U L' U L U2 L'
+      setup: U'
+      alg: L U2 L' U' L [LEFT BACK SUNE] U L' U L U2 L'
       isLefty: true
 I5-:
   algs:
     - 
+      setup: U2'
       alg: L U L U2 L' F L' U' L U L F' U2' L' U' L'
       isLefty: true
     - 
-      alg: L' U2' L U L2' U' L U' L' U2 L U' L U' L' U2' L
+      setup: U2'
+      alg: L' U2' L U L' [LEFT SUNE] U' L U' L' U2' L
       isLefty: true
 I6+:
   algs:
     - 
+      setup: U'
       alg: L2 F2' L2' U L2 F2 L2' U2' L2 F2' L2' U L2 F2 L2'
       isLefty: true
     - 
+      setup: U
       alg: L2 F2' L2' U' L2 F2 L2' U2 L2 F2' L2' U' L2 F2 L2'
       isLefty: true
     - 
-      alg: BL L U2 L' U' L U' L' BL' U L' U' L U2' L' U L U L' U L
+      setup: U'
+      alg: BL [LEFT BACK ANTISUNE] BL' U L' U' L U2' L' U L U L' U L
       isLefty: true
     - 
+      setup: U'
       alg: L U2 L F' L2' U' L U F L F' L' U' L U F U' L' U' L'
-      isLefty: true
-    - 
-      alg: F L' U' L2 U F' L' U F L' U' L2 U2 L' U2' L U' F' L'
       isLefty: true
 I6-:
   algs:
     - 
-      alg: F' L' U2' L U L' U L F U' L U L' U2 L U' L' U' L U' L'
+      setup: U2'
+      alg: F' [LEFT ANTISUNE] F U' L U L' U2 L U' L' U' L U' L'
       isLefty: true
 J1+:
   algs:
@@ -484,7 +496,7 @@ J1+:
       note: 3x3 transfer (J perm)
     - 
       setup: U'
-      alg: F' U L F' L2' U L U L' U' L F L' U' L F
+      alg: F' U L F' L2' U L U (L' U' L F) (L' U' L F)
       isLefty: true
       note: flows like a T perm
 J1-:
@@ -518,10 +530,10 @@ J3-:
     - 
       alg: L U' L' [LEFT SUNE] U L U L' U2 L U2' L'
       isLefty: true
-    - 
-      setup: U2'
-      alg: L F U F' U2 L' U' L U2' L' U L F U F' U' L'
-      isLefty: true
+    # - 
+    #   setup: U2'
+    #   alg: L F U F' U2 L' U' L U2' L' U L F U F' U' L'
+    #   isLefty: true
     # - 
     #   alg: L' U' L U L U2 L' U' L' U' L2 U' L2' U2' L2 U2 L'
     #   isLefty: true
@@ -678,18 +690,19 @@ N2+:
       alg: L U2' L' U2 L2 U L2' U L2 U' L2' U L2 U2' L' U2 L'
       isLefty: true
       note: should learn this
+  note: bad case
 N2-:
   algs:
     - 
       alg: (L' R') U2' R U' (L R') U L' U2' R U2' L
       isLefty: true
-    - 
-      alg: L' U2' L' U2 L F' U L U L' U' F L' U2 L U2' L
-      isLefty: true
-    - 
-      alg: L' U2 L' U2' L2 U2 L2' U' L2 U' L2' U L2 U2' L' U2' L
-      isLefty: true
-  note: EP alg for this case
+    # - 
+    #   alg: L' U2' L' U2 L F' U L U L' U' F L' U2 L U2' L
+    #   isLefty: true
+    # - 
+    #   alg: L' U2 L' U2' L2 U2 L2' U' L2 U' L2' U L2 U2' L' U2' L
+    #   isLefty: true
+  # note: EP alg for this case
 P1+:
   algs:
     - 
@@ -774,18 +787,18 @@ Q1+:
     - 
       alg: "[LEFT MEGALOOP] U' [LEFT MEGALOOP]"
       isLefty: true
-    - 
-      alg: L U L' U2 L U' L' U' L U2 L' U F L F' U F L' F'
-      isLefty: true
+    # - 
+    #   setup: U
+    #   alg: L U L' U2 L U' L' U' L U2 L' U F L F' U F L' F'
+    #   isLefty: true
 Q1-:
   algs:
     - 
       alg: "[LEFT ANTILOOP] U [LEFT ANTILOOP]"
       isLefty: true
-    - 
-      setup: U
-      alg: "F L F' U' F L' F' U' L U2' L' U L U L' U2' L U' L'"
-      isLefty: true
+    # - 
+    #   alg: "F L F' U' F L' F' U' L U2' L' U L U L' U2' L U' L'"
+    #   isLefty: true
     
 Q2+:
   algs:
@@ -993,17 +1006,22 @@ T3-:
 T4+:
   algs:
     - 
+      setup: U
       alg: L U L' U2 [LEFT MEGALOOP] U' L U' L'
       isLefty: true
-  note: setup to 7 move EP, L2' maybe better than the L2 shown
+    - 
+      alg: L U L' U [LEFT ANTILOOP] U2' L U' L'
+      isLefty: true
+      note: alg is better but I learned the 1st one also AUF is a smidge harder to visualize with the blocks
+  note: setup to 7 move EP
 T4-:
   algs:
     - 
       alg: "[LEFT J_PERM] [LEFT T_PERM]"
       isLefty: true
-    - 
-      alg: L' U' L U' [LEFT MEGALOOP] U2 L' U L
-      isLefty: true
+    # - 
+    #   alg: L' U' L U' [LEFT MEGALOOP] U2 L' U L
+    #   isLefty: true
   note: '3x3 transfer (J + T perm) for alg 1, or setup to 7 move EP for alg 2'
 U1+:
   algs:
@@ -1033,9 +1051,9 @@ V1+:
     - 
       alg: L' U L2 FL L' U' L FL' L' U L' U L U' L' U' L
       isLefty: true
-    - 
-      alg: L' U2' L2 F' L' F L' U L F U' F' L' U L
-      isLefty: true
+    # - 
+    #   alg: L' U2' L2 F' L' F L' U L F U' F' L' U L
+    #   isLefty: true
   note: 3x3 transfer (LUD R perm) for alg 1
 V1-:
   algs:
@@ -1065,9 +1083,9 @@ V3-:
     - 
       alg: L U2' L' U F' L' U' L U L F U L' U' L' U L
       isLefty: true
-    - 
-      alg: L' U2' L2 U L F L' U' L2' U L F' U' L' U2 L
-      isLefty: true
+    # - 
+    #   alg: L' U2' L2 U L F L' U' L2' U L F' U' L' U2 L
+    #   isLefty: true
     # - 
     #   alg: L' U' L2' U L U L' U' L U L U' L2 U' L' U L'
     #   isLefty: true
@@ -1084,20 +1102,20 @@ V4-:
     - 
       alg: L' U' L U L U' F' L' U' L' U L F U' L U2 L'
       isLefty: true
-    - 
-      alg: L U' L U L2' U L' U' L' U L U' L' U' L2 U L
-      isLefty: true
-    - 
-      alg: L' U2' L U F L' U' L2 U L F' L' U' L2' U2 L
-      isLefty: true
+    # - 
+    #   alg: L U' L U L2' U L' U' L' U L U' L' U' L2 U L
+    #   isLefty: true
+    # - 
+    #   alg: L' U2' L U F L' U' L2 U L F' L' U' L2' U2 L
+    #   isLefty: true
 W:
   algs:
     - 
       alg: L U2 L U2' L' U2' L' U L2 U2' L2' U2' L U' L'
       isLefty: true
-    - 
-      alg: L2' U2 L2 U L2' U' L2 U2' L2' U L2 U2 L2' U2' L2
-      isLefty: true
+    # - 
+    #   alg: L2' U2 L2 U L2' U' L2 U2' L2' U L2 U2 L2' U2' L2
+    #   isLefty: true
 X1:
   algs:
     - 
@@ -1202,37 +1220,39 @@ Y1-:
 Y2+:
   algs:
     - 
-      alg: L2 U2' L2' U2 L2 U' L2' U2 L2 U2' L2'
+      alg: L2' U2' L2 U2 L2' U' L2 U2 L2' U2' L2
       isLefty: true
-    - 
-      alg: L U2 L2' U2' L2 U L2' U L U L U2' L'
-      isLefty: true
+    # - 
+    #   alg: L U2 L2' U2' L2 U L2' U L U L U2' L'
+    #   isLefty: true
 Y2-:
   algs:
     - 
-      alg: L2' U2 L2 U2' L2' U L2 U2' L2' U2 L2
+      setup: U
+      alg: L2 U2 L2' U2' L2 U L2' U2' L2 U2 L2'
       isLefty: true
-    - 
-      alg: L U2 L' U' L' U' L2 U' L2' U2 L2 U2' L'
-      isLefty: true
+    # - 
+    #   alg: L U2 L' U' L' U' L2 U' L2' U2 L2 U2' L'
+    #   isLefty: true
 Y3+:
   algs:
     - 
-      setup: U
+      setup: U'
       alg: "[LEFT BACK SUPERSUNE] U2 [LEFT BACK SUPERSUNE]"
       isLefty: true
-    - 
-      alg: L2 U F2' U L2' U L2 U' F2 U2' L2'
-      isLefty: true
+    # - 
+    #   alg: L2 U F2' U L2' U L2 U' F2 U2' L2'
+    #   isLefty: true
 Y3-:
   algs:
     - 
+      setup: U2'
       alg: L2' U' BL2 U' L2 U' L2' U BL2' U2 L2
       isLefty: true
-    - 
-      setup: U'
-      alg: "[LEFT SUPERSUNE] U2' [LEFT SUPERSUNE]"
-      isLefty: true
+    # - 
+    #   setup: U2
+    #   alg: "[LEFT SUPERSUNE] U2' [LEFT SUPERSUNE]"
+    #   isLefty: true
 Z1:
   algs:
     - 
