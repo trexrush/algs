@@ -862,32 +862,32 @@ S1+:
       setup: U'
       alg: L U L' U2 L U2 L' U' [LEFT SUNE]
       isLefty: true
-    - 
-      setup: U'
-      alg: "[LEFT ANTISUNE] U L U2' L' U2' L U' L'"
-      isLefty: true
+    # - 
+    #   setup: U'
+    #   alg: "[LEFT ANTISUNE] U L U2' L' U2' L U' L'"
+    #   isLefty: true
 S1-:
   algs:
     - 
       setup: U2'
       alg: "L' U' L U2' L' U2' L U [LEFT BACK SUNE]"
       isLefty: true
-    - 
-      setup: U2'
-      alg: "[LEFT BACK ANTISUNE] U' L' U2 L U2 L' U L"
-      isLefty: true
+    # - 
+    #   setup: U2'
+    #   alg: "[LEFT BACK ANTISUNE] U' L' U2 L U2 L' U L"
+    #   isLefty: true
 S2+:
   algs:
     - 
-      alg: L U L' U F' U' L2 U2 L2' U' L2 U' L2' F L U' L'
-      isLefty: true
-    - 
-      setup: U
-      alg: L2 U2' L2' U2' L2 U' L' U2 L' U' L' U2' L2 U L2' U L
-      isLefty: true
-    - 
       alg: F' U2' L U L2' U2 L2 U2' L' U2 L U2 L2' U2' L U F
       isLefty: true
+    - 
+      alg: L U L' U F' U' L2 U2 L2' U' L2 U' L2' F L U' L'
+      isLefty: true
+    # - 
+    #   setup: U
+    #   alg: L2 U2' L2' U2' L2 U' L' U2 L' U' L' U2' L2 U L2' U L
+    #   isLefty: true
 S2-:
   algs:
     - 
@@ -895,55 +895,55 @@ S2-:
       alg: L F' U2' L2' U2 L2 U L2' U L2 U' F L' U L' U L
       isLefty: true
       note: orekehstrah alg
-    - 
-      setup: U
-      alg: L2' U2 L2 U2 L2' U L U2' L U L U2 L2' U' L2 U' L'
-      isLefty: true
+    # - 
+    #   setup: U
+    #   alg: L2' U2 L2 U2 L2' U L U2' L U L U2 L2' U' L2 U' L'
+    #   isLefty: true
 S3+:
   algs:
-    - 
-      setup: U
-      alg: L' U' L2 U' L2' U2 L U L U2' L U L2' U2 L2 U2 L2'
-      isLefty: true
     - 
       setup: U2
       alg: L U L' U L2 F L' [LEFT UNSEXY] F' U' L' U2 L U2 L'
       isLefty: true
       note: same alg as TAb-
-    - 
-      setup: U2
-      alg: F L' U2' L U' L F' L' U L' U' L F U L' U2 L F'
-      isLefty: true
+    # - 
+    #   setup: U
+    #   alg: L' U' L2 U' L2' U2 L U L U2' L U L2' U2 L2 U2 L2'
+    #   isLefty: true
 S3-:
   algs:
-    - 
-      alg: L2' U2 L2 U L' F L' U' L2 U L F' L3' U2 L2
-      isLefty: true
     - 
       alg: L' U' L U' L F' U L2' U' L2 U' L2' U2' L2 U2 F L'
       isLefty: true
       note: orekehstrah alg
+    # - 
+    #   alg: L2' U2 L2 U L' F L' U' L2 U L F' L3' U2 L2
+    #   isLefty: true
 S4+:
   algs:
     - 
       alg: "[LEFT ANTILOOP] U [LEFT MEGALOOP]"
       isLefty: true
-    - 
-      setup: U'
-      alg: L2' U2 L2 U' F2' U L2' U L2 U' F2 L2' U2' L2
-      isLefty: true
+    # - 
+    #   setup: U'
+    #   alg: L2' U2 L2 U' F2' U L2' U L2 U' F2 L2' U2' L2
+    #   isLefty: true
 S4-:
   algs:
     - 
       setup: U2
       alg: "[LEFT MEGALOOP] U' [LEFT ANTILOOP]"
       isLefty: true
-    - 
-      setup: U2'
-      alg: L2 U2' L2' U BL2 U' L2 U' L2' U BL2' L2 U2 L2'
-      isLefty: true
+    # - 
+    #   setup: U2'
+    #   alg: L2 U2' L2' U BL2 U' L2 U' L2' U BL2' L2 U2 L2'
+    #   isLefty: true
 S5+:
   algs:
+    - 
+      setup: U2
+      alg: F L' U2' L U' L F' L' U L' U' L F U L' U2 L F'
+      isLefty: true
     - 
       setup: U2
       alg: L' U2' L U' BL U' L' U L U BL' L' U2 L
@@ -955,22 +955,26 @@ S5-:
       alg: L U2 L' U F' U L U' L' U' F L U2' L'
       isLefty: true
       note: very similar to either a T or U zbll
-    - 
-      alg: L U2 L' R' U2 L U' L' U2' R U L U2' L'
-      isLefty: true
+    # - 
+    #   alg: L U2 L' R' U2 L U' L' U2' R U L U2' L'
+    #   isLefty: true
 S6+:
   algs:
     - 
       alg: L' U' L2 F L' U2 L' U2' L F' L' U L [LEFT BACK SUNE]
       isLefty: true
-    - 
-      setup: U2
-      alg: L U L U L' U L U L' U2' L U' L2' U2' L U L'
-      isLefty: true
+    # - 
+    #   setup: U2
+    #   alg: L U L U L' U L U L' U2' L U' L2' U2' L U L'
+    #   isLefty: true
 S6-:
   algs:
     - 
       alg: L' U' L' U' L U' L' U' L U2 L' U L2 U2 L' U' L
+      isLefty: true
+    - 
+      setup: U2
+      alg: L U L2' BL' L U2' L U2 L' BL L U' L' [LEFT SUNE]
       isLefty: true
 T1:
   algs:
