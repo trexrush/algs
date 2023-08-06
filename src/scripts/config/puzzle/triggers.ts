@@ -95,7 +95,6 @@ const rareTriggers = [
   { name: "OHSLEDGE", alg: "r' F R F' M'" },
   { name: "FATSU", alg: "r U R' U" },
   { name: "FATNE", alg: "R U2' r'" },
-  { name: "MEGASLEDGE", alg: "R' F' R F" },
   { name: "OHSWAG", alg: "L U' R U L'" },
   
   { name: "U_ZERO", alg: "R' D' R U R' D R" },
