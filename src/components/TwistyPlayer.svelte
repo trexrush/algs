@@ -3,6 +3,7 @@
   import { TwistyPlayer } from "cubing/twisty";
   import type { IAlgorithmClass } from "../scripts/alg/algorithm";
   import type { IConfig } from "../scripts/config";
+  import { onMount, tick } from "svelte";
 
   export let algorithm: IAlgorithmClass
   export let config: IConfig
@@ -18,15 +19,24 @@
   let y: number
 
   const updateHeight = (twComp: TwistyPlayer, size: number) => {
-    twComp.style.height = `${size}px`
-    twComp.style.width = `${size}px`
+    if (!Number.isNaN(size)) {
+      twComp.style.height = `${size}px`
+      twComp.style.width = `${size}px`
+    } else { // fallback needed in case reactive statement doesnt trigger
+      twComp.style.height = `120px`
+      twComp.style.width = `120px`
+    }
+    twComp.style.maxHeight = `100%`
+    twComp.style.maxWidth = `100%`
 
     return twComp
   }
 
-  $: x != null && (() => {
+  $: x != null && x != undefined && (() => {
+    console.log("X IS DEFINED", tw.style.height, x, y)
     const size = Math.min(x, y)
     tw = updateHeight(tw, size)
+    console.log("SIZE IS SET", tw.style.height, x, y)
   })()
 
   const setPlayer = (algObj: IAlgorithmClass, twComponent: TwistyPlayer) => {
@@ -63,18 +73,14 @@
   }
 
   const twisty = (node: HTMLElement, alg: IAlgorithmClass) => {
-    // console.log("START ASYNC")
     tw = setPlayer(alg, tw)
     tw = updateHeight(tw, Math.min(x, y))
-    // console.log("SET")
+    console.log("SET", tw.style.height, x, y)
     node.appendChild(tw);
-    // console.log("APPENDED")
     if (!_2D) {
       tw.play()
       tw.onclick = () => { tw.controller.animationController.playPause(); }
-      // console.log("PLAY")
     }
-    // console.log("DONE ASYNC")
     return {
       update(){
         tw = updatePlayer(tw)
