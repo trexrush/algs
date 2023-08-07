@@ -3,7 +3,6 @@
   import { TwistyPlayer } from "cubing/twisty";
   import type { IAlgorithmClass } from "../scripts/alg/algorithm";
   import type { IConfig } from "../scripts/config";
-  import { onMount, tick } from "svelte";
 
   export let algorithm: IAlgorithmClass
   export let config: IConfig
@@ -19,12 +18,12 @@
   let y: number
 
   const updateHeight = (twComp: TwistyPlayer, size: number) => {
-    if (!Number.isNaN(size)) {
-      twComp.style.height = `${size}px`
-      twComp.style.width = `${size}px`
-    } else { // fallback needed in case reactive statement doesnt trigger
+    if (Number.isNaN(size) || size == 0) { // fallback needed in case reactive statement doesnt trigger
       twComp.style.height = `120px`
       twComp.style.width = `120px`
+    } else { 
+      twComp.style.height = `${size}px`
+      twComp.style.width = `${size}px`
     }
     twComp.style.maxHeight = `100%`
     twComp.style.maxWidth = `100%`
