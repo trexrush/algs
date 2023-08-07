@@ -32,10 +32,8 @@
   }
 
   $: x != null && x != undefined && (() => {
-    console.log("X IS DEFINED", tw.style.height, x, y)
     const size = Math.min(x, y)
     tw = updateHeight(tw, size)
-    console.log("SIZE IS SET", tw.style.height, x, y)
   })()
 
   const setPlayer = (algObj: IAlgorithmClass, twComponent: TwistyPlayer) => {
@@ -74,7 +72,6 @@
   const twisty = (node: HTMLElement, alg: IAlgorithmClass) => {
     tw = setPlayer(alg, tw)
     tw = updateHeight(tw, Math.min(x, y))
-    console.log("SET", tw.style.height, x, y)
     node.appendChild(tw);
     if (!_2D) {
       tw.play()
