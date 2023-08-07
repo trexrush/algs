@@ -13,13 +13,14 @@
     redGradient: 'bg-gradient-to-r dark:from-red-500 dark:via-orange-500 dark:to-amber-500 from-red-700 via-orange-700 to-amber-700',
     greenGradient: 'bg-gradient-to-r dark:from-teal-500 dark:via-green-500 dark:to-lime-500 from-teal-600 via-green-600 to-lime-600',
     fadedColorText: `${ algorithm.isLefty ? 'dark:text-lime-100/40 text-lime-950/50' : 'dark:text-red-100/40 text-red-900/50' }`,
+    moveWeight: `${ isActive ? 'font-semibold' : 'font-extralight'}`,
+    triggerWeight: `${ isActive ? 'font-extrabold' : 'font-semibold'}`,
   };
   
   $: localStyles = {
     main: `transition-all duration-100 origin-left cursor-pointer group text-[2.4vw] sm:text-[17.5px] hover:scale-[1.01] leading-none`,
     gradient: `${ algorithm.isLefty ? commonStyles.greenGradient : commonStyles.redGradient }`,
-    active: ` font-bold bg-clip-text text-transparent`,
-    normal: `font-extralight`,
+    active: `bg-clip-text text-transparent`,
     
     
   };
@@ -29,8 +30,8 @@
       main: `px-1 rounded-sm text-[2vw] sm:text-[13px] ${commonStyles.greyText} font-bold` 
     },
     display: {
-      triggerGroup: `group/trigger font-bold last:child:-ml-1 ml-1`,
-      triggerBase: `${isActive ? commonStyles.lightTextOnHover : algorithm.isLefty ? 'dark:group-hover:text-lime-300 group-hover:text-lime-500' : 'dark:group-hover:text-red-300 group-hover:text-red-500'}`,
+      triggerGroup: `group/trigger last:child:-ml-1 ml-1`,
+      triggerBase: ` ${commonStyles.triggerWeight} ${algorithm.isLefty ? 'dark:group-hover:text-lime-300 group-hover:text-lime-500' : 'dark:group-hover:text-red-300 group-hover:text-red-500'}`,
       mods: `${commonStyles.greyText} mx-[1px] text-[5px] sm:text-[10px] transition-all duration-100
         ${algorithm.isLefty ? 'dark:group-hover/trigger:text-lime-100 group-hover/trigger:text-lime-500' : 'dark:group-hover/trigger:text-red-100 group-hover/trigger:text-red-500'}`,
       alg: `${commonStyles.lightTextOnHover}`,
@@ -49,7 +50,7 @@
 </script>
 
 <slot name="play" css={Styles.play}/>
-<span class="{isActive ? localStyles.active : localStyles.normal} {localStyles.main} {isActive ? localStyles.gradient : commonStyles.fadedColorText}">
+<span class="{isActive && localStyles.active} {commonStyles.moveWeight} {localStyles.main} {isActive ? localStyles.gradient : commonStyles.fadedColorText}">
   <slot name="setup" css={Styles.setup} />
   <slot name="display" css={Styles.display}/>
 </span>
