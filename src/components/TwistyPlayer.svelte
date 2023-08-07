@@ -17,14 +17,16 @@
   let x: number
   let y: number
 
-  const updateHeight = (size: number) => {
-    tw.style.height = `${size}px`
-    tw.style.width = `${size}px`
+  const updateHeight = (twComp: TwistyPlayer, size: number) => {
+    twComp.style.height = `${size}px`
+    twComp.style.width = `${size}px`
+
+    return twComp
   }
 
   $: x != null && (() => {
     const size = Math.min(x, y)
-    updateHeight(size)
+    tw = updateHeight(tw, size)
   })()
 
   const setPlayer = (algObj: IAlgorithmClass, twComponent: TwistyPlayer) => {
@@ -63,6 +65,7 @@
   const twisty = (node: HTMLElement, alg: IAlgorithmClass) => {
     // console.log("START ASYNC")
     tw = setPlayer(alg, tw)
+    tw = updateHeight(tw, Math.min(x, y))
     // console.log("SET")
     node.appendChild(tw);
     // console.log("APPENDED")
