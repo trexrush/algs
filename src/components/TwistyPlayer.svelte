@@ -92,7 +92,7 @@
 
 </script>
 
-<div use:twisty={algorithm} bind:clientHeight={y} bind:clientWidth={x}/>
+<div class="w-full h-full" use:twisty={algorithm} bind:clientHeight={y} bind:clientWidth={x}/>
 
 <style>
 </style>
