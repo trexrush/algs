@@ -23,7 +23,7 @@ interface ICaseDefinition extends ICaseCommon {
   imageAlg?: string
   altNames: string[]
   mirror?: string
-  recog?: string[],
+  recog?: string[]
   recogImage?: string
 }
 interface ICaseData extends ICaseCommon {

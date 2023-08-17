@@ -65,8 +65,7 @@ const megaSubstitutes = [
 const baseTriggers = [
   { name: "CANCEL", alg: "" },
   { name: "SEXY", alg: "R U R' U'" },
-  { name: "INVSEXY", alg: "U R U' R'" }, // same as below
-  { name: "UNSEXY", alg: "U R U' R'" }, // same as above
+  { name: "UNSEXY", alg: "U R U' R'" },
   { name: "SLEDGE", alg: "R' F R F'" },
   { name: "HEDGE", alg: "F R' F' R" },
   { name: "FATSLEDGE", alg: "r' F R F'" },
@@ -86,20 +85,19 @@ const rareTriggers = [
   { name: "SU", alg: "R U R' U" },
   { name: "NE", alg: "R U2' R'" },
   { name: "PAIR_U2", alg: "R U2' R'" }, // TODO - find what patrick / rami use
-  { name: "PAIR_U'", alg: "R U' R'" }, // ^
-  { name: "PAIR_U", alg: "R U R'" }, // ^
-  { name: "YPERMSTART", alg: "F R U' R'" }, // name help?
-  { name: "JPERMSTART", alg: "R U R' F'" }, // name help?
-  { name: "NPERMSTART", alg: "R' U R U'" }, // name help?
-  { name: "VPERMSTART", alg: "R' U R' U'" }, // name help?
-  { name: "OHSLEDGE", alg: "r' F R F' M'" },
+  { name: "GO", alg: "R U' R'" },
+  { name: "INSERT", alg: "R U' R'" }, // same as ^
+  { name: "JOIN", alg: "R U R'" },
+  { name: "SPLIT", alg: "R U R'" }, // same as ^
   { name: "FATSU", alg: "r U R' U" },
   { name: "FATNE", alg: "R U2' r'" },
-  { name: "OHSWAG", alg: "L U' R U L'" },
   
-  { name: "U_ZERO", alg: "R' D' R U R' D R" },
-  { name: "U'_ZERO", alg: "R' D' R U' R' D R" },
-  { name: "U2_ZERO", alg: "R' D' R U2 R' D R" },  
+  { name: "ZJOIN", alg: "R' D' R U R' D R" },
+  { name: "ZGO", alg: "R' D' R U' R' D R" },
+  { name: "ZNE", alg: "R' D' R U2 R' D R" },  
+
+  { name: "YPERMSTART", alg: "F R U' R'" }, // name help?
+  { name: "JPERMSTART", alg: "R U R' F'" }, // name help?
 ]
 
 const triggers = [...baseTriggers, ...rareTriggers]
