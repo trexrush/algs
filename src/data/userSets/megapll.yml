@@ -240,6 +240,10 @@ E3:
       setup: U
       alg: R [TRIPLE LEFT ANTISUNE] R'
       isLefty: true
+    - 
+      setup: U
+      alg: BR' [TRIPLE LEFT BACK ANTISUNE] BR
+      isLefty: true
 F1+:
   algs:
     - 
