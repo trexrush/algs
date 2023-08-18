@@ -4,7 +4,7 @@
      alg: R' [LEFT SEXY] [LEFT SLEDGE] R
      isLefty: true
     -
-     alg: "[LEFT SEXY] (R' L) F' L' F R"
+     alg: "[LEFT SEXY] R' [LEFT SLEDGE] R"
      isLefty: true
     note: maybe try from LB to make the (B)R less awkward?
 1B:
@@ -13,13 +13,13 @@
      alg: R' [LEFT HEDGE] [LEFT UNSEXY] R
      isLefty: true
     -
-     alg: R' F' L F (L' R) [LEFT UNSEXY]
+     alg: R' [LEFT HEDGE] R [LEFT UNSEXY]
      isLefty: true
     note: maybe try from LB to make the (B)R less awkward?
 2A:
     algs:
     -
-     alg: L' U' L U' L' U' L U2 L' U L
+     alg: "[LEFT JOIN] U' [LEFT JOIN] U2 [LEFT GO]"
      isLefty: true
 2B:
     algs:
@@ -27,29 +27,29 @@
      setup: U2'
      alg: F' [LEFT ANTISUNE] F
      isLefty: true
-    -
-     alg: L' BL' L F' L' BL L F
-     isLefty: true
-     note: 3x3 transfer (t)
+    # -
+    #  alg: L' BL' L F' L' BL L F
+    #  isLefty: true
+    #  note: 3x3 transfer (t)
 2C:
     algs:
     -
-     alg: L' U2' L U' L' U2' L
+     alg: "[LEFT MEGASUNE]"
      isLefty: true
     -
      setup: U
-     alg: L U2' L' U' L U2' L'
+     alg: "[LEFT BACK MEGAANTISUNE]"
      isLefty: true
 2D:
     algs:
     -
      alg: F' [LEFT SUNE] F
      isLefty: true
-    -
-     setup: U
-     alg: L' BL L F' L' BL' L F
-     isLefty: true
-     note: 3x3 transfer (l)
+    # -
+    #  setup: U
+    #  alg: L' BL L F' L' BL' L F
+    #  isLefty: true
+    #  note: 3x3 transfer (l)
 3A+:
     algs:
     -
@@ -84,7 +84,7 @@
     algs:
     -
      setup: U
-     alg: "F' [LEFT DOUBLE SUNE] F "
+     alg: "F' [LEFT DOUBLE SUNE] F"
      isLefty: true
     -
      alg: "[LEFT DOUBLE ANTISUNE]"
@@ -94,7 +94,7 @@
     algs:
     -
      setup: U'
-     alg: L' U' L U' L' U' L U L' U2 L
+     alg: "[LEFT JOIN] U' [LEFT JOIN] U [LEFT ANTILONG]"
      isLefty: true
     -
      alg: "[LEFT BACK SUNE] [LEFT SUNE]"
@@ -102,7 +102,7 @@
 4D:
     algs:
     -
-     alg: L U2' L' U2' L U2 L' U2' L U' L'
+     alg: "[LEFT BACK ANTILONG] U2' [LEFT BACK LONG] U2' [LEFT BACK GO]"
      isLefty: true
     -
      setup: U
@@ -117,7 +117,7 @@
      note: 3x3 transfer (pi)
     -
      setup: U
-     alg: L' U2 L U L' U' L' U L' U2 L'
+     alg: "[LEFT ANTILONG] U [LEFT JOIN] U [LEFT ANTILONG]"
      isLefty: true
 4E-:
     algs:
@@ -127,35 +127,35 @@
      note: 3x3 transfer (pi)
     -
      setup: U2
-     alg: L U2' L' U' L U L' U' L U2' L
+     alg: "[LEFT BACK ANTILONG] U' [LEFT BACK JOIN] U' [LEFT BACK ANTILONG]"
      isLefty: true
 
 5+:
     algs:
     -
      setup: U'
-     alg: L U L' U2 L U2' L' U L U2' L'
+     alg: "[LEFT BACK JOIN] U2 [LEFT BACK ANTILONG] U [LEFT BACK ANTILONG]"
      isLefty: true
     note: U + sune, alg starts on the middle sune corner
 5-:
     algs:
     -
      setup: U2'
-     alg: L' U' L U2' L' U2 L U' L' U2 L
+     alg: "[LEFT JOIN] U2' [LEFT ANTILONG] U' [LEFT ANTILONG]"
      isLefty: true
     note: U + sune, alg starts on the middle sune corner
 6A:
     algs:
     -
-     alg: BL U L2 F' L' F L' U' BL'
+     alg: BL U L [LEFT SLEDGE] L' U' BL'
      isLefty: true
     -
-     alg: L' U2 L F' L F L' U L' U2 L
+     alg: "[LEFT ANTILONG] [LEFT HEDGE] U [LEFT ANTILONG]"
      isLefty: true
 6B:
     algs:
     -
-     alg: F' L' U L U2' L' U' L F
+     alg: F' [LEFT GO] U2' [LEFT JOIN] F
      isLefty: true
 7A:
     algs:
@@ -173,10 +173,10 @@
     algs:
     -
      setup: U2'
-     alg: L U2 F U' F' U' L'
+     alg: L U2 [LEFT SIDEGO] U' L'
      isLefty: true
     -
-     alg: "[LEFT SU] [LEFT HEDGE] L' U2 L"
+     alg: "[LEFT SU] [LEFT HEDGE] [LEFT NE]"
      isLefty: true
     -
      alg: L' U' [LEFT BACK SLEDGE] U L
@@ -196,7 +196,7 @@
      isLefty: true
     -
      setup: U'
-     alg: L U L' U' F' L' BL L (BL' F)
+     alg: "[LEFT BACK SEXY] F' [LEFT BACK SLEDGE] F"
      isLefty: true
      note: 3x3 transfer
 8B-:
@@ -207,57 +207,57 @@
      isLefty: true
     -
      setup: U
-     alg: L' U' L U BL L F' L' (F BL')
+     alg: "[LEFT SEXY] BL [LEFT SELDGE] BL'"
      isLefty: true
      note: 3x3 transfer
 # CHECKED UNTIL HERE
 9A+:
     algs:
     -
-     alg: L' BL L U L' U' BL' U L
+     alg: L' BL [LEFT BACK SEXY] BL' U L
      isLefty: true
     -
-     alg: L' U' L F U F' U' L' U2 L
+     alg: "[LEFT JOIN] [LEFT SIDEJOIN] U' [LEFT ANTILONG]"
      isLefty: true
     note: 3x3 transfer
 9A-:
     algs:
     -
-     alg: L F' L' U' L U F U' L'
+     alg: L F' [LEFT SEXY] F U' L'
      isLefty: true
     note: 3x3 transfer
 9B+:
     algs:
     -
-     alg: F' U' L' U' L U2 F
+     alg: F' U' [LEFT JOIN] U2 F
      isLefty: true
 9B-:
     algs:
     -
-     alg: L U F U F' U2' L'
+     alg: L U [LEFT SIDEJOIN] U2' L'
      isLefty: true
     -
-     alg: BR L' U' L U L F' L' F BR'
+     alg: BR [LEFT SEXY] [LEFT SLEDGE] BR'
      isLefty: true
 10A+:
     algs:
     -
-     alg: L F U F' U2 L' U' L U2' L'
+     alg: L [LEFT SIDEJOIN] U2 [LEFT JOIN] U2' L'
      isLefty: true
 10A-:
     algs:
     -
-     alg: L' U' L U2' L' U L U2 L F' L' F
+     alg: "[LEFT JOIN] U2' [LEFT GO] U2 [LEFT SLEDGE]"
      isLefty: true
 10B+:
     algs:
     -
-     alg: L' U2' L U' L F' L' F L' U2' L
+     alg: "[LEFT LONG] U' [LEFT SLEDGE] [LEFT LONG]"
      isLefty: true
 10B-:
     algs:
     -
-     alg: L' U L U2 L F' L' F U2' L' U' L
+     alg: "[LEFT GO] U2 [LEFT SLEDGE] U2' [LEFT JOIN]"
      isLefty: true
 11A+:
     algs:
@@ -270,7 +270,7 @@
 11A-:
     algs:
     -
-     alg: L U F U F' L2' U' L2 U' L2' U2 L
+     alg: L U [LEFT SIDEJOIN] [LEFT SUPERSUNE] L'
      isLefty: true
     -
      alg: L U2 L F' L2' U' L U' L' U2 L F L'
@@ -281,12 +281,12 @@
      alg: L U L R' F' L' F R U' L'
      isLefty: true
     -
-     alg: L' U2 L U L F' L' F U' L' U2' L
+     alg: "[LEFT ANTILONG] U [LEFT SLEDGE] U' [LEFT LONG]"
      isLefty: true
 11B-:
     algs:
     -
-     alg: L U2 L F' L' F L' U' L U' L'
+     alg: L U2 [LEFT SLEDGE] L' U' [LEFT BACK GO]
      isLefty: true
 12+:
     algs:

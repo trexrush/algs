@@ -60,6 +60,10 @@ const megaSubstitutes = [
   { name: "ANTISUNE", alg: "R U2 R' U' R U' R'" },
   { name: "MEGALOOP", alg: "R2 U2' R2' U' R2 U2' R2'" },
   { name: "ANTILOOP", alg: "R2' U2 R2 U R2' U2 R2" },
+  { name: "MEGASUNE", alg: "R U2 R' U R U2 R'" },
+  { name: "MEGAANTISUNE", alg: "R U2' R' U' R U2' R'" },
+
+
 ]
 
 const baseTriggers = [
@@ -84,18 +88,24 @@ const baseTriggers = [
 const rareTriggers = [
   { name: "SU", alg: "R U R' U" },
   { name: "NE", alg: "R U2' R'" },
-  { name: "PAIR_U2", alg: "R U2' R'" }, // TODO - find what patrick / rami use
+  { name: "PAIR_U2", alg: "R U2' R'" },
   { name: "GO", alg: "R U' R'" },
   { name: "INSERT", alg: "R U' R'" }, // same as ^
   { name: "JOIN", alg: "R U R'" },
   { name: "SPLIT", alg: "R U R'" }, // same as ^
   { name: "FATSU", alg: "r U R' U" },
   { name: "FATNE", alg: "R U2' r'" },
+  { name: "LONGSEXY", alg: "R U2 R' U'" },
   
+  { name: "ANTILONG", alg: "R U2' R'" },
+  { name: "LONG", alg: "R U2 R'" },
+  { name: "SIDEGO", alg: "F' U F" },
+  { name: "SIDEJOIN", alg: "F' U' F" },
+
   { name: "ZJOIN", alg: "R' D' R U R' D R" },
   { name: "ZGO", alg: "R' D' R U' R' D R" },
   { name: "ZNE", alg: "R' D' R U2 R' D R" },  
-
+  
   { name: "YPERMSTART", alg: "F R U' R'" }, // name help?
   { name: "JPERMSTART", alg: "R U R' F'" }, // name help?
 ]
@@ -103,8 +113,8 @@ const rareTriggers = [
 const triggers = [...baseTriggers, ...rareTriggers]
 const commonSubs = [...cubeRotations, ...triggers]
 export const triggerSubstitutionGroups: modularPuzzleGroup<TTrigger[]> = {
-    "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...commonSubs],
-    "2x2x2": [...cubeRotations, ...rareTriggers, ...baseTriggers],
+  "3x3x3": [...pllSubstitutes, ...zbllSubstitutes, ...commonSubs],
+  "2x2x2": [...cubeRotations, ...rareTriggers, ...baseTriggers],
     "4x4x4": [...bigCubeSubstitutes, ...pllSubstitutes, ...commonSubs],
     "megaminx": [...megaSubstitutes, ...pllSubstitutes, ...triggers],
 }
