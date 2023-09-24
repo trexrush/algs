@@ -546,5 +546,250 @@
 37E-:
     name: 37E-
 
-O:
-    name: O
+1C:
+    name: 1C
+    altNames:  ['Dot CLL']
+
+38A:
+    name: 38A
+
+38B:
+    name: 38B
+
+39A:
+    name: 39A
+
+39B:
+    name: 39B
+
+40A+:
+    name: 40A+
+
+40A-:
+    name: 40A-
+
+40B+:
+    name: 40B+
+
+40B-:
+    name: 40B-
+
+41A+:
+    name: 41A+
+
+41A-:
+    name: 41A-
+
+41B+:
+    name: 41B+
+
+41B-:
+    name: 41B-
+
+42A+:
+    name: 42A+
+    imageAlg: L' U2' L U L2' U' BL' U BL2 L BL' U L
+
+42A-:
+    name: 42A-
+
+42B+:
+    name: 42B+
+
+42B-:
+    name: 42B-
+
+43A+:
+    name: 43A+
+
+43A-:
+    name: 43A-
+
+43B+:
+    name: 43B+
+
+43B-:
+    name: 43B-
+
+44+:
+    name: 44+
+
+44-:
+    name: 44-
+
+45+:
+    name: 45+
+
+45-:
+    name: 45-
+
+46A+:
+    name: 46A+
+
+46A-:
+    name: 46A-
+
+46B+:
+    name: 46B+
+
+46B-:
+    name: 46B-
+
+47A+:
+    name: 47A+
+
+47A-:
+    name: 47A-
+
+47B+:
+    name: 47B+
+
+47B-:
+    name: 47B-
+
+48A+:
+    name: 48A+
+
+48A-:
+    name: 48A-
+
+48B+:
+    name: 48B+
+
+48B-:
+    name: 48B-
+
+49A+:
+    name: 49A+
+
+49A-:
+    name: 49A-
+
+49B+:
+    name: 49B+
+    imageAlg: L U L' U' F' L' U' BL L BL' U F
+
+49B-:
+    name: 49B-
+
+50A:
+    name: 50A
+
+50B:
+    name: 50B
+
+50C:
+    name: 50C
+
+50D:
+    name: 50D
+
+50E+:
+    name: 50E+
+
+50E-:
+    name: 50E-
+
+51A+:
+    name: 51A+
+
+51A-:
+    name: 51A-
+
+51B+:
+    name: 51B+
+
+51B-:
+    name: 51B-
+
+51C+:
+    name: 51C+
+
+51C-:
+    name: 51C-
+
+51D+:
+    name: 51D+
+
+51D-:
+    name: 51D-
+
+51E+:
+    name: 51E+
+
+51E-:
+    name: 51E-
+
+51F+:
+    name: 51F+
+
+51F-:
+    name: 51F-
+
+52A+:
+    name: 52A+
+
+52A-:
+    name: 52A-
+
+52B+:
+    name: 52B+
+
+52B-:
+    name: 52B-
+
+52C+:
+    name: 52C+
+
+52C-:
+    name: 52C-
+
+52D+:
+    name: 52D+
+
+52D-:
+    name: 52D-
+
+52E+:
+    name: 52E+
+
+52E-:
+    name: 52E-
+
+52F+:
+    name: 52F+
+
+52F-:
+    name: 52F-
+
+53A+:
+    name: 53A+
+
+53A-:
+    name: 53A-
+
+53B+:
+    name: 53B+
+
+53B-:
+    name: 53B-
+
+53C+:
+    name: 53C+
+    imageAlg: L' U' L U' L2' BL L BL2' U2 BL L
+
+53C-:
+    name: 53C-
+
+53D+:
+    name: 53D+
+
+53D-:
+    name: 53D-
+
+53E+:
+    name: 53E+
+
+53E-:
+    name: 53E-
+

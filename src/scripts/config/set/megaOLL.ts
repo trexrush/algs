@@ -72,8 +72,24 @@ const caseNames = [
   "35A+", "35A-", "35B+", "35B-", "35C+", "35C-", "35D+", "35D-", "35E+", "35E-", "35F+", "35F-",
   "36A+", "36A-", "36B+", "36B-", "36C+", "36C-", "36D+", "36D-", "36E+", "36E-", "36F+", "36F-",
   "37A+", "37A-", "37B+", "37B-", "37C+", "37C-", "37D+", "37D-", "37E+", "37E-",
-  // dots, WIP
-  "O",
+  // dots
+  "1C",
+  "38A", "38B",
+  "39A", "39B",
+  "40A+", "40A-", "40B+", "40B-",
+  "41A+", "41A-", "41B+", "41B-",
+  "42A+", "42A-", "42B+", "42B-",
+  "43A+", "43A-", "43B+", "43B-",
+  "44+", "44-",
+  "45+", "45-",
+  "46A+", "46A-", "46B+", "46B-",
+  "47A+", "47A-", "47B+", "47B-",
+  "48A+", "48A-", "48B+", "48B-",
+  "49A+", "49A-", "49B+", "49B-",
+  "50A", "50B", "50C", "50D", "50E+", "50E-",
+  "51A+", "51A-", "51B+", "51B-", "51C+", "51C-", "51D+", "51D-", "51E+", "51E-", "51F+", "51F-",
+  "52A+", "52A-", "52B+", "52B-", "52C+", "52C-", "52D+", "52D-", "52E+", "52E-", "52F+", "52F-",
+  "53A+", "53A-", "53B+", "53B-", "53C+", "53C-", "53D+", "53D-", "53E+", "53E-",
 ] as const
 type ICaseName = typeof caseNames[number]
 
@@ -84,7 +100,7 @@ const useGrouping = (grouping: "none" | "oll" | 'feature' | '4LLLjustCO', d: ICa
 
   const c = {
     "1": { name: "1", altNames: ["EO"],
-        children: ch(["1A", "1B"])
+        children: ch(["1A", "1B", "1C"])
     },
     "2": { name: "2", altNames: ["2 Corner CO"],
         children: ch(["2A", "2B", "2C", "2D",])
@@ -191,8 +207,56 @@ const useGrouping = (grouping: "none" | "oll" | 'feature' | '4LLLjustCO', d: ICa
     "36": { name: "36", altNames: ["Parrot Shapes"],
         children: ch(["36A+", "36A-", "36B+", "36B-", "36C+", "36C-", "36D+", "36D-", "36E+", "36E-", "36F+", "36F-",])
     },
-    "37": { name: "37", altNames: [" Shapes"],
+    "37": { name: "37", altNames: ["L Shapes"],
         children: ch(["37A+", "37A-", "37B+", "37B-", "37C+", "37C-", "37D+", "37D-", "37E+", "37E-", ])
+    },
+    "38": { name: "38", altNames: ["Candle Shapes"],
+        children: ch(["38A", "38B", ])
+    },
+    "39": { name: "39", altNames: ["Wither Shapes"],
+        children: ch(["39A", "39B", ])
+    },
+    "40": { name: "40", altNames: [],
+        children: ch(["40A+", "40A-", "40B+", "40B-", ])
+    },
+    "41": { name: "41", altNames: ["Poodle Shapes"],
+        children: ch(["41A+", "41A-", "41B+", "41B-", ])
+    },
+    "42": { name: "42", altNames: [],
+        children: ch(["42A+", "42A-", "42B+", "42B-", ])
+    },
+    "43": { name: "43", altNames: ["Goofy Shapes", "Scorpion"],
+        children: ch(["43A+", "43A-", "43B+", "43B-", ])
+    },
+    "44": { name: "44", altNames: ["Small T"],
+        children: ch(["44+", "44-", ])
+    },
+    "45": { name: "45", altNames: ["Ovary Shapes"],
+        children: ch(["45+", "45-", ])
+    },
+    "46": { name: "46", altNames: [],
+        children: ch(["46A+", "46A-", "46B+", "46B-", ])
+    },
+    "47": { name: "47", altNames: [],
+        children: ch(["47A+", "47A-", "47B+", "47B-", ])
+    },
+    "48": { name: "48", altNames: ["Raygun Shapes"],
+        children: ch(["48A+", "48A-", "48B+", "48B-", ])
+    },
+    "49": { name: "49", altNames: ["Mickey Shapes"],
+        children: ch(["49A+", "49A-", "49B+", "49B-", ])
+    },
+    "50": { name: "50", altNames: ["Thin Line"],
+        children: ch(["50A", "50B", "50C", "50D", "50E+", "50E-", ])
+    },
+    "51": { name: "51", altNames: ["Hook Shapes"],
+        children: ch(["51A+", "51A-", "51B+", "51B-", "51C+", "51C-", "51D+", "51D-", "51E+", "51E-", "51F+", "51F-", ])
+    },
+    "52": { name: "52", altNames: ["Ocarina Shapes"],
+        children: ch(["52A+", "52A-", "52B+", "52B-", "52C+", "52C-", "52D+", "52D-", "52E+", "52E-", "52F+", "52F-", ])
+    },
+    "53": { name: "53", altNames: ["Drops"],
+        children: ch(["53A+", "53A-", "53B+", "53B-", "53C+", "53C-", "53D+", "53D-", "53E+", "53E-", ])
     },
   }
 
@@ -220,17 +284,22 @@ const useGrouping = (grouping: "none" | "oll" | 'feature' | '4LLLjustCO', d: ICa
       sets: [
         { name: "Star", altNames: ["OCLL", "CO(4LLL)", "2 3 4 5"], children: Object.assign([c[2], c[3], c[4], c[5], ]) },
         { name: "Line", children: Object.assign([
+          { name: "5 Corner Line", children: ch(['1A'])},
           { name: "3 Corner Line", altNames: ["6 7 8 9 10 11"], children: Object.assign([c[6], c[7], c[8], c[9], c[10], c[11], ])},
           { name: "2 Corner Line", altNames: ["12 13 14 15 16 17"], children: Object.assign([c[12], c[13], c[14], c[15], c[16], c[17], ])},
           { name: "0/1 Corner Line", altNames: ["18 19 20 21"], children: Object.assign([c[18], c[19], c[20], c[21]])},
         ])},
         { name: "L", children: Object.assign([
+          { name: "5 Corner L", children: ch(['1B'])},
           { name: "3 Corner L", altNames: ["22 23 24 25 26 27"], children: Object.assign([c[22], c[23], c[24], c[25], c[26], c[27], ])},
           { name: "2 Corner L", altNames: ["28 29 30 31 32 33"], children: Object.assign([c[28], c[29], c[30], c[31], c[32], c[33], ])},
           { name: "0/1 Corner L", altNames: ["34 35 36 37"], children: Object.assign([c[34], c[35], c[36], c[37], ])},
         ])},
         { name: "Dot", children: Object.assign([
-          { name: "5 Corner Dot", children: ch(['O'])},
+          { name: "5 Corner Dot", children: ch(['1C'])},
+          { name: "3 Corner Dot", altNames: ["38 39 40 41 42 43"], children: Object.assign([c[38], c[39], c[40], c[41], c[42], c[43], ])},
+          { name: "2 Corner Dot", altNames: ["44 45 46 47 48 49"], children: Object.assign([c[44], c[45], c[46], c[47], c[48], c[49], ])},
+          { name: "0/1 Corner Dot", altNames: ["50 51 52 53"], children: Object.assign([c[50], c[51], c[52], c[53], ])},
         ])},
       ]
     }

@@ -1218,321 +1218,283 @@
     -
      alg: F' L F L' U2 L' U2 L U' L' U2 L
      isLefty: true
-O:
+# DOTS
+1C:
     algs:
     -
      alg: "[LEFT SEXY] [LEFT SLEDGE] U2' [LEFT FRURUF]"
      isLefty: true
-
-0-3:
-    algs:
-    -
-     alg: L' U' L U L F' L' F U2' F' L' U' L U F
-     isLefty: true
-1-11:
+39A:
     algs:
     -
      alg: F' L' U' L U F L' U2' L2 F' L' F L' U2 L
      isLefty: true
-1-12:
+42A-:
     algs:
     -
      alg: F' U' L' U' L U' F U2 F' L' U L F
      isLefty: true
-1-13:
+42A+:
     algs:
     -
      alg: L' U2' L U L2' U' y' L' U L2 F L' U F
      isLefty: true
-1-14:
+40A-:
     algs:
     -
      alg: F' L' U' L F U2' F' U L' U L U F
      isLefty: true
-1-15:
+40A+:
     algs:
     -
      alg: F' L' U' L U F U2' L U2 F U2' F' L'
      isLefty: true
-2-11:
+38A:
     algs:
     -
      alg: L F U2 F2' U' L' U L F U2' L'
      isLefty: true
-2-12:
+41A+:
     algs:
     -
      alg: L U F' U' L' U L F2 U F' U' L'
      isLefty: true
-2-13:
+41A-:
     algs:
     -
      alg: L F U F' U' L' U' L' U' BL U L U' L' BL' L
      isLefty: true
-2-14:
+43A+:
     algs:
     -
      alg: F' U' L' U L F U2 F' U' L' U L F
      isLefty: true
-2-15:
+43A-:
     algs:
     -
      alg: L U F U' F' L' U2' L U F U' F' L'
      isLefty: true
-3-11:
+38B:
     algs:
     -
      alg: BL U L F' U' L U F U' L2' BL'
      isLefty: true
-3-12:
+41B-:
     algs:
     -
      alg: L' U2' L F R U2' R' F' L' U2 L
      isLefty: true
-3-13:
+41B+:
     algs:
     -
      alg: F' L F L' U' L' U L U' L' U' L U R' L F' L' F R
      isLefty: true
-3-14:
+43B-:
     algs:
     -
      alg: F' L' U2' L U2 F U2' L U F U' F' L'
      isLefty: true
-3-15:
+43B+:
     algs:
     -
      alg: BL L U2 L' U2' BL' U F' U' L' U L F
      isLefty: true
-4-11:
+39B:
     algs:
     -
      alg: L U2 L' F' L F U2' F' L2' U' L U F
      isLefty: true
-4-12:
+40B+:
     algs:
     -
      alg: L F U F' U' L' U2' F' L' U' L U F
      isLefty: true
-4-13:
+40B-:
     algs:
     -
      alg: F' L' U' L U F U2' F' L' U' L U F
      isLefty: true
-4-14:
+42B-:
     algs:
     -
      alg: L U F U F' U2' L' F' L' U' L U F
      isLefty: true
-4-15:
+42B+:
     algs:
     -
      alg: L U F U' F2' L' U' L U F U' L'
      isLefty: true
-5-11:
+49A-:
     algs:
     -
      alg: F' L' U' L U F U2' F' L' U L U L' U' L F
      isLefty: true
-6-11:
+49A+:
     algs:
     -
      alg: L F U F' U' L' U2 F' L' U L U L' U' L F
      isLefty: true
-5-12:
+49B+:
     algs:
     -
      alg: L U L' U' F' L' U' y' L F L' U R
      isLefty: true
-6-12:
+49B-:
     algs:
     -
      alg: L' U' L U BL L U F' L' F U' BL'
      isLefty: true
-5-13:
+46B+:
     algs:
     -
      alg: F' L' U' L BL U L U' L' BL' U F
      isLefty: true
-6-13:
+46B-:
     algs:
     -
      alg: BL L U L' F' U' L' U L F U' BL'
      isLefty: true
-5-14:
+44-:
     algs:
     -
      alg: R' F' L F' L' F2 R U' L U F U' F' L'
      isLefty: true
-6-14:
+44+:
     algs:
     -
      alg: L F R' F R F2' L' U2 F' U' L' U L F
      isLefty: true
-5-15:
+46A-:
     algs:
     -
      alg: L F U2' F2' U' L' U L F U2 L'
      isLefty: true
-6-15:
+46A+:
     algs:
     -
      alg: F' L' U' L U2' F U2' F R' F' R
      isLefty: true
-7-11:
+45+:
     algs:
     -
      alg: F' L F L' U' L' U L U2' L U L F' L' F U' L'
      isLefty: true
-8-11:
+45-:
     algs:
     -
      alg: L F' L' F U2' F U2' R U' R' F'
      isLefty: true
-7-12:
+48A+:
     algs:
     -
      alg: L U' F U2' F' L' U' L F U2 F' L'
      isLefty: true
-8-12:
+48A-:
     algs:
     -
      alg: F' U L' U2 L F U F' L' U2' L F
      isLefty: true
-7-13:
+47B+:
     algs:
     -
      alg: L U F' L F2 U F' U' L' U' L'
      isLefty: true
-8-13:
+47B-:
     algs:
     -
      alg: F' U' L F' L2' U' L U F U F
      isLefty: true
-7-14:
+47A-:
     algs:
     -
      alg: F' L' U' L2 U F U F' U2' L' U2 F
      isLefty: true
-8-14:
+47A+:
     algs:
     -
      alg: L F U F2' U' L' U' L U2 F U2' L'
      isLefty: true
-7-15:
+48B-:
     algs:
     -
      alg: F' L' U2 L F U' F' L' U2' L U' F
      isLefty: true
-8-15:
+48B+:
     algs:
     -
      alg: L U L U F U' F2' L' F U' L'
      isLefty: true
-9-11:
+50A:
     algs:
     -
      alg: R' F' U L' U2' L F U R
      isLefty: true
-9-12:
-    algs:
-    -
-     alg: L U F U' F' L' F' L' U' L U F
-     isLefty: true
-9-13:
-    algs:
-    -
-     alg: L U F U' F' L' U2 F' L' U' L U F
-     isLefty: true
-9-14:
-    algs:
-    -
-     alg: L F' L' F U2 F R U2' R' F'
-     isLefty: true
-9-15:
-    algs:
-    -
-     alg: R' F R F' U2' F' L' U2 L F
-     isLefty: true
-10-11:
+50B:
     algs:
     -
      alg: F' L F L' U' L' U L U F' L' U' L U F
      isLefty: true
-10-12:
-    algs:
-    -
-     alg: L F' L' F2 U F' L' U2' L F U2 F'
-     isLefty: true
-10-13:
-    algs:
-    -
-     alg: L' U2' L2 F' L' F U2 L F' L' F
-     isLefty: true
-    -
-     alg: L' U' BL L' BL' L2 U L F' L' F
-     isLefty: true
-10-14:
-    algs:
-    -
-     alg: L U2 F U' F2' U' L' U L F L'
-     isLefty: true
-10-15:
-    algs:
-    -
-     alg: F' U2' L' U L U F U L' U' BL U L U' L' BL' L
-     isLefty: true
-11-11:
+50C:
     algs:
     -
      alg: L F' L' F U2' L F' L' F2 U2 F'
      isLefty: true
-11-12:
-    algs:
-    -
-     alg: L F U2 F2' L F L' U2' L'
-     isLefty: true
-11-13:
-    algs:
-    -
-     alg: F' L' U2' L2 F' L' F U2 F
-     isLefty: true
-11-14:
-    algs:
-    -
-     alg: F' L' U' L U F U2 L U F U' F' L'
-     isLefty: true
-11-15:
-    algs:
-    -
-     alg: F' L' U' L U F U2 F' U' L' U L F
-     isLefty: true
-12-11:
+50D:
     algs:
     -
      alg: F' L F L' U' L' U L U L' U' L U L F' L' F
      isLefty: true
-12-12:
+50E+:
     algs:
     -
-     alg: R' F' L' U' L U L' U' L F U R
+     alg: R' F' U' L F L' U2 L' U' R U' L
      isLefty: true
-12-13:
+50E-:
     algs:
     -
-     alg: L F R' F R F2' L2' U2 L F U F' U L' U L
+     alg: F' L' U' L U F U F' L' U L U2' L' U' L F
      isLefty: true
-12-14:
+51A-:
+    algs:
+    -
+     alg: L F' L' F U2 F R U2' R' F'
+     isLefty: true
+51A+:
+    algs:
+    -
+     alg: R' F R F' U2' F' L' U2 L F
+     isLefty: true
+51B-:
+    algs:
+    -
+     alg: L U2 F U' F2' U' L' U L F L'
+     isLefty: true
+51B+:
+    algs:
+    -
+     alg: F' U2' L' U L U F U L' U' BL U L U' L' BL' L
+     isLefty: true
+51C-:
+    algs:
+    -
+     alg: F' L' U' L U F U2 L U F U' F' L'
+     isLefty: true
+51C+:
+    algs:
+    -
+     alg: F' L' U' L U F U2 F' U' L' U L F
+     isLefty: true
+51D-:
     algs:
     -
      alg: L F' L' U' L U F2 U F' U2' L'
      isLefty: true
-12-15:
+51D+:
     algs:
     -
      alg: R' U' F' U L' U' L U F R
      isLefty: true
-13-11:
+51E+:
     algs:
     -
      alg: R' U' F2' L F L' U F R
@@ -1540,97 +1502,131 @@ O:
     -
      alg: F' U2' F' L F L2' U2 L F
      isLefty: true
-14-11:
+51E-:
     algs:
     -
      alg: L U F2 R' F' R U' F' L'
      isLefty: true
-13-12:
-    algs:
-    -
-     alg: F' U' L' U L F U L' U' L U L F' L' F
-     isLefty: true
-14-12:
-    algs:
-    -
-     alg: L U F U' F' L2' U' L U L F' L' F
-     isLefty: true
-13-13:
-    algs:
-    -
-     alg: R' F' U' L F L' U2 L' U' R U' L
-     isLefty: true
-14-13:
-    algs:
-    -
-     alg: F' L' U' L U F U F' L' U L U2' L' U' L F
-     isLefty: true
-13-14:
-    algs:
-    -
-     alg: F' L' U2' L U' F U2' F R' F' R
-     isLefty: true
-14-14:
-    algs:
-    -
-     alg: F' L' U L U L' U' L F U L F R' F R F2' L'
-     isLefty: true
-13-15:
+51F-:
     algs:
     -
      alg: L' U' L' BL L BL' U L2 U L F' L' F U' L'
      isLefty: true
-14-15:
+51F+:
     algs:
     -
      alg: R' U' F' L' U L2 F' L' F2 R
      isLefty: true
-15-11:
+     
+52A+:
+    algs:
+    -
+     alg: L U F U' F' L' F' L' U' L U F
+     isLefty: true
+52A-:
+    algs:
+    -
+     alg: L U F U' F' L' U2 F' L' U' L U F
+     isLefty: true
+52B+:
+    algs:
+    -
+     alg: L F' L' F2 U F' L' U2' L F U2 F'
+     isLefty: true
+52B-:
+    algs:
+    -
+     alg: L' U2' L2 F' L' F U2 L F' L' F
+     isLefty: true
+    -
+     alg: L' U' BL L' BL' L2 U L F' L' F
+     isLefty: true
+52C+:
+    algs:
+    -
+     alg: L F U2 F2' L F L' U2' L'
+     isLefty: true
+52C-:
+    algs:
+    -
+     alg: F' L' U2' L2 F' L' F U2 F
+     isLefty: true
+52D-:
+    algs:
+    -
+     alg: R' F' L' U' L U L' U' L F U R
+     isLefty: true
+52D+:
+    algs:
+    -
+     alg: L F R' F R F2' L2' U2 L F U F' U L' U L
+     isLefty: true
+52F-:
+    algs:
+    -
+     alg: F' U' L' U L F U L' U' L U L F' L' F
+     isLefty: true
+52F+:
+    algs:
+    -
+     alg: L U F U' F' L2' U' L U L F' L' F
+     isLefty: true
+52E+:
+    algs:
+    -
+     alg: F' L' U2' L U' F U2' F R' F' R
+     isLefty: true
+52E-:
+    algs:
+    -
+     alg: F' L' U L U L' U' L F U L F R' F R F2' L'
+     isLefty: true
+53A-:
     algs:
     -
      alg: L' U2 L U F U' F2' L F L2' U2' L
      isLefty: true
-16-11:
+53A+:
     algs:
     -
      alg: L F R' F R F2' L' U R' F2' L F L' F R
      isLefty: true
-15-12:
+53B-:
     algs:
     -
      alg: L F L' U2' R U2' R' U2 L F' L'
      isLefty: true
-16-12:
+53B+:
     algs:
     -
      alg: R' F' R U2 L' U2 L U2' R' F R
      isLefty: true
-15-13:
+53C-:
     algs:
     -
      alg: L U L' U L2 F' L' F2 U2' F' L'
      isLefty: true
-16-13:
+53C+:
     algs:
     -
      alg: L' U' L U' L2' y' L F L2' U2 L F
      isLefty: true
-15-14:
+53D-:
     algs:
     -
      alg: L R' U2 L F' L' U2' F L' U2' R
      isLefty: true
-16-14:
+53D+:
     algs:
     -
      alg: R' L U2' R' F R U2 F' R U2 L'
      isLefty: true
-15-15:
+53E-:
     algs:
     -
      alg: F' L F U2' L' U2 L' U2' BL L BL'
      isLefty: true
-16-15:
+53E+:
     algs:
     -
      alg: L F' L' U2 F U2' F U2 R' F' R 
