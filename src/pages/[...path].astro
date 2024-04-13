@@ -3,12 +3,14 @@
 import VerticalLayout from "../layouts/VerticalLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Page from "../layouts/Page.astro";
-import { PageRoutes, type IPageData } from '../scripts/routes'
+import { getRoutes } from "../scripts/config/navigation/getRoutes";
+import type { IPageData } from "../scripts/config/navigation/constants/navigationTypes";
 
 type Props = Omit<IPageData, 'path'>
 
 export function getStaticPaths() {
-  const pages = PageRoutes
+  const pages = getRoutes()
+  console.log(pages)
   return pages.map(({ path, name, data }) => {
     return {
       params: { path },

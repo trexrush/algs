@@ -1,9 +1,9 @@
 ---
 import Info from "./Info.astro";
-import { NavbarRoutes } from "../scripts/routes";
+import { getNavbarItems } from "../scripts/config/navigation/getNavbarItems";
 import "@cubing/icons";
 
-let pages = NavbarRoutes
+let pages = getNavbarItems()
 
 let sheets = { name: "Old", href: "https://docs.google.com/spreadsheets/d/1L0iR5AyRh2sTWymHSD2MiTJXzl8IoxGzyuRgqEhttSs/edit#gid=1313953242", external: true, }
 let github = { name: "Sheets", href: "https://github.com/trexrush/algs", external: true, }
@@ -16,55 +16,8 @@ let github = { name: "Sheets", href: "https://github.com/trexrush/algs", externa
   </dialog>
 </div>
 
-<!-- TODO: https://tailwindcss.com/docs/hover-focus-and-other-states#open-closed-state migrate from dodge checkbox to fake details EDIT: possible? or use smth else -->
-<!-- DESKTOP -->
-<nav class=" hidden md:flex items-baseline @container">
-  <div class="bg div-line 
-  flex w-fit items-center m-3 sticky top-0
-  child:min-w-max child:py-1 child:px-4 rounded-md shadow-lg
-  divide-x-2">
-    <a href="/algs/" class="text-xl font-bold">Home</a>
-    {pages.map((page) => (
-      page.folder ?
-      <div class="relative">
-        <!-- LAYER 1 -->
-        <input id={page.name} type="radio" name="menu" class="peer hidden" />
-        <label for={page.name} class="select-none cursor-pointer font-bold peer-checked:text-yellow-400" >
-          {page.icon ? <div class:list={page.icon} /> : page.name + "📂"}
-        </label>
-        <!-- MENU -->
-        <div class="menu bg div-line hidden peer-checked:flex top-11 left-0 pr-2 rounded-md shadow-xl divide-y-2">
-          {page.folder.map((subpage) => (
-            <!-- LAYER 2 -->
-            <div class="flex flex-row items-baseline gap-3">
-              <a href={subpage.href} class="select-none p-2 mr-3 opacity-70 text-sm whitespace-nowrap">{subpage.icon ?? subpage.name}</a>
-              {subpage.folder?.map((route) => (
-                <!-- LAYER 3 -->
-                <a href={route.href} class="font-bold whitespace-nowrap">{route.name}</a>
-              ))}
-            </div>
-          ))}
-        </div>
-        <!-- / MENU -->
-      </div>
-      // ROUTE IN MAIN HEADER
-      :  <a href={page.href} class="select-none overflow-hidden whitespace-nowrap">{page.name}</a>
-    ))}
-    <a href={sheets.href} class="p-1 select-none hidden @xl:block whitespace-nowrap">
-      <i class="bi bi-table"></i>
-      {sheets.name}
-    </a>
-    <a href={github.href} class="p-1 select-none hidden @lg:block whitespace-nowrap">
-      <i class="bi bi-github"></i>
-    </a>
-  </div>
-  <div id="showInfo" class="bg w-fit m-3 px-4 py-1 rounded-md shadow-lg cursor-pointer hidden @xl:block">
-    ❓
-  </div>
-</nav>
-
 <!-- MOBILE -->
-<nav class="flex md:hidden text-xl">
+<nav class="flex text-xl">
   <!-- MENU BUTTON -->
   <details class="bg select-none rounded-md shadow-lg cursor-pointer m-3 p-2 w-fit font-bold" >
     <summary>MENU</summary>
@@ -73,31 +26,8 @@ let github = { name: "Sheets", href: "https://github.com/trexrush/algs", externa
     <div class="menu bg div-line flex top-16 left-3 justify-center rounded-md shadow-lg divide-y-2 p-1 child:py-2 child:px-1 min-w-min w-1">
 
       <a href="/algs/" class="text-xl font-bold">Home</a>
-      {pages.map((page) => (
-        page.folder ?
-        <div class="relative">
-          <!-- LAYER 1 -->
-          <input id={page.name + "m"} type="radio" name="menu-mobile" class="peer hidden" />
-          <label for={page.name + "m"} class="select-none cursor-pointer font-bold peer-checked:text-yellow-400" >
-            {page.icon ? <div class:list={[page.icon, 'text-center']} /> : page.name + "📂"}
-          </label>
-          <!-- MENU -->
-          <div class="menu bg div-line hidden peer-checked:flex top-2 left-[70px] pr-2 rounded-md shadow-lg divide-y-2">
-            {page.folder.map((subpage) => (
-              <!-- LAYER 2 -->
-              <div class="flex flex-row items-baseline gap-3">
-                <a href={subpage.href} class="select-none p-2 mr-3 opacity-70 text-sm whitespace-nowrap">{subpage.icon ?? subpage.name}</a>
-                {subpage.folder?.map((route) => (
-                  <!-- LAYER 3 -->
-                  <a href={route.href} class="font-bold whitespace-nowrap">{route.name}</a>
-                ))}
-              </div>
-            ))}
-          </div>
-          <!-- / MENU -->
-        </div>
-        // ROUTE IN MAIN HEADER
-        :  <a href={page.href} class="select-none overflow-hidden whitespace-nowrap">{page.name}</a>
+      {pages.map(page => (
+        <a href={'/algs/' + page.path} class={`select-none overflow-hidden whitespace-nowrap ${page.icon}`}>{' '}{page.name}</a>
       ))}
       <a href={sheets.href} class="p-1 select-none text-center whitespace-nowrap">
         {sheets.name}
