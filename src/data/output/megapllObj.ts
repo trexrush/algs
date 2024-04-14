@@ -1,5 +1,5 @@
-import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
-import { useGrouping } from "../../scripts/config/set/megaPLL"
+import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat"
+import { useGrouping } from "../../scripts/config/setDefinitions/setConstructors/megaPLL"
 
 
 import yml from '../userSets/megapll.yml'

@@ -1,5 +1,5 @@
-import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
-import { useGrouping } from "../../scripts/config/set/parityPLL"
+import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat"
+import { useGrouping } from "../../scripts/config/setDefinitions/setConstructors/parityPLL"
 
 
 import yml from '../userSets/paritypll.yml'

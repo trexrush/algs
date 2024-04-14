@@ -1,17 +1,16 @@
-import type { ISetConfig } from "."
-import { listFromData } from "."
-import { IConfig, createConfig } from ".."
-import type { IPuzzleConfig } from "../puzzle"
-import { puzzle2x2x2 } from "../puzzle/2x2"
-import type { IAlgset, ICaseList } from "./dataFormat"
+import type { ISetConfig } from ".."
+import { listFromData } from ".."
+import { createConfig } from "../.."
+import type { IPuzzleConfig } from "../../puzzle"
+import { puzzle2x2x2 } from "../../puzzle/2x2"
+import type { IAlgset, ICaseList } from "../dataFormat"
 
-import caseDefinitions from './cases/eg1.yml'
+import caseDefinitions from '../caseDefaults/eg1.yml'
 import merge from "ts-deepmerge"
-
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzle2x2x2
 const setOptions: ISetConfig = {
-  name: "EG1",
+  name: "CLL",
   visualCubeConfig: {
     rot: "y",
   },
@@ -19,7 +18,7 @@ const setOptions: ISetConfig = {
     rot: "x2 y'",
   }
 }
-const config: IConfig = createConfig(puzzleOptions, setOptions)
+const config = createConfig(puzzleOptions, setOptions)
 
 // CASES
 const caseNames = [
@@ -33,7 +32,7 @@ const caseNames = [
 ] as const
 type ICaseName = typeof caseNames[number]
 
-const useGrouping = (grouping: "none" | "oll", d: ICaseList) => {
+const useGrouping = (grouping: "none" | "oll", d: ICaseList): IAlgset => {
   const data = merge(caseDefinitions, d) as unknown as ICaseList
   const ch = (list: ICaseName[]) => { return Object.assign(listFromData<ICaseName>(list, data)) }
 

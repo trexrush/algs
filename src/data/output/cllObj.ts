@@ -1,5 +1,5 @@
-import { useGrouping } from "../../scripts/config/set/cll";
-import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
+import { useGrouping } from "../../scripts/config/setDefinitions/setConstructors/cll";
+import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat"
 
 
 import yml from '../userSets/cll.yml'

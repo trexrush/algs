@@ -1,11 +1,11 @@
-import type { ISetConfig } from "."
-import { listFromData } from "."
-import { IConfig, createConfig } from ".."
-import type { IPuzzleConfig } from "../puzzle"
-import { puzzleMegaminx } from "../puzzle/megaminx"
-import type { IAlgset, ICaseList } from "./dataFormat"
+import type { ISetConfig } from ".."
+import { listFromData } from ".."
+import { IConfig, createConfig } from "../.."
+import type { IPuzzleConfig } from "../../puzzle"
+import { puzzleMegaminx } from "../../puzzle/megaminx"
+import type { IAlgset, ICaseList } from "../dataFormat"
 
-import caseDefinitions from './cases/megaPLL.yml'
+import caseDefinitions from '../caseDefaults/megaPLL.yml'
 import merge from "ts-deepmerge"
 
 // CONFIG

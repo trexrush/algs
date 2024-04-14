@@ -10,7 +10,6 @@ type Props = Omit<IPageData, 'path'>
 
 export function getStaticPaths() {
   const pages = getRoutes()
-  console.log(pages)
   return pages.map(({ path, name, data }) => {
     return {
       params: { path },

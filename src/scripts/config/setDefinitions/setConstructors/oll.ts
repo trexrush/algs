@@ -1,11 +1,11 @@
-import type { ISetConfig } from "."
-import { listFromData } from "."
-import { createConfig } from ".."
-import type { IPuzzleConfig } from "../puzzle"
-import { puzzle3x3x3 } from "../puzzle/3x3"
-import type { IAlgset, ICaseList } from "./dataFormat"
+import type { ISetConfig } from ".."
+import { listFromData } from ".."
+import { createConfig } from "../.."
+import type { IPuzzleConfig } from "../../puzzle"
+import { puzzle3x3x3 } from "../../puzzle/3x3"
+import type { IAlgset, ICaseList } from "../dataFormat"
 
-import caseDefinitions from './cases/oll.yml'
+import caseDefinitions from '../caseDefaults/oll.yml'
 import merge from "ts-deepmerge"
 // CONFIG
 const puzzleOptions: IPuzzleConfig = puzzle3x3x3

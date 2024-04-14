@@ -1,7 +1,7 @@
 import merge from "ts-deepmerge"
 import type { IConfig, IPuzzleGenConfig, ITwistyPlayerConfig, IVisualCubeConfig } from "."
 import type { IJustPuzzleConfig } from "./puzzle"
-import type { IJustSetConfig } from "./set"
+import type { IJustSetConfig } from "./setDefinitions"
 import { puzzle3x3x3 } from "./puzzle/3x3"
 import { Type } from "sr-puzzlegen"
 

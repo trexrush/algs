@@ -1,4 +1,4 @@
-import type { IAlgset } from "../../set/dataFormat"
+import type { IAlgset } from "../../setDefinitions/dataFormat"
 
 export interface IPageData {
   path: string,

@@ -1,6 +1,6 @@
 
-import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
-import { useGrouping } from "../../scripts/config/set/megaOLL"
+import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat"
+import { useGrouping } from "../../scripts/config/setDefinitions/setConstructors/megaOLL"
 
 
 import yml from '../userSets/megaoll.yml'

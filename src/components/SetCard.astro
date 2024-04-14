@@ -1,6 +1,6 @@
 ---
 import type { IConfig } from "../scripts/config";
-import type { ICase, ISet } from "../scripts/config/set/dataFormat";
+import type { ICase, ISet } from "../scripts/config/setDefinitions/dataFormat";
 import CaseCard from "./templates/CaseCard.svelte";
 
 interface Props {
@@ -18,15 +18,16 @@ const { set, config } = Astro.props
     </div>
     <span class="text-stone-500 text-xs sm:text-sm font-light">
       {set.altNames ? 'AKA ' : ''}
-    {set.altNames?.map((altName, i) => {
-      return <span class="font-semibold text-sm sm:text-lg">{altName + (i < set.altNames!.length! - 1 ? ", " : "")}</span>
-    })}
+      {set.altNames?.map((altName: string | number, i: number) => {
+        return <span class="font-semibold text-sm sm:text-lg">{altName + (i < set.altNames!.length! - 1 ? ", " : "")}</span>
+      })}
     </span>
   </summary>
-
+  
   <div class="w-full flex flex-col gap-4 items-center">
     {
       set.children && Object.entries(set.children)?.map(([k, setOrCase]) => (
+        //@ts-ignore
         setOrCase.algs != undefined ? 
           <CaseCard client:visible caso={setOrCase as ICase} config={config}/>
         :

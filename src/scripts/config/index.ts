@@ -1,5 +1,5 @@
 
-import type { IJustSetConfig, ISetConfig } from "./set";
+import type { IJustSetConfig, ISetConfig } from "./setDefinitions";
 import type { IJustPuzzleConfig, IPuzzleConfig } from "./puzzle";
 import merge from "ts-deepmerge";
 import { DefaultConfig } from "./defaults";

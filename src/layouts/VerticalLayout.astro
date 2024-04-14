@@ -2,7 +2,7 @@
   // import SetCard from "../components/SetCard.svelte";
   import SetCard from "../components/SetCard.astro";
 import type { IConfig } from "../scripts/config";
-  import type { ISet } from "../scripts/config/set/dataFormat";
+  import type { ISet } from "../scripts/config/setDefinitions/dataFormat";
 
   interface Props {
     config: IConfig
@@ -16,7 +16,7 @@ hover:brightness-110 hover:-translate-y-[1px] transition-all select-none">Collap
 
 <div class=" relative text-3xl w-full text-center my-5">{config.name}</div>
 
-{sets.map((set) => (
+{sets.map((set: ISet) => (
   <SetCard set={set} config={config} />
 ))}
 

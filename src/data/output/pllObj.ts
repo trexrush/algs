@@ -1,5 +1,5 @@
-import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat"
-import { useGrouping } from "../../scripts/config/set/pll";
+import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat"
+import { useGrouping } from "../../scripts/config/setDefinitions/setConstructors/pll";
 
 import yml from '../userSets/pll.yml'
 const data: ICaseList = yml

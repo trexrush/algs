@@ -1,5 +1,5 @@
-import type { IAlgset, ICaseList } from '../../scripts/config/set/dataFormat'
-import { useGrouping } from '../../scripts/config/set/oll'
+import type { IAlgset, ICaseList } from '../../scripts/config/setDefinitions/dataFormat'
+import { useGrouping } from '../../scripts/config/setDefinitions/setConstructors/oll'
 
 import yml from '../userSets/oll.yml'
 let data: ICaseList = yml

@@ -1,5 +1,5 @@
-import type { IAlgset, ICaseList } from "../../scripts/config/set/dataFormat";
-import { useGrouping } from "../../scripts/config/set/cll";
+import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat";
+import { useGrouping } from "../../scripts/config/setDefinitions/setConstructors/cll";
 
 
 import yml from '../2x2/cll.yml' // REPLACE WITH THE SET YAML
