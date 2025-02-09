@@ -47,7 +47,7 @@ const useGrouping = (grouping: "none" | "cp", d: ICaseList) => {
           children: ch(["pJ", "M", "Ka", "Kb", "Ba", "Bb", "Ca", "Cb", "Da", "Db", "Pa", "Pb"])
         },
         { name: "Opp CP",
-          children: ch(["Q", "X", "Sa", "Sb"])
+          children: ch(["pN", "Q", "X", "Sa", "Sb"])
         },
       ]
     }

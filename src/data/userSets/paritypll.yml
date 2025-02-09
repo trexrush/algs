@@ -5,19 +5,23 @@ opp:
 adj:
     algs:
     - 
-        setup: U2
-        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' r' U Rw U R' U' R'
+        setup: U'
+        alg: Lw' U' Lw [LEFTY SEXY] l' U' L' U Lw U' Lw U Lw2' U Lw U' Lw U' Lw'
+        isLefty: true
         tags: ['Direct']
     - 
         setup: U2
-        alg: L' U' L' U Lw U l' U' Lw' U' Lw U Lw U' Lw' U' l' U Lw
-        isLefty: true
-        tags: ['Direct']
+        alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' r' U Rw U R' U' R'
+        tags: ['Direct', 'Swag']
     - 
         alg: "[LEFT SEXY] [OPP] U L' U L"
         isLefty: true
 Oa:
     algs:
+    -
+        alg: Lw' U' Lw L' U' L U L' U' L U Lw' U Lw2 U Lw' U L U' L' U L U' L' Lw U' Lw'
+        isLefty: true
+        tags: ['Direct']
     - 
         alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' r' U Rw U R' U' R' [Ua_PERM]
         tags: ['Direct']
@@ -26,9 +30,13 @@ Oa:
     note: opp into zperm or adj into U
 Ob:
     algs:
+    - 
+        alg: Lw U Lw' [LEFT DOUBLE BACK SEXY] Lw U' Lw2' U' Lw [LEFT DOUBLE UNSEXY] Lw' U Lw
+        isLefty: true
+        tags: ['Direct']
     -
         alg: M2' U M2' U M' U2 l2' U2 r2 Uw2 r2 Uw2 U2 M'
-    note: opp into zperm
+        note: opp into zperm
 W:
     algs:
     - 
@@ -42,11 +50,19 @@ W:
 pJ:
     algs:
     - 
+        alg: Lw U Lw2' U Lw U' Lw U L' U' L U' Lw' U 3Fw' [LEFT SEXY] 3Fw Lw' U' Lw L' U' L
+        isLefty: true
+        tag: ['Direct']
+    - 
         alg: Lw L2' U L U' l' U L' U2' L U l' U' l U Lw F' Lw2' U Lw U Lw' U' Lw F
         isLefty: true
         tag: ['Direct']
 pN:
     algs:
+    - 
+        alg: 3Fw' L' U' L U 3Fw Lw' U' Lw L' U' L Lw U Lw2' U Lw U' Lw U L' U' L U' Lw'
+        isLefty: true
+        tag: ['Direct']
     - 
         alg: l' U' l U Lw F' Lw2' U Lw U Lw' U' Lw F [LEFTY SEXY] Lw D Lw' U2' Lw D' Lw'
         isLefty: true
