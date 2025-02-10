@@ -5,9 +5,9 @@
   import { tooltip } from "../../scripts/utilities";
   import CaseCardVertical from "../CaseCardVertical.svelte";
   import type { ComponentType } from "svelte";
-  import { ICase } from "../../types/dataFormat";
-  import { IAlgorithmClass } from "../../types/algorithmClass";
-  import { IDisplayConfig } from "../../types/displayConfig";
+  import type { ICase } from "../../types/dataFormat";
+  import type { IAlgorithmClass } from "../../types/algorithmClass";
+  import type { IDisplayConfig } from "../../types/displayConfig";
 
   export let caso: ICase
   export let config: IDisplayConfig

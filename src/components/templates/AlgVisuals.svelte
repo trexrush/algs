@@ -4,9 +4,9 @@
   import { cubePNG, Axis, Masking, ICubeOptions } from "sr-visualizer"
   import { PNG, type PNGVisualizerOptions, Type } from "sr-puzzlegen"
   import merge from "ts-deepmerge";
-  import { IAlgorithmClass } from "../../types/algorithmClass";
-  import { ICase } from "../../types/dataFormat";
-  import { IDisplayConfig } from "../../types/displayConfig";
+  import type { IAlgorithmClass } from "../../types/algorithmClass";
+  import type { ICase } from "../../types/dataFormat";
+  import type { IDisplayConfig } from "../../types/displayConfig";
 
   export let imageAlg: IAlgorithmClass
   export let activeAlg: IAlgorithmClass

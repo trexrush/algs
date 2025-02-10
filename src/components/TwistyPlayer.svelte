@@ -1,8 +1,8 @@
 <!-- credit to anicolao https://github.com/cubing/cubing.js/issues/223#issuecomment-1249980565 -->
 <script lang="ts">
   import { TwistyPlayer } from "cubing/twisty";
-  import { IAlgorithmClass } from "../types/algorithmClass";
-  import { IDisplayConfig } from "../types/displayConfig";
+  import type { IAlgorithmClass } from "../types/algorithmClass";
+  import type { IDisplayConfig } from "../types/displayConfig";
 
   export let algorithm: IAlgorithmClass
   export let config: IDisplayConfig
