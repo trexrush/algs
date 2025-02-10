@@ -1,4 +1,4 @@
-import { p } from "./constants/routes";
+import { p } from "../../../configs/navigation/routes";
 
 export const getRoutes = () => p.flatMap(pElem => {
   const main = { data: pElem.datalists.main, path: pElem.path, name: pElem.name } // main

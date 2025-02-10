@@ -1,6 +1,6 @@
 import tippy from 'tippy.js';
 import 'tippy.js/animations/scale-subtle.css';
-import '../../public/basic-tooltip.css'
+import '../basic-tooltip.css'
 
 // https://dev.to/danawoodman/svelte-quick-tip-using-actions-to-integrate-with-javascript-libraries-tippy-tooltips-2m94
 export function tooltip(node: HTMLElement, params: any = {}) {

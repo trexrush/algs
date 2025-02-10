@@ -1,10 +1,10 @@
-import { IConfig, createConfig } from "../../scripts/config";
+import { IDisplayConfig, createConfig } from "../../types/displayConfig";
 import { puzzle3x3x3 } from "../../scripts/config/puzzle/3x3";
-import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat"
+import type { IAlgset, ICaseList } from "../../types/dataFormat"
 
 import yml from './h.yml'
 
-const config: IConfig = createConfig(puzzle3x3x3, {
+const config: IDisplayConfig = createConfig(puzzle3x3x3, {
     name: "ZBLL",
 })
 

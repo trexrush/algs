@@ -1,16 +1,16 @@
 <script lang="ts">
   import AlgListing from "./AlgListing.svelte";
   import AlgVisuals from "./AlgVisuals.svelte";
-  import type { ICase } from "../../scripts/config/set/dataFormat";
   import { AlgBuilder } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";
   import CaseCardVertical from "../CaseCardVertical.svelte";
   import type { ComponentType } from "svelte";
-  import type { IAlgorithmClass } from "../../scripts/alg/algorithm";
-  import type { IConfig } from "../../scripts/config";
+  import { ICase } from "../../types/dataFormat";
+  import { IAlgorithmClass } from "../../types/algorithmClass";
+  import { IDisplayConfig } from "../../types/displayConfig";
 
   export let caso: ICase
-  export let config: IConfig
+  export let config: IDisplayConfig
   export let Layout: ComponentType = CaseCardVertical
   let algorithmList = caso.algs.map(a => AlgBuilder().withPuzzle(config.type).withAlgData(a).build() as IAlgorithmClass)
 

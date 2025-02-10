@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ICase } from "../scripts/config/set/dataFormat";
+  import { ICase } from "../types/dataFormat";
   
   export let caso: ICase
   export let mirror: boolean

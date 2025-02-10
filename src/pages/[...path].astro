@@ -4,7 +4,7 @@ import VerticalLayout from "../layouts/VerticalLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Page from "../layouts/Page.astro";
 import { getRoutes } from "../scripts/config/navigation/getRoutes";
-import type { IPageData } from "../scripts/config/navigation/constants/navigationTypes";
+import type { IPageData } from "../types/navigation/navigationTypes";
 
 type Props = Omit<IPageData, 'path'>
 

@@ -1,5 +1,5 @@
 import { Alg } from "cubing/alg"
-import type { twistyPuzzleType } from "../types"
+import type { twistyPuzzleType } from "../../types/localOptions"
 import { matchAllParenthesis } from "./regex"
 import { getConfig } from "../config/puzzle"
 

@@ -1,8 +1,8 @@
-import type { IPuzzleConfig } from ".";
-import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "./moveTranslations";
-import { triggerSubstitutionGroups } from "./triggers";
+import type { IPuzzleDisplayConfig } from ".";
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "../../../configs/moveTranslations";
+import { triggerSubstitutionGroups } from "../../../configs/triggers";
 
-export const puzzle2x2x2: IPuzzleConfig = {
+export const puzzle2x2x2: IPuzzleDisplayConfig = {
   type: '2x2x2',
   vc: 2,
   imgSource: "vc",

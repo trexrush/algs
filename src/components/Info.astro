@@ -1,6 +1,6 @@
 ---
 import CaseCard from "./templates/CaseCard.svelte";
-import { OLLNoGrouping } from "../data/output/ollObj";
+import { ollTrexSheetGroupings } from "../configs/algSheets/ingest/OLL_TREX";
 ---
 <div
   class="text-center bg-stone-200 dark:bg-stone-800 shadow-xl rounded-xl w-11/12 md:w-[600px] child:mb-3 mb-3"
@@ -38,6 +38,6 @@ import { OLLNoGrouping } from "../data/output/ollObj";
           Share a link to a specific case by clicking the case name (eg. 17).
         </div>
     </div>
-    <CaseCard client:idle config={OLLNoGrouping.config} caso={OLLNoGrouping.sets[0].children!['17']} />
+    <CaseCard client:idle config={ollTrexSheetGroupings.none.config} caso={ollTrexSheetGroupings.none.sets[0].children!['17']} />
   </div>
 </div>

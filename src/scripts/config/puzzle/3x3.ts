@@ -1,9 +1,9 @@
 import { cube3x3x3 } from "cubing/puzzles";
-import type { IPuzzleConfig } from ".";
-import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "./moveTranslations";
-import { triggerSubstitutionGroups } from "./triggers";
+import type { IPuzzleDisplayConfig } from ".";
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "../../../configs/moveTranslations";
+import { triggerSubstitutionGroups } from "../../../configs/triggers";
 
-export const puzzle3x3x3: IPuzzleConfig = {
+export const puzzle3x3x3: IPuzzleDisplayConfig = {
   type: '3x3x3', 
   vc: 3, 
   cancel: cube3x3x3.puzzleSpecificSimplifyOptions,

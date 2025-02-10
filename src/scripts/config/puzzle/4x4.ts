@@ -1,6 +1,6 @@
-import type { IPuzzleConfig } from "."
-import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "./moveTranslations"
-import { triggerSubstitutionGroups } from "./triggers"
+import type { IPuzzleDisplayConfig } from "."
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "../../../configs/moveTranslations"
+import { triggerSubstitutionGroups } from "../../../configs/triggers"
 
 const notation4 = (a: string, to: 'vc' | 'cubingjs'): string => {
   const notation = {
@@ -15,7 +15,7 @@ const notation4 = (a: string, to: 'vc' | 'cubingjs'): string => {
   ).join(' ')    
 }
 
-export const puzzle4x4x4: IPuzzleConfig = { 
+export const puzzle4x4x4: IPuzzleDisplayConfig = { 
   type: '4x4x4', 
   vc: 4,
   cancel: { quantumMoveOrder: () => 4 }, 

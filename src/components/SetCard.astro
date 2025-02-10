@@ -1,11 +1,11 @@
 ---
-import type { IConfig } from "../scripts/config";
-import type { ICase, ISet } from "../scripts/config/setDefinitions/dataFormat";
+import type { IDisplayConfig } from "../types/displayConfig";
+import type { ICase, ISet } from "../types/dataFormat";
 import CaseCard from "./templates/CaseCard.svelte";
 
 interface Props {
   set: ISet
-  config: IConfig
+  config: IDisplayConfig
 }
 const { set, config } = Astro.props
 ---

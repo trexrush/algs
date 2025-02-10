@@ -1,9 +1,9 @@
 import { Type } from "sr-puzzlegen";
-import type { IPuzzleConfig } from ".";
-import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "./moveTranslations";
-import { triggerSubstitutionGroups } from "./triggers";
+import type { IPuzzleDisplayConfig } from ".";
+import { backMoveGroups, baseMoveGroups, mirrorMoveGroups } from "../../../configs/moveTranslations";
+import { triggerSubstitutionGroups } from "../../../configs/triggers";
 
-export const puzzleMegaminx: IPuzzleConfig = {
+export const puzzleMegaminx: IPuzzleDisplayConfig = {
   type: 'megaminx',
   vc: 'mega', // TODO: move to VisualCubeConfig
   imgSource:'pg',

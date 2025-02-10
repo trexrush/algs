@@ -1,5 +1,7 @@
-import type { ITriggerClass } from "."
+import type { ITriggerClass } from "../../../types/triggerClass"
 import { backAction, invertAction, mirrorAction, repeatAction } from "../actions"
+
+//TODO: how to separate logic from typing here
 
 const modifierAlias = {
   "INVERSE": 'invert',

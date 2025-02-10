@@ -1,21 +1,14 @@
 
-import type { twistyPuzzleType } from "../types";
+import type { twistyPuzzleType } from "../../types/localOptions";
 import type { XOR } from "ts-essentials";
-import type { ITriggerClass } from "./trigger";
+import type { ITriggerClass } from "../../types/triggerClass";
 import { expandTrigger, notationTrigger, toggleModifier } from "./trigger/actions";
 import { getModActionsFromText, type TModifierAliases } from "./trigger/modifier";
-import type { IAlgorithmClass } from "./algorithm";
+import type { IAlgorithmClass } from "../../types/algorithmClass";
 import { checkExpandible, expandAlg, mirrorAlg, notationAlg, returnAlgAsComponents } from "./algorithm/actions";
-import type { IConfig } from "../config";
-import type { IAlg } from "../config/setDefinitions/dataFormat";
+import type { IAlg } from "../../types/dataFormat";
 
-export type TAlgCommon<T extends TAlgCommon<T>> = Pick<IConfig, "imgSource"> & {
-  puzzle: twistyPuzzleType
-  isMirror: boolean
-  mirror(): T
-  notation(to: TNotationTargets): string
-}
-export type TNotationTargets = 'vc' | 'pg' | 'cubingjs'
+// why tf was I trying to force OOP principles in here, ill fix that layer maybe idk
 
 export const AlgBuilder = function () { 
   const builders = {

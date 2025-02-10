@@ -1,7 +1,7 @@
-import type { ITriggerClass } from "."
-import type { TNotationTargets } from ".."
+import type { ITriggerClass } from "../../../types/triggerClass"
+import type { TNotationTargets } from "../../../types/algCommon"
 import { getConfig } from "../../config/puzzle"
-import { triggerSubstitutionGroups } from "../../config/puzzle/triggers"
+import { triggerSubstitutionGroups } from "../../../configs/triggers"
 import { getModActionsFromText, modifierActions, type TModifiers } from "./modifier"
 
 export const expandTrigger = (obj: ITriggerClass) => {

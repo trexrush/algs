@@ -1,9 +1,10 @@
-import type { IAlgorithmClass } from "."
-import { AlgBuilder, TNotationTargets } from ".."
+import type { IAlgorithmClass } from "../../../types/algorithmClass"
+import { AlgBuilder } from ".."
+import type { TNotationTargets } from "../../../types/algCommon"
 import { getConfig } from "../../config/puzzle"
 import { mirrorAction, simplifyAlg } from "../actions"
 import { algDelimiterWithTriggers, isTriggerRegex } from "../regex"
-import type { ITriggerClass } from "../trigger"
+import type { ITriggerClass } from "../../../types/triggerClass"
 
 export const returnAlgAsComponents = (obj: IAlgorithmClass) => {
   return obj.alg.split(algDelimiterWithTriggers).map(moveOrTrigger => {

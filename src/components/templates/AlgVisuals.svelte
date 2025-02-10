@@ -2,15 +2,15 @@
   import TwistyPlayer from "../TwistyPlayer.svelte"
   import AlgVisualsVertical from "../AlgVisualsVertical.svelte"
   import { cubePNG, Axis, Masking, ICubeOptions } from "sr-visualizer"
-  import type { IAlgorithmClass } from "../../scripts/alg/algorithm"
-  import type { IConfig } from "../../scripts/config"
   import { PNG, type PNGVisualizerOptions, Type } from "sr-puzzlegen"
-  import type { ICase } from "../../scripts/config/set/dataFormat"
   import merge from "ts-deepmerge";
+  import { IAlgorithmClass } from "../../types/algorithmClass";
+  import { ICase } from "../../types/dataFormat";
+  import { IDisplayConfig } from "../../types/displayConfig";
 
   export let imageAlg: IAlgorithmClass
   export let activeAlg: IAlgorithmClass
-  export let config: IConfig
+  export let config: IDisplayConfig
   export let Layout = AlgVisualsVertical
   export let caso: ICase
 

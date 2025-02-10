@@ -1,11 +1,11 @@
 ---
   // import SetCard from "../components/SetCard.svelte";
   import SetCard from "../components/SetCard.astro";
-import type { IConfig } from "../scripts/config";
-  import type { ISet } from "../scripts/config/setDefinitions/dataFormat";
+import type { IDisplayConfig } from "../types/displayConfig";
+  import type { ISet } from "../types/dataFormat";
 
   interface Props {
-    config: IConfig
+    config: IDisplayConfig
     sets: ISet[]
   }
   const { sets, config } = Astro.props

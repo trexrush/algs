@@ -1,11 +1,11 @@
-import { IConfig, createConfig } from "../../scripts/config";
+import { IDisplayConfig, createConfig } from "../../types/displayConfig";
 import { puzzle3x3x3 } from "../../scripts/config/puzzle/3x3";
-import type { IAlgset, ICaseList } from "../../scripts/config/setDefinitions/dataFormat"
+import type { IAlgset, ICaseList } from "../../types/dataFormat"
 
 
 import yml from './zbls.yml'
 
-let config: IConfig = createConfig(puzzle3x3x3, {
+let config: IDisplayConfig = createConfig(puzzle3x3x3, {
     name: "ZBLS",
     visualCubeConfig: {
         stage: 'vh',
