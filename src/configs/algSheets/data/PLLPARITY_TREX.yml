@@ -15,9 +15,6 @@ adj:
         setup: U2
         alg: Rw U Rw' R U' Rw' U' Rw U Rw U' Rw' U' r' U Rw U R' U' R'
         tags: ['Direct', 'Swag']
-    - 
-        alg: "[LEFT SEXY] [OPP] U L' U L"
-        isLefty: true
 Oa:
     algs:
     -
@@ -73,28 +70,33 @@ Ka:
     algs:
     - 
         setup: U'
-        alg: "[OPP] U [LEFT Aa_PERM]"
+        alg: "x Lw2 L' U' L D2' L' U L F2' r2' F2' D2' Lw2' x'"
         isLefty: true
+        tags: ['Direct']
+
 Kb:
     algs:
     - 
-        alg: "[OPP] [LEFT Aa_PERM]"
+        alg: "x' Lw2' L U L' D2' L U' L' B2' r2' B2' D2' Lw2 x"
         isLefty: true
+        tags: ['Direct']
 
 Ba:
     algs:
-    - 
-        alg: "L' U' L U L F' L2' U L [OPP] U' L' U' L F"
+    -
+        setup: U
+        alg: "Lw U l' U Lw F Lw' U' L' U Lw F' Lw2' U' Lw2 U' Lw' U Lw' U Lw"
         isLefty: true
-        note: T perm with opp inside
-    - 
-        alg: "[OPP] U' [J_PERM]"
+        tags: ['Direct']
+
 Bb:
     algs:
     -
-        setup: U'
-        alg: "[OPP] U [LEFTY J_PERM]"
+        setup: U
+        alg: "Lw' U' Lw F Lw' U' L U Lw F' L' U' Lw U Lw2' U Lw U' Lw U' Lw'"
         isLefty: true
+        tags: ['Direct']
+
 Ca:
     algs:
     - 
@@ -102,30 +104,37 @@ Ca:
         alg: "[OPP] [LEFT Ra_PERM]"
         isLefty: true
     -   
-        alg: "[OPP] U' [Rb_PERM]"
+        alg: l' U Lw F' L' U' Lw F Lw' y L' U' L U L' U L U' Lw U L' U L U2 Lw'
+        isLefty: true
 Cb:
     algs:
     - 
-        setup: U2
-        alg: "[OPP] U [LEFT Rb_PERM]"
+        alg: r U' Lw' U 3Lw U Lw' U' Lw y L U L' U' L U' L' U Lw' U' L U' L' U2 Lw
         isLefty: true
+        tags: ['Direct']
+    - 
+        alg: L' U 3Lw U L' U' L' 3Lw' F' Lw2 F U' L U F' L' U' L' U Lw2 F
+        isLefty: true
+        tags: ['Direct']
 Da:
     algs:
+    -  
+        alg: "Lw U Lw' U Lw' U' Lw2 U' Lw' U L F Lw' U' L' U Lw F' Lw' U Lw"
+        isLefty: true
+        tags: ['Direct']
+
     - 
         setup: U'
         alg: L' U' L U' [OPP] L F' L2' U L U L' U' L F
         isLefty: true
         note: T perm with opp inside
-    -  
-        setup: U'
-        alg: "[LEFTY J_PERM] [OPP]"
-        isLefty: true
 Db:
     algs:
     - 
-        setup: U'
-        alg: "F' L' U L U [OPP] L' U' L2 F L' U' L' U L"
+        setup: U2
+        alg: "Lw' U' Lw U' Lw U Lw2' U Lw2 F Lw' U' L U Lw F' Lw' U' l U' Lw'"
         isLefty: true
+        tags: ['Direct']
         note: inverse T perm with opp inside
 
 Pa:
@@ -135,15 +144,27 @@ Pa:
         alg: (Lw2' D' Lw U2' Lw' D Lw U2' Lw) U (Lw U2' Lw D Lw' U2' Lw D' Lw2')
         isLefty: true
         tags: ['Direct']
+    - 
+        setup: U'
+        alg: F' Lw' U Lw U' 3Lw' U' Lw U r' U' Lw F 3Lw' U' Lw' U 3Lw
+        isLefty: true
+        tags: ['Direct']
 Pb:
     algs:
     - 
+        alg: 3Rw U Rw' U' 3Rw' F Rw U' l' U Rw U' 3Rw' U' Rw U Rw' F'
+        isLefty: true
+        tags: ['Direct']
+    - 
         setup: U'
-        alg: (Lw2' D Lw' U2' Lw D' Lw' U2' Lw') U' (Lw' U2' Lw' D' Lw U2' Lw' D Lw2')
+        alg: (Lw2 D Lw' U2' Lw D' Lw' U2' Lw') U' (Lw' U2' Lw' D' Lw U2' Lw' D Lw2')
         isLefty: true
         tags: ['Direct']
 Q:
     algs:
+    -
+        alg: F' L' U L U L' U' L F U2' [OPP] L' U' L U L F' L' F
+        isLefty: true
     - 
         alg: "[OPP] U' [LEFT E_PERM]"
         isLefty: true
@@ -151,9 +172,6 @@ Q:
         alg: z' U2 L' F2 Lw2 U2 L F2' Lw2' L' F2 L2 U2 Lw2' L U2' z
         isLefty: true
         tags: ['Direct']
-    -
-        alg: F' L' U L U L' U' L F U2' [OPP] L' U' L U L F' L' F
-        isLefty: true
 X:
     algs:
     - 
@@ -165,17 +183,19 @@ X:
 Sa:
     algs:
     - 
-        alg: "[BACK LEFT SEXY] [OPP] [LEFT J_PERM] L U' L'"
-        isLefty: true
-        note: y perm alt alg with opp in the middle
-    - 
         setup: U'
-        alg: L2' U L2 Uw2 F2' U' L2' Uw2 U L2 U2 F2' Uw2 U' L2'
+        alg: "L U L' U 3Lw' U' Lw U 3Lw F' Lw' U Rw R' U' Lw' U 3Lw U Lw' U' Lw F U' L U' L'"
         isLefty: true
         tags: ['Direct']
-
+        note: "R' U' R U': Pa"
 Sb:
     algs:
+    - 
+        setup: U2
+        alg: L' U' L y' 3Lw' U' Lw U 3Lw F' Lw' U Rw R' U' Lw' U 3Lw U Lw' U' Lw U F
+        isLefty: true
+        tags: ['Direct']
+        note: R U R' y (Pa without F') U' F'
     - 
         setup: U
         alg: z' U2' L' U2 Lw2 F2' L U2 L' Lw2' U2 L2 F2' Lw' l' U2' z

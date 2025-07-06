@@ -40,6 +40,10 @@ const wideMoves = [
   "Uw'", "Rw'", "Lw'", "Dw'", "Bw'", "Fw'", "2U'", "2R'", "2L'", "2D'", "2B'", "2F'",
   "Uw2", "Rw2", "Lw2", "Dw2", "Bw2", "Fw2", "2U2", "2R2", "2L2", "2D2", "2B2", "2F2",
   "Uw2'", "Rw2'", "Lw2'", "Dw2'", "Bw2'", "Fw2'", "2U2'", "2R2'", "2L2'", "2D2'", "2B2'", "2F2'",
+  "3Uw", "3Rw", "3Lw", "3Dw", "3Bw", "3Fw",
+  "3Uw'", "3Rw'", "3Lw'", "3Dw'", "3Bw'", "3Fw'", 
+  "3Uw2", "3Rw2", "3Lw2", "3Dw2", "3Bw2", "3Fw2",
+  "3Uw2'", "3Rw2'", "3Lw2'", "3Dw2'", "3Bw2'", "3Fw2'", 
 ]
 
 const mirrorMoves = [
@@ -81,6 +85,10 @@ const mirrorWideMoves = [
   "Uw", "Lw", "Rw", "Dw", "Bw", "Fw", "2U", "2L", "2L", "2D", "2B", "2F",
   "Uw2'", "Lw2'", "Rw2'", "Dw2'", "Bw2'", "Fw2'", "2U2'", "2L2'", "2R2'", "2D2'", "2B2'", "2F2'",
   "Uw2", "Lw2", "Rw2", "Dw2", "Bw2", "Fw2", "2U2", "2L2", "2R2", "2D2", "2B2", "2F2",
+  "3Uw'", "3Lw'", "3Rw'", "3Dw'", "3Bw'", "3Fw'",
+  "3Uw", "3Lw", "3Rw", "3Dw", "3Bw", "3Fw", 
+  "3Uw2'", "3Lw2'", "3Rw2'", "3Dw2'", "3Bw2'", "3Fw2'",
+  "3Uw2", "3Lw2", "3Rw2", "3Dw2", "3Bw2", "3Fw2", 
 ]
 
 const backMoves = [
