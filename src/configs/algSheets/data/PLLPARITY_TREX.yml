@@ -68,7 +68,12 @@ Ka:
     algs:
     - 
         setup: U'
-        alg: x Lw2 L' U' L D2' L' U L F2' r2' F2' D2' Lw2' x'
+        alg: x Lw2 L' U' L D2' L' U L F2' 3Lw2' Lw2 F2' D2' Lw2' x'
+        isLefty: true
+        tags: ['Direct']
+    - 
+        setup: U
+        alg: F' U' L' U L2 F' Lw2' F U' L U F' L' U' L' U Lw2 F2'
         isLefty: true
         tags: ['Direct']
 
@@ -76,7 +81,7 @@ Kb:
     algs:
     - 
         setup: U
-        alg: x' Lw2' L U L' D2' L U' L' B2' r2' B2' D2' Lw2 x
+        alg: x' Lw2' L U L' D2' L U' L' B2' Lw2 3Lw2' B2' D2' Lw2 x
         isLefty: true
         tags: ['Direct']
 

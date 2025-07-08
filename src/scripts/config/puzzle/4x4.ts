@@ -19,6 +19,9 @@ export const puzzle4x4x4: IPuzzleDisplayConfig = {
   type: '4x4x4', 
   vc: 4,
   cancel: { quantumMoveOrder: () => 4 }, 
+  twistyPlayerConfig: {
+    tempo: 2.5,
+  },
   notation: (a, to) => { return notation4(a, to as 'vc' | 'cubingjs') },
   imgSource: "vc",
   triggers: triggerSubstitutionGroups["4x4x4"]!,
