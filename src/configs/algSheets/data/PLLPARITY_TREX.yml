@@ -31,6 +31,9 @@ Ob:
 W:
     algs:
     - 
+        alg: "[BACK LEFT NEW_OPP] L' U' L U' L U L2' U L U' L U' L'"
+        isLefty: true
+    - 
         alg: "[OPP] r2' l2' U' M U2' M' U' M2'"
     - 
         alg: Rw R U Rw' R U' Rw' U' Rw U Rw U' Rw' U' Rw' R U Rw U2 R U' R' U' R2
@@ -96,10 +99,6 @@ Ca:
     -   
         setup: U'
         alg: l' U Lw F' L' U' Lw F Lw' y L' U' L U L' U L U' Lw U L' U L U2 Lw'
-        isLefty: true
-    - 
-        setup: U2
-        alg: "[OPP] [LEFT Ra_PERM]"
         isLefty: true
 Cb:
     algs:
