@@ -48,6 +48,7 @@ const zbllSubstitutes = [
 
 const bigCubeSubstitutes = [
   { name: "OPP", alg: "Uw2' r2 Uw2' r2 U2' r2" },
+  { name: "NEW_OPP", alg: "Rw2 B2 U2' Rw2' R2 U2' B2 Rw2'" },
   { name: "DREW", alg: "Rw2 B2' Rw' U2 Rw' U2 x' U2' Rw' U2 Rw U2' Rw' U2 Rw2 U2 x" },
   { name: "LUKE", alg: "Rw' U2' Rw U2 Rw' F2 Rw2 U2' Rw U2 Rw' U2' F2 Rw2 F2'" },
   { name: "LUCAS", alg: "Rw U2 Rw x U2 Rw U2 Rw' U2 Lw U2 Rw' U2 Rw U2 Rw' U2 Rw'" },

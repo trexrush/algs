@@ -136,18 +136,22 @@ const backWideMoves = [
   "Uw", "Rw", "Lw", "Dw", "Fw", "Bw", "2U", "2R", "2L", "2D", "2F", "2B",
   "Uw2'", "Rw2'", "Lw2'", "Dw2'", "Fw2'", "Bw2'", "2U2'", "2R2'", "2L2'", "2D2'", "2F2'", "2B2'",
   "Uw2", "Rw2", "Lw2", "Dw2", "Fw2", "Bw2", "2U2", "2R2", "2L2", "2D2", "2F2", "2B2",
+  "3Uw'", "3Rw'", "3Lw'", "3Dw'", "3Fw'", "3Bw'",
+  "3Uw", "3Rw", "3Lw", "3Dw", "3Fw", "3Bw", 
+  "3Uw2'", "3Rw2'", "3Lw2'", "3Dw2'", "3Fw2'", "3Bw2'",
+  "3Uw2", "3Rw2", "3Lw2", "3Dw2", "3Fw2", "3Bw2", 
 ]
 
 export const baseMoveGroups: modularPuzzleGroup<string[]> = {
   "3x3x3": [...tripleMoves, ...baseSlices, ...baseRotations, ...baseMoves],
   "2x2x2": [...baseRotations, ...baseMoves],
-  "4x4x4": [...wideMoves, ...tripleMoves, ...baseRotations, ...baseMoves],
+  "4x4x4": [...wideMoves, ...tripleMoves, ...baseSlices, ...baseRotations, ...baseMoves],
   "megaminx": [...baseMegaF, ...baseMega, ...baseRotations, ...baseMoves],
 }
 export const mirrorMoveGroups: modularPuzzleGroup<string[]> = {
   "3x3x3": [...tripleMirrorMoves, ...mirrorSlices, ...mirrorRotations, ...mirrorMoves],
   "2x2x2": [...mirrorRotations, ...mirrorMoves],
-  "4x4x4": [...mirrorWideMoves, ...tripleMirrorMoves, ...mirrorRotations, ...mirrorMoves],
+  "4x4x4": [...mirrorWideMoves, ...tripleMirrorMoves, ...mirrorSlices, ...mirrorRotations, ...mirrorMoves],
   "megaminx": [...mirrorMegaF, ...mirrorMega, ...mirrorRotations,...mirrorMoves],
 }
 // megaminx F would be mapped to B', (which is not intentional, should be BL' or BR'), 
@@ -155,7 +159,7 @@ export const mirrorMoveGroups: modularPuzzleGroup<string[]> = {
 export const backMoveGroups: modularPuzzleGroup<string[]> = {
   "3x3x3": [ ...tripleBackMoves, ...backSlices, ...backRotations, ...backMoves],
   "2x2x2": [...backMoves, ...backRotations],
-  "4x4x4": [...backWideMoves, ...tripleBackMoves, ...backRotations, ...backMoves],
+  "4x4x4": [...backWideMoves, ...tripleBackMoves, ...backSlices, ...backRotations, ...backMoves],
   "megaminx": [...backRightMegaF, ...backMega, ...backRotations, ...backMoves],
   "megaminx-l": [...backLeftMegaF, ...backMega, ...backRotations, ...backMoves]
 }
