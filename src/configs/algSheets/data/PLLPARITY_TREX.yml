@@ -173,6 +173,10 @@ Q:
 X:
     algs:
     - 
+        alg: Lw2 F2' U2 Lw2' F [TRIPLE LEFT BACK UNSEXY] F' L2 U2' F2' Lw2'
+        isLefty: true
+        tags: ['Direct']
+    - 
         alg: '[OPP] [LEFT E_PERM]'
         isLefty: true
         note: theres prolly a good way to do this, need to edit this alg later
