@@ -1,4 +1,4 @@
-import { useMegaPLLGrouping } from "../../setDefinition/setGroupings/megaPLL";
+import { useMegaPLLGrouping } from "../../setConstants/setGroupings/megaPLL";
 import type { ICaseList } from "../../../types/dataFormat"
 
 import yml from '../data/MEGAPLL_TREX.yml'

@@ -2,7 +2,7 @@ import { listFromData } from "../../../scripts/config/dataParsingUtilities"
 import type { IAlgset, ICaseList } from "../../../types/dataFormat"
 import merge from "ts-deepmerge"
 
-import { mpllGroupingConfig as setConfig } from "../setAndGroupingDefinition/megaPLL"
+import { mpllGroupingConfig as setConfig } from "../setDefinition/megaPLL"
 import caseDefinitions from '../setCaseListDefaults/megaPLL.yml'
 
 type GroupingNames = typeof setConfig.groupingNames[number]

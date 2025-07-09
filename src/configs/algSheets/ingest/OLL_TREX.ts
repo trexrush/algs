@@ -1,4 +1,4 @@
-import { useOLLGrouping } from "../../setDefinition/setGroupings/oll";
+import { useOLLGrouping } from "../../setConstants/setGroupings/oll";
 import type { ICaseList } from "../../../types/dataFormat"
 
 import yml from '../data/OLL_TREX.yml'

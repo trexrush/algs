@@ -1,4 +1,4 @@
-import { useParityPLLGrouping } from "../../setDefinition/setGroupings/parityPLL";
+import { useParityPLLGrouping } from "../../setConstants/setGroupings/parityPLL";
 import type { ICaseList } from "../../../types/dataFormat"
 
 import yml from '../data/PLLPARITY_TREX.yml'

@@ -2,7 +2,7 @@ import { listFromData } from "../../../scripts/config/dataParsingUtilities"
 import type { IAlgset, ICaseList } from "../../../types/dataFormat"
 import merge from "ts-deepmerge"
 
-import { pllGroupingConfig as c } from "../setAndGroupingDefinition/pll"
+import { pllGroupingConfig as c } from "../setDefinition/pll"
 import caseDefinitions from '../setCaseListDefaults/pll.yml'
 
 type GroupingNames = typeof c.groupingNames[number]

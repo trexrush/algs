@@ -1,4 +1,4 @@
-import { useEG1Grouping } from "../../setDefinition/setGroupings/eg1";
+import { useEG1Grouping } from "../../setConstants/setGroupings/eg1";
 import type { ICaseList } from "../../../types/dataFormat"
 
 import yml from '../data/EG1_TREX.yml'
