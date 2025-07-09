@@ -1,1417 +1,1705 @@
-T1:
-    name:
-    mirror:
-T2:
-    name:
-    mirror:
-T3:
-    name:
-    mirror:
-T4:
-    name:
-    mirror:
-T5:
-    name:
-    mirror:
-T6:
-    name:
-    mirror:
-T7:
-    name:
-    mirror:
-T8:
-    name:
-    mirror:
-T9:
-    name:
-    mirror:
-T10:
-    name:
-    mirror:
-T11:
-    name:
-    mirror:
-T12:
-    name:
-    mirror:
-T13:
-    name:
-    mirror:
-T14:
-    name:
-    mirror:
-T15:
-    name:
-    mirror:
-T16:
-    name:
-    mirror:
-T17:
-    name:
-    mirror:
-T18:
-    name:
-    mirror:
-T19:
-    name:
-    mirror:
-T20:
-    name:
-    mirror:
-T21:
-    name:
-    mirror:
-T22:
-    name:
-    mirror:
-T23:
-    name:
-    mirror:
-T24:
-    name:
-    mirror:
-T25:
-    name:
-    mirror:
-T26:
-    name:
-    mirror:
-T27:
-    name:
-    mirror:
-T28:
-    name:
-    mirror:
-T29:
-    name:
-    mirror:
-T30:
-    name:
-    mirror:
-T31:
-    name:
-    mirror:
-T32:
-    name:
-    mirror:
-T33:
-    name:
-    mirror:
-T34:
-    name:
-    mirror:
-T35:
-    name:
-    mirror:
-T36:
-    name:
-    mirror:
-T37:
-    name:
-    mirror:
-T38:
-    name:
-    mirror:
-T39:
-    name:
-    mirror:
-T40:
-    name:
-    mirror:
-T41:
-    name:
-    mirror:
-T42:
-    name:
-    mirror:
-T43:
-    name:
-    mirror:
-T44:
-    name:
-    mirror:
-T45:
-    name:
-    mirror:
-T46:
-    name:
-    mirror:
-T47:
-    name:
-    mirror:
-T48:
-    name:
-    mirror:
-T49:
-    name:
-    mirror:
-T50:
-    name:
-    mirror:
-T51:
-    name:
-    mirror:
-T52:
-    name:
-    mirror:
-T53:
-    name:
-    mirror:
-T54:
-    name:
-    mirror:
-T55:
-    name:
-    mirror:
-T56:
-    name:
-    mirror:
-T57:
-    name:
-    mirror:
-T58:
-    name:
-    mirror:
-T59:
-    name:
-    mirror:
-T60:
-    name:
-    mirror:
-T61:
-    name:
-    mirror:
-T62:
-    name:
-    mirror:
-T63:
-    name:
-    mirror:
-T64:
-    name:
-    mirror:
-T65:
-    name:
-    mirror:
-T66:
-    name:
-    mirror:
-T67:
-    name:
-    mirror:
-T68:
-    name:
-    mirror:
-T69:
-    name:
-    mirror:
-T70:
-    name:
-    mirror:
-T71:
-    name:
-    mirror:
-T72:
-    name:
-    mirror:
-U1:
-    name:
-    mirror:
-U2:
-    name:
-    mirror:
-U3:
-    name:
-    mirror:
-U4:
-    name:
-    mirror:
-U5:
-    name:
-    mirror:
-U6:
-    name:
-    mirror:
-U7:
-    name:
-    mirror:
-U8:
-    name:
-    mirror:
-U9:
-    name:
-    mirror:
-U10:
-    name:
-    mirror:
-U11:
-    name:
-    mirror:
-U12:
-    name:
-    mirror:
-U13:
-    name:
-    mirror:
-U14:
-    name:
-    mirror:
-U15:
-    name:
-    mirror:
-U16:
-    name:
-    mirror:
-U17:
-    name:
-    mirror:
-U18:
-    name:
-    mirror:
-U19:
-    name:
-    mirror:
-U20:
-    name:
-    mirror:
-U21:
-    name:
-    mirror:
-U22:
-    name:
-    mirror:
-U23:
-    name:
-    mirror:
-U24:
-    name:
-    mirror:
-U25:
-    name:
-    mirror:
-U26:
-    name:
-    mirror:
-U27:
-    name:
-    mirror:
-U28:
-    name:
-    mirror:
-U29:
-    name:
-    mirror:
-U30:
-    name:
-    mirror:
-U31:
-    name:
-    mirror:
-U32:
-    name:
-    mirror:
-U33:
-    name:
-    mirror:
-U34:
-    name:
-    mirror:
-U35:
-    name:
-    mirror:
-U36:
-    name:
-    mirror:
-U37:
-    name:
-    mirror:
-U38:
-    name:
-    mirror:
-U39:
-    name:
-    mirror:
-U40:
-    name:
-    mirror:
-U41:
-    name:
-    mirror:
-U42:
-    name:
-    mirror:
-U43:
-    name:
-    mirror:
-U44:
-    name:
-    mirror:
-U45:
-    name:
-    mirror:
-U46:
-    name:
-    mirror:
-U47:
-    name:
-    mirror:
-U48:
-    name:
-    mirror:
-U49:
-    name:
-    mirror:
-U50:
-    name:
-    mirror:
-U51:
-    name:
-    mirror:
-U52:
-    name:
-    mirror:
-U53:
-    name:
-    mirror:
-U54:
-    name:
-    mirror:
-U55:
-    name:
-    mirror:
-U56:
-    name:
-    mirror:
-U57:
-    name:
-    mirror:
-U58:
-    name:
-    mirror:
-U59:
-    name:
-    mirror:
-U60:
-    name:
-    mirror:
-U61:
-    name:
-    mirror:
-U62:
-    name:
-    mirror:
-U63:
-    name:
-    mirror:
-U64:
-    name:
-    mirror:
-U65:
-    name:
-    mirror:
-U66:
-    name:
-    mirror:
-U67:
-    name:
-    mirror:
-U68:
-    name:
-    mirror:
-U69:
-    name:
-    mirror:
-U70:
-    name:
-    mirror:
-U71:
-    name:
-    mirror:
-U72:
-    name:
-    mirror:
-L1:
-    name:
-    mirror:
-L2:
-    name:
-    mirror:
-L3:
-    name:
-    mirror:
-L4:
-    name:
-    mirror:
-L5:
-    name:
-    mirror:
-L6:
-    name:
-    mirror:
-L7:
-    name:
-    mirror:
-L8:
-    name:
-    mirror:
-L9:
-    name:
-    mirror:
-L10:
-    name:
-    mirror:
-L11:
-    name:
-    mirror:
-L12:
-    name:
-    mirror:
-L13:
-    name:
-    mirror:
-L14:
-    name:
-    mirror:
-L15:
-    name:
-    mirror:
-L16:
-    name:
-    mirror:
-L17:
-    name:
-    mirror:
-L18:
-    name:
-    mirror:
-L19:
-    name:
-    mirror:
-L20:
-    name:
-    mirror:
-L21:
-    name:
-    mirror:
-L22:
-    name:
-    mirror:
-L23:
-    name:
-    mirror:
-L24:
-    name:
-    mirror:
-L25:
-    name:
-    mirror:
-L26:
-    name:
-    mirror:
-L27:
-    name:
-    mirror:
-L28:
-    name:
-    mirror:
-L29:
-    name:
-    mirror:
-L30:
-    name:
-    mirror:
-L31:
-    name:
-    mirror:
-L32:
-    name:
-    mirror:
-L33:
-    name:
-    mirror:
-L34:
-    name:
-    mirror:
-L35:
-    name:
-    mirror:
-L36:
-    name:
-    mirror:
-L37:
-    name:
-    mirror:
-L38:
-    name:
-    mirror:
-L39:
-    name:
-    mirror:
-L40:
-    name:
-    mirror:
-L41:
-    name:
-    mirror:
-L42:
-    name:
-    mirror:
-L43:
-    name:
-    mirror:
-L44:
-    name:
-    mirror:
-L45:
-    name:
-    mirror:
-L46:
-    name:
-    mirror:
-L47:
-    name:
-    mirror:
-L48:
-    name:
-    mirror:
-L49:
-    name:
-    mirror:
-L50:
-    name:
-    mirror:
-L51:
-    name:
-    mirror:
-L52:
-    name:
-    mirror:
-L53:
-    name:
-    mirror:
-L54:
-    name:
-    mirror:
-L55:
-    name:
-    mirror:
-L56:
-    name:
-    mirror:
-L57:
-    name:
-    mirror:
-L58:
-    name:
-    mirror:
-L59:
-    name:
-    mirror:
-L60:
-    name:
-    mirror:
-L61:
-    name:
-    mirror:
-L62:
-    name:
-    mirror:
-L63:
-    name:
-    mirror:
-L64:
-    name:
-    mirror:
-L65:
-    name:
-    mirror:
-L66:
-    name:
-    mirror:
-L67:
-    name:
-    mirror:
-L68:
-    name:
-    mirror:
-L69:
-    name:
-    mirror:
-L70:
-    name:
-    mirror:
-L71:
-    name:
-    mirror:
-L72:
-    name:
-    mirror:
-H1:
-    name:
-    mirror:
-H2:
-    name:
-    mirror:
-H3:
-    name:
-    mirror:
-H4:
-    name:
-    mirror:
-H5:
-    name:
-    mirror:
-H6:
-    name:
-    mirror:
-H7:
-    name:
-    mirror:
-H8:
-    name:
-    mirror:
-H9:
-    name:
-    mirror:
-H10:
-    name:
-    mirror:
-H11:
-    name:
-    mirror:
-H12:
-    name:
-    mirror:
-H13:
-    name:
-    mirror:
-H14:
-    name:
-    mirror:
-H15:
-    name:
-    mirror:
-H16:
-    name:
-    mirror:
-H17:
-    name:
-    mirror:
-H18:
-    name:
-    mirror:
-H19:
-    name:
-    mirror:
-H20:
-    name:
-    mirror:
-H21:
-    name:
-    mirror:
-H22:
-    name:
-    mirror:
-H23:
-    name:
-    mirror:
-H24:
-    name:
-    mirror:
-H25:
-    name:
-    mirror:
-H26:
-    name:
-    mirror:
-H27:
-    name:
-    mirror:
-H28:
-    name:
-    mirror:
-H29:
-    name:
-    mirror:
-H30:
-    name:
-    mirror:
-H31:
-    name:
-    mirror:
-H32:
-    name:
-    mirror:
-H33:
-    name:
-    mirror:
-H34:
-    name:
-    mirror:
-H35:
-    name:
-    mirror:
-H36:
-    name:
-    mirror:
-H37:
-    name:
-    mirror:
-H38:
-    name:
-    mirror:
-H39:
-    name:
-    mirror:
-H40:
-    name:
-    mirror:
-Pi1:
-    name:
-    mirror:
-Pi2:
-    name:
-    mirror:
-Pi3:
-    name:
-    mirror:
-Pi4:
-    name:
-    mirror:
-Pi5:
-    name:
-    mirror:
-Pi6:
-    name:
-    mirror:
-Pi7:
-    name:
-    mirror:
-Pi8:
-    name:
-    mirror:
-Pi9:
-    name:
-    mirror:
-Pi10:
-    name:
-    mirror:
-Pi11:
-    name:
-    mirror:
-Pi12:
-    name:
-    mirror:
-Pi13:
-    name:
-    mirror:
-Pi14:
-    name:
-    mirror:
-Pi15:
-    name:
-    mirror:
-Pi16:
-    name:
-    mirror:
-Pi17:
-    name:
-    mirror:
-Pi18:
-    name:
-    mirror:
-Pi19:
-    name:
-    mirror:
-Pi20:
-    name:
-    mirror:
-Pi21:
-    name:
-    mirror:
-Pi22:
-    name:
-    mirror:
-Pi23:
-    name:
-    mirror:
-Pi24:
-    name:
-    mirror:
-Pi25:
-    name:
-    mirror:
-Pi26:
-    name:
-    mirror:
-Pi27:
-    name:
-    mirror:
-Pi28:
-    name:
-    mirror:
-Pi29:
-    name:
-    mirror:
-Pi30:
-    name:
-    mirror:
-Pi31:
-    name:
-    mirror:
-Pi32:
-    name:
-    mirror:
-Pi33:
-    name:
-    mirror:
-Pi34:
-    name:
-    mirror:
-Pi35:
-    name:
-    mirror:
-Pi36:
-    name:
-    mirror:
-Pi37:
-    name:
-    mirror:
-Pi38:
-    name:
-    mirror:
-Pi39:
-    name:
-    mirror:
-Pi40:
-    name:
-    mirror:
-Pi41:
-    name:
-    mirror:
-Pi42:
-    name:
-    mirror:
-Pi43:
-    name:
-    mirror:
-Pi44:
-    name:
-    mirror:
-Pi45:
-    name:
-    mirror:
-Pi46:
-    name:
-    mirror:
-Pi47:
-    name:
-    mirror:
-Pi48:
-    name:
-    mirror:
-Pi49:
-    name:
-    mirror:
-Pi50:
-    name:
-    mirror:
-Pi51:
-    name:
-    mirror:
-Pi52:
-    name:
-    mirror:
-Pi53:
-    name:
-    mirror:
-Pi54:
-    name:
-    mirror:
-Pi55:
-    name:
-    mirror:
-Pi56:
-    name:
-    mirror:
-Pi57:
-    name:
-    mirror:
-Pi58:
-    name:
-    mirror:
-Pi59:
-    name:
-    mirror:
-Pi60:
-    name:
-    mirror:
-Pi61:
-    name:
-    mirror:
-Pi62:
-    name:
-    mirror:
-Pi63:
-    name:
-    mirror:
-Pi64:
-    name:
-    mirror:
-Pi65:
-    name:
-    mirror:
-Pi66:
-    name:
-    mirror:
-Pi67:
-    name:
-    mirror:
-Pi68:
-    name:
-    mirror:
-Pi69:
-    name:
-    mirror:
-Pi70:
-    name:
-    mirror:
-Pi71:
-    name:
-    mirror:
-Pi72:
-    name:
-    mirror:
-S1:
-    name:
-    mirror:
-S2:
-    name:
-    mirror:
-S3:
-    name:
-    mirror:
-S4:
-    name:
-    mirror:
-S5:
-    name:
-    mirror:
-S6:
-    name:
-    mirror:
-S7:
-    name:
-    mirror:
-S8:
-    name:
-    mirror:
-S9:
-    name:
-    mirror:
-S10:
-    name:
-    mirror:
-S11:
-    name:
-    mirror:
-S12:
-    name:
-    mirror:
-S13:
-    name:
-    mirror:
-S14:
-    name:
-    mirror:
-S15:
-    name:
-    mirror:
-S16:
-    name:
-    mirror:
-S17:
-    name:
-    mirror:
-S18:
-    name:
-    mirror:
-S19:
-    name:
-    mirror:
-S20:
-    name:
-    mirror:
-S21:
-    name:
-    mirror:
-S22:
-    name:
-    mirror:
-S23:
-    name:
-    mirror:
-S24:
-    name:
-    mirror:
-S25:
-    name:
-    mirror:
-S26:
-    name:
-    mirror:
-S27:
-    name:
-    mirror:
-S28:
-    name:
-    mirror:
-S29:
-    name:
-    mirror:
-S30:
-    name:
-    mirror:
-S31:
-    name:
-    mirror:
-S32:
-    name:
-    mirror:
-S33:
-    name:
-    mirror:
-S34:
-    name:
-    mirror:
-S35:
-    name:
-    mirror:
-S36:
-    name:
-    mirror:
-S37:
-    name:
-    mirror:
-S38:
-    name:
-    mirror:
-S39:
-    name:
-    mirror:
-S40:
-    name:
-    mirror:
-S41:
-    name:
-    mirror:
-S42:
-    name:
-    mirror:
-S43:
-    name:
-    mirror:
-S44:
-    name:
-    mirror:
-S45:
-    name:
-    mirror:
-S46:
-    name:
-    mirror:
-S47:
-    name:
-    mirror:
-S48:
-    name:
-    mirror:
-S49:
-    name:
-    mirror:
-S50:
-    name:
-    mirror:
-S51:
-    name:
-    mirror:
-S52:
-    name:
-    mirror:
-S53:
-    name:
-    mirror:
-S54:
-    name:
-    mirror:
-S55:
-    name:
-    mirror:
-S56:
-    name:
-    mirror:
-S57:
-    name:
-    mirror:
-S58:
-    name:
-    mirror:
-S59:
-    name:
-    mirror:
-S60:
-    name:
-    mirror:
-S61:
-    name:
-    mirror:
-S62:
-    name:
-    mirror:
-S63:
-    name:
-    mirror:
-S64:
-    name:
-    mirror:
-S65:
-    name:
-    mirror:
-S66:
-    name:
-    mirror:
-S67:
-    name:
-    mirror:
-S68:
-    name:
-    mirror:
-S69:
-    name:
-    mirror:
-S70:
-    name:
-    mirror:
-S71:
-    name:
-    mirror:
-S72:
-    name:
-    mirror:
-AS1:
-    name:
-    mirror:
-AS2:
-    name:
-    mirror:
-AS3:
-    name:
-    mirror:
-AS4:
-    name:
-    mirror:
-AS5:
-    name:
-    mirror:
-AS6:
-    name:
-    mirror:
-AS7:
-    name:
-    mirror:
-AS8:
-    name:
-    mirror:
-AS9:
-    name:
-    mirror:
-AS10:
-    name:
-    mirror:
-AS11:
-    name:
-    mirror:
-AS12:
-    name:
-    mirror:
-AS13:
-    name:
-    mirror:
-AS14:
-    name:
-    mirror:
-AS15:
-    name:
-    mirror:
-AS16:
-    name:
-    mirror:
-AS17:
-    name:
-    mirror:
-AS18:
-    name:
-    mirror:
-AS19:
-    name:
-    mirror:
-AS20:
-    name:
-    mirror:
-AS21:
-    name:
-    mirror:
-AS22:
-    name:
-    mirror:
-AS23:
-    name:
-    mirror:
-AS24:
-    name:
-    mirror:
-AS25:
-    name:
-    mirror:
-AS26:
-    name:
-    mirror:
-AS27:
-    name:
-    mirror:
-AS28:
-    name:
-    mirror:
-AS29:
-    name:
-    mirror:
-AS30:
-    name:
-    mirror:
-AS31:
-    name:
-    mirror:
-AS32:
-    name:
-    mirror:
-AS33:
-    name:
-    mirror:
-AS34:
-    name:
-    mirror:
-AS35:
-    name:
-    mirror:
-AS36:
-    name:
-    mirror:
-AS37:
-    name:
-    mirror:
-AS38:
-    name:
-    mirror:
-AS39:
-    name:
-    mirror:
-AS40:
-    name:
-    mirror:
-AS41:
-    name:
-    mirror:
-AS42:
-    name:
-    mirror:
-AS43:
-    name:
-    mirror:
-AS44:
-    name:
-    mirror:
-AS45:
-    name:
-    mirror:
-AS46:
-    name:
-    mirror:
-AS47:
-    name:
-    mirror:
-AS48:
-    name:
-    mirror:
-AS49:
-    name:
-    mirror:
-AS50:
-    name:
-    mirror:
-AS51:
-    name:
-    mirror:
-AS52:
-    name:
-    mirror:
-AS53:
-    name:
-    mirror:
-AS54:
-    name:
-    mirror:
-AS55:
-    name:
-    mirror:
-AS56:
-    name:
-    mirror:
-AS57:
-    name:
-    mirror:
-AS58:
-    name:
-    mirror:
-AS59:
-    name:
-    mirror:
-AS60:
-    name:
-    mirror:
-AS61:
-    name:
-    mirror:
-AS62:
-    name:
-    mirror:
-AS63:
-    name:
-    mirror:
-AS64:
-    name:
-    mirror:
-AS65:
-    name:
-    mirror:
-AS66:
-    name:
-    mirror:
-AS67:
-    name:
-    mirror:
-AS68:
-    name:
-    mirror:
-AS69:
-    name:
-    mirror:
-AS70:
-    name:
-    mirror:
-AS71:
-    name:
-    mirror:
-AS72:
-    name:
-    mirror:
-
+TP1:
+    name: T72
+    altNames:
+    - TS
+    - Pure_S
+    - BBFF_C/C
+    mirror: Ty
+TP2:
+    name: T71
+    altNames:
+    - TH
+    - Pure_H
+    - BBFF_O/O
+    mirror: Ty
+TP3:
+    name: T69
+    altNames:
+    - TZ+
+    - Pure_Z
+    - BBFF_A/A
+    mirror: Ty
+TP4:
+    name: T70
+    altNames:
+    - TZ-
+    - Pure_AntiZ
+    - BBFF_OxO
+    mirror: Ty
+TP5:
+    name: T62
+    altNames:
+    - TUa2
+    - Pure_BarA
+    - BBFF_C/A
+    mirror: Ty
+TP6:
+    name: T61
+    altNames:
+    - TUb2
+    - Pure_BarO
+    - BBFF_C/O
+    mirror: Ty
+TP7:
+    name: T64
+    altNames:
+    - TUb-
+    - Pure_HAnti
+    - BBFF_O/A
+    mirror: Ty
+TP8:
+    name: T66
+    altNames:
+    - TUa+
+    - Pure_OBar
+    - BBFF_O/C
+    mirror: Ty
+TP9:
+    name: T63
+    altNames:
+    - TUa-
+    - Pure_HArrow
+    - BBFF_CxO
+    mirror: Ty
+TP10:
+    name: T65
+    altNames:
+    - TUb+
+    - Pure_ABar
+    - BBFF_A/C
+    mirror: Ty
+TP11:
+    name: T68
+    altNames:
+    - TUa
+    - Pure_VAnti
+    - BBFF_A/O
+    mirror: Ty
+TP12:
+    name: T67
+    altNames:
+    - TUb
+    - Pure_VArrow
+    - BBFF_OxC
+    mirror: Ty
+TD1:
+    name: T55
+    altNames:
+    - TNa
+    - Diag_BarO
+    - FBFB_C/O
+    mirror: Ty
+TD2:
+    name: T56
+    altNames:
+    - TNb
+    - Diag_OBar
+    - FBFB_O/C
+    mirror: Ty
+TD3:
+    name: T60
+    altNames:
+    - TV-
+    - Diag_S
+    - FBFB_C/C
+    mirror: Ty
+TD4:
+    name: T51
+    altNames:
+    - TV
+    - Diag_HAnti
+    - FBFB_O/A
+    mirror: Ty
+TD5:
+    name: T52
+    altNames:
+    - TY2
+    - Diag_AntiZ
+    - FBFB_OxO
+    mirror: Ty
+TD6:
+    name: T57
+    altNames:
+    - TY-
+    - Diag_ABar
+    - FBFB_A/C
+    mirror: Ty
+TD7:
+    name: T59
+    altNames:
+    - TY+
+    - Diag_BarA
+    - FBFB_C/A
+    mirror: Ty
+TD8:
+    name: T49
+    altNames:
+    - TY
+    - Diag_H
+    - FBFB_O/O
+    mirror: Ty
+TD9:
+    name: T53
+    altNames:
+    - TE-
+    - Diag_HArrow
+    - FBFB_CxO
+    mirror: Ty
+TD10:
+    name: T54
+    altNames:
+    - TE+
+    - Diag_VArrow
+    - FBFB_OxC
+    - Bitchass
+    mirror: Ty
+TD11:
+    name: T58
+    altNames:
+    - TV+
+    - Diag_Z
+    - FBFB_A/A
+    mirror: Ty
+TD12:
+    name: T50
+    altNames:
+    - TV2
+    - Diag_VAnti
+    - FBFB_A/O
+    mirror: Ty
+TT1:
+    name: T27
+    altNames:
+    - TJb+
+    - AdjB_S
+    - RLFF_C/C
+    mirror: Ty
+TT2:
+    name: T25
+    altNames:
+    - TJa-
+    - AdjB_BarA
+    - RLFF_C/A
+    mirror: Ty
+TT3:
+    name: T32
+    altNames:
+    - TF-
+    - AdjB_BarO
+    - RLFF_C/O
+    mirror: Ty
+TT4:
+    name: T31
+    altNames:
+    - TT-
+    - AdjB_OBar
+    - RLFF_O/C
+    mirror: Ty
+TT5:
+    name: T28
+    altNames:
+    - TRb
+    - AdjB_Z
+    - RLFF_A/A
+    mirror: Ty
+TT6:
+    name: T26
+    altNames:
+    - TRa
+    - AdjB_ABar
+    - RLFF_A/C
+    mirror: Ty
+TT7:
+    name: T35
+    altNames:
+    - TGb+
+    - AdjB_H
+    - RLFF_O/O
+    mirror: Ty
+TT8:
+    name: T36
+    altNames:
+    - TGd+
+    - AdjB_HAnti
+    - RLFF_O/A
+    mirror: Ty
+TT9:
+    name: T33
+    altNames:
+    - TGc+
+    - AdjB_VAnti
+    - RLFF_A/O
+    mirror: Ty
+TT10:
+    name: T34
+    altNames:
+    - TGa+
+    - AdjB_AntiZ
+    - RLFF_OxO
+    mirror: Ty
+TT11:
+    name: T30
+    altNames:
+    - TAa-
+    - AdjB_HArrow
+    - RLFF_CxO
+    mirror: Ty
+TT12:
+    name: T29
+    altNames:
+    - TAb+
+    - AdjB_VArrow
+    - RLFF_OxC
+    mirror: Ty
+TB1:
+    name: T43
+    altNames:
+    - TT+
+    - AdjF_AntiZ
+    - FFLR_OxO
+    mirror: Ty
+TB2:
+    name: T44
+    altNames:
+    - TF+
+    - AdjF_Z
+    - FFLR_A/A
+    mirror: Ty
+TB3:
+    name: T41
+    altNames:
+    - TAb-
+    - AdjF_S
+    - FFLR_C/C
+    mirror: Ty
+TB4:
+    name: T42
+    altNames:
+    - TAa+
+    - AdjF_H
+    - FFLR_O/O
+    mirror: Ty
+TB5:
+    name: T38
+    altNames:
+    - TJa+
+    - AdjF_BarA
+    - FFLR_C/A
+    mirror: Ty
+TB6:
+    name: T40
+    altNames:
+    - TJb-
+    - AdjF_OBar
+    - FFLR_O/C
+    mirror: Ty
+TB7:
+    name: T46
+    altNames:
+    - TGb-
+    - AdjF_BarO
+    - FFLR_C/O
+    mirror: Ty
+TB8:
+    name: T45
+    altNames:
+    - TGd-
+    - AdjF_HAnti
+    - FFLR_O/A
+    mirror: Ty
+TB9:
+    name: T48
+    altNames:
+    - TGa-
+    - AdjF_VArrow
+    - FFLR_OxC
+    mirror: Ty
+TB10:
+    name: T47
+    altNames:
+    - TGc-
+    - AdjF_ABar
+    - FFLR_A/C
+    mirror: Ty
+TB11:
+    name: T39
+    altNames:
+    - TRa2
+    - AdjF_VAnti
+    - FFLR_A/O
+    mirror: Ty
+TB12:
+    name: T37
+    altNames:
+    - TRb2
+    - AdjF_HArrow
+    - FFLR_CxO
+    mirror: Ty
+TL1:
+    name: T18
+    altNames:
+    - TAb
+    - AdjL_VArrow
+    - FLFR_OxC
+    mirror: Ty
+TL2:
+    name: T21
+    altNames:
+    - TGb
+    - AdjL_VAnti
+    - FLFR_A/O
+    mirror: Ty
+TL3:
+    name: T13
+    altNames:
+    - TJa2
+    - AdjL_S
+    - FLFR_C/C
+    mirror: Ty
+TL4:
+    name: T14
+    altNames:
+    - TJb
+    - AdjL_ABar
+    - FLFR_A/C
+    mirror: Ty
+TL5:
+    name: T22
+    altNames:
+    - TGc
+    - AdjL_AntiZ
+    - FLFR_OxO
+    mirror: Ty
+TL6:
+    name: T20
+    altNames:
+    - TT2
+    - AdjL_BarO
+    - FLFR_C/O
+    mirror: Ty
+TL7:
+    name: T15
+    altNames:
+    - TRb-
+    - AdjL_BarA
+    - FLFR_C/A
+    mirror: Ty
+TL8:
+    name: T19
+    altNames:
+    - TF2
+    - AdjL_OBar
+    - FLFR_O/C
+    mirror: Ty
+TL9:
+    name: T18
+    altNames:
+    - TAa2
+    - AdjL_HArrow
+    - FLFR_CxO
+    mirror: Ty
+TL10:
+    name: T24
+    altNames:
+    - TGd
+    - AdjL_H
+    - FLFR_O/O
+    mirror: Ty
+TL11:
+    name: T23
+    altNames:
+    - TGa
+    - AdjL_HAnti
+    - FLFR_O/A
+    mirror: Ty
+TL12:
+    name: T16
+    altNames:
+    - TRa-
+    - AdjL_Z
+    - FLFR_A/A
+    mirror: Ty
+TR1:
+    name: T6
+    altNames:
+    - TAa
+    - AdjR_S
+    - RFLF_C/C
+    mirror: Ty
+TR2:
+    name: T10
+    altNames:
+    - TGd2
+    - AdjR_OBar
+    - RFLF_O/C
+    mirror: Ty
+TR3:
+    name: T3
+    altNames:
+    - TJb2
+    - AdjR_ABar
+    - RFLF_A/C
+    mirror: Ty
+TR4:
+    name: T4
+    altNames:
+    - TJa
+    - AdjR_BarO
+    - RFLF_C/O
+    mirror: Ty
+TR5:
+    name: T9
+    altNames:
+    - TGa2
+    - AdjR_BarA
+    - RFLF_C/A
+    mirror: Ty
+TR6:
+    name: T8
+    altNames:
+    - TT
+    - AdjR_AntiZ
+    - RFLF_OxO
+    mirror: Ty
+TR7:
+    name: T1
+    altNames:
+    - TRa+
+    - AdjR_VArrow
+    - RFLF_OxC
+    mirror: Ty
+TR8:
+    name: T7
+    altNames:
+    - TF
+    - AdjR_Z
+    - RFLF_A/A
+    mirror: Ty
+TR9:
+    name: T5
+    altNames:
+    - TAb2
+    - AdjR_H
+    - RFLF_O/O
+    mirror: Ty
+TR10:
+    name: T11
+    altNames:
+    - TGb2
+    - AdjR_VAnti
+    - RFLF_A/O
+    mirror: Ty
+TR11:
+    name: T12
+    altNames:
+    - TGc2
+    - AdjR_HArrow
+    - RFLF_CxO
+    mirror: Ty
+TR12:
+    name: T2
+    altNames:
+    - TRb+
+    - AdjR_HAnti
+    - RFLF_O/A
+    mirror: Ty
+UP1:
+    name: U72
+    mirror: Uy
+UP2:
+    name: U71
+    mirror: Uy
+UP3:
+    name: U70
+    mirror: Uy
+UP4:
+    name: U69
+    mirror: Uy
+UP5:
+    name: U61
+    mirror: Uy
+UP6:
+    name: U62
+    mirror: Uy
+UP7:
+    name: U63
+    mirror: Uy
+UP8:
+    name: U65
+    mirror: Uy
+UP9:
+    name: U66
+    mirror: Uy
+UP10:
+    name: U64
+    mirror: Uy
+UP11:
+    name: U67
+    mirror: Uy
+UP12:
+    name: U68
+    mirror: Uy
+UD1:
+    name: U51
+    mirror: Uy
+UD2:
+    name: U60
+    mirror: Uy
+UD3:
+    name: U52
+    mirror: Uy
+UD4:
+    name: U57
+    mirror: Uy
+UD5:
+    name: U49
+    mirror: Uy
+UD6:
+    name: U59
+    mirror: Uy
+UD7:
+    name: U55
+    mirror: Uy
+UD8:
+    name: U56
+    mirror: Uy
+UD9:
+    name: U54
+    mirror: Uy
+UD10:
+    name: U53
+    mirror: Uy
+UD11:
+    name: U58
+    mirror: Uy
+UD12:
+    name: U50
+    mirror: Uy
+UT1:
+    name: U25
+    mirror: Uy
+UT2:
+    name: U27
+    mirror: Uy
+UT3:
+    name: U32
+    mirror: Uy
+UT4:
+    name: U31
+    mirror: Uy
+UT5:
+    name: U28
+    mirror: Uy
+UT6:
+    name: U26
+    mirror: Uy
+UT7:
+    name: U35
+    mirror: Uy
+UT8:
+    name: U36
+    mirror: Uy
+UT9:
+    name: U33
+    mirror: Uy
+UT10:
+    name: U34
+    mirror: Uy
+UT11:
+    name: U30
+    mirror: Uy
+UT12:
+    name: U29
+    mirror: Uy
+UB1:
+    name: U43
+    mirror: Uy
+UB2:
+    name: U44
+    mirror: Uy
+UB3:
+    name: U42
+    mirror: Uy
+UB4:
+    name: U41
+    mirror: Uy
+UB5:
+    name: U38
+    mirror: Uy
+UB6:
+    name: U40
+    mirror: Uy
+UB7:
+    name: U47
+    mirror: Uy
+UB8:
+    name: U48
+    mirror: Uy
+UB9:
+    name: U46
+    mirror: Uy
+UB10:
+    name: U45
+    mirror: Uy
+UB11:
+    name: U39
+    mirror: Uy
+UB12:
+    name: U37
+    mirror: Uy
+UL1:
+    name: U17
+    mirror: Uy
+UL2:
+    name: U13
+    mirror: Uy
+UL3:
+    name: U14
+    mirror: Uy
+UL4:
+    name: U15
+    mirror: Uy
+UL5:
+    name: U20
+    mirror: Uy
+UL6:
+    name: U22
+    mirror: Uy
+UL7:
+    name: U19
+    mirror: Uy
+UL8:
+    name: U21
+    mirror: Uy
+UL9:
+    name: U18
+    mirror: Uy
+UL10:
+    name: U24
+    mirror: Uy
+UL11:
+    name: U16
+    mirror: Uy
+UL12:
+    name: U23
+    mirror: Uy
+UR1:
+    name: U6
+    mirror: Uy
+UR2:
+    name: U3
+    mirror: Uy
+UR3:
+    name: U4
+    mirror: Uy
+UR4:
+    name: U1
+    mirror: Uy
+UR5:
+    name: U8
+    mirror: Uy
+UR6:
+    name: U9
+    mirror: Uy
+UR7:
+    name: U7
+    mirror: Uy
+UR8:
+    name: U10
+    mirror: Uy
+UR9:
+    name: U5
+    mirror: Uy
+UR10:
+    name: U11
+    mirror: Uy
+UR11:
+    name: U2
+    mirror: Uy
+UR12:
+    name: U12
+    mirror: Uy
+LP1:
+    name: Lx
+    mirror: Ly
+LP2:
+    name: Lx
+    mirror: Ly
+LP3:
+    name: Lx
+    mirror: Ly
+LP4:
+    name: Lx
+    mirror: Ly
+LP5:
+    name: Lx
+    mirror: Ly
+LP6:
+    name: Lx
+    mirror: Ly
+LP7:
+    name: Lx
+    mirror: Ly
+LP8:
+    name: Lx
+    mirror: Ly
+LP9:
+    name: Lx
+    mirror: Ly
+LP10:
+    name: Lx
+    mirror: Ly
+LP11:
+    name: Lx
+    mirror: Ly
+LP12:
+    name: Lx
+    mirror: Ly
+LD1:
+    name: Lx
+    mirror: Ly
+LD2:
+    name: Lx
+    mirror: Ly
+LD3:
+    name: Lx
+    mirror: Ly
+LD4:
+    name: Lx
+    mirror: Ly
+LD5:
+    name: Lx
+    mirror: Ly
+LD6:
+    name: Lx
+    mirror: Ly
+LD7:
+    name: Lx
+    mirror: Ly
+LD8:
+    name: Lx
+    mirror: Ly
+LD9:
+    name: Lx
+    mirror: Ly
+LD10:
+    name: Lx
+    mirror: Ly
+LD11:
+    name: Lx
+    mirror: Ly
+LD12:
+    name: Lx
+    mirror: Ly
+LT1:
+    name: Lx
+    mirror: Ly
+LT2:
+    name: Lx
+    mirror: Ly
+LT3:
+    name: Lx
+    mirror: Ly
+LT4:
+    name: Lx
+    mirror: Ly
+LT5:
+    name: Lx
+    mirror: Ly
+LT6:
+    name: Lx
+    mirror: Ly
+LT7:
+    name: Lx
+    mirror: Ly
+LT8:
+    name: Lx
+    mirror: Ly
+LT9:
+    name: Lx
+    mirror: Ly
+LT10:
+    name: Lx
+    mirror: Ly
+LT11:
+    name: Lx
+    mirror: Ly
+LT12:
+    name: Lx
+    mirror: Ly
+LB1:
+    name: Lx
+    mirror: Ly
+LB2:
+    name: Lx
+    mirror: Ly
+LB3:
+    name: Lx
+    mirror: Ly
+LB4:
+    name: Lx
+    mirror: Ly
+LB5:
+    name: Lx
+    mirror: Ly
+LB6:
+    name: Lx
+    mirror: Ly
+LB7:
+    name: Lx
+    mirror: Ly
+LB8:
+    name: Lx
+    mirror: Ly
+LB9:
+    name: Lx
+    mirror: Ly
+LB10:
+    name: Lx
+    mirror: Ly
+LB11:
+    name: Lx
+    mirror: Ly
+LB12:
+    name: Lx
+    mirror: Ly
+LL1:
+    name: Lx
+    mirror: Ly
+LL2:
+    name: Lx
+    mirror: Ly
+LL3:
+    name: Lx
+    mirror: Ly
+LL4:
+    name: Lx
+    mirror: Ly
+LL5:
+    name: Lx
+    mirror: Ly
+LL6:
+    name: Lx
+    mirror: Ly
+LL7:
+    name: Lx
+    mirror: Ly
+LL8:
+    name: Lx
+    mirror: Ly
+LL9:
+    name: Lx
+    mirror: Ly
+LL10:
+    name: Lx
+    mirror: Ly
+LL11:
+    name: Lx
+    mirror: Ly
+LL12:
+    name: Lx
+    mirror: Ly
+LR1:
+    name: Lx
+    mirror: Ly
+LR2:
+    name: Lx
+    mirror: Ly
+LR3:
+    name: Lx
+    mirror: Ly
+LR4:
+    name: Lx
+    mirror: Ly
+LR5:
+    name: Lx
+    mirror: Ly
+LR6:
+    name: Lx
+    mirror: Ly
+LR7:
+    name: Lx
+    mirror: Ly
+LR8:
+    name: Lx
+    mirror: Ly
+LR9:
+    name: Lx
+    mirror: Ly
+LR10:
+    name: Lx
+    mirror: Ly
+LR11:
+    name: Lx
+    mirror: Ly
+LR12:
+    name: Lx
+    mirror: Ly
+HP1:
+    name: Hx
+    mirror: Hx
+HP2:
+    name: Hx
+    mirror: Hx
+HP3:
+    name: Hx
+    mirror: Hx
+HP4:
+    name: Hx
+    mirror: Hx
+HP5:
+    name: Hx
+    mirror: Hx
+HP6:
+    name: Hx
+    mirror: Hx
+HP7:
+    name: Hx
+    mirror: Hx
+HP8:
+    name: Hx
+    mirror: Hx
+HD1:
+    name: Hx
+    mirror: Hx
+HD2:
+    name: Hx
+    mirror: Hx
+HD3:
+    name: Hx
+    mirror: Hx
+HD4:
+    name: Hx
+    mirror: Hx
+HD5:
+    name: Hx
+    mirror: Hx
+HD6:
+    name: Hx
+    mirror: Hx
+HD7:
+    name: Hx
+    mirror: Hx
+HD8:
+    name: Hx
+    mirror: Hx
+HT1:
+    name: Hx
+    mirror: Hx
+HT2:
+    name: Hx
+    mirror: Hx
+HT3:
+    name: Hx
+    mirror: Hx
+HT4:
+    name: Hx
+    mirror: Hx
+HT5:
+    name: Hx
+    mirror: Hx
+HT6:
+    name: Hx
+    mirror: Hx
+HT7:
+    name: Hx
+    mirror: Hx
+HT8:
+    name: Hx
+    mirror: Hx
+HT9:
+    name: Hx
+    mirror: Hx
+HT10:
+    name: Hx
+    mirror: Hx
+HT11:
+    name: Hx
+    mirror: Hx
+HT12:
+    name: Hx
+    mirror: Hx
+HL1:
+    name: Hx
+    mirror: Hx
+HL2:
+    name: Hx
+    mirror: Hx
+HL3:
+    name: Hx
+    mirror: Hx
+HL4:
+    name: Hx
+    mirror: Hx
+HL5:
+    name: Hx
+    mirror: Hx
+HL6:
+    name: Hx
+    mirror: Hx
+HL7:
+    name: Hx
+    mirror: Hx
+HL8:
+    name: Hx
+    mirror: Hx
+HL9:
+    name: Hx
+    mirror: Hx
+HL10:
+    name: Hx
+    mirror: Hx
+HL11:
+    name: Hx
+    mirror: Hx
+HL12:
+    name: Hx
+    mirror: Hx
+PiP1:
+    name: Pix
+    mirror: Piy
+PiP2:
+    name: Pix
+    mirror: Piy
+PiP3:
+    name: Pix
+    mirror: Piy
+PiP4:
+    name: Pix
+    mirror: Piy
+PiP5:
+    name: Pix
+    mirror: Piy
+PiP6:
+    name: Pix
+    mirror: Piy
+PiP7:
+    name: Pix
+    mirror: Piy
+PiP8:
+    name: Pix
+    mirror: Piy
+PiP9:
+    name: Pix
+    mirror: Piy
+PiP10:
+    name: Pix
+    mirror: Piy
+PiP11:
+    name: Pix
+    mirror: Piy
+PiP12:
+    name: Pix
+    mirror: Piy
+PiD1:
+    name: Pix
+    mirror: Piy
+PiD2:
+    name: Pix
+    mirror: Piy
+PiD3:
+    name: Pix
+    mirror: Piy
+PiD4:
+    name: Pix
+    mirror: Piy
+PiD5:
+    name: Pix
+    mirror: Piy
+PiD6:
+    name: Pix
+    mirror: Piy
+PiD7:
+    name: Pix
+    mirror: Piy
+PiD8:
+    name: Pix
+    mirror: Piy
+PiD9:
+    name: Pix
+    mirror: Piy
+PiD10:
+    name: Pix
+    mirror: Piy
+PiD11:
+    name: Pix
+    mirror: Piy
+PiD12:
+    name: Pix
+    mirror: Piy
+PiT1:
+    name: Pix
+    mirror: Piy
+PiT2:
+    name: Pix
+    mirror: Piy
+PiT3:
+    name: Pix
+    mirror: Piy
+PiT4:
+    name: Pix
+    mirror: Piy
+PiT5:
+    name: Pix
+    mirror: Piy
+PiT6:
+    name: Pix
+    mirror: Piy
+PiT7:
+    name: Pix
+    mirror: Piy
+PiT8:
+    name: Pix
+    mirror: Piy
+PiT9:
+    name: Pix
+    mirror: Piy
+PiT10:
+    name: Pix
+    mirror: Piy
+PiT11:
+    name: Pix
+    mirror: Piy
+PiT12:
+    name: Pix
+    mirror: Piy
+PiB1:
+    name: Pix
+    mirror: Piy
+PiB2:
+    name: Pix
+    mirror: Piy
+PiB3:
+    name: Pix
+    mirror: Piy
+PiB4:
+    name: Pix
+    mirror: Piy
+PiB5:
+    name: Pix
+    mirror: Piy
+PiB6:
+    name: Pix
+    mirror: Piy
+PiB7:
+    name: Pix
+    mirror: Piy
+PiB8:
+    name: Pix
+    mirror: Piy
+PiB9:
+    name: Pix
+    mirror: Piy
+PiB10:
+    name: Pix
+    mirror: Piy
+PiB11:
+    name: Pix
+    mirror: Piy
+PiB12:
+    name: Pix
+    mirror: Piy
+PiL1:
+    name: Pix
+    mirror: Piy
+PiL2:
+    name: Pix
+    mirror: Piy
+PiL3:
+    name: Pix
+    mirror: Piy
+PiL4:
+    name: Pix
+    mirror: Piy
+PiL5:
+    name: Pix
+    mirror: Piy
+PiL6:
+    name: Pix
+    mirror: Piy
+PiL7:
+    name: Pix
+    mirror: Piy
+PiL8:
+    name: Pix
+    mirror: Piy
+PiL9:
+    name: Pix
+    mirror: Piy
+PiL10:
+    name: Pix
+    mirror: Piy
+PiL11:
+    name: Pix
+    mirror: Piy
+PiL12:
+    name: Pix
+    mirror: Piy
+PiR1:
+    name: Pix
+    mirror: Piy
+PiR2:
+    name: Pix
+    mirror: Piy
+PiR3:
+    name: Pix
+    mirror: Piy
+PiR4:
+    name: Pix
+    mirror: Piy
+PiR5:
+    name: Pix
+    mirror: Piy
+PiR6:
+    name: Pix
+    mirror: Piy
+PiR7:
+    name: Pix
+    mirror: Piy
+PiR8:
+    name: Pix
+    mirror: Piy
+PiR9:
+    name: Pix
+    mirror: Piy
+PiR10:
+    name: Pix
+    mirror: Piy
+PiR11:
+    name: Pix
+    mirror: Piy
+PiR12:
+    name: Pix
+    mirror: Piy
+SP1:
+    name: Sx
+    mirror: Sy
+SP2:
+    name: Sx
+    mirror: Sy
+SP3:
+    name: Sx
+    mirror: Sy
+SP4:
+    name: Sx
+    mirror: Sy
+SP5:
+    name: Sx
+    mirror: Sy
+SP6:
+    name: Sx
+    mirror: Sy
+SP7:
+    name: Sx
+    mirror: Sy
+SP8:
+    name: Sx
+    mirror: Sy
+SP9:
+    name: Sx
+    mirror: Sy
+SP10:
+    name: Sx
+    mirror: Sy
+SP11:
+    name: Sx
+    mirror: Sy
+SP12:
+    name: Sx
+    mirror: Sy
+SD1:
+    name: Sx
+    mirror: Sy
+SD2:
+    name: Sx
+    mirror: Sy
+SD3:
+    name: Sx
+    mirror: Sy
+SD4:
+    name: Sx
+    mirror: Sy
+SD5:
+    name: Sx
+    mirror: Sy
+SD6:
+    name: Sx
+    mirror: Sy
+SD7:
+    name: Sx
+    mirror: Sy
+SD8:
+    name: Sx
+    mirror: Sy
+SD9:
+    name: Sx
+    mirror: Sy
+SD10:
+    name: Sx
+    mirror: Sy
+SD11:
+    name: Sx
+    mirror: Sy
+SD12:
+    name: Sx
+    mirror: Sy
+ST1:
+    name: Sx
+    mirror: Sy
+ST2:
+    name: Sx
+    mirror: Sy
+ST3:
+    name: Sx
+    mirror: Sy
+ST4:
+    name: Sx
+    mirror: Sy
+ST5:
+    name: Sx
+    mirror: Sy
+ST6:
+    name: Sx
+    mirror: Sy
+ST7:
+    name: Sx
+    mirror: Sy
+ST8:
+    name: Sx
+    mirror: Sy
+ST9:
+    name: Sx
+    mirror: Sy
+ST10:
+    name: Sx
+    mirror: Sy
+ST11:
+    name: Sx
+    mirror: Sy
+ST12:
+    name: Sx
+    mirror: Sy
+SB1:
+    name: Sx
+    mirror: Sy
+SB2:
+    name: Sx
+    mirror: Sy
+SB3:
+    name: Sx
+    mirror: Sy
+SB4:
+    name: Sx
+    mirror: Sy
+SB5:
+    name: Sx
+    mirror: Sy
+SB6:
+    name: Sx
+    mirror: Sy
+SB7:
+    name: Sx
+    mirror: Sy
+SB8:
+    name: Sx
+    mirror: Sy
+SB9:
+    name: Sx
+    mirror: Sy
+SB10:
+    name: Sx
+    mirror: Sy
+SB11:
+    name: Sx
+    mirror: Sy
+SB12:
+    name: Sx
+    mirror: Sy
+SL1:
+    name: Sx
+    mirror: Sy
+SL2:
+    name: Sx
+    mirror: Sy
+SL3:
+    name: Sx
+    mirror: Sy
+SL4:
+    name: Sx
+    mirror: Sy
+SL5:
+    name: Sx
+    mirror: Sy
+SL6:
+    name: Sx
+    mirror: Sy
+SL7:
+    name: Sx
+    mirror: Sy
+SL8:
+    name: Sx
+    mirror: Sy
+SL9:
+    name: Sx
+    mirror: Sy
+SL10:
+    name: Sx
+    mirror: Sy
+SL11:
+    name: Sx
+    mirror: Sy
+SL12:
+    name: Sx
+    mirror: Sy
+SR1:
+    name: Sx
+    mirror: Sy
+SR2:
+    name: Sx
+    mirror: Sy
+SR3:
+    name: Sx
+    mirror: Sy
+SR4:
+    name: Sx
+    mirror: Sy
+SR5:
+    name: Sx
+    mirror: Sy
+SR6:
+    name: Sx
+    mirror: Sy
+SR7:
+    name: Sx
+    mirror: Sy
+SR8:
+    name: Sx
+    mirror: Sy
+SR9:
+    name: Sx
+    mirror: Sy
+SR10:
+    name: Sx
+    mirror: Sy
+SR11:
+    name: Sx
+    mirror: Sy
+SR12:
+    name: Sx
+    mirror: Sy
+ASP1:
+    name: ASx
+    mirror: ASy
+ASP2:
+    name: ASx
+    mirror: ASy
+ASP3:
+    name: ASx
+    mirror: ASy
+ASP4:
+    name: ASx
+    mirror: ASy
+ASP5:
+    name: ASx
+    mirror: ASy
+ASP6:
+    name: ASx
+    mirror: ASy
+ASP7:
+    name: ASx
+    mirror: ASy
+ASP8:
+    name: ASx
+    mirror: ASy
+ASP9:
+    name: ASx
+    mirror: ASy
+ASP10:
+    name: ASx
+    mirror: ASy
+ASP11:
+    name: ASx
+    mirror: ASy
+ASP12:
+    name: ASx
+    mirror: ASy
+ASD1:
+    name: ASx
+    mirror: ASy
+ASD2:
+    name: ASx
+    mirror: ASy
+ASD3:
+    name: ASx
+    mirror: ASy
+ASD4:
+    name: ASx
+    mirror: ASy
+ASD5:
+    name: ASx
+    mirror: ASy
+ASD6:
+    name: ASx
+    mirror: ASy
+ASD7:
+    name: ASx
+    mirror: ASy
+ASD8:
+    name: ASx
+    mirror: ASy
+ASD9:
+    name: ASx
+    mirror: ASy
+ASD10:
+    name: ASx
+    mirror: ASy
+ASD11:
+    name: ASx
+    mirror: ASy
+ASD12:
+    name: ASx
+    mirror: ASy
+AST1:
+    name: ASx
+    mirror: ASy
+AST2:
+    name: ASx
+    mirror: ASy
+AST3:
+    name: ASx
+    mirror: ASy
+AST4:
+    name: ASx
+    mirror: ASy
+AST5:
+    name: ASx
+    mirror: ASy
+AST6:
+    name: ASx
+    mirror: ASy
+AST7:
+    name: ASx
+    mirror: ASy
+AST8:
+    name: ASx
+    mirror: ASy
+AST9:
+    name: ASx
+    mirror: ASy
+AST10:
+    name: ASx
+    mirror: ASy
+AST11:
+    name: ASx
+    mirror: ASy
+AST12:
+    name: ASx
+    mirror: ASy
+ASB1:
+    name: ASx
+    mirror: ASy
+ASB2:
+    name: ASx
+    mirror: ASy
+ASB3:
+    name: ASx
+    mirror: ASy
+ASB4:
+    name: ASx
+    mirror: ASy
+ASB5:
+    name: ASx
+    mirror: ASy
+ASB6:
+    name: ASx
+    mirror: ASy
+ASB7:
+    name: ASx
+    mirror: ASy
+ASB8:
+    name: ASx
+    mirror: ASy
+ASB9:
+    name: ASx
+    mirror: ASy
+ASB10:
+    name: ASx
+    mirror: ASy
+ASB11:
+    name: ASx
+    mirror: ASy
+ASB12:
+    name: ASx
+    mirror: ASy
+ASL1:
+    name: ASx
+    mirror: ASy
+ASL2:
+    name: ASx
+    mirror: ASy
+ASL3:
+    name: ASx
+    mirror: ASy
+ASL4:
+    name: ASx
+    mirror: ASy
+ASL5:
+    name: ASx
+    mirror: ASy
+ASL6:
+    name: ASx
+    mirror: ASy
+ASL7:
+    name: ASx
+    mirror: ASy
+ASL8:
+    name: ASx
+    mirror: ASy
+ASL9:
+    name: ASx
+    mirror: ASy
+ASL10:
+    name: ASx
+    mirror: ASy
+ASL11:
+    name: ASx
+    mirror: ASy
+ASL12:
+    name: ASx
+    mirror: ASy
+ASR1:
+    name: ASx
+    mirror: ASy
+ASR2:
+    name: ASx
+    mirror: ASy
+ASR3:
+    name: ASx
+    mirror: ASy
+ASR4:
+    name: ASx
+    mirror: ASy
+ASR5:
+    name: ASx
+    mirror: ASy
+ASR6:
+    name: ASx
+    mirror: ASy
+ASR7:
+    name: ASx
+    mirror: ASy
+ASR8:
+    name: ASx
+    mirror: ASy
+ASR9:
+    name: ASx
+    mirror: ASy
+ASR10:
+    name: ASx
+    mirror: ASy
+ASR11:
+    name: ASx
+    mirror: ASy
+ASR12:
+    name: ASx
+    mirror: ASy

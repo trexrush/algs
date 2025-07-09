@@ -5,6 +5,7 @@ import { megaPLLTrexSheetGroupings } from "../algSheets/ingest/MEGAPLL_TREX";
 import { pllParityTrexSheetGroupings } from "../algSheets/ingest/PLLPARITY_TREX";
 import { ollTrexSheetGroupings} from "../algSheets/ingest/OLL_TREX";
 import { pllTrexSheetGroupings } from "../algSheets/ingest/PLL_TREX";
+import { zbllTrexSheetGroupings } from "../algSheets/ingest/ZBLL_TREX";
 
 import { HNoGrouping } from "../../data/ZBLL/hObj";
 import { LNoGrouping } from "../../data/ZBLL/lObj";
@@ -42,10 +43,10 @@ export const p: IPageData[] = [
   },
   { path: 'ZB/ZBLL/T', name: "T ZBLL", icon: "cubing-icon event-333",
     datalists: {
-      main: TGroupByCP,
-      unsorted: TNoGrouping,
+      main: zbllTrexSheetGroupings.t_cp,
+      unsorted: zbllTrexSheetGroupings.t_none,
       altsorts: [
-        { url: '/cp', data: TGroupByCP },
+        { url: '/cp', data: zbllTrexSheetGroupings.t_cp },
         { url: '/bh', data: TGroupByBH },
       ]
     }

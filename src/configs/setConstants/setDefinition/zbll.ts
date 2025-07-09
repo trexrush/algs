@@ -1,9 +1,49 @@
+import { IPuzzleDisplayConfig } from "../../../scripts/config/puzzle"
+import { puzzle3x3x3 } from "../../../scripts/config/puzzle/3x3"
+import { ISetDisplayConfig } from "../../../types/setDefinition"
+import { createConfig } from "../../../types/displayConfig"
+import { SetAndGroupingDefinition } from "../../../types/setAndGroupingDefinition"
+
+// CONFIG
+const puzzleOptions: IPuzzleDisplayConfig = puzzle3x3x3
+const setOptions: ISetDisplayConfig = {
+  name: "ZBLL",
+  twistyPlayerConfig: {
+    rot: 'x2'
+  },
+} as ISetDisplayConfig
+const displayConfig = createConfig(puzzleOptions, setOptions)
+
+// CASENAMES
 const caseNames = [
-  "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T0", "T1", "T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T20", "T21", "T22", "T23", "T24", "T25", "T26", "T27", "T28", "T29", "T30", "T31", "T32", "T33", "T34", "T35", "T36", "T37", "T38", "T39", "T40", "T41", "T42", "T43", "T44", "T45", "T46", "T47", "T48", "T49", "T50", "T51", "T52", "T53", "T54", "T55", "T56", "T57", "T58", "T59", "T60", "T61", "T62", "T63", "T64", "T65", "T66", "T67", "T68", "T69", "T70", "T71", "T72", 
-  "U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8", "U9", "U0", "U1", "U2", "U3", "U4", "U5", "U6", "U7", "U8", "U9", "U20", "U21", "U22", "U23", "U24", "U25", "U26", "U27", "U28", "U29", "U30", "U31", "U32", "U33", "U34", "U35", "U36", "U37", "U38", "U39", "U40", "U41", "U42", "U43", "U44", "U45", "U46", "U47", "U48", "U49", "U50", "U51", "U52", "U53", "U54", "U55", "U56", "U57", "U58", "U59", "U60", "U61", "U62", "U63", "U64", "U65", "U66", "U67", "U68", "U69", "U70", "U71", "U72", 
-  "L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8", "L9", "L0", "L1", "L2", "L3", "L4", "L5", "L6", "L7", "L8", "L9", "L20", "L21", "L22", "L23", "L24", "L25", "L26", "L27", "L28", "L29", "L30", "L31", "L32", "L33", "L34", "L35", "L36", "L37", "L38", "L39", "L40", "L41", "L42", "L43", "L44", "L45", "L46", "L47", "L48", "L49", "L50", "L51", "L52", "L53", "L54", "L55", "L56", "L57", "L58", "L59", "L60", "L61", "L62", "L63", "L64", "L65", "L66", "L67", "L68", "L69", "L70", "L71", "L72", 
-  "H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H0", "H1", "H2", "H3", "H4", "H5", "H6", "H7", "H8", "H9", "H20", "H21", "H22", "H23", "H24", "H25", "H26", "H27", "H28", "H29", "H30", "H31", "H32", "H33", "H34", "H35", "H36", "H37", "H38", "H39", "H40",
-  "Pi1", "Pi2", "Pi3", "Pi4", "Pi5", "Pi6", "Pi7", "Pi8", "Pi9", "Pi0", "Pi1", "Pi2", "Pi3", "Pi4", "Pi5", "Pi6", "Pi7", "Pi8", "Pi9", "Pi20", "Pi21", "Pi22", "Pi23", "Pi24", "Pi25", "Pi26", "Pi27", "Pi28", "Pi29", "Pi30", "Pi31", "Pi32", "Pi33", "Pi34", "Pi35", "Pi36", "Pi37", "Pi38", "Pi39", "Pi40", "Pi41", "Pi42", "Pi43", "Pi44", "Pi45", "Pi46", "Pi47", "Pi48", "Pi49", "Pi50", "Pi51", "Pi52", "Pi53", "Pi54", "Pi55", "Pi56", "Pi57", "Pi58", "Pi59", "Pi60", "Pi61", "Pi62", "Pi63", "Pi64", "Pi65", "Pi66", "Pi67", "Pi68", "Pi69", "Pi70", "Pi71", "Pi72", 
-  "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S0", "S1", "S2", "S3", "S4", "S5", "S6", "S7", "S8", "S9", "S20", "S21", "S22", "S23", "S24", "S25", "S26", "S27", "S28", "S29", "S30", "S31", "S32", "S33", "S34", "S35", "S36", "S37", "S38", "S39", "S40", "S41", "S42", "S43", "S44", "S45", "S46", "S47", "S48", "S49", "S50", "S51", "S52", "S53", "S54", "S55", "S56", "S57", "S58", "S59", "S60", "S61", "S62", "S63", "S64", "S65", "S66", "S67", "S68", "S69", "S70", "S71", "S72", 
-  "AS1", "AS2", "AS3", "AS4", "AS5", "AS6", "AS7", "AS8", "AS9", "AS0", "AS1", "AS2", "AS3", "AS4", "AS5", "AS6", "AS7", "AS8", "AS9", "AS20", "AS21", "AS22", "AS23", "AS24", "AS25", "AS26", "AS27", "AS28", "AS29", "AS30", "AS31", "AS32", "AS33", "AS34", "AS35", "AS36", "AS37", "AS38", "AS39", "AS40", "AS41", "AS42", "AS43", "AS44", "AS45", "AS46", "AS47", "AS48", "AS49", "AS50", "AS51", "AS52", "AS53", "AS54", "AS55", "AS56", "AS57", "AS58", "AS59", "AS60", "AS61", "AS62", "AS63", "AS64", "AS65", "AS66", "AS67", "AS68", "AS69", "AS70", "AS71", "AS72", 
+  "TP1", "TP2", "TP3", "TP4", "TP5", "TP6", "TP7", "TP8", "TP9", "TP10", "TP11", "TP12", "TD1", "TD2", "TD3", "TD4", "TD5", "TD6", "TD7", "TD8", "TD9", "TD10", "TD11", "TD12", "TT1", "TT2", "TT3", "TT4", "TT5", "TT6", "TT7", "TT8", "TT9", "TT10", "TT11", "TT12", "TB1", "TB2", "TB3", "TB4", "TB5", "TB6", "TB7", "TB8", "TB9", "TB10", "TB11", "TB12", "TL1", "TL2", "TL3", "TL4", "TL5", "TL6", "TL7", "TL8", "TL9", "TL10", "TL11", "TL12", "TR1", "TR2", "TR3", "TR4", "TR5", "TR6", "TR7", "TR8", "TR9", "TR10", "TR11", "TR12", 
+  "UP1", "UP2", "UP3", "UP4", "UP5", "UP6", "UP7", "UP8", "UP9", "UP10", "UP11", "UP12", "UD1", "UD2", "UD3", "UD4", "UD5", "UD6", "UD7", "UD8", "UD9", "UD10", "UD11", "UD12", "UT1", "UT2", "UT3", "UT4", "UT5", "UT6", "UT7", "UT8", "UT9", "UT10", "UT11", "UT12", "UB1", "UB2", "UB3", "UB4", "UB5", "UB6", "UB7", "UB8", "UB9", "UB10", "UB11", "UB12", "UL1", "UL2", "UL3", "UL4", "UL5", "UL6", "UL7", "UL8", "UL9", "UL10", "UL11", "UL12", "UR1", "UR2", "UR3", "UR4", "UR5", "UR6", "UR7", "UR8", "UR9", "UR10", "UR11", "UR12", 
+  "LP1", "LP2", "LP3", "LP4", "LP5", "LP6", "LP7", "LP8", "LP9", "LP10", "LP11", "LP12", "LD1", "LD2", "LD3", "LD4", "LD5", "LD6", "LD7", "LD8", "LD9", "LD10", "LD11", "LD12", "LT1", "LT2", "LT3", "LT4", "LT5", "LT6", "LT7", "LT8", "LT9", "LT10", "LT11", "LT12", "LB1", "LB2", "LB3", "LB4", "LB5", "LB6", "LB7", "LB8", "LB9", "LB10", "LB11", "LB12", "LL1", "LL2", "LL3", "LL4", "LL5", "LL6", "LL7", "LL8", "LL9", "LL10", "LL11", "LL12", "LR1", "LR2", "LR3", "LR4", "LR5", "LR6", "LR7", "LR8", "LR9", "LR10", "LR11", "LR12", 
+  "HP1", "HP2", "HP3", "HP4", "HP5", "HP6", "HP7", "HP8", "HD1", "HD2", "HD3", "HD4", "HD5", "HD6", "HD7", "HD8", "HT1", "HT2", "HT3", "HT4", "HT5", "HT6", "HT7", "HT8", "HT9", "HT10", "HT11", "HT12", "HL1", "HL2", "HL3", "HL4", "HL5", "HL6", "HL7", "HL8", "HL9", "HL10", "HL11", "HL12", 
+  "PiP1", "PiP2", "PiP3", "PiP4", "PiP5", "PiP6", "PiP7", "PiP8", "PiP9", "PiP10", "PiP11", "PiP12", "PiD1", "PiD2", "PiD3", "PiD4", "PiD5", "PiD6", "PiD7", "PiD8", "PiD9", "PiD10", "PiD11", "PiD12", "PiT1", "PiT2", "PiT3", "PiT4", "PiT5", "PiT6", "PiT7", "PiT8", "PiT9", "PiT10", "PiT11", "PiT12", "PiB1", "PiB2", "PiB3", "PiB4", "PiB5", "PiB6", "PiB7", "PiB8", "PiB9", "PiB10", "PiB11", "PiB12", "PiL1", "PiL2", "PiL3", "PiL4", "PiL5", "PiL6", "PiL7", "PiL8", "PiL9", "PiL10", "PiL11", "PiL12", "PiR1", "PiR2", "PiR3", "PiR4", "PiR5", "PiR6", "PiR7", "PiR8", "PiR9", "PiR10", "PiR11", "PiR12", 
+  "SP1", "SP2", "SP3", "SP4", "SP5", "SP6", "SP7", "SP8", "SP9", "SP10", "SP11", "SP12", "SD1", "SD2", "SD3", "SD4", "SD5", "SD6", "SD7", "SD8", "SD9", "SD10", "SD11", "SD12", "ST1", "ST2", "ST3", "ST4", "ST5", "ST6", "ST7", "ST8", "ST9", "ST10", "ST11", "ST12", "SB1", "SB2", "SB3", "SB4", "SB5", "SB6", "SB7", "SB8", "SB9", "SB10", "SB11", "SB12", "SL1", "SL2", "SL3", "SL4", "SL5", "SL6", "SL7", "SL8", "SL9", "SL10", "SL11", "SL12", "SR1", "SR2", "SR3", "SR4", "SR5", "SR6", "SR7", "SR8", "SR9", "SR10", "SR11", "SR12", 
+  "ASP1", "ASP2", "ASP3", "ASP4", "ASP5", "ASP6", "ASP7", "ASP8", "ASP9", "ASP10", "ASP11", "ASP12", "ASD1", "ASD2", "ASD3", "ASD4", "ASD5", "ASD6", "ASD7", "ASD8", "ASD9", "ASD10", "ASD11", "ASD12", "AST1", "AST2", "AST3", "AST4", "AST5", "AST6", "AST7", "AST8", "AST9", "AST10", "AST11", "AST12", "ASB1", "ASB2", "ASB3", "ASB4", "ASB5", "ASB6", "ASB7", "ASB8", "ASB9", "ASB10", "ASB11", "ASB12", "ASL1", "ASL2", "ASL3", "ASL4", "ASL5", "ASL6", "ASL7", "ASL8", "ASL9", "ASL10", "ASL11", "ASL12", "ASR1", "ASR2", "ASR3", "ASR4", "ASR5", "ASR6", "ASR7", "ASR8", "ASR9", "ASR10", "ASR11", "ASR12", 
 ] as const
+
+// GROUPING
+const groupingNames = [
+  "t_none", "t_cp", 
+  // "t_bh",
+  // "u_none", "u_cp", "u_bh",
+  // "l_none", "l_cp", "l_bh",
+  // "h_none", "h_cp", "h_bh",
+  // "pi_none", "pi_cp", "pi_bh",
+  // "s_none", "s_cp", "s_bh",
+  // "as_none", "as_cp", "as_bh",
+  // "s_as_blocks", "zzll"
+] as const
+
+// CASESLIST
+import casesList from '../setCaseListDefaults/zbll.yml'
+
+export const zbllGroupingConfig = {
+  displayConfig: displayConfig,
+  caseNames: caseNames,
+  groupingNames: groupingNames,
+  casesList: casesList
+} satisfies SetAndGroupingDefinition
