@@ -11,7 +11,7 @@ const setOptions: ISetDisplayConfig = {
   twistyPlayerConfig: {
     rot: 'x2'
   },
-}
+} as ISetDisplayConfig
 const displayConfig = createConfig(puzzleOptions, setOptions)
 
 // CASENAMES
