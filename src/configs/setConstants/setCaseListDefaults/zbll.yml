@@ -1,723 +1,867 @@
 TP1:
     name: T72
     altNames:
+    - TP1
     - TS
-    - Pure_S
     - BBFF_C/C
     mirror: Ty
 TP2:
     name: T71
     altNames:
+    - TP2
     - TH
-    - Pure_H
     - BBFF_O/O
     mirror: Ty
 TP3:
     name: T69
     altNames:
+    - TP3
     - TZ+
-    - Pure_Z
     - BBFF_A/A
     mirror: Ty
 TP4:
     name: T70
     altNames:
+    - TP4
     - TZ-
-    - Pure_AntiZ
     - BBFF_OxO
     mirror: Ty
 TP5:
     name: T62
     altNames:
+    - TP5
     - TUa2
-    - Pure_BarA
     - BBFF_C/A
     mirror: Ty
 TP6:
     name: T61
     altNames:
+    - TP6
     - TUb2
-    - Pure_BarO
     - BBFF_C/O
     mirror: Ty
 TP7:
     name: T64
     altNames:
+    - TP7
     - TUb-
-    - Pure_HAnti
     - BBFF_O/A
     mirror: Ty
 TP8:
     name: T66
     altNames:
+    - TP8
     - TUa+
-    - Pure_OBar
     - BBFF_O/C
     mirror: Ty
 TP9:
     name: T63
     altNames:
+    - TP9
     - TUa-
-    - Pure_HArrow
     - BBFF_CxO
     mirror: Ty
 TP10:
     name: T65
     altNames:
+    - TP10
     - TUb+
-    - Pure_ABar
     - BBFF_A/C
     mirror: Ty
 TP11:
     name: T68
     altNames:
+    - TP11
     - TUa
-    - Pure_VAnti
     - BBFF_A/O
     mirror: Ty
 TP12:
     name: T67
     altNames:
+    - TP12
     - TUb
-    - Pure_VArrow
     - BBFF_OxC
     mirror: Ty
 TD1:
     name: T55
     altNames:
+    - TD1
     - TNa
-    - Diag_BarO
     - FBFB_C/O
     mirror: Ty
 TD2:
     name: T56
     altNames:
+    - TD2
     - TNb
-    - Diag_OBar
     - FBFB_O/C
     mirror: Ty
 TD3:
     name: T60
     altNames:
+    - TD3
     - TV-
-    - Diag_S
     - FBFB_C/C
     mirror: Ty
 TD4:
     name: T51
     altNames:
+    - TD4
     - TV
-    - Diag_HAnti
     - FBFB_O/A
     mirror: Ty
 TD5:
     name: T52
     altNames:
+    - TD5
     - TY2
-    - Diag_AntiZ
     - FBFB_OxO
     mirror: Ty
 TD6:
     name: T57
     altNames:
+    - TD6
     - TY-
-    - Diag_ABar
     - FBFB_A/C
     mirror: Ty
 TD7:
     name: T59
     altNames:
+    - TD7
     - TY+
-    - Diag_BarA
     - FBFB_C/A
     mirror: Ty
 TD8:
     name: T49
     altNames:
+    - TD8
     - TY
-    - Diag_H
     - FBFB_O/O
     mirror: Ty
 TD9:
     name: T53
     altNames:
+    - TD9
     - TE-
-    - Diag_HArrow
     - FBFB_CxO
     mirror: Ty
 TD10:
     name: T54
     altNames:
+    - TD10
     - TE+
-    - Diag_VArrow
     - FBFB_OxC
     - Bitchass
     mirror: Ty
 TD11:
     name: T58
     altNames:
+    - TD11
     - TV+
-    - Diag_Z
     - FBFB_A/A
     mirror: Ty
 TD12:
     name: T50
     altNames:
+    - TD12
     - TV2
-    - Diag_VAnti
     - FBFB_A/O
     mirror: Ty
 TT1:
     name: T27
     altNames:
+    - TT1
     - TJb+
-    - AdjB_S
     - RLFF_C/C
     mirror: Ty
 TT2:
     name: T25
     altNames:
+    - TT2
     - TJa-
-    - AdjB_BarA
     - RLFF_C/A
     mirror: Ty
 TT3:
     name: T32
     altNames:
+    - TT3
     - TF-
-    - AdjB_BarO
     - RLFF_C/O
     mirror: Ty
 TT4:
     name: T31
     altNames:
+    - TT4
     - TT-
-    - AdjB_OBar
     - RLFF_O/C
     mirror: Ty
 TT5:
     name: T28
     altNames:
+    - TT5
     - TRb
-    - AdjB_Z
     - RLFF_A/A
     mirror: Ty
 TT6:
     name: T26
     altNames:
+    - TT6
     - TRa
-    - AdjB_ABar
     - RLFF_A/C
     mirror: Ty
 TT7:
     name: T35
     altNames:
+    - TT7
     - TGb+
-    - AdjB_H
     - RLFF_O/O
     mirror: Ty
 TT8:
     name: T36
     altNames:
+    - TT8
     - TGd+
-    - AdjB_HAnti
     - RLFF_O/A
     mirror: Ty
 TT9:
     name: T33
     altNames:
+    - TT9
     - TGc+
-    - AdjB_VAnti
     - RLFF_A/O
     mirror: Ty
 TT10:
     name: T34
     altNames:
+    - TT10
     - TGa+
-    - AdjB_AntiZ
     - RLFF_OxO
     mirror: Ty
 TT11:
     name: T30
     altNames:
+    - TT11
     - TAa-
-    - AdjB_HArrow
     - RLFF_CxO
     mirror: Ty
 TT12:
     name: T29
     altNames:
+    - TT12
     - TAb+
-    - AdjB_VArrow
     - RLFF_OxC
     mirror: Ty
 TB1:
     name: T43
     altNames:
+    - TB1
     - TT+
-    - AdjF_AntiZ
     - FFLR_OxO
     mirror: Ty
 TB2:
     name: T44
     altNames:
+    - TB2
     - TF+
-    - AdjF_Z
     - FFLR_A/A
     mirror: Ty
 TB3:
     name: T41
     altNames:
+    - TB3
     - TAb-
-    - AdjF_S
     - FFLR_C/C
     mirror: Ty
 TB4:
     name: T42
     altNames:
+    - TB4
     - TAa+
-    - AdjF_H
     - FFLR_O/O
     mirror: Ty
 TB5:
     name: T38
     altNames:
+    - TB5
     - TJa+
-    - AdjF_BarA
     - FFLR_C/A
     mirror: Ty
 TB6:
     name: T40
     altNames:
+    - TB6
     - TJb-
-    - AdjF_OBar
     - FFLR_O/C
     mirror: Ty
 TB7:
     name: T46
     altNames:
+    - TB7
     - TGb-
-    - AdjF_BarO
     - FFLR_C/O
     mirror: Ty
 TB8:
     name: T45
     altNames:
+    - TB8
     - TGd-
-    - AdjF_HAnti
     - FFLR_O/A
     mirror: Ty
 TB9:
     name: T48
     altNames:
+    - TB9
     - TGa-
-    - AdjF_VArrow
     - FFLR_OxC
     mirror: Ty
 TB10:
     name: T47
     altNames:
+    - TB10
     - TGc-
-    - AdjF_ABar
     - FFLR_A/C
     mirror: Ty
 TB11:
     name: T39
     altNames:
+    - TB11
     - TRa2
-    - AdjF_VAnti
     - FFLR_A/O
     mirror: Ty
 TB12:
     name: T37
     altNames:
+    - TB12
     - TRb2
-    - AdjF_HArrow
     - FFLR_CxO
     mirror: Ty
 TL1:
     name: T18
     altNames:
+    - TL1
     - TAb
-    - AdjL_VArrow
     - FLFR_OxC
     mirror: Ty
 TL2:
     name: T21
     altNames:
+    - TL2
     - TGb
-    - AdjL_VAnti
     - FLFR_A/O
     mirror: Ty
 TL3:
     name: T13
     altNames:
+    - TL3
     - TJa2
-    - AdjL_S
     - FLFR_C/C
     mirror: Ty
 TL4:
     name: T14
     altNames:
+    - TL4
     - TJb
-    - AdjL_ABar
     - FLFR_A/C
     mirror: Ty
 TL5:
     name: T22
     altNames:
+    - TL5
     - TGc
-    - AdjL_AntiZ
     - FLFR_OxO
     mirror: Ty
 TL6:
     name: T20
     altNames:
+    - TL6
     - TT2
-    - AdjL_BarO
     - FLFR_C/O
     mirror: Ty
 TL7:
     name: T15
     altNames:
+    - TL7
     - TRb-
-    - AdjL_BarA
     - FLFR_C/A
     mirror: Ty
 TL8:
     name: T19
     altNames:
+    - TL8
     - TF2
-    - AdjL_OBar
     - FLFR_O/C
     mirror: Ty
 TL9:
     name: T18
     altNames:
+    - TL9
     - TAa2
-    - AdjL_HArrow
     - FLFR_CxO
     mirror: Ty
 TL10:
     name: T24
     altNames:
+    - TL10
     - TGd
-    - AdjL_H
     - FLFR_O/O
     mirror: Ty
 TL11:
     name: T23
     altNames:
+    - TL11
     - TGa
-    - AdjL_HAnti
     - FLFR_O/A
     mirror: Ty
 TL12:
     name: T16
     altNames:
+    - TL12
     - TRa-
-    - AdjL_Z
     - FLFR_A/A
     mirror: Ty
 TR1:
     name: T6
     altNames:
+    - TR1
     - TAa
-    - AdjR_S
     - RFLF_C/C
     mirror: Ty
 TR2:
     name: T10
     altNames:
+    - TR2
     - TGd2
-    - AdjR_OBar
     - RFLF_O/C
     mirror: Ty
 TR3:
     name: T3
     altNames:
+    - TR3
     - TJb2
-    - AdjR_ABar
     - RFLF_A/C
     mirror: Ty
 TR4:
     name: T4
     altNames:
+    - TR4
     - TJa
-    - AdjR_BarO
     - RFLF_C/O
     mirror: Ty
 TR5:
     name: T9
     altNames:
+    - TR5
     - TGa2
-    - AdjR_BarA
     - RFLF_C/A
     mirror: Ty
 TR6:
     name: T8
     altNames:
+    - TR6
     - TT
-    - AdjR_AntiZ
     - RFLF_OxO
     mirror: Ty
 TR7:
     name: T1
     altNames:
+    - TR7
     - TRa+
-    - AdjR_VArrow
     - RFLF_OxC
     mirror: Ty
 TR8:
     name: T7
     altNames:
+    - TR8
     - TF
-    - AdjR_Z
     - RFLF_A/A
     mirror: Ty
 TR9:
     name: T5
     altNames:
+    - TR9
     - TAb2
-    - AdjR_H
     - RFLF_O/O
     mirror: Ty
 TR10:
     name: T11
     altNames:
+    - TR10
     - TGb2
-    - AdjR_VAnti
     - RFLF_A/O
     mirror: Ty
 TR11:
     name: T12
     altNames:
+    - TR11
     - TGc2
-    - AdjR_HArrow
     - RFLF_CxO
     mirror: Ty
 TR12:
     name: T2
     altNames:
+    - TR12
     - TRb+
-    - AdjR_HAnti
     - RFLF_O/A
     mirror: Ty
 UP1:
     name: U72
+    altNames:
+    - UP1
     mirror: Uy
 UP2:
     name: U71
+    altNames:
+    - UP2
     mirror: Uy
 UP3:
     name: U70
+    altNames:
+    - UP3
     mirror: Uy
 UP4:
     name: U69
+    altNames:
+    - UP4
     mirror: Uy
 UP5:
     name: U61
+    altNames:
+    - UP5
     mirror: Uy
 UP6:
     name: U62
+    altNames:
+    - UP6
     mirror: Uy
 UP7:
     name: U63
+    altNames:
+    - UP7
     mirror: Uy
 UP8:
     name: U65
+    altNames:
+    - UP8
     mirror: Uy
 UP9:
     name: U66
+    altNames:
+    - UP9
     mirror: Uy
 UP10:
     name: U64
+    altNames:
+    - UP10
     mirror: Uy
 UP11:
     name: U67
+    altNames:
+    - UP11
     mirror: Uy
 UP12:
     name: U68
+    altNames:
+    - UP12
     mirror: Uy
 UD1:
     name: U51
+    altNames:
+    - UD1
     mirror: Uy
 UD2:
     name: U60
+    altNames:
+    - UD2
     mirror: Uy
 UD3:
     name: U52
+    altNames:
+    - UD3
     mirror: Uy
 UD4:
     name: U57
+    altNames:
+    - UD4
     mirror: Uy
 UD5:
     name: U49
+    altNames:
+    - UD5
     mirror: Uy
 UD6:
     name: U59
+    altNames:
+    - UD6
     mirror: Uy
 UD7:
     name: U55
+    altNames:
+    - UD7
     mirror: Uy
 UD8:
     name: U56
+    altNames:
+    - UD8
     mirror: Uy
 UD9:
     name: U54
+    altNames:
+    - UD9
     mirror: Uy
 UD10:
     name: U53
+    altNames:
+    - UD10
     mirror: Uy
 UD11:
     name: U58
+    altNames:
+    - UD11
     mirror: Uy
 UD12:
     name: U50
+    altNames:
+    - UD12
     mirror: Uy
 UT1:
     name: U25
+    altNames:
+    - UT1
     mirror: Uy
 UT2:
     name: U27
+    altNames:
+    - UT2
     mirror: Uy
 UT3:
     name: U32
+    altNames:
+    - UT3
     mirror: Uy
 UT4:
     name: U31
+    altNames:
+    - UT4
     mirror: Uy
 UT5:
     name: U28
+    altNames:
+    - UT5
     mirror: Uy
 UT6:
     name: U26
+    altNames:
+    - UT6
     mirror: Uy
 UT7:
     name: U35
+    altNames:
+    - UT7
     mirror: Uy
 UT8:
     name: U36
+    altNames:
+    - UT8
     mirror: Uy
 UT9:
     name: U33
+    altNames:
+    - UT9
     mirror: Uy
 UT10:
     name: U34
+    altNames:
+    - UT10
     mirror: Uy
 UT11:
     name: U30
+    altNames:
+    - UT11
     mirror: Uy
 UT12:
     name: U29
+    altNames:
+    - UT12
     mirror: Uy
 UB1:
     name: U43
+    altNames:
+    - UB1
     mirror: Uy
 UB2:
     name: U44
+    altNames:
+    - UB2
     mirror: Uy
 UB3:
     name: U42
+    altNames:
+    - UB3
     mirror: Uy
 UB4:
     name: U41
+    altNames:
+    - UB4
     mirror: Uy
 UB5:
     name: U38
+    altNames:
+    - UB5
     mirror: Uy
 UB6:
     name: U40
+    altNames:
+    - UB6
     mirror: Uy
 UB7:
     name: U47
+    altNames:
+    - UB7
     mirror: Uy
 UB8:
     name: U48
+    altNames:
+    - UB8
     mirror: Uy
 UB9:
     name: U46
+    altNames:
+    - UB9
     mirror: Uy
 UB10:
     name: U45
+    altNames:
+    - UB10
     mirror: Uy
 UB11:
     name: U39
+    altNames:
+    - UB11
     mirror: Uy
 UB12:
     name: U37
+    altNames:
+    - UB12
     mirror: Uy
 UL1:
     name: U17
+    altNames:
+    - UL1
     mirror: Uy
 UL2:
     name: U13
+    altNames:
+    - UL2
     mirror: Uy
 UL3:
     name: U14
+    altNames:
+    - UL3
     mirror: Uy
 UL4:
     name: U15
+    altNames:
+    - UL4
     mirror: Uy
 UL5:
     name: U20
+    altNames:
+    - UL5
     mirror: Uy
 UL6:
     name: U22
+    altNames:
+    - UL6
     mirror: Uy
 UL7:
     name: U19
+    altNames:
+    - UL7
     mirror: Uy
 UL8:
     name: U21
+    altNames:
+    - UL8
     mirror: Uy
 UL9:
     name: U18
+    altNames:
+    - UL9
     mirror: Uy
 UL10:
     name: U24
+    altNames:
+    - UL10
     mirror: Uy
 UL11:
     name: U16
+    altNames:
+    - UL11
     mirror: Uy
 UL12:
     name: U23
+    altNames:
+    - UL12
     mirror: Uy
 UR1:
     name: U6
+    altNames:
+    - UR1
     mirror: Uy
 UR2:
     name: U3
+    altNames:
+    - UR2
     mirror: Uy
 UR3:
     name: U4
+    altNames:
+    - UR3
     mirror: Uy
 UR4:
     name: U1
+    altNames:
+    - UR4
     mirror: Uy
 UR5:
     name: U8
+    altNames:
+    - UR5
     mirror: Uy
 UR6:
     name: U9
+    altNames:
+    - UR6
     mirror: Uy
 UR7:
     name: U7
+    altNames:
+    - UR7
     mirror: Uy
 UR8:
     name: U10
+    altNames:
+    - UR8
     mirror: Uy
 UR9:
     name: U5
+    altNames:
+    - UR9
     mirror: Uy
 UR10:
     name: U11
+    altNames:
+    - UR10
     mirror: Uy
 UR11:
     name: U2
+    altNames:
+    - UR11
     mirror: Uy
 UR12:
     name: U12
+    altNames:
+    - UR12
     mirror: Uy
 LP1:
     name: Lx

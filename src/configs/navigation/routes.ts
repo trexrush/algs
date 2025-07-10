@@ -9,8 +9,6 @@ import { zbllTrexSheetGroupings } from "../algSheets/ingest/ZBLL_TREX";
 
 import { HNoGrouping } from "../../data/ZBLL/hObj";
 import { LNoGrouping } from "../../data/ZBLL/lObj";
-import { TGroupByBH, TGroupByCP, TNoGrouping } from "../../data/ZBLL/tObj";
-import { UGroupByBH, UGroupByCP, UNoGrouping } from "../../data/ZBLL/uObj";
 import { ZBLSNoGrouping } from "../../data/ZBLS/zblsObj";
 
 import type { IPageData } from "../../types/navigation/navigationTypes";
@@ -53,11 +51,11 @@ export const p: IPageData[] = [
   },
   { path: 'ZB/ZBLL/U', name: "U ZBLL", icon: "cubing-icon event-333",
     datalists: {
-      main: UGroupByCP,
-      unsorted: UNoGrouping,
+      main: zbllTrexSheetGroupings.u_cp,
+      unsorted: zbllTrexSheetGroupings.u_none,
       altsorts: [
-        { url: '/cp', data: UGroupByCP },
-        { url: '/bh', data: UGroupByBH },
+        { url: '/cp', data: zbllTrexSheetGroupings.u_cp },
+        { url: '/bh', data: zbllTrexSheetGroupings.u_bh },
       ]
     }
   },

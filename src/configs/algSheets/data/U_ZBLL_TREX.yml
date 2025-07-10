@@ -1,0 +1,428 @@
+---
+UP1:
+    algs:
+    - 
+        setup: U'
+        alg: L F L' U' L U L F' D L' U' L D' L2
+        isLefty: true
+UP2:
+    algs:
+    -
+        setup: U2
+        alg: x L2 D2 L' U' L D2 L2' D L U L' D' x'
+        isLefty: true
+UP3:
+    algs:
+    -
+        alg: L U L' U L U2 L2 U' L U' L' U2 L
+        isLefty: true
+UP4:
+    algs:
+    -
+        alg: R' U' R U' R' U2 R2 U R' U R U2 R'
+UP5:
+    algs:
+    -
+        setup: U
+        alg: L' U' L U L' U L U2 L' U L U2 L' U' L
+        isLefty: true
+UP6:
+    algs:
+    -
+        setup: U'
+        alg: R U R' U' R U' R' U2 R U' R' U2 R U R'
+UP7:
+    algs:
+    -
+        setup: U
+        alg: (R U2 R' U' R U' R') U' (R U R' U R U2 R') 
+    -
+        setup: U'
+        alg: (L U2 L' U' L U' L') U' (L U L' U L U2 L')
+        isLefty: true
+        note: non home grip start for the L variant
+
+UP8:
+    algs:
+    -
+        setup: U'
+        alg: (L' U2 L U L' U L) U (L' U' L U' L' U2 L)
+        isLefty: true
+UP9:
+    algs:
+    -
+        setup: U
+        alg: R U2' R2' F R F' R U' B U' B' R'
+    -
+        setup: U
+        alg: R U2 R2 U' R2 U' R' U R' U' R U R' U R
+UP10:
+    algs:
+    -
+        setup: U'
+        alg: L' U2 L2 U L2 U L U' L U L' U' L U' L'
+        isLefty: true
+UP11:
+    algs:
+    -
+        alg: L U L' U L' U' L U L U2 L' U2 L' U2 L
+        isLefty: true
+UP12:
+    algs:
+    -
+        setup: U2
+        alg: L' U' L U' L U L' U' L' U2 L U2 L U2 L' 
+        isLefty: true
+UD1:
+    algs:
+    -
+        setup: U2
+        alg: L U L' U F' U L U' L' U' L U' L' U F
+        isLefty: true
+    -
+        setup: U2
+        alg: (R L') (U' L U' L' U' L) U2 (R' L') U L
+        isLefty: true
+UD2:
+    algs:
+    -
+        alg: L' U' L R U2 L' U L U L' U M' x'
+        isLefty: true
+UD3:
+    algs:
+    -
+        setup: U2
+        alg: L2 D' L U L' D L U L U' L' U' L
+        isLefty: true
+    -
+        setup: U
+        alg: L D L' U L D' L2' U2 L U' L' U' L
+        isLefty: true
+UD4:
+    algs:
+    - 
+        alg: L2 D L' U' L D' L' U' L' U L U L'
+        isLefty: true
+UD5:
+    algs:
+    -
+        setup: U2
+        alg: L U' L' U' L U L D L' U L D' L2
+        isLefty: true
+UD6:
+    algs:
+    -
+        alg: L' U L U L' U' L' D' L U' L' D L2
+        isLefty: true
+UD7:
+    algs:
+    -
+        setup: U'
+        alg: r U2 R2 F R F' U2 r' R U R U' R'
+UD8:
+    algs:
+    -
+        setup: U
+        alg: l' U2 L2 F' L' F U2 l L' U' L' U L
+        isLefty: true
+UD9:
+    algs:
+    -
+        setup: U'
+        alg: F' U' L' U L F L' U' L U M' U' L' U l
+        isLefty: true
+UD10:
+    algs:
+    -
+        alg: F' U' L' U2 L U' L' U' L U' L' U2 L U' L' U' L F
+        isLefty: true
+        note: F [U' kind of antisune] x2 F' wait its a x2 of the 10 move T case you hated
+UD11:
+    algs:
+    -
+        setup: U'
+        alg: S L U' L' S' L U2 L F' L' F U' L'
+        isLefty: true
+UD12:
+    algs:
+    -
+        alg: M' U' L U F U' F' L2 U' L U' L' U2 l
+        isLefty: true
+UT1:
+    algs:
+    -
+        alg: R' F R U' R' U' R U R' F' R U R' U' R' F R F' R
+    note: any variant of R' Yperm R works here
+UT2:
+    algs:
+    -
+        alg: L2 D' L2' U L U L' U' L F L' U' L U L F' D L2'
+        isLefty: true
+    -
+        alg: L [LEFT BACK SU] [LEFT J_PERM] L U' L2'
+        isLefty: true
+UT3:
+    algs:
+    -
+        setup: U
+        alg: R' B2 R2 U R' U R U' R2 B2 R U2 R U R'
+UT4:
+    algs:
+    -
+        alg: L U2 L' U2 L' (U D) L2 D' L' D L2 U' L D'
+        isLefty: true
+UT5:
+    algs:
+    -
+        alg: z' (D U) L2 U' L2 D' L U L' D L' D' L U' z
+        isLefty: true
+UT6:
+    algs:
+    -
+        alg: L' F' U' L U2 L F' L' f L' U' L S' L' F L
+        isLefty: true
+UT7:
+    algs:
+    -
+        setup: U'
+        alg: r U R' U' r' F R2 U' R' U' R U2 R' U' F'
+UT8:
+    algs:
+    -
+        setup: U
+        alg: l' U' L U l F' L2 U L U L' U2 L U F
+        isLefty: true
+UT9:
+    algs:
+    -
+        setup: U'
+        alg: L2 D L' U L D' L2' U' L F' L' U' L U L F L2
+        isLefty: true
+    note: THIS CASE SUCKS
+UT10:
+    algs:
+    -
+        setup: U'
+        alg: F' U' L' U2 L U' L' U' L2 F l' U' L' U l
+        isLefty: true
+UT11:
+    algs:
+    -
+        setup: U
+        alg: F' U' L2 D L' U L D' L2 F L U' L'
+        isLefty: true
+UT12:
+    algs:
+    -
+        setup: U
+        alg: L U L' F' L2 D L' U' L D' L2 U F
+        isLefty: true
+UB1:
+    algs:
+    -
+        alg: F' L' U L U' L' U' L U' L' U L F
+        isLefty: true
+UB2:
+    algs:
+    -
+        setup: U'
+        alg: F L' U' L U L F' L2 U' L U2 L' U' L U2 L' U L 
+        isLefty: true
+UB3:
+    algs:
+    -
+        alg: r' L' D2 L U2 L' D2 L U2 r
+        isLefty: true
+UB4:
+    algs:
+    -
+        setup: U2
+        alg: r L D2 L' U2 L D2 L' U2 r'
+        isLefty: true
+UB5:
+    algs:
+    -
+        setup: U2
+        alg: L U L' U L U' L' U2 L' D' L U2 L' D L2 U' L'
+        isLefty: true
+    -
+        alg: R U R' U R U' R' U2 R' D' R U2 R' D R2 U' R'
+UB6:
+    algs:
+    -
+        alg: L' U' L U' L' U L U2 L D L' U2 L D' L2 U L
+        isLefty: true
+UB7:
+    algs:
+    -
+        setup: U2
+        alg: L' U2 L U L D L' U' L D' L' U L' U L
+        isLefty: true
+    -
+        alg: L' F' U L U L' U2 L U L' F L
+        isLefty: true
+UB8:
+    algs:
+    -
+        alg: L U2 L' U' L U' L D L' U L D' L' U' L'
+        isLefty: true
+UB9:
+    algs:
+    -
+        setup: U
+        alg: L U' L' U' L U' L' U L' D' L U L' D L2 U L'
+        isLefty: true
+UB10:
+    algs:
+    -
+        setup: U
+        alg: L' U L U L' U L U' L D L' U' L D' L2 U' L
+        isLefty: true
+UB11:
+    algs:
+    -
+        setup: U2
+        alg: L' U' L U' L' U' L U2 L' U L2 D L' U L D' L'
+        isLefty: true
+UB12:
+    algs:
+    -
+        alg: L U L' U2 L F L' U' L U L F' L2 U2 L U' L'
+        isLefty: true
+UL1:
+    algs:
+    -
+        setup: U2
+        alg: L2' D' L U2 L' D L U2 L
+        isLefty: true
+UL2:
+    algs:
+    -
+        setup: U2
+        alg: L2' D' l U2 l' D L U2 L
+        isLefty: true
+UL3:
+    algs:
+    -
+        setup: U'
+        alg: L2' D' L U' L' D L2 U' L' U2 L
+        isLefty: true
+UL4:
+    algs:
+    -
+        alg: L' U L U L' U2 L U L D L' U2 L D' L'
+        isLefty: true
+UL5:
+    algs:
+    -
+        alg: L U L' U' L' U' L U L U' F' L' U' L' U L F
+        isLefty: true
+UL6:
+    algs:
+    -
+        setup: U
+        alg: L' U' L U' L' U L U' F L' U2 L U2 L F' L'
+        isLefty: true
+UL7:
+    algs:
+    -
+        setup: U2
+        alg: L D l' U2 l D' L' U2 L' U L U L' U L
+        isLefty: true
+UL8:
+    algs:
+    -
+        setup: U'
+        alg: L U' L (U D) L' U L U2' L' U L D' L' U L'
+        isLefty: true
+UL9:
+    algs:
+    -
+        setup: U
+        alg: L' U2 L2 D L' U2 L D' L2 U L U2 L' U2 L
+        isLefty: true
+UL10:
+    algs:
+    -
+        setup: U'
+        alg: L' U' L U' L' U L U' L' U L U l F' L' F M'
+        isLefty: true
+UL11:
+    algs:
+    -
+        setup: U
+        alg: L' U2 L' D' L U2 L' D L U2 L U L' U L
+        isLefty: true
+UL12:
+    algs:
+    -
+        setup: U
+        alg: L' U L U' L' U' L U2' L D L' U' L D' L2' U' L
+        isLefty: true
+UR1:
+    algs:
+    -
+        alg: L2 D L' U2' L D' L' U2' L'
+        isLefty: true
+UR2:
+    algs:
+    -
+        alg: L2 D l' U2' l D' L' U2' L'
+        isLefty: true
+UR3:
+    algs:
+    -
+        setup: U'
+        alg: L2 D L' U L D' L2 U L U2 L' 
+        isLefty: true
+UR4:
+    algs:
+    -
+        setup: U2
+        alg: L U' L' U' L U2 L' U' L' D' L U2 L' D L
+        isLefty: true
+UR5:
+    algs:
+    -
+        setup: U2
+        alg: F' L' U' L U L2 D' L U L' D L2 U L' U' L F
+        isLefty: true
+UR6:
+    algs:
+    -
+        setup: U
+        alg: L2 F L' U2 L' U2 L F' U L' U' L U L'
+        isLefty: true
+UR7:
+    algs:
+    -
+        alg: L' D' l U2 l' D L U2 L U' L' U' L U' L'
+        isLefty: true
+UR8:
+    algs:
+    -
+        setup: U
+        alg: R' U2 L F' L' U L' U' L U' F L' U2 L R
+        isLefty: true
+UR9:
+    algs:
+    -
+        alg: L U L F' L' U' L2 D2 L U L' D2 L2 F L'
+        isLefty: true
+UR10:
+    algs:
+    -
+        setup: U
+        alg: R U R' U R U' R' U R U' R' U' r' F R F' M'
+UR11:
+    algs:
+    -
+        setup: U
+        alg: L U2 L D L' U2 L D' L' U2 L' U' L U' L' 
+        isLefty: true
+UR12:
+    algs:
+    -
+        setup: U
+        alg: L U' L' U L U L' U2 L' D' L U L' D L2 U L'
+        isLefty: true

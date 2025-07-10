@@ -2,6 +2,9 @@ import { useZBLLGrouping } from "../../setConstants/setGroupings/zbll";
 import type { ICaseList } from "../../../types/dataFormat"
 
 import t from '../data/T_ZBLL_TREX.yml'
-let data_t: ICaseList = t
+import u from '../data/U_ZBLL_TREX.yml'
 
-export const zbllTrexSheetGroupings = useZBLLGrouping(data_t)
+export const zbllTrexSheetGroupings = useZBLLGrouping({
+  ...t as ICaseList, 
+  ...u as ICaseList
+})
