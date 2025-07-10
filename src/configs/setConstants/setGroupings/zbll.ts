@@ -61,39 +61,51 @@ export const useZBLLGrouping = (dataRaw: ICaseList): Record<GroupingNames, IAlgs
       sets: [
         { name: "S",
           altNames: ["C/C", "Block", "Solved"],
+          children: ch(["TP1", "TD3", "TT1", "TB3", "TR1", "TL3"  ])
         },
         { name: "H",
           altNames: ["O/O"],
+          children: ch(["TP2", "TD8", "TT7", "TB4", "TR9", "TL10"  ])
         },
         { name: "Z",
           altNames: ["A/A", "Checker"],
+          children: ch(["TP3", "TD11", "TT5", "TB2", "TR8", "TL12"  ])
         },
         { name: "AntiZ",
           altNames: ["OxO", "4 Unique Colors"],
+          children: ch(["TP4", "TD5", "TT10", "TB1", "TR6", "TL5"  ])
         },
         { name: "BarA",
           altNames: ["C/A", "Sleeping Bar"],
+          children: ch(["TP5", "TD7", "TT2", "TB5", "TR5", "TL7"  ])
         },
         { name: "BarO",
           altNames: ["C/O", "Sleeping Burger"],
+          children: ch(["TP6", "TD1", "TT3", "TB7", "TR4", "TL6"  ])
         },
         { name: "HAnti",
           altNames: ["O/A", "Sleeping Antibar"],
+          children: ch(["TP7", "TD4", "TT8", "TB8", "TR12", "TL11"  ])
         },
         { name: "OBar",
           altNames: ["O/C", "Standing Burger"],
+          children: ch(["TP8", "TD2", "TT4", "TB6", "TR2", "TL8"  ])
         },
         { name: "HArrow",
           altNames: ["CxO", "Waterfall"],
+          children: ch(["TP9", "TD9", "TT11", "TB12", "TR11", "TL9"  ])
         },
         { name: "ABar",
           altNames: ["A/C", "Standing Bar"],
+          children: ch(["TP10", "TD6", "TT6", "TB10", "TR3", "TL4"  ])
         },
         { name: "VAnti",
           altNames: ["A/O", "Sleeping Antibar"],
+          children: ch(["TP11", "TD12", "TT9", "TB11", "TR10", "TL2"  ])
         },
         { name: "VArrow",
           altNames: ["OxC", "River"],
+          children: ch(["TP12", "TD10", "TT12", "TB9", "TR7", "TL1"  ])
         },  
       ]
     }
@@ -101,6 +113,7 @@ export const useZBLLGrouping = (dataRaw: ICaseList): Record<GroupingNames, IAlgs
 
   return {
     't_none': tNoGrouping(),
-    't_cp': tCPGrouping()
+    't_cp': tCPGrouping(),
+    't_bh': tBHGrouping()
   }
 }

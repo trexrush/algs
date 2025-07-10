@@ -47,7 +47,7 @@ export const p: IPageData[] = [
       unsorted: zbllTrexSheetGroupings.t_none,
       altsorts: [
         { url: '/cp', data: zbllTrexSheetGroupings.t_cp },
-        { url: '/bh', data: TGroupByBH },
+        { url: '/bh', data: zbllTrexSheetGroupings.t_bh },
       ]
     }
   },
