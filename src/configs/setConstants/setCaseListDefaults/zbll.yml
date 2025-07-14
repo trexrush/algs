@@ -1080,124 +1080,204 @@ LR12:
     name: Lx
     mirror: Ly
 HP1:
-    name: Hx
+    name: H40
+    altNames:
+    - HP1
     mirror: Hx
 HP2:
-    name: Hx
+    name: H39
+    altNames:
+    - HP2
     mirror: Hx
 HP3:
     name: Hx
+    altNames:
+    - HP3
     mirror: Hx
 HP4:
     name: Hx
+    altNames:
+    - HP4
     mirror: Hx
 HP5:
     name: Hx
+    altNames:
+    - HP5
     mirror: Hx
 HP6:
     name: Hx
+    altNames:
+    - HP6
     mirror: Hx
 HP7:
     name: Hx
+    altNames:
+    - HP7
     mirror: Hx
 HP8:
     name: Hx
+    altNames:
+    - HP8
     mirror: Hx
 HD1:
     name: Hx
+    altNames:
+    - HD1
     mirror: Hx
 HD2:
     name: Hx
+    altNames:
+    - HD2
     mirror: Hx
 HD3:
     name: Hx
+    altNames:
+    - HD3
     mirror: Hx
 HD4:
     name: Hx
+    altNames:
+    - HD4
     mirror: Hx
 HD5:
     name: Hx
+    altNames:
+    - HD5
     mirror: Hx
 HD6:
     name: Hx
+    altNames:
+    - HD6
     mirror: Hx
 HD7:
     name: Hx
+    altNames:
+    - HD7
     mirror: Hx
 HD8:
     name: Hx
+    altNames:
+    - HD8
     mirror: Hx
 HT1:
     name: Hx
+    altNames:
+    - HT1
     mirror: Hx
 HT2:
     name: Hx
+    altNames:
+    - HT2
     mirror: Hx
 HT3:
     name: Hx
+    altNames:
+    - HT3
     mirror: Hx
 HT4:
     name: Hx
+    altNames:
+    - HT4
     mirror: Hx
 HT5:
     name: Hx
+    altNames:
+    - HT5
     mirror: Hx
 HT6:
     name: Hx
+    altNames:
+    - HT6
     mirror: Hx
 HT7:
     name: Hx
+    altNames:
+    - HT7
     mirror: Hx
 HT8:
     name: Hx
+    altNames:
+    - HT8
     mirror: Hx
 HT9:
     name: Hx
+    altNames:
+    - HT9
     mirror: Hx
 HT10:
     name: Hx
+    altNames:
+    - HT10    
     mirror: Hx
 HT11:
     name: Hx
+    altNames:
+    - HT11    
     mirror: Hx
 HT12:
     name: Hx
+    altNames:
+    - HT12    
     mirror: Hx
 HL1:
     name: Hx
+    altNames:
+    - HL1
     mirror: Hx
 HL2:
     name: Hx
+    altNames:
+    - HL2
     mirror: Hx
 HL3:
     name: Hx
+    altNames:
+    - HL3
     mirror: Hx
 HL4:
     name: Hx
+    altNames:
+    - HL4
     mirror: Hx
 HL5:
     name: Hx
+    altNames:
+    - HL5
     mirror: Hx
 HL6:
     name: Hx
+    altNames:
+    - HL6
     mirror: Hx
 HL7:
     name: Hx
+    altNames:
+    - HL7
     mirror: Hx
 HL8:
     name: Hx
+    altNames:
+    - HL8
     mirror: Hx
 HL9:
     name: Hx
+    altNames:
+    - HL9
     mirror: Hx
 HL10:
     name: Hx
+    altNames:
+    - HL10    
     mirror: Hx
 HL11:
     name: Hx
+    altNames:
+    - HL11    
     mirror: Hx
 HL12:
     name: Hx
+    altNames:
+    - HL12    
     mirror: Hx
 PiP1:
     name: Pix

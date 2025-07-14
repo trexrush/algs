@@ -1,0 +1,216 @@
+HP1:
+    algs:
+    -
+        alg: L' U' L U' L U L2' U L U' L U L' U' L U L' U' L U' L'
+        isLefty: true
+HP2:
+    algs:
+    -
+        alg: "[LEFT SUNE] U [LEFT BACK ANTISUNE]"
+        isLefty: true
+HP3:
+    algs:
+    -
+        alg: "[LEFT BACK DOUBLE ANTISUNE]"
+        isLefty: true
+HP4:
+    algs:
+    -
+        alg: "[LEFT DOUBLE ANTISUNE]"
+        isLefty: true
+HP5:
+    algs:
+    -
+        alg: "[LEFT BACK DOUBLE SUNE]"
+        isLefty: true
+HP6:
+    algs:
+    -
+        alg: "[LEFT DOUBLE SUNE]"
+        isLefty: true
+HP7:
+    algs:
+    -
+        alg: "[LEFT BACK ANTISUNE] U' [LEFT SUNE]"
+        isLefty: true
+HP8:
+    algs:
+    -
+        alg: "[LEFT ANTISUNE] U [LEFT BACK SUNE]"
+        isLefty: true
+HD1:
+    algs:
+    -
+        alg: F' U' L' U L U' L' U L U' L' U L F
+        isLefty: true
+HD2:
+    algs:
+    -
+        alg: L' U R U' L U (R' L') U R U' L U R'
+        isLefty: true
+    -
+        alg: F R' F R F' R U2 R' F R' F' R F'
+    -
+        alg: x' U L' U L U' L F2 L' U L' U' L U' x
+        isLefty: true
+HD3:
+    algs:
+    -
+        alg: L F' L F L2 U' L U L' U f' L f
+        isLefty: true
+    -
+        alg: F' U L2 U' L' U2' L U' L2' U2 L U L' F
+        isLefty: true
+HD4:
+    algs:
+    -
+        alg: f' L' f U' L U' L' U L2 F' L' F L'
+        isLefty: true
+    -
+        alg: F' L U' L' U2' L2 U L' U2 L U L2' U' F
+        isLefty: true
+HD5:
+    algs:
+    -
+        alg: r U2 R2' F R F' R U2 r' L' U2 L U L' U L
+HD6:
+    algs:
+    -
+        alg: l' U2 L2 F' L' F L' U2 l R U2 R' U' R U' R'
+        isLefty: true
+    -
+        alg: L' U L2 U F2 U L2 U' L2 U' F2 L2 U' L
+        isLefty: true
+HD7:
+    algs:
+    -
+        alg: r U2' R2' F R F' R U2' r' L' U' L U' L' U2' L
+HD8:
+    algs:
+    -
+        alg: l' U2 L2 F' L' F L' U2 l R U R' U R U2 R' 
+        isLefty: true
+# HL1:
+#     algs:
+#     -
+#         alg:
+# HL2:
+#     algs:
+#     -
+#         alg:
+# HL3:
+#     algs:
+#     -
+#         alg:
+# HL4:
+#     algs:
+#     -
+#         alg:
+# HL5:
+#     algs:
+#     -
+#         alg:
+# HL6:
+#     algs:
+#     -
+#         alg:
+# HL7:
+#     algs:
+#     -
+#         alg:
+# HL8:
+#     algs:
+#     -
+#         alg:
+# HL9:
+#     algs:
+#     -
+#         alg:
+# HL10:
+#     algs:
+#     -
+#         alg:
+# HL11:
+#     algs:
+#     -
+#         alg:
+# HL12:
+#     algs:
+#     -
+#         alg:
+HT1:
+    algs:
+    -
+        alg: F' L' U L U' L' U2' L U L' U' L U F
+        isLefty: true
+HT2:
+    algs:
+    - 
+        alg: L' U' L U' L' U L2 F L' U2' L' U2' L F' L' U L
+        isLefty: true
+HT3:
+    algs:
+    -
+        alg: F R' F' r U R U' r' L' U2 L U L' U L
+HT4:
+    algs:
+    -
+        alg: F' r U R' U' r' F R2 U2 R' U' R U' R'
+HT5:
+    algs:
+    -
+        alg: L U2' L2' U' L2' U' L' U2' L F' L' U' L' U L F
+        isLefty: true
+HT6:
+    algs:
+    -
+        alg: L' U2' L U L' U' L U F L' U' L U L F' L2' U L
+        isLefty: true
+    -
+        alg: l' U2' L' D' L U L' (U D) l F' L F
+        isLefty: true
+HT7:
+    algs:
+    -
+        alg: L' F' L2 U L2' U L2 U2 L2' U F L
+        isLefty: true
+    -
+        alg: L D2' L' U' R' U R L D2' L' U R' U2' R
+        isLefty: true
+HT8:
+    algs:
+    -
+        alg: F' U L' U2' L U2' L' U L U L' U' L U' F
+        isLefty: true
+    -
+        alg: l D l2' B' l2 F' l2' B2' l2 F' D' l'
+        isLefty: true
+HT9:
+    algs:
+    -
+        alg: L' U2' L U L' U L' D L' U L D' L' U' L'
+        isLefty: true
+HT10:
+    algs:
+    -
+        alg: L U2' L' U' L U' L D' L U' L' D L U L
+        isLefty: true
+    -
+        alg: L' U2' L2 F' U L2' U L2 U' F U' L'
+        isLefty: true
+    -
+        alg: L D' L2' U L2' D L' U L D' L2' U2' L2' D L'
+        isLefty: true
+HT11:
+    algs:
+    -
+        alg: F L' U2 L U2' L F' L' U' L' U' L U L' U L
+        isLefty: true
+HT12:
+    algs:
+    -
+        alg: l F2' M' D' L2' U' L2 D F2' L'
+        isLefty: true
+    -
+        alg: L U2' L' U2' L2' F L' U' L' U L F' U' L'
+        isLefty: true

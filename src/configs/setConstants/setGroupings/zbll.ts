@@ -210,12 +210,24 @@ export const useZBLLGrouping = (dataRaw: ICaseList): Record<GroupingNames, IAlgs
     }
   }
 
+  const hNoGrouping = (): IAlgset => {
+    return {
+      config: c.displayConfig,
+      sets: [
+        { name: "U ZBLL",
+          children: ch(["HP1", "HP2", "HP3", "HP4", "HP5", "HP6", "HP7", "HP8", "HD1", "HD2", "HD3", "HD4", "HD5", "HD6", "HD7", "HD8", "HL1", "HL2", "HL3", "HL4", "HL5", "HL6", "HL7", "HL8", "HL9", "HL10", "HL11", "HL12", "HT1", "HT2", "HT3", "HT4", "HT5", "HT6", "HT7", "HT8", "HT9", "HT10", "HT11", "HT12"])
+        },
+      ]
+    }
+  }
+
   return {
     't_none': tNoGrouping(),
     't_cp': tCPGrouping(),
     't_bh': tBHGrouping(),
     'u_none': uNoGrouping(),
     'u_cp': uCPGrouping(),
-    'u_bh': uBHGrouping()
+    'u_bh': uBHGrouping(),
+    h_none: hNoGrouping()
   }
 }

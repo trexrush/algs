@@ -7,7 +7,6 @@ import { ollTrexSheetGroupings} from "../algSheets/ingest/OLL_TREX";
 import { pllTrexSheetGroupings } from "../algSheets/ingest/PLL_TREX";
 import { zbllTrexSheetGroupings } from "../algSheets/ingest/ZBLL_TREX";
 
-import { HNoGrouping } from "../../data/ZBLL/hObj";
 import { LNoGrouping } from "../../data/ZBLL/lObj";
 import { ZBLSNoGrouping } from "../../data/ZBLS/zblsObj";
 
@@ -67,8 +66,8 @@ export const p: IPageData[] = [
   },
   { path: 'ZB/ZBLL/H', name: "H ZBLL", icon: "cubing-icon event-333",
     datalists: {
-      main: HNoGrouping,
-      unsorted: HNoGrouping,
+      main: zbllTrexSheetGroupings.h_none,
+      unsorted: zbllTrexSheetGroupings.h_none,
     }
   },
   { path: '222/EG1', name: "EG1", icon: "cubing-icon event-222",
