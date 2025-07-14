@@ -7,8 +7,7 @@ import { ollTrexSheetGroupings} from "../algSheets/ingest/OLL_TREX";
 import { pllTrexSheetGroupings } from "../algSheets/ingest/PLL_TREX";
 import { zbllTrexSheetGroupings } from "../algSheets/ingest/ZBLL_TREX";
 
-import { LNoGrouping } from "../../data/ZBLL/lObj";
-import { ZBLSNoGrouping } from "../../data/ZBLS/zblsObj";
+import { ZBLSNoGrouping } from "../../data_old/ZBLS/zblsObj";
 
 import type { IPageData } from "../../types/navigation/navigationTypes";
 
@@ -56,12 +55,6 @@ export const p: IPageData[] = [
         { url: '/cp', data: zbllTrexSheetGroupings.u_cp },
         { url: '/bh', data: zbllTrexSheetGroupings.u_bh },
       ]
-    }
-  },
-  { path: 'ZB/ZBLL/L', name: "L ZBLL", icon: "cubing-icon event-333",
-    datalists: {
-      main: LNoGrouping,
-      unsorted: LNoGrouping,
     }
   },
   { path: 'ZB/ZBLL/H', name: "H ZBLL", icon: "cubing-icon event-333",
