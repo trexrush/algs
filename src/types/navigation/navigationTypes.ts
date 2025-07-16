@@ -5,11 +5,7 @@ export interface IPageData {
   name: string,
   icon: string,
   datalists: {
-    main: IAlgset,
-    unsorted?: IAlgset,
-    altsorts?: {
-      data: IAlgset
-      url: string
-    }[]
-  }
+    name: string
+    data: IAlgset
+  }[]
 }

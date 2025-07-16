@@ -14,110 +14,167 @@ import type { IPageData } from "../../types/navigation/navigationTypes";
 
 export const p: IPageData[] = [
   { path: 'CFOP/OLL', name: "OLL", icon: "cubing-icon event-333",
-    datalists: {
-      main: ollTrexSheetGroupings.eo,
-      unsorted: ollTrexSheetGroupings.none,
-      altsorts: [
-        { url: '/group', data: ollTrexSheetGroupings.eo },
-      ]
-    }
+    datalists: [
+      {
+        name: "EO",
+        data: ollTrexSheetGroupings.eo
+      },
+      {
+        name: "No Grouping",
+        data: ollTrexSheetGroupings.none
+      },
+    ]
   },
   { path: 'CFOP/PLL', name: "PLL", icon: "cubing-icon event-333",
-    datalists: {
-      main: pllTrexSheetGroupings.cp,
-      unsorted: pllTrexSheetGroupings.none,
-      altsorts: [
-        { url: '/group', data: pllTrexSheetGroupings.cp },
-      ]
-    }
+    datalists: [
+      {
+        name: "CP",
+        data: pllTrexSheetGroupings.cp
+      },
+      {
+        name: "No Grouping",
+        data: pllTrexSheetGroupings.none
+      },
+    ]
   },
   { path: 'ZB/ZBLS', name: "ZBLS", icon: "cubing-icon event-333",
-    datalists: {
-      main: ZBLSNoGrouping,
-      unsorted: ZBLSNoGrouping,
-    }
+    datalists: [
+      {
+        name: "No Grouping",
+        data: ZBLSNoGrouping
+      },
+    ]
   },
   { path: 'ZB/ZBLL/T', name: "T ZBLL", icon: "cubing-icon event-333",
-    datalists: {
-      main: zbllTrexSheetGroupings.t_cp,
-      unsorted: zbllTrexSheetGroupings.t_none,
-      altsorts: [
-        { url: '/cp', data: zbllTrexSheetGroupings.t_cp },
-        { url: '/bh', data: zbllTrexSheetGroupings.t_bh },
-      ]
-    }
+    datalists: [
+      {
+        name: "CP",
+        data: zbllTrexSheetGroupings.t_cp
+      },
+      {
+        name: "No Grouping",
+        data: zbllTrexSheetGroupings.t_none
+      },
+      {
+        name: "BH",
+        data: zbllTrexSheetGroupings.t_bh
+      },
+    ]
   },
   { path: 'ZB/ZBLL/U', name: "U ZBLL", icon: "cubing-icon event-333",
-    datalists: {
-      main: zbllTrexSheetGroupings.u_cp,
-      unsorted: zbllTrexSheetGroupings.u_none,
-      altsorts: [
-        { url: '/cp', data: zbllTrexSheetGroupings.u_cp },
-        { url: '/bh', data: zbllTrexSheetGroupings.u_bh },
-      ]
-    }
+       datalists: [
+      {
+        name: "CP",
+        data: zbllTrexSheetGroupings.u_cp
+      },
+      {
+        name: "No Grouping",
+        data: zbllTrexSheetGroupings.u_none
+      },
+      {
+        name: "BH",
+        data: zbllTrexSheetGroupings.u_bh
+      },
+    ]
   },
   { path: 'ZB/ZBLL/H', name: "H ZBLL", icon: "cubing-icon event-333",
-    datalists: {
-      main: zbllTrexSheetGroupings.h_none,
-      unsorted: zbllTrexSheetGroupings.h_none,
-    }
+        datalists: [
+      // {
+      //   name: "CP",
+      //   data: zbllTrexSheetGroupings.h_cp
+      // },
+      {
+        name: "No Grouping",
+        data: zbllTrexSheetGroupings.t_none
+      },
+      // {
+      //   name: "BH",
+      //   data: zbllTrexSheetGroupings.h_bh
+      // },
+    ]
   },
   { path: '222/EG1', name: "EG1", icon: "cubing-icon event-222",
-    datalists: {
-      main: eg1TrexSheetGroupings.oll,
-      unsorted: eg1TrexSheetGroupings.none,
-      altsorts: [
-        { url: '/set', data: eg1TrexSheetGroupings.oll },
-      ]
-    }
+    datalists: [
+      {
+        name: "OLL",
+        data: eg1TrexSheetGroupings.oll
+      },
+      {
+        name: "No Grouping",
+        data: eg1TrexSheetGroupings.none
+      },
+    ]
   },
   { path: '222/CLL', name: "CLL", icon: "cubing-icon event-222",
-    datalists: {
-      main: cllTrexSheetGroupings.oll,
-      unsorted: cllTrexSheetGroupings.none,
-      altsorts: [
-        { url: '/set', data: cllTrexSheetGroupings.oll },
-      ]
-    }
+    datalists: [
+      {
+        name: "OLL",
+        data: cllTrexSheetGroupings.oll
+      },
+      {
+        name: "No Grouping",
+        data: cllTrexSheetGroupings.none
+      },
+    ]
   },
   { path: 'mega/PLL', name: "Mega PLL", icon: "cubing-icon event-minx",
-    datalists: {
-      main: megaPLLTrexSheetGroupings.feature,
-      unsorted: megaPLLTrexSheetGroupings.none,
-      altsorts: [
-        { url: '/set', data: megaPLLTrexSheetGroupings.letter },
-        { url: '/group', data: megaPLLTrexSheetGroupings.feature },
-      ]
-    }
+    datalists: [
+      {
+        name: "Feature",
+        data: megaPLLTrexSheetGroupings.feature
+      },
+      {
+        name: "No Grouping",
+        data: megaPLLTrexSheetGroupings.none
+      },
+      {
+        name: "Letter",
+        data: megaPLLTrexSheetGroupings.letter
+      },
+    ]
   },
   { path: 'mega/OLL', name: "Mega OLL", icon: "cubing-icon event-minx",
-    datalists: {
-      main: megaOLLTrexSheetGroupings.feature,
-      unsorted: megaOLLTrexSheetGroupings.none,
-      altsorts: [
-        { url: '/set', data: megaOLLTrexSheetGroupings.oll },
-        { url: '/set', data: megaOLLTrexSheetGroupings.feature },
-      ]
-    }
+    datalists: [
+      {
+        name: "Feature",
+        data: megaOLLTrexSheetGroupings.feature
+      },
+      {
+        name: "No Grouping",
+        data: megaOLLTrexSheetGroupings.none
+      },
+      {
+        name: "OLL",
+        data: megaOLLTrexSheetGroupings.oll
+      },
+    ]
   },
   { path: 'bigs/ParityPLL', name: "Parity PLL", icon: "cubing-icon event-444",
-    datalists: {
-      main: pllParityTrexSheetGroupings.cp,
-      unsorted: pllParityTrexSheetGroupings.none,
-      altsorts: [
-        { url: '/group', data: pllParityTrexSheetGroupings.cp },
-      ]
-    }
+     datalists: [
+      {
+        name: "CP",
+        data: pllParityTrexSheetGroupings.cp
+      },
+      {
+        name: "No Grouping",
+        data: pllParityTrexSheetGroupings.none
+      },
+    ]
   },
   { path: 'mega/CO', name: "Mega 4LLL CO", icon: "cubing-icon event-minx",
-    datalists: {
-      main: megaOLLTrexSheetGroupings.justCO,
-    }
+    datalists: [
+      {
+        name: "CO",
+        data: megaOLLTrexSheetGroupings.justCO
+      },
+    ]
   },
   { path: 'mega/CP', name: "Mega 4LLL CP", icon: "cubing-icon event-minx",
-    datalists: {
-      main: megaPLLTrexSheetGroupings.justCP,
-    }
+    datalists: [
+      {
+        name: "CP",
+        data: megaPLLTrexSheetGroupings.justCP
+      },
+    ]
   },
 ]
