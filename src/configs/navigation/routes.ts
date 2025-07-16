@@ -12,7 +12,7 @@ import { ZBLSNoGrouping } from "../../data_old/ZBLS/zblsObj";
 import type { IPageData } from "../../types/navigation/navigationTypes";
 
 
-export const p: IPageData[] = [
+export const navbarRoutes: IPageData[] = [
   { path: 'CFOP/OLL', name: "OLL", icon: "cubing-icon event-333",
     datalists: [
       {
