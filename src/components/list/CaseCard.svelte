@@ -3,7 +3,7 @@
   import AlgVisuals from "./AlgVisuals.svelte";
   import { AlgBuilder } from "../../scripts/alg";
   import { tooltip } from "../../scripts/utilities";
-  import CaseCardVertical from "../CaseCardVertical.svelte";
+  import CaseCardVertical from "./vertical/CaseCardVertical.svelte";
   import type { ComponentType } from "svelte";
   import type { ICase } from "../../types/dataFormat";
   import type { IAlgorithmClass } from "../../types/algorithmClass";

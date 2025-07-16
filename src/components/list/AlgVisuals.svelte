@@ -1,6 +1,6 @@
 <script lang="ts">
   import TwistyPlayer from "../TwistyPlayer.svelte"
-  import AlgVisualsVertical from "../AlgVisualsVertical.svelte"
+  import AlgVisualsVertical from "../list/vertical/AlgVisualsVertical.svelte"
   import { cubePNG, Axis, Masking, ICubeOptions } from "sr-visualizer"
   import { PNG, type PNGVisualizerOptions, Type } from "sr-puzzlegen"
   import merge from "ts-deepmerge";

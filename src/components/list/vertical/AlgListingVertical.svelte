@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { IAlgorithmClass } from "../types/algorithmClass";
+  import type { IAlgorithmClass } from "../../../types/algorithmClass";
 
 
   export let algorithm: IAlgorithmClass

@@ -3,7 +3,7 @@
 <script lang="ts">
   import type { ComponentType } from "svelte";
   import { tooltip } from "../../scripts/utilities";
-  import AlgListingVertical from "../AlgListingVertical.svelte";
+  import AlgListingVertical from "./vertical/AlgListingVertical.svelte";
   import type { IAlgorithmClass } from "../../types/algorithmClass";
 
   export let isActive: boolean
