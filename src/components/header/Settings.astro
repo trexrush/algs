@@ -1,0 +1,20 @@
+---
+import DetachedMenu from "../ui/DetachedMenu.astro"
+import DetachedSubMenu from "../ui/DetachedSubMenu.astro"
+
+
+---
+<div class="flex text-xl">
+  <DetachedMenu label={"⚙️OPTIONS"} menuAlign="top-16 right-3">
+    <div>Toggle Day / Night Mode</div>
+    <DetachedSubMenu label={"Page Layout"} menuAlign={"-translate-x-32 -translate-y-8"}>
+      <div>Vertical</div>
+      <div>Horizontal</div>
+      <div>Swag 3D</div>
+    </DetachedSubMenu>
+    <div>Switch Algset Grouping</div>
+    <div>Collapse / Expand Sets</div>
+    <div>Enable / Disable Triggers</div>
+    <div>Mirror Across R/L</div>
+  </DetachedMenu>
+</div>

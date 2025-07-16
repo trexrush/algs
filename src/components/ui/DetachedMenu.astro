@@ -1,0 +1,30 @@
+---
+const { label, menuAlign = '' } = Astro.props
+---
+
+<>
+<details class="bg select-none rounded-md shadow-lg cursor-pointer m-3 p-2 w-fit font-bold">
+  <summary>{label}</summary>
+  <div class={`menu bg div-line flex justify-center rounded-md shadow-lg divide-y-2 p-1 child:py-2 child:px-1 min-w-min w-1 ${menuAlign}`}>
+    <slot/>
+  </div>
+</details>
+
+<style lang="postcss">
+  .bg {
+    @apply bg-stone-200 dark:bg-stone-800 border-2 dark:border-stone-900 border-stone-200/50
+  }
+  .menu {
+    @apply absolute flex-col min-w-min w-fit z-40
+  }
+  .div-line {
+    @apply divide-stone-400/10 dark:divide-stone-600/10
+  }
+
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

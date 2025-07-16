@@ -36,14 +36,15 @@ const { title } = Astro.props;
     
   </head>
   <body class=" relative bg-stone-100 dark:bg-stone-900 shadow-stone-800 dark:shadow-stone-100 dark:text-stone-50 box-border">
-    <div class="z-30 sticky top-0">
+    <div class="z-30 sticky top-0 flex flex-row justify-between">
       <slot name="navbar"/>
+      <slot name="settings"/>
     </div>
     <main class="z-[1]">
-        <noscript><br>⚠️ <br>algs<br> requires JavaScript to work.</noscript>
-        <div class="lg:w-[900px] m-auto flex flex-col items-center relative">
-            <slot /> 
-        </div>
-      </main>
+      <noscript><br>⚠️ <br>algs<br> requires JavaScript to work.</noscript>
+      <div class="lg:w-[900px] m-auto flex flex-col items-center relative">
+        <slot /> 
+      </div>
+    </main>
   </body>
 </html>

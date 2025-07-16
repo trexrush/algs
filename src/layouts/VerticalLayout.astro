@@ -1,5 +1,5 @@
 ---
-  import SetCard from "../components/list/SetCard.astro";
+  import SetCardVertical from "../components/list/vertical/SetCardVertical.astro";
   import type { IDisplayConfig } from "../types/displayConfig";
   import type { ISet } from "../types/dataFormat";
 
@@ -16,7 +16,7 @@ hover:brightness-110 hover:-translate-y-[1px] transition-all select-none">Collap
 <div class=" relative text-3xl w-full text-center my-5">{config.name}</div>
 
 {sets.map((set: ISet) => (
-  <SetCard set={set} config={config} />
+  <SetCardVertical set={set} config={config} />
 ))}
 
 <script>
