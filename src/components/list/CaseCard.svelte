@@ -21,6 +21,12 @@
   let toggleDisplay: () => void
   let toggled: boolean
 
+  let imageAlg: IAlgorithmClass = caso.imageAlg ?
+    AlgBuilder().withPuzzle(config.type).withAlgData({
+      alg: caso.imageAlg
+    }).build() as IAlgorithmClass :
+    algorithmList[0]
+
 </script>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -30,7 +36,7 @@
   <svelte:fragment slot="visuals">
     <AlgVisuals 
       activeAlg={activeAlg} 
-      imageAlg={algorithmList[0]} 
+      imageAlg={imageAlg} 
       config={config}
       {caso}
       bind:toggleDisplay={toggleDisplay} 

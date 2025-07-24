@@ -10,6 +10,7 @@ import { zbllTrexSheetGroupings } from "../algSheets/ingest/ZBLL_TREX";
 import { ZBLSNoGrouping } from "../../data_old/ZBLS/zblsObj";
 
 import type { IRouteConfig } from "../../types/navigation/navigationTypes";
+import { zblsTrexSheetGroupings } from "../algSheets/ingest/ZBLS_TREX";
 
 
 export const navbarRoutes: IRouteConfig[] = [
@@ -37,6 +38,7 @@ export const navbarRoutes: IRouteConfig[] = [
         name: "ZBLS",
         datalists: [
           { name: "No Grouping", data: ZBLSNoGrouping },
+          { name: "F2L", data: zblsTrexSheetGroupings.f2l },
         ]
       },
       { 
@@ -62,10 +64,11 @@ export const navbarRoutes: IRouteConfig[] = [
         name: "H ZBLL",
         datalists: [
           // { name: "CP", data: zbllTrexSheetGroupings.h_cp },
-          { name: "No Grouping", data: zbllTrexSheetGroupings.t_none },
+          { name: "No Grouping", data: zbllTrexSheetGroupings.h_none },
           // { name: "BH", data: zbllTrexSheetGroupings.h_bh },
         ]
       },
+      
     ]
   },
   {

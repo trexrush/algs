@@ -8,8 +8,13 @@ import { SetAndGroupingDefinition } from "../../../types/setAndGroupingDefinitio
 const puzzleOptions: IPuzzleDisplayConfig = puzzle3x3x3
 const setOptions: ISetDisplayConfig = {
   name: "ZBLS",
+  visualCubeConfig: {
+    stage: 'vh',
+    view: 'trans',
+    rot: "y'",
+  },
   twistyPlayerConfig: {
-    rot: 'x2'
+    stage: 'ZBLS',
   },
 } as ISetDisplayConfig
 const displayConfig = createConfig(puzzleOptions, setOptions)
@@ -67,7 +72,7 @@ const groupingNames = [
 // CASESLIST
 import casesList from '../setCaseListDefaults/zbls.yml'
 
-export const zbllGroupingConfig = {
+export const zblsGroupingConfig = {
   displayConfig: displayConfig,
   caseNames: caseNames,
   groupingNames: groupingNames,
