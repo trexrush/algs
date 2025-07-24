@@ -3,3 +3,1207 @@ A+1:
         -
             setup: U
             alg: R U' R'
+A+2:
+    algs:
+        -
+            alg: U
+A+3:
+    algs:
+        -
+            alg: U
+A+4:
+    algs:
+        -
+            alg: U
+A+5:
+    algs:
+        -
+            alg: U
+A+6:
+    algs:
+        -
+            alg: U
+A+7:
+    algs:
+        -
+            alg: U
+A+8:
+    algs:
+        -
+            alg: U
+A-1:
+    algs:
+        -
+            alg: U
+A-2:
+    algs:
+        -
+            alg: U
+A-3:
+    algs:
+        -
+            alg: U
+A-4:
+    algs:
+        -
+            alg: U
+A-5:
+    algs:
+        -
+            alg: U
+A-6:
+    algs:
+        -
+            alg: U
+A-7:
+    algs:
+        -
+            alg: U
+A-8:
+    algs:
+        -
+            alg: U
+B-1:
+    algs:
+        -
+            alg: F' U' F
+B-2:
+    algs:
+        -
+            alg: U
+B-3:
+    algs:
+        -
+            alg: U
+B-4:
+    algs:
+        -
+            alg: U
+B-5:
+    algs:
+        -
+            alg: U
+B-6:
+    algs:
+        -
+            alg: U
+B-7:
+    algs:
+        -
+            alg: U
+B-8:
+    algs:
+        -
+            alg: U
+B+1:
+    algs:
+        -
+            alg: U
+B+2:
+    algs:
+        -
+            alg: U
+B+3:
+    algs:
+        -
+            alg: U
+B+4:
+    algs:
+        -
+            alg: U
+B+5:
+    algs:
+        -
+            alg: U
+B+6:
+    algs:
+        -
+            alg: U
+B+7:
+    algs:
+        -
+            alg: U
+B+8:
+    algs:
+        -
+            alg: U
+W+1:
+    algs:
+        -
+            alg: U
+W+2:
+    algs:
+        -
+            alg: U
+W+3:
+    algs:
+        -
+            alg: U
+W+4:
+    algs:
+        -
+            alg: U
+W+5:
+    algs:
+        -
+            alg: U
+W+6:
+    algs:
+        -
+            alg: U
+W+7:
+    algs:
+        -
+            alg: U
+W+8:
+    algs:
+        -
+            alg: U
+W-1:
+    algs:
+        -
+            alg: U
+W-2:
+    algs:
+        -
+            alg: U
+W-3:
+    algs:
+        -
+            alg: U
+W-4:
+    algs:
+        -
+            alg: U
+W-5:
+    algs:
+        -
+            alg: U
+W-6:
+    algs:
+        -
+            alg: U
+W-7:
+    algs:
+        -
+            alg: U
+W-8:
+    algs:
+        -
+            alg: U
+M+1:
+    algs:
+        -
+            alg: U
+M+2:
+    algs:
+        -
+            alg: U
+M+3:
+    algs:
+        -
+            alg: U
+M+4:
+    algs:
+        -
+            alg: U
+M+5:
+    algs:
+        -
+            alg: U
+M+6:
+    algs:
+        -
+            alg: U
+M+7:
+    algs:
+        -
+            alg: U
+M+8:
+    algs:
+        -
+            alg: U
+M-1:
+    algs:
+        -
+            alg: U
+M-2:
+    algs:
+        -
+            alg: U
+M-3:
+    algs:
+        -
+            alg: U
+M-4:
+    algs:
+        -
+            alg: U
+M-5:
+    algs:
+        -
+            alg: U
+M-6:
+    algs:
+        -
+            alg: U
+M-7:
+    algs:
+        -
+            alg: U
+M-8:
+    algs:
+        -
+            alg: U
+R-1:
+    algs:
+        -
+            alg: U
+R-2:
+    algs:
+        -
+            alg: U
+R-3:
+    algs:
+        -
+            alg: U
+R-4:
+    algs:
+        -
+            alg: U
+R-5:
+    algs:
+        -
+            alg: U
+R-6:
+    algs:
+        -
+            alg: U
+R-7:
+    algs:
+        -
+            alg: U
+R-8:
+    algs:
+        -
+            alg: U
+R+1:
+    algs:
+        -
+            alg: U
+R+2:
+    algs:
+        -
+            alg: U
+R+3:
+    algs:
+        -
+            alg: U
+R+4:
+    algs:
+        -
+            alg: U
+R+5:
+    algs:
+        -
+            alg: U
+R+6:
+    algs:
+        -
+            alg: U
+R+7:
+    algs:
+        -
+            alg: U
+R+8:
+    algs:
+        -
+            alg: U
+X-1:
+    algs:
+        -
+            alg: U
+X-2:
+    algs:
+        -
+            alg: U
+X-3:
+    algs:
+        -
+            alg: U
+X-4:
+    algs:
+        -
+            alg: U
+X-5:
+    algs:
+        -
+            alg: U
+X-6:
+    algs:
+        -
+            alg: U
+X-7:
+    algs:
+        -
+            alg: U
+X-8:
+    algs:
+        -
+            alg: U
+X+1:
+    algs:
+        -
+            alg: U
+X+2:
+    algs:
+        -
+            alg: U
+X+3:
+    algs:
+        -
+            alg: U
+X+4:
+    algs:
+        -
+            alg: U
+X+5:
+    algs:
+        -
+            alg: U
+X+6:
+    algs:
+        -
+            alg: U
+X+7:
+    algs:
+        -
+            alg: U
+X+8:
+    algs:
+        -
+            alg: U
+K-1:
+    algs:
+        -
+            alg: U
+K-2:
+    algs:
+        -
+            alg: U
+K-3:
+    algs:
+        -
+            alg: U
+K-4:
+    algs:
+        -
+            alg: U
+K-5:
+    algs:
+        -
+            alg: U
+K-6:
+    algs:
+        -
+            alg: U
+K-7:
+    algs:
+        -
+            alg: U
+K-8:
+    algs:
+        -
+            alg: U
+K+1:
+    algs:
+        -
+            alg: U
+K+2:
+    algs:
+        -
+            alg: U
+K+3:
+    algs:
+        -
+            alg: U
+K+4:
+    algs:
+        -
+            alg: U
+K+5:
+    algs:
+        -
+            alg: U
+K+6:
+    algs:
+        -
+            alg: U
+K+7:
+    algs:
+        -
+            alg: U
+K+8:
+    algs:
+        -
+            alg: U
+I+1:
+    algs:
+        -
+            alg: U
+I+2:
+    algs:
+        -
+            alg: U
+I+3:
+    algs:
+        -
+            alg: U
+I+4:
+    algs:
+        -
+            alg: U
+I+5:
+    algs:
+        -
+            alg: U
+I+6:
+    algs:
+        -
+            alg: U
+I+7:
+    algs:
+        -
+            alg: U
+I+8:
+    algs:
+        -
+            alg: U
+I-1:
+    algs:
+        -
+            alg: U
+I-2:
+    algs:
+        -
+            alg: U
+I-3:
+    algs:
+        -
+            alg: U
+I-4:
+    algs:
+        -
+            alg: U
+I-5:
+    algs:
+        -
+            alg: U
+I-6:
+    algs:
+        -
+            alg: U
+I-7:
+    algs:
+        -
+            alg: U
+I-8:
+    algs:
+        -
+            alg: U
+H+1:
+    algs:
+        -
+            alg: U
+H+2:
+    algs:
+        -
+            alg: U
+H+3:
+    algs:
+        -
+            alg: U
+H+4:
+    algs:
+        -
+            alg: U
+H+5:
+    algs:
+        -
+            alg: U
+H+6:
+    algs:
+        -
+            alg: U
+H+7:
+    algs:
+        -
+            alg: U
+H+8:
+    algs:
+        -
+            alg: U
+H-1:
+    algs:
+        -
+            alg: U
+H-2:
+    algs:
+        -
+            alg: U
+H-3:
+    algs:
+        -
+            alg: U
+H-4:
+    algs:
+        -
+            alg: U
+H-5:
+    algs:
+        -
+            alg: U
+H-6:
+    algs:
+        -
+            alg: U
+H-7:
+    algs:
+        -
+            alg: U
+H-8:
+    algs:
+        -
+            alg: U
+Q+1:
+    algs:
+        -
+            alg: U
+Q+2:
+    algs:
+        -
+            alg: U
+Q+3:
+    algs:
+        -
+            alg: U
+Q+4:
+    algs:
+        -
+            alg: U
+Q+5:
+    algs:
+        -
+            alg: U
+Q+6:
+    algs:
+        -
+            alg: U
+Q+7:
+    algs:
+        -
+            alg: U
+Q+8:
+    algs:
+        -
+            alg: U
+Q-1:
+    algs:
+        -
+            alg: U
+Q-2:
+    algs:
+        -
+            alg: U
+Q-3:
+    algs:
+        -
+            alg: U
+Q-4:
+    algs:
+        -
+            alg: U
+Q-5:
+    algs:
+        -
+            alg: U
+Q-6:
+    algs:
+        -
+            alg: U
+Q-7:
+    algs:
+        -
+            alg: U
+Q-8:
+    algs:
+        -
+            alg: U
+P+1:
+    algs:
+        -
+            alg: U
+P+2:
+    algs:
+        -
+            alg: U
+P+3:
+    algs:
+        -
+            alg: U
+P+4:
+    algs:
+        -
+            alg: U
+P+5:
+    algs:
+        -
+            alg: U
+P+6:
+    algs:
+        -
+            alg: U
+P+7:
+    algs:
+        -
+            alg: U
+P+8:
+    algs:
+        -
+            alg: U
+P-1:
+    algs:
+        -
+            alg: U
+P-2:
+    algs:
+        -
+            alg: U
+P-3:
+    algs:
+        -
+            alg: U
+P-4:
+    algs:
+        -
+            alg: U
+P-5:
+    algs:
+        -
+            alg: U
+P-6:
+    algs:
+        -
+            alg: U
+P-7:
+    algs:
+        -
+            alg: U
+P-8:
+    algs:
+        -
+            alg: U
+G+1:
+    algs:
+        -
+            alg: U
+G+2:
+    algs:
+        -
+            alg: U
+G+3:
+    algs:
+        -
+            alg: U
+G+4:
+    algs:
+        -
+            alg: U
+G+5:
+    algs:
+        -
+            alg: U
+G+6:
+    algs:
+        -
+            alg: U
+G+7:
+    algs:
+        -
+            alg: U
+G+8:
+    algs:
+        -
+            alg: U
+G-1:
+    algs:
+        -
+            alg: U
+G-2:
+    algs:
+        -
+            alg: U
+G-3:
+    algs:
+        -
+            alg: U
+G-4:
+    algs:
+        -
+            alg: U
+G-5:
+    algs:
+        -
+            alg: U
+G-6:
+    algs:
+        -
+            alg: U
+G-7:
+    algs:
+        -
+            alg: U
+G-8:
+    algs:
+        -
+            alg: U
+E-1:
+    algs:
+        -
+            alg: U
+E-2:
+    algs:
+        -
+            alg: U
+E-3:
+    algs:
+        -
+            alg: U
+E-4:
+    algs:
+        -
+            alg: U
+E-5:
+    algs:
+        -
+            alg: U
+E-6:
+    algs:
+        -
+            alg: U
+E-7:
+    algs:
+        -
+            alg: U
+E-8:
+    algs:
+        -
+            alg: U
+E+1:
+    algs:
+        -
+            alg: U
+E+2:
+    algs:
+        -
+            alg: U
+E+3:
+    algs:
+        -
+            alg: U
+E+4:
+    algs:
+        -
+            alg: U
+E+5:
+    algs:
+        -
+            alg: U
+E+6:
+    algs:
+        -
+            alg: U
+E+7:
+    algs:
+        -
+            alg: U
+E+8:
+    algs:
+        -
+            alg: U
+J+1:
+    algs:
+        -
+            alg: U
+J+2:
+    algs:
+        -
+            alg: U
+J+3:
+    algs:
+        -
+            alg: U
+J+4:
+    algs:
+        -
+            alg: U
+J+5:
+    algs:
+        -
+            alg: U
+J+6:
+    algs:
+        -
+            alg: U
+J+7:
+    algs:
+        -
+            alg: U
+J+8:
+    algs:
+        -
+            alg: U
+L-1:
+    algs:
+        -
+            alg: U
+L-2:
+    algs:
+        -
+            alg: U
+L-3:
+    algs:
+        -
+            alg: U
+L-4:
+    algs:
+        -
+            alg: U
+L-5:
+    algs:
+        -
+            alg: U
+L-6:
+    algs:
+        -
+            alg: U
+L-7:
+    algs:
+        -
+            alg: U
+L-8:
+    algs:
+        -
+            alg: U
+L+1:
+    algs:
+        -
+            alg: U
+L+2:
+    algs:
+        -
+            alg: U
+L+3:
+    algs:
+        -
+            alg: U
+L+4:
+    algs:
+        -
+            alg: U
+L+5:
+    algs:
+        -
+            alg: U
+L+6:
+    algs:
+        -
+            alg: U
+L+7:
+    algs:
+        -
+            alg: U
+L+8:
+    algs:
+        -
+            alg: U
+J-1:
+    algs:
+        -
+            alg: U
+J-2:
+    algs:
+        -
+            alg: U
+J-3:
+    algs:
+        -
+            alg: U
+J-4:
+    algs:
+        -
+            alg: U
+J-5:
+    algs:
+        -
+            alg: U
+J-6:
+    algs:
+        -
+            alg: U
+J-7:
+    algs:
+        -
+            alg: U
+J-8:
+    algs:
+        -
+            alg: U
+T1: 
+    algs:
+        -
+            alg: U
+T2: 
+    algs:
+        -
+            alg: U
+T3: 
+    algs:
+        -
+            alg: U
+T4: 
+    algs:
+        -
+            alg: U
+T5: 
+    algs:
+        -
+            alg: U
+T6: 
+    algs:
+        -
+            alg: U
+T7: 
+    algs:
+        -
+            alg: U
+T8: 
+    algs:
+        -
+            alg: U
+S1: 
+    algs:
+        -
+            alg: U
+S2: 
+    algs:
+        -
+            alg: U
+S3: 
+    algs:
+        -
+            alg: U
+S4: 
+    algs:
+        -
+            alg: U
+S5: 
+    algs:
+        -
+            alg: U
+S6: 
+    algs:
+        -
+            alg: U
+S7: 
+    algs:
+        -
+            alg: U
+S8: 
+    algs:
+        -
+            alg: U
+U+1:
+    algs:
+        -
+            alg: U
+U+2:
+    algs:
+        -
+            alg: U
+U+3:
+    algs:
+        -
+            alg: U
+U+4:
+    algs:
+        -
+            alg: U
+U+5:
+    algs:
+        -
+            alg: U
+U+6:
+    algs:
+        -
+            alg: U
+U+7:
+    algs:
+        -
+            alg: U
+U+8:
+    algs:
+        -
+            alg: U
+U-1:
+    algs:
+        -
+            alg: U
+U-2:
+    algs:
+        -
+            alg: U
+U-3:
+    algs:
+        -
+            alg: U
+U-4:
+    algs:
+        -
+            alg: U
+U-5:
+    algs:
+        -
+            alg: U
+U-6:
+    algs:
+        -
+            alg: U
+U-7:
+    algs:
+        -
+            alg: U
+U-8:
+    algs:
+        -
+            alg: U
+V+1:
+    algs:
+        -
+            alg: U
+V+2:
+    algs:
+        -
+            alg: U
+V+3:
+    algs:
+        -
+            alg: U
+V+4:
+    algs:
+        -
+            alg: U
+V+5:
+    algs:
+        -
+            alg: U
+V+6:
+    algs:
+        -
+            alg: U
+V+7:
+    algs:
+        -
+            alg: U
+V+8:
+    algs:
+        -
+            alg: U
+V-1:
+    algs:
+        -
+            alg: U
+V-2:
+    algs:
+        -
+            alg: U
+V-3:
+    algs:
+        -
+            alg: U
+V-4:
+    algs:
+        -
+            alg: U
+V-5:
+    algs:
+        -
+            alg: U
+V-6:
+    algs:
+        -
+            alg: U
+V-7:
+    algs:
+        -
+            alg: U
+V-8:
+    algs:
+        -
+            alg: U
+F1: 
+    algs:
+        -
+            alg: U
+F2: 
+    algs:
+        -
+            alg: U
+D+1:
+    algs:
+        -
+            alg: U
+D+2:
+    algs:
+        -
+            alg: U
+D+3:
+    algs:
+        -
+            alg: U
+D+4:
+    algs:
+        -
+            alg: U
+D-1:
+    algs:
+        -
+            alg: U
+D-2:
+    algs:
+        -
+            alg: U
+D-3:
+    algs:
+        -
+            alg: U
+D-4:
+    algs:
+        -
+            alg: U
+C+1:
+    algs:
+        -
+            alg: U
+C+2:
+    algs:
+        -
+            alg: U
+C-1:
+    algs:
+        -
+            alg: U
+C-2:
+    algs:
+        -
+            alg: U

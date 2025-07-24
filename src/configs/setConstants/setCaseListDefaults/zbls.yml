@@ -3,66 +3,97 @@ A+1:
     imageAlg: U R U' R'
 A+2:
     name: A+2
+    imageAlg: U R B U' B' R'
 A+3:
     name: A+3
+    imageAlg: U R U R' U2' R' F R F'
 A+4:
     name: A+4
+    imageAlg: R' F R2 U R' U' F'
 A+5:
     name: A+5
+    imageAlg: R' F R F'
 A+6:
     name: A+6
+    imageAlg: U F' r' F' r F
 A+7:
     name: A+7
+    imageAlg: U S' R U' R' S
 A+8:
     name: A+8
+    imageAlg: R' F R S R U R' U' f'
 A-1:
     name: A-1
+    imageAlg: (U') F' U F
 A-2:
     name: A-2
+    imageAlg: U' F' r' F r F
 A-3:
     name: A-3
+    imageAlg: U R' D' r U' r' D R
 A-4:
     name: A-4
+    imageAlg: F R' F2 U' F U R
 A-5:
     name: A-5
+    imageAlg: F R' F' R
 A-6:
     name: A-6
+    imageAlg: U' R B U B' R' 
 A-7:
     name: A-7
+    imageAlg: U2 F' U r' F r F
 A-8:
     name: A-8
+    imageAlg: U f U R U' R' S' R' F' R
 B-1:
     name: B-1
+    imageAlg: F' U' F
 B-2:
     name: B-2
+    imageAlg: U2 S' R U' R' S R U' R'
 B-3:
     name: B-3
+    imageAlg: S R' U' R' U R S'
 B-4:
     name: B-4
+    imageAlg: U M U r U2' r' U' M'
 B-5:
     name: B-5
+    imageAlg: S U R U' R' S'
 B-6:
     name: B-6
+    imageAlg: U' R' F R U R U' R2 F' R
 B-7:
     name: B-7
+    imageAlg: F' U2' r' F r F
 B-8:
     name: B-8
+    imageAlg: U2 S' R U' R' S U' R' F R F'
 B+1:
     name: B+1
+    imageAlg: R U R'
 B+2:
     name: B+2
+    imageAlg: S' R U2 R' S R U' R'
 B+3:
     name: B+3
+    imageAlg: S' R U R' S
 B+4:
     name: B+4
+    imageAlg: S R U2' R' U R U2' R' S'
 B+5:
     name: B+5
+    imageAlg: S R U R' U' S'
 B+6:
     name: B+6
+    imageAlg: U2 r U' r' U' r U r'
 B+7:
     name: B+7
+    imageAlg: R U2' B U' B' R'
 B+8:
     name: B+8
+    imageAlg: R' D' r U r' D R2 U R'
 W+1:
     name: W+1
 W+2:
