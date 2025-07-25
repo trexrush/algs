@@ -1,16 +1,17 @@
-import { cllTrexSheetGroupings } from "../algSheets/ingest/CLL_TREX";
-import { eg1TrexSheetGroupings } from "../algSheets/ingest/EG1_TREX";
-import { megaOLLTrexSheetGroupings } from "../algSheets/ingest/MEGAOLL_TREX";
-import { megaPLLTrexSheetGroupings } from "../algSheets/ingest/MEGAPLL_TREX";
-import { pllParityTrexSheetGroupings } from "../algSheets/ingest/PLLPARITY_TREX";
-import { ollTrexSheetGroupings} from "../algSheets/ingest/OLL_TREX";
-import { pllTrexSheetGroupings } from "../algSheets/ingest/PLL_TREX";
-import { zbllTrexSheetGroupings } from "../algSheets/ingest/ZBLL_TREX";
+import {
+  cllTrexSheetGroupings,
+  eg1TrexSheetGroupings,
+  megaOLLTrexSheetGroupings,
+  megaPLLTrexSheetGroupings,
+  ollTrexSheetGroupings,
+  pllTrexSheetGroupings,
+  pllParityTrexSheetGroupings,
+  zblsTrexSheetGroupings,
+  zbllTrexSheetGroupings
+} from "../algSheets/ingest"
 
 import { ZBLSNoGrouping } from "../../data_old/ZBLS/zblsObj";
-
 import type { IRouteConfig } from "../../types/navigation/navigationTypes";
-import { zblsTrexSheetGroupings } from "../algSheets/ingest/ZBLS_TREX";
 
 
 export const navbarRoutes: IRouteConfig[] = [
