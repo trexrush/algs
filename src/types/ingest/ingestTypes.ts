@@ -1,12 +1,12 @@
-import { useCLLGrouping } from "../../configs/setConstants/setGroupings/cll";
-import { useEG1Grouping } from "../../configs/setConstants/setGroupings/eg1";
-import { useMegaOLLGrouping } from "../../configs/setConstants/setGroupings/megaOLL";
-import { useMegaPLLGrouping } from "../../configs/setConstants/setGroupings/megaPLL";
-import { useOLLGrouping } from "../../configs/setConstants/setGroupings/oll";
-import { useParityPLLGrouping } from "../../configs/setConstants/setGroupings/parityPLL";
-import { usePLLGrouping } from "../../configs/setConstants/setGroupings/pll";
-import { useZBLLGrouping } from "../../configs/setConstants/setGroupings/zbll";
-import { useZBLSGrouping } from "../../configs/setConstants/setGroupings/zbls";
+import { useCLLGrouping } from "../../configs/set/setGroupings/cll";
+import { useEG1Grouping } from "../../configs/set/setGroupings/eg1";
+import { useMegaOLLGrouping } from "../../configs/set/setGroupings/megaOLL";
+import { useMegaPLLGrouping } from "../../configs/set/setGroupings/megaPLL";
+import { useOLLGrouping } from "../../configs/set/setGroupings/oll";
+import { useParityPLLGrouping } from "../../configs/set/setGroupings/parityPLL";
+import { usePLLGrouping } from "../../configs/set/setGroupings/pll";
+import { useZBLLGrouping } from "../../configs/set/setGroupings/zbll";
+import { useZBLSGrouping } from "../../configs/set/setGroupings/zbls";
 import { ICaseList } from "../dataFormat";
 
 export const definedSets = {
