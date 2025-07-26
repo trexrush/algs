@@ -61,7 +61,7 @@ export const AlgBuilder = function () {
   return (() => { return builders.stage1({ isMirror: false }) })()
 }
 
-// POOR MANS UNIT TESTING TODO: use jest
+// POOR MANS UNIT TESTING
 /* comment this line out to enable / disable
 const testData: IAlg = { alg: "R U R' U' R U2' R'" }
 const testData2: IAlg = { alg: "[LEFT SUNE] U2 [LEFT BACK SUNE]", isLefty: true, setup: "U" }

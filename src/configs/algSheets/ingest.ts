@@ -1,5 +1,3 @@
-
-// TODO: use astro globs maybe? For now hardcoding
 import cll_trex from './data/CLL_TREX.yml'
 import eg1_trex from './data/EG1_TREX.yml'
 import megaoll_trex from './data/MEGAOLL_TREX.yml'

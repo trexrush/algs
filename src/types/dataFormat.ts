@@ -49,5 +49,3 @@ export interface IAlg {
 }
 
 export interface IAlgset { config: IDisplayConfig, sets: ISet[] }
-
-// TODO: define iterables for set and case
