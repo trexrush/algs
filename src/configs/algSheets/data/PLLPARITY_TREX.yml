@@ -46,7 +46,7 @@ pJ:
         isLefty: true
         tags: ['Direct']
     - 
-        alg: Lw L2' U L U' l' U L' U2' L U l' U' l U Lw F' Lw2' U Lw U Lw' U' Lw F
+        alg: Lw L2' U L U' l' U L' U2' L U l' U' Lw L' U Lw F' Lw2' U Lw U Lw' U' Lw F
         isLefty: true
         tags: ['Direct']
 pN:
@@ -62,9 +62,11 @@ pN:
         note: wide T perm sexy block comm
 M:
     algs:
-    - 
-        alg: "[LEFT NEW_OPP] [LEFTY T_PERM]"
+    -
+        setup: U2
+        alg: Lw2 F2' U2 Lw2' L2 U' L U L' U' L D' L' D L' F2 U' Lw2
         isLefty: true
+        tags: ['Direct']
 Ka:
     algs:
     - 
@@ -106,6 +108,7 @@ Ca:
         setup: U'
         alg: l' U Lw F' L' U' Lw F Lw' y L' U' L U L' U L U' Lw U L' U L U2 Lw'
         isLefty: true
+        tags: ['Direct']
 Cb:
     algs:
     - 
@@ -168,19 +171,23 @@ Q:
         isLefty: true
 
     - 
+        alg: z' Lw2' Uw2 L2 Uw2 F' [TRIPLE LEFT SEXY] F U2 L2' Uw2 Lw2 z
+        isLefty: true
+        tags: ['Direct']
+    - 
         alg: z' U2 L' F2 Lw2 U2 L F2' Lw2' L' F2 L2 U2 Lw2' L U2' z
         isLefty: true
         tags: ['Direct', 'Swag']
 X:
     algs:
     - 
-        alg: Lw2 F2' U2 Lw2' F [TRIPLE LEFT BACK UNSEXY] F' L2 U2' F2' Lw2'
+        alg: Lw2 F2' U2 Lw2' F [TRIPLE LEFT BACK UNSEXY] F' L2 U2 F2' Lw2'
         isLefty: true
         tags: ['Direct']
     - 
-        alg: '[OPP] [LEFT E_PERM]'
+        alg: Lw2' B2' U2 Lw2 B' [TRIPLE LEFT SEXY] B L2' U2 B2' Lw2
         isLefty: true
-        note: theres prolly a good way to do this, need to edit this alg later
+        tags: ['Direct']
 Sa:
     algs:
     - 
@@ -204,12 +211,7 @@ Sb:
         note: also a setup to P perm, but the 2 commutators one
     - 
         setup: U2
-        alg: L' U' L y' 3Lw' U' Lw U 3Lw F' Lw' U Rw R' U' Lw' U 3Lw U Lw' U' Lw U F
+        alg: L' U' L y' 3Lw' U' Lw U 3Lw F' Lw' U r U' Lw' U 3Lw U Lw' U' Lw U F
         isLefty: true
         tags: ['Direct']
         note: R U R' y (Pa without F') U' F' (Sebastian alg)
-    - 
-        setup: U
-        alg: z' U2' L' U2 Lw2 F2' L U2 L' Lw2' U2 L2 F2' Lw' l' U2' z
-        isLefty: true
-        tags: ['Direct', 'Swag']
