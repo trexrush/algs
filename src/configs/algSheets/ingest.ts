@@ -24,3 +24,6 @@ export const zbllTrexSheetGroupings = useGroupingsForV3Data({
   ...zb_u_trex,
   ...zb_h_trex,
 }, 'ZBLL')
+
+const zblsSheets = await fetch('https://script.google.com/macros/s/AKfycbyr0Avhy6rJ1jhU0RSBsv4lQmB8UU2N4-MQbTX6Ppb2jV0T6TiEW6Ey5eRqh23wfHOv/exec').then(res => res.json())
+export const zblsSheetsGroupings = await useGroupingsForV3Data(zblsSheets, 'ZBLS')

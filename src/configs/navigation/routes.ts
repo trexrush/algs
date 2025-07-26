@@ -7,7 +7,8 @@ import {
   pllTrexSheetGroupings,
   pllParityTrexSheetGroupings,
   zblsTrexSheetGroupings,
-  zbllTrexSheetGroupings
+  zbllTrexSheetGroupings,
+  zblsSheetsGroupings
 } from "../algSheets/ingest"
 
 import { ZBLSNoGrouping } from "../../data_old/ZBLS/zblsObj";
@@ -38,6 +39,7 @@ export const navbarRoutes: IRouteConfig[] = [
         path: 'ZB/ZBLS', 
         name: "ZBLS",
         datalists: [
+          { name: "ZB AlgSheet (ZBLS)", data: zblsSheetsGroupings.f2l },
           { name: "No Grouping", data: ZBLSNoGrouping },
           { name: "F2L", data: zblsTrexSheetGroupings.f2l },
         ]

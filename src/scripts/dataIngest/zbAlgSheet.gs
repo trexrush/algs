@@ -10,7 +10,7 @@ function doGet() {
       .getValue()
 
     return values.split('\n').filter(a => a != '').map(algString => (
-      { ...splitAlgIntoStrings(algString), tags: ['ZB_SHEET'], isLefty: false }
+      { ...splitAlgIntoStrings(algString), tags: ['ZB_SHEET'], isLefty: isAlgLefty(algString) }
     ))
   }
 
@@ -34,9 +34,18 @@ const splitAlgIntoStrings = (alg) => {
 
   return {
     ...(hasSetupMove && { setup: moveList[0]}),
-    alg: hasSetupMove ? moveList.slice(1) : moveList
+    alg: hasSetupMove ? moveList.slice(1).join(' ') : moveList.join(' ')
   }
 
+}
+
+const isAlgLefty = (alg) => {
+  const moveList = alg.split(' ')
+
+  const leftyMoves = moveList.filter(m => [`L`, `L'`, `L2`, `L2'`, `Lw`, `Lw'`, `Lw2`, `Lw2'`, `l`, `l'`, `l2`, `l2'`].includes(m)).length
+  const rightyMoves = moveList.filter(m => [`R`, `R'`, `R2`, `R2'`, `Rw`, `Rw'`, `Rw2`, `Rw2'`, `r`, `r'`, `r2`, `r2'`].includes(m)).length
+
+  return (leftyMoves > rightyMoves)
 }
 
 const GROUPING_OFFSETS = {
